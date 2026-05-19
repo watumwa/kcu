@@ -23,7 +23,7 @@ export default function Footer() {
             </div>
           </div>
           <p className="mt-5 max-w-md leading-7 text-white/70">
-            A clean, modern and professional university website foundation ready for real images, official content and Wagtail CMS integration.
+            Advancing knowledge, leadership and professional excellence through career-focused teaching, research and a supportive student experience.
           </p>
         </div>
 
