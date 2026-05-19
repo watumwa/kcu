@@ -14,15 +14,17 @@ import {
   X,
 } from "lucide-react";
 import { useState } from "react";
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa6";
+import { FaXTwitter } from "react-icons/fa6";
 import { Button } from "@/components/ui/button";
 import { navItems } from "@/data/site";
 
 const socialLinks = [
-  { label: "X", href: "#", mark: "X" },
-  { label: "Facebook", href: "#", mark: "f" },
-  { label: "Instagram", href: "#", mark: "IG" },
-  { label: "LinkedIn", href: "#", mark: "in" },
-  { label: "YouTube", href: "#", mark: "YT" },
+  { label: "X", href: "#", icon: FaXTwitter },
+  { label: "Facebook", href: "#", icon: FaFacebookF },
+  { label: "Instagram", href: "#", icon: FaInstagram },
+  { label: "LinkedIn", href: "#", icon: FaLinkedinIn },
+  { label: "YouTube", href: "#", icon: FaYoutube },
 ];
 
 function UniversityMark() {
@@ -76,16 +78,19 @@ function TopBar() {
             />
           </label>
           <div className="flex items-center gap-2">
-            {socialLinks.map((social) => (
-              <Link
-                key={social.label}
-                href={social.href}
-                aria-label={social.label}
-                className="grid size-7 place-items-center rounded-full bg-white/10 text-[11px] font-black text-white transition hover:bg-[#FECB00] hover:text-[#17351f]"
-              >
-                {social.mark}
-              </Link>
-            ))}
+            {socialLinks.map((social) => {
+              const Icon = social.icon;
+              return (
+                <Link
+                  key={social.label}
+                  href={social.href}
+                  aria-label={social.label}
+                  className="grid size-7 place-items-center rounded-full bg-white/10 text-white transition hover:bg-[#FECB00] hover:text-[#17351f]"
+                >
+                  <Icon className="size-3.5" />
+                </Link>
+              );
+            })}
           </div>
         </div>
       </div>
