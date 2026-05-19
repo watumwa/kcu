@@ -18,6 +18,18 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
+## Neexa AI widget
+
+The site includes a global Neexa AI widget loader at `src/components/integrations/NeexaWidget.tsx`.
+It shows a branded "Chat with Admissions" button and loads Neexa only after the visitor clicks, preventing Neexa's default assistant intro card from appearing on page load. It is configured with the client's current Neexa widget ID and script URL. These can be overridden with environment variables if Neexa issues new details:
+
+```bash
+NEXT_PUBLIC_NEEXA_WIDGET_ID="new-widget-id"
+NEXT_PUBLIC_NEEXA_WIDGET_SRC="https://chat-widget.neexa.ai/main.js"
+```
+
+If Neexa provides a new full script tag with different variable names or `data-*` attributes, copy those values into `NeexaWidget.tsx`.
+
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ## Learn More
