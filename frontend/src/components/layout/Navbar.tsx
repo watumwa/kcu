@@ -29,8 +29,8 @@ const socialLinks = [
 
 function UniversityMark() {
   return (
-    <Link href="/" className="flex items-center gap-3" aria-label="King Ceasor University home">
-      <div className="relative grid size-14 place-items-center overflow-hidden rounded-full border-2 border-[#275D38] bg-white shadow-sm lg:size-16">
+    <Link href="/" className="flex min-w-0 items-center gap-2 sm:gap-3" aria-label="King Ceasor University home">
+      <div className="relative grid size-11 shrink-0 place-items-center overflow-hidden rounded-full border-2 border-[#275D38] bg-white shadow-sm sm:size-14 lg:size-16">
         <Image
           src="/logo.png"
           alt="King Ceasor University logo"
@@ -40,11 +40,11 @@ function UniversityMark() {
           className="h-full w-full object-contain p-1.5"
         />
       </div>
-      <div className="leading-none">
-        <p className="font-serif text-xl font-black tracking-tight text-[#275D38] lg:text-2xl">
+      <div className="min-w-0 leading-none">
+        <p className="truncate font-serif text-lg font-black tracking-tight text-[#275D38] drop-shadow-[0_0_10px_rgba(254,203,0,0.5)] sm:text-xl lg:text-2xl">
           KING CEASOR
         </p>
-        <p className="mt-1 font-serif text-sm font-semibold tracking-[0.28em] text-[#275D38] lg:text-base">
+        <p className="mt-1 truncate font-serif text-xs font-semibold tracking-[0.2em] text-[#275D38] drop-shadow-[0_0_8px_rgba(254,203,0,0.45)] sm:text-sm sm:tracking-[0.28em] lg:text-base">
           UNIVERSITY
         </p>
       </div>
@@ -197,11 +197,11 @@ function MobileNav() {
 
   return (
     <div className="border-b border-white/25 bg-white/15 shadow-none backdrop-blur-md lg:hidden">
-      <div className="flex h-20 items-center justify-between px-4">
+      <div className="flex h-16 items-center justify-between gap-3 px-4 sm:h-20">
         <UniversityMark />
         <button
           onClick={() => setIsOpen((current) => !current)}
-          className="grid size-12 place-items-center rounded-2xl border border-slate-200 text-[#275D38] shadow-sm"
+          className="grid size-11 shrink-0 place-items-center rounded-xl border border-slate-200 text-[#275D38] shadow-sm sm:size-12 sm:rounded-2xl"
           aria-label="Toggle menu"
         >
           {isOpen ? <X className="size-6" /> : <Menu className="size-6" />}

@@ -23,8 +23,8 @@ export default function Hero() {
   const previous = () => setActive((active - 1 + heroSlides.length) % heroSlides.length);
 
   return (
-    <section className="relative min-h-[720px] overflow-hidden bg-[#17351f] text-white lg:min-h-[780px]">
-      <AnimatePresence mode="wait">
+    <section className="relative min-h-[560px] overflow-hidden bg-[#17351f] text-white sm:min-h-[680px] lg:min-h-[780px]">
+      <AnimatePresence mode="wait" initial={false}>
         <motion.div
           key={current.image}
           initial={{ opacity: 0, scale: 1.06 }}
@@ -54,29 +54,29 @@ export default function Hero() {
         <ArrowRight className="size-5" />
       </button>
 
-      <div className="relative z-10 mx-auto flex min-h-[720px] max-w-[1440px] items-center px-4 pb-28 pt-16 sm:px-6 lg:min-h-[780px] lg:px-8">
-        <AnimatePresence mode="wait">
+      <div className="relative z-10 mx-auto flex min-h-[560px] max-w-[1440px] items-start px-4 pb-20 pt-24 sm:min-h-[680px] sm:items-center sm:px-6 lg:min-h-[780px] lg:px-8">
+        <AnimatePresence mode="wait" initial={false}>
           <motion.div
             key={`hero-text-${active}`}
-            initial={{ opacity: 0, x: -28, y: 10 }}
+            initial={false}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 28, y: -10 }}
             transition={{ duration: 0.5 }}
-            className="w-full max-w-2xl rounded-[1.75rem] border border-white/35 bg-white/88 p-6 text-[#111827] shadow-2xl shadow-black/25 backdrop-blur-xl md:p-8 lg:p-10"
+            className="w-full max-w-2xl rounded-2xl border border-white/35 bg-white/90 p-5 text-[#111827] shadow-2xl shadow-black/25 backdrop-blur-xl sm:p-6 md:rounded-[1.75rem] md:p-8 lg:p-10"
           >
-            <div className="mb-5 inline-flex items-center gap-2 rounded-full bg-[#275D38] px-4 py-2 text-sm font-black uppercase tracking-[0.18em] text-[#FECB00] shadow-sm">
+            <div className="mb-4 inline-flex max-w-full items-center gap-2 rounded-full bg-[#275D38] px-3 py-2 text-[11px] font-black uppercase tracking-[0.12em] text-[#FECB00] shadow-sm sm:px-4 sm:text-sm sm:tracking-[0.18em]">
               <GraduationCap className="size-4" /> {current.badge}
             </div>
-            <h1 className="text-4xl font-black leading-[1.05] text-[#111827] md:text-5xl lg:text-6xl">
+            <h1 className="text-3xl font-black leading-[1.08] text-[#111827] sm:text-4xl md:text-5xl lg:text-6xl">
               {current.school}
             </h1>
-            <p className="mt-5 text-2xl font-black text-[#A22A23] md:text-3xl">{current.title}</p>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-700 md:text-xl">{current.subtitle}</p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Button asChild className="h-[52px] rounded-xl bg-[#FECB00] px-7 text-base font-black text-[#17351f] shadow-xl shadow-black/20 hover:bg-[#e8bb00]">
+            <p className="mt-4 text-xl font-black leading-tight text-[#A22A23] sm:text-2xl md:text-3xl">{current.title}</p>
+            <p className="mt-5 max-w-2xl text-base leading-7 text-slate-700 md:text-xl md:leading-8">{current.subtitle}</p>
+            <div className="mt-7 grid gap-3 sm:flex sm:flex-wrap sm:gap-4">
+              <Button asChild className="h-12 rounded-xl bg-[#FECB00] px-5 text-sm font-black text-[#17351f] shadow-xl shadow-black/20 hover:bg-[#e8bb00] sm:h-[52px] sm:px-7 sm:text-base">
                 <Link href="/admissions/apply-now">{current.cta}</Link>
               </Button>
-              <Button asChild variant="outline" className="h-[52px] rounded-xl border-2 border-[#275D38] bg-white px-7 text-base font-bold text-[#275D38] hover:bg-[#275D38] hover:text-white">
+              <Button asChild variant="outline" className="h-12 rounded-xl border-2 border-[#275D38] bg-white px-5 text-sm font-bold text-[#275D38] hover:bg-[#275D38] hover:text-white sm:h-[52px] sm:px-7 sm:text-base">
                 <Link href="/academics/courses">View Programmes</Link>
               </Button>
             </div>
@@ -84,7 +84,7 @@ export default function Hero() {
         </AnimatePresence>
       </div>
 
-      <div className="absolute bottom-24 left-1/2 z-20 flex -translate-x-1/2 items-center gap-2">
+      <div className="absolute bottom-10 left-1/2 z-20 flex -translate-x-1/2 items-center gap-2 sm:bottom-24">
         {heroSlides.map((slide, index) => (
           <button
             key={slide.school}
