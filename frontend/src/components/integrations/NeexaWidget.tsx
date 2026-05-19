@@ -2,7 +2,7 @@
 
 import { MessageCircle } from "lucide-react";
 import Script from "next/script";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const neexaWidgetClientId =
   process.env.NEXT_PUBLIC_NEEXA_WIDGET_ID ?? "a1d1fe6a-9e65-4794-9233-d95768665231";
@@ -11,6 +11,43 @@ const neexaWidgetSrc =
 
 export default function NeexaWidget() {
   const [shouldLoadWidget, setShouldLoadWidget] = useState(false);
+
+  useEffect(() => {
+    if (!shouldLoadWidget) {
+      return;
+    }
+
+    const longDisclaimer = "Disclaimer: This chat is facilitated by AI and may produce inaccurate information.";
+    const shortDisclaimer = "AI assistant. Please confirm important information with the University.";
+
+    const updateDisclaimer = () => {
+      const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+      let node = walker.nextNode();
+
+      while (node) {
+        if (node.textContent?.includes(longDisclaimer)) {
+          node.textContent = shortDisclaimer;
+
+          const container = node.parentElement;
+          container
+            ?.querySelectorAll("a, button")
+            .forEach((item) => {
+              if (item.textContent?.trim().toLowerCase() === "learn more") {
+                item.remove();
+              }
+            });
+        }
+
+        node = walker.nextNode();
+      }
+    };
+
+    updateDisclaimer();
+    const observer = new MutationObserver(updateDisclaimer);
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    return () => observer.disconnect();
+  }, [shouldLoadWidget]);
 
   return (
     <>
@@ -24,7 +61,7 @@ export default function NeexaWidget() {
           <span className="grid size-9 place-items-center rounded-full bg-[#FECB00] text-[#17351f] sm:size-10">
             <MessageCircle className="size-5" />
           </span>
-          <span>Chat with Admissions</span>
+          <span>Chat</span>
         </button>
       )}
 

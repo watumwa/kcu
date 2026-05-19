@@ -21,7 +21,7 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 ## Neexa AI widget
 
 The site includes a global Neexa AI widget loader at `src/components/integrations/NeexaWidget.tsx`.
-It shows a branded "Chat with Admissions" button and loads Neexa only after the visitor clicks, preventing Neexa's default assistant intro card from appearing on page load. It is configured with the client's current Neexa widget ID and script URL. These can be overridden with environment variables if Neexa issues new details:
+It shows a branded "Chat" button and loads Neexa only after the visitor clicks, preventing Neexa's default assistant intro card from appearing on page load. It is configured with the client's current Neexa widget ID and script URL. These can be overridden with environment variables if Neexa issues new details:
 
 ```bash
 NEXT_PUBLIC_NEEXA_WIDGET_ID="new-widget-id"
