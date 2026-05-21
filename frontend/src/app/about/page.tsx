@@ -376,13 +376,149 @@ function TabAdministration() {
   );
 }
 
-// ── Tabs config ────────────────────────────────────────────────────────────
+function TabStudentGuild() {
+  const leadership = [
+    { ministry: "Guild President", name: "HE. Adonia Ainebyona", tier: "top" as const },
+    { ministry: "Vice President", name: "HON. Ahura Precious", tier: "mid" as const },
+    { ministry: "Prime Minister", name: "HON. Nkurunziza Brendah Hildah", tier: "mid" as const },
+    { ministry: "Deputy Prime Minister", name: "HON. Ocan Jimmy", tier: "mid" as const },
+  ];
+
+  const cabinet = [
+    { ministry: "Academic Affairs", name: "HON. Asingwire Davis" },
+    { ministry: "Culture & Mobilisation", name: "HON. Atusinguza Bridget\nHON. Kyarikunda James" },
+    { ministry: "Estates & Environment", name: "HON. Muhanguzi Datsun" },
+    { ministry: "External Affairs", name: "HON. Ekinamushabire Evanice" },
+    { ministry: "Finance", name: "HON. Akatwijuka Kenneth" },
+    { ministry: "Gender, Ethics & Integrity", name: "HON. Ampumuza Hope" },
+    { ministry: "Health", name: "HON. Nyebaze Rose" },
+    { ministry: "Information", name: "HON. Munyambabazi Joshua" },
+    { ministry: "Justice & Constitutional Affairs", name: "HON. Mutoni Lillian" },
+    { ministry: "Off Campus Affairs", name: "HON. Arinda Lord" },
+    { ministry: "Research & Computer Technology", name: "HON. Mfitumukiza Papius Fahad" },
+    { ministry: "Security", name: "HON. Matsiko Denis" },
+    { ministry: "Social Affairs", name: "HON. Byamugisha Crescent\nHON. Ishimwe Precious" },
+    { ministry: "Sports & Games", name: "HON. Asiimwe Edgar" },
+    { ministry: "Students Affairs", name: "HON. Ahmad Abdusalam\nHON. Mukwaya Francis" },
+    { ministry: "Students with Disabilities", name: "HON. Nyirabakunzi Judith" },
+  ];
+
+  const getInitials = (name: string) =>
+    name.replace(/^(HE\.?|HON\.?|Dr\.?|Prof\.?|Mr\.?|Mrs\.?)\s*/gi, "").trim()
+      .split(" ").slice(0, 2).map((w) => w[0]).join("").toUpperCase();
+
+  const ministryIcons: Record<string, string> = {
+    "Academic Affairs": "🎓", "Culture & Mobilisation": "🎭", "Estates & Environment": "🌿",
+    "External Affairs": "🌍", "Finance": "💰", "Gender, Ethics & Integrity": "⚖️",
+    "Health": "🏥", "Information": "📢", "Justice & Constitutional Affairs": "⚖️",
+    "Off Campus Affairs": "🏘️", "Research & Computer Technology": "💻",
+    "Security": "🛡️", "Social Affairs": "🤝", "Sports & Games": "⚽",
+    "Students Affairs": "👥", "Students with Disabilities": "♿",
+  };
+
+  return (
+    <div className="space-y-14">
+      {/* Page header */}
+      <div className="flex items-end justify-between">
+        <div>
+          <p className="text-xs font-black uppercase tracking-[0.2em] text-[#275D38]">Student Governance</p>
+          <h2 className="mt-1 text-2xl font-black text-slate-950 sm:text-3xl">Student Guild</h2>
+        </div>
+        <span className="rounded-full bg-[#275D38]/10 px-3 py-1 text-xs font-black text-[#275D38]">2024 – 2025</span>
+      </div>
+
+      {/* President spotlight */}
+      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0b2113] via-[#17351f] to-[#275D38] p-8 sm:p-10">
+        {/* decorative rings */}
+        <div className="pointer-events-none absolute -right-16 -top-16 size-64 rounded-full border border-white/10" />
+        <div className="pointer-events-none absolute -right-8 -top-8 size-40 rounded-full border border-white/10" />
+        <div className="pointer-events-none absolute -bottom-20 -left-20 size-72 rounded-full bg-[#FECB00]/5" />
+
+        <div className="relative flex flex-col gap-6 sm:flex-row sm:items-center sm:gap-10">
+          {/* Avatar */}
+          <div className="relative shrink-0">
+            <div className="grid size-28 place-items-center rounded-full bg-[#FECB00] text-4xl font-black text-[#0b2113] shadow-2xl ring-4 ring-white/20">
+              AA
+            </div>
+            <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-white px-3 py-0.5 text-[10px] font-black text-[#275D38] shadow">
+              Guild President
+            </span>
+          </div>
+
+          {/* Message */}
+          <div className="flex-1">
+            <p className="text-[10px] font-black uppercase tracking-[0.25em] text-[#FECB00]">Communication from the Guild Office</p>
+            <h3 className="mt-1 text-xl font-black text-white sm:text-2xl">HE. Adonia Ainebyona</h3>
+            <div className="mt-1 h-0.5 w-12 rounded-full bg-[#FECB00]" />
+            <p className="mt-4 text-sm leading-7 text-white/75">
+              It is with great honor and enthusiasm that I address you as your Guild President. We are deeply committed to serving your needs, amplifying your voices, and fostering a vibrant, supportive university experience for every student.
+            </p>
+            <p className="mt-3 text-sm leading-7 text-white/75">
+              Together, let us make this a successful and memorable academic year. Please do not hesitate to reach out with your ideas, concerns, or suggestions.
+            </p>
+            <p className="mt-5 text-xs font-black italic text-[#FECB00]">— Yours in service, Adonia Ainebyona</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Leadership grid */}
+      <div>
+        <p className="mb-5 text-[10px] font-black uppercase tracking-[0.2em] text-[#275D38]">Guild Leadership</p>
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {leadership.map((p, i) => {
+            const isPresident = i === 0;
+            return (
+              <div key={p.name} className={`group relative overflow-hidden rounded-2xl p-6 text-center transition hover:-translate-y-1 hover:shadow-xl ${isPresident ? "bg-[#275D38] text-white shadow-lg shadow-[#275D38]/20" : "border border-slate-100 bg-white shadow-sm"}`}>
+                {isPresident && <div className="pointer-events-none absolute -right-6 -top-6 size-24 rounded-full bg-white/5" />}
+                <div className={`mx-auto grid size-20 place-items-center rounded-full text-2xl font-black shadow-inner ${isPresident ? "bg-[#FECB00] text-[#275D38]" : "bg-[#F7F8F4] text-[#275D38]"}`}>
+                  {getInitials(p.name)}
+                </div>
+                <p className={`mt-4 text-sm font-black leading-snug ${isPresident ? "text-white" : "text-slate-950"}`}>{p.name}</p>
+                <span className={`mt-2 inline-block rounded-full px-3 py-1 text-[10px] font-black uppercase tracking-wide ${isPresident ? "bg-[#FECB00] text-[#275D38]" : "bg-[#275D38]/10 text-[#275D38]"}`}>
+                  {p.ministry}
+                </span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Cabinet */}
+      <div>
+        <div className="mb-5 flex items-center justify-between">
+          <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#275D38]">Cabinet Ministers</p>
+          <span className="rounded-full bg-slate-100 px-2.5 py-0.5 text-[10px] font-black text-slate-500">{cabinet.length} Ministries</span>
+        </div>
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {cabinet.map((p) => {
+            const names = p.name.split("\n");
+            return (
+              <div key={p.ministry} className="group flex items-start gap-3.5 rounded-2xl border border-slate-100 bg-white p-4 shadow-sm transition hover:border-[#275D38]/20 hover:shadow-md">
+                <div className="grid size-10 shrink-0 place-items-center rounded-xl bg-[#275D38]/8 text-lg">
+                  {ministryIcons[p.ministry] ?? "🏛️"}
+                </div>
+                <div className="min-w-0 flex-1">
+                  <p className="text-[11px] font-black uppercase tracking-wide text-[#275D38]">{p.ministry}</p>
+                  {names.map((n) => (
+                    <p key={n} className="mt-0.5 truncate text-xs font-semibold text-slate-700">{n}</p>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
 
 const tabs = [
   { id: "about", label: "About Us", content: <TabAboutUs /> },
   { id: "council", label: "University Council", content: <TabUniversityCouncil /> },
   { id: "administration", label: "University Administration", content: <TabAdministration /> },
-  { id: "guild", label: "Student Guild", content: <ComingSoon title="Student Guild" /> },
+  { id: "guild", label: "Student Guild", content: <TabStudentGuild /> },
   { id: "glance", label: "KCU at a Glance", content: <ComingSoon title="KCU at a Glance" /> },
 ];
 
