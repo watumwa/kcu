@@ -290,12 +290,98 @@ function ComingSoon({ title }: { title: string }) {
   );
 }
 
+function TabAdministration() {
+  const officers = [
+    { name: "Dr. Charity Basaza Mulenga", role: "Vice Chancellor", tier: "top" as const },
+    { name: "Dr. Byarugaba Bonaventura", role: "Deputy Vice Chancellor", tier: "mid" as const },
+    { name: "Mrs. Pape Matama Bagonza", role: "University Secretary", tier: "mid" as const },
+    { name: "Alfred Namoah Masikye", role: "Academic Registrar", tier: "mid" as const },
+    { name: "Assoc. Prof. Annabella Habinka Ejiri", role: "Director Quality Assurance", tier: "mid" as const },
+    { name: "Mrs. Sylivia Okwi Christine", role: "Director Finance", tier: "mid" as const },
+    { name: "Fr. Dr. Lumala Aloysius Gonzagga", role: "Dean of Students", tier: "mid" as const },
+    { name: "Mr. Mwima Abdallah", role: "Manager ICT", tier: "base" as const },
+    { name: "Mr. Eric Keziron Oloo", role: "University Librarian", tier: "base" as const },
+    { name: "Mr. Wilberforce Mfitundinda", role: "Registrar Academics", tier: "base" as const },
+    { name: "Mr. John Acire", role: "Manager Human Resource", tier: "base" as const },
+  ];
+
+  const [vc, dvc, ...rest] = officers;
+  const seniorOfficers = rest.filter((o) => o.tier === "mid");
+  const managers = rest.filter((o) => o.tier === "base");
+
+  return (
+    <div className="space-y-10">
+      <div>
+        <p className="text-xs font-black uppercase tracking-[0.2em] text-[#275D38]">Administration</p>
+        <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950 sm:text-3xl">University Administration</h2>
+        <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
+          The University administration is responsible for the day-to-day management and operations of the University, ensuring efficient service delivery, academic support, and the implementation of the institution&apos;s policies, goals, and strategic objectives.
+        </p>
+      </div>
+
+      {/* ── Desktop tree (md+) ── */}
+      <div className="hidden md:block overflow-x-auto pb-4">
+        <div className="flex min-w-max flex-col items-center">
+          <CouncilCard name={vc.name} role={vc.role} tier="top" />
+          <div className="h-8 w-0.5 bg-slate-300" />
+          <CouncilCard name={dvc.name} role={dvc.role} tier="mid" />
+          <div className="h-8 w-0.5 bg-slate-300" />
+          <div className="relative flex items-start">
+            <div className="absolute top-0 left-0 h-0.5 w-full bg-slate-300" />
+            <div className="flex gap-5">
+              {seniorOfficers.map((p) => (
+                <div key={p.name} className="flex flex-col items-center">
+                  <div className="h-8 w-0.5 bg-slate-300" />
+                  <CouncilCard name={p.name} role={p.role} tier="mid" />
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="h-8 w-0.5 bg-slate-300" />
+          <div className="mb-2 rounded-full border border-slate-200 bg-[#F7F8F4] px-4 py-1 text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">
+            Managers &amp; Officers
+          </div>
+          <div className="flex gap-5">
+            {managers.map((p) => (
+              <div key={p.name} className="flex flex-col items-center">
+                <div className="h-6 w-0.5 bg-slate-300" />
+                <CouncilCard name={p.name} role={p.role} tier="base" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* ── Mobile stacked (< md) ── */}
+      <div className="space-y-8 md:hidden">
+        <div className="space-y-3">
+          <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#275D38]">Leadership</p>
+          <CouncilCardMobile name={vc.name} role={vc.role} tier="top" />
+          <CouncilCardMobile name={dvc.name} role={dvc.role} tier="mid" />
+        </div>
+        <div className="space-y-3">
+          <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#275D38]">Senior Officers</p>
+          {seniorOfficers.map((p) => (
+            <CouncilCardMobile key={p.name} name={p.name} role={p.role} tier="mid" />
+          ))}
+        </div>
+        <div className="space-y-3">
+          <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#275D38]">Managers &amp; Officers</p>
+          {managers.map((p) => (
+            <CouncilCardMobile key={p.name} name={p.name} role={p.role} tier="base" />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // ── Tabs config ────────────────────────────────────────────────────────────
 
 const tabs = [
   { id: "about", label: "About Us", content: <TabAboutUs /> },
   { id: "council", label: "University Council", content: <TabUniversityCouncil /> },
-  { id: "administration", label: "University Administration", content: <ComingSoon title="University Administration" /> },
+  { id: "administration", label: "University Administration", content: <TabAdministration /> },
   { id: "guild", label: "Student Guild", content: <ComingSoon title="Student Guild" /> },
   { id: "glance", label: "KCU at a Glance", content: <ComingSoon title="KCU at a Glance" /> },
 ];
