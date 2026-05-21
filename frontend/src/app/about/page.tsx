@@ -162,6 +162,33 @@ function CouncilCard({ name, role, tier }: { name: string; role: string; tier: "
   );
 }
 
+function CouncilCardMobile({ name, role, tier }: { name: string; role: string; tier: "top" | "mid" | "base" }) {
+  const initials = name
+    .replace(/^(Hon\.?|Dr\.?|Prof\.?|Mr\.?|Mrs\.?|Assoc\.?)\s*/gi, "")
+    .trim()
+    .split(" ")
+    .slice(0, 2)
+    .map((w) => w[0])
+    .join("")
+    .toUpperCase();
+
+  const avatarBg = tier === "top" ? "bg-[#FECB00]" : tier === "mid" ? "bg-[#275D38]" : "bg-slate-200";
+  const avatarText = tier === "top" ? "text-[#275D38]" : tier === "mid" ? "text-white" : "text-slate-600";
+  const cardBorder = tier === "top" ? "border-[#FECB00]" : tier === "mid" ? "border-[#275D38]/30" : "border-slate-100";
+
+  return (
+    <div className={`flex items-center gap-4 rounded-2xl border-2 ${cardBorder} bg-white p-4 shadow-sm`}>
+      <div className={`grid size-14 shrink-0 place-items-center rounded-full ${avatarBg} ${avatarText} text-xl font-black`}>
+        {initials}
+      </div>
+      <div>
+        <p className="text-sm font-black leading-snug text-slate-950">{name}</p>
+        <p className="mt-0.5 text-[11px] leading-4 text-slate-500">{role}</p>
+      </div>
+    </div>
+  );
+}
+
 function TabUniversityCouncil() {
   const committeeChairs = [
     { name: "Mrs. Grace N. Gwaku", role: "Chair: Finance, Planning & Development" },
@@ -191,25 +218,15 @@ function TabUniversityCouncil() {
         </p>
       </div>
 
-      {/* Tree */}
-      <div className="overflow-x-auto pb-4">
-        <div className="flex min-w-max flex-col items-center gap-0">
-
-          {/* Tier 1 — Chairperson */}
+      {/* ── Desktop tree (md+) ── */}
+      <div className="hidden md:block overflow-x-auto pb-4">
+        <div className="flex min-w-max flex-col items-center">
           <CouncilCard name="HON DR. Chris Baryomunsi" role="Chairperson University Council" tier="top" />
-
-          {/* connector down */}
           <div className="h-8 w-0.5 bg-slate-300" />
-
-          {/* Tier 2 — Vice Chairperson */}
           <CouncilCard name="Assoc. Prof. Mary Muhenda" role="Vice Chairperson University Council" tier="mid" />
-
-          {/* connector down + horizontal spread */}
           <div className="h-8 w-0.5 bg-slate-300" />
           <div className="relative flex items-start">
-            {/* horizontal bar */}
-            <div className="absolute top-0 left-[calc(50%-1px)] h-0.5 w-full bg-slate-300" style={{ left: 0, width: "100%" }} />
-            {/* vertical drops + cards */}
+            <div className="absolute top-0 left-0 h-0.5 w-full bg-slate-300" />
             <div className="flex gap-6">
               {committeeChairs.map((p) => (
                 <div key={p.name} className="flex flex-col items-center">
@@ -219,16 +236,10 @@ function TabUniversityCouncil() {
               ))}
             </div>
           </div>
-
-          {/* connector down */}
           <div className="h-8 w-0.5 bg-slate-300" />
-
-          {/* Tier 4 — Members label */}
-          <div className="mb-2 rounded-full bg-[#F7F8F4] px-4 py-1 text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 border border-slate-200">
+          <div className="mb-2 rounded-full border border-slate-200 bg-[#F7F8F4] px-4 py-1 text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">
             Committee Members
           </div>
-
-          {/* horizontal spread for members */}
           <div className="flex gap-6">
             {members.map((p) => (
               <div key={p.name} className="flex flex-col items-center">
@@ -237,6 +248,30 @@ function TabUniversityCouncil() {
               </div>
             ))}
           </div>
+        </div>
+      </div>
+
+      {/* ── Mobile stacked (< md) ── */}
+      <div className="space-y-8 md:hidden">
+        {/* Leadership */}
+        <div className="space-y-3">
+          <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#275D38]">Leadership</p>
+          <CouncilCardMobile name="HON DR. Chris Baryomunsi" role="Chairperson University Council" tier="top" />
+          <CouncilCardMobile name="Assoc. Prof. Mary Muhenda" role="Vice Chairperson University Council" tier="mid" />
+        </div>
+        {/* Committee Chairs */}
+        <div className="space-y-3">
+          <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#275D38]">Committee Chairpersons</p>
+          {committeeChairs.map((p) => (
+            <CouncilCardMobile key={p.name} name={p.name} role={p.role} tier="mid" />
+          ))}
+        </div>
+        {/* Members */}
+        <div className="space-y-3">
+          <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#275D38]">Committee Members</p>
+          {members.map((p) => (
+            <CouncilCardMobile key={p.name} name={p.name} role={p.role} tier="base" />
+          ))}
         </div>
       </div>
     </div>
