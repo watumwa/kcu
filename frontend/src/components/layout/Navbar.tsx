@@ -283,6 +283,25 @@ function MobileNav() {
                   <Link href="/academics/academic-erp">Academic ERP</Link>
                 </Button>
               </div>
+
+              <div className="border-t border-slate-100 pt-4">
+                <p className="mb-3 text-xs font-black uppercase tracking-[0.16em] text-slate-500">Follow us</p>
+                <div className="flex items-center gap-2">
+                  {socialLinks.map((social) => {
+                    const Icon = social.icon;
+                    return (
+                      <Link
+                        key={social.label}
+                        href={social.href}
+                        aria-label={social.label}
+                        className="grid size-10 place-items-center rounded-full bg-[#275D38] text-white transition hover:bg-[#FECB00] hover:text-[#17351f]"
+                      >
+                        <Icon className="size-4" />
+                      </Link>
+                    );
+                  })}
+                </div>
+              </div>
             </div>
           </motion.div>
         )}
