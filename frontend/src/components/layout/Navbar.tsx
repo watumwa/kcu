@@ -5,6 +5,7 @@ import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   ChevronDown,
+  ExternalLink,
   GraduationCap,
   Mail,
   MapPin,
@@ -175,9 +176,9 @@ function DesktopNav() {
               <GraduationCap className="mr-2 size-4" /> Apply Now
             </Link>
           </Button>
-          <Button asChild variant="outline" className="h-12 rounded-xl border-2 border-[#275D38] px-5 font-bold text-[#275D38] hover:bg-[#275D38] hover:text-white">
-            <Link href="/academics/academic-erp">
-              Academic ERP <ChevronDown className="ml-2 size-4" />
+          <Button asChild variant="outline" className="h-12 rounded-xl border-2 border-[#275D38] bg-white/80 px-5 font-bold text-[#275D38] shadow-sm hover:bg-[#275D38] hover:text-white">
+            <Link href="https://academia.kcu.ac.ug/?_gl=1*1fzvqwx*_ga*NDE4NjYyNDA1LjE3NzkyMjYzOTY.*_ga_5SQ5XXJWGB*czE3NzkzNDUxMjkkbzMkZzAkdDE3NzkzNDUxMjkkajYwJGwwJGgw">
+              ERP Portal <ExternalLink className="ml-2 size-4" />
             </Link>
           </Button>
         </div>
@@ -279,8 +280,8 @@ function MobileNav() {
                 <Button asChild className="h-12 rounded-xl bg-[#FECB00] font-black text-[#17351f] hover:bg-[#e8bb00]">
                   <Link href="https://apply.kcu.ac.ug/">Apply Now</Link>
                 </Button>
-                <Button asChild variant="outline" className="h-12 rounded-xl border-2 border-[#275D38] font-bold text-[#275D38]">
-                  <Link href="/academics/academic-erp">Academic ERP</Link>
+                <Button asChild variant="outline" className="h-12 rounded-xl border-2 border-[#275D38] bg-white font-bold text-[#275D38]">
+                  <Link href="https://academia.kcu.ac.ug/?_gl=1*1fzvqwx*_ga*NDE4NjYyNDA1LjE3NzkyMjYzOTY.*_ga_5SQ5XXJWGB*czE3NzkzNDUxMjkkbzMkZzAkdDE3NzkzNDUxMjkkajYwJGwwJGgw">ERP Portal <ExternalLink className="ml-2 size-4" /></Link>
                 </Button>
               </div>
 

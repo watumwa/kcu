@@ -64,7 +64,7 @@ export const navItems: NavItem[] = [
           { label: "Short Courses", href: "/academics/courses/short-courses" },
         ],
       },
-      { label: "Academic ERP", href: "/academics/academic-erp" },
+      { label: "ERP Portal", href: "https://academia.kcu.ac.ug/?_gl=1*1fzvqwx*_ga*NDE4NjYyNDA1LjE3NzkyMjYzOTY.*_ga_5SQ5XXJWGB*czE3NzkzNDUxMjkkbzMkZzAkdDE3NzkzNDUxMjkkajYwJGwwJGgw" },
       { label: "E-Learning", href: "/academics/elearning" },
     ],
   },
