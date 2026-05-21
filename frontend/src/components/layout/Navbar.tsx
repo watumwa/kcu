@@ -69,14 +69,15 @@ function TopBar() {
         </div>
 
         <div className="flex items-center gap-4">
-          <label className="relative block w-64">
+          <form action="/search" className="relative block w-64">
             <Search className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-white/70" />
             <input
+              name="q"
               aria-label="Search website"
               placeholder="Search website..."
               className="h-8 w-full rounded-full border border-white/15 bg-white/10 pl-9 pr-4 text-sm text-white outline-none placeholder:text-white/65 transition focus:border-[#FECB00] focus:bg-white/15"
             />
-          </label>
+          </form>
           <div className="flex items-center gap-2">
             {socialLinks.map((social) => {
               const Icon = social.icon;
@@ -213,14 +214,15 @@ function MobileNav() {
             className="overflow-hidden border-t border-slate-100 bg-white"
           >
             <div className="space-y-2 px-4 py-5">
-              <label className="relative mb-4 block">
+              <form action="/search" className="relative mb-4 block">
                 <Search className="absolute left-4 top-1/2 size-4 -translate-y-1/2 text-slate-400" />
                 <input
+                  name="q"
                   aria-label="Search website"
                   placeholder="Search website..."
                   className="h-12 w-full rounded-2xl border border-slate-200 bg-slate-50 pl-11 pr-4 text-sm outline-none focus:border-[#275D38]"
                 />
-              </label>
+              </form>
 
               {navItems.map((item, index) => (
                 <div key={item.label} className="rounded-2xl border border-slate-100 bg-slate-50">
