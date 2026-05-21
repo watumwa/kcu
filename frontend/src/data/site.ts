@@ -136,6 +136,66 @@ export const heroSlides: HeroSlide[] = [
       "International student support and guidance",
     ],
   },
+  {
+    badge: "Health Sciences",
+    school: "School of Medicine and Health Sciences",
+    title: "Learn with Purpose",
+    subtitle: "Prepare for service through practical training, guided study and a strong health sciences foundation.",
+    cta: "View Programmes",
+    image:
+      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1800&q=85",
+    programmes: [
+      "Health sciences programmes",
+      "Clinical learning pathways",
+      "Student support and mentoring",
+      "Community-focused training",
+    ],
+  },
+  {
+    badge: "Business and Leadership",
+    school: "School of Business and Management",
+    title: "Build Professional Confidence",
+    subtitle: "Develop the management, enterprise and leadership skills needed for modern organisations.",
+    cta: "Explore Business",
+    image:
+      "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1800&q=85",
+    programmes: [
+      "Business and management studies",
+      "Leadership development",
+      "Enterprise and innovation",
+      "Career-focused learning",
+    ],
+  },
+  {
+    badge: "Computing and Innovation",
+    school: "School of Computing and Applied Sciences",
+    title: "Shape Tomorrow with Technology",
+    subtitle: "Study computing, applied sciences and digital skills for a fast-changing professional world.",
+    cta: "Discover Computing",
+    image:
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1800&q=85",
+    programmes: [
+      "Computing and applied sciences",
+      "Digital systems and innovation",
+      "Technology-driven learning",
+      "Practical project experience",
+    ],
+  },
+  {
+    badge: "Student Experience",
+    school: "Campus Life at KCU",
+    title: "A Supportive University Community",
+    subtitle: "Find guidance, friendships, activities and learning resources that help students thrive.",
+    cta: "Explore Student Life",
+    image:
+      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1800&q=85",
+    programmes: [
+      "Student leadership",
+      "Clubs and campus activities",
+      "Learning resources",
+      "Student support services",
+    ],
+  },
 ];
 
 export const quickLinks = [
