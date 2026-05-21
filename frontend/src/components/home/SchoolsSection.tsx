@@ -1,6 +1,16 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, BookMarked } from "lucide-react";
 import { schools } from "@/data/site";
+
+const schoolImages = [
+  "https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&w=900&q=85",
+  "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=85",
+  "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=85",
+  "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=900&q=85",
+  "https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=900&q=85",
+  "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=85",
+];
 
 export default function SchoolsSection() {
   return (
@@ -21,17 +31,30 @@ export default function SchoolsSection() {
             <Link
               href="/academics"
               key={school}
-              className="group relative overflow-hidden rounded-xl border border-slate-100 bg-slate-50 p-3 shadow-sm transition hover:-translate-y-1 hover:border-[#FECB00] hover:shadow-xl hover:shadow-slate-900/10 sm:p-4"
+              className="group overflow-hidden rounded-xl border border-slate-100 bg-white shadow-sm transition hover:-translate-y-1 hover:border-[#FECB00] hover:shadow-xl hover:shadow-slate-900/10"
             >
-              <div className="absolute right-0 top-0 size-16 rounded-bl-full bg-[#FECB00]/20 transition group-hover:bg-[#FECB00]/35 sm:size-20" />
-              <div className="relative z-10 grid size-10 place-items-center rounded-lg bg-[#275D38] text-[#FECB00] sm:size-11">
-                <BookMarked className="size-5" />
+              <div className="relative h-36 overflow-hidden bg-[#17351f] sm:h-40">
+                <Image
+                  src={schoolImages[index]}
+                  alt={`${school} students and learning environment`}
+                  fill
+                  sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
+                  className="object-cover transition duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0b2113]/80 via-[#0b2113]/20 to-transparent" />
+                <div className="absolute left-3 top-3 grid size-10 place-items-center rounded-lg bg-white/95 text-[#275D38] shadow-lg shadow-black/15">
+                  <BookMarked className="size-5" />
+                </div>
+                <span className="absolute bottom-3 right-3 rounded-full bg-[#FECB00] px-3 py-1 text-[11px] font-black text-[#17351f]">
+                  0{index + 1}
+                </span>
               </div>
-              <p className="relative z-10 mt-4 text-[11px] font-black uppercase tracking-[0.14em] text-slate-400 sm:mt-5 sm:text-xs">0{index + 1}</p>
-              <h3 className="relative z-10 mt-2 text-lg font-black leading-tight text-slate-950 sm:text-xl">{school}</h3>
-              <span className="relative z-10 mt-4 inline-flex items-center gap-2 text-xs font-black text-[#275D38] sm:text-sm">
-                Explore school <ArrowRight className="size-4 transition group-hover:translate-x-1" />
-              </span>
+              <div className="p-3 sm:p-4">
+                <h3 className="text-lg font-black leading-tight text-slate-950 sm:text-xl">{school}</h3>
+                <span className="mt-4 inline-flex items-center gap-2 text-xs font-black text-[#275D38] sm:text-sm">
+                  Explore school <ArrowRight className="size-4 transition group-hover:translate-x-1" />
+                </span>
+              </div>
             </Link>
           ))}
         </div>
