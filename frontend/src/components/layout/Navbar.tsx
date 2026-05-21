@@ -37,7 +37,7 @@ function UniversityMark() {
           width={64}
           height={64}
           priority
-          className="h-full w-full object-contain p-1.5"
+          className="h-full w-full scale-125 object-contain p-0.5"
         />
       </div>
       <div className="min-w-0 leading-none">
@@ -102,7 +102,7 @@ function DesktopNav() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <div className="hidden border-b border-white/20 bg-white/10 shadow-none backdrop-blur-md lg:block">
+    <div className="hidden border-b border-white/45 bg-white/85 shadow-sm shadow-black/5 backdrop-blur-md lg:block">
       <div className="mx-auto flex h-24 max-w-[1440px] items-center gap-8 px-8">
         <div className="min-w-[270px]">
           <UniversityMark />
@@ -133,10 +133,6 @@ function DesktopNav() {
                     transition={{ duration: 0.18 }}
                     className="absolute left-0 top-full z-50 mt-4 w-[340px] overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-2xl shadow-slate-900/15"
                   >
-                    <div className="bg-[#275D38] p-5 text-white">
-                      <p className="text-lg font-bold">{item.label}</p>
-                      <p className="mt-2 text-sm leading-6 text-white/80">{item.description}</p>
-                    </div>
                     <div className="p-3">
                       {item.children.map((child) => (
                         <div key={child.label}>
@@ -196,7 +192,7 @@ function MobileNav() {
   const [expanded, setExpanded] = useState<number | null>(null);
 
   return (
-    <div className="border-b border-white/25 bg-white/15 shadow-none backdrop-blur-md lg:hidden">
+    <div className="border-b border-white/45 bg-white/85 shadow-sm shadow-black/5 backdrop-blur-md lg:hidden">
       <div className="flex h-16 items-center justify-between gap-3 px-4 sm:h-20">
         <UniversityMark />
         <button

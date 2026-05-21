@@ -62,21 +62,21 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 28, y: -10 }}
             transition={{ duration: 0.5 }}
-            className="w-full max-w-2xl rounded-2xl border border-white/35 bg-white/90 p-5 text-[#111827] shadow-2xl shadow-black/25 backdrop-blur-xl sm:p-6 md:rounded-[1.75rem] md:p-8 lg:p-10"
+            className="w-full max-w-[23rem] rounded-lg border border-white/35 bg-white/90 p-3 text-[#111827] shadow-2xl shadow-black/25 backdrop-blur-xl sm:p-3.5 md:p-4"
           >
-            <div className="mb-4 inline-flex max-w-full items-center gap-2 rounded-full bg-[#275D38] px-3 py-2 text-[11px] font-black uppercase tracking-[0.12em] text-[#FECB00] shadow-sm sm:px-4 sm:text-sm sm:tracking-[0.18em]">
-              <GraduationCap className="size-4" /> {current.badge}
+            <div className="mb-2 inline-flex max-w-full items-center gap-1.5 rounded-full bg-[#275D38] px-2.5 py-1 text-[8px] font-black uppercase tracking-[0.08em] text-[#FECB00] shadow-sm sm:text-[9px]">
+              <GraduationCap className="size-3" /> {current.badge}
             </div>
-            <h1 className="text-3xl font-black leading-[1.08] text-[#111827] sm:text-4xl md:text-5xl lg:text-6xl">
+            <h1 className="text-lg font-black leading-[1.12] text-[#111827] sm:text-xl md:text-2xl">
               {current.school}
             </h1>
-            <p className="mt-4 text-xl font-black leading-tight text-[#A22A23] sm:text-2xl md:text-3xl">{current.title}</p>
-            <p className="mt-5 max-w-2xl text-base leading-7 text-slate-700 md:text-xl md:leading-8">{current.subtitle}</p>
-            <div className="mt-7 grid gap-3 sm:flex sm:flex-wrap sm:gap-4">
-              <Button asChild className="h-12 rounded-xl bg-[#FECB00] px-5 text-sm font-black text-[#17351f] shadow-xl shadow-black/20 hover:bg-[#e8bb00] sm:h-[52px] sm:px-7 sm:text-base">
+            <p className="mt-1.5 text-sm font-black leading-tight text-[#A22A23] sm:text-base">{current.title}</p>
+            <p className="mt-2.5 max-w-sm text-xs leading-5 text-slate-700">{current.subtitle}</p>
+            <div className="mt-3 grid gap-2 sm:flex sm:flex-wrap">
+              <Button asChild className="h-9 rounded-md bg-[#FECB00] px-3 text-xs font-black text-[#17351f] shadow-xl shadow-black/20 hover:bg-[#e8bb00]">
                 <Link href="/admissions/apply-now">{current.cta}</Link>
               </Button>
-              <Button asChild variant="outline" className="h-12 rounded-xl border-2 border-[#275D38] bg-white px-5 text-sm font-bold text-[#275D38] hover:bg-[#275D38] hover:text-white sm:h-[52px] sm:px-7 sm:text-base">
+              <Button asChild variant="outline" className="h-9 rounded-md border-2 border-[#275D38] bg-white px-3 text-xs font-bold text-[#275D38] hover:bg-[#275D38] hover:text-white">
                 <Link href="/academics/courses">View Programmes</Link>
               </Button>
             </div>

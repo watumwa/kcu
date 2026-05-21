@@ -14,14 +14,14 @@ export default function QuickLinks() {
             <Link
               key={item.title}
               href={item.href}
-              className="group rounded-2xl border border-slate-100 bg-white p-4 shadow-lg shadow-slate-900/5 transition hover:-translate-y-1 hover:border-[#FECB00] sm:p-5 md:rounded-[1.75rem] md:p-6 md:shadow-2xl md:shadow-slate-900/10"
+              className="group rounded-xl border border-slate-100 bg-white p-3 shadow-lg shadow-slate-900/5 transition hover:-translate-y-1 hover:border-[#FECB00] sm:p-4 md:shadow-2xl md:shadow-slate-900/10"
             >
-              <div className="mb-4 grid size-11 place-items-center rounded-xl bg-[#275D38] text-[#FECB00] transition group-hover:bg-[#FECB00] group-hover:text-[#275D38] sm:size-14 sm:rounded-2xl">
-                <Icon className="size-5 sm:size-7" />
+              <div className="mb-3 grid size-10 place-items-center rounded-lg bg-[#275D38] text-[#FECB00] transition group-hover:bg-[#FECB00] group-hover:text-[#275D38] sm:size-11">
+                <Icon className="size-5" />
               </div>
-              <h3 className="text-lg font-black text-slate-950 sm:text-xl">{item.title}</h3>
-              <p className="mt-2 text-sm leading-6 text-slate-600 sm:mt-3 sm:min-h-20 sm:text-base sm:leading-7">{item.text}</p>
-              <span className="mt-4 inline-flex items-center gap-2 text-sm font-black text-[#275D38] sm:mt-5 sm:text-base">
+              <h3 className="text-base font-black text-slate-950 sm:text-lg">{item.title}</h3>
+              <p className="mt-2 text-xs leading-5 text-slate-600 sm:min-h-16 sm:text-sm sm:leading-6">{item.text}</p>
+              <span className="mt-3 inline-flex items-center gap-2 text-xs font-black text-[#275D38] sm:text-sm">
                 Open section <ArrowRight className="size-4 transition group-hover:translate-x-1" />
               </span>
             </Link>

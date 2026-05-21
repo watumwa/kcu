@@ -8,13 +8,13 @@ export default function Footer() {
       <div className="mx-auto grid max-w-[1440px] gap-10 border-b border-white/10 pb-12 lg:grid-cols-[1.15fr_0.85fr_0.85fr_0.85fr]">
         <div>
           <div className="flex items-center gap-3">
-            <div className="grid size-14 place-items-center overflow-hidden rounded-full border-2 border-[#FECB00] bg-white">
+            <div className="grid size-14 shrink-0 place-items-center overflow-hidden rounded-full border-2 border-[#FECB00] bg-white shadow-sm shadow-black/20">
               <Image
                 src="/logo.png"
                 alt="King Ceasor University logo"
                 width={56}
                 height={56}
-                className="h-full w-full object-contain p-1.5"
+                className="h-full w-full scale-125 object-contain p-0.5"
               />
             </div>
             <div>

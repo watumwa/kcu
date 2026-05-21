@@ -9,17 +9,17 @@ export default function AboutSection() {
       <div className="mx-auto grid max-w-[1440px] gap-8 lg:grid-cols-[0.94fr_1.06fr] lg:items-center lg:gap-12">
         <div>
           <p className="text-xs font-black uppercase tracking-[0.16em] text-[#275D38] sm:text-sm sm:tracking-[0.2em]">About King Ceasor University</p>
-          <h2 className="mt-3 font-serif text-3xl font-black leading-tight text-slate-950 sm:text-4xl md:text-5xl">
+          <h2 className="mt-3 font-serif text-2xl font-black leading-tight text-slate-950 sm:text-3xl md:text-4xl">
             A university environment shaped by excellence, innovation and global outlook.
           </h2>
-          <p className="mt-5 text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
+          <p className="mt-4 text-sm leading-6 text-slate-600 sm:text-base sm:leading-7">
             King Ceasor University brings together career-focused teaching, research ambition and student support in a modern academic community. The university experience is designed around strong programmes, trusted guidance and meaningful opportunities for learners from Uganda, Africa and beyond.
           </p>
-          <div className="mt-7 grid gap-3 sm:flex sm:flex-wrap sm:gap-4">
-            <Button asChild className="h-12 rounded-xl bg-[#275D38] px-5 text-sm font-black text-white hover:bg-[#17351f] sm:px-6 sm:text-base">
+          <div className="mt-5 grid gap-3 sm:flex sm:flex-wrap">
+            <Button asChild className="h-10 rounded-lg bg-[#275D38] px-4 text-sm font-black text-white hover:bg-[#17351f]">
               <Link href="/about">Learn About KCU</Link>
             </Button>
-            <Button asChild variant="outline" className="h-12 rounded-xl border-2 border-[#275D38] px-5 text-sm font-black text-[#275D38] hover:bg-[#275D38] hover:text-white sm:px-6 sm:text-base">
+            <Button asChild variant="outline" className="h-10 rounded-lg border-2 border-[#275D38] px-4 text-sm font-black text-[#275D38] hover:bg-[#275D38] hover:text-white">
               <Link href="/admissions">Contact Admissions <ArrowRight className="ml-2 size-4" /></Link>
             </Button>
           </div>
@@ -31,7 +31,7 @@ export default function AboutSection() {
             alt="University students walking on campus"
             width={1200}
             height={780}
-            className="h-80 w-full object-cover opacity-85 sm:h-[420px] lg:h-[520px]"
+            className="h-72 w-full object-cover opacity-85 sm:h-[360px] lg:h-[440px]"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0b2113]/90 via-[#0b2113]/20 to-transparent" />
           <div className="grid gap-3 bg-[#0b2113] p-4 sm:absolute sm:inset-x-0 sm:bottom-0 sm:grid-cols-3 sm:bg-transparent sm:p-5 md:p-7">
