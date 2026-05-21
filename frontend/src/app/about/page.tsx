@@ -137,6 +137,112 @@ function TabAboutUs() {
   );
 }
 
+function CouncilCard({ name, role, tier }: { name: string; role: string; tier: "top" | "mid" | "base" }) {
+  const initials = name
+    .replace(/^(Hon\.?|Dr\.?|Prof\.?|Mr\.?|Mrs\.?|Assoc\.?)\s*/gi, "")
+    .trim()
+    .split(" ")
+    .slice(0, 2)
+    .map((w) => w[0])
+    .join("")
+    .toUpperCase();
+
+  const avatarBg = tier === "top" ? "bg-[#FECB00]" : tier === "mid" ? "bg-[#275D38]" : "bg-slate-200";
+  const avatarText = tier === "top" ? "text-[#275D38]" : tier === "mid" ? "text-white" : "text-slate-600";
+  const cardBorder = tier === "top" ? "border-[#FECB00]" : tier === "mid" ? "border-[#275D38]/30" : "border-slate-100";
+
+  return (
+    <div className={`flex flex-col items-center rounded-2xl border-2 ${cardBorder} bg-white p-5 shadow-md text-center w-44 shrink-0`}>
+      <div className={`grid size-20 place-items-center rounded-full ${avatarBg} ${avatarText} text-2xl font-black shadow-inner`}>
+        {initials}
+      </div>
+      <p className="mt-3 text-sm font-black leading-snug text-slate-950">{name}</p>
+      <p className="mt-1 text-[11px] leading-4 text-slate-500">{role}</p>
+    </div>
+  );
+}
+
+function TabUniversityCouncil() {
+  const committeeChairs = [
+    { name: "Mrs. Grace N. Gwaku", role: "Chair: Finance, Planning & Development" },
+    { name: "Prof. Josephat Byamugisha", role: "Chair: Quality Assurance, ICT & Gender" },
+    { name: "Mr. Donald Nyakairu", role: "Chair: Audit & Risk Management" },
+    { name: "Mr. Cyriaco Kabagambe", role: "Chair: Student Welfare & Disciplinary" },
+    { name: "Dr. Kamba Fadhiru Pakoyo", role: "Chair: Appointments Board" },
+  ];
+
+  const members = [
+    { name: "Mr. Adonia Ainebyona", role: "Guild President" },
+    { name: "Dr. Sabiiti Mulema", role: "Staff Representative" },
+    { name: "Mrs. Rukundo Anita", role: "Member" },
+    { name: "Assoc. Prof. Margaret Nabasirye", role: "Member" },
+    { name: "Mrs. Joyce Okello", role: "Member" },
+    { name: "Prof. Winston Ireeta Tumps", role: "Member" },
+    { name: "Mr. Timothy Musoke Ssejjoba", role: "Member" },
+  ];
+
+  return (
+    <div className="space-y-10">
+      <div>
+        <p className="text-xs font-black uppercase tracking-[0.2em] text-[#275D38]">Governance</p>
+        <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950 sm:text-3xl">University Council</h2>
+        <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
+          The University Council is entrusted with the responsibility for overseeing the governance, administration and strategic direction of the University to ensure effective management, academic quality and institutional development.
+        </p>
+      </div>
+
+      {/* Tree */}
+      <div className="overflow-x-auto pb-4">
+        <div className="flex min-w-max flex-col items-center gap-0">
+
+          {/* Tier 1 — Chairperson */}
+          <CouncilCard name="HON DR. Chris Baryomunsi" role="Chairperson University Council" tier="top" />
+
+          {/* connector down */}
+          <div className="h-8 w-0.5 bg-slate-300" />
+
+          {/* Tier 2 — Vice Chairperson */}
+          <CouncilCard name="Assoc. Prof. Mary Muhenda" role="Vice Chairperson University Council" tier="mid" />
+
+          {/* connector down + horizontal spread */}
+          <div className="h-8 w-0.5 bg-slate-300" />
+          <div className="relative flex items-start">
+            {/* horizontal bar */}
+            <div className="absolute top-0 left-[calc(50%-1px)] h-0.5 w-full bg-slate-300" style={{ left: 0, width: "100%" }} />
+            {/* vertical drops + cards */}
+            <div className="flex gap-6">
+              {committeeChairs.map((p) => (
+                <div key={p.name} className="flex flex-col items-center">
+                  <div className="h-8 w-0.5 bg-slate-300" />
+                  <CouncilCard name={p.name} role={p.role} tier="mid" />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* connector down */}
+          <div className="h-8 w-0.5 bg-slate-300" />
+
+          {/* Tier 4 — Members label */}
+          <div className="mb-2 rounded-full bg-[#F7F8F4] px-4 py-1 text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 border border-slate-200">
+            Committee Members
+          </div>
+
+          {/* horizontal spread for members */}
+          <div className="flex gap-6">
+            {members.map((p) => (
+              <div key={p.name} className="flex flex-col items-center">
+                <div className="h-6 w-0.5 bg-slate-300" />
+                <CouncilCard name={p.name} role={p.role} tier="base" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function ComingSoon({ title }: { title: string }) {
   return (
     <div className="flex min-h-[40vh] flex-col items-center justify-center rounded-2xl border border-slate-100 bg-[#F7F8F4] p-10 text-center">
@@ -153,7 +259,7 @@ function ComingSoon({ title }: { title: string }) {
 
 const tabs = [
   { id: "about", label: "About Us", content: <TabAboutUs /> },
-  { id: "council", label: "University Council", content: <ComingSoon title="University Council" /> },
+  { id: "council", label: "University Council", content: <TabUniversityCouncil /> },
   { id: "administration", label: "University Administration", content: <ComingSoon title="University Administration" /> },
   { id: "guild", label: "Student Guild", content: <ComingSoon title="Student Guild" /> },
   { id: "glance", label: "KCU at a Glance", content: <ComingSoon title="KCU at a Glance" /> },
