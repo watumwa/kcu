@@ -14,17 +14,16 @@ import {
   X,
 } from "lucide-react";
 import { useState } from "react";
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa6";
+import { FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
 import { Button } from "@/components/ui/button";
 import { navItems } from "@/data/site";
 
 const socialLinks = [
-  { label: "X", href: "#", icon: FaXTwitter },
-  { label: "Facebook", href: "#", icon: FaFacebookF },
-  { label: "Instagram", href: "#", icon: FaInstagram },
-  { label: "LinkedIn", href: "#", icon: FaLinkedinIn },
-  { label: "YouTube", href: "#", icon: FaYoutube },
+  { label: "X", href: "https://x.com/KingCeasorUni", icon: FaXTwitter },
+  { label: "Facebook", href: "https://www.facebook.com/kcu.ac.ug", icon: FaFacebookF },
+  { label: "LinkedIn", href: "https://ug.linkedin.com/company/king-ceasor-university", icon: FaLinkedinIn },
+  { label: "YouTube", href: "https://www.youtube.com/@kingceasoruniversitytv", icon: FaYoutube },
 ];
 
 function UniversityMark() {
