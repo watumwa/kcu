@@ -31,7 +31,7 @@ export default function Footer() {
           {
             title: "Admissions",
             links: [
-              { label: "Apply Now", href: "/admissions/apply-now" },
+              { label: "Apply Now", href: "https://apply.kcu.ac.ug/" },
               { label: "Fees Structure", href: "/admissions/fees-structure" },
               { label: "Admission Requirements", href: "/admissions/admission-requirements" },
             ],

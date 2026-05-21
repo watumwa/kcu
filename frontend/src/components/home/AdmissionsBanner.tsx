@@ -16,7 +16,7 @@ export default function AdmissionsBanner() {
           </p>
           <div className="mt-5 grid gap-3 sm:flex sm:flex-wrap">
             <Button asChild className="h-10 rounded-lg bg-[#FECB00] px-4 text-sm font-black text-[#17351f] hover:bg-[#e8bb00]">
-              <Link href="/admissions/apply-now">Apply Now <ArrowRight className="ml-2 size-4" /></Link>
+              <Link href="https://apply.kcu.ac.ug/">Apply Now <ArrowRight className="ml-2 size-4" /></Link>
             </Button>
             <Button asChild variant="outline" className="h-10 rounded-lg border-2 border-white/70 bg-white/10 px-4 text-sm font-black text-white hover:bg-white hover:text-[#275D38]">
               <Link href="/admissions/fees-structure">View Fees</Link>

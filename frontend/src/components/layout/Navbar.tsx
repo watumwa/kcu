@@ -171,7 +171,7 @@ function DesktopNav() {
 
         <div className="flex items-center gap-3">
           <Button asChild className="h-12 rounded-xl bg-[#FECB00] px-5 font-black text-[#17351f] shadow-lg shadow-[#FECB00]/25 hover:bg-[#e8bb00]">
-            <Link href="/admissions/apply-now">
+            <Link href="https://apply.kcu.ac.ug/">
               <GraduationCap className="mr-2 size-4" /> Apply Now
             </Link>
           </Button>
@@ -277,7 +277,7 @@ function MobileNav() {
 
               <div className="grid gap-3 pt-4">
                 <Button asChild className="h-12 rounded-xl bg-[#FECB00] font-black text-[#17351f] hover:bg-[#e8bb00]">
-                  <Link href="/admissions/apply-now">Apply Now</Link>
+                  <Link href="https://apply.kcu.ac.ug/">Apply Now</Link>
                 </Button>
                 <Button asChild variant="outline" className="h-12 rounded-xl border-2 border-[#275D38] font-bold text-[#275D38]">
                   <Link href="/academics/academic-erp">Academic ERP</Link>

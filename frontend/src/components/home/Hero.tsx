@@ -74,7 +74,7 @@ export default function Hero() {
             <p className="mt-2.5 max-w-sm text-xs leading-5 text-slate-700">{current.subtitle}</p>
             <div className="mt-3 grid gap-2 sm:flex sm:flex-wrap">
               <Button asChild className="h-9 rounded-md bg-[#FECB00] px-3 text-xs font-black text-[#17351f] shadow-xl shadow-black/20 hover:bg-[#e8bb00]">
-                <Link href="/admissions/apply-now">{current.cta}</Link>
+                <Link href="https://apply.kcu.ac.ug/">{current.cta}</Link>
               </Button>
               <Button asChild variant="outline" className="h-9 rounded-md border-2 border-[#275D38] bg-white px-3 text-xs font-bold text-[#275D38] hover:bg-[#275D38] hover:text-white">
                 <Link href="/academics/courses">View Programmes</Link>
