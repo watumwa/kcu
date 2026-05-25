@@ -16,7 +16,7 @@ export default function Footer() {
             priority={false}
           />
           <p className="mt-5 max-w-md leading-7 text-white/70">
-            Advancing knowledge, leadership and professional excellence through career-focused teaching, research and a supportive student experience.
+            Advancing knowledge, leadership and professional excellence through career-focused teaching, research and a supportive student experience
           </p>
         </div>
 
