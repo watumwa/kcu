@@ -48,13 +48,13 @@ function TopBar() {
       <div className="mx-auto flex h-10 max-w-[1440px] items-center justify-between px-8">
         <div className="flex items-center gap-6 text-sm text-white/90">
           <span className="inline-flex items-center gap-2">
-            <Phone className="size-4 text-[#FFC66B]" /> +256 000 000 000
+            <Phone className="size-4 text-[#FFC66B]" /> +256 200 911 450
           </span>
           <span className="inline-flex items-center gap-2">
-            <Mail className="size-4 text-[#FFC66B]" /> admissions@kcu.ac.ug
+            <Mail className="size-4 text-[#FFC66B]" /> info@kcu.ac.ug
           </span>
           <span className="inline-flex items-center gap-2">
-            <MapPin className="size-4 text-[#FFC66B]" /> Kampala, Uganda
+            <MapPin className="size-4 text-[#FFC66B]" /> Plot 32 Ggaba Road, Bunga Hill
           </span>
         </div>
 
