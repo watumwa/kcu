@@ -31,7 +31,7 @@ function UniversityMark() {
   return (
     <Link href="/" className="block w-[210px] shrink-0 sm:w-[250px] lg:w-[285px]" aria-label="King Ceasor University home">
       <Image
-        src="/navbar-logo.png"
+        src="/logo.png"
         alt="King Ceasor University"
         width={815}
         height={306}
