@@ -30,7 +30,7 @@ const socialLinks = [
 function UniversityMark() {
   return (
     <Link href="/" className="flex min-w-0 items-center gap-2 sm:gap-3" aria-label="King Ceasor University home">
-      <div className="relative grid size-11 shrink-0 place-items-center overflow-hidden rounded-full border-2 border-[#275D38] bg-white shadow-sm sm:size-14 lg:size-16">
+      <div className="relative grid size-11 shrink-0 place-items-center overflow-hidden rounded-full border-2 border-[#0B6232] bg-white shadow-sm sm:size-14 lg:size-16">
         <Image
           src="/logo.png"
           alt="King Ceasor University logo"
@@ -41,10 +41,10 @@ function UniversityMark() {
         />
       </div>
       <div className="min-w-0 leading-none">
-        <p className="truncate font-serif text-lg font-black tracking-tight text-[#275D38] drop-shadow-[0_0_10px_rgba(254,203,0,0.5)] sm:text-xl lg:text-2xl">
+        <p className="truncate font-serif text-lg font-black tracking-tight text-[#0B6232] drop-shadow-[0_0_10px_rgba(255,198,107,0.5)] sm:text-xl lg:text-2xl">
           KING CEASOR
         </p>
-        <p className="mt-1 truncate font-serif text-xs font-semibold tracking-[0.2em] text-[#275D38] drop-shadow-[0_0_8px_rgba(254,203,0,0.45)] sm:text-sm sm:tracking-[0.28em] lg:text-base">
+        <p className="mt-1 truncate font-serif text-xs font-semibold tracking-[0.2em] text-[#0B6232] drop-shadow-[0_0_8px_rgba(255,198,107,0.45)] sm:text-sm sm:tracking-[0.28em] lg:text-base">
           UNIVERSITY
         </p>
       </div>
@@ -54,17 +54,17 @@ function UniversityMark() {
 
 function TopBar() {
   return (
-    <div className="hidden bg-[#17351f] text-white xl:block">
+    <div className="hidden bg-[#0B6232] text-white xl:block">
       <div className="mx-auto flex h-10 max-w-[1440px] items-center justify-between px-8">
         <div className="flex items-center gap-6 text-sm text-white/90">
           <span className="inline-flex items-center gap-2">
-            <Phone className="size-4 text-[#FECB00]" /> +256 000 000 000
+            <Phone className="size-4 text-[#FFC66B]" /> +256 000 000 000
           </span>
           <span className="inline-flex items-center gap-2">
-            <Mail className="size-4 text-[#FECB00]" /> admissions@kcu.ac.ug
+            <Mail className="size-4 text-[#FFC66B]" /> admissions@kcu.ac.ug
           </span>
           <span className="inline-flex items-center gap-2">
-            <MapPin className="size-4 text-[#FECB00]" /> Kampala, Uganda
+            <MapPin className="size-4 text-[#FFC66B]" /> Kampala, Uganda
           </span>
         </div>
 
@@ -75,7 +75,7 @@ function TopBar() {
               name="q"
               aria-label="Search website"
               placeholder="Search website..."
-              className="h-8 w-full rounded-full border border-white/15 bg-white/10 pl-9 pr-4 text-sm text-white outline-none placeholder:text-white/65 transition focus:border-[#FECB00] focus:bg-white/15"
+              className="h-8 w-full rounded-full border border-white/15 bg-white/10 pl-9 pr-4 text-sm text-white outline-none placeholder:text-white/65 transition focus:border-[#FFC66B] focus:bg-white/15"
             />
           </form>
           <div className="flex items-center gap-2">
@@ -86,7 +86,7 @@ function TopBar() {
                   key={social.label}
                   href={social.href}
                   aria-label={social.label}
-                  className="grid size-7 place-items-center rounded-full bg-white/10 text-white transition hover:bg-[#FECB00] hover:text-[#17351f]"
+                  className="grid size-7 place-items-center rounded-full bg-white/10 text-white transition hover:bg-[#FFC66B] hover:text-[#0B6232]"
                 >
                   <Icon className="size-3.5" />
                 </Link>
@@ -119,7 +119,7 @@ function DesktopNav() {
             >
               <Link
                 href={item.href}
-                className="flex items-center gap-1 rounded-full px-3 py-2.5 text-[15px] font-semibold text-slate-800 transition hover:bg-[#FECB00]/25 hover:text-[#275D38]"
+                className="flex items-center gap-1 rounded-full px-3 py-2.5 text-[15px] font-semibold text-slate-800 transition hover:bg-[#FFC66B]/25 hover:text-[#0B6232]"
               >
                 {item.label}
                 {item.children.length > 0 && <ChevronDown className="size-4" />}
@@ -139,7 +139,7 @@ function DesktopNav() {
                         <div key={child.label}>
                           <Link
                             href={child.href}
-                            className="flex items-center justify-between rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-[#FECB00]/20 hover:text-[#275D38]"
+                            className="flex items-center justify-between rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-[#FFC66B]/20 hover:text-[#0B6232]"
                           >
                             {child.label}
                             {child.children ? (
@@ -149,12 +149,12 @@ function DesktopNav() {
                             )}
                           </Link>
                           {child.children && (
-                            <div className="ml-4 border-l border-[#E5E7EB] py-1 pl-3">
+                            <div className="ml-4 border-l border-[#000000] py-1 pl-3">
                               {child.children.map((grandchild) => (
                                 <Link
                                   key={grandchild.label}
                                   href={grandchild.href}
-                                  className="block rounded-xl px-4 py-2 text-sm font-semibold text-slate-500 transition hover:bg-[#FECB00]/20 hover:text-[#275D38]"
+                                  className="block rounded-xl px-4 py-2 text-sm font-semibold text-slate-500 transition hover:bg-[#FFC66B]/20 hover:text-[#0B6232]"
                                 >
                                   {grandchild.label}
                                 </Link>
@@ -172,12 +172,12 @@ function DesktopNav() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <Button asChild className="h-12 rounded-xl bg-[#FECB00] px-5 font-black text-[#17351f] shadow-lg shadow-[#FECB00]/25 hover:bg-[#e8bb00]">
+          <Button asChild className="h-12 rounded-xl bg-[#FFC66B] px-5 font-black text-[#0B6232] shadow-lg shadow-[#FFC66B]/25 hover:bg-[#FFC66B]">
             <Link href="https://apply.kcu.ac.ug/">
               <GraduationCap className="mr-2 size-4" /> Apply Now
             </Link>
           </Button>
-          <Button asChild variant="outline" className="h-12 rounded-xl border-2 border-[#275D38] bg-white/80 px-5 font-bold text-[#275D38] shadow-sm hover:bg-[#275D38] hover:text-white">
+          <Button asChild variant="outline" className="h-12 rounded-xl border-2 border-[#0B6232] bg-white/80 px-5 font-bold text-[#0B6232] shadow-sm hover:bg-[#0B6232] hover:text-white">
             <Link href="https://academia.kcu.ac.ug/?_gl=1*1fzvqwx*_ga*NDE4NjYyNDA1LjE3NzkyMjYzOTY.*_ga_5SQ5XXJWGB*czE3NzkzNDUxMjkkbzMkZzAkdDE3NzkzNDUxMjkkajYwJGwwJGgw">
               ERP Portal <ExternalLink className="ml-2 size-4" />
             </Link>
@@ -198,7 +198,7 @@ function MobileNav() {
         <UniversityMark />
         <button
           onClick={() => setIsOpen((current) => !current)}
-          className="grid size-11 shrink-0 place-items-center rounded-xl border border-slate-200 text-[#275D38] shadow-sm sm:size-12 sm:rounded-2xl"
+          className="grid size-11 shrink-0 place-items-center rounded-xl border border-slate-200 text-[#0B6232] shadow-sm sm:size-12 sm:rounded-2xl"
           aria-label="Toggle menu"
         >
           {isOpen ? <X className="size-6" /> : <Menu className="size-6" />}
@@ -220,7 +220,7 @@ function MobileNav() {
                   name="q"
                   aria-label="Search website"
                   placeholder="Search website..."
-                  className="h-12 w-full rounded-2xl border border-slate-200 bg-slate-50 pl-11 pr-4 text-sm outline-none focus:border-[#275D38]"
+                  className="h-12 w-full rounded-2xl border border-slate-200 bg-slate-50 pl-11 pr-4 text-sm outline-none focus:border-[#0B6232]"
                 />
               </form>
 
@@ -252,7 +252,7 @@ function MobileNav() {
                             <div key={child.label}>
                               <Link
                                 href={child.href}
-                                className="block rounded-xl px-4 py-2.5 text-sm font-semibold text-slate-600 hover:bg-[#FECB00]/20"
+                                className="block rounded-xl px-4 py-2.5 text-sm font-semibold text-slate-600 hover:bg-[#FFC66B]/20"
                               >
                                 {child.label}
                               </Link>
@@ -262,7 +262,7 @@ function MobileNav() {
                                     <Link
                                       key={grandchild.label}
                                       href={grandchild.href}
-                                      className="block rounded-xl px-4 py-2 text-sm font-semibold text-slate-500 hover:bg-[#FECB00]/20"
+                                      className="block rounded-xl px-4 py-2 text-sm font-semibold text-slate-500 hover:bg-[#FFC66B]/20"
                                     >
                                       {grandchild.label}
                                     </Link>
@@ -279,10 +279,10 @@ function MobileNav() {
               ))}
 
               <div className="grid gap-3 pt-4">
-                <Button asChild className="h-12 rounded-xl bg-[#FECB00] font-black text-[#17351f] hover:bg-[#e8bb00]">
+                <Button asChild className="h-12 rounded-xl bg-[#FFC66B] font-black text-[#0B6232] hover:bg-[#FFC66B]">
                   <Link href="https://apply.kcu.ac.ug/">Apply Now</Link>
                 </Button>
-                <Button asChild variant="outline" className="h-12 rounded-xl border-2 border-[#275D38] bg-white font-bold text-[#275D38]">
+                <Button asChild variant="outline" className="h-12 rounded-xl border-2 border-[#0B6232] bg-white font-bold text-[#0B6232]">
                   <Link href="https://academia.kcu.ac.ug/?_gl=1*1fzvqwx*_ga*NDE4NjYyNDA1LjE3NzkyMjYzOTY.*_ga_5SQ5XXJWGB*czE3NzkzNDUxMjkkbzMkZzAkdDE3NzkzNDUxMjkkajYwJGwwJGgw">ERP Portal <ExternalLink className="ml-2 size-4" /></Link>
                 </Button>
               </div>
@@ -297,7 +297,7 @@ function MobileNav() {
                         key={social.label}
                         href={social.href}
                         aria-label={social.label}
-                        className="grid size-10 place-items-center rounded-full bg-[#275D38] text-white transition hover:bg-[#FECB00] hover:text-[#17351f]"
+                        className="grid size-10 place-items-center rounded-full bg-[#0B6232] text-white transition hover:bg-[#FFC66B] hover:text-[#0B6232]"
                       >
                         <Icon className="size-4" />
                       </Link>

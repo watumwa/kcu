@@ -55,10 +55,10 @@ export default function NeexaWidget() {
         <button
           type="button"
           onClick={() => setShouldLoadWidget(true)}
-          className="fixed bottom-5 right-5 z-[70] inline-flex h-14 items-center gap-3 rounded-full border border-[#FECB00]/70 bg-[#17351f] px-5 text-sm font-black text-white shadow-2xl shadow-slate-950/25 transition hover:-translate-y-0.5 hover:bg-[#275D38] focus:outline-none focus:ring-4 focus:ring-[#FECB00]/35 sm:bottom-6 sm:right-6 sm:h-16 sm:px-6 sm:text-base"
+          className="fixed bottom-5 right-5 z-[70] inline-flex h-14 items-center gap-3 rounded-full border border-[#FFC66B]/70 bg-[#0B6232] px-5 text-sm font-black text-white shadow-2xl shadow-slate-950/25 transition hover:-translate-y-0.5 hover:bg-[#0B6232] focus:outline-none focus:ring-4 focus:ring-[#FFC66B]/35 sm:bottom-6 sm:right-6 sm:h-16 sm:px-6 sm:text-base"
           aria-label="Open King Ceasor University chat"
         >
-          <span className="grid size-9 place-items-center rounded-full bg-[#FECB00] text-[#17351f] sm:size-10">
+          <span className="grid size-9 place-items-center rounded-full bg-[#FFC66B] text-[#0B6232] sm:size-10">
             <MessageCircle className="size-5" />
           </span>
           <span>Chat</span>
