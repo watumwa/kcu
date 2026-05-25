@@ -36,8 +36,8 @@ export default function Hero() {
         />
       </AnimatePresence>
 
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0B6232]/95 via-[#0B6232]/70 to-[#0B6232]/10" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/25 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
 
       <button
         onClick={previous}

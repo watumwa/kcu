@@ -93,7 +93,7 @@ function DesktopNav() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <div className="hidden border-b border-white/45 bg-white/85 shadow-sm shadow-black/5 backdrop-blur-md lg:block">
+    <div className="hidden border-b border-slate-100 bg-white shadow-sm shadow-black/5 lg:block">
       <div className="mx-auto flex h-24 max-w-[1440px] items-center gap-8 px-8">
         <div className="min-w-[285px]">
           <UniversityMark />
@@ -183,7 +183,7 @@ function MobileNav() {
   const [expanded, setExpanded] = useState<number | null>(null);
 
   return (
-    <div className="border-b border-white/45 bg-white/85 shadow-sm shadow-black/5 backdrop-blur-md lg:hidden">
+    <div className="border-b border-slate-100 bg-white shadow-sm shadow-black/5 lg:hidden">
       <div className="flex h-16 items-center justify-between gap-3 px-4 sm:h-20">
         <UniversityMark />
         <button
