@@ -8,10 +8,10 @@ export default function Footer() {
       <div className="mx-auto grid max-w-[1440px] gap-10 border-b border-white/10 pb-12 lg:grid-cols-[1.15fr_0.85fr_0.85fr_0.85fr]">
         <div>
           <Image
-            src="/footer-logo.png"
+            src="/footer-logo-transparent.png"
             alt="King Ceasor University"
-            width={1000}
-            height={376}
+            width={2048}
+            height={768}
             className="h-auto w-full max-w-[360px] object-contain"
             priority={false}
           />
