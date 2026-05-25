@@ -29,25 +29,15 @@ const socialLinks = [
 
 function UniversityMark() {
   return (
-    <Link href="/" className="flex min-w-0 items-center gap-2 sm:gap-3" aria-label="King Ceasor University home">
-      <div className="relative grid size-11 shrink-0 place-items-center overflow-hidden rounded-full border-2 border-[#0B6232] bg-white shadow-sm sm:size-14 lg:size-16">
-        <Image
-          src="/logo.png"
-          alt="King Ceasor University logo"
-          width={64}
-          height={64}
-          priority
-          className="h-full w-full scale-125 object-contain p-0.5"
-        />
-      </div>
-      <div className="min-w-0 leading-none">
-        <p className="truncate font-serif text-lg font-black tracking-tight text-[#0B6232] drop-shadow-[0_0_10px_rgba(255,198,107,0.5)] sm:text-xl lg:text-2xl">
-          KING CEASOR
-        </p>
-        <p className="mt-1 truncate font-serif text-xs font-semibold tracking-[0.2em] text-[#0B6232] drop-shadow-[0_0_8px_rgba(255,198,107,0.45)] sm:text-sm sm:tracking-[0.28em] lg:text-base">
-          UNIVERSITY
-        </p>
-      </div>
+    <Link href="/" className="block w-[210px] shrink-0 sm:w-[250px] lg:w-[285px]" aria-label="King Ceasor University home">
+      <Image
+        src="/navbar-logo.png"
+        alt="King Ceasor University"
+        width={815}
+        height={306}
+        priority
+        className="h-auto w-full object-contain"
+      />
     </Link>
   );
 }
@@ -105,7 +95,7 @@ function DesktopNav() {
   return (
     <div className="hidden border-b border-white/45 bg-white/85 shadow-sm shadow-black/5 backdrop-blur-md lg:block">
       <div className="mx-auto flex h-24 max-w-[1440px] items-center gap-8 px-8">
-        <div className="min-w-[270px]">
+        <div className="min-w-[285px]">
           <UniversityMark />
         </div>
 
