@@ -169,7 +169,7 @@ function DesktopNav() {
           </Button>
           <Button asChild variant="outline" className="h-12 rounded-xl border-2 border-[#0B6232] bg-white/80 px-5 font-bold text-[#0B6232] shadow-sm hover:bg-[#0B6232] hover:text-white">
             <Link href="https://academia.kcu.ac.ug/?_gl=1*1fzvqwx*_ga*NDE4NjYyNDA1LjE3NzkyMjYzOTY.*_ga_5SQ5XXJWGB*czE3NzkzNDUxMjkkbzMkZzAkdDE3NzkzNDUxMjkkajYwJGwwJGgw">
-              ERP Portal <ExternalLink className="ml-2 size-4" />
+              Academia <ExternalLink className="ml-2 size-4" />
             </Link>
           </Button>
         </div>

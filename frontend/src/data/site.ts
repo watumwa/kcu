@@ -92,14 +92,15 @@ export const navItems: NavItem[] = [
 
 export const heroSlides: HeroSlide[] = [
   {
-    badge: "May Intake Now Open",
-    school: "School of Tourism and Hospitality",
-    title: "Masters Programmes – May Intake",
-    subtitle: "Build a career-ready future through industry-focused teaching, practical learning and professional mentorship.",
-    cta: "Register Here",
+    badge: "Join KCU Today",
+    school: "August Intake Now Open",
+    title: "Undergraduate | Diploma | Certificates",
+    subtitle: "",
+    cta: "Apply Here",
     image:
       "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1800&q=85",
-    programmes: [
+    
+      programmes: [
       "Master in Hospitality Business Management",
       "Bachelor of Tourism and Hospitality Management",
       "Diploma in Hotel and Restaurant Management",
@@ -107,11 +108,11 @@ export const heroSlides: HeroSlide[] = [
     ],
   },
   {
-    badge: "Featured Postgraduate Programmes",
-    school: "Institute of Mathematical Sciences",
-    title: "Data, Finance and Applied Sciences",
-    subtitle: "Study programmes designed for analytics, research, risk, technology and modern decision-making careers.",
-    cta: "Explore Programmes",
+    badge: "School of Law & Management Sciences",
+    school: "",
+    title: "Start your Journey With US",
+    subtitle: "",
+    cta: "Explore Courses",
     image:
       "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1800&q=85",
     programmes: [
@@ -123,9 +124,9 @@ export const heroSlides: HeroSlide[] = [
   },
   {
     badge: "Admissions Office",
-    school: "King Ceasor University",
-    title: "Apply for the Next Academic Intake",
-    subtitle: "Join a university environment shaped around innovation, excellence, student support and global outlook.",
+    school: "Intakes: April & August",
+    title: "King Ceasor University",
+    subtitle: "",
     cta: "Apply Online",
     image:
       "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&w=1800&q=85",
@@ -137,26 +138,11 @@ export const heroSlides: HeroSlide[] = [
     ],
   },
   {
-    badge: "Health Sciences",
-    school: "School of Medicine and Health Sciences",
-    title: "Learn with Purpose",
-    subtitle: "Prepare for service through practical training, guided study and a strong health sciences foundation.",
-    cta: "View Programmes",
-    image:
-      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1800&q=85",
-    programmes: [
-      "Health sciences programmes",
-      "Clinical learning pathways",
-      "Student support and mentoring",
-      "Community-focused training",
-    ],
-  },
-  {
-    badge: "Business and Leadership",
-    school: "School of Business and Management",
-    title: "Build Professional Confidence",
-    subtitle: "Develop the management, enterprise and leadership skills needed for modern organisations.",
-    cta: "Explore Business",
+    badge: "School of Science, Computing & Engineering",
+    school: "",
+    title: "Bachelors of Computer Forensics Bachelors of Petroluem and Geoscience",
+    subtitle: "",
+    cta: "Explore Courses",
     image:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1800&q=85",
     programmes: [
@@ -167,25 +153,25 @@ export const heroSlides: HeroSlide[] = [
     ],
   },
   {
-    badge: "Computing and Innovation",
-    school: "School of Computing and Applied Sciences",
-    title: "Shape Tomorrow with Technology",
-    subtitle: "Study computing, applied sciences and digital skills for a fast-changing professional world.",
-    cta: "Discover Computing",
+    badge: "Short Courses",
+    school: "Certificates in: ",
+    title: "Language Proficiency | Digital Marketing | Computer Applications",
+    subtitle: "Over 20 Short Courses",
+    cta: "Explore Courses",
     image:
       "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1800&q=85",
     programmes: [
-      "Computing and applied sciences",
-      "Digital systems and innovation",
-      "Technology-driven learning",
-      "Practical project experience",
+      "",
+      "",
+      "",
+      "",
     ],
   },
   {
     badge: "Student Experience",
     school: "Campus Life at KCU",
     title: "A Supportive University Community",
-    subtitle: "Find guidance, friendships, activities and learning resources that help students thrive.",
+    subtitle: "",
     cta: "Explore Student Life",
     image:
       "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1800&q=85",
@@ -222,12 +208,12 @@ export const quickLinks = [
 ];
 
 export const schools = [
-  "School of Medicine and Health Sciences",
-  "School of Business and Management",
-  "School of Computing and Applied Sciences",
-  "School of Law and Governance",
-  "School of Tourism and Hospitality",
-  "Institute of Mathematical Sciences",
+  "School of Medicine, Health & Life Sciences",
+  "School of Law & Management Sciences",
+  "School of Science, Computing and Engineering",
+  "",
+  "",
+  "",
 ];
 
 export const newsItems = [
