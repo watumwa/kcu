@@ -33,7 +33,7 @@ export default function AboutSection() {
             height={780}
             className="h-72 w-full object-cover opacity-85 sm:h-[360px] lg:h-[440px]"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0B6232]/90 via-[#0B6232]/20 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" />
           <div className="grid gap-3 bg-[#0B6232] p-4 sm:absolute sm:inset-x-0 sm:bottom-0 sm:grid-cols-3 sm:bg-transparent sm:p-5 md:p-7">
             {[
               { icon: Building2, title: "Academic Schools", text: "Clear routes into faculties and programmes." },

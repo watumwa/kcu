@@ -766,8 +766,8 @@ function NewsletterPage() {
 
         <section className="relative overflow-hidden px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
           <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1800&q=80')" }} />
-          <div className="absolute inset-0 bg-[#0B6232]/85" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0B6232]/95 via-[#0B6232]/70 to-transparent" />
+          <div className="absolute inset-0 bg-black/45" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/50 to-transparent" />
           <div className="relative z-10 mx-auto flex max-w-[1440px] flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
             <div>
               <p className="text-xs font-black uppercase tracking-[0.2em] text-[#FFC66B]">News &amp; Updates</p>
@@ -865,8 +865,8 @@ function CampusLifePage() {
 
         <section className="relative overflow-hidden px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
           <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1800&q=85')" }} />
-          <div className="absolute inset-0 bg-[#0B6232]/82" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0B6232]/95 via-[#0B6232]/70 to-transparent" />
+          <div className="absolute inset-0 bg-black/45" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/50 to-transparent" />
           <div className="relative z-10 mx-auto flex max-w-[1440px] flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
             <div>
               <p className="text-xs font-black uppercase tracking-[0.2em] text-[#FFC66B]">Campus Life</p>
@@ -1020,8 +1020,8 @@ function AboutContentPage({ page }: { page: AboutPageContent }) {
 
         <section className="relative overflow-hidden px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
           <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1800&q=80')" }} />
-          <div className="absolute inset-0 bg-[#0B6232]/80" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0B6232]/90 via-[#0B6232]/60 to-transparent" />
+          <div className="absolute inset-0 bg-black/45" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/45 to-transparent" />
           <div className="relative z-10 mx-auto max-w-[1440px]">
             <p className="text-xs font-black uppercase tracking-[0.2em] text-[#FFC66B]">{page.eyebrow}</p>
             <h1 className="mt-3 max-w-3xl font-serif text-3xl font-black leading-tight text-white sm:text-4xl md:text-5xl">{page.title}</h1>

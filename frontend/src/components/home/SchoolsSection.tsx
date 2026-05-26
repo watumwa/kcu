@@ -31,7 +31,7 @@ export default function SchoolsSection() {
               key={school}
               className="group overflow-hidden rounded-xl border border-slate-100 bg-white shadow-sm transition hover:-translate-y-1 hover:border-[#FFC66B] hover:shadow-xl hover:shadow-slate-900/10"
             >
-              <div className="relative h-36 overflow-hidden bg-[#0B6232] sm:h-40">
+              <div className="relative h-36 overflow-hidden bg-black sm:h-40">
                 <Image
                   src={schoolImages[index]}
                   alt={`${school} students and learning environment`}
@@ -39,7 +39,7 @@ export default function SchoolsSection() {
                   sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
                   className="object-cover transition duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0B6232]/80 via-[#0B6232]/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent" />
                 <div className="absolute left-3 top-3 grid size-10 place-items-center rounded-lg bg-white/95 text-[#0B6232] shadow-lg shadow-black/15">
                   <BookMarked className="size-5" />
                 </div>

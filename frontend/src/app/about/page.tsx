@@ -544,8 +544,8 @@ export default function AboutPage() {
         {/* Hero */}
         <section className="relative overflow-hidden px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
           <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1800&q=80')" }} />
-          <div className="absolute inset-0 bg-[#0B6232]/80" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0B6232]/90 via-[#0B6232]/60 to-transparent" />
+          <div className="absolute inset-0 bg-black/45" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/45 to-transparent" />
           <div className="relative z-10 mx-auto max-w-[1440px]">
             <p className="text-xs font-black uppercase tracking-[0.2em] text-[#FFC66B]">About King Ceasor University</p>
             <h1 className="mt-3 max-w-3xl font-serif text-3xl font-black leading-tight text-white sm:text-4xl md:text-5xl">Shaping Leaders. Igniting the Future.</h1>
