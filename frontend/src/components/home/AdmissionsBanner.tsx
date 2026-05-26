@@ -7,12 +7,12 @@ export default function AdmissionsBanner() {
     <section className="bg-[#0B6232] px-4 py-10 text-white sm:px-6 sm:py-12 lg:py-14">
       <div className="mx-auto grid max-w-[1440px] gap-5 rounded-xl border border-white/15 bg-white/8 p-3 shadow-xl shadow-black/15 backdrop-blur sm:p-4 md:p-6 md:shadow-2xl md:shadow-black/20 lg:grid-cols-[1fr_0.75fr] lg:items-center">
         <div>
-          <p className="text-xs font-black uppercase tracking-[0.16em] text-[#FFC66B] sm:text-sm sm:tracking-[0.2em]">Admissions are open</p>
+          <p className="text-xs font-black uppercase tracking-[0.16em] text-[#FFC66B] sm:text-sm sm:tracking-[0.2em]">Admissions are OPEN</p>
           <h2 className="mt-2 font-serif text-2xl font-black leading-tight sm:text-3xl md:text-4xl">
-            Make applications, fees and intake information easy to find.
+            Apply Today & Ignite your Future
           </h2>
           <p className="mt-3 max-w-3xl text-sm leading-6 text-white/80 sm:text-base sm:leading-7">
-            This section gives the client a clear place for application deadlines, entry requirements, fees structure and admission support contacts.
+            Apply for Undergraduate, Diploma and Certificate courses from a wide range of proffesional fields.
           </p>
           <div className="mt-5 grid gap-3 sm:flex sm:flex-wrap">
             <Button asChild className="h-10 rounded-lg bg-[#FFC66B] px-4 text-sm font-black text-[#0B6232] hover:bg-[#FFC66B]">
@@ -26,8 +26,8 @@ export default function AdmissionsBanner() {
 
         <div className="grid gap-3">
           {[
-            { icon: CalendarDays, title: "Next intake", text: "May 2026 application window" },
-            { icon: FileCheck2, title: "Required documents", text: "Academic documents, identity details and programme choice" },
+            { icon: CalendarDays, title: "August - Open Intake", text: "Apply Today" },
+            { icon: FileCheck2, title: "Required Documents", text: "Academic documents, identity details and programme choice" },
           ].map((item) => {
             const Icon = item.icon;
             return (

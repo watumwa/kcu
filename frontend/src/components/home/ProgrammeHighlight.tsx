@@ -4,23 +4,23 @@ import Link from "next/link";
 const programmes = [
   {
     icon: BarChart3,
-    title: "Data Science and Analytics",
-    text: "Master of Science in Data Science and Analytics",
+    title: "Undergraduate Programs",
+    text: "Medicine & Surgery | Nursing | Law | Business Administration | Applied Economics | Petroluem Geoscience | Computer Forensincs | Oil, Gas & Energy Management",
   },
   {
     icon: Calculator,
-    title: "Statistical Science",
-    text: "Master of Science in Statistical Science",
+    title: "Diploma Programmes",
+    text: "Clinical Medicine | Medical Lab Technology | Global Business",
   },
   {
     icon: BookOpenCheck,
-    title: "Biomathematics",
-    text: "Master of Science in Biomathematics",
+    title: "Short Courses",
+    text: "Explore our wide range of Short Courses: Instructor Guided or Self-Paced ",
   },
   {
     icon: LineChart,
-    title: "Finance and Risk",
-    text: "Master of Science in Mathematical Finance and Risk Analytics",
+    title: "Higher Education Certificates (HEC)",
+    text: "Biological Sciences | Physical Sciences | Humanities",
   },
 ];
 
@@ -31,19 +31,19 @@ export default function ProgrammeHighlight() {
         <div className="grid gap-5 lg:grid-cols-[0.78fr_1.22fr] lg:items-center">
           <div className="border-b border-[#000000] pb-4 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-6">
             <p className="text-xs font-black uppercase tracking-[0.16em] text-[#0B6232] sm:text-sm sm:tracking-[0.2em]">
-              Institute of Mathematical Sciences
+              King Ceasor University
             </p>
             <h2 className="mt-2 max-w-xl text-xl font-black leading-tight text-[#000000] sm:text-2xl md:text-3xl">
-              Masters Programmes - May Intake
+              August Intake - OPEN
             </h2>
             <p className="mt-2 text-xs leading-5 text-slate-600 sm:text-sm sm:leading-6">
-              Advanced programmes for analytics, modelling, risk, research and modern decision-making careers.
+              Explore Courses 
             </p>
             <Link
-              href="/academics/courses/undergraduate"
+              href="https://apply.kcu.ac.ug"
               className="mt-4 inline-flex items-center gap-2 rounded-lg bg-[#FFC66B] px-3 py-2.5 text-xs font-black text-[#0B6232] shadow-lg shadow-[#FFC66B]/25 transition hover:-translate-y-0.5 hover:bg-[#FFC66B] sm:px-4 sm:text-sm"
             >
-              Explore intake <MoveUpRight className="size-4" />
+              Apply Here <MoveUpRight className="size-4" />
             </Link>
           </div>
 

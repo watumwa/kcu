@@ -168,8 +168,7 @@ function DesktopNav() {
             </Link>
           </Button>
           <Button asChild variant="outline" className="h-12 rounded-xl border-2 border-[#0B6232] bg-white/80 px-5 font-bold text-[#0B6232] shadow-sm hover:bg-[#0B6232] hover:text-white">
-            <Link href="https://academia.kcu.ac.ug/?_gl=1*1fzvqwx*_ga*NDE4NjYyNDA1LjE3NzkyMjYzOTY.*_ga_5SQ5XXJWGB*czE3NzkzNDUxMjkkbzMkZzAkdDE3NzkzNDUxMjkkajYwJGwwJGgw">
-              Academia <ExternalLink className="ml-2 size-4" />
+            <Link href="https://academia.kcu.ac.ug">Academia <ExternalLink className="ml-2 size-4" />
             </Link>
           </Button>
         </div>
@@ -273,7 +272,7 @@ function MobileNav() {
                   <Link href="https://apply.kcu.ac.ug/">Apply Now</Link>
                 </Button>
                 <Button asChild variant="outline" className="h-12 rounded-xl border-2 border-[#0B6232] bg-white font-bold text-[#0B6232]">
-                  <Link href="https://academia.kcu.ac.ug/?_gl=1*1fzvqwx*_ga*NDE4NjYyNDA1LjE3NzkyMjYzOTY.*_ga_5SQ5XXJWGB*czE3NzkzNDUxMjkkbzMkZzAkdDE3NzkzNDUxMjkkajYwJGwwJGgw">ERP Portal <ExternalLink className="ml-2 size-4" /></Link>
+                  <Link href="https://academia.kcu.ac.ug/">Academia <ExternalLink className="ml-2 size-4" /></Link>
                 </Button>
               </div>
 

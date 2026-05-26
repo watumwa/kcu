@@ -16,7 +16,7 @@ export default function Footer() {
             priority={false}
           />
           <p className="mt-5 max-w-md leading-7 text-white/70">
-            Advancing knowledge, leadership and professional excellence through career-focused teaching, research and a supportive student experience
+            
           </p>
         </div>
 
@@ -34,17 +34,20 @@ export default function Footer() {
             links: [
               { label: "Schools", href: "/academics/schools" },
               { label: "Courses", href: "/academics/courses" },
-              { label: "ERP Portal", href: "https://academia.kcu.ac.ug/?_gl=1*1fzvqwx*_ga*NDE4NjYyNDA1LjE3NzkyMjYzOTY.*_ga_5SQ5XXJWGB*czE3NzkzNDUxMjkkbzMkZzAkdDE3NzkzNDUxMjkkajYwJGwwJGgw" },
-              { label: "E-Learning", href: "/academics/elearning" },
+              { label: "Academia Portal", href: "https://academia.kcu.ac.ug/?_gl=1*1fzvqwx*_ga*NDE4NjYyNDA1LjE3NzkyMjYzOTY.*_ga_5SQ5XXJWGB*czE3NzkzNDUxMjkkbzMkZzAkdDE3NzkzNDUxMjkkajYwJGwwJGgw" },
+              { label: "K-Class", href: "https://vclass.kcu.ac.ug" },
+              { label: "Graduation", href: "" },
+              
             ],
           },
           {
-            title: "Student & Library",
+            title: "Quick Links",
             links: [
-              { label: "Guild", href: "/student/guild" },
-              { label: "Campus Life", href: "/student/campus-life" },
+              { label: "Student Guild", href: "/student/guild" },
+              { label: "Careers", href: "" },
               { label: "Library Catalogue", href: "/library/catalogue" },
-              { label: "Opening Hours", href: "/library/opening-hours" },
+              { label: "Campus News", href: "/about/newsletter" },
+              { label: "Get in Touch", href: "" },
             ],
           },
         ].map((group) => (
@@ -63,9 +66,9 @@ export default function Footer() {
 
       <div className="mx-auto flex max-w-[1440px] flex-col gap-4 py-8 text-sm text-white/65 md:flex-row md:items-center md:justify-between">
         <div className="flex flex-wrap gap-5">
-          <span className="inline-flex items-center gap-2"><Phone className="size-4 text-[#FFC66B]" /> +256 000 000 000</span>
-          <span className="inline-flex items-center gap-2"><Mail className="size-4 text-[#FFC66B]" /> admissions@kcu.ac.ug</span>
-          <span className="inline-flex items-center gap-2"><MapPin className="size-4 text-[#FFC66B]" /> Kampala, Uganda</span>
+          <span className="inline-flex items-center gap-2"><Phone className="size-4 text-[#FFC66B]" /> +256 394 716 326</span>
+          <span className="inline-flex items-center gap-2"><Mail className="size-4 text-[#FFC66B]" /> info@kcu.ac.ug</span>
+          <span className="inline-flex items-center gap-2"><MapPin className="size-4 text-[#FFC66B]" /> Plot 32 Ggaba Road, Bunga Hill</span>
         </div>
         <p>© 2026 King Ceasor University. All rights reserved.</p>
       </div>

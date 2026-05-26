@@ -32,8 +32,8 @@ export const navItems: NavItem[] = [
     description: "Learn about King Ceasor University's identity, mission, values and partnerships.",
     children: [
       { label: "About KCU", href: "/about" },
-      { label: "Mission", href: "/about/mission" },
-      { label: "Core Values", href: "/about/core-values" },
+      { label: "Mission | Vision | Core Values", href: "/about" },
+      // { label: "Core Values", href: "/about/core-values" },
       { label: "Governance", href: "/about/governance" },
       { label: "Collaborations & Partnerships", href: "/about/collaborations-partnerships" },
       { label: "News Letter", href: "/about/newsletter" },
@@ -61,11 +61,12 @@ export const navItems: NavItem[] = [
         children: [
           { label: "Undergraduate", href: "/academics/courses/undergraduate" },
           { label: "Diploma", href: "/academics/courses/diploma" },
-          { label: "Short Courses", href: "/academics/courses/short-courses" },
+          { label: "Certificates", href: "/academics/courses/short-courses" },
         ],
       },
-      { label: "ERP Portal", href: "https://academia.kcu.ac.ug/?_gl=1*1fzvqwx*_ga*NDE4NjYyNDA1LjE3NzkyMjYzOTY.*_ga_5SQ5XXJWGB*czE3NzkzNDUxMjkkbzMkZzAkdDE3NzkzNDUxMjkkajYwJGwwJGgw" },
-      { label: "E-Learning", href: "/academics/elearning" },
+      { label: "Academia", href: "https://academia.kcu.ac.ug/" },
+      { label: "K-Class", href: "https://vclass.kcu.ac.ug/" },
+      { label: "Graduation Ceremonies", href: "" },
     ],
   },
   {
@@ -110,7 +111,7 @@ export const heroSlides: HeroSlide[] = [
   {
     badge: "School of Law & Management Sciences",
     school: "",
-    title: "Start your Journey With US",
+    title: "Bachelors of Law | Bachelors of Business Administration & More",
     subtitle: "",
     cta: "Explore Courses",
     image:
