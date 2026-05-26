@@ -62,7 +62,7 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 28, y: -10 }}
             transition={{ duration: 0.5 }}
-            className="w-full max-w-[23rem] rounded-lg border border-white/30 bg-white/60 p-3 text-[#000000] shadow-xl shadow-black/20 backdrop-blur-md sm:p-3.5 md:p-4"
+            className="w-full max-w-[30rem] rounded-lg border border-white/30 bg-white/60 p-3 text-[#000000] shadow-xl shadow-black/20 backdrop-blur-md sm:p-3.5 md:max-w-[34rem] md:p-4 lg:max-w-[38rem]"
           >
             <div className="mb-2 inline-flex max-w-full items-center gap-1.5 rounded-full bg-[#0B6232] px-2.5 py-1 text-[8px] font-black uppercase tracking-[0.08em] text-[#FFC66B] shadow-sm sm:text-[9px]">
               <GraduationCap className="size-3" /> {current.badge}
@@ -71,7 +71,7 @@ export default function Hero() {
               {current.school}
             </h1>
             <p className="mt-1.5 text-sm font-black leading-tight text-[#0B6232] sm:text-base">{current.title}</p>
-            <p className="mt-2.5 max-w-sm text-xs leading-5 text-slate-700">{current.subtitle}</p>
+            <p className="mt-2.5 max-w-xl text-xs leading-5 text-slate-700">{current.subtitle}</p>
             <div className="mt-3 grid gap-2 sm:flex sm:flex-wrap">
               <Button asChild className="h-9 rounded-md bg-[#FFC66B] px-3 text-xs font-black text-[#0B6232] shadow-xl shadow-black/20 hover:bg-[#FFC66B]">
                 <Link href="https://apply.kcu.ac.ug/">{current.cta}</Link>
