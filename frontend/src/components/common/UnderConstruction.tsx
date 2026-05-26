@@ -29,7 +29,7 @@ export default function UnderConstruction({ title, path }: UnderConstructionProp
             This section is under construction.
           </h2>
           <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-600">
-            The content for <span className="font-bold text-[#000000]">{path}</span> is being prepared. Please use the homepage or contact admissions for immediate support.
+            The content for <span className="font-bold text-[#000000]">{path}</span> is being prepared.Please use the homepage or contact admissions for immediate support.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Button asChild className="h-12 rounded-xl bg-[#FFC66B] px-6 font-black text-[#0B6232] hover:bg-[#FFC66B]">
