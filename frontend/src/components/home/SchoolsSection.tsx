@@ -7,9 +7,7 @@ const schoolImages = [
   "https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&w=900&q=85",
   "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=85",
   "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=85",
-  "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=900&q=85",
-  "https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=900&q=85",
-  "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=85",
+
 ];
 
 export default function SchoolsSection() {
@@ -19,10 +17,10 @@ export default function SchoolsSection() {
         <div className="mb-8 flex flex-col justify-between gap-4 md:mb-10 md:flex-row md:items-end">
           <div>
             <p className="text-xs font-black uppercase tracking-[0.16em] text-[#0B6232] sm:text-sm sm:tracking-[0.2em]">Academics</p>
-            <h2 className="mt-3 font-serif text-2xl font-black leading-tight text-slate-950 sm:text-3xl md:text-4xl">Schools, faculties and institutes</h2>
+            <h2 className="mt-3 font-serif text-2xl font-black leading-tight text-slate-950 sm:text-3xl md:text-4xl">Schools</h2>
           </div>
           <Link href="/academics" className="inline-flex items-center gap-2 text-sm font-black text-[#0B6232] sm:text-base">
-            View all academic units <ArrowRight className="size-4" />
+            Review Courses <ArrowRight className="size-4" />
           </Link>
         </div>
 

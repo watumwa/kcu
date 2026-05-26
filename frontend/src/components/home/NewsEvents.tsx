@@ -8,11 +8,11 @@ export default function NewsEvents() {
       <div className="mx-auto max-w-[1440px]">
         <div className="mb-8 flex flex-col justify-between gap-4 md:mb-10 md:flex-row md:items-end">
           <div>
-            <p className="text-xs font-black uppercase tracking-[0.16em] text-[#0B6232] sm:text-sm sm:tracking-[0.2em]">News and events</p>
-            <h2 className="mt-3 font-serif text-2xl font-black leading-tight text-slate-950 sm:text-3xl md:text-4xl">Latest from the university</h2>
+            <p className="text-xs font-black uppercase tracking-[0.16em] text-[#0B6232] sm:text-sm sm:tracking-[0.2em]">News and Events</p>
+            <h2 className="mt-3 font-serif text-2xl font-black leading-tight text-slate-950 sm:text-3xl md:text-4xl">Latest News From KCU</h2>
           </div>
           <Link href="/news" className="inline-flex items-center gap-2 text-sm font-black text-[#0B6232] sm:text-base">
-            View all news <ArrowRight className="size-4" />
+            View all News <ArrowRight className="size-4" />
           </Link>
         </div>
 
