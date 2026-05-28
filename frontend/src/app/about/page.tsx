@@ -219,33 +219,21 @@ function TabUniversityCouncil() {
       </div>
 
       {/* ── Desktop tree (md+) ── */}
-      <div className="hidden md:block overflow-x-auto pb-4">
-        <div className="flex min-w-max flex-col items-center">
+      <div className="hidden pb-4 md:block">
+        <div className="flex w-full flex-col items-center gap-8">
           <CouncilCard name="HON DR. Chris Baryomunsi" role="Chairperson University Council" tier="top" />
-          <div className="h-8 w-0.5 bg-slate-300" />
           <CouncilCard name="Assoc. Prof. Mary Muhenda" role="Vice Chairperson University Council" tier="mid" />
-          <div className="h-8 w-0.5 bg-slate-300" />
-          <div className="relative flex items-start">
-            <div className="absolute top-0 left-0 h-0.5 w-full bg-slate-300" />
-            <div className="flex gap-6">
-              {committeeChairs.map((p) => (
-                <div key={p.name} className="flex flex-col items-center">
-                  <div className="h-8 w-0.5 bg-slate-300" />
-                  <CouncilCard name={p.name} role={p.role} tier="mid" />
-                </div>
-              ))}
-            </div>
+          <div className="flex w-full flex-wrap justify-center gap-6">
+            {committeeChairs.map((p) => (
+              <CouncilCard key={p.name} name={p.name} role={p.role} tier="mid" />
+            ))}
           </div>
-          <div className="h-8 w-0.5 bg-slate-300" />
           <div className="mb-2 rounded-full border border-slate-200 bg-[#FFFFFF] px-4 py-1 text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">
             Committee Members
           </div>
-          <div className="flex gap-6">
+          <div className="flex w-full flex-wrap justify-center gap-6">
             {members.map((p) => (
-              <div key={p.name} className="flex flex-col items-center">
-                <div className="h-6 w-0.5 bg-slate-300" />
-                <CouncilCard name={p.name} role={p.role} tier="base" />
-              </div>
+              <CouncilCard key={p.name} name={p.name} role={p.role} tier="base" />
             ))}
           </div>
         </div>
@@ -303,6 +291,8 @@ function TabAdministration() {
     { name: "Mr. Eric Keziron Oloo", role: "University Librarian", tier: "base" as const },
     { name: "Mr. Wilberforce Mfitundinda", role: "Registrar Academics", tier: "base" as const },
     { name: "Mr. John Acire", role: "Manager Human Resource", tier: "base" as const },
+    { name: "To Be Confirmed", role: "PRO", tier: "base" as const },
+    { name: "To Be Confirmed", role: "Marketing Manager", tier: "base" as const },
   ];
 
   const [vc, dvc, ...rest] = officers;
@@ -320,33 +310,21 @@ function TabAdministration() {
       </div>
 
       {/* ── Desktop tree (md+) ── */}
-      <div className="hidden md:block overflow-x-auto pb-4">
-        <div className="flex min-w-max flex-col items-center">
+      <div className="hidden pb-4 md:block">
+        <div className="flex w-full flex-col items-center gap-8">
           <CouncilCard name={vc.name} role={vc.role} tier="top" />
-          <div className="h-8 w-0.5 bg-slate-300" />
           <CouncilCard name={dvc.name} role={dvc.role} tier="mid" />
-          <div className="h-8 w-0.5 bg-slate-300" />
-          <div className="relative flex items-start">
-            <div className="absolute top-0 left-0 h-0.5 w-full bg-slate-300" />
-            <div className="flex gap-5">
-              {seniorOfficers.map((p) => (
-                <div key={p.name} className="flex flex-col items-center">
-                  <div className="h-8 w-0.5 bg-slate-300" />
-                  <CouncilCard name={p.name} role={p.role} tier="mid" />
-                </div>
-              ))}
-            </div>
+          <div className="flex w-full flex-wrap justify-center gap-5">
+            {seniorOfficers.map((p) => (
+              <CouncilCard key={p.name} name={p.name} role={p.role} tier="mid" />
+            ))}
           </div>
-          <div className="h-8 w-0.5 bg-slate-300" />
           <div className="mb-2 rounded-full border border-slate-200 bg-[#FFFFFF] px-4 py-1 text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">
             Managers &amp; Officers
           </div>
-          <div className="flex gap-5">
+          <div className="flex w-full flex-wrap justify-center gap-5">
             {managers.map((p) => (
-              <div key={p.name} className="flex flex-col items-center">
-                <div className="h-6 w-0.5 bg-slate-300" />
-                <CouncilCard name={p.name} role={p.role} tier="base" />
-              </div>
+              <CouncilCard key={`${p.role}-${p.name}`} name={p.name} role={p.role} tier="base" />
             ))}
           </div>
         </div>
@@ -424,7 +402,7 @@ function TabStudentGuild() {
           <p className="text-xs font-black uppercase tracking-[0.2em] text-[#0B6232]">Student Governance</p>
           <h2 className="mt-1 text-2xl font-black text-slate-950 sm:text-3xl">Student Guild</h2>
         </div>
-        <span className="rounded-full bg-[#0B6232]/10 px-3 py-1 text-xs font-black text-[#0B6232]">2024 – 2025</span>
+        <span className="rounded-full bg-[#0B6232]/10 px-3 py-1 text-xs font-black text-[#0B6232]">2026 - 2027</span>
       </div>
 
       {/* President spotlight */}

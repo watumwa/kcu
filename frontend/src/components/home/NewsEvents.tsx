@@ -28,7 +28,7 @@ export default function NewsEvents() {
               <h3 className="text-lg font-black leading-tight text-slate-950 sm:text-xl">{item.title}</h3>
               <p className="mt-2 text-xs leading-5 text-slate-600 sm:text-sm sm:leading-6">{item.text}</p>
               <Link href="/news" className="mt-4 inline-flex items-center gap-2 text-xs font-black text-[#0B6232] sm:text-sm">
-                Read more <ArrowRight className="size-4" />
+                Read More <ArrowRight className="size-4" />
               </Link>
             </article>
           ))}
