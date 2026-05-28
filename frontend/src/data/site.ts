@@ -66,7 +66,7 @@ export const navItems: NavItem[] = [
       },
       { label: "Academia", href: "https://academia.kcu.ac.ug/" },
       { label: "K-Class", href: "https://vclass.kcu.ac.ug/" },
-      { label: "Graduation Ceremonies", href: "" },
+      { label: "Graduation Ceremonies", href: "/academics/graduation" },
     ],
   },
   {

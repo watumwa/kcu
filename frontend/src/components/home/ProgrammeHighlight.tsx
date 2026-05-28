@@ -5,22 +5,22 @@ const programmes = [
   {
     icon: BarChart3,
     title: "Undergraduate Programs",
-    text: "Medicine & Surgery | Nursing | Law | Business Administration | Applied Economics | Petroluem Geoscience | Computer Forensincs | Oil, Gas & Energy Management",
+    courses: ["Law", "Nursing", "Medicine & Surgery", "Applied Economics", "Petroluem Geoscience", "Business Administration", "Computer Forensincs", "Oil, Gas & Energy Management"],
   },
   {
     icon: Calculator,
     title: "Diploma Programmes",
-    text: "Clinical Medicine | Medical Lab Technology | Global Business",
+    courses: ["Clinical Medicine", "Medical Lab Technology", "Global Business"],
   },
   {
     icon: BookOpenCheck,
     title: "Short Courses",
-    text: "Explore our wide range of Short Courses: Instructor Guided or Self-Paced ",
+    courses: ["Instructor Guided", "Self-Paced"],
   },
   {
     icon: LineChart,
     title: "Higher Education Certificates (HEC)",
-    text: "Biological Sciences | Physical Sciences | Humanities",
+    courses: ["Biological Sciences", "Physical Sciences", "Humanities"],
   },
 ];
 
@@ -47,21 +47,33 @@ export default function ProgrammeHighlight() {
             </Link>
           </div>
 
-          <div className="grid gap-3 sm:grid-cols-2">
+          <div className="grid justify-items-center gap-3 sm:grid-cols-2">
             {programmes.map((programme) => {
               const Icon = programme.icon;
+              const isUndergraduate = programme.title === "Undergraduate Programs";
               return (
                 <Link
                   href="/academics/courses"
                   key={programme.title}
-                  className="group relative overflow-hidden rounded-lg border border-[#000000] bg-[#FFFFFF] p-3 transition hover:-translate-y-1 hover:border-[#FFC66B] hover:bg-white hover:shadow-xl hover:shadow-slate-950/10 sm:p-4"
+                  className="group relative h-[4.5cm] w-full max-w-[11.5cm] overflow-hidden rounded-lg border border-[#000000] bg-[#FFFFFF] p-3 transition hover:-translate-y-1 hover:border-[#FFC66B] hover:bg-white hover:shadow-xl hover:shadow-slate-950/10 sm:p-4"
                 >
                   <span className="absolute inset-x-0 top-0 h-1 bg-[#FFC66B]" />
-                  <div className="mb-3 grid size-9 place-items-center rounded-lg bg-[#0B6232] text-[#FFC66B] transition group-hover:bg-[#FFC66B] group-hover:text-[#0B6232] sm:size-10">
+                  <div className={`grid size-9 place-items-center rounded-lg bg-[#0B6232] text-[#FFC66B] transition group-hover:bg-[#FFC66B] group-hover:text-[#0B6232] sm:size-10 ${isUndergraduate ? "mb-2" : "mb-3"}`}>
                     <Icon className="size-5" />
                   </div>
                   <h3 className="text-sm font-black text-[#000000] sm:text-base">{programme.title}</h3>
-                  <p className="mt-2 text-xs leading-5 text-slate-600 sm:text-sm sm:leading-6">{programme.text}</p>
+                  <div className={`mt-2 flex flex-wrap ${isUndergraduate ? "gap-1" : "gap-1.5"}`}>
+                    {programme.courses.map((course) => (
+                      <span
+                        key={course}
+                        className={`rounded-full bg-[#0B6232]/10 font-bold leading-none text-[#0B6232] ${
+                          isUndergraduate ? "px-2 py-1 text-[10px] sm:text-[11px]" : "px-2.5 py-1 text-[10px] sm:text-xs"
+                        }`}
+                      >
+                        {course}
+                      </span>
+                    ))}
+                  </div>
                 </Link>
               );
             })}

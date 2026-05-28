@@ -36,7 +36,7 @@ export default function Footer() {
               { label: "Courses", href: "/academics/courses" },
               { label: "Academia Portal", href: "https://academia.kcu.ac.ug/?_gl=1*1fzvqwx*_ga*NDE4NjYyNDA1LjE3NzkyMjYzOTY.*_ga_5SQ5XXJWGB*czE3NzkzNDUxMjkkbzMkZzAkdDE3NzkzNDUxMjkkajYwJGwwJGgw" },
               { label: "K-Class", href: "https://vclass.kcu.ac.ug" },
-              { label: "Graduation", href: "" },
+              { label: "Graduation", href: "/academics/graduation" },
               
             ],
           },
