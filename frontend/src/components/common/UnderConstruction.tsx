@@ -34,7 +34,7 @@ export default function UnderConstruction({ title, path }: UnderConstructionProp
           <div className="mt-8 flex flex-wrap gap-4">
             <Button asChild className="h-12 rounded-xl bg-[#FFC66B] px-6 font-black text-[#0B6232] hover:bg-[#FFC66B]">
               <Link href="/">
-                <ArrowLeft className="mr-2 size-4" /> Back Home
+                <ArrowLeft className="mr-2 size-4" /> Back  Home
               </Link>
             </Button>
             <Button asChild variant="outline" className="h-12 rounded-xl border-2 border-[#0B6232] px-6 font-black text-[#0B6232] hover:bg-[#0B6232] hover:text-white">
