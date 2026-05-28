@@ -2,15 +2,13 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import {
-  ArrowRight,
   Banknote,
   CalendarDays,
   CheckCircle2,
   ChevronLeft,
   ChevronRight,
-  ClipboardCheck,
+  Download,
   FileText,
   GraduationCap,
   Images,
@@ -122,7 +120,9 @@ export default function GraduationPage() {
                 Prospective graduands should confirm academic eligibility, complete all clearance stages, settle outstanding balances, and verify their details with the Academic Registrar before the published deadline.
               </p>
               <Button asChild className="mt-6 h-11 rounded-lg bg-[#FFC66B] px-5 font-black text-[#0B6232] hover:bg-[#FFC66B]">
-                <Link href="#clearance-form">View Clearance Form <ArrowRight className="ml-2 size-4" /></Link>
+                <a href="/Graduation-Notice.pdf" download>
+                  Download Notice <Download className="ml-2 size-4" />
+                </a>
               </Button>
             </div>
 
@@ -152,7 +152,9 @@ export default function GraduationPage() {
                 Use the clearance form to confirm that every responsible office has cleared you for graduation. Submit the completed form with proof of payment where required.
               </p>
               <Button asChild className="mt-6 h-11 rounded-lg bg-[#0B6232] px-5 font-black text-white hover:bg-[#0B6232]">
-                <Link href="/academics/graduation#checklist">Open Checklist <ClipboardCheck className="ml-2 size-4" /></Link>
+                <a href="/clearance-kcu.pdf" download>
+                  Download Clearance Form <Download className="ml-2 size-4" />
+                </a>
               </Button>
             </div>
             <div className="grid gap-3 sm:grid-cols-2">

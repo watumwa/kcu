@@ -66,7 +66,6 @@ export const navItems: NavItem[] = [
       },
       { label: "Academia", href: "https://academia.kcu.ac.ug/" },
       { label: "K-Class", href: "https://vclass.kcu.ac.ug/" },
-      { label: "Graduation Ceremonies", href: "/academics/graduation" },
     ],
   },
   {
@@ -76,6 +75,7 @@ export const navItems: NavItem[] = [
     children: [
       { label: "Guild", href: "/student/guild" },
       { label: "Campus Life", href: "/student/campus-life" },
+      { label: "Graduation Ceremonies", href: "/academics/graduation" },
       { label: "Dean of Students", href: "/student/dean-of-students" },
     ],
   },
@@ -212,10 +212,7 @@ export const schools = [
   "School of Medicine, Health & Life Sciences",
   "School of Law & Management Sciences",
   "School of Science, Computing and Engineering",
-  "",
-  "",
-  "",
-];
+  ];
 
 export const newsItems = [
   {
