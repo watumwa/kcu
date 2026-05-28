@@ -1,5 +1,6 @@
 import UnderConstruction from "@/components/common/UnderConstruction";
 import GraduationPage from "@/components/academics/GraduationPage";
+import StudentGuildPage from "@/components/student/StudentGuildPage";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
 import Link from "next/link";
@@ -1076,6 +1077,10 @@ export default async function CatchAllPage({ params }: { params: Promise<{ slug:
 
   if (currentPath === "student/campus-life") {
     return <CampusLifePage />;
+  }
+
+  if (currentPath === "student/guild") {
+    return <StudentGuildPage />;
   }
 
   if (currentPath === "academics/graduation") {

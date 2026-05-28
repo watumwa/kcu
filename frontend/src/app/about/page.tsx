@@ -13,7 +13,7 @@ import {
   Users,
 } from "lucide-react";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
@@ -506,6 +506,24 @@ export default function AboutPage() {
   const [active, setActive] = useState("about");
   const current = tabs.find((t) => t.id === active)!;
 
+  useEffect(() => {
+    const setActiveFromHash = () => {
+      const tabId = window.location.hash.replace("#", "");
+      if (tabs.some((tab) => tab.id === tabId)) {
+        setActive(tabId);
+      }
+    };
+
+    setActiveFromHash();
+    window.addEventListener("hashchange", setActiveFromHash);
+    return () => window.removeEventListener("hashchange", setActiveFromHash);
+  }, []);
+
+  const selectTab = (tabId: string) => {
+    setActive(tabId);
+    window.history.replaceState(null, "", `#${tabId}`);
+  };
+
   return (
     <>
       <Navbar />
@@ -545,7 +563,7 @@ export default function AboutPage() {
                   {tabs.map((tab) => (
                     <li key={tab.id}>
                       <button
-                        onClick={() => setActive(tab.id)}
+                        onClick={() => selectTab(tab.id)}
                         className={`flex w-full items-center gap-2 rounded-lg px-3 py-2.5 text-left text-sm font-semibold transition ${
                           active === tab.id
                             ? "bg-[#0B6232] text-white"
@@ -567,7 +585,7 @@ export default function AboutPage() {
                 {tabs.map((tab) => (
                   <button
                     key={tab.id}
-                    onClick={() => setActive(tab.id)}
+                    onClick={() => selectTab(tab.id)}
                     className={`shrink-0 border-b-2 px-3 pb-3 pt-1 text-xs font-bold transition ${
                       active === tab.id
                         ? "border-[#0B6232] text-[#0B6232]"
