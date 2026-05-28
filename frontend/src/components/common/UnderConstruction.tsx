@@ -43,7 +43,7 @@ export default function UnderConstruction({ title, path }: UnderConstructionProp
           </div>
           <div className="mt-8 flex flex-wrap gap-5 text-sm font-semibold text-slate-600">
             <span className="inline-flex items-center gap-2">
-              <Phone className="size-4 text-[#0B6232]" /> +256 000 000 000
+              <Phone className="size-4 text-[#0B6232]" /> +256 000  000 000
             </span>
             <span className="inline-flex items-center gap-2">
               <Mail className="size-4 text-[#0B6232]" /> admissions@kcu.ac.ug
