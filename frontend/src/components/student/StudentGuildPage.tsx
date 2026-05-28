@@ -94,7 +94,7 @@ export default function StudentGuildPage() {
 
                 <div className="flex-1">
                   <p className="text-[10px] font-black uppercase tracking-[0.25em] text-[#FFC66B]">Communication from the Guild Office</p>
-                  <h2 className="mt-1 text-2xl font-black text-white">HE. Adonia Ainebyona</h2>
+                  <h2 className="mt-1 text-2xl font-black text-white">HE. Muhoozi Daniel</h2>
                   <div className="mt-2 h-0.5 w-12 rounded-full bg-[#FFC66B]" />
                   <p className="mt-4 text-sm leading-7 text-white/80">
                     It is with great honor and enthusiasm that I address you as your Guild President. We are deeply committed to serving your needs, amplifying your voices, and fostering a vibrant, supportive university experience for every student.
