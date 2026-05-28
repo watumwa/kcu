@@ -25,7 +25,7 @@ export default function SchoolsSection() {
         </div>
 
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-          {schools.map((school, index) => (
+          {schools.slice(0, schoolImages.length).map((school, index) => (
             <Link
               href="/academics"
               key={school}
@@ -50,7 +50,7 @@ export default function SchoolsSection() {
               <div className="p-3 sm:p-4">
                 <h3 className="text-lg font-black leading-tight text-slate-950 sm:text-xl">{school}</h3>
                 <span className="mt-4 inline-flex items-center gap-2 text-xs font-black text-[#0B6232] sm:text-sm">
-                  Explore school <ArrowRight className="size-4 transition group-hover:translate-x-1" />
+                  View Courses <ArrowRight className="size-4 transition group-hover:translate-x-1" />
                 </span>
               </div>
             </Link>

@@ -1,54 +1,41 @@
-import { ArrowRight, Building2, Globe2, ShieldCheck } from "lucide-react";
+"use client";
+
 import Image from "next/image";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
 
 export default function AboutSection() {
   return (
     <section className="bg-[#FFFFFF] px-4 py-12 sm:px-6 sm:py-16 lg:py-20">
-      <div className="mx-auto grid max-w-[1440px] gap-8 lg:grid-cols-[0.94fr_1.06fr] lg:items-center lg:gap-12">
-        <div>
-          <p className="text-xs font-black uppercase tracking-[0.16em] text-[#0B6232] sm:text-sm sm:tracking-[0.2em]">About King Ceasor University</p>
-          <h2 className="mt-3 font-serif text-2xl font-black leading-tight text-slate-950 sm:text-3xl md:text-4xl">
-            A university environment shaped by excellence, innovation and global outlook.
-          </h2>
-          <p className="mt-4 text-sm leading-6 text-slate-600 sm:text-base sm:leading-7">
-            King Ceasor University brings together career-focused teaching, research ambition and student support in a modern academic community. The university experience is designed around strong programmes, trusted guidance and meaningful opportunities for learners from Uganda, Africa and beyond.
-          </p>
-          <div className="mt-5 grid gap-3 sm:flex sm:flex-wrap">
-            <Button asChild className="h-10 rounded-lg bg-[#0B6232] px-4 text-sm font-black text-white hover:bg-[#0B6232]">
-              <Link href="/about">Learn About KCU</Link>
-            </Button>
-            <Button asChild variant="outline" className="h-10 rounded-lg border-2 border-[#0B6232] px-4 text-sm font-black text-[#0B6232] hover:bg-[#0B6232] hover:text-white">
-              <Link href="/admissions">Contact Admissions <ArrowRight className="ml-2 size-4" /></Link>
-            </Button>
-          </div>
+      <div className="mx-auto grid max-w-[1440px] gap-8 lg:grid-cols-[0.86fr_1.14fr] lg:items-center lg:gap-12">
+        <div className="relative overflow-hidden rounded-2xl bg-slate-100 shadow-xl shadow-slate-950/10 md:rounded-[1.75rem]">
+          <Image
+            src="/vc.jpg"
+            alt="Dr. Charity Basaza Mulenga, Vice Chancellor of King Ceasor University"
+            width={768}
+            height={745}
+            className="mx-auto h-auto w-3/4 object-contain"
+          />
         </div>
 
-        <div className="relative overflow-hidden rounded-2xl bg-[#000000] shadow-xl shadow-slate-950/10 md:rounded-[1.75rem] md:shadow-2xl md:shadow-slate-950/15">
-          <Image
-            src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1200&q=85"
-            alt="University students walking on campus"
-            width={1200}
-            height={780}
-            className="h-72 w-full object-cover opacity-85 sm:h-[360px] lg:h-[440px]"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" />
-          <div className="grid gap-3 bg-[#0B6232] p-4 sm:absolute sm:inset-x-0 sm:bottom-0 sm:grid-cols-3 sm:bg-transparent sm:p-5 md:p-7">
-            {[
-              { icon: Building2, title: "Academic Schools", text: "Clear routes into faculties and programmes." },
-              { icon: ShieldCheck, title: "Trusted Admissions", text: "Guided steps for applicants and families." },
-              { icon: Globe2, title: "Global Outlook", text: "International students, partners and research." },
-            ].map((item) => {
-              const Icon = item.icon;
-              return (
-                <div key={item.title} className="rounded-xl border border-white/15 bg-white/92 p-3 shadow-lg backdrop-blur sm:rounded-2xl sm:p-4 sm:shadow-xl">
-                  <Icon className="size-6 text-[#0B6232] sm:size-7" />
-                  <h3 className="mt-2 text-sm font-black text-slate-950 sm:mt-3 sm:text-base">{item.title}</h3>
-                  <p className="mt-1 text-xs leading-5 text-slate-600 sm:mt-2 sm:text-sm sm:leading-6">{item.text}</p>
-                </div>
-              );
-            })}
+        <div className="lg:pr-8">
+          <p className="text-xs font-black uppercase tracking-[0.16em] text-[#0B6232] sm:text-sm sm:tracking-[0.2em]">Vice Chancellor&apos;s Message</p>
+          <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
+            On behalf of the Management, Staff, and Administration of King Ceasor University, I am delighted to warmly welcome you to explore our university.
+          </p>
+          <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
+            King Ceasor University is a privately owned University licensed by the National Council for Higher Education. Although we are relatively young, having registered our first students in 2013, our journey began in 2009. Today, we offer a diverse range of programs, including Medicine, Nursing, Petroleum Geoscience, Law, Computer Forensics and Criminal Investigations, and various management disciplines.
+          </p>
+          <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
+            Our mission is to prepare students to be lifelong learners. Our dedicated faculty contribute significantly by creating a supportive learning environment, delivering quality teaching, and providing thoughtful mentoring, all of which ensure our students’ future success.
+          </p>
+           <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
+            At King Ceasor University, we provide an exceptional learning environment for our students and staff. Our state-of-the-art laboratories feature cutting-edge facilities, serving as dynamic spaces for exploration, discovery, and collaboration. These resources are utilized by our students and faculty members to enrich the student’s study experiences.
+          </p>
+          <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
+            Research and development initiatives are a key mission at King Ceasor University. We strive to apply our knowledge and skills to promote social economic transformation. We are committed to strengthening our partnerships with academic institutions, government bodies, and industries, while also building new alliances to expand our impact.
+          </p>
+          <div className="mt-6 border-l-4 border-[#FFC66B] pl-4">
+            <p className="text-base font-black text-slate-950">Dr. Charity Basaza Mulenga</p>
+            <p className="mt-1 text-sm font-semibold text-[#0B6232]">Vice Chancellor, King Ceasor University</p>
           </div>
         </div>
       </div>
