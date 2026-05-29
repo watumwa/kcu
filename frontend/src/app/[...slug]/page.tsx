@@ -797,7 +797,46 @@ function FeesStructurePage() {
                       </div>
                     </div>
 
-                    <div className="overflow-x-auto">
+                    <div className="grid gap-3 p-3 md:hidden">
+                      {group.courses.map((course) => (
+                        <article key={course.course} className="rounded-2xl border border-slate-100 bg-slate-50/80 p-4 shadow-sm">
+                          <div className="flex items-start justify-between gap-3">
+                            <span className="grid size-9 shrink-0 place-items-center rounded-full bg-[#0B6232] text-sm font-black text-[#FFC66B]">
+                              {course.code}
+                            </span>
+                            <span className="rounded-full bg-[#0B6232]/10 px-3 py-1 text-right text-[11px] font-black leading-4 text-[#0B6232]">
+                              {course.feeStatus}
+                            </span>
+                          </div>
+                          <h3 className="mt-4 text-base font-black leading-snug text-slate-950">{course.course}</h3>
+                          <p className="mt-2 text-xs leading-5 text-slate-500">
+                            Official tuition amount to be inserted after Admissions confirmation.
+                          </p>
+                          <dl className="mt-4 grid gap-3 text-sm">
+                            <div className="rounded-xl bg-white p-3">
+                              <dt className="text-[10px] font-black uppercase tracking-[0.14em] text-slate-400">School</dt>
+                              <dd className="mt-1 font-semibold leading-5 text-slate-700">{course.school}</dd>
+                            </div>
+                            <div className="grid grid-cols-2 gap-3">
+                              <div className="rounded-xl bg-white p-3">
+                                <dt className="text-[10px] font-black uppercase tracking-[0.14em] text-slate-400">Level</dt>
+                                <dd className="mt-1 font-semibold leading-5 text-slate-700">{course.level}</dd>
+                              </div>
+                              <div className="rounded-xl bg-white p-3">
+                                <dt className="text-[10px] font-black uppercase tracking-[0.14em] text-slate-400">Duration</dt>
+                                <dd className="mt-1 font-semibold leading-5 text-slate-700">{course.duration}</dd>
+                              </div>
+                            </div>
+                            <div className="rounded-xl bg-white p-3">
+                              <dt className="text-[10px] font-black uppercase tracking-[0.14em] text-slate-400">Payment</dt>
+                              <dd className="mt-1 font-semibold leading-5 text-slate-700">{course.billing}</dd>
+                            </div>
+                          </dl>
+                        </article>
+                      ))}
+                    </div>
+
+                    <div className="hidden overflow-x-auto md:block">
                       <table className="w-full min-w-[920px] border-collapse text-left text-sm">
                         <thead>
                           <tr className="border-b border-slate-100 bg-slate-50 text-[11px] uppercase tracking-[0.14em] text-slate-500">
