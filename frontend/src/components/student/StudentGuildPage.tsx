@@ -57,7 +57,7 @@ export default function StudentGuildPage() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-white">
+      <main className="min-h-screen bg-white pt-16 sm:pt-20 lg:pt-[8.5rem]">
         <section className="relative overflow-hidden px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
           <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1800&q=85')" }} />
           <div className="absolute inset-0 bg-black/50" />

@@ -128,3 +128,24 @@
     @apply font-sans;
   }
 }
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    text-rendering: geometricPrecision;
+  }
+
+  ::selection {
+    background: #FFC66B;
+    color: #0B6232;
+  }
+}
+
+@layer utilities {
+  .professional-surface {
+    box-shadow: 0 24px 80px rgb(15 23 42 / 0.08);
+  }
+}

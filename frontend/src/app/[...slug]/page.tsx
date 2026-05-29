@@ -752,10 +752,13 @@ const newsletterArticles = [
 ];
 
 function NewsletterPage() {
+  const featuredArticle = newsletterArticles[0];
+  const remainingArticles = newsletterArticles.slice(1);
+
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-white">
+      <main className="min-h-screen bg-white pt-16 sm:pt-20 lg:pt-[8.5rem]">
         <div className="border-b border-slate-100 bg-[#FFFFFF]">
           <div className="mx-auto flex max-w-[1440px] items-center gap-2 px-4 py-3 text-xs text-slate-500 sm:px-6 lg:px-8">
             <Link href="/" className="hover:text-[#0B6232]">Home</Link>
@@ -768,53 +771,84 @@ function NewsletterPage() {
 
         <section className="relative overflow-hidden px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
           <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1800&q=80')" }} />
-          <div className="absolute inset-0 bg-black/45" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/50 to-transparent" />
+          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/55 to-transparent" />
+          <div className="absolute -bottom-20 right-8 hidden size-72 rounded-full border border-white/10 lg:block" />
           <div className="relative z-10 mx-auto flex max-w-[1440px] flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
             <div>
-              <p className="text-xs font-black uppercase tracking-[0.2em] text-[#FFC66B]">News &amp; Updates</p>
-              <h1 className="mt-3 max-w-3xl font-serif text-4xl font-black leading-tight text-white sm:text-5xl md:text-6xl">
+              <p className="inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-black uppercase tracking-[0.2em] text-[#FFC66B] backdrop-blur">News &amp; Updates</p>
+              <h1 className="mt-5 max-w-3xl font-serif text-4xl font-black leading-tight text-white sm:text-5xl md:text-6xl">
                 All KCU <span className="block text-[#FFC66B]">News</span>
               </h1>
-              <p className="mt-5 max-w-2xl text-sm leading-7 text-white/75 sm:text-base sm:leading-8">
+              <p className="mt-5 max-w-2xl text-sm leading-7 text-white/80 sm:text-base sm:leading-8">
                 Stay informed. Stay inspired. The latest from King Ceasor University.
               </p>
             </div>
-            <div className="inline-flex w-fit items-center gap-3 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-white">
-              Scroll
-              <span className="block h-8 w-px bg-[#FFC66B]" />
+            <div className="rounded-3xl border border-white/15 bg-white/10 p-5 text-white shadow-2xl backdrop-blur">
+              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">Newsroom</p>
+              <p className="mt-2 text-4xl font-black">{newsletterArticles.length}</p>
+              <p className="text-xs font-semibold text-white/70">Published updates</p>
             </div>
           </div>
         </section>
 
-        <section className="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+        <section className="bg-slate-50/70 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
           <div className="mx-auto max-w-[1440px]">
-            <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-              {newsletterArticles.map((article) => (
-                <article key={`${article.date}-${article.title}`} className="group flex min-h-[260px] flex-col justify-between rounded-2xl border border-slate-100 bg-white p-6 shadow-sm transition hover:border-[#0B6232]/25 hover:shadow-lg">
-                  <div>
+            <article className="group overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-2xl shadow-slate-900/5">
+              <div className="grid lg:grid-cols-[0.85fr_1.15fr]">
+                <div className="bg-[#0B6232] p-8 text-white sm:p-10">
+                  <p className="text-[10px] font-black uppercase tracking-[0.24em] text-[#FFC66B]">Featured Update</p>
+                  <h2 className="mt-4 text-3xl font-black leading-tight sm:text-4xl">{featuredArticle.title}</h2>
+                  <p className="mt-4 text-sm leading-7 text-white/80 sm:text-base">{featuredArticle.excerpt}</p>
+                  <Link href={featuredArticle.href} className="mt-7 inline-flex items-center rounded-xl bg-[#FFC66B] px-5 py-3 text-sm font-black text-[#0B6232] transition hover:translate-x-1">
+                    Read Article <ArrowRight className="ml-2 size-4" />
+                  </Link>
+                </div>
+                <div className="p-8 sm:p-10">
+                  <div className="flex flex-wrap items-center gap-3">
+                    <span className="rounded-full bg-[#FFC66B]/25 px-3 py-1 text-xs font-black text-[#0B6232]">{featuredArticle.category}</span>
+                    <span className="text-xs font-black uppercase tracking-[0.16em] text-slate-500">{featuredArticle.date}</span>
+                  </div>
+                  <div className="mt-8 grid gap-4 sm:grid-cols-3">
+                    {newsletterArticles.slice(0, 3).map((article, index) => (
+                      <div key={`${article.date}-${article.title}`} className="rounded-2xl border border-slate-100 bg-slate-50 p-5">
+                        <p className="text-3xl font-black text-[#0B6232]">{String(index + 1).padStart(2, "0")}</p>
+                        <p className="mt-2 text-xs font-black uppercase tracking-wide text-slate-500">{article.category}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+              {remainingArticles.map((article, index) => (
+                <article key={`${article.date}-${article.title}`} className="group flex min-h-[280px] flex-col justify-between overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5 transition hover:-translate-y-1 hover:border-[#0B6232]/25 hover:shadow-2xl hover:shadow-slate-900/10">
+                  <div className="h-1.5 bg-gradient-to-r from-[#0B6232] via-[#FFC66B] to-[#0B6232]" />
+                  <div className="p-6">
                     <div className="flex items-start justify-between gap-4">
-                      <div className="rounded-xl bg-[#0B6232] px-4 py-3 text-white">
-                        <p className="text-xs font-black leading-tight text-[#FFC66B]">{article.date}</p>
+                      <div className="grid size-14 place-items-center rounded-2xl bg-[#0B6232] text-sm font-black text-[#FFC66B] shadow-lg shadow-[#0B6232]/20">
+                        {String(index + 2).padStart(2, "0")}
                       </div>
                       <span className="rounded-full bg-[#FFC66B]/20 px-3 py-1 text-[10px] font-black uppercase tracking-wide text-[#0B6232]">
                         {article.category}
                       </span>
                     </div>
-                    <h2 className="mt-6 text-xl font-black leading-tight text-slate-950">{article.title}</h2>
+                    <p className="mt-5 text-xs font-black uppercase tracking-[0.16em] text-slate-500">{article.date}</p>
+                    <h2 className="mt-2 text-xl font-black leading-tight text-slate-950">{article.title}</h2>
                     <p className="mt-3 text-sm leading-7 text-slate-600">{article.excerpt}</p>
                   </div>
-                  <Link href={article.href} className="mt-6 inline-flex items-center text-sm font-black text-[#0B6232] transition group-hover:text-slate-950">
-                    Read Article <ArrowRight className="ml-2 size-4" />
+                  <Link href={article.href} className="mx-6 mb-6 inline-flex items-center text-sm font-black text-[#0B6232] transition group-hover:text-slate-950">
+                    Read Article <ArrowRight className="ml-2 size-4 transition group-hover:translate-x-1" />
                   </Link>
                 </article>
               ))}
             </div>
 
             <div className="mt-12 flex items-center justify-center gap-3 text-sm font-black text-slate-500">
-              <span className="rounded-full border border-slate-200 px-4 py-2">Previous</span>
-              <span className="grid size-10 place-items-center rounded-full bg-[#0B6232] text-white">1</span>
-              <span className="rounded-full border border-slate-200 px-4 py-2">Next</span>
+              <span className="rounded-full border border-slate-200 bg-white px-4 py-2 shadow-sm">Previous</span>
+              <span className="grid size-10 place-items-center rounded-full bg-[#0B6232] text-white shadow-lg shadow-[#0B6232]/20">1</span>
+              <span className="rounded-full border border-slate-200 bg-white px-4 py-2 shadow-sm">Next</span>
             </div>
           </div>
         </section>
@@ -854,7 +888,7 @@ function CampusLifePage() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-white">
+      <main className="min-h-screen bg-white pt-16 sm:pt-20 lg:pt-[8.5rem]">
         <div className="border-b border-slate-100 bg-[#FFFFFF]">
           <div className="mx-auto flex max-w-[1440px] items-center gap-2 px-4 py-3 text-xs text-slate-500 sm:px-6 lg:px-8">
             <Link href="/" className="hover:text-[#0B6232]">Home</Link>
@@ -1006,58 +1040,146 @@ function CampusLifePage() {
 }
 
 function AboutContentPage({ page }: { page: AboutPageContent }) {
+  const parentLabel = page.eyebrow === "Admissions" ? "Admissions" : page.eyebrow === "Academics" || page.eyebrow === "Courses" ? "Academics" : page.eyebrow === "Library" ? "Library" : page.eyebrow === "Student Life" || page.eyebrow === "Student Welfare" || page.eyebrow === "Student Leadership" ? "Student" : "About Us";
+  const parentHref = page.eyebrow === "Admissions" ? "/admissions" : page.eyebrow === "Academics" || page.eyebrow === "Courses" ? "/academics" : page.eyebrow === "Library" ? "/library" : page.eyebrow === "Student Life" || page.eyebrow === "Student Welfare" || page.eyebrow === "Student Leadership" ? "/student" : "/about";
+
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-white">
+      <main className="min-h-screen bg-white pt-16 sm:pt-20 lg:pt-[8.5rem]">
         <div className="border-b border-slate-100 bg-[#FFFFFF]">
-          <div className="mx-auto flex max-w-[1440px] items-center gap-2 px-4 py-3 text-xs text-slate-500 sm:px-6 lg:px-8">
-            <Link href="/" className="hover:text-[#0B6232]">Home</Link>
-            <ChevronRight className="size-3.5" />
-            <Link href="/about" className="hover:text-[#0B6232]">About Us</Link>
-            <ChevronRight className="size-3.5" />
-            <span className="font-semibold text-[#0B6232]">{page.title}</span>
+          <div className="mx-auto flex max-w-[1440px] items-center gap-2 overflow-x-auto px-4 py-3 text-xs text-slate-500 sm:px-6 lg:px-8">
+            <Link href="/" className="shrink-0 hover:text-[#0B6232]">Home</Link>
+            <ChevronRight className="size-3.5 shrink-0" />
+            <Link href={parentHref} className="shrink-0 hover:text-[#0B6232]">{parentLabel}</Link>
+            <ChevronRight className="size-3.5 shrink-0" />
+            <span className="shrink-0 font-semibold text-[#0B6232]">{page.title}</span>
           </div>
         </div>
 
         <section className="relative overflow-hidden px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
           <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1800&q=80')" }} />
-          <div className="absolute inset-0 bg-black/45" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/45 to-transparent" />
-          <div className="relative z-10 mx-auto max-w-[1440px]">
-            <p className="text-xs font-black uppercase tracking-[0.2em] text-[#FFC66B]">{page.eyebrow}</p>
-            <h1 className="mt-3 max-w-3xl font-serif text-3xl font-black leading-tight text-white sm:text-4xl md:text-5xl">{page.title}</h1>
-            <p className="mt-4 max-w-2xl text-sm leading-7 text-white/75 sm:text-base sm:leading-8">{page.intro}</p>
+          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/55 to-black/10" />
+          <div className="absolute -bottom-24 right-10 hidden size-72 rounded-full border border-white/10 lg:block" />
+          <div className="absolute -right-10 top-10 hidden size-40 rounded-full bg-[#FFC66B]/10 blur-2xl lg:block" />
+          <div className="relative z-10 mx-auto grid max-w-[1440px] gap-10 lg:grid-cols-[1fr_360px] lg:items-end">
+            <div>
+              <p className="inline-flex items-center rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-black uppercase tracking-[0.2em] text-[#FFC66B] backdrop-blur">
+                {page.eyebrow}
+              </p>
+              <h1 className="mt-5 max-w-4xl font-serif text-4xl font-black leading-tight text-white sm:text-5xl md:text-6xl">{page.title}</h1>
+              <p className="mt-5 max-w-3xl text-sm leading-7 text-white/80 sm:text-base sm:leading-8">{page.intro}</p>
+            </div>
+            <div className="rounded-3xl border border-white/15 bg-white/10 p-5 text-white shadow-2xl backdrop-blur">
+              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">Page Guide</p>
+              <div className="mt-4 grid grid-cols-2 gap-3">
+                <div className="rounded-2xl bg-white/10 p-4">
+                  <p className="text-3xl font-black">{page.sections.length}</p>
+                  <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.14em] text-white/70">Focus Areas</p>
+                </div>
+                <div className="rounded-2xl bg-[#FFC66B] p-4 text-[#0B6232]">
+                  <p className="text-3xl font-black">KCU</p>
+                  <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.14em]">Official Page</p>
+                </div>
+              </div>
+              {page.cta && (
+                <Button asChild className="mt-4 h-11 w-full rounded-xl bg-[#FFC66B] px-5 font-black text-[#0B6232] hover:bg-[#FFC66B]">
+                  <Link href={page.cta.href}>{page.cta.label} <ArrowRight className="ml-2 size-4" /></Link>
+                </Button>
+              )}
+            </div>
           </div>
         </section>
 
-        <section className="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
-          <div className="mx-auto max-w-[1120px] space-y-8">
-            {page.sections.map((section) => (
-              <article key={section.title} className="rounded-2xl border border-slate-100 bg-[#FFFFFF] p-6 shadow-sm sm:p-8">
-                <p className="text-xs font-black uppercase tracking-[0.2em] text-[#0B6232]">King Ceasor University</p>
-                <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950 sm:text-3xl">{section.title}</h2>
-                {section.text && (
-                  <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">{section.text}</p>
-                )}
-                {section.items && (
-                  <ul className="mt-5 grid gap-3">
-                    {section.items.map((item) => (
-                      <li key={item} className="flex gap-3 text-sm leading-6 text-slate-600 sm:text-base">
-                        <span className="mt-2 size-2 shrink-0 rounded-full bg-[#FFC66B]" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </article>
-            ))}
+        <section className="bg-slate-50/70 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+          <div className="mx-auto grid max-w-[1440px] gap-8 lg:grid-cols-[300px_1fr] lg:items-start">
+            <aside className="hidden lg:block">
+              <div className="sticky top-28 overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5">
+                <div className="border-b border-slate-100 bg-[#0B6232] p-5 text-white">
+                  <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">On this page</p>
+                  <h2 className="mt-1 text-lg font-black leading-tight">{page.title}</h2>
+                </div>
+                <nav className="p-3">
+                  {page.sections.map((section, index) => (
+                    <a
+                      key={section.title}
+                      href={`#section-${index}`}
+                      className="group flex items-center gap-3 rounded-2xl px-3 py-3 text-sm font-bold text-slate-600 transition hover:bg-slate-50 hover:text-[#0B6232]"
+                    >
+                      <span className="grid size-8 shrink-0 place-items-center rounded-xl bg-[#FFC66B]/20 text-xs font-black text-[#0B6232] transition group-hover:bg-[#0B6232] group-hover:text-white">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+                      <span className="leading-snug">{section.title}</span>
+                    </a>
+                  ))}
+                </nav>
+              </div>
+            </aside>
 
-            {page.cta && (
-              <Button asChild className="h-12 rounded-xl bg-[#0B6232] px-6 font-black text-white hover:bg-[#0B6232]">
-                <Link href={page.cta.href}>{page.cta.label} <ArrowRight className="ml-2 size-4" /></Link>
-              </Button>
-            )}
+            <div className="space-y-6">
+              <div className="lg:hidden -mx-4 overflow-x-auto px-4 sm:-mx-6 sm:px-6">
+                <div className="flex gap-2 pb-2">
+                  {page.sections.map((section, index) => (
+                    <a
+                      key={section.title}
+                      href={`#section-${index}`}
+                      className="shrink-0 rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-black text-slate-600 shadow-sm hover:border-[#0B6232]/30 hover:text-[#0B6232]"
+                    >
+                      {section.title}
+                    </a>
+                  ))}
+                </div>
+              </div>
+
+              {page.sections.map((section, index) => (
+                <article
+                  id={`section-${index}`}
+                  key={section.title}
+                  className="group scroll-mt-28 overflow-hidden rounded-3xl border border-slate-100 bg-[#FFFFFF] shadow-xl shadow-slate-900/5 transition hover:-translate-y-0.5 hover:shadow-2xl hover:shadow-slate-900/10"
+                >
+                  <div className="h-1.5 bg-gradient-to-r from-[#0B6232] via-[#FFC66B] to-[#0B6232]" />
+                  <div className="grid gap-6 p-6 sm:p-8 lg:grid-cols-[90px_1fr] lg:p-10">
+                    <div className="flex lg:block">
+                      <div className="grid size-16 place-items-center rounded-2xl bg-[#0B6232] text-lg font-black text-[#FFC66B] shadow-lg shadow-[#0B6232]/20">
+                        {String(index + 1).padStart(2, "0")}
+                      </div>
+                    </div>
+                    <div>
+                      <p className="text-[10px] font-black uppercase tracking-[0.22em] text-[#0B6232]">King Ceasor University</p>
+                      <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950 sm:text-3xl">{section.title}</h2>
+                      {section.text && (
+                        <p className="mt-4 max-w-4xl text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">{section.text}</p>
+                      )}
+                      {section.items && (
+                        <ul className="mt-6 grid gap-3 md:grid-cols-2">
+                          {section.items.map((item) => (
+                            <li key={item} className="flex gap-3 rounded-2xl border border-slate-100 bg-slate-50/70 p-4 text-sm leading-6 text-slate-700 sm:text-base">
+                              <span className="mt-1 grid size-5 shrink-0 place-items-center rounded-full bg-[#FFC66B] text-[10px] font-black text-[#0B6232]">✓</span>
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  </div>
+                </article>
+              ))}
+
+              {page.cta && (
+                <section className="overflow-hidden rounded-3xl bg-[#0B6232] p-7 text-white shadow-2xl shadow-[#0B6232]/20 sm:p-10">
+                  <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+                    <div>
+                      <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">Next Step</p>
+                      <h2 className="mt-2 text-2xl font-black leading-tight">{page.title}</h2>
+                    </div>
+                    <Button asChild className="h-12 rounded-xl bg-[#FFC66B] px-6 font-black text-[#0B6232] hover:bg-[#FFC66B]">
+                      <Link href={page.cta.href}>{page.cta.label} <ArrowRight className="ml-2 size-4" /></Link>
+                    </Button>
+                  </div>
+                </section>
+              )}
+            </div>
           </div>
         </section>
       </main>
