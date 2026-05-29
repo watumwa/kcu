@@ -85,14 +85,18 @@ export default function Hero() {
       </div>
 
       <div className="absolute bottom-10 left-1/2 z-20 flex -translate-x-1/2 items-center gap-2 sm:bottom-24">
-        {heroSlides.map((slide, index) => (
-          <button
-            key={slide.school}
-            onClick={() => setActive(index)}
-            className={`h-2.5 rounded-full transition-all ${index === active ? "w-12 bg-[#FFC66B]" : "w-3 bg-white/60 hover:bg-white"}`}
-            aria-label={`Go to ${slide.school} slide`}
-          />
-        ))}
+        {heroSlides.map((slide, index) => {
+          const slideLabel = slide.school || slide.title || slide.badge;
+
+          return (
+            <button
+              key={`${slide.image}-${index}`}
+              onClick={() => setActive(index)}
+              className={`h-2.5 rounded-full transition-all ${index === active ? "w-12 bg-[#FFC66B]" : "w-3 bg-white/60 hover:bg-white"}`}
+              aria-label={`Go to ${slideLabel} slide`}
+            />
+          );
+        })}
       </div>
     </section>
   );
