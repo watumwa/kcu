@@ -676,6 +676,210 @@ const contentPages: Record<string, AboutPageContent> = {
   },
 };
 
+
+const feeProgrammes = [
+  {
+    group: "Undergraduate Programmes",
+    summary: "Degree programmes across health sciences, law, business, computing, agriculture, and energy.",
+    courses: [
+      { code: "01", course: "Bachelor of Medicine & Bachelor of Surgery", school: "Medicine, Health & Life Sciences", level: "Bachelor", duration: "5 years", billing: "Per semester", feeStatus: "Professional medical programme" },
+      { code: "02", course: "Bachelor of Nursing Sciences", school: "Medicine, Health & Life Sciences", level: "Bachelor", duration: "4 years", billing: "Per semester", feeStatus: "Clinical training programme" },
+      { code: "03", course: "Bachelor of Medical Records & Health Informatics", school: "Medicine, Health & Life Sciences", level: "Bachelor", duration: "3 years", billing: "Per semester", feeStatus: "Health informatics programme" },
+      { code: "04", course: "Bachelor of Agriculture", school: "Science, Computing & Engineering", level: "Bachelor", duration: "3 years", billing: "Per semester", feeStatus: "Practical science programme" },
+      { code: "05", course: "Bachelor of Laws", school: "Law & Management Sciences", level: "Bachelor", duration: "4 years", billing: "Per semester", feeStatus: "Professional law programme" },
+      { code: "06", course: "Bachelor of Business Administration", school: "Law & Management Sciences", level: "Bachelor", duration: "3 years", billing: "Per semester", feeStatus: "Business and management programme" },
+      { code: "07", course: "Bachelor of Computer Forensics & Criminal Investigation", school: "Science, Computing & Engineering", level: "Bachelor", duration: "3 years", billing: "Per semester", feeStatus: "Computing and investigation programme" },
+      { code: "08", course: "Bachelor of Oil, Gas & Energy Management", school: "Science, Computing & Engineering", level: "Bachelor", duration: "3 years", billing: "Per semester", feeStatus: "Energy management programme" },
+    ],
+  },
+  {
+    group: "Diploma Programmes",
+    summary: "Practical diploma pathways for students pursuing health and community service careers.",
+    courses: [
+      { code: "09", course: "Diploma in Clinical Medicine & Community Health", school: "Medicine, Health & Life Sciences", level: "Diploma", duration: "3 years", billing: "Per semester", feeStatus: "Clinical diploma programme" },
+      { code: "10", course: "Diploma in Medical Laboratory Technology", school: "Medicine, Health & Life Sciences", level: "Diploma", duration: "3 years", billing: "Per semester", feeStatus: "Laboratory training programme" },
+    ],
+  },
+  {
+    group: "Certificate and Bridging Pathways",
+    summary: "Certificate and short-course pathways for academic progression and practical skill development.",
+    courses: [
+      { code: "11", course: "Higher Education Certificate in Biological Sciences", school: "Science, Computing & Engineering", level: "Certificate", duration: "1 year", billing: "Per semester", feeStatus: "Bridging pathway" },
+      { code: "12", course: "Higher Education Certificate in Physical Sciences", school: "Science, Computing & Engineering", level: "Certificate", duration: "1 year", billing: "Per semester", feeStatus: "Bridging pathway" },
+      { code: "13", course: "Higher Education Certificate in Humanities", school: "Law & Management Sciences", level: "Certificate", duration: "1 year", billing: "Per semester", feeStatus: "Bridging pathway" },
+      { code: "14", course: "Language Proficiency", school: "Short Courses", level: "Short Course", duration: "Short course", billing: "As communicated", feeStatus: "Short-course fee" },
+      { code: "15", course: "Digital Marketing", school: "Short Courses", level: "Short Course", duration: "Short course", billing: "As communicated", feeStatus: "Short-course fee" },
+      { code: "16", course: "Computer Applications", school: "Short Courses", level: "Short Course", duration: "Short course", billing: "As communicated", feeStatus: "Short-course fee" },
+    ],
+  },
+];
+
+const feeBreakdown = [
+  { item: "Tuition fees", description: "The main academic charge for each programme and semester of study." },
+  { item: "Registration fees", description: "Paid during enrollment or registration for the relevant semester or study period." },
+  { item: "Examination fees", description: "Supports assessment, examination administration, and related academic processes." },
+  { item: "Library fees", description: "Supports access to library resources, study support, and learning materials." },
+  { item: "ICT and identity card fees", description: "Supports student identification, digital services, and ICT-related access." },
+];
+
+function FeesStructurePage() {
+  const totalCourses = feeProgrammes.reduce((total, group) => total + group.courses.length, 0);
+
+  return (
+    <>
+      <Navbar />
+      <main className="min-h-screen bg-white pt-16 sm:pt-20 lg:pt-[8.5rem]">
+        <div className="border-b border-slate-100 bg-[#FFFFFF]">
+          <div className="mx-auto flex max-w-[1440px] items-center gap-2 overflow-x-auto px-4 py-3 text-xs text-slate-500 sm:px-6 lg:px-8">
+            <Link href="/" className="shrink-0 hover:text-[#0B6232]">Home</Link>
+            <ChevronRight className="size-3.5 shrink-0" />
+            <Link href="/admissions" className="shrink-0 hover:text-[#0B6232]">Admissions</Link>
+            <ChevronRight className="size-3.5 shrink-0" />
+            <span className="shrink-0 font-semibold text-[#0B6232]">Fees Structure</span>
+          </div>
+        </div>
+
+        <section className="relative overflow-hidden px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+          <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1800&q=80')" }} />
+          <div className="absolute inset-0 bg-black/55" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent" />
+          <div className="absolute -bottom-20 right-12 hidden size-72 rounded-full border border-white/10 lg:block" />
+          <div className="relative z-10 mx-auto grid max-w-[1440px] gap-8 lg:grid-cols-[1fr_380px] lg:items-end">
+            <div>
+              <p className="inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-black uppercase tracking-[0.2em] text-[#FFC66B] backdrop-blur">Admissions</p>
+              <h1 className="mt-5 max-w-4xl font-serif text-4xl font-black leading-tight text-white sm:text-5xl md:text-6xl">Fees Structure by Course</h1>
+              <p className="mt-5 max-w-3xl text-sm leading-7 text-white/80 sm:text-base sm:leading-8">
+                Review the programme fee structure in a clean course-by-course format. Official monetary figures can be inserted in the table once approved by the University or Admissions Office.
+              </p>
+              <div className="mt-7 flex flex-wrap gap-3">
+                <Button asChild className="h-11 rounded-xl bg-[#FFC66B] px-5 font-black text-[#0B6232] hover:bg-[#FFC66B]">
+                  <Link href="https://apply.kcu.ac.ug/">Apply Online <ArrowRight className="ml-2 size-4" /></Link>
+                </Button>
+                <Button asChild variant="outline" className="h-11 rounded-xl border-2 border-white bg-transparent px-5 font-black text-white hover:bg-white hover:text-[#0B6232]">
+                  <Link href="/admissions/admission-requirements">Admission Requirements</Link>
+                </Button>
+              </div>
+            </div>
+            <div className="rounded-3xl border border-white/15 bg-white/10 p-5 text-white shadow-2xl backdrop-blur">
+              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">At a glance</p>
+              <div className="mt-4 grid grid-cols-2 gap-3">
+                <div className="rounded-2xl bg-white/10 p-4">
+                  <p className="text-3xl font-black">{totalCourses}</p>
+                  <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.14em] text-white/70">Programmes</p>
+                </div>
+                <div className="rounded-2xl bg-[#FFC66B] p-4 text-[#0B6232]">
+                  <p className="text-3xl font-black">5</p>
+                  <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.14em]">Fee Items</p>
+                </div>
+              </div>
+              <p className="mt-4 rounded-2xl border border-white/10 bg-black/20 p-4 text-xs leading-6 text-white/75">
+                Fees are approved by the University Council and may be reviewed from time to time. Students remain responsible for payment whether or not they have a sponsor.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-slate-50/70 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+          <div className="mx-auto max-w-[1440px]">
+            <div className="grid gap-6 lg:grid-cols-[1fr_340px] lg:items-start">
+              <div className="space-y-8">
+                {feeProgrammes.map((group) => (
+                  <section key={group.group} className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5">
+                    <div className="flex flex-col gap-4 border-b border-slate-100 bg-[#0B6232] p-6 text-white sm:flex-row sm:items-end sm:justify-between lg:p-8">
+                      <div>
+                        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-[#FFC66B]">Fees Table</p>
+                        <h2 className="mt-2 text-2xl font-black leading-tight sm:text-3xl">{group.group}</h2>
+                        <p className="mt-2 max-w-3xl text-sm leading-7 text-white/75">{group.summary}</p>
+                      </div>
+                      <div className="w-fit rounded-2xl bg-white/10 px-4 py-3 text-center">
+                        <p className="text-2xl font-black text-[#FFC66B]">{group.courses.length}</p>
+                        <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-white/70">Courses</p>
+                      </div>
+                    </div>
+
+                    <div className="overflow-x-auto">
+                      <table className="w-full min-w-[920px] border-collapse text-left text-sm">
+                        <thead>
+                          <tr className="border-b border-slate-100 bg-slate-50 text-[11px] uppercase tracking-[0.14em] text-slate-500">
+                            <th className="px-5 py-4 font-black">No.</th>
+                            <th className="px-5 py-4 font-black">Course / Programme</th>
+                            <th className="px-5 py-4 font-black">School</th>
+                            <th className="px-5 py-4 font-black">Level</th>
+                            <th className="px-5 py-4 font-black">Duration</th>
+                            <th className="px-5 py-4 font-black">Payment</th>
+                            <th className="px-5 py-4 font-black">Fee Category</th>
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-slate-100">
+                          {group.courses.map((course) => (
+                            <tr key={course.course} className="align-top transition hover:bg-[#FFC66B]/10">
+                              <td className="px-5 py-4 font-black text-[#0B6232]">{course.code}</td>
+                              <td className="px-5 py-4">
+                                <p className="font-black text-slate-950">{course.course}</p>
+                                <p className="mt-1 text-xs leading-5 text-slate-500">Official tuition amount to be inserted after Admissions confirmation.</p>
+                              </td>
+                              <td className="px-5 py-4 text-slate-700">{course.school}</td>
+                              <td className="px-5 py-4">
+                                <span className="rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-black text-slate-700">{course.level}</span>
+                              </td>
+                              <td className="px-5 py-4 text-slate-700">{course.duration}</td>
+                              <td className="px-5 py-4 text-slate-700">{course.billing}</td>
+                              <td className="px-5 py-4">
+                                <span className="rounded-full bg-[#0B6232]/10 px-3 py-1 text-xs font-black text-[#0B6232]">{course.feeStatus}</span>
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </section>
+                ))}
+              </div>
+
+              <aside className="space-y-6 lg:sticky lg:top-28">
+                <section className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5">
+                  <div className="bg-[#0B6232] p-6 text-white">
+                    <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">Fee Breakdown</p>
+                    <h2 className="mt-2 text-2xl font-black leading-tight">What students normally pay for</h2>
+                  </div>
+                  <div className="divide-y divide-slate-100">
+                    {feeBreakdown.map((fee) => (
+                      <div key={fee.item} className="p-5">
+                        <p className="font-black text-slate-950">{fee.item}</p>
+                        <p className="mt-1 text-sm leading-6 text-slate-600">{fee.description}</p>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+
+                <section className="rounded-3xl border border-[#FFC66B]/40 bg-[#FFC66B]/15 p-6 shadow-xl shadow-slate-900/5">
+                  <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Payment Note</p>
+                  <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950">Important fee guidance</h2>
+                  <ul className="mt-5 space-y-3 text-sm leading-6 text-slate-700">
+                    <li className="flex gap-3"><span className="mt-1 grid size-5 shrink-0 place-items-center rounded-full bg-[#0B6232] text-[10px] font-black text-[#FFC66B]">✓</span>Students must enroll within the required registration period.</li>
+                    <li className="flex gap-3"><span className="mt-1 grid size-5 shrink-0 place-items-center rounded-full bg-[#0B6232] text-[10px] font-black text-[#FFC66B]">✓</span>Tuition may differ by programme depending on study requirements.</li>
+                    <li className="flex gap-3"><span className="mt-1 grid size-5 shrink-0 place-items-center rounded-full bg-[#0B6232] text-[10px] font-black text-[#FFC66B]">✓</span>Official figures should be confirmed through Admissions before payment.</li>
+                  </ul>
+                </section>
+
+                <section className="rounded-3xl bg-[#0B6232] p-6 text-white shadow-2xl shadow-[#0B6232]/20">
+                  <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">Ready to apply?</p>
+                  <h2 className="mt-2 text-2xl font-black leading-tight">Start your application online</h2>
+                  <p className="mt-3 text-sm leading-7 text-white/75">Use the applicant portal to begin your admission process and receive course-specific guidance.</p>
+                  <Button asChild className="mt-6 h-11 w-full rounded-xl bg-[#FFC66B] px-5 font-black text-[#0B6232] hover:bg-[#FFC66B]">
+                    <Link href="https://apply.kcu.ac.ug/">Apply Online <ArrowRight className="ml-2 size-4" /></Link>
+                  </Button>
+                </section>
+              </aside>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
+}
+
 const newsletterArticles = [
   {
     date: "25 May 2026",
@@ -1192,6 +1396,10 @@ export default async function CatchAllPage({ params }: { params: Promise<{ slug:
   const { slug } = await params;
   const currentPath = slug.join("/");
   const page = contentPages[currentPath];
+
+  if (currentPath === "admissions/fees-structure") {
+    return <FeesStructurePage />;
+  }
 
   if (currentPath === "about/newsletter" || currentPath === "news") {
     return <NewsletterPage />;
