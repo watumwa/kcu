@@ -28,11 +28,11 @@ function TabAboutUs() {
     { label: "Alumni Community", value: "4,000", suffix: "+" },
   ];
   const coreValues = [
-    { icon: TrendingUp, title: "Progression", desc: "We recognize that learning never ends." },
-    { icon: Scale, title: "Accountability", desc: "We hold ourselves accountable for our actions and conduct our affairs in ways that promote mutual trust and public confidence." },
-    { icon: Shield, title: "Integrity", desc: "We hold ourselves, collectively and individually, liable to do what is right." },
-    { icon: Heart, title: "Respect", desc: "We treat all people with dignity, respect and impartiality." },
-    { icon: Users, title: "Synergy", desc: "We are stronger and more effective as a team than as individuals." },
+    { icon: Shield, title: "Integrity", desc: "We uphold honesty, ethics and professionalism, fostering transparency, trust and responsibility." },
+    { icon: TrendingUp, title: "Progression", desc: "We embrace innovation, continuous improvement and lifelong learning in an ever-changing world." },
+    { icon: Scale, title: "Accountability", desc: "We take responsibility for our actions and outcomes while promoting good governance and public confidence." },
+    { icon: Heart, title: "Respect", desc: "We value the dignity, worth and uniqueness of every individual in an inclusive community." },
+    { icon: Users, title: "Synergy", desc: "We work together, drawing on diverse talents, experiences and perspectives to achieve greater impact." },
   ];
 
   return (
@@ -41,7 +41,10 @@ function TabAboutUs() {
         <p className="text-xs font-black uppercase tracking-[0.2em] text-[#0B6232]">Who We Are</p>
         <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950 sm:text-3xl">About King Ceasor University</h2>
         <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
-          King Ceasor University (KCU) is a chartered private university widely regarded as one of Uganda&apos;s most exceptional private universities, attracting a cosmopolitan and diverse student population from various countries such as Tanzania, Nigeria, Palestine, India, Rwanda, Malawi, Ethiopia, and South Sudan, among others. KCU offers a vast array of programs that provide students with an advantageous head start in their career paths.
+          King Ceasor University (KCU) is a premier chartered private university in Uganda dedicated to academic excellence, innovation and transformative education. Since its establishment in 2011, the University has grown into a vibrant center of learning that attracts students from across Africa and beyond, fostering a diverse and multicultural academic community.
+        </p>
+        <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
+          With modern learning facilities, experienced faculty, strong industry partnerships and a student-centered approach, KCU nurtures intellectual growth, creativity and professional development. Guided by our motto, &quot;Ignite the Future,&quot; we empower learners to become innovators, problem-solvers and leaders who contribute meaningfully to society.
         </p>
       </div>
 
@@ -75,6 +78,9 @@ function TabAboutUs() {
       <div>
         <p className="text-xs font-black uppercase tracking-[0.2em] text-[#0B6232]">What We Stand For</p>
         <h2 className="mt-2 text-2xl font-black text-slate-950 sm:text-3xl">Core Values</h2>
+        <p className="mt-4 max-w-3xl text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
+          Our values define who we are and guide every aspect of teaching, learning, research and community engagement. They shape our culture and inspire our commitment to excellence.
+        </p>
         <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {coreValues.map((v) => {
             const Icon = v.icon;
@@ -95,12 +101,15 @@ function TabAboutUs() {
         <p className="text-xs font-black uppercase tracking-[0.2em] text-[#0B6232]">Our Approach</p>
         <h2 className="mt-2 text-2xl font-black text-slate-950 sm:text-3xl">KCU Comprehensive Education</h2>
         <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
-          Our educational philosophy combines physical, social, emotional, and spiritual growth with traditional academic learning, in keeping with our motto of{" "}
-          <em className="font-semibold text-slate-800">&lsquo;Moral Re-armament and Wealth Creation.&rsquo;</em>{" "}
-          KCU alumni are well-rounded individuals who can reason and evaluate problems, work well in groups, and are trustworthy.
+          At King Ceasor University, education extends beyond the classroom. Our comprehensive educational approach nurtures the intellectual, physical, social, emotional and spiritual development of every student, creating well-rounded graduates prepared to thrive in a dynamic global society.
         </p>
         <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
-          Every year, KCU hosts a graduation ceremony and issues transcripts on graduation day, allowing our graduates to enter the job market faster. Our students receive their certifications as soon as they complete their studies.
+          Guided by our philosophy of{" "}
+          <em className="font-semibold text-slate-800">&quot;Moral Re-armament and Wealth Creation,&quot;</em>{" "}
+          we combine academic excellence with character formation, leadership development and practical skills training. KCU graduates are equipped with critical thinking skills, ethical values, teamwork abilities and a strong sense of responsibility.
+        </p>
+        <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
+          To support student success and career readiness, the University maintains efficient academic processes, including timely graduation ceremonies and prompt issuance of academic transcripts and certificates. This enables graduates to transition smoothly into the workforce, entrepreneurship, further studies and other professional opportunities.
         </p>
         <Button asChild className="mt-6 h-11 rounded-xl bg-[#0B6232] px-6 text-sm font-black text-white hover:bg-[#0B6232]">
           <Link href="https://apply.kcu.ac.ug/">Apply Now <ArrowRight className="ml-2 size-4" /></Link>
@@ -214,7 +223,10 @@ function TabUniversityCouncil() {
         <p className="text-xs font-black uppercase tracking-[0.2em] text-[#0B6232]">Governance</p>
         <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950 sm:text-3xl">University Council</h2>
         <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
-          The University Council is entrusted with the responsibility for overseeing the governance, administration and strategic direction of the University to ensure effective management, academic quality and institutional development.
+          The University Council is the supreme governing body of King Ceasor University, responsible for providing strategic leadership, policy oversight and institutional governance. The Council ensures the University maintains high standards of academic excellence, accountability and sustainable development.
+        </p>
+        <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
+          Through effective supervision of the University&apos;s administration and operations, the Council safeguards the institution&apos;s vision, mission and long-term growth while fostering an environment that supports quality education, innovation and service to society.
         </p>
       </div>
 
@@ -305,7 +317,10 @@ function TabAdministration() {
         <p className="text-xs font-black uppercase tracking-[0.2em] text-[#0B6232]">Administration</p>
         <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950 sm:text-3xl">University Administration</h2>
         <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
-          The University administration is responsible for the day-to-day management and operations of the University, ensuring efficient service delivery, academic support, and the implementation of the institution&apos;s policies, goals, and strategic objectives.
+          The University Administration serves as the executive arm of King Ceasor University, responsible for the effective management and coordination of the institution&apos;s academic, administrative and operational activities.
+        </p>
+        <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
+          Guided by the University&apos;s vision and strategic objectives, the administration ensures the delivery of quality education, efficient resource management and exceptional services to students, staff and stakeholders. Through collaborative leadership and sound governance practices, it promotes academic excellence, innovation, institutional growth and a supportive learning environment.
         </p>
       </div>
 
@@ -546,7 +561,7 @@ export default function AboutPage() {
             <p className="text-xs font-black uppercase tracking-[0.2em] text-[#FFC66B]">About King Ceasor University</p>
             <h1 className="mt-3 max-w-3xl font-serif text-3xl font-black leading-tight text-white sm:text-4xl md:text-5xl">Shaping Leaders. Igniting the Future.</h1>
             <p className="mt-4 max-w-2xl text-sm leading-7 text-white/75 sm:text-base sm:leading-8">
-              A chartered private university widely regarded as one of Uganda&apos;s most exceptional institutions — attracting a cosmopolitan student community from across Africa and beyond.
+              A premier chartered private university in Uganda dedicated to academic excellence, innovation and transformative education for students from across Africa and beyond.
             </p>
           </div>
         </section>

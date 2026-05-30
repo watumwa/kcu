@@ -27,12 +27,12 @@ const aboutPages: Record<string, AboutPageContent> = {
     eyebrow: "Governance",
     title: "University Governance",
     intro:
-      "King Ceasor University is guided by governance and administration structures that support academic quality, effective management, student welfare, and institutional development.",
+      "King Ceasor University is guided by governance and administration structures that uphold academic excellence, accountability, sustainable development, innovation, and service to society.",
     sections: [
       {
         title: "University Council",
         text:
-          "The University Council provides oversight for the governance, administration, and strategic direction of the University. The Council is chaired by Hon Dr. Chris Baryomunsi, with Assoc. Prof. Mary Muhenda serving as Vice Chairperson.",
+          "The University Council is the supreme governing body of King Ceasor University, responsible for strategic leadership, policy oversight and institutional governance. It safeguards the University's vision, mission and long-term growth while supporting quality education, innovation and service to society.",
         items: [
           "Finance, Planning & Development Committee: Mrs. Grace N. Gwaku",
           "Quality Assurance & Gender Committee: Prof. Josephat Byamugisha",
@@ -44,7 +44,7 @@ const aboutPages: Record<string, AboutPageContent> = {
       {
         title: "University Administration",
         text:
-          "The University Administration manages day-to-day operations and service delivery across the institution, led by Dr. Charity Basaza Mulenga as Vice Chancellor and Dr. Byarugaba Bonaventura as Deputy Vice Chancellor.",
+          "The University Administration serves as the executive arm of King Ceasor University, coordinating academic, administrative and operational activities. Guided by the University's vision and strategic objectives, it promotes quality education, efficient resource management, institutional growth and a supportive learning environment.",
         items: [
           "Mrs. Pape Matama Bagonza: University Secretary",
           "Alfred Namoah Masikye: Academic Registrar",
