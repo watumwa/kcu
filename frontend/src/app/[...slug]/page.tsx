@@ -134,38 +134,6 @@ const aboutPages: Record<string, AboutPageContent> = {
 
 const contentPages: Record<string, AboutPageContent> = {
   ...aboutPages,
-  admissions: {
-    eyebrow: "Admissions",
-    title: "Admissions at KCU",
-    intro:
-      "King Ceasor University welcomes applicants from diverse academic, cultural, and professional backgrounds into programmes designed to prepare students for meaningful careers and service.",
-    sections: [
-      {
-        title: "Applying to KCU",
-        text:
-          "KCU considers each applicant's academic achievements together with their personal experiences, with the goal of building a diverse and inclusive university community.",
-        items: [
-          "Applications are submitted through the online applicant portal.",
-          "Prospective students can apply for undergraduate, diploma, certificate, and short course pathways.",
-          "The University offers programmes across Medicine, Health & Life Sciences; Law & Management Sciences; and Science, Computing & Engineering.",
-        ],
-      },
-      {
-        title: "Scholarship Support",
-        text:
-          "Scholarships at KCU are provided through the King Ceasor Development Kingdom program for eligible undergraduate students who meet the minimum admission requirements.",
-        items: [
-          "Scholarships target students from underprivileged backgrounds.",
-          "Awards are based on merit, personal achievement, and academic ability.",
-          "The programme includes volunteering, outreach, mentoring, and personal development activities.",
-        ],
-      },
-    ],
-    cta: {
-      label: "Apply Online",
-      href: "https://apply.kcu.ac.ug/",
-    },
-  },
   "admissions/fees-structure": {
     eyebrow: "Admissions",
     title: "Fees Structure",
@@ -557,6 +525,81 @@ const contentPages: Record<string, AboutPageContent> = {
     cta: {
       label: "Student Guild",
       href: "/student/guild",
+    },
+  },
+  services: {
+    eyebrow: "Services",
+    title: "University Services",
+    intro:
+      "King Ceasor University provides academic and student support services that strengthen learning, wellbeing, institutional quality, and campus life.",
+    sections: [
+      {
+        title: "Service Areas",
+        items: [
+          "Library services for learning, research, digital resources, and study support.",
+          "Quality assurance coordination for academic standards, continuous improvement, and institutional accountability.",
+          "Counselling and guidance support for student wellbeing, personal development, and university life.",
+        ],
+      },
+      {
+        title: "Student Support",
+        text:
+          "These services work together with academic departments, administration, and student welfare teams to support a productive, inclusive, and student-centered university experience.",
+      },
+    ],
+    cta: {
+      label: "Visit the Library",
+      href: "/library",
+    },
+  },
+  "services/quality-assurance": {
+    eyebrow: "Services",
+    title: "Quality Assurance",
+    intro:
+      "The Quality Assurance function supports King Ceasor University's commitment to academic excellence, accountability, and continuous institutional improvement.",
+    sections: [
+      {
+        title: "Academic Standards",
+        text:
+          "Quality assurance helps coordinate processes that maintain strong teaching, learning, assessment, and programme delivery standards across the University.",
+      },
+      {
+        title: "Continuous Improvement",
+        items: [
+          "Supporting monitoring and review of academic and administrative processes.",
+          "Promoting compliance with institutional policies and higher education expectations.",
+          "Encouraging feedback, evidence-based planning, and improvement across departments.",
+        ],
+      },
+    ],
+    cta: {
+      label: "Read About Governance",
+      href: "/about/governance",
+    },
+  },
+  "services/counselling": {
+    eyebrow: "Services",
+    title: "Counselling",
+    intro:
+      "KCU counselling and guidance support helps students navigate academic pressure, personal wellbeing, adjustment to university life, and holistic development.",
+    sections: [
+      {
+        title: "Student Wellbeing",
+        text:
+          "Counselling support is part of the University's wider student welfare environment, helping learners access guidance, care, and referral support when needed.",
+      },
+      {
+        title: "Areas of Support",
+        items: [
+          "Personal, social, and emotional wellbeing guidance.",
+          "Support with adjustment to campus life and academic expectations.",
+          "Collaboration with the Dean of Students and other support teams.",
+        ],
+      },
+    ],
+    cta: {
+      label: "Dean of Students",
+      href: "/student/dean-of-students",
     },
   },
   library: {
@@ -1283,8 +1326,9 @@ function CampusLifePage() {
 }
 
 function AboutContentPage({ page }: { page: AboutPageContent }) {
-  const parentLabel = page.eyebrow === "Admissions" ? "Admissions" : page.eyebrow === "Academics" || page.eyebrow === "Courses" ? "Academics" : page.eyebrow === "Library" ? "Library" : page.eyebrow === "Student Life" || page.eyebrow === "Student Welfare" || page.eyebrow === "Student Leadership" ? "Student" : "About Us";
-  const parentHref = page.eyebrow === "Admissions" ? "/admissions" : page.eyebrow === "Academics" || page.eyebrow === "Courses" ? "/academics" : page.eyebrow === "Library" ? "/library" : page.eyebrow === "Student Life" || page.eyebrow === "Student Welfare" || page.eyebrow === "Student Leadership" ? "/student" : "/about";
+  const isServicesPage = page.eyebrow === "Services" || page.eyebrow === "Library";
+  const parentLabel = page.eyebrow === "Admissions" ? "Admissions" : page.eyebrow === "Academics" || page.eyebrow === "Courses" ? "Academics" : isServicesPage ? "Services" : page.eyebrow === "Student Life" || page.eyebrow === "Student Welfare" || page.eyebrow === "Student Leadership" ? "Student" : "About Us";
+  const parentHref = page.eyebrow === "Admissions" ? "/admissions" : page.eyebrow === "Academics" || page.eyebrow === "Courses" ? "/academics" : isServicesPage ? "/services" : page.eyebrow === "Student Life" || page.eyebrow === "Student Welfare" || page.eyebrow === "Student Leadership" ? "/student" : "/about";
 
   return (
     <>

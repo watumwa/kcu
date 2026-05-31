@@ -100,65 +100,73 @@ function DesktopNav() {
         </div>
 
         <nav className="flex flex-1 items-center justify-center gap-1" aria-label="Main navigation">
-          {navItems.map((item, index) => (
-            <div
-              key={item.label}
-              className="relative"
-              onMouseEnter={() => setOpenIndex(item.children.length ? index : null)}
-              onMouseLeave={() => setOpenIndex(null)}
-            >
-              <Link
-                href={item.href}
-                className="flex items-center gap-1 rounded-full px-3 py-2.5 text-[15px] font-semibold text-slate-800 transition hover:bg-[#FFC66B]/25 hover:text-[#0B6232]"
-              >
-                {item.label}
-                {item.children.length > 0 && <ChevronDown className="size-4" />}
-              </Link>
+          {navItems.map((item, index) => {
+            const triggerClass = "flex items-center gap-1 rounded-full px-3 py-2.5 text-[15px] font-semibold text-slate-800 transition hover:bg-[#FFC66B]/25 hover:text-[#0B6232]";
 
-              <AnimatePresence>
-                {openIndex === index && item.children.length > 0 && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 12, scale: 0.98 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: 12, scale: 0.98 }}
-                    transition={{ duration: 0.18 }}
-                    className="absolute left-0 top-full z-50 mt-4 w-[340px] overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-2xl shadow-slate-900/15"
-                  >
-                    <div className="p-3">
-                      {item.children.map((child) => (
-                        <div key={child.label}>
-                          <Link
-                            href={child.href}
-                            className="flex items-center justify-between rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-[#FFC66B]/20 hover:text-[#0B6232]"
-                          >
-                            {child.label}
-                            {child.children ? (
-                              <ChevronDown className="size-3" />
-                            ) : (
-                              <ChevronDown className="size-3 -rotate-90" />
-                            )}
-                          </Link>
-                          {child.children && (
-                            <div className="ml-4 border-l border-[#000000] py-1 pl-3">
-                              {child.children.map((grandchild) => (
-                                <Link
-                                  key={grandchild.label}
-                                  href={grandchild.href}
-                                  className="block rounded-xl px-4 py-2 text-sm font-semibold text-slate-500 transition hover:bg-[#FFC66B]/20 hover:text-[#0B6232]"
-                                >
-                                  {grandchild.label}
-                                </Link>
-                              ))}
-                            </div>
-                          )}
-                        </div>
-                      ))}
-                    </div>
-                  </motion.div>
+            return (
+              <div
+                key={item.label}
+                className="relative"
+                onMouseEnter={() => setOpenIndex(item.children.length ? index : null)}
+                onMouseLeave={() => setOpenIndex(null)}
+              >
+                {item.disableLink ? (
+                  <button type="button" className={triggerClass}>
+                    {item.label}
+                    {item.children.length > 0 && <ChevronDown className="size-4" />}
+                  </button>
+                ) : (
+                  <Link href={item.href} className={triggerClass}>
+                    {item.label}
+                    {item.children.length > 0 && <ChevronDown className="size-4" />}
+                  </Link>
                 )}
-              </AnimatePresence>
-            </div>
-          ))}
+
+                <AnimatePresence>
+                  {openIndex === index && item.children.length > 0 && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 12, scale: 0.98 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: 12, scale: 0.98 }}
+                      transition={{ duration: 0.18 }}
+                      className="absolute left-0 top-full z-50 mt-4 w-[340px] overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-2xl shadow-slate-900/15"
+                    >
+                      <div className="p-3">
+                        {item.children.map((child) => (
+                          <div key={child.label}>
+                            <Link
+                              href={child.href}
+                              className="flex items-center justify-between rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-[#FFC66B]/20 hover:text-[#0B6232]"
+                            >
+                              {child.label}
+                              {child.children ? (
+                                <ChevronDown className="size-3" />
+                              ) : (
+                                <ChevronDown className="size-3 -rotate-90" />
+                              )}
+                            </Link>
+                            {child.children && (
+                              <div className="ml-4 border-l border-[#000000] py-1 pl-3">
+                                {child.children.map((grandchild) => (
+                                  <Link
+                                    key={grandchild.label}
+                                    href={grandchild.href}
+                                    className="block rounded-xl px-4 py-2 text-sm font-semibold text-slate-500 transition hover:bg-[#FFC66B]/20 hover:text-[#0B6232]"
+                                  >
+                                    {grandchild.label}
+                                  </Link>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            );
+          })}
         </nav>
 
         <div className="flex items-center gap-3">

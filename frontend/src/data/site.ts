@@ -1,6 +1,7 @@
 export type NavItem = {
   label: string;
   href: string;
+  disableLink?: boolean;
   description: string;
   children: {
     label: string;
@@ -33,7 +34,6 @@ export const navItems: NavItem[] = [
     children: [
       { label: "About KCU", href: "/about" },
       { label: "Mission | Vision | Core Values", href: "/about" },
-      // { label: "Core Values", href: "/about/core-values" },
       { label: "Governance", href: "/about/governance" },
       { label: "Collaborations & Partnerships", href: "/about/collaborations-partnerships" },
       { label: "News Letter", href: "/about/newsletter" },
@@ -42,6 +42,7 @@ export const navItems: NavItem[] = [
   {
     label: "Admissions",
     href: "/admissions",
+    disableLink: true,
     description: "Application guidance, fees structure and admission requirements.",
     children: [
       { label: "Apply Now", href: "https://apply.kcu.ac.ug/" },
@@ -51,7 +52,8 @@ export const navItems: NavItem[] = [
   },
   {
     label: "Academics",
-    href: "/academics",
+    href: "",
+    disableLink: true,
     description: "Explore schools, courses, academic systems and online learning.",
     children: [
       { label: "Schools", href: "/academics/schools" },
@@ -71,6 +73,7 @@ export const navItems: NavItem[] = [
   {
     label: "Student",
     href: "/student",
+    disableLink: true,
     description: "Student leadership, campus life and dean of students services.",
     children: [
       { label: "Guild", href: "/student/guild" },
@@ -80,13 +83,14 @@ export const navItems: NavItem[] = [
     ],
   },
   {
-    label: "Library",
-    href: "/library",
-    description: "Library catalogue, frequently asked questions and opening hours.",
+    label: "Services",
+    href: "/services",
+    disableLink: true,
+    description: "Library, quality assurance, counselling and student support services.",
     children: [
-      { label: "Catalogue", href: "/library/catalogue" },
-      { label: "FAQs", href: "/library/faqs" },
-      { label: "Opening Hours", href: "/library/opening-hours" },
+      { label: "Library", href: "/library" },
+      { label: "Quality Assurance", href: "/services/quality-assurance" },
+      { label: "Counselling", href: "/services/counselling" },
     ],
   },
 ];
@@ -117,10 +121,10 @@ export const heroSlides: HeroSlide[] = [
     image:
       "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1800&q=85",
     programmes: [
-      "Master of Science in Data Science and Analytics",
-      "Master of Science in Statistical Science",
-      "Master of Science in Biomathematics",
-      "Master of Science in Mathematical Finance and Risk Analytics",
+      "",
+      "",
+      "",
+      "",
     ],
   },
   {
@@ -141,7 +145,7 @@ export const heroSlides: HeroSlide[] = [
   {
     badge: "School of Science, Computing & Engineering",
     school: "",
-    title: "Bachelors of Computer Forensics Bachelors of Petroluem and Geoscience",
+    title: "Bachelors of Computer Forensics | Bachelors of Petroluem and Geoscience",
     subtitle: "",
     cta: "Explore Courses",
     image:
@@ -157,7 +161,7 @@ export const heroSlides: HeroSlide[] = [
     badge: "Short Courses",
     school: "Certificates in: ",
     title: "Language Proficiency | Digital Marketing | Computer Applications",
-    subtitle: "Over 20 Short Courses",
+    subtitle: "",
     cta: "Explore Courses",
     image:
       "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1800&q=85",
