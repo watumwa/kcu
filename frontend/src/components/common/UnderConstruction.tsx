@@ -40,7 +40,7 @@ export default function UnderConstruction({ title, path }: UnderConstructionProp
               </Link>
             </Button>
             <Button asChild variant="outline" className="h-12 rounded-xl border-2 border-[#0B6232] px-6 font-black text-[#0B6232] hover:bg-[#0B6232] hover:text-white">
-              <Link href="https://apply.kcu.ac.ug/">Apply Now</Link>
+              <Link href="https://apply.kcu.ac.ug/">Apply Now.</Link>
             </Button>
           </div>
           <div className="mt-9 grid gap-3 text-sm font-semibold text-slate-600 sm:grid-cols-2">
