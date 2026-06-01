@@ -44,7 +44,7 @@ export default function Footer() {
             title: "Quick Links",
             links: [
               { label: "Student Guild", href: "/student/guild" },
-              { label: "Careers", href: "" },
+              { label: "Careers", href: "/careers" },
               { label: "Library Catalogue", href: "/library/catalogue" },
               { label: "Campus News", href: "/about/newsletter" },
               { label: "Get in Touch", href: "" },
