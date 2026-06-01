@@ -11,6 +11,7 @@ import {
   Star,
   TrendingUp,
   Users,
+  X,
 } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -146,75 +147,146 @@ function TabAboutUs() {
   );
 }
 
-function CouncilCard({ name, role, tier }: { name: string; role: string; tier: "top" | "mid" | "base" }) {
-  const initials = name
-    .replace(/^(Hon\.?|Dr\.?|Prof\.?|Mr\.?|Mrs\.?|Assoc\.?)\s*/gi, "")
+type PersonTier = "top" | "mid" | "base";
+
+type PersonProfile = {
+  name: string;
+  role: string;
+  tier: PersonTier;
+  bio?: string;
+};
+
+function getInitials(name: string) {
+  return name
+    .replace(/^(Hon\.?|Dr\.?|Prof\.?|Mr\.?|Mrs\.?|Assoc\.?|Fr\.?)\s*/gi, "")
     .trim()
     .split(" ")
     .slice(0, 2)
     .map((w) => w[0])
     .join("")
     .toUpperCase();
+}
 
-  const avatarBg = tier === "top" ? "bg-[#FFC66B]" : tier === "mid" ? "bg-[#0B6232]" : "bg-slate-200";
-  const avatarText = tier === "top" ? "text-[#0B6232]" : tier === "mid" ? "text-white" : "text-slate-600";
-  const cardBorder = tier === "top" ? "border-[#FFC66B]" : tier === "mid" ? "border-[#0B6232]/30" : "border-slate-100";
+function getProfileBio(person: PersonProfile) {
+  if (person.bio) return person.bio;
+
+  if (/to be confirmed/i.test(person.name)) {
+    return "This office is part of King Ceasor University's leadership structure. The full profile will be updated once the appointment is confirmed.";
+  }
+
+  return `${person.name} serves as ${person.role} at King Ceasor University, contributing to institutional leadership, governance and the University's commitment to academic excellence, accountability and service.`;
+}
+
+function BioModal({ person, onClose }: { person: PersonProfile | null; onClose: () => void }) {
+  useEffect(() => {
+    if (!person) return;
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") onClose();
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [person, onClose]);
+
+  if (!person) return null;
+
+  const initials = getInitials(person.name);
+  const portraitBg = person.tier === "top" ? "bg-[#FFC66B]" : person.tier === "mid" ? "bg-[#0B6232]" : "bg-slate-100";
+  const portraitText = person.tier === "top" ? "text-[#0B6232]" : person.tier === "mid" ? "text-white" : "text-slate-600";
 
   return (
-    <div className={`flex flex-col items-center rounded-2xl border-2 ${cardBorder} bg-white p-5 shadow-md text-center w-44 shrink-0`}>
-      <div className={`grid size-20 place-items-center rounded-full ${avatarBg} ${avatarText} text-2xl font-black shadow-inner`}>
-        {initials}
+    <div className="fixed inset-0 z-[80] flex items-center justify-center bg-slate-950/60 px-4 py-6 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="bio-modal-title">
+      <button type="button" className="absolute inset-0 cursor-default" aria-label="Close biography" onClick={onClose} />
+      <div className="relative w-full max-w-lg overflow-hidden rounded-2xl bg-white shadow-2xl shadow-slate-950/25">
+        <div className="flex items-start gap-5 border-b border-slate-100 p-5 sm:p-6">
+          <div className={`grid h-32 w-24 shrink-0 place-items-center rounded-xl ${portraitBg} ${portraitText} text-3xl font-black shadow-inner`}>
+            {initials || "KCU"}
+          </div>
+          <div className="min-w-0 flex-1">
+            <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Biography</p>
+            <h3 id="bio-modal-title" className="mt-2 text-xl font-black leading-tight text-slate-950">{person.name}</h3>
+            <p className="mt-1 text-sm font-semibold leading-5 text-slate-500">{person.role}</p>
+          </div>
+          <button
+            type="button"
+            onClick={onClose}
+            className="grid size-9 shrink-0 place-items-center rounded-lg border border-slate-200 text-slate-500 transition hover:border-[#0B6232]/30 hover:bg-[#0B6232]/5 hover:text-[#0B6232]"
+            aria-label="Close biography"
+          >
+            <X className="size-4" />
+          </button>
+        </div>
+        <div className="p-5 sm:p-6">
+          <p className="text-sm leading-7 text-slate-600">{getProfileBio(person)}</p>
+        </div>
       </div>
-      <p className="mt-3 text-sm font-black leading-snug text-slate-950">{name}</p>
-      <p className="mt-1 text-[11px] leading-4 text-slate-500">{role}</p>
     </div>
   );
 }
 
-function CouncilCardMobile({ name, role, tier }: { name: string; role: string; tier: "top" | "mid" | "base" }) {
+function CouncilCard({ person, onSelect }: { person: PersonProfile; onSelect: (person: PersonProfile) => void }) {
+  const { name, role, tier } = person;
   const initials = name
-    .replace(/^(Hon\.?|Dr\.?|Prof\.?|Mr\.?|Mrs\.?|Assoc\.?)\s*/gi, "")
-    .trim()
-    .split(" ")
-    .slice(0, 2)
-    .map((w) => w[0])
-    .join("")
-    .toUpperCase();
+    ? getInitials(name)
+    : "";
 
   const avatarBg = tier === "top" ? "bg-[#FFC66B]" : tier === "mid" ? "bg-[#0B6232]" : "bg-slate-200";
   const avatarText = tier === "top" ? "text-[#0B6232]" : tier === "mid" ? "text-white" : "text-slate-600";
   const cardBorder = tier === "top" ? "border-[#FFC66B]" : tier === "mid" ? "border-[#0B6232]/30" : "border-slate-100";
 
   return (
-    <div className={`flex items-center gap-4 rounded-2xl border-2 ${cardBorder} bg-white p-4 shadow-sm`}>
-      <div className={`grid size-14 shrink-0 place-items-center rounded-full ${avatarBg} ${avatarText} text-xl font-black`}>
-        {initials}
+    <button type="button" onClick={() => onSelect(person)} className={`flex w-44 shrink-0 flex-col items-center rounded-2xl border-2 ${cardBorder} bg-white p-4 text-center shadow-md transition hover:-translate-y-0.5 hover:border-[#0B6232] hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#FFC66B] focus:ring-offset-2`}>
+      <div className={`grid h-32 w-24 place-items-center rounded-xl ${avatarBg} ${avatarText} text-2xl font-black shadow-inner`}>
+        {initials || "KCU"}
+      </div>
+      <p className="mt-3 text-sm font-black leading-snug text-slate-950">{name}</p>
+      <p className="mt-1 text-[11px] leading-4 text-slate-500">{role}</p>
+    </button>
+  );
+}
+
+function CouncilCardMobile({ person, onSelect }: { person: PersonProfile; onSelect: (person: PersonProfile) => void }) {
+  const { name, role, tier } = person;
+  const initials = getInitials(name);
+
+  const avatarBg = tier === "top" ? "bg-[#FFC66B]" : tier === "mid" ? "bg-[#0B6232]" : "bg-slate-200";
+  const avatarText = tier === "top" ? "text-[#0B6232]" : tier === "mid" ? "text-white" : "text-slate-600";
+  const cardBorder = tier === "top" ? "border-[#FFC66B]" : tier === "mid" ? "border-[#0B6232]/30" : "border-slate-100";
+
+  return (
+    <button type="button" onClick={() => onSelect(person)} className={`flex w-full items-center gap-4 rounded-2xl border-2 ${cardBorder} bg-white p-4 text-left shadow-sm transition hover:border-[#0B6232] hover:shadow-md focus:outline-none focus:ring-2 focus:ring-[#FFC66B] focus:ring-offset-2`}>
+      <div className={`grid h-24 w-[72px] shrink-0 place-items-center rounded-lg ${avatarBg} ${avatarText} text-xl font-black`}>
+        {initials || "KCU"}
       </div>
       <div>
         <p className="text-sm font-black leading-snug text-slate-950">{name}</p>
         <p className="mt-0.5 text-[11px] leading-4 text-slate-500">{role}</p>
       </div>
-    </div>
+    </button>
   );
 }
 
 function TabUniversityCouncil() {
-  const committeeChairs = [
-    { name: "Mrs. Grace N. Gwaku", role: "Chair: Finance, Planning & Development" },
-    { name: "Prof. Josephat Byamugisha", role: "Chair: Quality Assurance, ICT & Gender" },
-    { name: "Mr. Donald Nyakairu", role: "Chair: Audit & Risk Management" },
-    { name: "Mr. Cyriaco Kabagambe", role: "Chair: Student Welfare & Disciplinary" },
-    { name: "Dr. Kamba Fadhiru Pakoyo", role: "Chair: Appointments Board" },
+  const [selectedPerson, setSelectedPerson] = useState<PersonProfile | null>(null);
+  const chair: PersonProfile = { name: "HON DR. Chris Baryomunsi", role: "Chairperson University Council", tier: "top" };
+  const viceChair: PersonProfile = { name: "Assoc. Prof. Mary Muhenda", role: "Vice Chairperson University Council", tier: "mid" };
+  const committeeChairs: PersonProfile[] = [
+    { name: "Mrs. Grace N. Gwaku", role: "Chair: Finance, Planning & Development", tier: "mid" },
+    { name: "Prof. Josephat Byamugisha", role: "Chair: Quality Assurance, ICT & Gender", tier: "mid" },
+    { name: "Mr. Donald Nyakairu", role: "Chair: Audit & Risk Management", tier: "mid" },
+    { name: "Mr. Cyriaco Kabagambe", role: "Chair: Student Welfare & Disciplinary", tier: "mid" },
+    { name: "Dr. Kamba Fadhiru Pakoyo", role: "Chair: Appointments Board", tier: "mid" },
   ];
 
-  const members = [
-    { name: "Mr. Adonia Ainebyona", role: "Guild President" },
-    { name: "Dr. Sabiiti Mulema", role: "Staff Representative" },
-    { name: "Mrs. Rukundo Anita", role: "Member" },
-    { name: "Assoc. Prof. Margaret Nabasirye", role: "Member" },
-    { name: "Mrs. Joyce Okello", role: "Member" },
-    { name: "Prof. Winston Ireeta Tumps", role: "Member" },
-    { name: "Mr. Timothy Musoke Ssejjoba", role: "Member" },
+  const members: PersonProfile[] = [
+    { name: "Mr. Adonia Ainebyona", role: "Guild President", tier: "base" },
+    { name: "Dr. Sabiiti Mulema", role: "Staff Representative", tier: "base" },
+    { name: "Mrs. Rukundo Anita", role: "Member", tier: "base" },
+    { name: "Assoc. Prof. Margaret Nabasirye", role: "Member", tier: "base" },
+    { name: "Mrs. Joyce Okello", role: "Member", tier: "base" },
+    { name: "Prof. Winston Ireeta Tumps", role: "Member", tier: "base" },
+    { name: "Mr. Timothy Musoke Ssejjoba", role: "Member", tier: "base" },
   ];
 
   return (
@@ -233,11 +305,11 @@ function TabUniversityCouncil() {
       {/* ── Desktop tree (md+) ── */}
       <div className="hidden pb-4 md:block">
         <div className="flex w-full flex-col items-center gap-8">
-          <CouncilCard name="HON DR. Chris Baryomunsi" role="Chairperson University Council" tier="top" />
-          <CouncilCard name="Assoc. Prof. Mary Muhenda" role="Vice Chairperson University Council" tier="mid" />
+          <CouncilCard person={chair} onSelect={setSelectedPerson} />
+          <CouncilCard person={viceChair} onSelect={setSelectedPerson} />
           <div className="flex w-full flex-wrap justify-center gap-6">
             {committeeChairs.map((p) => (
-              <CouncilCard key={p.name} name={p.name} role={p.role} tier="mid" />
+              <CouncilCard key={p.name} person={p} onSelect={setSelectedPerson} />
             ))}
           </div>
           <div className="mb-2 rounded-full border border-slate-200 bg-[#FFFFFF] px-4 py-1 text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">
@@ -245,7 +317,7 @@ function TabUniversityCouncil() {
           </div>
           <div className="flex w-full flex-wrap justify-center gap-6">
             {members.map((p) => (
-              <CouncilCard key={p.name} name={p.name} role={p.role} tier="base" />
+              <CouncilCard key={p.name} person={p} onSelect={setSelectedPerson} />
             ))}
           </div>
         </div>
@@ -256,24 +328,25 @@ function TabUniversityCouncil() {
         {/* Leadership */}
         <div className="space-y-3">
           <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Leadership</p>
-          <CouncilCardMobile name="HON DR. Chris Baryomunsi" role="Chairperson University Council" tier="top" />
-          <CouncilCardMobile name="Assoc. Prof. Mary Muhenda" role="Vice Chairperson University Council" tier="mid" />
+          <CouncilCardMobile person={chair} onSelect={setSelectedPerson} />
+          <CouncilCardMobile person={viceChair} onSelect={setSelectedPerson} />
         </div>
         {/* Committee Chairs */}
         <div className="space-y-3">
           <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Committee Chairpersons</p>
           {committeeChairs.map((p) => (
-            <CouncilCardMobile key={p.name} name={p.name} role={p.role} tier="mid" />
+            <CouncilCardMobile key={p.name} person={p} onSelect={setSelectedPerson} />
           ))}
         </div>
         {/* Members */}
         <div className="space-y-3">
           <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Committee Members</p>
           {members.map((p) => (
-            <CouncilCardMobile key={p.name} name={p.name} role={p.role} tier="base" />
+            <CouncilCardMobile key={p.name} person={p} onSelect={setSelectedPerson} />
           ))}
         </div>
       </div>
+      <BioModal person={selectedPerson} onClose={() => setSelectedPerson(null)} />
     </div>
   );
 }
@@ -291,20 +364,21 @@ function ComingSoon({ title }: { title: string }) {
 }
 
 function TabAdministration() {
-  const officers = [
-    { name: "Dr. Charity Basaza Mulenga", role: "Vice Chancellor", tier: "top" as const },
-    { name: "Dr. Byarugaba Bonaventura", role: "Deputy Vice Chancellor", tier: "mid" as const },
-    { name: "Mrs. Pape Matama Bagonza", role: "University Secretary", tier: "mid" as const },
-    { name: "Alfred Namoah Masikye", role: "Academic Registrar", tier: "mid" as const },
-    { name: "Assoc. Prof. Annabella Habinka Ejiri", role: "Director Quality Assurance", tier: "mid" as const },
-    { name: "Mrs. Sylivia Okwi Christine", role: "Director Finance", tier: "mid" as const },
-    { name: "Fr. Dr. Lumala Aloysius Gonzagga", role: "Dean of Students", tier: "mid" as const },
-    { name: "Mr. Mwima Abdallah", role: "Manager ICT", tier: "base" as const },
-    { name: "Mr. Eric Keziron Oloo", role: "University Librarian", tier: "base" as const },
-    { name: "Mr. Wilberforce Mfitundinda", role: "Registrar Academics", tier: "base" as const },
-    { name: "Mr. John Acire", role: "Manager Human Resource", tier: "base" as const },
-    { name: "To Be Confirmed", role: "PRO", tier: "base" as const },
-    { name: "To Be Confirmed", role: "Marketing Manager", tier: "base" as const },
+  const [selectedPerson, setSelectedPerson] = useState<PersonProfile | null>(null);
+  const officers: PersonProfile[] = [
+    { name: "Dr. Charity Basaza Mulenga", role: "Vice Chancellor", tier: "top" },
+    { name: "Dr. Byarugaba Bonaventura", role: "Deputy Vice Chancellor", tier: "mid" },
+    { name: "Mrs. Pape Matama Bagonza", role: "University Secretary", tier: "mid" },
+    { name: "Alfred Namoah Masikye", role: "Academic Registrar", tier: "mid" },
+    { name: "Assoc. Prof. Annabella Habinka Ejiri", role: "Director Quality Assurance", tier: "mid" },
+    { name: "Mrs. Sylivia Okwi Christine", role: "Director Finance", tier: "mid" },
+    { name: "Fr. Dr. Lumala Aloysius Gonzagga", role: "Dean of Students", tier: "mid" },
+    { name: "Mr. Mwima Abdallah", role: "Manager ICT", tier: "base" },
+    { name: "Mr. Eric Keziron Oloo", role: "University Librarian", tier: "base" },
+    { name: "Mr. Wilberforce Mfitundinda", role: "Registrar Academics", tier: "base" },
+    { name: "Mr. John Acire", role: "Manager Human Resource", tier: "base" },
+    { name: "To Be Confirmed", role: "PRO", tier: "base" },
+    { name: "To Be Confirmed", role: "Marketing Manager", tier: "base" },
   ];
 
   const [vc, dvc, ...rest] = officers;
@@ -327,11 +401,11 @@ function TabAdministration() {
       {/* ── Desktop tree (md+) ── */}
       <div className="hidden pb-4 md:block">
         <div className="flex w-full flex-col items-center gap-8">
-          <CouncilCard name={vc.name} role={vc.role} tier="top" />
-          <CouncilCard name={dvc.name} role={dvc.role} tier="mid" />
+          <CouncilCard person={vc} onSelect={setSelectedPerson} />
+          <CouncilCard person={dvc} onSelect={setSelectedPerson} />
           <div className="flex w-full flex-wrap justify-center gap-5">
             {seniorOfficers.map((p) => (
-              <CouncilCard key={p.name} name={p.name} role={p.role} tier="mid" />
+              <CouncilCard key={p.name} person={p} onSelect={setSelectedPerson} />
             ))}
           </div>
           <div className="mb-2 rounded-full border border-slate-200 bg-[#FFFFFF] px-4 py-1 text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">
@@ -339,7 +413,7 @@ function TabAdministration() {
           </div>
           <div className="flex w-full flex-wrap justify-center gap-5">
             {managers.map((p) => (
-              <CouncilCard key={`${p.role}-${p.name}`} name={p.name} role={p.role} tier="base" />
+              <CouncilCard key={`${p.role}-${p.name}`} person={p} onSelect={setSelectedPerson} />
             ))}
           </div>
         </div>
@@ -349,22 +423,23 @@ function TabAdministration() {
       <div className="space-y-8 md:hidden">
         <div className="space-y-3">
           <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Leadership</p>
-          <CouncilCardMobile name={vc.name} role={vc.role} tier="top" />
-          <CouncilCardMobile name={dvc.name} role={dvc.role} tier="mid" />
+          <CouncilCardMobile person={vc} onSelect={setSelectedPerson} />
+          <CouncilCardMobile person={dvc} onSelect={setSelectedPerson} />
         </div>
         <div className="space-y-3">
           <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Senior Officers</p>
           {seniorOfficers.map((p) => (
-            <CouncilCardMobile key={p.name} name={p.name} role={p.role} tier="mid" />
+            <CouncilCardMobile key={p.name} person={p} onSelect={setSelectedPerson} />
           ))}
         </div>
         <div className="space-y-3">
           <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Managers &amp; Officers</p>
           {managers.map((p) => (
-            <CouncilCardMobile key={p.name} name={p.name} role={p.role} tier="base" />
+            <CouncilCardMobile key={p.name} person={p} onSelect={setSelectedPerson} />
           ))}
         </div>
       </div>
+      <BioModal person={selectedPerson} onClose={() => setSelectedPerson(null)} />
     </div>
   );
 }
