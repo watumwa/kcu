@@ -9,20 +9,31 @@ export default function AdmissionPopup() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    // Only show once per session
     if (sessionStorage.getItem("admissionPopupSeen")) return;
+
+    let triggered = false;
+
+    const show = () => {
+      if (triggered) return;
+      triggered = true;
+      setVisible(true);
+      sessionStorage.setItem("admissionPopupSeen", "1");
+      window.removeEventListener("scroll", onScroll);
+    };
 
     const onScroll = () => {
       const mid = document.documentElement.scrollHeight / 2;
-      if (window.scrollY + window.innerHeight >= mid) {
-        setVisible(true);
-        sessionStorage.setItem("admissionPopupSeen", "1");
-        window.removeEventListener("scroll", onScroll);
-      }
+      if (window.scrollY + window.innerHeight >= mid) show();
     };
 
+    // Fallback: show after 4s even without scrolling
+    const timer = setTimeout(show, 4000);
+
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      clearTimeout(timer);
+    };
   }, []);
 
   return (
