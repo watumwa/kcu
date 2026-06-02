@@ -3,8 +3,9 @@ import GraduationPage from "@/components/academics/GraduationPage";
 import StudentGuildPage from "@/components/student/StudentGuildPage";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
+import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronRight, ClipboardCheck, UserRound, UsersRound } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 type AboutPageContent = {
@@ -19,6 +20,22 @@ type AboutPageContent = {
   cta?: {
     label: string;
     href: string;
+  };
+  qualityAssurance?: {
+    director: {
+      name: string;
+      title: string;
+      image: string;
+      message: string;
+    };
+    staff: {
+      name: string;
+      role: string;
+    }[];
+    whatWeDo: {
+      area: string;
+      details: string;
+    }[];
   };
 };
 
@@ -575,6 +592,45 @@ const contentPages: Record<string, AboutPageContent> = {
     cta: {
       label: "Read About Governance",
       href: "/about/governance",
+    },
+    qualityAssurance: {
+      director: {
+        name: "Assoc. Prof. Annabella Habinka Ejiri",
+        title: "Director Quality Assurance",
+        image: "",
+        message:
+          "Our Directorate works with every academic and administrative unit to strengthen standards, listen to evidence, and build a culture of continuous improvement. We support policy compliance, programme quality, institutional accountability, and student-centered service so that King Ceasor University keeps improving in a deliberate and measurable way.",
+      },
+      staff: [
+        { name: "Dr. Annabella Habinka Ejiri", role: "Director Quality Assurance" },
+        { name: "Ms. Atuhwera Joanita", role: "Quality Assurance Monitoring Officer" },
+        { name: "Mr. Ayebale John Justice", role: "Clinical Monitoring Officer" },
+        { name: "Ms. Grace Asingwire", role: "Quality Assurance Officer" },
+        { name: "Ms. Sayuuni Mercy", role: "Quality Assurance Monitoring Assistant" },
+        { name: "Ms. Viola Kintu", role: "Quality Assurance Officer" },
+      ],
+      whatWeDo: [
+        {
+          area: "Policy Compliance",
+          details:
+            "Coordinates adherence to University policies, regulatory expectations, academic standards, and internal quality assurance procedures.",
+        },
+        {
+          area: "Mandate",
+          details:
+            "Supports continuous improvement in teaching, learning, assessment, programme delivery, institutional planning, and service quality.",
+        },
+        {
+          area: "Activities",
+          details:
+            "Facilitates audits, stakeholder feedback, programme reviews, documentation, reporting, staff sensitization, and follow-up on improvement plans.",
+        },
+        {
+          area: "Membership",
+          details:
+            "Works with academic units, administrative departments, committees, student representatives, and University leadership on quality matters.",
+        },
+      ],
     },
   },
   "services/counselling": {
@@ -1418,6 +1474,96 @@ function AboutContentPage({ page }: { page: AboutPageContent }) {
                   ))}
                 </div>
               </div>
+
+              {page.qualityAssurance && (
+                <>
+                  <section className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5">
+                    <div className="grid gap-0 lg:grid-cols-[380px_1fr]">
+                      <div className="relative min-h-[360px] bg-slate-200">
+                        <Image
+                          src={page.qualityAssurance.director.image}
+                          alt={page.qualityAssurance.director.name}
+                          fill
+                          sizes="(min-width: 1024px) 380px, 100vw"
+                          className="object-cover"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                        <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                          <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">Director</p>
+                          <h2 className="mt-2 text-2xl font-black leading-tight">{page.qualityAssurance.director.name}</h2>
+                          <p className="mt-1 text-sm font-bold text-white/80">{page.qualityAssurance.director.title}</p>
+                        </div>
+                      </div>
+                      <div className="p-6 sm:p-8 lg:p-10">
+                        <div className="inline-flex size-12 items-center justify-center rounded-2xl bg-[#0B6232] text-[#FFC66B] shadow-lg shadow-[#0B6232]/20">
+                          <ClipboardCheck className="size-6" />
+                        </div>
+                        <p className="mt-6 text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Message from the Director Quality Assurance</p>
+                        <h2 className="mt-2 max-w-3xl text-2xl font-black leading-tight text-slate-950 sm:text-3xl">
+                          Strengthening standards through evidence, review, and continuous improvement
+                        </h2>
+                        <p className="mt-5 max-w-4xl text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
+                          {page.qualityAssurance.director.message}
+                        </p>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section className="rounded-3xl border border-slate-100 bg-white p-6 shadow-xl shadow-slate-900/5 sm:p-8 lg:p-10">
+                    <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+                      <div>
+                        <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Quality Assurance Team</p>
+                        <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950 sm:text-3xl">Staff Placeholders</h2>
+                      </div>
+                      <div className="inline-flex items-center gap-2 text-sm font-bold text-slate-500">
+                        <UsersRound className="size-4 text-[#0B6232]" />
+                        <span>6 team positions</span>
+                      </div>
+                    </div>
+                    <div className="mt-7 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+                      {page.qualityAssurance.staff.map((member, index) => (
+                        <article key={member.name} className="rounded-2xl border border-slate-100 bg-slate-50/70 p-5">
+                          <div className="flex items-center gap-4">
+                            <div className="grid size-16 shrink-0 place-items-center rounded-2xl bg-white text-[#0B6232] shadow-sm ring-1 ring-slate-100">
+                              <UserRound className="size-7" />
+                            </div>
+                            <div className="min-w-0">
+                              <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#0B6232]">Placeholder {String(index + 1).padStart(2, "0")}</p>
+                              <h3 className="mt-1 text-base font-black leading-snug text-slate-950">{member.name}</h3>
+                              <p className="mt-1 text-sm leading-5 text-slate-500">{member.role}</p>
+                            </div>
+                          </div>
+                        </article>
+                      ))}
+                    </div>
+                  </section>
+
+                  <section className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5">
+                    <div className="border-b border-slate-100 p-6 sm:p-8 lg:p-10">
+                      <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">What We Do</p>
+                      <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950 sm:text-3xl">Quality Assurance Responsibilities</h2>
+                    </div>
+                    <div className="overflow-x-auto">
+                      <table className="w-full min-w-[720px] border-collapse text-left">
+                        <thead className="bg-[#0B6232] text-white">
+                          <tr>
+                            <th className="w-56 px-6 py-4 text-xs font-black uppercase tracking-[0.16em] text-[#FFC66B]">Area</th>
+                            <th className="px-6 py-4 text-xs font-black uppercase tracking-[0.16em] text-[#FFC66B]">Description</th>
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-slate-100">
+                          {page.qualityAssurance.whatWeDo.map((item) => (
+                            <tr key={item.area} className="bg-white align-top">
+                              <th className="px-6 py-5 text-sm font-black text-slate-950 sm:text-base">{item.area}</th>
+                              <td className="px-6 py-5 text-sm leading-7 text-slate-600 sm:text-base">{item.details}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </section>
+                </>
+              )}
 
               {page.sections.map((section, index) => (
                 <article
