@@ -1,5 +1,6 @@
 import AboutSection from "@/components/home/AboutSection";
 import AdmissionsBanner from "@/components/home/AdmissionsBanner";
+import AdmissionPopup from "@/components/home/AdmissionPopup";
 import Collaborations from "@/components/home/Collaborations";
 import Hero from "@/components/home/Hero";
 import NewsEvents from "@/components/home/NewsEvents";
@@ -24,6 +25,7 @@ export default function Page() {
         <NewsEvents />
         <TwitterFeed />
         <Collaborations />
+        <AdmissionPopup />
       </main>
       <Footer />
     </>
