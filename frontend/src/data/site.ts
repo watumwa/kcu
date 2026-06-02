@@ -93,6 +93,12 @@ export const navItems: NavItem[] = [
       { label: "Counselling", href: "/services/counselling" },
     ],
   },
+  {
+    label: "Gallery",
+    href: "/gallery",
+    description: "Photos and media from King Ceasor University events and campus life.",
+    children: [],
+  },
 ];
 
 export const heroSlides: HeroSlide[] = [

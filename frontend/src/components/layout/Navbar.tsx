@@ -101,7 +101,7 @@ function DesktopNav() {
 
         <nav className="flex flex-1 items-center justify-center gap-1" aria-label="Main navigation">
           {navItems.map((item, index) => {
-            const triggerClass = "flex items-center gap-1 rounded-full px-3 py-2.5 text-[15px] font-semibold text-slate-800 transition hover:bg-[#FFC66B]/25 hover:text-[#0B6232]";
+            const triggerClass = "flex items-center gap-1 rounded-full px-3 py-2.5 text-[15px] font-semibold text-slate-800 transition hover:bg-[#FFC66B]/25 hover:text-[#0B6232] whitespace-nowrap";
 
             return (
               <div
