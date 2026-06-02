@@ -1,10 +1,13 @@
 import AboutSection from "@/components/home/AboutSection";
 import AdmissionsBanner from "@/components/home/AdmissionsBanner";
+import AdmissionPopup from "@/components/home/AdmissionPopup";
+import Collaborations from "@/components/home/Collaborations";
 import Hero from "@/components/home/Hero";
 import NewsEvents from "@/components/home/NewsEvents";
 import ProgrammeHighlight from "@/components/home/ProgrammeHighlight";
 import QuickLinks from "@/components/home/QuickLinks";
 import SchoolsSection from "@/components/home/SchoolsSection";
+import TwitterFeed from "@/components/home/TwitterFeed";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
 
@@ -20,6 +23,9 @@ export default function Page() {
         <SchoolsSection />
         <AdmissionsBanner />
         <NewsEvents />
+        <TwitterFeed />
+        <Collaborations />
+        <AdmissionPopup />
       </main>
       <Footer />
     </>

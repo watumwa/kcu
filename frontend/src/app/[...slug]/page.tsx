@@ -1413,21 +1413,8 @@ function AboutContentPage({ page }: { page: AboutPageContent }) {
               </p>
               <h1 className="mt-5 max-w-4xl font-serif text-4xl font-black leading-tight text-white sm:text-5xl md:text-6xl">{page.title}</h1>
               <p className="mt-5 max-w-3xl text-sm leading-7 text-white/80 sm:text-base sm:leading-8">{page.intro}</p>
-            </div>
-            <div className="rounded-3xl border border-white/15 bg-white/10 p-5 text-white shadow-2xl backdrop-blur">
-              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">Page Guide</p>
-              <div className="mt-4 grid grid-cols-2 gap-3">
-                <div className="rounded-2xl bg-white/10 p-4">
-                  <p className="text-3xl font-black">{page.sections.length}</p>
-                  <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.14em] text-white/70">Focus Areas</p>
-                </div>
-                <div className="rounded-2xl bg-[#FFC66B] p-4 text-[#0B6232]">
-                  <p className="text-3xl font-black">KCU</p>
-                  <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.14em]">Official Page</p>
-                </div>
-              </div>
               {page.cta && (
-                <Button asChild className="mt-4 h-11 w-full rounded-xl bg-[#FFC66B] px-5 font-black text-[#0B6232] hover:bg-[#FFC66B]">
+                <Button asChild className="mt-6 h-11 rounded-xl bg-[#FFC66B] px-6 font-black text-[#0B6232] hover:bg-[#FFC66B]">
                   <Link href={page.cta.href}>{page.cta.label} <ArrowRight className="ml-2 size-4" /></Link>
                 </Button>
               )}
@@ -1594,6 +1581,16 @@ function AboutContentPage({ page }: { page: AboutPageContent }) {
                           ))}
                         </ul>
                       )}
+                      <div className="mt-6">
+                        <Link
+                          href="https://apply.kcu.ac.ug/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 rounded-xl bg-[#0B6232] px-5 py-2.5 text-sm font-black text-white hover:bg-[#0B6232]/90 transition-colors"
+                        >
+                          Apply for a Programme <ArrowRight className="size-4" />
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </article>

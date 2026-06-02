@@ -54,7 +54,7 @@ export default function Hero() {
         <ArrowRight className="size-5" />
       </button>
 
-      <div className="relative z-10 mx-auto flex min-h-[560px] max-w-[1440px] items-start px-4 pb-20 pt-24 sm:min-h-[680px] sm:items-center sm:px-6 lg:min-h-[780px] lg:px-8">
+      <div className="relative z-10 mx-auto flex min-h-[560px] max-w-[1440px] items-center px-4 pb-16 pt-28 sm:min-h-[680px] sm:px-6 lg:min-h-[780px] lg:px-8">
         <AnimatePresence mode="wait" initial={false}>
           <motion.div
             key={`hero-text-${active}`}
@@ -62,7 +62,7 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 28, y: -10 }}
             transition={{ duration: 0.5 }}
-            className="flex h-[4.5cm] w-full max-w-[11.5cm] flex-col justify-between overflow-hidden rounded-lg border border-white/30 bg-white/60 p-3 text-[#000000] shadow-xl shadow-black/20 backdrop-blur-md sm:p-4"
+            className="w-full max-w-[11.5cm] flex flex-col justify-between rounded-lg border border-white/30 bg-white/60 p-3 text-[#000000] shadow-xl shadow-black/20 backdrop-blur-md sm:p-4"
           >
             <div>
               <div className="mb-2 inline-flex max-w-full items-center gap-1.5 rounded-full bg-[#0B6232] px-2.5 py-1 text-[8px] font-black uppercase tracking-[0.08em] text-[#FFC66B] shadow-sm sm:text-[9px]">
