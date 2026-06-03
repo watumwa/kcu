@@ -761,51 +761,94 @@ const contentPages: Record<string, AboutPageContent> = {
 
 const feeProgrammes = [
   {
-    group: "Undergraduate Programmes",
-    summary: "Degree programmes across health sciences, law, business, computing, agriculture, and energy.",
+    category: "Undergraduate / Degree Programs",
+    group: "School of Medicine, Health and Life Sciences",
+    summary: "Undergraduate, diploma, and higher education certificate programmes in medicine and life sciences.",
+    feeLabel: "Fees Per Semester",
     courses: [
-      { code: "01", course: "Bachelor of Medicine & Bachelor of Surgery", school: "Medicine, Health & Life Sciences", level: "Bachelor", duration: "5 years", billing: "Per semester", feeStatus: "Professional medical programme" },
-      { code: "02", course: "Bachelor of Nursing Sciences", school: "Medicine, Health & Life Sciences", level: "Bachelor", duration: "4 years", billing: "Per semester", feeStatus: "Clinical training programme" },
-      { code: "03", course: "Bachelor of Medical Records & Health Informatics", school: "Medicine, Health & Life Sciences", level: "Bachelor", duration: "3 years", billing: "Per semester", feeStatus: "Health informatics programme" },
-      { code: "04", course: "Bachelor of Agriculture", school: "Science, Computing & Engineering", level: "Bachelor", duration: "3 years", billing: "Per semester", feeStatus: "Practical science programme" },
-      { code: "05", course: "Bachelor of Laws", school: "Law & Management Sciences", level: "Bachelor", duration: "4 years", billing: "Per semester", feeStatus: "Professional law programme" },
-      { code: "06", course: "Bachelor of Business Administration", school: "Law & Management Sciences", level: "Bachelor", duration: "3 years", billing: "Per semester", feeStatus: "Business and management programme" },
-      { code: "07", course: "Bachelor of Computer Forensics & Criminal Investigation", school: "Science, Computing & Engineering", level: "Bachelor", duration: "3 years", billing: "Per semester", feeStatus: "Computing and investigation programme" },
-      { code: "08", course: "Bachelor of Oil, Gas & Energy Management", school: "Science, Computing & Engineering", level: "Bachelor", duration: "3 years", billing: "Per semester", feeStatus: "Energy management programme" },
+      { code: "01", course: "Bachelor of Medicine and Bachelor of Surgery", duration: "5 Years", uganda: "$3,000", international: "$3,000" },
+      { code: "02", course: "Bachelor of Nursing Science - Direct", duration: "4 Years", uganda: "$1,100", international: "$1,300" },
+      { code: "03", course: "Bachelor of Nursing Science - Completion", duration: "3 Years", uganda: "$1,100", international: "$1,300" },
+      { code: "04", course: "Diploma in Clinical Medicine and Community Health", duration: "3 Years", uganda: "$1,000", international: "$1,150" },
+      { code: "05", course: "Diploma in Medical Laboratory Technology", duration: "3 Years", uganda: "$1,000", international: "$1,150" },
+      { code: "06", course: "Higher Education Certificate - Biological Sciences", duration: "1 Year", uganda: "$550", international: "$750" },
+      { code: "07", course: "Higher Education Certificate - Physical Sciences", duration: "1 Year", uganda: "$550", international: "$750" },
     ],
   },
   {
-    group: "Diploma Programmes",
-    summary: "Practical diploma pathways for students pursuing health and community service careers.",
+    category: "Undergraduate / Degree Programs",
+    group: "School of Law and Management Sciences",
+    summary: "Degree, diploma, and higher education certificate programmes in law, business, and management.",
+    feeLabel: "Fees Per Semester",
     courses: [
-      { code: "09", course: "Diploma in Clinical Medicine & Community Health", school: "Medicine, Health & Life Sciences", level: "Diploma", duration: "3 years", billing: "Per semester", feeStatus: "Clinical diploma programme" },
-      { code: "10", course: "Diploma in Medical Laboratory Technology", school: "Medicine, Health & Life Sciences", level: "Diploma", duration: "3 years", billing: "Per semester", feeStatus: "Laboratory training programme" },
+      { code: "08", course: "Bachelor of Laws", duration: "4 Years", uganda: "$1,150", international: "$1,300" },
+      { code: "09", course: "Bachelor of Business Administration", duration: "3 Years", uganda: "$1,100", international: "$1,225" },
+      { code: "10", course: "Bachelor of Oil, Gas, and Energy Management", duration: "3 Years", uganda: "$1,100", international: "$1,225" },
+      { code: "11", course: "Bachelor of Applied Economics", duration: "3 Years", uganda: "$1,100", international: "$1,225" },
+      { code: "12", course: "Diploma in Global Business", duration: "2 Years", uganda: "$1,000", international: "$1,200" },
+      { code: "13", course: "Higher Education Certificate - Humanities", duration: "1 Year", uganda: "$550", international: "$750" },
     ],
   },
   {
-    group: "Certificate and Bridging Pathways",
-    summary: "Certificate and short-course pathways for academic progression and practical skill development.",
+    category: "Undergraduate / Degree Programs",
+    group: "School of Science, Computing and Engineering",
+    summary: "Degree programmes in petroleum geoscience, computing, and criminal investigations.",
+    feeLabel: "Fees Per Semester",
     courses: [
-      { code: "11", course: "Higher Education Certificate in Biological Sciences", school: "Science, Computing & Engineering", level: "Certificate", duration: "1 year", billing: "Per semester", feeStatus: "Bridging pathway" },
-      { code: "12", course: "Higher Education Certificate in Physical Sciences", school: "Science, Computing & Engineering", level: "Certificate", duration: "1 year", billing: "Per semester", feeStatus: "Bridging pathway" },
-      { code: "13", course: "Higher Education Certificate in Humanities", school: "Law & Management Sciences", level: "Certificate", duration: "1 year", billing: "Per semester", feeStatus: "Bridging pathway" },
-      { code: "14", course: "Language Proficiency", school: "Short Courses", level: "Short Course", duration: "Short course", billing: "As communicated", feeStatus: "Short-course fee" },
-      { code: "15", course: "Digital Marketing", school: "Short Courses", level: "Short Course", duration: "Short course", billing: "As communicated", feeStatus: "Short-course fee" },
-      { code: "16", course: "Computer Applications", school: "Short Courses", level: "Short Course", duration: "Short course", billing: "As communicated", feeStatus: "Short-course fee" },
+      { code: "14", course: "Bachelor of Science in Petroleum Geoscience", duration: "4 Years", uganda: "$1,150", international: "$1,300" },
+      { code: "15", course: "Bachelor of Computer Forensics and Criminal Investigations", duration: "3 Years", uganda: "$1,100", international: "$1,225" },
     ],
   },
-];
-
-const feeBreakdown = [
-  { item: "Tuition fees", description: "The main academic charge for each programme and semester of study." },
-  { item: "Registration fees", description: "Paid during enrollment or registration for the relevant semester or study period." },
-  { item: "Examination fees", description: "Supports assessment, examination administration, and related academic processes." },
-  { item: "Library fees", description: "Supports access to library resources, study support, and learning materials." },
-  { item: "ICT and identity card fees", description: "Supports student identification, digital services, and ICT-related access." },
+  {
+    category: "Certificate Programs",
+    group: "School of Medicine, Health and Life Sciences",
+    summary: "Professional health and life sciences certificate programmes.",
+    feeLabel: "Course Fees",
+    courses: [
+      { code: "16", course: "Certificate in Rest ECG Reading", duration: "4 Weeks", uganda: "$500", international: "$670" },
+      { code: "17", course: "Certificate in Holter ECG Reading/Interpretation", duration: "2 Weeks", uganda: "$250", international: "$400" },
+      { code: "18", course: "Certificate in Stress ECH Reading/Interpretation", duration: "2 Weeks", uganda: "$250", international: "$400" },
+      { code: "19", course: "Certificate in Production of Herbal Based creams,gels,Lotions", duration: "4 Weeks", uganda: "$115", international: "$195" },
+      { code: "20", course: "Certificate in Production of Herbal Based medicated soap,shampoo", duration: "4 Weeks", uganda: "$115", international: "$195" },
+      { code: "21", course: "Certificate in 24-Hour BP Monitoring Reporting", duration: "2 Weeks", uganda: "$250", international: "$390" },
+      { code: "22", course: "Certificate in Advanced Cardiac Life Support", duration: "2 Weeks", uganda: "$300", international: "$450" },
+    ],
+  },
+  {
+    category: "Certificate Programs",
+    group: "School of Law and Management Sciences",
+    summary: "Professional certificate programmes in communication, management, safety, and enterprise.",
+    feeLabel: "Course Fees",
+    courses: [
+      { code: "23", course: "Certificate in English Proficiency Course", duration: "3 Months", uganda: "$160", international: "$300" },
+      { code: "24", course: "Certificate in Occupational Health and Safety", duration: "1 month", uganda: "$125", international: "$240" },
+      { code: "25", course: "Certificate in book keeping for small and medium enterprises", duration: "1 month", uganda: "$100", international: "$165" },
+      { code: "26", course: "Certificate in Strategic Management", duration: "1 month", uganda: "$100", international: "$165" },
+      { code: "27", course: "Certificate in Sacco Management", duration: "1 month", uganda: "$100", international: "$165" },
+      { code: "28", course: "Certificate in Digital Marketing", duration: "2 Months", uganda: "$120", international: "$230" },
+      { code: "29", course: "Certificate in Tax and Credit Management", duration: "1 month", uganda: "$115", international: "$225" },
+    ],
+  },
+  {
+    category: "Certificate Programs",
+    group: "School of Science, Computing and Engineering",
+    summary: "Certificate programmes in computing, cyber security, digital forensics, and organic farming.",
+    feeLabel: "Course Fees",
+    courses: [
+      { code: "30", course: "Certificate in Computer Applications", duration: "2 Months", uganda: "$120", international: "$250" },
+      { code: "31", course: "Certificate in Web design,Dev't & Administration", duration: "2 Months", uganda: "$160", international: "$265" },
+      { code: "32", course: "Certificate in Computer Graphics", duration: "2 Months", uganda: "$120", international: "$180" },
+      { code: "33", course: "Certificate in AI with Internet of Things using Arduino", duration: "2 Months", uganda: "$200", international: "$315" },
+      { code: "34", course: "Cyber Security for Beginners", duration: "2 Months", uganda: "$120", international: "$200" },
+      { code: "35", course: "Digital Forensic Investigations for beginners", duration: "2 Months", uganda: "$120", international: "$200" },
+      { code: "36", course: "Certificate in Organic farming", duration: "2 Months", uganda: "$115", international: "$175" },
+    ],
+  },
 ];
 
 function FeesStructurePage() {
   const totalCourses = feeProgrammes.reduce((total, group) => total + group.courses.length, 0);
+  const totalTables = feeProgrammes.length;
 
   return (
     <>
@@ -831,7 +874,7 @@ function FeesStructurePage() {
               <p className="inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-black uppercase tracking-[0.2em] text-[#FFC66B] backdrop-blur">Admissions</p>
               <h1 className="mt-5 max-w-4xl font-serif text-4xl font-black leading-tight text-white sm:text-5xl md:text-6xl">Fees Structure by Course</h1>
               <p className="mt-5 max-w-3xl text-sm leading-7 text-white/80 sm:text-base sm:leading-8">
-                Review the programme fee structure in a clean course-by-course format. Official monetary figures can be inserted in the table once approved by the University or Admissions Office.
+                Review the official course-by-course fee structure for undergraduate, degree, diploma, higher education certificate, and professional certificate programmes.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
                 <Button asChild className="h-11 rounded-xl bg-[#FFC66B] px-5 font-black text-[#0B6232] hover:bg-[#FFC66B]">
@@ -850,12 +893,12 @@ function FeesStructurePage() {
                   <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.14em] text-white/70">Programmes</p>
                 </div>
                 <div className="rounded-2xl bg-[#FFC66B] p-4 text-[#0B6232]">
-                  <p className="text-3xl font-black">5</p>
-                  <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.14em]">Fee Items</p>
+                  <p className="text-3xl font-black">{totalTables}</p>
+                  <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.14em]">Fee Tables</p>
                 </div>
               </div>
               <p className="mt-4 rounded-2xl border border-white/10 bg-black/20 p-4 text-xs leading-6 text-white/75">
-                Fees are approved by the University Council and may be reviewed from time to time. Students remain responsible for payment whether or not they have a sponsor.
+                Fees are listed in United States Dollars with separate Uganda and international categories. Students should confirm current payment instructions before making payment.
               </p>
             </div>
           </div>
@@ -866,16 +909,16 @@ function FeesStructurePage() {
             <div className="grid gap-6 lg:grid-cols-[1fr_340px] lg:items-start">
               <div className="space-y-8">
                 {feeProgrammes.map((group) => (
-                  <section key={group.group} className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5">
+                  <section key={`${group.category}-${group.group}`} className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5">
                     <div className="flex flex-col gap-4 border-b border-slate-100 bg-[#0B6232] p-6 text-white sm:flex-row sm:items-end sm:justify-between lg:p-8">
                       <div>
-                        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-[#FFC66B]">Fees Table</p>
+                        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-[#FFC66B]">{group.category}</p>
                         <h2 className="mt-2 text-2xl font-black leading-tight sm:text-3xl">{group.group}</h2>
                         <p className="mt-2 max-w-3xl text-sm leading-7 text-white/75">{group.summary}</p>
                       </div>
                       <div className="w-fit rounded-2xl bg-white/10 px-4 py-3 text-center">
                         <p className="text-2xl font-black text-[#FFC66B]">{group.courses.length}</p>
-                        <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-white/70">Courses</p>
+                        <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-white/70">{group.feeLabel}</p>
                       </div>
                     </div>
 
@@ -887,31 +930,24 @@ function FeesStructurePage() {
                               {course.code}
                             </span>
                             <span className="rounded-full bg-[#0B6232]/10 px-3 py-1 text-right text-[11px] font-black leading-4 text-[#0B6232]">
-                              {course.feeStatus}
+                              {group.feeLabel}
                             </span>
                           </div>
                           <h3 className="mt-4 text-base font-black leading-snug text-slate-950">{course.course}</h3>
-                          <p className="mt-2 text-xs leading-5 text-slate-500">
-                            Official tuition amount to be inserted after Admissions confirmation.
-                          </p>
                           <dl className="mt-4 grid gap-3 text-sm">
                             <div className="rounded-xl bg-white p-3">
-                              <dt className="text-[10px] font-black uppercase tracking-[0.14em] text-slate-400">School</dt>
-                              <dd className="mt-1 font-semibold leading-5 text-slate-700">{course.school}</dd>
+                              <dt className="text-[10px] font-black uppercase tracking-[0.14em] text-slate-400">Duration</dt>
+                              <dd className="mt-1 font-semibold leading-5 text-slate-700">{course.duration}</dd>
                             </div>
                             <div className="grid grid-cols-2 gap-3">
                               <div className="rounded-xl bg-white p-3">
-                                <dt className="text-[10px] font-black uppercase tracking-[0.14em] text-slate-400">Level</dt>
-                                <dd className="mt-1 font-semibold leading-5 text-slate-700">{course.level}</dd>
+                                <dt className="text-[10px] font-black uppercase tracking-[0.14em] text-slate-400">Uganda</dt>
+                                <dd className="mt-1 font-black leading-5 text-[#0B6232]">{course.uganda}</dd>
                               </div>
                               <div className="rounded-xl bg-white p-3">
-                                <dt className="text-[10px] font-black uppercase tracking-[0.14em] text-slate-400">Duration</dt>
-                                <dd className="mt-1 font-semibold leading-5 text-slate-700">{course.duration}</dd>
+                                <dt className="text-[10px] font-black uppercase tracking-[0.14em] text-slate-400">Int&apos;l</dt>
+                                <dd className="mt-1 font-black leading-5 text-[#0B6232]">{course.international}</dd>
                               </div>
-                            </div>
-                            <div className="rounded-xl bg-white p-3">
-                              <dt className="text-[10px] font-black uppercase tracking-[0.14em] text-slate-400">Payment</dt>
-                              <dd className="mt-1 font-semibold leading-5 text-slate-700">{course.billing}</dd>
                             </div>
                           </dl>
                         </article>
@@ -919,16 +955,14 @@ function FeesStructurePage() {
                     </div>
 
                     <div className="hidden overflow-x-auto md:block">
-                      <table className="w-full min-w-[920px] border-collapse text-left text-sm">
+                      <table className="w-full min-w-[760px] border-collapse text-left text-sm">
                         <thead>
                           <tr className="border-b border-slate-100 bg-slate-50 text-[11px] uppercase tracking-[0.14em] text-slate-500">
                             <th className="px-5 py-4 font-black">No.</th>
                             <th className="px-5 py-4 font-black">Course / Programme</th>
-                            <th className="px-5 py-4 font-black">School</th>
-                            <th className="px-5 py-4 font-black">Level</th>
                             <th className="px-5 py-4 font-black">Duration</th>
-                            <th className="px-5 py-4 font-black">Payment</th>
-                            <th className="px-5 py-4 font-black">Fee Category</th>
+                            <th className="px-5 py-4 font-black">Uganda</th>
+                            <th className="px-5 py-4 font-black">Int&apos;l</th>
                           </tr>
                         </thead>
                         <tbody className="divide-y divide-slate-100">
@@ -937,17 +971,10 @@ function FeesStructurePage() {
                               <td className="px-5 py-4 font-black text-[#0B6232]">{course.code}</td>
                               <td className="px-5 py-4">
                                 <p className="font-black text-slate-950">{course.course}</p>
-                                <p className="mt-1 text-xs leading-5 text-slate-500">Official tuition amount to be inserted after Admissions confirmation.</p>
-                              </td>
-                              <td className="px-5 py-4 text-slate-700">{course.school}</td>
-                              <td className="px-5 py-4">
-                                <span className="rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-black text-slate-700">{course.level}</span>
                               </td>
                               <td className="px-5 py-4 text-slate-700">{course.duration}</td>
-                              <td className="px-5 py-4 text-slate-700">{course.billing}</td>
-                              <td className="px-5 py-4">
-                                <span className="rounded-full bg-[#0B6232]/10 px-3 py-1 text-xs font-black text-[#0B6232]">{course.feeStatus}</span>
-                              </td>
+                              <td className="px-5 py-4 font-black text-[#0B6232]">{course.uganda}</td>
+                              <td className="px-5 py-4 font-black text-[#0B6232]">{course.international}</td>
                             </tr>
                           ))}
                         </tbody>
@@ -958,28 +985,13 @@ function FeesStructurePage() {
               </div>
 
               <aside className="space-y-6 lg:sticky lg:top-28">
-                <section className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5">
-                  <div className="bg-[#0B6232] p-6 text-white">
-                    <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">Fee Breakdown</p>
-                    <h2 className="mt-2 text-2xl font-black leading-tight">What students normally pay for</h2>
-                  </div>
-                  <div className="divide-y divide-slate-100">
-                    {feeBreakdown.map((fee) => (
-                      <div key={fee.item} className="p-5">
-                        <p className="font-black text-slate-950">{fee.item}</p>
-                        <p className="mt-1 text-sm leading-6 text-slate-600">{fee.description}</p>
-                      </div>
-                    ))}
-                  </div>
-                </section>
-
                 <section className="rounded-3xl border border-[#FFC66B]/40 bg-[#FFC66B]/15 p-6 shadow-xl shadow-slate-900/5">
                   <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Payment Note</p>
                   <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950">Important fee guidance</h2>
                   <ul className="mt-5 space-y-3 text-sm leading-6 text-slate-700">
                     <li className="flex gap-3"><span className="mt-1 grid size-5 shrink-0 place-items-center rounded-full bg-[#0B6232] text-[10px] font-black text-[#FFC66B]">✓</span>Students must enroll within the required registration period.</li>
-                    <li className="flex gap-3"><span className="mt-1 grid size-5 shrink-0 place-items-center rounded-full bg-[#0B6232] text-[10px] font-black text-[#FFC66B]">✓</span>Tuition may differ by programme depending on study requirements.</li>
-                    <li className="flex gap-3"><span className="mt-1 grid size-5 shrink-0 place-items-center rounded-full bg-[#0B6232] text-[10px] font-black text-[#FFC66B]">✓</span>Official figures should be confirmed through Admissions before payment.</li>
+                    <li className="flex gap-3"><span className="mt-1 grid size-5 shrink-0 place-items-center rounded-full bg-[#0B6232] text-[10px] font-black text-[#FFC66B]">✓</span>Undergraduate and degree programme figures are listed per semester.</li>
+                    <li className="flex gap-3"><span className="mt-1 grid size-5 shrink-0 place-items-center rounded-full bg-[#0B6232] text-[10px] font-black text-[#FFC66B]">✓</span>Certificate programme figures are listed by the course duration shown.</li>
                   </ul>
                 </section>
 
