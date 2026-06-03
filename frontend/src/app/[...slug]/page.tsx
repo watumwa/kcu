@@ -31,6 +31,7 @@ type AboutPageContent = {
     staff: {
       name: string;
       role: string;
+      image?: string;
     }[];
     whatWeDo: {
       area: string;
@@ -574,46 +575,28 @@ const contentPages: Record<string, AboutPageContent> = {
     title: "Quality Assurance",
     intro:
       "The Quality Assurance function supports King Ceasor University's commitment to academic excellence, accountability, and continuous institutional improvement.",
-    sections: [
-      {
-        title: "Academic Standards",
-        text:
-          "Quality assurance helps coordinate processes that maintain strong teaching, learning, assessment, and programme delivery standards across the University.",
-      },
-      {
-        title: "Continuous Improvement",
-        items: [
-          "Supporting monitoring and review of academic and administrative processes.",
-          "Promoting compliance with institutional policies and higher education expectations.",
-          "Encouraging feedback, evidence-based planning, and improvement across departments.",
-        ],
-      },
-    ],
-    cta: {
-      label: "Read About Governance",
-      href: "/about/governance",
-    },
+    sections: [],
     qualityAssurance: {
       director: {
         name: "Assoc. Prof. Annabella Habinka Ejiri",
         title: "Director Quality Assurance",
         image: "",
         message:
-          "Our Directorate works with every academic and administrative unit to strengthen standards, listen to evidence, and build a culture of continuous improvement. We support policy compliance, programme quality, institutional accountability, and student-centered service so that King Ceasor University keeps improving in a deliberate and measurable way.",
+          "Welcome to the Directorate of Quality Assurance and Control (DQA&C) at King Ceasor University. We are dedicated to promoting excellence in teaching, learning, research, and service through effective quality assurance practices. As the University's focal point for quality reviews and continuous improvement initiatives, we work closely with staff, students, and stakeholders to uphold high academic and operational standards. We invite you to explore our services and quality initiatives, and encourage you to contact us for any additional information or support.",
       },
       staff: [
         { name: "Dr. Annabella Habinka Ejiri", role: "Director Quality Assurance" },
-        { name: "Ms. Atuhwera Joanita", role: "Quality Assurance Monitoring Officer" },
-        { name: "Mr. Ayebale John Justice", role: "Clinical Monitoring Officer" },
-        { name: "Ms. Grace Asingwire", role: "Quality Assurance Officer" },
-        { name: "Ms. Sayuuni Mercy", role: "Quality Assurance Monitoring Assistant" },
-        { name: "Ms. Viola Kintu", role: "Quality Assurance Officer" },
+        { name: "Ms. Atuhwera Joanita", role: "Quality Assurance Monitoring Officer", image:"/Joanita.jpeg" },
+        { name: "Mr. Ayebale John Justice", role: "Clinical Monitoring Officer", image:"/" },
+        { name: "Ms. Grace Asingwire", role: "Quality Assurance Officer", image:"/Grace.jpg" },
+        { name: "Ms. Sayuuni Mercy", role: "Quality Assurance Monitoring Assistant", image:"/Mercy.jpeg" },
+        { name: "Ms. Viola Kintu", role: "Quality Assurance Officer", image:"/Viola.jpg" },
       ],
       whatWeDo: [
         {
           area: "Policy Compliance",
           details:
-            "Coordinates adherence to University policies, regulatory expectations, academic standards, and internal quality assurance procedures.",
+            "DQA&C ensures that the departments follow the policies and various guideline in execution of their operational and strategic levels.",
         },
         {
           area: "Mandate",
@@ -628,7 +611,7 @@ const contentPages: Record<string, AboutPageContent> = {
         {
           area: "Membership",
           details:
-            "Works with academic units, administrative departments, committees, student representatives, and University leadership on quality matters.",
+            "King Ceasor University is a registered member of Uganda University Quality Assurance Forum (UUQAF)",
         },
       ],
     },
@@ -829,7 +812,7 @@ function FeesStructurePage() {
       <Navbar />
       <main className="min-h-screen bg-white pt-16 sm:pt-20 lg:pt-[8.5rem]">
         <div className="border-b border-slate-100 bg-[#FFFFFF]">
-          <div className="mx-auto flex max-w-[1440px] items-center gap-2 overflow-x-auto px-4 py-3 text-xs text-slate-500 sm:px-6 lg:px-8">
+          <div className="mx-auto flex max-w-[1440px] flex-wrap items-center gap-2 px-4 py-3 text-xs text-slate-500 sm:px-6 lg:px-8">
             <Link href="/" className="shrink-0 hover:text-[#0B6232]">Home</Link>
             <ChevronRight className="size-3.5 shrink-0" />
             <Link href="/admissions" className="shrink-0 hover:text-[#0B6232]">Admissions</Link>
@@ -1383,6 +1366,7 @@ function CampusLifePage() {
 
 function AboutContentPage({ page }: { page: AboutPageContent }) {
   const isServicesPage = page.eyebrow === "Services" || page.eyebrow === "Library";
+  const hasPageSections = page.sections.length > 0;
   const parentLabel = page.eyebrow === "Admissions" ? "Admissions" : page.eyebrow === "Academics" || page.eyebrow === "Courses" ? "Academics" : isServicesPage ? "Services" : page.eyebrow === "Student Life" || page.eyebrow === "Student Welfare" || page.eyebrow === "Student Leadership" ? "Student" : "About Us";
   const parentHref = page.eyebrow === "Admissions" ? "/admissions" : page.eyebrow === "Academics" || page.eyebrow === "Courses" ? "/academics" : isServicesPage ? "/services" : page.eyebrow === "Student Life" || page.eyebrow === "Student Welfare" || page.eyebrow === "Student Leadership" ? "/student" : "/about";
 
@@ -1423,44 +1407,48 @@ function AboutContentPage({ page }: { page: AboutPageContent }) {
         </section>
 
         <section className="bg-slate-50/70 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
-          <div className="mx-auto grid max-w-[1440px] gap-8 lg:grid-cols-[300px_1fr] lg:items-start">
-            <aside className="hidden lg:block">
-              <div className="sticky top-28 overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5">
-                <div className="border-b border-slate-100 bg-[#0B6232] p-5 text-white">
-                  <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">On this page</p>
-                  <h2 className="mt-1 text-lg font-black leading-tight">{page.title}</h2>
+          <div className={`mx-auto grid max-w-[1440px] gap-8 lg:items-start ${hasPageSections ? "lg:grid-cols-[300px_1fr]" : "lg:grid-cols-1"}`}>
+            {hasPageSections && (
+              <aside className="hidden lg:block">
+                <div className="sticky top-28 overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5">
+                  <div className="border-b border-slate-100 bg-[#0B6232] p-5 text-white">
+                    <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">On this page</p>
+                    <h2 className="mt-1 text-lg font-black leading-tight">{page.title}</h2>
+                  </div>
+                  <nav className="p-3">
+                    {page.sections.map((section, index) => (
+                      <a
+                        key={section.title}
+                        href={`#section-${index}`}
+                        className="group flex items-center gap-3 rounded-2xl px-3 py-3 text-sm font-bold text-slate-600 transition hover:bg-slate-50 hover:text-[#0B6232]"
+                      >
+                        <span className="grid size-8 shrink-0 place-items-center rounded-xl bg-[#FFC66B]/20 text-xs font-black text-[#0B6232] transition group-hover:bg-[#0B6232] group-hover:text-white">
+                          {String(index + 1).padStart(2, "0")}
+                        </span>
+                        <span className="leading-snug">{section.title}</span>
+                      </a>
+                    ))}
+                  </nav>
                 </div>
-                <nav className="p-3">
-                  {page.sections.map((section, index) => (
-                    <a
-                      key={section.title}
-                      href={`#section-${index}`}
-                      className="group flex items-center gap-3 rounded-2xl px-3 py-3 text-sm font-bold text-slate-600 transition hover:bg-slate-50 hover:text-[#0B6232]"
-                    >
-                      <span className="grid size-8 shrink-0 place-items-center rounded-xl bg-[#FFC66B]/20 text-xs font-black text-[#0B6232] transition group-hover:bg-[#0B6232] group-hover:text-white">
-                        {String(index + 1).padStart(2, "0")}
-                      </span>
-                      <span className="leading-snug">{section.title}</span>
-                    </a>
-                  ))}
-                </nav>
-              </div>
-            </aside>
+              </aside>
+            )}
 
             <div className="space-y-6">
-              <div className="lg:hidden -mx-4 overflow-x-auto px-4 sm:-mx-6 sm:px-6">
-                <div className="flex gap-2 pb-2">
-                  {page.sections.map((section, index) => (
-                    <a
-                      key={section.title}
-                      href={`#section-${index}`}
-                      className="shrink-0 rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-black text-slate-600 shadow-sm hover:border-[#0B6232]/30 hover:text-[#0B6232]"
-                    >
-                      {section.title}
-                    </a>
-                  ))}
+              {hasPageSections && (
+                <div className="lg:hidden -mx-4 overflow-x-auto px-4 sm:-mx-6 sm:px-6">
+                  <div className="flex gap-2 pb-2">
+                    {page.sections.map((section, index) => (
+                      <a
+                        key={section.title}
+                        href={`#section-${index}`}
+                        className="shrink-0 rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-black text-slate-600 shadow-sm hover:border-[#0B6232]/30 hover:text-[#0B6232]"
+                      >
+                        {section.title}
+                      </a>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
 
               {page.qualityAssurance && (
                 <>
@@ -1486,9 +1474,6 @@ function AboutContentPage({ page }: { page: AboutPageContent }) {
                           <ClipboardCheck className="size-6" />
                         </div>
                         <p className="mt-6 text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Message from the Director Quality Assurance</p>
-                        <h2 className="mt-2 max-w-3xl text-2xl font-black leading-tight text-slate-950 sm:text-3xl">
-                          Strengthening standards through evidence, review, and continuous improvement
-                        </h2>
                         <p className="mt-5 max-w-4xl text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
                           {page.qualityAssurance.director.message}
                         </p>
@@ -1500,7 +1485,7 @@ function AboutContentPage({ page }: { page: AboutPageContent }) {
                     <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
                       <div>
                         <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Quality Assurance Team</p>
-                        <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950 sm:text-3xl">Staff Placeholders</h2>
+                        <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950 sm:text-3xl">Staff Team</h2>
                       </div>
                       <div className="inline-flex items-center gap-2 text-sm font-bold text-slate-500">
                         <UsersRound className="size-4 text-[#0B6232]" />
@@ -1508,20 +1493,35 @@ function AboutContentPage({ page }: { page: AboutPageContent }) {
                       </div>
                     </div>
                     <div className="mt-7 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-                      {page.qualityAssurance.staff.map((member, index) => (
-                        <article key={member.name} className="rounded-2xl border border-slate-100 bg-slate-50/70 p-5">
-                          <div className="flex items-center gap-4">
-                            <div className="grid size-16 shrink-0 place-items-center rounded-2xl bg-white text-[#0B6232] shadow-sm ring-1 ring-slate-100">
-                              <UserRound className="size-7" />
+                      {page.qualityAssurance.staff.map((member) => {
+                        const hasStaffImage = Boolean(member.image && member.image !== "/");
+
+                        return (
+                          <article key={member.name} className="mx-auto w-3/4 overflow-hidden rounded-2xl border border-slate-100 bg-slate-50/70">
+                            <div className="relative aspect-[4/5] w-full overflow-hidden bg-white">
+                              {hasStaffImage ? (
+                                <Image
+                                  src={member.image!}
+                                  alt={member.name}
+                                  fill
+                                  sizes="(min-width: 1280px) 240px, (min-width: 640px) 38vw, 75vw"
+                                  className="h-full w-full object-cover object-center"
+                                />
+                              ) : (
+                                <div className="grid size-full place-items-center bg-slate-100 text-[#0B6232]">
+                                  <UserRound className="size-12" />
+                                </div>
+                              )}
                             </div>
-                            <div className="min-w-0">
-                              <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#0B6232]">Placeholder {String(index + 1).padStart(2, "0")}</p>
-                              <h3 className="mt-1 text-base font-black leading-snug text-slate-950">{member.name}</h3>
-                              <p className="mt-1 text-sm leading-5 text-slate-500">{member.role}</p>
+                            <div className="p-4">
+                              <div>
+                                <h3 className="text-sm font-black leading-snug text-slate-950">{member.name}</h3>
+                                <p className="mt-1 text-xs leading-5 text-slate-500">{member.role}</p>
+                              </div>
                             </div>
-                          </div>
-                        </article>
-                      ))}
+                          </article>
+                        );
+                      })}
                     </div>
                   </section>
 
@@ -1530,8 +1530,16 @@ function AboutContentPage({ page }: { page: AboutPageContent }) {
                       <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">What We Do</p>
                       <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950 sm:text-3xl">Quality Assurance Responsibilities</h2>
                     </div>
-                    <div className="overflow-x-auto">
-                      <table className="w-full min-w-[720px] border-collapse text-left">
+                    <div className="grid gap-3 p-4 sm:p-6 md:hidden">
+                      {page.qualityAssurance.whatWeDo.map((item) => (
+                        <article key={item.area} className="rounded-2xl border border-slate-100 bg-slate-50/80 p-4">
+                          <h3 className="text-sm font-black text-slate-950">{item.area}</h3>
+                          <p className="mt-2 text-sm leading-7 text-slate-600">{item.details}</p>
+                        </article>
+                      ))}
+                    </div>
+                    <div className="hidden overflow-hidden md:block">
+                      <table className="w-full border-collapse text-left">
                         <thead className="bg-[#0B6232] text-white">
                           <tr>
                             <th className="w-56 px-6 py-4 text-xs font-black uppercase tracking-[0.16em] text-[#FFC66B]">Area</th>

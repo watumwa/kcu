@@ -188,15 +188,28 @@ function DesktopNav() {
 function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
   const [expanded, setExpanded] = useState<number | null>(null);
+  const [expandedChild, setExpandedChild] = useState<string | null>(null);
+
+  const closeMobileMenu = () => {
+    setIsOpen(false);
+    setExpanded(null);
+    setExpandedChild(null);
+  };
 
   return (
     <div className="border-b border-slate-100 bg-white shadow-sm shadow-black/5 lg:hidden">
       <div className="flex h-16 items-center justify-between gap-3 px-4 sm:h-20">
         <UniversityMark />
         <button
-          onClick={() => setIsOpen((current) => !current)}
+          type="button"
+          onClick={() => {
+            setIsOpen((current) => !current);
+            setExpanded(null);
+            setExpandedChild(null);
+          }}
           className="grid size-11 shrink-0 place-items-center rounded-xl border border-slate-200 text-[#0B6232] shadow-sm sm:size-12 sm:rounded-2xl"
           aria-label="Toggle menu"
+          aria-expanded={isOpen}
         >
           {isOpen ? <X className="size-6" /> : <Menu className="size-6" />}
         </button>
@@ -208,7 +221,7 @@ function MobileNav() {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="overflow-hidden border-t border-slate-100 bg-white"
+            className="max-h-[calc(100vh-4rem)] overflow-y-auto border-t border-slate-100 bg-white sm:max-h-[calc(100vh-5rem)]"
           >
             <div className="space-y-2 px-4 py-5">
               <form action="/search" className="relative mb-4 block">
@@ -225,14 +238,19 @@ function MobileNav() {
                 <div key={item.label} className="rounded-2xl border border-slate-100 bg-slate-50">
                   {item.children.length > 0 ? (
                     <button
-                      onClick={() => setExpanded(expanded === index ? null : index)}
+                      type="button"
+                      onClick={() => {
+                        setExpanded(expanded === index ? null : index);
+                        setExpandedChild(null);
+                      }}
                       className="flex w-full items-center justify-between px-4 py-3 font-bold text-slate-800"
+                      aria-expanded={expanded === index}
                     >
                       {item.label}
                       <ChevronDown className={`size-4 transition ${expanded === index ? "rotate-180" : ""}`} />
                     </button>
                   ) : (
-                    <Link href={item.href} className="block px-4 py-3 font-bold text-slate-800">
+                    <Link href={item.href} onClick={closeMobileMenu} className="block px-4 py-3 font-bold text-slate-800">
                       {item.label}
                     </Link>
                   )}
@@ -245,29 +263,55 @@ function MobileNav() {
                         className="overflow-hidden"
                       >
                         <div className="space-y-1 border-t border-slate-100 bg-white p-2">
-                          {item.children.map((child) => (
-                            <div key={child.label}>
-                              <Link
-                                href={child.href}
-                                className="block rounded-xl px-4 py-2.5 text-sm font-semibold text-slate-600 hover:bg-[#FFC66B]/20"
-                              >
-                                {child.label}
-                              </Link>
-                              {child.children && (
-                                <div className="ml-4 border-l border-slate-100 pl-3">
-                                  {child.children.map((grandchild) => (
-                                    <Link
-                                      key={grandchild.label}
-                                      href={grandchild.href}
-                                      className="block rounded-xl px-4 py-2 text-sm font-semibold text-slate-500 hover:bg-[#FFC66B]/20"
+                          {item.children.map((child) => {
+                            const childKey = `${item.label}-${child.label}`;
+                            const childIsExpanded = expandedChild === childKey;
+
+                            return (
+                              <div key={child.label}>
+                                {child.children ? (
+                                  <button
+                                    type="button"
+                                    onClick={() => setExpandedChild(childIsExpanded ? null : childKey)}
+                                    className="flex w-full items-center justify-between rounded-xl px-4 py-2.5 text-left text-sm font-semibold text-slate-600 hover:bg-[#FFC66B]/20"
+                                    aria-expanded={childIsExpanded}
+                                  >
+                                    {child.label}
+                                    <ChevronDown className={`size-4 transition ${childIsExpanded ? "rotate-180" : ""}`} />
+                                  </button>
+                                ) : (
+                                  <Link
+                                    href={child.href}
+                                    onClick={closeMobileMenu}
+                                    className="block rounded-xl px-4 py-2.5 text-sm font-semibold text-slate-600 hover:bg-[#FFC66B]/20"
+                                  >
+                                    {child.label}
+                                  </Link>
+                                )}
+                                <AnimatePresence>
+                                  {childIsExpanded && child.children && (
+                                    <motion.div
+                                      initial={{ height: 0, opacity: 0 }}
+                                      animate={{ height: "auto", opacity: 1 }}
+                                      exit={{ height: 0, opacity: 0 }}
+                                      className="ml-4 overflow-hidden border-l border-slate-100 pl-3"
                                     >
-                                      {grandchild.label}
-                                    </Link>
-                                  ))}
-                                </div>
-                              )}
-                            </div>
-                          ))}
+                                      {child.children.map((grandchild) => (
+                                        <Link
+                                          key={grandchild.label}
+                                          href={grandchild.href}
+                                          onClick={closeMobileMenu}
+                                          className="block rounded-xl px-4 py-2 text-sm font-semibold text-slate-500 hover:bg-[#FFC66B]/20"
+                                        >
+                                          {grandchild.label}
+                                        </Link>
+                                      ))}
+                                    </motion.div>
+                                  )}
+                                </AnimatePresence>
+                              </div>
+                            );
+                          })}
                         </div>
                       </motion.div>
                     )}
@@ -277,10 +321,10 @@ function MobileNav() {
 
               <div className="grid gap-3 pt-4">
                 <Button asChild className="h-12 rounded-xl bg-[#FFC66B] font-black text-[#0B6232] hover:bg-[#FFC66B]">
-                  <Link href="https://apply.kcu.ac.ug/">Apply Now</Link>
+                  <Link href="https://apply.kcu.ac.ug/" onClick={closeMobileMenu}>Apply Now</Link>
                 </Button>
                 <Button asChild variant="outline" className="h-12 rounded-xl border-2 border-[#0B6232] bg-white font-bold text-[#0B6232]">
-                  <Link href="https://academia.kcu.ac.ug/">Academia <ExternalLink className="ml-2 size-4" /></Link>
+                  <Link href="https://academia.kcu.ac.ug/" onClick={closeMobileMenu}>Academia <ExternalLink className="ml-2 size-4" /></Link>
                 </Button>
               </div>
 
