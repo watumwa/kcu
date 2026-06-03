@@ -42,47 +42,6 @@ type AboutPageContent = {
 };
 
 const aboutPages: Record<string, AboutPageContent> = {
-  "about/governance": {
-    eyebrow: "Governance",
-    title: "University Governance",
-    intro:
-      "King Ceasor University is guided by governance and administration structures that uphold academic excellence, accountability, sustainable development, innovation, and service to society.",
-    sections: [
-      {
-        title: "University Council",
-        text:
-          "The University Council is the supreme governing body of King Ceasor University, responsible for strategic leadership, policy oversight and institutional governance. It safeguards the University's vision, mission and long-term growth while supporting quality education, innovation and service to society.",
-        items: [
-          "Finance, Planning & Development Committee: Mrs. Grace N. Gwaku",
-          "Quality Assurance & Gender Committee: Prof. Josephat Byamugisha",
-          "Audit & Risk Management Committee: Mr. Donald Nyakairu",
-          "Student Welfare & Disciplinary Committee: Mr. Cyriaco Kabagambe",
-          "Appointments Board: Dr. Kamba Fadhiru Pakoyo",
-        ],
-      },
-      {
-        title: "University Administration",
-        text:
-          "The University Administration serves as the executive arm of King Ceasor University, coordinating academic, administrative and operational activities. Guided by the University's vision and strategic objectives, it promotes quality education, efficient resource management, institutional growth and a supportive learning environment.",
-        items: [
-          "Mrs. Pape Matama Bagonza: University Secretary",
-          "Alfred Namoah Masikye: Academic Registrar",
-          "Assoc. Prof. Annabella Habinka Ejiri: Director Quality Assurance",
-          "Mrs. Sylivia Okwi Christine: Director Finance",
-          "Fr. Dr. Lumala Aloysius Gonzagga: Dean of Students",
-        ],
-      },
-      {
-        title: "Institutional Direction",
-        text:
-          "KCU's governance supports its mission to provide holistic education through inventive teaching, learning, and research aimed at fostering socio-economic transformation.",
-      },
-    ],
-    cta: {
-      label: "Read About KCU",
-      href: "/about",
-    },
-  },
   "about/collaborations-partnerships": {
     eyebrow: "Partnerships",
     title: "Collaborations & Partnerships",
@@ -241,43 +200,11 @@ const contentPages: Record<string, AboutPageContent> = {
       href: "https://apply.kcu.ac.ug/",
     },
   },
-  academics: {
-    eyebrow: "Academics",
-    title: "Academics at KCU",
-    intro:
-      "KCU offers academic programmes designed to inspire creativity, innovation, critical thinking, and career readiness across health sciences, law, management, computing, engineering, and related fields.",
-    sections: [
-      {
-        title: "Academic Schools",
-        text:
-          "The University offers programmes through three schools, each focused on training students for professional excellence and social impact.",
-        items: [
-          "School of Medicine, Health & Life Sciences",
-          "School of Law & Management Sciences",
-          "School of Science, Computing & Engineering",
-        ],
-      },
-      {
-        title: "Teaching and Learning",
-        text:
-          "KCU combines classroom learning, practical training, research, and professional exposure to help students develop the knowledge and skills required in a changing world.",
-      },
-      {
-        title: "Online Learning",
-        text:
-          "KClass, the KCU e-learning platform, supports flexible online learning with student-centred lessons, resources, and opportunities to learn at your own pace.",
-      },
-    ],
-    cta: {
-      label: "Explore Courses",
-      href: "/academics/courses",
-    },
-  },
   "academics/schools": {
     eyebrow: "Academics",
     title: "Schools at KCU",
     intro:
-      "King Ceasor University's schools provide focused academic homes for students pursuing health, law, business, science, computing, engineering, agriculture, and energy-related pathways.",
+      "King Ceasor University's schools provide focused academic homes for students pursuing health, law, business, science, computing, investigation, and energy-related pathways.",
     sections: [
       {
         title: "School of Medicine, Health & Life Sciences",
@@ -285,10 +212,12 @@ const contentPages: Record<string, AboutPageContent> = {
           "Founded in 2011, the school provides medical and healthcare education designed to prepare future healthcare professionals for an evolving health landscape.",
         items: [
           "Bachelor of Medicine and Bachelor of Surgery",
-          "Bachelor of Nursing Sciences",
-          "Bachelor of Medical Records & Health Informatics",
+          "Bachelor of Nursing Science - Direct",
+          "Bachelor of Nursing Science - Completion",
           "Diploma in Clinical Medicine & Community Health",
           "Diploma in Medical Laboratory Technology",
+          "Higher Education Certificate - Biological Sciences",
+          "Higher Education Certificate - Physical Sciences",
         ],
       },
       {
@@ -298,18 +227,20 @@ const contentPages: Record<string, AboutPageContent> = {
         items: [
           "Bachelor of Laws",
           "Bachelor of Business Administration",
-          "Business specialisations including Accounting and Finance, Marketing Management, Banking and Insurance",
+          "Bachelor of Oil, Gas, and Energy Management",
+          "Bachelor of Applied Economics",
+          "Diploma in Global Business",
+          "Higher Education Certificate - Humanities",
         ],
       },
       {
         title: "School of Science, Computing & Engineering",
         text:
-          "The school comprises computing, Artificial Intelligence and Data Science, Agriculture, and Petroleum Geoscience departments, with training linked to technology, investigation, agriculture, and energy needs.",
+          "The school comprises computing, digital investigation, cyber security, and petroleum geoscience programmes, with training linked to technology, investigation, and energy needs.",
         items: [
-          "Bachelor of Computer Forensics & Criminal Investigation",
-          "Bachelor of Oil, Gas & Energy Management",
-          "Bachelor of Agriculture",
-          "Higher Education Certificate pathways",
+          "Bachelor of Science in Petroleum Geoscience",
+          "Bachelor of Computer Forensics and Criminal Investigations",
+          "Certificate programmes in Computer Applications, Web Design, Computer Graphics, AI with Internet of Things, Cyber Security, Digital Forensic Investigations, and Organic Farming",
         ],
       },
     ],
@@ -328,15 +259,17 @@ const contentPages: Record<string, AboutPageContent> = {
         title: "Accredited Programmes",
         items: [
           "Bachelor of Medicine & Bachelor of Surgery",
-          "Bachelor of Nursing Sciences",
-          "Bachelor of Medical Records & Health Informatics",
-          "Bachelor of Agriculture",
+          "Bachelor of Nursing Science - Direct",
+          "Bachelor of Nursing Science - Completion",
           "Bachelor of Laws",
           "Bachelor of Business Administration",
-          "Bachelor of Computer Forensics & Criminal Investigation",
-          "Bachelor of Oil, Gas & Energy Management",
+          "Bachelor of Oil, Gas, and Energy Management",
+          "Bachelor of Applied Economics",
+          "Bachelor of Science in Petroleum Geoscience",
+          "Bachelor of Computer Forensics and Criminal Investigations",
           "Diploma in Clinical Medicine & Community Health",
           "Diploma in Medical Laboratory Technology",
+          "Diploma in Global Business",
           "Higher Education Certificate pathways in Biological Sciences, Physical Sciences, and Humanities",
         ],
       },
@@ -355,19 +288,20 @@ const contentPages: Record<string, AboutPageContent> = {
     eyebrow: "Courses",
     title: "Undergraduate Programmes",
     intro:
-      "KCU undergraduate programmes build strong professional foundations across health, law, business, science, computing, agriculture, and energy-related disciplines.",
+      "KCU undergraduate programmes build strong professional foundations across health, law, business, science, computing, investigation, and energy-related disciplines.",
     sections: [
       {
         title: "Undergraduate Pathways",
         items: [
           "Bachelor of Medicine & Bachelor of Surgery",
-          "Bachelor of Nursing Sciences",
-          "Bachelor of Medical Records & Health Informatics",
-          "Bachelor of Agriculture",
+          "Bachelor of Nursing Science - Direct",
+          "Bachelor of Nursing Science - Completion",
           "Bachelor of Laws",
           "Bachelor of Business Administration",
-          "Bachelor of Computer Forensics & Criminal Investigation",
-          "Bachelor of Oil, Gas & Energy Management",
+          "Bachelor of Oil, Gas, and Energy Management",
+          "Bachelor of Applied Economics",
+          "Bachelor of Science in Petroleum Geoscience",
+          "Bachelor of Computer Forensics and Criminal Investigations",
         ],
       },
       {
@@ -392,6 +326,7 @@ const contentPages: Record<string, AboutPageContent> = {
         items: [
           "Diploma in Clinical Medicine & Community Health",
           "Diploma in Medical Laboratory Technology",
+          "Diploma in Global Business",
         ],
       },
       {
@@ -422,10 +357,15 @@ const contentPages: Record<string, AboutPageContent> = {
       {
         title: "Short Course Areas",
         items: [
-          "Language proficiency",
-          "Digital marketing",
-          "Computer applications",
-          "Online learning through KClass",
+          "Certificate in Rest ECG Reading",
+          "Certificate in Holter ECG Reading/Interpretation",
+          "Certificate in Stress ECH Reading/Interpretation",
+          "Certificate in English Proficiency Course",
+          "Certificate in Digital Marketing",
+          "Certificate in Computer Applications",
+          "Certificate in Web design, Dev't & Administration",
+          "Cyber Security for Beginners",
+          "Digital Forensic Investigations for beginners",
         ],
       },
       {
@@ -863,6 +803,348 @@ const feeProgrammes = [
     ],
   },
 ];
+
+type FeeProgrammeGroup = (typeof feeProgrammes)[number];
+type FeeProgrammeCourse = FeeProgrammeGroup["courses"][number];
+type AcademicProgrammeVariant = "schools" | "courses" | "undergraduate" | "diploma" | "certificates";
+
+type AcademicCourse = {
+  code: string;
+  course: string;
+  duration: string;
+  category: string;
+  school: string;
+};
+
+type AcademicProgrammeGroup = {
+  category: string;
+  group: string;
+  summary: string;
+  courses: AcademicCourse[];
+};
+
+const academicRouteVariants: Record<string, AcademicProgrammeVariant> = {
+  "academics/schools": "schools",
+  "academics/courses": "courses",
+  "academics/courses/undergraduate": "undergraduate",
+  "academics/courses/diploma": "diploma",
+  "academics/courses/short-courses": "certificates",
+};
+
+const academicPageCopy: Record<
+  AcademicProgrammeVariant,
+  {
+    crumb: string;
+    title: string;
+    intro: string;
+    statLabel: string;
+    groupStatLabel: string;
+    ctaLabel: string;
+    ctaHref: string;
+  }
+> = {
+  schools: {
+    crumb: "Schools",
+    title: "Schools and Programmes",
+    intro:
+      "Browse King Ceasor University programmes by their respective schools, with course durations drawn from the official programme schedule.",
+    statLabel: "Programmes",
+    groupStatLabel: "Schools",
+    ctaLabel: "View Courses",
+    ctaHref: "/academics/courses",
+  },
+  courses: {
+    crumb: "Courses",
+    title: "Courses and Programmes",
+    intro:
+      "Review KCU degree, diploma, higher education certificate, and professional certificate programmes by school and duration.",
+    statLabel: "Programmes",
+    groupStatLabel: "Tables",
+    ctaLabel: "Apply Online",
+    ctaHref: "https://apply.kcu.ac.ug/",
+  },
+  undergraduate: {
+    crumb: "Undergraduate",
+    title: "Undergraduate Degree Programmes",
+    intro:
+      "Explore bachelor's degree programmes offered across KCU schools, with the expected duration for each programme.",
+    statLabel: "Degree Programmes",
+    groupStatLabel: "Schools",
+    ctaLabel: "Apply Online",
+    ctaHref: "https://apply.kcu.ac.ug/",
+  },
+  diploma: {
+    crumb: "Diploma",
+    title: "Diploma Programmes",
+    intro:
+      "Explore diploma programmes offered at KCU and compare their durations by school.",
+    statLabel: "Diploma Programmes",
+    groupStatLabel: "Schools",
+    ctaLabel: "Apply Online",
+    ctaHref: "https://apply.kcu.ac.ug/",
+  },
+  certificates: {
+    crumb: "Certificates",
+    title: "Certificates and Short Courses",
+    intro:
+      "Explore KCU professional certificate and short-course options by school, with the duration for each course.",
+    statLabel: "Certificates",
+    groupStatLabel: "Schools",
+    ctaLabel: "Explore K-Class",
+    ctaHref: "https://vclass.kcu.ac.ug/",
+  },
+};
+
+const academicSchoolSummaries: Record<string, string> = {
+  "School of Medicine, Health and Life Sciences":
+    "Medicine, nursing, clinical medicine, laboratory technology, higher education certificate, and health-focused professional certificate programmes.",
+  "School of Law and Management Sciences":
+    "Law, business, energy management, economics, global business, humanities, and professional management certificate programmes.",
+  "School of Science, Computing and Engineering":
+    "Petroleum geoscience, computer forensics, computing, cyber security, digital forensics, artificial intelligence, and organic farming programmes.",
+};
+
+function toAcademicCourse(course: FeeProgrammeCourse, group: FeeProgrammeGroup): AcademicCourse {
+  return {
+    code: course.code,
+    course: course.course,
+    duration: course.duration,
+    category: group.category,
+    school: group.group,
+  };
+}
+
+function numberAcademicGroups(groups: AcademicProgrammeGroup[]) {
+  let current = 0;
+
+  return groups.map((group) => ({
+    ...group,
+    courses: group.courses.map((course) => ({
+      ...course,
+      code: String(++current).padStart(2, "0"),
+    })),
+  }));
+}
+
+function getFilteredAcademicGroups(
+  predicate: (course: FeeProgrammeCourse, group: FeeProgrammeGroup) => boolean,
+) {
+  return numberAcademicGroups(
+    feeProgrammes
+      .map((group) => ({
+        category: group.category,
+        group: group.group,
+        summary: group.summary,
+        courses: group.courses
+          .filter((course) => predicate(course, group))
+          .map((course) => toAcademicCourse(course, group)),
+      }))
+      .filter((group) => group.courses.length > 0),
+  );
+}
+
+function getSchoolAcademicGroups() {
+  const schoolNames = Array.from(new Set(feeProgrammes.map((group) => group.group)));
+
+  return numberAcademicGroups(
+    schoolNames.map((school) => {
+      const schoolGroups = feeProgrammes.filter((group) => group.group === school);
+
+      return {
+        category: "Academic Schools",
+        group: school,
+        summary: academicSchoolSummaries[school],
+        courses: schoolGroups.flatMap((group) =>
+          group.courses.map((course) => toAcademicCourse(course, group)),
+        ),
+      };
+    }),
+  );
+}
+
+function getAcademicProgrammeGroups(variant: AcademicProgrammeVariant) {
+  if (variant === "schools") {
+    return getSchoolAcademicGroups();
+  }
+
+  if (variant === "undergraduate") {
+    return getFilteredAcademicGroups((course) => course.course.startsWith("Bachelor"));
+  }
+
+  if (variant === "diploma") {
+    return getFilteredAcademicGroups((course) => course.course.startsWith("Diploma"));
+  }
+
+  if (variant === "certificates") {
+    return getFilteredAcademicGroups((_, group) => group.category === "Certificate Programs");
+  }
+
+  return getFilteredAcademicGroups(() => true);
+}
+
+function AcademicProgrammesPage({ variant }: { variant: AcademicProgrammeVariant }) {
+  const copy = academicPageCopy[variant];
+  const groups = getAcademicProgrammeGroups(variant);
+  const totalCourses = groups.reduce((total, group) => total + group.courses.length, 0);
+  const showCategoryColumn = variant === "schools";
+
+  return (
+    <>
+      <Navbar />
+      <main className="min-h-screen bg-white pt-16 sm:pt-20 lg:pt-[8.5rem]">
+        <div className="border-b border-slate-100 bg-[#FFFFFF]">
+          <div className="mx-auto flex max-w-[1440px] flex-wrap items-center gap-2 px-4 py-3 text-xs text-slate-500 sm:px-6 lg:px-8">
+            <Link href="/" className="shrink-0 hover:text-[#0B6232]">Home</Link>
+            <ChevronRight className="size-3.5 shrink-0" />
+            <Link href="/academics/schools" className="shrink-0 hover:text-[#0B6232]">Academics</Link>
+            <ChevronRight className="size-3.5 shrink-0" />
+            <span className="shrink-0 font-semibold text-[#0B6232]">{copy.crumb}</span>
+          </div>
+        </div>
+
+        <section className="relative overflow-hidden px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+          <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1800&q=80')" }} />
+          <div className="absolute inset-0 bg-black/55" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent" />
+          <div className="absolute -bottom-20 right-12 hidden size-72 rounded-full border border-white/10 lg:block" />
+          <div className="relative z-10 mx-auto grid max-w-[1440px] gap-8 lg:grid-cols-[1fr_380px] lg:items-end">
+            <div>
+              <p className="inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-black uppercase tracking-[0.2em] text-[#FFC66B] backdrop-blur">Academics</p>
+              <h1 className="mt-5 max-w-4xl font-serif text-4xl font-black leading-tight text-white sm:text-5xl md:text-6xl">{copy.title}</h1>
+              <p className="mt-5 max-w-3xl text-sm leading-7 text-white/80 sm:text-base sm:leading-8">
+                {copy.intro}
+              </p>
+              <div className="mt-7 flex flex-wrap gap-3">
+                <Button asChild className="h-11 rounded-xl bg-[#FFC66B] px-5 font-black text-[#0B6232] hover:bg-[#FFC66B]">
+                  <Link href={copy.ctaHref}>{copy.ctaLabel} <ArrowRight className="ml-2 size-4" /></Link>
+                </Button>
+                <Button asChild variant="outline" className="h-11 rounded-xl border-2 border-white bg-transparent px-5 font-black text-white hover:bg-white hover:text-[#0B6232]">
+                  <Link href="/admissions/fees-structure">Fees Structure</Link>
+                </Button>
+              </div>
+            </div>
+            <div className="rounded-3xl border border-white/15 bg-white/10 p-5 text-white shadow-2xl backdrop-blur">
+              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">At a glance</p>
+              <div className="mt-4 grid grid-cols-2 gap-3">
+                <div className="rounded-2xl bg-white/10 p-4">
+                  <p className="text-3xl font-black">{totalCourses}</p>
+                  <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.14em] text-white/70">{copy.statLabel}</p>
+                </div>
+                <div className="rounded-2xl bg-[#FFC66B] p-4 text-[#0B6232]">
+                  <p className="text-3xl font-black">{groups.length}</p>
+                  <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.14em]">{copy.groupStatLabel}</p>
+                </div>
+              </div>
+              <p className="mt-4 rounded-2xl border border-white/10 bg-black/20 p-4 text-xs leading-6 text-white/75">
+                This academics view lists programmes and durations only. Fee amounts remain available on the admissions fee structure page.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-slate-50/70 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+          <div className="mx-auto max-w-[1440px]">
+            <div className="grid gap-6 lg:grid-cols-[1fr_340px] lg:items-start">
+              <div className="space-y-8">
+                {groups.map((group) => (
+                  <section key={`${group.category}-${group.group}`} className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5">
+                    <div className="flex flex-col gap-4 border-b border-slate-100 bg-[#0B6232] p-6 text-white sm:flex-row sm:items-end sm:justify-between lg:p-8">
+                      <div>
+                        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-[#FFC66B]">{group.category}</p>
+                        <h2 className="mt-2 text-2xl font-black leading-tight sm:text-3xl">{group.group}</h2>
+                        <p className="mt-2 max-w-3xl text-sm leading-7 text-white/75">{group.summary}</p>
+                      </div>
+                      <div className="w-fit rounded-2xl bg-white/10 px-4 py-3 text-center">
+                        <p className="text-2xl font-black text-[#FFC66B]">{group.courses.length}</p>
+                        <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-white/70">Programmes</p>
+                      </div>
+                    </div>
+
+                    <div className="grid gap-3 p-3 md:hidden">
+                      {group.courses.map((course) => (
+                        <article key={`${group.group}-${course.code}-${course.course}`} className="rounded-2xl border border-slate-100 bg-slate-50/80 p-4 shadow-sm">
+                          <div className="flex items-start justify-between gap-3">
+                            <span className="grid size-9 shrink-0 place-items-center rounded-full bg-[#0B6232] text-sm font-black text-[#FFC66B]">
+                              {course.code}
+                            </span>
+                            <span className="rounded-full bg-[#0B6232]/10 px-3 py-1 text-right text-[11px] font-black leading-4 text-[#0B6232]">
+                              {showCategoryColumn ? course.category : group.category}
+                            </span>
+                          </div>
+                          <h3 className="mt-4 text-base font-black leading-snug text-slate-950">{course.course}</h3>
+                          <dl className="mt-4 grid gap-3 text-sm">
+                            {showCategoryColumn && (
+                              <div className="rounded-xl bg-white p-3">
+                                <dt className="text-[10px] font-black uppercase tracking-[0.14em] text-slate-400">Programme Type</dt>
+                                <dd className="mt-1 font-semibold leading-5 text-slate-700">{course.category}</dd>
+                              </div>
+                            )}
+                            <div className="rounded-xl bg-white p-3">
+                              <dt className="text-[10px] font-black uppercase tracking-[0.14em] text-slate-400">Duration</dt>
+                              <dd className="mt-1 font-black leading-5 text-[#0B6232]">{course.duration}</dd>
+                            </div>
+                          </dl>
+                        </article>
+                      ))}
+                    </div>
+
+                    <div className="hidden overflow-x-auto md:block">
+                      <table className="w-full min-w-[640px] border-collapse text-left text-sm">
+                        <thead>
+                          <tr className="border-b border-slate-100 bg-slate-50 text-[11px] uppercase tracking-[0.14em] text-slate-500">
+                            <th className="px-5 py-4 font-black">No.</th>
+                            <th className="px-5 py-4 font-black">Course / Programme</th>
+                            {showCategoryColumn && <th className="px-5 py-4 font-black">Programme Type</th>}
+                            <th className="px-5 py-4 font-black">Duration</th>
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-slate-100">
+                          {group.courses.map((course) => (
+                            <tr key={`${group.group}-${course.code}-${course.course}`} className="align-top transition hover:bg-[#FFC66B]/10">
+                              <td className="px-5 py-4 font-black text-[#0B6232]">{course.code}</td>
+                              <td className="px-5 py-4">
+                                <p className="font-black text-slate-950">{course.course}</p>
+                                {!showCategoryColumn && <p className="mt-1 text-xs font-semibold text-slate-500">{course.school}</p>}
+                              </td>
+                              {showCategoryColumn && <td className="px-5 py-4 text-slate-700">{course.category}</td>}
+                              <td className="px-5 py-4 font-black text-[#0B6232]">{course.duration}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </section>
+                ))}
+              </div>
+
+              <aside className="space-y-6 lg:sticky lg:top-28">
+                <section className="rounded-3xl border border-[#FFC66B]/40 bg-[#FFC66B]/15 p-6 shadow-xl shadow-slate-900/5">
+                  <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Programme Guide</p>
+                  <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950">Course durations by school</h2>
+                  <ul className="mt-5 space-y-3 text-sm leading-6 text-slate-700">
+                    <li className="flex gap-3"><span className="mt-1 grid size-5 shrink-0 place-items-center rounded-full bg-[#0B6232] text-[10px] font-black text-[#FFC66B]">✓</span>Degree, diploma, higher education certificate, and professional certificate options are grouped by school.</li>
+                    <li className="flex gap-3"><span className="mt-1 grid size-5 shrink-0 place-items-center rounded-full bg-[#0B6232] text-[10px] font-black text-[#FFC66B]">✓</span>Only programme names and durations are shown on academics pages.</li>
+                    <li className="flex gap-3"><span className="mt-1 grid size-5 shrink-0 place-items-center rounded-full bg-[#0B6232] text-[10px] font-black text-[#FFC66B]">✓</span>For payment details, use the admissions fee structure page.</li>
+                  </ul>
+                </section>
+
+                <section className="rounded-3xl bg-[#0B6232] p-6 text-white shadow-2xl shadow-[#0B6232]/20">
+                  <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">Ready to apply?</p>
+                  <h2 className="mt-2 text-2xl font-black leading-tight">Start your application online</h2>
+                  <p className="mt-3 text-sm leading-7 text-white/75">Use the applicant portal to begin your admission process and receive course-specific guidance.</p>
+                  <Button asChild className="mt-6 h-11 w-full rounded-xl bg-[#FFC66B] px-5 font-black text-[#0B6232] hover:bg-[#FFC66B]">
+                    <Link href="https://apply.kcu.ac.ug/">Apply Online <ArrowRight className="ml-2 size-4" /></Link>
+                  </Button>
+                </section>
+              </aside>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
+}
 
 function FeesStructurePage() {
   const totalCourses = feeProgrammes.reduce((total, group) => total + group.courses.length, 0);
@@ -1398,7 +1680,7 @@ function AboutContentPage({ page }: { page: AboutPageContent }) {
   const isServicesPage = page.eyebrow === "Services" || page.eyebrow === "Library";
   const hasPageSections = page.sections.length > 0;
   const parentLabel = page.eyebrow === "Admissions" ? "Admissions" : page.eyebrow === "Academics" || page.eyebrow === "Courses" ? "Academics" : isServicesPage ? "Services" : page.eyebrow === "Student Life" || page.eyebrow === "Student Welfare" || page.eyebrow === "Student Leadership" ? "Student" : "About Us";
-  const parentHref = page.eyebrow === "Admissions" ? "/admissions" : page.eyebrow === "Academics" || page.eyebrow === "Courses" ? "/academics" : isServicesPage ? "/services" : page.eyebrow === "Student Life" || page.eyebrow === "Student Welfare" || page.eyebrow === "Student Leadership" ? "/student" : "/about";
+  const parentHref = page.eyebrow === "Admissions" ? "/admissions" : page.eyebrow === "Academics" || page.eyebrow === "Courses" ? "/academics/schools" : isServicesPage ? "/services" : page.eyebrow === "Student Life" || page.eyebrow === "Student Welfare" || page.eyebrow === "Student Leadership" ? "/student" : "/about";
 
   return (
     <>
@@ -1660,6 +1942,11 @@ export default async function CatchAllPage({ params }: { params: Promise<{ slug:
   const { slug } = await params;
   const currentPath = slug.join("/");
   const page = contentPages[currentPath];
+  const academicVariant = academicRouteVariants[currentPath];
+
+  if (academicVariant) {
+    return <AcademicProgrammesPage variant={academicVariant} />;
+  }
 
   if (currentPath === "admissions/fees-structure") {
     return <FeesStructurePage />;

@@ -121,7 +121,7 @@ export const heroSlides: HeroSlide[] = [
   {
     badge: "School of Law & Management Sciences",
     school: "",
-    title: "Bachelors of Law | Bachelors of Business Administration & More",
+    title: "Bachelor of Laws | Bachelor of Business Administration & More",
     subtitle: "",
     cta: "Explore Courses",
     image:
@@ -151,7 +151,7 @@ export const heroSlides: HeroSlide[] = [
   {
     badge: "School of Science, Computing & Engineering",
     school: "",
-    title: "Bachelors of Computer Forensics | Bachelors of Petroluem and Geoscience",
+    title: "Bachelor of Computer Forensics | Bachelor of Petroleum Geoscience",
     subtitle: "",
     cta: "Explore Courses",
     image:

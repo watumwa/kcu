@@ -4,8 +4,8 @@ import Link from "next/link";
 const programmes = [
   {
     icon: BarChart3,
-    title: "Undergraduate Programs",
-    courses: ["Law", "Nursing", "Medicine & Surgery", "Applied Economics", "Petroluem Geoscience", "Business Administration", "Computer Forensincs", "Oil, Gas & Energy Management"],
+    title: "Undergraduate Programmes",
+    courses: ["Law", "Nursing", "Medicine & Surgery", "Applied Economics", "Petroleum Geoscience", "Business Administration", "Computer Forensics", "Oil, Gas & Energy Management"],
   },
   {
     icon: Calculator,
@@ -50,7 +50,7 @@ export default function ProgrammeHighlight() {
           <div className="grid justify-items-center gap-3 sm:grid-cols-2">
             {programmes.map((programme) => {
               const Icon = programme.icon;
-              const isUndergraduate = programme.title === "Undergraduate Programs";
+              const isUndergraduate = programme.title === "Undergraduate Programmes";
               return (
                 <Link
                   href="/academics/courses"

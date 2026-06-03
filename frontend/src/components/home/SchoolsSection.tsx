@@ -19,7 +19,7 @@ export default function SchoolsSection() {
             <p className="text-xs font-black uppercase tracking-[0.16em] text-[#0B6232] sm:text-sm sm:tracking-[0.2em]">Academics</p>
             <h2 className="mt-3 font-serif text-2xl font-black leading-tight text-slate-950 sm:text-3xl md:text-4xl">Schools</h2>
           </div>
-          <Link href="/academics" className="inline-flex items-center gap-2 text-sm font-black text-[#0B6232] sm:text-base">
+          <Link href="/academics/courses" className="inline-flex items-center gap-2 text-sm font-black text-[#0B6232] sm:text-base">
             Review Courses <ArrowRight className="size-4" />
           </Link>
         </div>
@@ -27,7 +27,7 @@ export default function SchoolsSection() {
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {schools.slice(0, schoolImages.length).map((school, index) => (
             <Link
-              href="/academics"
+              href="/academics/schools"
               key={school}
               className="group overflow-hidden rounded-xl border border-slate-100 bg-white shadow-sm transition hover:-translate-y-1 hover:border-[#FFC66B] hover:shadow-xl hover:shadow-slate-900/10"
             >
