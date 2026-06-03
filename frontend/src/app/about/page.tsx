@@ -18,6 +18,7 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
+import Image from "next/image";
 
 // ── Tab content ────────────────────────────────────────────────────────────
 
@@ -272,7 +273,7 @@ function TabUniversityCouncil() {
   const chair: PersonProfile = { name: "HON DR. Chris Baryomunsi", role: "Chairperson University Council", tier: "top" };
   const viceChair: PersonProfile = { name: "Assoc. Prof. Mary Muhenda", role: "Vice Chairperson University Council", tier: "mid" };
   const committeeChairs: PersonProfile[] = [
-    { name: "Mrs. Grace N. Gwaku", role: "Chair: Finance, Planning & Development", tier: "mid" },
+    { name: "Ms. Grace N. Gwaku", role: "Chair: Finance, Planning & Development", tier: "mid" },
     { name: "Prof. Josephat Byamugisha", role: "Chair: Quality Assurance, ICT & Gender", tier: "mid" },
     { name: "Mr. Donald Nyakairu", role: "Chair: Audit & Risk Management", tier: "mid" },
     { name: "Mr. Cyriaco Kabagambe", role: "Chair: Student Welfare & Disciplinary", tier: "mid" },
@@ -280,11 +281,11 @@ function TabUniversityCouncil() {
   ];
 
   const members: PersonProfile[] = [
-    { name: "Mr. Adonia Ainebyona", role: "Guild President", tier: "base" },
+    { name: "Mr. Muhooz Daniel", role: "Guild President", tier: "base" },
     { name: "Dr. Sabiiti Mulema", role: "Staff Representative", tier: "base" },
-    { name: "Mrs. Rukundo Anita", role: "Member", tier: "base" },
+    { name: "Ms. Rukundo Anita", role: "Member", tier: "base" },
     { name: "Assoc. Prof. Margaret Nabasirye", role: "Member", tier: "base" },
-    { name: "Mrs. Joyce Okello", role: "Member", tier: "base" },
+    { name: "Ms. Joyce Okello", role: "Member", tier: "base" },
     { name: "Prof. Winston Ireeta Tumps", role: "Member", tier: "base" },
     { name: "Mr. Timothy Musoke Ssejjoba", role: "Member", tier: "base" },
   ];
@@ -343,6 +344,60 @@ function TabUniversityCouncil() {
           <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Committee Members</p>
           {members.map((p) => (
             <CouncilCardMobile key={p.name} person={p} onSelect={setSelectedPerson} />
+          ))}
+        </div>
+      </div>
+      <BioModal person={selectedPerson} onClose={() => setSelectedPerson(null)} />
+    </div>
+  );
+}
+
+function TabBoardOfTrustees() {
+  const [selectedPerson, setSelectedPerson] = useState<PersonProfile | null>(null);
+  const chair: PersonProfile = { name: "Hon. Thomas Tayebwa", role: "Chairperson", tier: "top" };
+  const members: PersonProfile[] = [
+    { name: "Ms. Agnes Selina Mfite", role: "Member", tier: "base" },
+    { name: "Hon. Okello Oryem", role: "Member", tier: "base" },
+    { name: "Mr. Donald Nyakairu", role: "Member", tier: "base" },
+    { name: "King Ceasor Mulenga", role: "Member", tier: "base",},
+  ];
+
+  return (
+    <div className="space-y-10">
+      <div>
+        <p className="text-xs font-black uppercase tracking-[0.2em] text-[#0B6232]">Governance</p>
+        <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950 sm:text-3xl">Board of Trustees</h2>
+        <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
+          The Board of Trustees supports King Ceasor University&apos;s long-term institutional stewardship, helping safeguard the University&apos;s mission, resources and strategic direction.
+        </p>
+        <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
+          Working within the University&apos;s governance framework, the trustees provide oversight that strengthens accountability, continuity and responsible growth for the benefit of students, staff and the wider community.
+        </p>
+      </div>
+
+      <div className="hidden pb-4 md:block">
+        <div className="flex w-full flex-col items-center gap-8">
+          <CouncilCard person={chair} onSelect={setSelectedPerson} />
+          <div className="mb-2 rounded-full border border-slate-200 bg-[#FFFFFF] px-4 py-1 text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">
+            Trustee Members
+          </div>
+          <div className="flex w-full flex-wrap justify-center gap-6">
+            {members.map((p) => (
+              <CouncilCard key={p.role} person={p} onSelect={setSelectedPerson} />
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="space-y-8 md:hidden">
+        <div className="space-y-3">
+          <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Leadership</p>
+          <CouncilCardMobile person={chair} onSelect={setSelectedPerson} />
+        </div>
+        <div className="space-y-3">
+          <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Trustee Members</p>
+          {members.map((p) => (
+            <CouncilCardMobile key={p.role} person={p} onSelect={setSelectedPerson} />
           ))}
         </div>
       </div>
@@ -446,9 +501,9 @@ function TabAdministration() {
 
 const tabs = [
   { id: "about", label: "About Us", content: <TabAboutUs /> },
+  { id: "trustees", label: "Board of Trustees", content: <TabBoardOfTrustees /> },
   { id: "council", label: "University Council", content: <TabUniversityCouncil /> },
   { id: "administration", label: "University Administration", content: <TabAdministration /> },
-  { id: "glance", label: "KCU at a Glance", content: <ComingSoon title="KCU at a Glance" /> },
 ];
 
 // ── Page ───────────────────────────────────────────────────────────────────

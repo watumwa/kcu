@@ -34,7 +34,7 @@ export const navItems: NavItem[] = [
     children: [
       { label: "About KCU", href: "/about" },
       { label: "Mission | Vision | Core Values", href: "/about" },
-      { label: "Governance", href: "/about/governance" },
+      { label: "Governance", href: "/about" },
       { label: "Collaborations & Partnerships", href: "/about/collaborations-partnerships" },
       { label: "News Letter", href: "/about/newsletter" },
     ],

@@ -19,6 +19,7 @@ type AboutPageContent = {
   }[];
   cta?: {
     label: string;
+    title?: string;
     href: string;
   };
   qualityAssurance?: {
@@ -210,6 +211,22 @@ const contentPages: Record<string, AboutPageContent> = {
         ],
       },
       {
+        title: "Higher Education Certificate (HEC)",
+        items: [
+          "HEC pathways support applicants who do not yet meet direct admission criteria for diploma or degree programmes.",
+          "Applicants should have completed UACE or an equivalent qualification recognized for higher education entry.",
+          "Available pathways include Biological Sciences, Physical Sciences, and Humanities.",
+        ],
+      },
+      {
+        title: "Mature Entry",
+        items: [
+          "Applicants may be considered through the recognized Mature Age Entry Scheme.",
+          "Applicants should present evidence of eligibility under the mature entry route.",
+          "Programme-specific requirements and University admissions guidance may apply.",
+        ],
+      },
+      {
         title: "International Applicants",
         items: [
           "Applicants whose first language or medium of instruction is not English may be required to provide evidence of English language competence.",
@@ -219,7 +236,8 @@ const contentPages: Record<string, AboutPageContent> = {
       },
     ],
     cta: {
-      label: "Start Application",
+      label: "Apply Now",
+      title: "Ready to Apply",
       href: "https://apply.kcu.ac.ug/",
     },
   },
@@ -1621,7 +1639,7 @@ function AboutContentPage({ page }: { page: AboutPageContent }) {
                   <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
                     <div>
                       <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">Next Step</p>
-                      <h2 className="mt-2 text-2xl font-black leading-tight">{page.title}</h2>
+                      <h2 className="mt-2 text-2xl font-black leading-tight">{page.cta.title ?? page.title}</h2>
                     </div>
                     <Button asChild className="h-12 rounded-xl bg-[#FFC66B] px-6 font-black text-[#0B6232] hover:bg-[#FFC66B]">
                       <Link href={page.cta.href}>{page.cta.label} <ArrowRight className="ml-2 size-4" /></Link>
