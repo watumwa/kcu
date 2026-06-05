@@ -27,6 +27,8 @@ const socialLinks = [
   { label: "YouTube", href: "https://www.youtube.com/@kingceasoruniversitytv", icon: FaYoutube },
 ];
 
+const policiesDriveUrl = "https://drive.google.com/file/d/YOUR_FILE_ID/view";
+
 function UniversityMark() {
   return (
     <Link href="/" className="block w-[210px] shrink-0 sm:w-[250px] lg:w-[285px]" aria-label="King Ceasor University home">
@@ -59,6 +61,17 @@ function TopBar() {
         </div>
 
         <div className="flex items-center gap-4">
+          <Link href="/alumni" className="text-sm font-bold text-[#FFC66B] transition hover:text-white">
+            Alumni
+          </Link>
+          <span className="text-white/30">|</span>
+          <Link href="/careers" className="text-sm font-bold text-[#FFC66B] transition hover:text-white">
+            Careers
+          </Link>
+          <span className="text-white/30">|</span>
+          <Link href={policiesDriveUrl} className="text-sm font-bold text-[#FFC66B] transition hover:text-white">
+            Policies
+          </Link>
           <form action="/search" className="relative block w-64">
             <Search className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-white/70" />
             <input
