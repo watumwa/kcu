@@ -1,21 +1,19 @@
 "use client";
 
-import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
 
 const partners = [
-  { name: "University of Fort Hare", country: "South Africa", url: "https://www.ufh.ac.za" },
-  { name: "Aleksandër Moisiu University Durrës", country: "Albania", url: "https://uamd.edu.al/en/" },
-  { name: "Universidad de Montevideo", country: "Uruguay", url: "https://www.um.edu.uy/" },
-  { name: "Arab Academy for Science, Technology & Maritime Transport", country: "Egypt", url: "https://aast.edu/en/" },
-  { name: "Superior University", country: "Pakistan", url: "https://www.superior.edu.pk/" },
-  { name: "Rosebank International University College", country: "Ghana", url: "https://www.riuc.edu.gh/" },
-  { name: "Vaal University of Technology", country: "South Africa", url: "https://vut.ac.za/" },
-  { name: "Dominican University", country: "Nigeria", url: "https://dui.edu.ng/" },
-  { name: "Erasmus+ Programme", country: "European Union", url: "https://erasmus-plus.ec.europa.eu" },
-  { name: "Makerere University", country: "Uganda", url: "https://cns.mak.ac.ug" },
-  { name: "RENU", country: "Uganda", url: "https://renu.ac.ug/" },
+  { name: "University of Fort Hare", country: "South Africa" },
+  { name: "Aleksandër Moisiu University Durrës", country: "Albania" },
+  { name: "Universidad de Montevideo", country: "Uruguay" },
+  { name: "Arab Academy for Science, Technology & Maritime Transport", country: "Egypt" },
+  { name: "Superior University", country: "Pakistan" },
+  { name: "Rosebank International University College", country: "Ghana" },
+  { name: "Vaal University of Technology", country: "South Africa" },
+  { name: "Dominican University", country: "Nigeria" },
+  { name: "Erasmus+ Programme", country: "European Union" },
+  { name: "Makerere University", country: "Uganda" },
+  { name: "RENU", country: "Uganda" },
 ];
 
 // Duplicate for seamless loop
@@ -35,12 +33,6 @@ export default function Collaborations() {
               KCU partners with leading institutions across Africa, Europe, Asia and the Americas.
             </p>
           </div>
-          <Link
-            href="/about/collaborations-partnerships"
-            className="hidden sm:inline-flex items-center gap-1.5 text-sm font-black text-[#0B6232] hover:gap-3 transition-all"
-          >
-            View All <ArrowRight className="size-4" />
-          </Link>
         </div>
 
         {/* Scrolling ticker */}
@@ -55,12 +47,9 @@ export default function Collaborations() {
             className="flex gap-4 w-max"
           >
             {looped.map((p, i) => (
-              <Link
+              <div
                 key={i}
-                href={p.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex flex-col justify-between shrink-0 w-52 rounded-2xl border border-slate-200 bg-[#F7F9FC] px-5 py-4 hover:border-[#0B6232] hover:bg-white hover:shadow-md transition-all duration-200"
+                className="flex flex-col justify-between shrink-0 w-52 rounded-2xl border border-slate-200 bg-[#F7F9FC] px-5 py-4"
               >
                 {/* Initials avatar */}
                 <div className="size-10 rounded-xl bg-[#0B6232]/10 flex items-center justify-center mb-3">
@@ -68,22 +57,13 @@ export default function Collaborations() {
                     {p.name.split(" ").slice(0, 2).map(w => w[0]).join("")}
                   </span>
                 </div>
-                <p className="text-sm font-bold text-slate-900 leading-snug line-clamp-2 group-hover:text-[#0B6232] transition-colors">
+                <p className="text-sm font-bold text-slate-900 leading-snug line-clamp-2">
                   {p.name}
                 </p>
                 <p className="text-[11px] text-slate-400 mt-1">{p.country}</p>
-              </Link>
+              </div>
             ))}
           </motion.div>
-        </div>
-
-        <div className="mt-6 sm:hidden">
-          <Link
-            href="/about/collaborations-partnerships"
-            className="inline-flex items-center gap-1.5 text-sm font-black text-[#0B6232]"
-          >
-            View All Partnerships <ArrowRight className="size-4" />
-          </Link>
         </div>
 
       </div>

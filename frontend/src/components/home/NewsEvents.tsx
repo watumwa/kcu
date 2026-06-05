@@ -186,15 +186,6 @@ export default function NewsEvents() {
                 )}
               </motion.div>
             </AnimatePresence>
-
-            <div className="mt-8">
-              <Link
-                href="/news"
-                className="inline-flex items-center gap-2 rounded-full border-2 border-[#0B6232] px-7 py-3 text-sm font-black text-[#0B6232] transition hover:bg-[#0B6232] hover:text-white"
-              >
-                View All News <ArrowRight className="size-4" />
-              </Link>
-            </div>
           </div>
 
           {/* Events Timeline — 1/3 */}

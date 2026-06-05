@@ -277,13 +277,4 @@ export const newsItems = [
     image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=80",
     featured: false,
   },
-  {
-    category: "Student Life",
-    title: "Guild Leadership Handover and Swearing-In Ceremony Held at KCU",
-    date: "28 Apr 2026",
-    href: "https://kcu.ac.ug/guild-leadership-swearing-in-ceremony-held-at-king-ceasor-university/",
-    text: "A new era of student leadership begins as KCU's Guild Executive was sworn in at an official handover and inauguration ceremony.",
-    image: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=900&q=80",
-    featured: false,
-  },
 ];
