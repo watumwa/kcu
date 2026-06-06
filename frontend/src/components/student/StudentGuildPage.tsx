@@ -19,27 +19,27 @@ import Navbar from "@/components/layout/Navbar";
 
 const leadership = [
   { ministry: "Guild President", name: "HE. Muhoozi Daniel Noah", image: "/Guild/Guild President.jpeg", tier: "top" as const },
-  { ministry: "Vice President", name: "HON. Nagirinya Amina", image: "/Guild/Vice President.jpeg", tier: "mid" as const },
-  { ministry: "Prime Minister", name: "HON. Uzamukunda Prossy", image: "/Guild/Prime Minister.jpeg", tier: "mid" as const },
-  { ministry: "Deputy Prime Minister & Minister of Social Affairs", name: "HON. Nkurunziza Moses", image: "/Guild/Deputy Prime Minister.jpeg", tier: "mid" as const },
+  { ministry: "Vice President", name: "Hon. Nagirinya Amina", image: "/Guild/Vice President.jpeg", tier: "mid" as const },
+  { ministry: "Prime Minister", name: "Hon. Uzamukunda Prossy", image: "/Guild/Prime Minister.jpeg", tier: "mid" as const },
+  { ministry: "Deputy Prime Minister & Minister of Social Affairs", name: "Hon. Nkurunziza Moses", image: "/Guild/Deputy Prime Minister.jpeg", tier: "mid" as const },
 ];
 
 const cabinet = [
-  { ministry: "Guild Secretary", name: "HON. Tuyumvire Racheal", icon: Megaphone },
-  { ministry: "Academic Affairs", name: "HON. Mwongyera Gilbert", icon: BookOpenCheck },
-  { ministry: "Culture & Mobilization", name: "HON. Mfitumukiza Ivan", icon: Users },
-  { ministry: "Estates & Environment", name: "HON. Gumisiriza Brian", icon: Building2 },
-  { ministry: "External Affairs", name: "HON. Muhammed Jibril Amir", icon: Landmark },
-  { ministry: "Finance", name: "HON. Agaba Rinah", icon: CircleDollarSign },
+  { ministry: "Guild Secretary", name: "Hon. Tuyumvire Racheal", icon: Megaphone },
+  { ministry: "Academic Affairs", name: "Hon. Mwongyera Gilbert", icon: BookOpenCheck },
+  { ministry: "Culture & Mobilization", name: "Hon. Mfitumukiza Ivan", icon: Users },
+  { ministry: "Estates & Environment", name: "Hon. Gumisiriza Brian", icon: Building2 },
+  { ministry: "External Affairs", name: "Hon. Muhammed Jibril Amir", icon: Landmark },
+  { ministry: "Finance", name: "Hon. Agaba Rinah", icon: CircleDollarSign },
   { ministry: "Gender, Ethics & Integrity", name: "HON. Akatwijuka Tracy", icon: Scale },
-  { ministry: "Health", name: "HON. Nkurunziza Derrick", icon: HeartPulse },
-  { ministry: "Research & ICT", name: "HON. Umutoni Denize", icon: MonitorCog },
+  { ministry: "Health", name: "Hon. Nkurunziza Derrick", icon: HeartPulse },
+  { ministry: "Research & ICT", name: "Hon. Umutoni Denize", icon: MonitorCog },
   { ministry: "Justice & Constitutional Affairs", name: "HON. Kemigisha Daisy", icon: Scale },
-  { ministry: "Off-Campus Affairs", name: "HON. Kemigisha Racheal", icon: Building2 },
-  { ministry: "Students' Affairs", name: "HON. Ingabire Agnes", icon: Vote },
-  { ministry: "Security", name: "HON. Ampurire Darlious", icon: ShieldCheck },
-  { ministry: "Sports & Games", name: "HON. Muhoozi Nassem", icon: Trophy },
-  { ministry: "Students with Disabilities", name: "HON. Kirabo Miriam", icon: BriefcaseBusiness },
+  { ministry: "Off-Campus Affairs", name: "Hon. Kemigisha Racheal", icon: Building2 },
+  { ministry: "Students' Affairs", name: "Hon. Ingabire Agnes", icon: Vote },
+  { ministry: "Security", name: "Hon. Ampurire Darlious", icon: ShieldCheck },
+  { ministry: "Sports & Games", name: "Hon. Muhoozi Nassem", icon: Trophy },
+  { ministry: "Students with Disabilities", name: "Hon. Kirabo Miriam", icon: BriefcaseBusiness },
 ];
 
 export default function StudentGuildPage() {
