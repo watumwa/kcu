@@ -22,10 +22,16 @@ export default function AboutSection() {
            Welcome to King Ceasor University, a Chartered institution committed to excellence in education, research, innovation, and service to society.
           </p>
           <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
-            At King Ceasor University, we believe that education is a transformative journey that goes beyond the acquisition of knowledge. It is about developing character, nurturing leadership, fostering innovation, and equipping learners with the skills and values needed to make a meaningful contribution to society. Our commitment is to provide a supportive and intellectually stimulating environment where students are empowered to think critically, act ethically, and pursue excellence in their chosen fields.
+            At KCU, we believe education is transformative, empowering learners with the knowledge, skills, values, and leadership qualities needed to thrive in a rapidly changing world. We provide a supportive and intellectually stimulating environment that encourages critical thinking, ethical conduct, innovation, and academic excellence.
           </p>
           <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
-            Since our establishment, the University has made significant strides in advancing quality higher education. The award of the University Charter marked an important milestone in our growth and affirmed our commitment to academic excellence and institutional quality. We are also proud that our Bachelor of Medicine and Bachelor of Surgery (MBChB) programme has achieved recognition through ECFMG pathways, creating opportunities for our graduates to pursue postgraduate training and professional advancement internationally.
+            The award of our University Charter reflects our commitment to quality higher education and continuous institutional growth. We are also proud that our Bachelor of Medicine and Bachelor of Surgery (MBChB) programme has achieved recognition through ECFMG pathways, expanding international opportunities for our graduates.
+          </p>
+          <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
+            As we look ahead, we are embracing Competency-Based Education and Training (CBET), advancing research and innovation, strengthening global partnerships, and leveraging technology to enhance learning.
+          </p>
+          <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
+            I invite you to join KCU as we transform lives, advance knowledge, and prepare globally competitive professionals and leaders for the future.
           </p>
         
           <div className="mt-6 border-l-4 border-[#FFC66B] pl-4">

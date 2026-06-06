@@ -18,7 +18,7 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
-import Image from "next/image";
+
 
 // ── Tab content ────────────────────────────────────────────────────────────
 
@@ -463,9 +463,7 @@ function TabAdministration() {
               <CouncilCard key={p.name} person={p} onSelect={setSelectedPerson} />
             ))}
           </div>
-          <div className="mb-2 rounded-full border border-slate-200 bg-[#FFFFFF] px-4 py-1 text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">
-            Managers &amp; Officers
-          </div>
+          
           <div className="flex w-full flex-wrap justify-center gap-5">
             {managers.map((p) => (
               <CouncilCard key={`${p.role}-${p.name}`} person={p} onSelect={setSelectedPerson} />

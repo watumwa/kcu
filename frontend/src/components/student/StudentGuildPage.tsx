@@ -14,46 +14,37 @@ import {
   Vote,
 } from "lucide-react";
 import Footer from "@/components/layout/Footer";
+import Image from "next/image";
 import Navbar from "@/components/layout/Navbar";
 
 const leadership = [
-  { ministry: "Guild President", name: "HE. Adonia Ainebyona", tier: "top" as const },
-  { ministry: "Vice President", name: "HON. Ahura Precious", tier: "mid" as const },
-  { ministry: "Prime Minister", name: "HON. Nkurunziza Brendah Hildah", tier: "mid" as const },
-  { ministry: "Deputy Prime Minister", name: "HON. Ocan Jimmy", tier: "mid" as const },
+  { ministry: "Guild President", name: "HE. Muhoozi Daniel Noah", image: "/Guild/Guild President.jpeg", tier: "top" as const },
+  { ministry: "Vice President", name: "HON. Nagirinya Amina", image: "/Guild/Vice President.jpeg", tier: "mid" as const },
+  { ministry: "Prime Minister", name: "HON. Uzamukunda Prossy", image: "/Guild/Prime Minister.jpeg", tier: "mid" as const },
+  { ministry: "Deputy Prime Minister & Minister of Social Affairs", name: "HON. Nkurunziza Moses", image: "/Guild/Deputy Prime Minister.jpeg", tier: "mid" as const },
 ];
 
 const cabinet = [
-  { ministry: "Academic Affairs", name: "HON. Asingwire Davis", icon: BookOpenCheck },
-  { ministry: "Culture & Mobilisation", name: "HON. Atusinguza Bridget\nHON. Kyarikunda James", icon: Users },
-  { ministry: "Estates & Environment", name: "HON. Muhanguzi Datsun", icon: Building2 },
-  { ministry: "External Affairs", name: "HON. Ekinamushabire Evanice", icon: Landmark },
-  { ministry: "Finance", name: "HON. Akatwijuka Kenneth", icon: CircleDollarSign },
-  { ministry: "Gender, Ethics & Integrity", name: "HON. Ampumuza Hope", icon: Scale },
-  { ministry: "Health", name: "HON. Nyebaze Rose", icon: HeartPulse },
-  { ministry: "Information", name: "HON. Munyambabazi Joshua", icon: Megaphone },
-  { ministry: "Justice & Constitutional Affairs", name: "HON. Mutoni Lillian", icon: Scale },
-  { ministry: "Off Campus Affairs", name: "HON. Arinda Lord", icon: Building2 },
-  { ministry: "Research & Computer Technology", name: "HON. Mfitumukiza Papius Fahad", icon: MonitorCog },
-  { ministry: "Security", name: "HON. Matsiko Denis", icon: ShieldCheck },
-  { ministry: "Social Affairs", name: "HON. Byamugisha Crescent\nHON. Ishimwe Precious", icon: Users },
-  { ministry: "Sports & Games", name: "HON. Asiimwe Edgar", icon: Trophy },
-  { ministry: "Students Affairs", name: "HON. Ahmad Abdusalam\nHON. Mukwaya Francis", icon: Vote },
-  { ministry: "Students with Disabilities", name: "HON. Nyirabakunzi Judith", icon: BriefcaseBusiness },
+  { ministry: "Guild Secretary", name: "HON. Tuyumvire Racheal", icon: Megaphone },
+  { ministry: "Academic Affairs", name: "HON. Mwongyera Gilbert", icon: BookOpenCheck },
+  { ministry: "Culture & Mobilization", name: "HON. Mfitumukiza Ivan", icon: Users },
+  { ministry: "Estates & Environment", name: "HON. Gumisiriza Brian", icon: Building2 },
+  { ministry: "External Affairs", name: "HON. Muhammed Jibril Amir", icon: Landmark },
+  { ministry: "Finance", name: "HON. Agaba Rinah", icon: CircleDollarSign },
+  { ministry: "Gender, Ethics & Integrity", name: "HON. Akatwijuka Tracy", icon: Scale },
+  { ministry: "Health", name: "HON. Nkurunziza Derrick", icon: HeartPulse },
+  { ministry: "Research & ICT", name: "HON. Umutoni Denize", icon: MonitorCog },
+  { ministry: "Justice & Constitutional Affairs", name: "HON. Kemigisha Daisy", icon: Scale },
+  { ministry: "Off-Campus Affairs", name: "HON. Kemigisha Racheal", icon: Building2 },
+  { ministry: "Students' Affairs", name: "HON. Ingabire Agnes", icon: Vote },
+  { ministry: "Security", name: "HON. Ampurire Darlious", icon: ShieldCheck },
+  { ministry: "Sports & Games", name: "HON. Muhoozi Nassem", icon: Trophy },
+  { ministry: "Students with Disabilities", name: "HON. Kirabo Miriam", icon: BriefcaseBusiness },
 ];
 
-function getInitials(name: string) {
-  return name
-    .replace(/^(HE\.?|HON\.?|Dr\.?|Prof\.?|Mr\.?|Mrs\.?)\s*/gi, "")
-    .trim()
-    .split(" ")
-    .slice(0, 2)
-    .map((word) => word[0])
-    .join("")
-    .toUpperCase();
-}
-
 export default function StudentGuildPage() {
+  const guildPresident = leadership[0];
+
   return (
     <>
       <Navbar />
@@ -84,8 +75,14 @@ export default function StudentGuildPage() {
               <div className="pointer-events-none absolute -bottom-20 -left-20 size-72 rounded-full bg-[#FFC66B]/5" />
               <div className="relative flex flex-col gap-6 sm:flex-row sm:items-center sm:gap-10">
                 <div className="relative shrink-0">
-                  <div className="grid size-28 place-items-center rounded-full bg-[#FFC66B] text-4xl font-black text-[#0B6232] shadow-2xl ring-4 ring-white/20">
-                    AA
+                  <div className="relative size-28 overflow-hidden rounded-full bg-[#FFC66B] shadow-2xl ring-4 ring-white/20">
+                    <Image
+                      src={guildPresident.image}
+                      alt={guildPresident.name}
+                      fill
+                      sizes="112px"
+                      className="object-cover object-top"
+                    />
                   </div>
                   <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-white px-3 py-0.5 text-[10px] font-black text-[#0B6232] shadow">
                     Guild President
@@ -94,15 +91,23 @@ export default function StudentGuildPage() {
 
                 <div className="flex-1">
                   <p className="text-[10px] font-black uppercase tracking-[0.25em] text-[#FFC66B]">Communication from the Guild Office</p>
-                  <h2 className="mt-1 text-2xl font-black text-white">HE. Muhoozi Daniel</h2>
+                  <h2 className="mt-1 text-2xl font-black text-white">{guildPresident.name}</h2>
                   <div className="mt-2 h-0.5 w-12 rounded-full bg-[#FFC66B]" />
                   <p className="mt-4 text-sm leading-7 text-white/80">
-                    It is with great honor and enthusiasm that I address you as your Guild President. We are deeply committed to serving your needs, amplifying your voices, and fostering a vibrant, supportive university experience for every student.
+                    Dear Ceasorians,
+                  </p>
+                  <p className="mt-4 text-sm leading-7 text-white/80">
+                    Welcome to the 2026/2027 Guild term. It is an honor to serve as your Guild President and to represent your interests. Together with the Guild Cabinet, I am committed to promoting academic excellence, student welfare and meaningful opportunities for personal and professional growth.
                   </p>
                   <p className="mt-3 text-sm leading-7 text-white/80">
-                    Together, let us make this a successful and memorable academic year. Please do not hesitate to reach out with your ideas, concerns, or suggestions.
+                    Our focus is simple: Students First. We will work closely with University Management to address student concerns, strengthen academic support and create an inclusive campus environment where every voice matters.
                   </p>
-                  <p className="mt-5 text-xs font-black italic text-[#FFC66B]">- Yours in service, Adonia Ainebyona</p>
+                  <p className="mt-4 text-sm leading-7 text-white/80">
+                    I invite you to engage with your Guild, share your ideas and hold us accountable as we work together to build a stronger King Ceasor University.
+                  </p>
+                  <p className="mt-5 text-xs font-black italic text-[#FFC66B]">
+                    Yours in service, Muhoozi Daniel Noah.
+                  </p>
                 </div>
               </div>
             </div>
@@ -117,9 +122,15 @@ export default function StudentGuildPage() {
               {leadership.map((leader, index) => {
                 const isPresident = index === 0;
                 return (
-                  <div key={leader.name} className={`relative overflow-hidden rounded-lg p-6 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-xl ${isPresident ? "bg-[#0B6232] text-white" : "border border-slate-100 bg-white"}`}>
-                    <div className={`mx-auto grid size-20 place-items-center rounded-full text-2xl font-black shadow-inner ${isPresident ? "bg-[#FFC66B] text-[#0B6232]" : "bg-[#0B6232]/10 text-[#0B6232]"}`}>
-                      {getInitials(leader.name)}
+                  <div key={leader.name} className={`relative overflow-hidden rounded-lg p-5 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-xl ${isPresident ? "bg-[#0B6232] text-white" : "border border-slate-100 bg-white"}`}>
+                    <div className={`relative mx-auto size-28 overflow-hidden rounded-full shadow-inner ring-4 ${isPresident ? "bg-[#FFC66B] ring-[#FFC66B]/30" : "bg-[#0B6232]/10 ring-[#0B6232]/10"}`}>
+                      <Image
+                        src={leader.image}
+                        alt={leader.name}
+                        fill
+                        sizes="112px"
+                        className="object-cover object-top"
+                      />
                     </div>
                     <p className={`mt-4 text-sm font-black leading-snug ${isPresident ? "text-white" : "text-slate-950"}`}>{leader.name}</p>
                     <span className={`mt-2 inline-block rounded-full px-3 py-1 text-[10px] font-black uppercase tracking-wide ${isPresident ? "bg-[#FFC66B] text-[#0B6232]" : "bg-[#0B6232]/10 text-[#0B6232]"}`}>

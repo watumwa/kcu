@@ -19,7 +19,6 @@ type AboutPageContent = {
   }[];
   cta?: {
     label: string;
-    title?: string;
     href: string;
   };
   qualityAssurance?: {
@@ -39,17 +38,50 @@ type AboutPageContent = {
       details: string;
     }[];
   };
-  counselling?: {
-    counsellor: {
-      name: string;
-      title: string;
-      image: string;
-      message: string;
-    };
-  };
 };
 
 const aboutPages: Record<string, AboutPageContent> = {
+  "about/governance": {
+    eyebrow: "Governance",
+    title: "University Governance",
+    intro:
+      "King Ceasor University is guided by governance and administration structures that uphold academic excellence, accountability, sustainable development, innovation, and service to society.",
+    sections: [
+      {
+        title: "University Council",
+        text:
+          "The University Council is the supreme governing body of King Ceasor University, responsible for strategic leadership, policy oversight and institutional governance. It safeguards the University's vision, mission and long-term growth while supporting quality education, innovation and service to society.",
+        items: [
+          "Finance, Planning & Development Committee: Mrs. Grace N. Gwaku",
+          "Quality Assurance & Gender Committee: Prof. Josephat Byamugisha",
+          "Audit & Risk Management Committee: Mr. Donald Nyakairu",
+          "Student Welfare & Disciplinary Committee: Mr. Cyriaco Kabagambe",
+          "Appointments Board: Dr. Kamba Fadhiru Pakoyo",
+        ],
+      },
+      {
+        title: "University Administration",
+        text:
+          "The University Administration serves as the executive arm of King Ceasor University, coordinating academic, administrative and operational activities. Guided by the University's vision and strategic objectives, it promotes quality education, efficient resource management, institutional growth and a supportive learning environment.",
+        items: [
+          "Mrs. Pape Matama Bagonza: University Secretary",
+          "Alfred Namoah Masikye: Academic Registrar",
+          "Assoc. Prof. Annabella Habinka Ejiri: Director Quality Assurance",
+          "Mrs. Sylivia Okwi Christine: Director Finance",
+          "Fr. Dr. Lumala Aloysius Gonzagga: Dean of Students",
+        ],
+      },
+      {
+        title: "Institutional Direction",
+        text:
+          "KCU's governance supports its mission to provide holistic education through inventive teaching, learning, and research aimed at fostering socio-economic transformation.",
+      },
+    ],
+    cta: {
+      label: "Read About KCU",
+      href: "/about",
+    },
+  },
   "about/collaborations-partnerships": {
     eyebrow: "Partnerships",
     title: "Collaborations & Partnerships",
@@ -178,22 +210,6 @@ const contentPages: Record<string, AboutPageContent> = {
         ],
       },
       {
-        title: "Higher Education Certificate (HEC)",
-        items: [
-          "HEC pathways support applicants who do not yet meet direct admission criteria for diploma or degree programmes.",
-          "Applicants should have completed UACE or an equivalent qualification recognized for higher education entry.",
-          "Available pathways include Biological Sciences, Physical Sciences, and Humanities.",
-        ],
-      },
-      {
-        title: "Mature Entry",
-        items: [
-          "Applicants may be considered through the recognized Mature Age Entry Scheme.",
-          "Applicants should present evidence of eligibility under the mature entry route.",
-          "Programme-specific requirements and University admissions guidance may apply.",
-        ],
-      },
-      {
         title: "International Applicants",
         items: [
           "Applicants whose first language or medium of instruction is not English may be required to provide evidence of English language competence.",
@@ -203,16 +219,47 @@ const contentPages: Record<string, AboutPageContent> = {
       },
     ],
     cta: {
-      label: "Apply Now",
-      title: "Ready to Apply",
+      label: "Start Application",
       href: "https://apply.kcu.ac.ug/",
+    },
+  },
+  academics: {
+    eyebrow: "Academics",
+    title: "Academics at KCU",
+    intro:
+      "KCU offers academic programmes designed to inspire creativity, innovation, critical thinking, and career readiness across health sciences, law, management, computing, engineering, and related fields.",
+    sections: [
+      {
+        title: "Academic Schools",
+        text:
+          "The University offers programmes through three schools, each focused on training students for professional excellence and social impact.",
+        items: [
+          "School of Medicine, Health & Life Sciences",
+          "School of Law & Management Sciences",
+          "School of Science, Computing & Engineering",
+        ],
+      },
+      {
+        title: "Teaching and Learning",
+        text:
+          "KCU combines classroom learning, practical training, research, and professional exposure to help students develop the knowledge and skills required in a changing world.",
+      },
+      {
+        title: "Online Learning",
+        text:
+          "KClass, the KCU e-learning platform, supports flexible online learning with student-centred lessons, resources, and opportunities to learn at your own pace.",
+      },
+    ],
+    cta: {
+      label: "Explore Courses",
+      href: "/academics/courses",
     },
   },
   "academics/schools": {
     eyebrow: "Academics",
     title: "Schools at KCU",
     intro:
-      "King Ceasor University's schools provide focused academic homes for students pursuing health, law, business, science, computing, investigation, and energy-related pathways.",
+      "King Ceasor University's schools provide focused academic homes for students pursuing health, law, business, science, computing, engineering, agriculture, and energy-related pathways.",
     sections: [
       {
         title: "School of Medicine, Health & Life Sciences",
@@ -220,12 +267,10 @@ const contentPages: Record<string, AboutPageContent> = {
           "Founded in 2011, the school provides medical and healthcare education designed to prepare future healthcare professionals for an evolving health landscape.",
         items: [
           "Bachelor of Medicine and Bachelor of Surgery",
-          "Bachelor of Nursing Science - Direct",
-          "Bachelor of Nursing Science - Completion",
+          "Bachelor of Nursing Sciences",
+          "Bachelor of Medical Records & Health Informatics",
           "Diploma in Clinical Medicine & Community Health",
           "Diploma in Medical Laboratory Technology",
-          "Higher Education Certificate - Biological Sciences",
-          "Higher Education Certificate - Physical Sciences",
         ],
       },
       {
@@ -235,20 +280,18 @@ const contentPages: Record<string, AboutPageContent> = {
         items: [
           "Bachelor of Laws",
           "Bachelor of Business Administration",
-          "Bachelor of Oil, Gas, and Energy Management",
-          "Bachelor of Applied Economics",
-          "Diploma in Global Business",
-          "Higher Education Certificate - Humanities",
+          "Business specialisations including Accounting and Finance, Marketing Management, Banking and Insurance",
         ],
       },
       {
         title: "School of Science, Computing & Engineering",
         text:
-          "The school comprises computing, digital investigation, cyber security, and petroleum geoscience programmes, with training linked to technology, investigation, and energy needs.",
+          "The school comprises computing, Artificial Intelligence and Data Science, Agriculture, and Petroleum Geoscience departments, with training linked to technology, investigation, agriculture, and energy needs.",
         items: [
-          "Bachelor of Science in Petroleum Geoscience",
-          "Bachelor of Computer Forensics and Criminal Investigations",
-          "Certificate programmes in Computer Applications, Web Design, Computer Graphics, AI with Internet of Things, Cyber Security, Digital Forensic Investigations, and Organic Farming",
+          "Bachelor of Computer Forensics & Criminal Investigation",
+          "Bachelor of Oil, Gas & Energy Management",
+          "Bachelor of Agriculture",
+          "Higher Education Certificate pathways",
         ],
       },
     ],
@@ -267,17 +310,15 @@ const contentPages: Record<string, AboutPageContent> = {
         title: "Accredited Programmes",
         items: [
           "Bachelor of Medicine & Bachelor of Surgery",
-          "Bachelor of Nursing Science - Direct",
-          "Bachelor of Nursing Science - Completion",
+          "Bachelor of Nursing Sciences",
+          "Bachelor of Medical Records & Health Informatics",
+          "Bachelor of Agriculture",
           "Bachelor of Laws",
           "Bachelor of Business Administration",
-          "Bachelor of Oil, Gas, and Energy Management",
-          "Bachelor of Applied Economics",
-          "Bachelor of Science in Petroleum Geoscience",
-          "Bachelor of Computer Forensics and Criminal Investigations",
+          "Bachelor of Computer Forensics & Criminal Investigation",
+          "Bachelor of Oil, Gas & Energy Management",
           "Diploma in Clinical Medicine & Community Health",
           "Diploma in Medical Laboratory Technology",
-          "Diploma in Global Business",
           "Higher Education Certificate pathways in Biological Sciences, Physical Sciences, and Humanities",
         ],
       },
@@ -296,20 +337,19 @@ const contentPages: Record<string, AboutPageContent> = {
     eyebrow: "Courses",
     title: "Undergraduate Programmes",
     intro:
-      "KCU undergraduate programmes build strong professional foundations across health, law, business, science, computing, investigation, and energy-related disciplines.",
+      "KCU undergraduate programmes build strong professional foundations across health, law, business, science, computing, agriculture, and energy-related disciplines.",
     sections: [
       {
         title: "Undergraduate Pathways",
         items: [
           "Bachelor of Medicine & Bachelor of Surgery",
-          "Bachelor of Nursing Science - Direct",
-          "Bachelor of Nursing Science - Completion",
+          "Bachelor of Nursing Sciences",
+          "Bachelor of Medical Records & Health Informatics",
+          "Bachelor of Agriculture",
           "Bachelor of Laws",
           "Bachelor of Business Administration",
-          "Bachelor of Oil, Gas, and Energy Management",
-          "Bachelor of Applied Economics",
-          "Bachelor of Science in Petroleum Geoscience",
-          "Bachelor of Computer Forensics and Criminal Investigations",
+          "Bachelor of Computer Forensics & Criminal Investigation",
+          "Bachelor of Oil, Gas & Energy Management",
         ],
       },
       {
@@ -334,7 +374,6 @@ const contentPages: Record<string, AboutPageContent> = {
         items: [
           "Diploma in Clinical Medicine & Community Health",
           "Diploma in Medical Laboratory Technology",
-          "Diploma in Global Business",
         ],
       },
       {
@@ -365,15 +404,10 @@ const contentPages: Record<string, AboutPageContent> = {
       {
         title: "Short Course Areas",
         items: [
-          "Certificate in Rest ECG Reading",
-          "Certificate in Holter ECG Reading/Interpretation",
-          "Certificate in Stress ECH Reading/Interpretation",
-          "Certificate in English Proficiency Course",
-          "Certificate in Digital Marketing",
-          "Certificate in Computer Applications",
-          "Certificate in Web design, Dev't & Administration",
-          "Cyber Security for Beginners",
-          "Digital Forensic Investigations for beginners",
+          "Language proficiency",
+          "Digital marketing",
+          "Computer applications",
+          "Online learning through KClass",
         ],
       },
       {
@@ -551,7 +585,7 @@ const contentPages: Record<string, AboutPageContent> = {
           "Welcome to the Directorate of Quality Assurance and Control (DQA&C) at King Ceasor University. We are dedicated to promoting excellence in teaching, learning, research, and service through effective quality assurance practices. As the University's focal point for quality reviews and continuous improvement initiatives, we work closely with staff, students, and stakeholders to uphold high academic and operational standards. We invite you to explore our services and quality initiatives, and encourage you to contact us for any additional information or support.",
       },
       staff: [
-        { name: "Dr. Annabella Habinka Ejiri", role: "Director Quality Assurance" },
+        { name: "Dr. Annabella Habinka Ejiri", role: "Director Quality Assurance", image:"/"},
         { name: "Ms. Atuhwera Joanita", role: "Quality Assurance Monitoring Officer", image:"/Joanita.jpeg" },
         { name: "Mr. Ayebale John Justice", role: "Clinical Monitoring Officer", image:"/" },
         { name: "Ms. Grace Asingwire", role: "Quality Assurance Officer", image:"/Grace.jpg" },
@@ -587,15 +621,6 @@ const contentPages: Record<string, AboutPageContent> = {
     title: "Counselling",
     intro:
       "KCU counselling and guidance support helps students navigate academic pressure, personal wellbeing, adjustment to university life, and holistic development.",
-    counselling: {
-      counsellor: {
-        name: "University Counsellor",
-        title: "Counselling & Guidance",
-        image: "/Counsellor/DSC09882.jpeg",
-        message:
-          "Welcome to the Counselling and Guidance service at King Ceasor University. Our office provides a safe, respectful, and confidential space where students can talk through personal, social, emotional, and academic concerns. We are here to support wellbeing, encourage resilience, and help every student make healthy decisions while adjusting to university life. Students are encouraged to reach out whenever they need guidance, care, or referral support.",
-      },
-    },
     sections: [
       {
         title: "Student Wellbeing",
@@ -736,443 +761,58 @@ const contentPages: Record<string, AboutPageContent> = {
 
 const feeProgrammes = [
   {
-    category: "Undergraduate / Degree Programs",
-    group: "School of Medicine, Health and Life Sciences",
-    summary: "Undergraduate, diploma, and higher education certificate programmes in medicine and life sciences.",
-    feeLabel: "Fees Per Semester",
+    group: "Undergraduate Programmes",
+    summary: "Degree programmes across health sciences, law, business, computing, agriculture, and energy.",
     courses: [
-      { code: "01", course: "Bachelor of Medicine and Bachelor of Surgery", duration: "5 Years", uganda: "$3,000", international: "$3,000" },
-      { code: "02", course: "Bachelor of Nursing Science - Direct", duration: "4 Years", uganda: "$1,100", international: "$1,300" },
-      { code: "03", course: "Bachelor of Nursing Science - Completion", duration: "3 Years", uganda: "$1,100", international: "$1,300" },
-      { code: "04", course: "Diploma in Clinical Medicine and Community Health", duration: "3 Years", uganda: "$1,000", international: "$1,150" },
-      { code: "05", course: "Diploma in Medical Laboratory Technology", duration: "3 Years", uganda: "$1,000", international: "$1,150" },
-      { code: "06", course: "Higher Education Certificate - Biological Sciences", duration: "1 Year", uganda: "$550", international: "$750" },
-      { code: "07", course: "Higher Education Certificate - Physical Sciences", duration: "1 Year", uganda: "$550", international: "$750" },
+      { code: "01", course: "Bachelor of Medicine & Bachelor of Surgery", school: "Medicine, Health & Life Sciences", level: "Bachelor", duration: "5 years", billing: "Per semester", feeStatus: "Professional medical programme" },
+      { code: "02", course: "Bachelor of Nursing Sciences", school: "Medicine, Health & Life Sciences", level: "Bachelor", duration: "4 years", billing: "Per semester", feeStatus: "Clinical training programme" },
+      { code: "03", course: "Bachelor of Medical Records & Health Informatics", school: "Medicine, Health & Life Sciences", level: "Bachelor", duration: "3 years", billing: "Per semester", feeStatus: "Health informatics programme" },
+      { code: "04", course: "Bachelor of Agriculture", school: "Science, Computing & Engineering", level: "Bachelor", duration: "3 years", billing: "Per semester", feeStatus: "Practical science programme" },
+      { code: "05", course: "Bachelor of Laws", school: "Law & Management Sciences", level: "Bachelor", duration: "4 years", billing: "Per semester", feeStatus: "Professional law programme" },
+      { code: "06", course: "Bachelor of Business Administration", school: "Law & Management Sciences", level: "Bachelor", duration: "3 years", billing: "Per semester", feeStatus: "Business and management programme" },
+      { code: "07", course: "Bachelor of Computer Forensics & Criminal Investigation", school: "Science, Computing & Engineering", level: "Bachelor", duration: "3 years", billing: "Per semester", feeStatus: "Computing and investigation programme" },
+      { code: "08", course: "Bachelor of Oil, Gas & Energy Management", school: "Science, Computing & Engineering", level: "Bachelor", duration: "3 years", billing: "Per semester", feeStatus: "Energy management programme" },
     ],
   },
   {
-    category: "Undergraduate / Degree Programs",
-    group: "School of Law and Management Sciences",
-    summary: "Degree, diploma, and higher education certificate programmes in law, business, and management.",
-    feeLabel: "Fees Per Semester",
+    group: "Diploma Programmes",
+    summary: "Practical diploma pathways for students pursuing health and community service careers.",
     courses: [
-      { code: "08", course: "Bachelor of Laws", duration: "4 Years", uganda: "$1,150", international: "$1,300" },
-      { code: "09", course: "Bachelor of Business Administration", duration: "3 Years", uganda: "$1,100", international: "$1,225" },
-      { code: "10", course: "Bachelor of Oil, Gas, and Energy Management", duration: "3 Years", uganda: "$1,100", international: "$1,225" },
-      { code: "11", course: "Bachelor of Applied Economics", duration: "3 Years", uganda: "$1,100", international: "$1,225" },
-      { code: "12", course: "Diploma in Global Business", duration: "2 Years", uganda: "$1,000", international: "$1,200" },
-      { code: "13", course: "Higher Education Certificate - Humanities", duration: "1 Year", uganda: "$550", international: "$750" },
+      { code: "09", course: "Diploma in Clinical Medicine & Community Health", school: "Medicine, Health & Life Sciences", level: "Diploma", duration: "3 years", billing: "Per semester", feeStatus: "Clinical diploma programme" },
+      { code: "10", course: "Diploma in Medical Laboratory Technology", school: "Medicine, Health & Life Sciences", level: "Diploma", duration: "3 years", billing: "Per semester", feeStatus: "Laboratory training programme" },
     ],
   },
   {
-    category: "Undergraduate / Degree Programs",
-    group: "School of Science, Computing and Engineering",
-    summary: "Degree programmes in petroleum geoscience, computing, and criminal investigations.",
-    feeLabel: "Fees Per Semester",
+    group: "Certificate and Bridging Pathways",
+    summary: "Certificate and short-course pathways for academic progression and practical skill development.",
     courses: [
-      { code: "14", course: "Bachelor of Science in Petroleum Geoscience", duration: "4 Years", uganda: "$1,150", international: "$1,300" },
-      { code: "15", course: "Bachelor of Computer Forensics and Criminal Investigations", duration: "3 Years", uganda: "$1,100", international: "$1,225" },
-    ],
-  },
-  {
-    category: "Certificate Programs",
-    group: "School of Medicine, Health and Life Sciences",
-    summary: "Professional health and life sciences certificate programmes.",
-    feeLabel: "Course Fees",
-    courses: [
-      { code: "16", course: "Certificate in Rest ECG Reading", duration: "4 Weeks", uganda: "$500", international: "$670" },
-      { code: "17", course: "Certificate in Holter ECG Reading/Interpretation", duration: "2 Weeks", uganda: "$250", international: "$400" },
-      { code: "18", course: "Certificate in Stress ECH Reading/Interpretation", duration: "2 Weeks", uganda: "$250", international: "$400" },
-      { code: "19", course: "Certificate in Production of Herbal Based creams,gels,Lotions", duration: "4 Weeks", uganda: "$115", international: "$195" },
-      { code: "20", course: "Certificate in Production of Herbal Based medicated soap,shampoo", duration: "4 Weeks", uganda: "$115", international: "$195" },
-      { code: "21", course: "Certificate in 24-Hour BP Monitoring Reporting", duration: "2 Weeks", uganda: "$250", international: "$390" },
-      { code: "22", course: "Certificate in Advanced Cardiac Life Support", duration: "2 Weeks", uganda: "$300", international: "$450" },
-    ],
-  },
-  {
-    category: "Certificate Programs",
-    group: "School of Law and Management Sciences",
-    summary: "Professional certificate programmes in communication, management, safety, and enterprise.",
-    feeLabel: "Course Fees",
-    courses: [
-      { code: "23", course: "Certificate in English Proficiency Course", duration: "3 Months", uganda: "$160", international: "$300" },
-      { code: "24", course: "Certificate in Occupational Health and Safety", duration: "1 month", uganda: "$125", international: "$240" },
-      { code: "25", course: "Certificate in book keeping for small and medium enterprises", duration: "1 month", uganda: "$100", international: "$165" },
-      { code: "26", course: "Certificate in Strategic Management", duration: "1 month", uganda: "$100", international: "$165" },
-      { code: "27", course: "Certificate in Sacco Management", duration: "1 month", uganda: "$100", international: "$165" },
-      { code: "28", course: "Certificate in Digital Marketing", duration: "2 Months", uganda: "$120", international: "$230" },
-      { code: "29", course: "Certificate in Tax and Credit Management", duration: "1 month", uganda: "$115", international: "$225" },
-    ],
-  },
-  {
-    category: "Certificate Programs",
-    group: "School of Science, Computing and Engineering",
-    summary: "Certificate programmes in computing, cyber security, digital forensics, and organic farming.",
-    feeLabel: "Course Fees",
-    courses: [
-      { code: "30", course: "Certificate in Computer Applications", duration: "2 Months", uganda: "$120", international: "$250" },
-      { code: "31", course: "Certificate in Web design,Dev't & Administration", duration: "2 Months", uganda: "$160", international: "$265" },
-      { code: "32", course: "Certificate in Computer Graphics", duration: "2 Months", uganda: "$120", international: "$180" },
-      { code: "33", course: "Certificate in AI with Internet of Things using Arduino", duration: "2 Months", uganda: "$200", international: "$315" },
-      { code: "34", course: "Cyber Security for Beginners", duration: "2 Months", uganda: "$120", international: "$200" },
-      { code: "35", course: "Digital Forensic Investigations for beginners", duration: "2 Months", uganda: "$120", international: "$200" },
-      { code: "36", course: "Certificate in Organic farming", duration: "2 Months", uganda: "$115", international: "$175" },
+      { code: "11", course: "Higher Education Certificate in Biological Sciences", school: "Science, Computing & Engineering", level: "Certificate", duration: "1 year", billing: "Per semester", feeStatus: "Bridging pathway" },
+      { code: "12", course: "Higher Education Certificate in Physical Sciences", school: "Science, Computing & Engineering", level: "Certificate", duration: "1 year", billing: "Per semester", feeStatus: "Bridging pathway" },
+      { code: "13", course: "Higher Education Certificate in Humanities", school: "Law & Management Sciences", level: "Certificate", duration: "1 year", billing: "Per semester", feeStatus: "Bridging pathway" },
+      { code: "14", course: "Language Proficiency", school: "Short Courses", level: "Short Course", duration: "Short course", billing: "As communicated", feeStatus: "Short-course fee" },
+      { code: "15", course: "Digital Marketing", school: "Short Courses", level: "Short Course", duration: "Short course", billing: "As communicated", feeStatus: "Short-course fee" },
+      { code: "16", course: "Computer Applications", school: "Short Courses", level: "Short Course", duration: "Short course", billing: "As communicated", feeStatus: "Short-course fee" },
     ],
   },
 ];
 
-type FeeProgrammeGroup = (typeof feeProgrammes)[number];
-type FeeProgrammeCourse = FeeProgrammeGroup["courses"][number];
-type AcademicProgrammeVariant = "schools" | "courses" | "undergraduate" | "diploma" | "certificates";
-
-type AcademicCourse = {
-  code: string;
-  course: string;
-  duration: string;
-  category: string;
-  school: string;
-};
-
-type AcademicProgrammeGroup = {
-  category: string;
-  group: string;
-  summary: string;
-  courses: AcademicCourse[];
-};
-
-const academicRouteVariants: Record<string, AcademicProgrammeVariant> = {
-  "academics/schools": "schools",
-  "academics/courses": "courses",
-  "academics/courses/undergraduate": "undergraduate",
-  "academics/courses/diploma": "diploma",
-  "academics/courses/short-courses": "certificates",
-};
-
-const academicPageCopy: Record<
-  AcademicProgrammeVariant,
-  {
-    crumb: string;
-    title: string;
-    intro: string;
-    statLabel: string;
-    groupStatLabel: string;
-    ctaLabel: string;
-    ctaHref: string;
-  }
-> = {
-  schools: {
-    crumb: "Schools",
-    title: "Schools and Programmes",
-    intro:
-      "Browse King Ceasor University programmes by their respective schools, with course durations drawn from the official programme schedule.",
-    statLabel: "Programmes",
-    groupStatLabel: "Schools",
-    ctaLabel: "View Courses",
-    ctaHref: "/academics/courses",
-  },
-  courses: {
-    crumb: "Courses",
-    title: "Courses and Programmes",
-    intro:
-      "Review KCU degree, diploma, higher education certificate, and professional certificate programmes by school and duration.",
-    statLabel: "Programmes",
-    groupStatLabel: "Tables",
-    ctaLabel: "Apply Online",
-    ctaHref: "https://apply.kcu.ac.ug/",
-  },
-  undergraduate: {
-    crumb: "Undergraduate",
-    title: "Undergraduate Degree Programmes",
-    intro:
-      "Explore bachelor's degree programmes offered across KCU schools, with the expected duration for each programme.",
-    statLabel: "Degree Programmes",
-    groupStatLabel: "Schools",
-    ctaLabel: "Apply Online",
-    ctaHref: "https://apply.kcu.ac.ug/",
-  },
-  diploma: {
-    crumb: "Diploma",
-    title: "Diploma Programmes",
-    intro:
-      "Explore diploma programmes offered at KCU and compare their durations by school.",
-    statLabel: "Diploma Programmes",
-    groupStatLabel: "Schools",
-    ctaLabel: "Apply Online",
-    ctaHref: "https://apply.kcu.ac.ug/",
-  },
-  certificates: {
-    crumb: "Certificates",
-    title: "Certificates and Short Courses",
-    intro:
-      "Explore KCU professional certificate and short-course options by school, with the duration for each course.",
-    statLabel: "Certificates",
-    groupStatLabel: "Schools",
-    ctaLabel: "Explore K-Class",
-    ctaHref: "https://vclass.kcu.ac.ug/",
-  },
-};
-
-const academicSchoolSummaries: Record<string, string> = {
-  "School of Medicine, Health and Life Sciences":
-    "Medicine, nursing, clinical medicine, laboratory technology, higher education certificate, and health-focused professional certificate programmes.",
-  "School of Law and Management Sciences":
-    "Law, business, energy management, economics, global business, humanities, and professional management certificate programmes.",
-  "School of Science, Computing and Engineering":
-    "Petroleum geoscience, computer forensics, computing, cyber security, digital forensics, artificial intelligence, and organic farming programmes.",
-};
-
-function toAcademicCourse(course: FeeProgrammeCourse, group: FeeProgrammeGroup): AcademicCourse {
-  return {
-    code: course.code,
-    course: course.course,
-    duration: course.duration,
-    category: group.category,
-    school: group.group,
-  };
-}
-
-function numberAcademicGroups(groups: AcademicProgrammeGroup[]) {
-  let current = 0;
-
-  return groups.map((group) => ({
-    ...group,
-    courses: group.courses.map((course) => ({
-      ...course,
-      code: String(++current).padStart(2, "0"),
-    })),
-  }));
-}
-
-function getFilteredAcademicGroups(
-  predicate: (course: FeeProgrammeCourse, group: FeeProgrammeGroup) => boolean,
-) {
-  return numberAcademicGroups(
-    feeProgrammes
-      .map((group) => ({
-        category: group.category,
-        group: group.group,
-        summary: group.summary,
-        courses: group.courses
-          .filter((course) => predicate(course, group))
-          .map((course) => toAcademicCourse(course, group)),
-      }))
-      .filter((group) => group.courses.length > 0),
-  );
-}
-
-function getSchoolAcademicGroups() {
-  const schoolNames = Array.from(new Set(feeProgrammes.map((group) => group.group)));
-
-  return numberAcademicGroups(
-    schoolNames.map((school) => {
-      const schoolGroups = feeProgrammes.filter((group) => group.group === school);
-
-      return {
-        category: "Academic Schools",
-        group: school,
-        summary: academicSchoolSummaries[school],
-        courses: schoolGroups.flatMap((group) =>
-          group.courses.map((course) => toAcademicCourse(course, group)),
-        ),
-      };
-    }),
-  );
-}
-
-function getAcademicProgrammeGroups(variant: AcademicProgrammeVariant) {
-  if (variant === "schools") {
-    return getSchoolAcademicGroups();
-  }
-
-  if (variant === "undergraduate") {
-    return getFilteredAcademicGroups((course) => course.course.startsWith("Bachelor"));
-  }
-
-  if (variant === "diploma") {
-    return getFilteredAcademicGroups((course) => course.course.startsWith("Diploma"));
-  }
-
-  if (variant === "certificates") {
-    return getFilteredAcademicGroups((_, group) => group.category === "Certificate Programs");
-  }
-
-  return getFilteredAcademicGroups(() => true);
-}
-
-function AcademicProgrammesPage({ variant }: { variant: AcademicProgrammeVariant }) {
-  const copy = academicPageCopy[variant];
-  const groups = getAcademicProgrammeGroups(variant);
-  const totalCourses = groups.reduce((total, group) => total + group.courses.length, 0);
-  const showCategoryColumn = variant === "schools";
-
-  return (
-    <>
-      <Navbar />
-      <main className="min-h-screen bg-white pt-16 sm:pt-20 lg:pt-[8.5rem]">
-        <div className="border-b border-slate-100 bg-[#FFFFFF]">
-          <div className="mx-auto flex max-w-[1440px] flex-wrap items-center gap-2 px-4 py-3 text-xs text-slate-500 sm:px-6 lg:px-8">
-            <Link href="/" className="shrink-0 hover:text-[#0B6232]">Home</Link>
-            <ChevronRight className="size-3.5 shrink-0" />
-            <Link href="/academics/schools" className="shrink-0 hover:text-[#0B6232]">Academics</Link>
-            <ChevronRight className="size-3.5 shrink-0" />
-            <span className="shrink-0 font-semibold text-[#0B6232]">{copy.crumb}</span>
-          </div>
-        </div>
-
-        <section className="relative overflow-hidden px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-          <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1800&q=80')" }} />
-          <div className="absolute inset-0 bg-black/55" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent" />
-          <div className="absolute -bottom-20 right-12 hidden size-72 rounded-full border border-white/10 lg:block" />
-          <div className="relative z-10 mx-auto grid max-w-[1440px] gap-8 lg:grid-cols-[1fr_380px] lg:items-end">
-            <div>
-              <p className="inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-black uppercase tracking-[0.2em] text-[#FFC66B] backdrop-blur">Academics</p>
-              <h1 className="mt-5 max-w-4xl font-serif text-4xl font-black leading-tight text-white sm:text-5xl md:text-6xl">{copy.title}</h1>
-              <p className="mt-5 max-w-3xl text-sm leading-7 text-white/80 sm:text-base sm:leading-8">
-                {copy.intro}
-              </p>
-              <div className="mt-7 flex flex-wrap gap-3">
-                <Button asChild className="h-11 rounded-xl bg-[#FFC66B] px-5 font-black text-[#0B6232] hover:bg-[#FFC66B]">
-                  <Link href={copy.ctaHref}>{copy.ctaLabel} <ArrowRight className="ml-2 size-4" /></Link>
-                </Button>
-                <Button asChild variant="outline" className="h-11 rounded-xl border-2 border-white bg-transparent px-5 font-black text-white hover:bg-white hover:text-[#0B6232]">
-                  <Link href="/admissions/fees-structure">Fees Structure</Link>
-                </Button>
-              </div>
-            </div>
-            <div className="rounded-3xl border border-white/15 bg-white/10 p-5 text-white shadow-2xl backdrop-blur">
-              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">At a glance</p>
-              <div className="mt-4 grid grid-cols-2 gap-3">
-                <div className="rounded-2xl bg-white/10 p-4">
-                  <p className="text-3xl font-black">{totalCourses}</p>
-                  <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.14em] text-white/70">{copy.statLabel}</p>
-                </div>
-                <div className="rounded-2xl bg-[#FFC66B] p-4 text-[#0B6232]">
-                  <p className="text-3xl font-black">{groups.length}</p>
-                  <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.14em]">{copy.groupStatLabel}</p>
-                </div>
-              </div>
-              <p className="mt-4 rounded-2xl border border-white/10 bg-black/20 p-4 text-xs leading-6 text-white/75">
-                This academics view lists programmes and durations only. Fee amounts remain available on the admissions fee structure page.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="bg-slate-50/70 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
-          <div className="mx-auto max-w-[1440px]">
-            <div className="grid gap-6 lg:grid-cols-[1fr_340px] lg:items-start">
-              <div className="space-y-8">
-                {groups.map((group) => (
-                  <section key={`${group.category}-${group.group}`} className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5">
-                    <div className="flex flex-col gap-4 border-b border-slate-100 bg-[#0B6232] p-6 text-white sm:flex-row sm:items-end sm:justify-between lg:p-8">
-                      <div>
-                        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-[#FFC66B]">{group.category}</p>
-                        <h2 className="mt-2 text-2xl font-black leading-tight sm:text-3xl">{group.group}</h2>
-                        <p className="mt-2 max-w-3xl text-sm leading-7 text-white/75">{group.summary}</p>
-                      </div>
-                      <div className="w-fit rounded-2xl bg-white/10 px-4 py-3 text-center">
-                        <p className="text-2xl font-black text-[#FFC66B]">{group.courses.length}</p>
-                        <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-white/70">Programmes</p>
-                      </div>
-                    </div>
-
-                    <div className="grid gap-3 p-3 md:hidden">
-                      {group.courses.map((course) => (
-                        <article key={`${group.group}-${course.code}-${course.course}`} className="rounded-2xl border border-slate-100 bg-slate-50/80 p-4 shadow-sm">
-                          <div className="flex items-start justify-between gap-3">
-                            <span className="grid size-9 shrink-0 place-items-center rounded-full bg-[#0B6232] text-sm font-black text-[#FFC66B]">
-                              {course.code}
-                            </span>
-                            <span className="rounded-full bg-[#0B6232]/10 px-3 py-1 text-right text-[11px] font-black leading-4 text-[#0B6232]">
-                              {showCategoryColumn ? course.category : group.category}
-                            </span>
-                          </div>
-                          <h3 className="mt-4 text-base font-black leading-snug text-slate-950">{course.course}</h3>
-                          <dl className="mt-4 grid gap-3 text-sm">
-                            {showCategoryColumn && (
-                              <div className="rounded-xl bg-white p-3">
-                                <dt className="text-[10px] font-black uppercase tracking-[0.14em] text-slate-400">Programme Type</dt>
-                                <dd className="mt-1 font-semibold leading-5 text-slate-700">{course.category}</dd>
-                              </div>
-                            )}
-                            <div className="rounded-xl bg-white p-3">
-                              <dt className="text-[10px] font-black uppercase tracking-[0.14em] text-slate-400">Duration</dt>
-                              <dd className="mt-1 font-black leading-5 text-[#0B6232]">{course.duration}</dd>
-                            </div>
-                          </dl>
-                        </article>
-                      ))}
-                    </div>
-
-                    <div className="hidden overflow-x-auto md:block">
-                      <table className="w-full min-w-[640px] border-collapse text-left text-sm">
-                        <thead>
-                          <tr className="border-b border-slate-100 bg-slate-50 text-[11px] uppercase tracking-[0.14em] text-slate-500">
-                            <th className="px-5 py-4 font-black">No.</th>
-                            <th className="px-5 py-4 font-black">Course / Programme</th>
-                            {showCategoryColumn && <th className="px-5 py-4 font-black">Programme Type</th>}
-                            <th className="px-5 py-4 font-black">Duration</th>
-                          </tr>
-                        </thead>
-                        <tbody className="divide-y divide-slate-100">
-                          {group.courses.map((course) => (
-                            <tr key={`${group.group}-${course.code}-${course.course}`} className="align-top transition hover:bg-[#FFC66B]/10">
-                              <td className="px-5 py-4 font-black text-[#0B6232]">{course.code}</td>
-                              <td className="px-5 py-4">
-                                <p className="font-black text-slate-950">{course.course}</p>
-                                {!showCategoryColumn && <p className="mt-1 text-xs font-semibold text-slate-500">{course.school}</p>}
-                              </td>
-                              {showCategoryColumn && <td className="px-5 py-4 text-slate-700">{course.category}</td>}
-                              <td className="px-5 py-4 font-black text-[#0B6232]">{course.duration}</td>
-                            </tr>
-                          ))}
-                        </tbody>
-                      </table>
-                    </div>
-                  </section>
-                ))}
-              </div>
-
-              <aside className="space-y-6 lg:sticky lg:top-28">
-                <section className="rounded-3xl border border-[#FFC66B]/40 bg-[#FFC66B]/15 p-6 shadow-xl shadow-slate-900/5">
-                  <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Programme Guide</p>
-                  <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950">Course durations by school</h2>
-                  <ul className="mt-5 space-y-3 text-sm leading-6 text-slate-700">
-                    <li className="flex gap-3"><span className="mt-1 grid size-5 shrink-0 place-items-center rounded-full bg-[#0B6232] text-[10px] font-black text-[#FFC66B]">✓</span>Degree, diploma, higher education certificate, and professional certificate options are grouped by school.</li>
-                    <li className="flex gap-3"><span className="mt-1 grid size-5 shrink-0 place-items-center rounded-full bg-[#0B6232] text-[10px] font-black text-[#FFC66B]">✓</span>Only programme names and durations are shown on academics pages.</li>
-                    <li className="flex gap-3"><span className="mt-1 grid size-5 shrink-0 place-items-center rounded-full bg-[#0B6232] text-[10px] font-black text-[#FFC66B]">✓</span>For payment details, use the admissions fee structure page.</li>
-                  </ul>
-                </section>
-
-                <section className="rounded-3xl bg-[#0B6232] p-6 text-white shadow-2xl shadow-[#0B6232]/20">
-                  <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">Ready to apply?</p>
-                  <h2 className="mt-2 text-2xl font-black leading-tight">Start your application online</h2>
-                  <p className="mt-3 text-sm leading-7 text-white/75">Use the applicant portal to begin your admission process and receive course-specific guidance.</p>
-                  <Button asChild className="mt-6 h-11 w-full rounded-xl bg-[#FFC66B] px-5 font-black text-[#0B6232] hover:bg-[#FFC66B]">
-                    <Link href="https://apply.kcu.ac.ug/">Apply Online <ArrowRight className="ml-2 size-4" /></Link>
-                  </Button>
-                </section>
-              </aside>
-            </div>
-          </div>
-        </section>
-      </main>
-      <Footer />
-    </>
-  );
-}
+const feeBreakdown = [
+  { item: "Tuition fees", description: "The main academic charge for each programme and semester of study." },
+  { item: "Registration fees", description: "Paid during enrollment or registration for the relevant semester or study period." },
+  { item: "Examination fees", description: "Supports assessment, examination administration, and related academic processes." },
+  { item: "Library fees", description: "Supports access to library resources, study support, and learning materials." },
+  { item: "ICT and identity card fees", description: "Supports student identification, digital services, and ICT-related access." },
+];
 
 function FeesStructurePage() {
   const totalCourses = feeProgrammes.reduce((total, group) => total + group.courses.length, 0);
-  const totalTables = feeProgrammes.length;
 
   return (
     <>
       <Navbar />
       <main className="min-h-screen bg-white pt-16 sm:pt-20 lg:pt-[8.5rem]">
         <div className="border-b border-slate-100 bg-[#FFFFFF]">
-          <div className="mx-auto flex max-w-[1440px] flex-wrap items-center gap-2 px-4 py-3 text-xs text-slate-500 sm:px-6 lg:px-8">
+          <div className="mx-auto flex max-w-[1440px] items-center gap-2 overflow-x-auto px-4 py-3 text-xs text-slate-500 sm:px-6 lg:px-8">
             <Link href="/" className="shrink-0 hover:text-[#0B6232]">Home</Link>
             <ChevronRight className="size-3.5 shrink-0" />
             <Link href="/admissions" className="shrink-0 hover:text-[#0B6232]">Admissions</Link>
@@ -1191,7 +831,7 @@ function FeesStructurePage() {
               <p className="inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-black uppercase tracking-[0.2em] text-[#FFC66B] backdrop-blur">Admissions</p>
               <h1 className="mt-5 max-w-4xl font-serif text-4xl font-black leading-tight text-white sm:text-5xl md:text-6xl">Fees Structure by Course</h1>
               <p className="mt-5 max-w-3xl text-sm leading-7 text-white/80 sm:text-base sm:leading-8">
-                Review the official course-by-course fee structure for undergraduate, degree, diploma, higher education certificate, and professional certificate programmes.
+                Review the programme fee structure in a clean course-by-course format.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
                 <Button asChild className="h-11 rounded-xl bg-[#FFC66B] px-5 font-black text-[#0B6232] hover:bg-[#FFC66B]">
@@ -1210,12 +850,12 @@ function FeesStructurePage() {
                   <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.14em] text-white/70">Programmes</p>
                 </div>
                 <div className="rounded-2xl bg-[#FFC66B] p-4 text-[#0B6232]">
-                  <p className="text-3xl font-black">{totalTables}</p>
-                  <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.14em]">Fee Tables</p>
+                  <p className="text-3xl font-black">5</p>
+                  <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.14em]">Fee Items</p>
                 </div>
               </div>
               <p className="mt-4 rounded-2xl border border-white/10 bg-black/20 p-4 text-xs leading-6 text-white/75">
-                Fees are listed in United States Dollars with separate Uganda and international categories. Students should confirm current payment instructions before making payment.
+                Fees are approved by the University Council and may be reviewed from time to time. Students remain responsible for payment whether or not they have a sponsor.
               </p>
             </div>
           </div>
@@ -1226,16 +866,16 @@ function FeesStructurePage() {
             <div className="grid gap-6 lg:grid-cols-[1fr_340px] lg:items-start">
               <div className="space-y-8">
                 {feeProgrammes.map((group) => (
-                  <section key={`${group.category}-${group.group}`} className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5">
+                  <section key={group.group} className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5">
                     <div className="flex flex-col gap-4 border-b border-slate-100 bg-[#0B6232] p-6 text-white sm:flex-row sm:items-end sm:justify-between lg:p-8">
                       <div>
-                        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-[#FFC66B]">{group.category}</p>
+                        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-[#FFC66B]">Fees Table</p>
                         <h2 className="mt-2 text-2xl font-black leading-tight sm:text-3xl">{group.group}</h2>
                         <p className="mt-2 max-w-3xl text-sm leading-7 text-white/75">{group.summary}</p>
                       </div>
                       <div className="w-fit rounded-2xl bg-white/10 px-4 py-3 text-center">
                         <p className="text-2xl font-black text-[#FFC66B]">{group.courses.length}</p>
-                        <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-white/70">{group.feeLabel}</p>
+                        <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-white/70">Courses</p>
                       </div>
                     </div>
 
@@ -1247,24 +887,31 @@ function FeesStructurePage() {
                               {course.code}
                             </span>
                             <span className="rounded-full bg-[#0B6232]/10 px-3 py-1 text-right text-[11px] font-black leading-4 text-[#0B6232]">
-                              {group.feeLabel}
+                              {course.feeStatus}
                             </span>
                           </div>
                           <h3 className="mt-4 text-base font-black leading-snug text-slate-950">{course.course}</h3>
+                          <p className="mt-2 text-xs leading-5 text-slate-500">
+                            Official tuition amount to be inserted after Admissions confirmation.
+                          </p>
                           <dl className="mt-4 grid gap-3 text-sm">
                             <div className="rounded-xl bg-white p-3">
-                              <dt className="text-[10px] font-black uppercase tracking-[0.14em] text-slate-400">Duration</dt>
-                              <dd className="mt-1 font-semibold leading-5 text-slate-700">{course.duration}</dd>
+                              <dt className="text-[10px] font-black uppercase tracking-[0.14em] text-slate-400">School</dt>
+                              <dd className="mt-1 font-semibold leading-5 text-slate-700">{course.school}</dd>
                             </div>
                             <div className="grid grid-cols-2 gap-3">
                               <div className="rounded-xl bg-white p-3">
-                                <dt className="text-[10px] font-black uppercase tracking-[0.14em] text-slate-400">Uganda</dt>
-                                <dd className="mt-1 font-black leading-5 text-[#0B6232]">{course.uganda}</dd>
+                                <dt className="text-[10px] font-black uppercase tracking-[0.14em] text-slate-400">Level</dt>
+                                <dd className="mt-1 font-semibold leading-5 text-slate-700">{course.level}</dd>
                               </div>
                               <div className="rounded-xl bg-white p-3">
-                                <dt className="text-[10px] font-black uppercase tracking-[0.14em] text-slate-400">Int&apos;l</dt>
-                                <dd className="mt-1 font-black leading-5 text-[#0B6232]">{course.international}</dd>
+                                <dt className="text-[10px] font-black uppercase tracking-[0.14em] text-slate-400">Duration</dt>
+                                <dd className="mt-1 font-semibold leading-5 text-slate-700">{course.duration}</dd>
                               </div>
+                            </div>
+                            <div className="rounded-xl bg-white p-3">
+                              <dt className="text-[10px] font-black uppercase tracking-[0.14em] text-slate-400">Payment</dt>
+                              <dd className="mt-1 font-semibold leading-5 text-slate-700">{course.billing}</dd>
                             </div>
                           </dl>
                         </article>
@@ -1272,14 +919,16 @@ function FeesStructurePage() {
                     </div>
 
                     <div className="hidden overflow-x-auto md:block">
-                      <table className="w-full min-w-[760px] border-collapse text-left text-sm">
+                      <table className="w-full min-w-[920px] border-collapse text-left text-sm">
                         <thead>
                           <tr className="border-b border-slate-100 bg-slate-50 text-[11px] uppercase tracking-[0.14em] text-slate-500">
                             <th className="px-5 py-4 font-black">No.</th>
                             <th className="px-5 py-4 font-black">Course / Programme</th>
+                            <th className="px-5 py-4 font-black">School</th>
+                            <th className="px-5 py-4 font-black">Level</th>
                             <th className="px-5 py-4 font-black">Duration</th>
-                            <th className="px-5 py-4 font-black">Uganda</th>
-                            <th className="px-5 py-4 font-black">Int&apos;l</th>
+                            <th className="px-5 py-4 font-black">Payment</th>
+                            <th className="px-5 py-4 font-black">Fee Category</th>
                           </tr>
                         </thead>
                         <tbody className="divide-y divide-slate-100">
@@ -1288,10 +937,17 @@ function FeesStructurePage() {
                               <td className="px-5 py-4 font-black text-[#0B6232]">{course.code}</td>
                               <td className="px-5 py-4">
                                 <p className="font-black text-slate-950">{course.course}</p>
+                                <p className="mt-1 text-xs leading-5 text-slate-500">Official tuition amount to be inserted after Admissions confirmation.</p>
+                              </td>
+                              <td className="px-5 py-4 text-slate-700">{course.school}</td>
+                              <td className="px-5 py-4">
+                                <span className="rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-black text-slate-700">{course.level}</span>
                               </td>
                               <td className="px-5 py-4 text-slate-700">{course.duration}</td>
-                              <td className="px-5 py-4 font-black text-[#0B6232]">{course.uganda}</td>
-                              <td className="px-5 py-4 font-black text-[#0B6232]">{course.international}</td>
+                              <td className="px-5 py-4 text-slate-700">{course.billing}</td>
+                              <td className="px-5 py-4">
+                                <span className="rounded-full bg-[#0B6232]/10 px-3 py-1 text-xs font-black text-[#0B6232]">{course.feeStatus}</span>
+                              </td>
                             </tr>
                           ))}
                         </tbody>
@@ -1302,13 +958,28 @@ function FeesStructurePage() {
               </div>
 
               <aside className="space-y-6 lg:sticky lg:top-28">
+                <section className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5">
+                  <div className="bg-[#0B6232] p-6 text-white">
+                    <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">Fee Breakdown</p>
+                    <h2 className="mt-2 text-2xl font-black leading-tight">What students normally pay for</h2>
+                  </div>
+                  <div className="divide-y divide-slate-100">
+                    {feeBreakdown.map((fee) => (
+                      <div key={fee.item} className="p-5">
+                        <p className="font-black text-slate-950">{fee.item}</p>
+                        <p className="mt-1 text-sm leading-6 text-slate-600">{fee.description}</p>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+
                 <section className="rounded-3xl border border-[#FFC66B]/40 bg-[#FFC66B]/15 p-6 shadow-xl shadow-slate-900/5">
                   <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Payment Note</p>
                   <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950">Important fee guidance</h2>
                   <ul className="mt-5 space-y-3 text-sm leading-6 text-slate-700">
                     <li className="flex gap-3"><span className="mt-1 grid size-5 shrink-0 place-items-center rounded-full bg-[#0B6232] text-[10px] font-black text-[#FFC66B]">✓</span>Students must enroll within the required registration period.</li>
-                    <li className="flex gap-3"><span className="mt-1 grid size-5 shrink-0 place-items-center rounded-full bg-[#0B6232] text-[10px] font-black text-[#FFC66B]">✓</span>Undergraduate and degree programme figures are listed per semester.</li>
-                    <li className="flex gap-3"><span className="mt-1 grid size-5 shrink-0 place-items-center rounded-full bg-[#0B6232] text-[10px] font-black text-[#FFC66B]">✓</span>Certificate programme figures are listed by the course duration shown.</li>
+                    <li className="flex gap-3"><span className="mt-1 grid size-5 shrink-0 place-items-center rounded-full bg-[#0B6232] text-[10px] font-black text-[#FFC66B]">✓</span>Tuition may differ by programme depending on study requirements.</li>
+                    <li className="flex gap-3"><span className="mt-1 grid size-5 shrink-0 place-items-center rounded-full bg-[#0B6232] text-[10px] font-black text-[#FFC66B]">✓</span>Official figures should be confirmed through Admissions before payment.</li>
                   </ul>
                 </section>
 
@@ -1432,7 +1103,7 @@ function NewsletterPage() {
             <div>
               <p className="inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-black uppercase tracking-[0.2em] text-[#FFC66B] backdrop-blur">News &amp; Updates</p>
               <h1 className="mt-5 max-w-3xl font-serif text-4xl font-black leading-tight text-white sm:text-5xl md:text-6xl">
-                All KCU <span className="block text-[#FFC66B]">News</span>
+              <span className="block text-[#FFC66B]">News</span>
               </h1>
               <p className="mt-5 max-w-2xl text-sm leading-7 text-white/80 sm:text-base sm:leading-8">
                 Stay informed. Stay inspired. The latest from King Ceasor University.
@@ -1697,7 +1368,7 @@ function AboutContentPage({ page }: { page: AboutPageContent }) {
   const isServicesPage = page.eyebrow === "Services" || page.eyebrow === "Library";
   const hasPageSections = page.sections.length > 0;
   const parentLabel = page.eyebrow === "Admissions" ? "Admissions" : page.eyebrow === "Academics" || page.eyebrow === "Courses" ? "Academics" : isServicesPage ? "Services" : page.eyebrow === "Student Life" || page.eyebrow === "Student Welfare" || page.eyebrow === "Student Leadership" ? "Student" : "About Us";
-  const parentHref = page.eyebrow === "Admissions" ? "/admissions" : page.eyebrow === "Academics" || page.eyebrow === "Courses" ? "/academics/schools" : isServicesPage ? "/services" : page.eyebrow === "Student Life" || page.eyebrow === "Student Welfare" || page.eyebrow === "Student Leadership" ? "/student" : "/about";
+  const parentHref = page.eyebrow === "Admissions" ? "/admissions" : page.eyebrow === "Academics" || page.eyebrow === "Courses" ? "/academics" : isServicesPage ? "/services" : page.eyebrow === "Student Life" || page.eyebrow === "Student Welfare" || page.eyebrow === "Student Leadership" ? "/student" : "/about";
 
   return (
     <>
@@ -1822,35 +1493,31 @@ function AboutContentPage({ page }: { page: AboutPageContent }) {
                       </div>
                     </div>
                     <div className="mt-7 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-                      {page.qualityAssurance.staff.map((member) => {
-                        const hasStaffImage = Boolean(member.image && member.image !== "/");
-
-                        return (
-                          <article key={member.name} className="mx-auto w-3/4 overflow-hidden rounded-2xl border border-slate-100 bg-slate-50/70">
-                            <div className="relative aspect-[4/5] w-full overflow-hidden bg-white">
-                              {hasStaffImage ? (
-                                <Image
-                                  src={member.image!}
-                                  alt={member.name}
-                                  fill
-                                  sizes="(min-width: 1280px) 240px, (min-width: 640px) 38vw, 75vw"
-                                  className="h-full w-full object-cover object-center"
-                                />
-                              ) : (
-                                <div className="grid size-full place-items-center bg-slate-100 text-[#0B6232]">
-                                  <UserRound className="size-12" />
-                                </div>
-                              )}
-                            </div>
-                            <div className="p-4">
-                              <div>
-                                <h3 className="text-sm font-black leading-snug text-slate-950">{member.name}</h3>
-                                <p className="mt-1 text-xs leading-5 text-slate-500">{member.role}</p>
+                      {page.qualityAssurance.staff.map((member) => (
+                        <article key={member.name} className="overflow-hidden rounded-2xl border border-slate-100 bg-slate-50/70">
+                          <div className="relative aspect-[4/3] bg-white">
+                            {member.image ? (
+                              <Image
+                                src={member.image}
+                                alt={member.name}
+                                fill
+                                sizes="(min-width: 1280px) 320px, (min-width: 640px) 50vw, 100vw"
+                                className="object-cover"
+                              />
+                            ) : (
+                              <div className="grid size-full place-items-center bg-slate-100 text-[#0B6232]">
+                                <UserRound className="size-16" />
                               </div>
+                            )}
+                          </div>
+                          <div className="p-5">
+                            <div>
+                              <h3 className="text-base font-black leading-snug text-slate-950">{member.name}</h3>
+                              <p className="mt-1 text-sm leading-5 text-slate-500">{member.role}</p>
                             </div>
-                          </article>
-                        );
-                      })}
+                          </div>
+                        </article>
+                      ))}
                     </div>
                   </section>
 
@@ -1859,16 +1526,8 @@ function AboutContentPage({ page }: { page: AboutPageContent }) {
                       <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">What We Do</p>
                       <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950 sm:text-3xl">Quality Assurance Responsibilities</h2>
                     </div>
-                    <div className="grid gap-3 p-4 sm:p-6 md:hidden">
-                      {page.qualityAssurance.whatWeDo.map((item) => (
-                        <article key={item.area} className="rounded-2xl border border-slate-100 bg-slate-50/80 p-4">
-                          <h3 className="text-sm font-black text-slate-950">{item.area}</h3>
-                          <p className="mt-2 text-sm leading-7 text-slate-600">{item.details}</p>
-                        </article>
-                      ))}
-                    </div>
-                    <div className="hidden overflow-hidden md:block">
-                      <table className="w-full border-collapse text-left">
+                    <div className="overflow-x-auto">
+                      <table className="w-full min-w-[720px] border-collapse text-left">
                         <thead className="bg-[#0B6232] text-white">
                           <tr>
                             <th className="w-56 px-6 py-4 text-xs font-black uppercase tracking-[0.16em] text-[#FFC66B]">Area</th>
@@ -1887,37 +1546,6 @@ function AboutContentPage({ page }: { page: AboutPageContent }) {
                     </div>
                   </section>
                 </>
-              )}
-
-              {page.counselling && (
-                <section className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5">
-                  <div className="grid gap-0 lg:grid-cols-[380px_1fr]">
-                    <div className="relative min-h-[360px] bg-slate-200">
-                      <Image
-                        src={page.counselling.counsellor.image}
-                        alt={page.counselling.counsellor.name}
-                        fill
-                        sizes="(min-width: 1024px) 380px, 100vw"
-                        className="object-cover object-top"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-                      <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                        <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">Counsellor</p>
-                        <h2 className="mt-2 text-2xl font-black leading-tight">{page.counselling.counsellor.name}</h2>
-                        <p className="mt-1 text-sm font-bold text-white/80">{page.counselling.counsellor.title}</p>
-                      </div>
-                    </div>
-                    <div className="p-6 sm:p-8 lg:p-10">
-                      <div className="inline-flex size-12 items-center justify-center rounded-2xl bg-[#0B6232] text-[#FFC66B] shadow-lg shadow-[#0B6232]/20">
-                        <UsersRound className="size-6" />
-                      </div>
-                      <p className="mt-6 text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Message from the Counsellor</p>
-                      <p className="mt-5 max-w-4xl text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
-                        {page.counselling.counsellor.message}
-                      </p>
-                    </div>
-                  </div>
-                </section>
               )}
 
               {page.sections.map((section, index) => (
@@ -1969,7 +1597,7 @@ function AboutContentPage({ page }: { page: AboutPageContent }) {
                   <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
                     <div>
                       <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">Next Step</p>
-                      <h2 className="mt-2 text-2xl font-black leading-tight">{page.cta.title ?? page.title}</h2>
+                      <h2 className="mt-2 text-2xl font-black leading-tight">{page.title}</h2>
                     </div>
                     <Button asChild className="h-12 rounded-xl bg-[#FFC66B] px-6 font-black text-[#0B6232] hover:bg-[#FFC66B]">
                       <Link href={page.cta.href}>{page.cta.label} <ArrowRight className="ml-2 size-4" /></Link>
@@ -1990,11 +1618,6 @@ export default async function CatchAllPage({ params }: { params: Promise<{ slug:
   const { slug } = await params;
   const currentPath = slug.join("/");
   const page = contentPages[currentPath];
-  const academicVariant = academicRouteVariants[currentPath];
-
-  if (academicVariant) {
-    return <AcademicProgrammesPage variant={academicVariant} />;
-  }
 
   if (currentPath === "admissions/fees-structure") {
     return <FeesStructurePage />;

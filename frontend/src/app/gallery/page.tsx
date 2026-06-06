@@ -6,7 +6,7 @@ const galleryItems = [
   {
     title: "Campus Moment",
     description: "Placeholder for a campus photo with a short description of the scene.",
-    image: "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=900&q=80",
+    image: "",
   },
   {
     title: "Student Activity",
