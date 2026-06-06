@@ -13,6 +13,7 @@ import {
   Users,
   X,
 } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -154,6 +155,7 @@ type PersonProfile = {
   name: string;
   role: string;
   tier: PersonTier;
+  image?: string;
   bio?: string;
 };
 
@@ -201,8 +203,12 @@ function BioModal({ person, onClose }: { person: PersonProfile | null; onClose: 
       <button type="button" className="absolute inset-0 cursor-default" aria-label="Close biography" onClick={onClose} />
       <div className="relative w-full max-w-lg overflow-hidden rounded-2xl bg-white shadow-2xl shadow-slate-950/25">
         <div className="flex items-start gap-5 border-b border-slate-100 p-5 sm:p-6">
-          <div className={`grid h-32 w-24 shrink-0 place-items-center rounded-xl ${portraitBg} ${portraitText} text-3xl font-black shadow-inner`}>
-            {initials || "KCU"}
+          <div className={`relative grid h-32 w-24 shrink-0 place-items-center overflow-hidden rounded-xl ${portraitBg} ${portraitText} text-3xl font-black shadow-inner`}>
+            {person.image ? (
+              <Image src={person.image} alt={person.name} fill sizes="96px" className="object-cover object-top" />
+            ) : (
+              initials || "KCU"
+            )}
           </div>
           <div className="min-w-0 flex-1">
             <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Biography</p>
@@ -227,7 +233,7 @@ function BioModal({ person, onClose }: { person: PersonProfile | null; onClose: 
 }
 
 function CouncilCard({ person, onSelect }: { person: PersonProfile; onSelect: (person: PersonProfile) => void }) {
-  const { name, role, tier } = person;
+  const { image, name, role, tier } = person;
   const initials = name
     ? getInitials(name)
     : "";
@@ -238,8 +244,12 @@ function CouncilCard({ person, onSelect }: { person: PersonProfile; onSelect: (p
 
   return (
     <button type="button" onClick={() => onSelect(person)} className={`flex w-44 shrink-0 flex-col items-center rounded-2xl border-2 ${cardBorder} bg-white p-4 text-center shadow-md transition hover:-translate-y-0.5 hover:border-[#0B6232] hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#FFC66B] focus:ring-offset-2`}>
-      <div className={`grid h-32 w-24 place-items-center rounded-xl ${avatarBg} ${avatarText} text-2xl font-black shadow-inner`}>
-        {initials || "KCU"}
+      <div className={`relative grid h-32 w-24 place-items-center overflow-hidden rounded-xl ${avatarBg} ${avatarText} text-2xl font-black shadow-inner`}>
+        {image ? (
+          <Image src={image} alt={name} fill sizes="96px" className="object-cover object-top" />
+        ) : (
+          initials || "KCU"
+        )}
       </div>
       <p className="mt-3 text-sm font-black leading-snug text-slate-950">{name}</p>
       <p className="mt-1 text-[11px] leading-4 text-slate-500">{role}</p>
@@ -248,7 +258,7 @@ function CouncilCard({ person, onSelect }: { person: PersonProfile; onSelect: (p
 }
 
 function CouncilCardMobile({ person, onSelect }: { person: PersonProfile; onSelect: (person: PersonProfile) => void }) {
-  const { name, role, tier } = person;
+  const { image, name, role, tier } = person;
   const initials = getInitials(name);
 
   const avatarBg = tier === "top" ? "bg-[#FFC66B]" : tier === "mid" ? "bg-[#0B6232]" : "bg-slate-200";
@@ -257,8 +267,12 @@ function CouncilCardMobile({ person, onSelect }: { person: PersonProfile; onSele
 
   return (
     <button type="button" onClick={() => onSelect(person)} className={`flex w-full items-center gap-4 rounded-2xl border-2 ${cardBorder} bg-white p-4 text-left shadow-sm transition hover:border-[#0B6232] hover:shadow-md focus:outline-none focus:ring-2 focus:ring-[#FFC66B] focus:ring-offset-2`}>
-      <div className={`grid h-24 w-[72px] shrink-0 place-items-center rounded-lg ${avatarBg} ${avatarText} text-xl font-black`}>
-        {initials || "KCU"}
+      <div className={`relative grid h-24 w-[72px] shrink-0 place-items-center overflow-hidden rounded-lg ${avatarBg} ${avatarText} text-xl font-black`}>
+        {image ? (
+          <Image src={image} alt={name} fill sizes="72px" className="object-cover object-top" />
+        ) : (
+          initials || "KCU"
+        )}
       </div>
       <div>
         <p className="text-sm font-black leading-snug text-slate-950">{name}</p>
@@ -421,19 +435,19 @@ function ComingSoon({ title }: { title: string }) {
 function TabAdministration() {
   const [selectedPerson, setSelectedPerson] = useState<PersonProfile | null>(null);
   const officers: PersonProfile[] = [
-    { name: "Dr. Charity Basaza Mulenga", role: "Vice Chancellor", tier: "top" },
-    { name: "Dr. Byarugaba Bonaventura", role: "Deputy Vice Chancellor", tier: "mid" },
-    { name: "Mrs. Pape Matama Bagonza", role: "University Secretary", tier: "mid" },
-    { name: "Alfred Namoah Masikye", role: "Academic Registrar", tier: "mid" },
+    { name: "Dr. Charity Basaza Mulenga", role: "Vice Chancellor", tier: "top", image: "/University Management/Dr. Charity Basaza Mulenga.jpg" },
+    { name: "Dr. Byarugaba Bonaventura", role: "Deputy Vice Chancellor", tier: "mid", image: "/University Management/Dr. Byarugaba Bonaventura.jpeg" },
+    { name: "Mrs. Pape Matama Bagonza", role: "University Secretary", tier: "mid", image: "/University Management/Mrs. Pape Matama Bagonza.jpeg" },
+    { name: "Mr. Alfred Namoah Masikye", role: "Academic Registrar", tier: "mid", image: "/University Management/Alfred Namoah Masikye.jpeg" },
     { name: "Assoc. Prof. Annabella Habinka Ejiri", role: "Director Quality Assurance", tier: "mid" },
-    { name: "Mrs. Sylivia Okwi Christine", role: "Director Finance", tier: "mid" },
-    { name: "Fr. Dr. Lumala Aloysius Gonzagga", role: "Dean of Students", tier: "mid" },
-    { name: "Mr. Mwima Abdallah", role: "Manager ICT", tier: "base" },
-    { name: "Mr. Eric Keziron Oloo", role: "University Librarian", tier: "base" },
-    { name: "Mr. Wilberforce Mfitundinda", role: "Registrar Academics", tier: "base" },
-    { name: "Mr. John Acire", role: "Manager Human Resource", tier: "base" },
-    { name: "To Be Confirmed", role: "PRO", tier: "base" },
-    { name: "To Be Confirmed", role: "Marketing Manager", tier: "base" },
+    { name: "Mrs. Sylivia Okwi Christine", role: "Director Finance", tier: "mid", image: "/University Management/Mrs. Sylivia Okwi Christine.jpeg" },
+    { name: "Fr. Dr. Lumala Aloysius Gonzagga", role: "Dean of Students", tier: "mid", image: "/University Management/Fr. Dr. Lumala Aloysius Gonzagga.jpeg" },
+    { name: "Mr. Mwima Abdallah", role: "Manager ICT", tier: "base", image: "/University Management/Mr. Mwima Abdallah.jpeg" },
+    { name: "Mr. Eric Keziron Oloo", role: "University Librarian", tier: "base", image: "/University Management/Mr. Eric Keziron Oloo.jpeg" },
+    { name: "Mr. Wilberforce Mfitundinda", role: "Registrar Academics", tier: "base", image: "/University Management/Mr. Wilberforce Mfitundinda.jpeg" },
+    { name: "Mr. John Acire", role: "Manager Human Resource", tier: "base", image: "/University Management/Mr. John Acire.jpeg" },
+    { name: "Ms. Betty Uwiringiyimana", role: "PRO", tier: "base", image: "/University Management/Betty Uwiringiyimana - PRO.jpeg" },
+    { name: "Ms. Rosset Gaali", role: "Marketing Manager", tier: "base", image: "/University Management/Ms. Rosset Gaali - Marketing Manager.jpeg" },
   ];
 
   const [vc, dvc, ...rest] = officers;
