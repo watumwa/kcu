@@ -39,6 +39,14 @@ type AboutPageContent = {
       details: string;
     }[];
   };
+  counselling?: {
+    counsellor: {
+      name: string;
+      title: string;
+      image: string;
+      message: string;
+    };
+  };
 };
 
 const aboutPages: Record<string, AboutPageContent> = {
@@ -579,6 +587,15 @@ const contentPages: Record<string, AboutPageContent> = {
     title: "Counselling",
     intro:
       "KCU counselling and guidance support helps students navigate academic pressure, personal wellbeing, adjustment to university life, and holistic development.",
+    counselling: {
+      counsellor: {
+        name: "University Counsellor",
+        title: "Counselling & Guidance",
+        image: "/Counsellor/DSC09882.jpeg",
+        message:
+          "Welcome to the Counselling and Guidance service at King Ceasor University. Our office provides a safe, respectful, and confidential space where students can talk through personal, social, emotional, and academic concerns. We are here to support wellbeing, encourage resilience, and help every student make healthy decisions while adjusting to university life. Students are encouraged to reach out whenever they need guidance, care, or referral support.",
+      },
+    },
     sections: [
       {
         title: "Student Wellbeing",
@@ -1870,6 +1887,37 @@ function AboutContentPage({ page }: { page: AboutPageContent }) {
                     </div>
                   </section>
                 </>
+              )}
+
+              {page.counselling && (
+                <section className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5">
+                  <div className="grid gap-0 lg:grid-cols-[380px_1fr]">
+                    <div className="relative min-h-[360px] bg-slate-200">
+                      <Image
+                        src={page.counselling.counsellor.image}
+                        alt={page.counselling.counsellor.name}
+                        fill
+                        sizes="(min-width: 1024px) 380px, 100vw"
+                        className="object-cover object-top"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                      <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">Counsellor</p>
+                        <h2 className="mt-2 text-2xl font-black leading-tight">{page.counselling.counsellor.name}</h2>
+                        <p className="mt-1 text-sm font-bold text-white/80">{page.counselling.counsellor.title}</p>
+                      </div>
+                    </div>
+                    <div className="p-6 sm:p-8 lg:p-10">
+                      <div className="inline-flex size-12 items-center justify-center rounded-2xl bg-[#0B6232] text-[#FFC66B] shadow-lg shadow-[#0B6232]/20">
+                        <UsersRound className="size-6" />
+                      </div>
+                      <p className="mt-6 text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Message from the Counsellor</p>
+                      <p className="mt-5 max-w-4xl text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
+                        {page.counselling.counsellor.message}
+                      </p>
+                    </div>
+                  </div>
+                </section>
               )}
 
               {page.sections.map((section, index) => (
