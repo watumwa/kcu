@@ -19,6 +19,7 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
+import { section } from "framer-motion/client";
 
 
 // ── Tab content ────────────────────────────────────────────────────────────
@@ -59,7 +60,7 @@ function TabAboutUs() {
           </div>
         ))}
       </div>
-
+      <section id="mission-vision">
       <div className="grid gap-4 sm:grid-cols-3">
         <div className="rounded-2xl bg-[#0B6232] p-6 text-white">
           <Star className="size-7 text-[#FFC66B]" />
@@ -77,7 +78,7 @@ function TabAboutUs() {
           <p className="mt-2 text-2xl font-black text-[#0B6232]">Ignite the Future</p>
         </div>
       </div>
-
+      </section>
       <div>
         <p className="text-xs font-black uppercase tracking-[0.2em] text-[#0B6232]">What We Stand For</p>
         <h2 className="mt-2 text-2xl font-black text-slate-950 sm:text-3xl">Core Values</h2>
@@ -99,7 +100,7 @@ function TabAboutUs() {
           })}
         </div>
       </div>
-
+      
       <div className="rounded-2xl bg-[#FFFFFF] p-6 sm:p-8">
         <p className="text-xs font-black uppercase tracking-[0.2em] text-[#0B6232]">Our Approach</p>
         <h2 className="mt-2 text-2xl font-black text-slate-950 sm:text-3xl">KCU Comprehensive Education</h2>
@@ -295,7 +296,7 @@ function TabUniversityCouncil() {
   ];
 
   const members: PersonProfile[] = [
-    { name: "Mr. Muhooz Daniel", role: "Guild President", tier: "base" },
+    { name: "Mr. Muhooz Daniel", role: "Guild President", tier: "base", image:"/" },
     { name: "Dr. Sabiiti Mulema", role: "Staff Representative", tier: "base" },
     { name: "Ms. Rukundo Anita", role: "Member", tier: "base" },
     { name: "Assoc. Prof. Margaret Nabasirye", role: "Member", tier: "base" },
@@ -370,13 +371,14 @@ function TabBoardOfTrustees() {
   const [selectedPerson, setSelectedPerson] = useState<PersonProfile | null>(null);
   const chair: PersonProfile = { name: "Hon. Thomas Tayebwa", role: "Chairperson", tier: "top" };
   const members: PersonProfile[] = [
-    { name: "Ms. Agnes Selina Mfite", role: "Member", tier: "base" },
+    { name: "Ms. Agnes Selina Mfite", role: "Member", tier: "base", image:"/" },
     { name: "Hon. Okello Oryem", role: "Member", tier: "base" },
     { name: "Mr. Donald Nyakairu", role: "Member", tier: "base" },
     { name: "King Ceasor Mulenga", role: "Member", tier: "base",},
   ];
 
   return (
+    <section id="governance">
     <div className="space-y-10">
       <div>
         <p className="text-xs font-black uppercase tracking-[0.2em] text-[#0B6232]">Governance</p>
@@ -417,6 +419,7 @@ function TabBoardOfTrustees() {
       </div>
       <BioModal person={selectedPerson} onClose={() => setSelectedPerson(null)} />
     </div>
+  </section>
   );
 }
 
@@ -509,6 +512,10 @@ const tabs = [
   { id: "administration", label: "University Management", content: <TabAdministration /> },
 ];
 
+const hashTabMap: Record<string, string> = {
+  "mission-vision": "about",
+};
+
 // ── Page ───────────────────────────────────────────────────────────────────
 
 export default function AboutPage() {
@@ -520,6 +527,15 @@ export default function AboutPage() {
       const tabId = window.location.hash.replace("#", "");
       if (tabs.some((tab) => tab.id === tabId)) {
         setActive(tabId);
+        return;
+      }
+
+      const mappedTabId = hashTabMap[tabId];
+      if (mappedTabId) {
+        setActive(mappedTabId);
+        window.setTimeout(() => {
+          document.getElementById(tabId)?.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 0);
       }
     };
 
