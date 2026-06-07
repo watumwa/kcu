@@ -71,7 +71,7 @@ export default function NewsEvents() {
             <p className="text-xs font-black uppercase tracking-[0.2em] text-[#0B6232]">Latest News & Events</p>
             <h2 className="mt-2 text-3xl font-black text-slate-950 sm:text-4xl">Stay Updated</h2>
             <p className="mt-2 max-w-xl text-slate-500 text-sm leading-relaxed">
-              Campus achievements, research breakthroughs, student life, academic events and university announcements.
+              Campus achievements research breakthroughs, student life, academic events and university announcements.
             </p>
           </div>
           {/* Search */}
