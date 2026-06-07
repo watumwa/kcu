@@ -203,9 +203,9 @@ function BioModal({ person, onClose }: { person: PersonProfile | null; onClose: 
       <button type="button" className="absolute inset-0 cursor-default" aria-label="Close biography" onClick={onClose} />
       <div className="relative w-full max-w-lg overflow-hidden rounded-2xl bg-white shadow-2xl shadow-slate-950/25">
         <div className="flex items-start gap-5 border-b border-slate-100 p-5 sm:p-6">
-          <div className={`relative grid h-32 w-24 shrink-0 place-items-center overflow-hidden rounded-xl ${portraitBg} ${portraitText} text-3xl font-black shadow-inner`}>
+          <div className={`relative grid h-[168px] w-28 shrink-0 place-items-center overflow-hidden rounded-xl ${portraitBg} ${portraitText} text-3xl font-black shadow-inner`}>
             {person.image ? (
-              <Image src={person.image} alt={person.name} fill sizes="96px" className="object-cover object-top" />
+              <Image src={person.image} alt={person.name} fill sizes="112px" className="object-cover object-top" />
             ) : (
               initials || "KCU"
             )}
@@ -244,9 +244,9 @@ function CouncilCard({ person, onSelect }: { person: PersonProfile; onSelect: (p
 
   return (
     <button type="button" onClick={() => onSelect(person)} className={`flex w-44 shrink-0 flex-col items-center rounded-2xl border-2 ${cardBorder} bg-white p-4 text-center shadow-md transition hover:-translate-y-0.5 hover:border-[#0B6232] hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#FFC66B] focus:ring-offset-2`}>
-      <div className={`relative grid h-32 w-24 place-items-center overflow-hidden rounded-xl ${avatarBg} ${avatarText} text-2xl font-black shadow-inner`}>
+      <div className={`relative grid h-[168px] w-28 place-items-center overflow-hidden rounded-xl ${avatarBg} ${avatarText} text-2xl font-black shadow-inner`}>
         {image ? (
-          <Image src={image} alt={name} fill sizes="96px" className="object-cover object-top" />
+          <Image src={image} alt={name} fill sizes="112px" className="object-cover object-top" />
         ) : (
           initials || "KCU"
         )}
@@ -267,9 +267,9 @@ function CouncilCardMobile({ person, onSelect }: { person: PersonProfile; onSele
 
   return (
     <button type="button" onClick={() => onSelect(person)} className={`flex w-full items-center gap-4 rounded-2xl border-2 ${cardBorder} bg-white p-4 text-left shadow-sm transition hover:border-[#0B6232] hover:shadow-md focus:outline-none focus:ring-2 focus:ring-[#FFC66B] focus:ring-offset-2`}>
-      <div className={`relative grid h-24 w-[72px] shrink-0 place-items-center overflow-hidden rounded-lg ${avatarBg} ${avatarText} text-xl font-black`}>
+      <div className={`relative grid h-[126px] w-[84px] shrink-0 place-items-center overflow-hidden rounded-lg ${avatarBg} ${avatarText} text-xl font-black`}>
         {image ? (
-          <Image src={image} alt={name} fill sizes="72px" className="object-cover object-top" />
+          <Image src={image} alt={name} fill sizes="84px" className="object-cover object-top" />
         ) : (
           initials || "KCU"
         )}
@@ -420,18 +420,6 @@ function TabBoardOfTrustees() {
   );
 }
 
-function ComingSoon({ title }: { title: string }) {
-  return (
-    <div className="flex min-h-[40vh] flex-col items-center justify-center rounded-2xl border border-slate-100 bg-[#FFFFFF] p-10 text-center">
-      <div className="grid size-16 place-items-center rounded-full bg-[#0B6232]/10">
-        <GraduationCap className="size-8 text-[#0B6232]" />
-      </div>
-      <h2 className="mt-5 text-2xl font-black text-slate-950">{title}</h2>
-      <p className="mt-3 max-w-sm text-sm leading-6 text-slate-500">This section is being prepared. Check back soon.</p>
-    </div>
-  );
-}
-
 function TabAdministration() {
   const [selectedPerson, setSelectedPerson] = useState<PersonProfile | null>(null);
   const officers: PersonProfile[] = [
@@ -449,21 +437,20 @@ function TabAdministration() {
     { name: "Ms. Betty Uwiringiyimana", role: "PRO", tier: "base", image: "/University Management/Betty Uwiringiyimana - PRO.jpeg" },
     { name: "Ms. Rosset Gaali", role: "Marketing Manager", tier: "base", image: "/University Management/Ms. Rosset Gaali - Marketing Manager.jpeg" },
   ];
-
   const [vc, dvc, ...rest] = officers;
-  const seniorOfficers = rest.filter((o) => o.tier === "mid");
-  const managers = rest.filter((o) => o.tier === "base");
+  const seniorOfficers = rest.filter((officer) => officer.tier === "mid");
+  const managers = rest.filter((officer) => officer.tier === "base");
 
   return (
     <div className="space-y-10">
       <div>
-        <p className="text-xs font-black uppercase tracking-[0.2em] text-[#0B6232]">Administration</p>
-        <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950 sm:text-3xl">University Administration</h2>
+        <p className="text-xs font-black uppercase tracking-[0.2em] text-[#0B6232]">Management</p>
+        <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950 sm:text-3xl">University Management</h2>
         <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
-          The University Administration serves as the executive arm of King Ceasor University, responsible for the effective management and coordination of the institution&apos;s academic, administrative and operational activities.
+          The University Management team serves as the executive arm of King Ceasor University, responsible for the effective management and coordination of the institution&apos;s academic, administrative and operational activities.
         </p>
         <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
-          Guided by the University&apos;s vision and strategic objectives, the administration ensures the delivery of quality education, efficient resource management and exceptional services to students, staff and stakeholders. Through collaborative leadership and sound governance practices, it promotes academic excellence, innovation, institutional growth and a supportive learning environment.
+          Guided by the University&apos;s vision and strategic objectives, management promotes academic excellence, efficient resource use, institutional growth and a supportive learning environment for students, staff and stakeholders.
         </p>
       </div>
 
@@ -472,15 +459,18 @@ function TabAdministration() {
         <div className="flex w-full flex-col items-center gap-8">
           <CouncilCard person={vc} onSelect={setSelectedPerson} />
           <CouncilCard person={dvc} onSelect={setSelectedPerson} />
-          <div className="flex w-full flex-wrap justify-center gap-5">
-            {seniorOfficers.map((p) => (
-              <CouncilCard key={p.name} person={p} onSelect={setSelectedPerson} />
+
+          
+          <div className="flex w-full flex-wrap justify-center gap-6">
+            {seniorOfficers.map((person) => (
+              <CouncilCard key={`${person.role}-${person.name}`} person={person} onSelect={setSelectedPerson} />
             ))}
           </div>
+
           
-          <div className="flex w-full flex-wrap justify-center gap-5">
-            {managers.map((p) => (
-              <CouncilCard key={`${p.role}-${p.name}`} person={p} onSelect={setSelectedPerson} />
+          <div className="flex w-full flex-wrap justify-center gap-6">
+            {managers.map((person) => (
+              <CouncilCard key={`${person.role}-${person.name}`} person={person} onSelect={setSelectedPerson} />
             ))}
           </div>
         </div>
@@ -489,23 +479,24 @@ function TabAdministration() {
       {/* ── Mobile stacked (< md) ── */}
       <div className="space-y-8 md:hidden">
         <div className="space-y-3">
-          <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Leadership</p>
+          <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Executive Leadership</p>
           <CouncilCardMobile person={vc} onSelect={setSelectedPerson} />
           <CouncilCardMobile person={dvc} onSelect={setSelectedPerson} />
         </div>
         <div className="space-y-3">
-          <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Senior Officers</p>
-          {seniorOfficers.map((p) => (
-            <CouncilCardMobile key={p.name} person={p} onSelect={setSelectedPerson} />
+          <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Senior University Officers</p>
+          {seniorOfficers.map((person) => (
+            <CouncilCardMobile key={`${person.role}-${person.name}`} person={person} onSelect={setSelectedPerson} />
           ))}
         </div>
         <div className="space-y-3">
-          <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Managers &amp; Officers</p>
-          {managers.map((p) => (
-            <CouncilCardMobile key={p.name} person={p} onSelect={setSelectedPerson} />
+          <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Managers &amp; Service Leads</p>
+          {managers.map((person) => (
+            <CouncilCardMobile key={`${person.role}-${person.name}`} person={person} onSelect={setSelectedPerson} />
           ))}
         </div>
       </div>
+
       <BioModal person={selectedPerson} onClose={() => setSelectedPerson(null)} />
     </div>
   );
@@ -515,7 +506,7 @@ const tabs = [
   { id: "about", label: "About Us", content: <TabAboutUs /> },
   { id: "trustees", label: "Board of Trustees", content: <TabBoardOfTrustees /> },
   { id: "council", label: "University Council", content: <TabUniversityCouncil /> },
-  { id: "administration", label: "University Administration", content: <TabAdministration /> },
+  { id: "administration", label: "University Management", content: <TabAdministration /> },
 ];
 
 // ── Page ───────────────────────────────────────────────────────────────────

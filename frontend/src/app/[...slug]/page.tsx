@@ -804,6 +804,25 @@ const feeBreakdown = [
   { item: "ICT and identity card fees", description: "Supports student identification, digital services, and ICT-related access." },
 ];
 
+function getValidImageSrc(image?: string) {
+  const src = image?.trim();
+  return src && src !== "/" ? src : undefined;
+}
+
+function QualityAssurancePhoto({ alt, className, sizes, src }: { alt: string; className: string; sizes: string; src?: string }) {
+  const validSrc = getValidImageSrc(src);
+
+  if (!validSrc) {
+    return (
+      <div className="absolute inset-0 grid place-items-center bg-slate-100 text-[#0B6232]">
+        <UserRound className="size-16" />
+      </div>
+    );
+  }
+
+  return <Image src={validSrc} alt={alt} fill sizes={sizes} className={className} />;
+}
+
 function FeesStructurePage() {
   const totalCourses = feeProgrammes.reduce((total, group) => total + group.courses.length, 0);
 
@@ -1455,12 +1474,11 @@ function AboutContentPage({ page }: { page: AboutPageContent }) {
                   <section className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5">
                     <div className="grid gap-0 lg:grid-cols-[380px_1fr]">
                       <div className="relative min-h-[360px] bg-slate-200">
-                        <Image
+                        <QualityAssurancePhoto
                           src={page.qualityAssurance.director.image}
                           alt={page.qualityAssurance.director.name}
-                          fill
                           sizes="(min-width: 1024px) 380px, 100vw"
-                          className="object-cover"
+                          className="object-contain p-6"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
                         <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
@@ -1496,19 +1514,12 @@ function AboutContentPage({ page }: { page: AboutPageContent }) {
                       {page.qualityAssurance.staff.map((member) => (
                         <article key={member.name} className="overflow-hidden rounded-2xl border border-slate-100 bg-slate-50/70">
                           <div className="relative aspect-[4/3] bg-white">
-                            {member.image ? (
-                              <Image
-                                src={member.image}
-                                alt={member.name}
-                                fill
-                                sizes="(min-width: 1280px) 320px, (min-width: 640px) 50vw, 100vw"
-                                className="object-cover"
-                              />
-                            ) : (
-                              <div className="grid size-full place-items-center bg-slate-100 text-[#0B6232]">
-                                <UserRound className="size-16" />
-                              </div>
-                            )}
+                            <QualityAssurancePhoto
+                              src={member.image}
+                              alt={member.name}
+                              sizes="(min-width: 1280px) 320px, (min-width: 640px) 50vw, 100vw"
+                              className="object-contain p-3"
+                            />
                           </div>
                           <div className="p-5">
                             <div>
