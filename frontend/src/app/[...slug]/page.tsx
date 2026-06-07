@@ -5,13 +5,27 @@ import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ChevronRight, ClipboardCheck, UserRound, UsersRound } from "lucide-react";
+import {
+  ArrowRight,
+  BookOpenCheck,
+  CalendarDays,
+  ChevronRight,
+  Clock,
+  HeartHandshake,
+  MapPin,
+  MessageCircle,
+  ShieldCheck,
+  Sparkles,
+  UserRound,
+  UsersRound,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 type AboutPageContent = {
   eyebrow: string;
   title: string;
   intro: string;
+  heroImage?: string;
   sections: {
     title: string;
     text?: string;
@@ -38,6 +52,43 @@ type AboutPageContent = {
       area: string;
       details: string;
     }[];
+  };
+  counselling?: {
+    counselor: {
+      name: string;
+      title: string;
+      image: string;
+      message: string;
+    };
+    vision: string;
+    mission: string;
+    values: string[];
+    supportChannels: string[];
+    concernAreas: {
+      title: string;
+      summary: string;
+      items: string[];
+    }[];
+    access: {
+      label: string;
+      value: string;
+    }[];
+    closing: string;
+  };
+  deanOfStudents?: {
+    dean: {
+      name: string;
+      title: string;
+      image: string;
+      message: string[];
+    };
+    commitments: {
+      title: string;
+      text: string;
+    }[];
+    studentActions: string[];
+    officeAreas: string[];
+    closing: string;
   };
 };
 
@@ -533,34 +584,59 @@ const contentPages: Record<string, AboutPageContent> = {
   "student/dean-of-students": {
     eyebrow: "Student Welfare",
     title: "Dean of Students",
+    heroImage: "/University Management/Fr. Dr. Lumala Aloysius Gonzagga.jpeg",
     intro:
-      "The Office of the Dean of Students supports student welfare, discipline, accommodation guidance, recreation, spirituality, counselling, and holistic development.",
-    sections: [
-      {
-        title: "Office Leadership",
-        text:
-          "Fr. Dr. Lumala Aloysius Gonzagga serves as Dean of Students, leading a department entrusted with the welfare of all students.",
-      },
-      {
-        title: "Student Welfare",
-        items: [
-          "Accommodation guidance and student welfare support",
-          "Recreation and avenues for student engagement",
-          "Spiritual nourishment and holistic development",
-          "Psychosocial support through counselling and guidance",
-          "Coordination and guidance of Student Guild activities",
-          "Maintenance of student discipline and a secure campus environment",
+      "The Office of the Dean of Students supports a university community shaped by academic excellence, integrity, holistic development, welfare, guidance, and responsible service to society.",
+    sections: [],
+    deanOfStudents: {
+      dean: {
+        name: "Fr. Dr. Aloysius Gonzaga Lumala",
+        title: "Dean of Students",
+        image: "/University Management/Fr. Dr. Lumala Aloysius Gonzagga.jpeg",
+        message: [
+          "Welcome to our university community, where academic excellence, integrity, and holistic development are at the heart of everything we do. As Dean of Students, I encourage every student to embrace the opportunities available for learning, leadership, innovation, and personal growth.",
+          "University life is a unique journey that shapes not only your career but also your character. I urge you to uphold discipline, respect for others, and commitment to the values of our institution. Participate actively in academic, spiritual, social, and co-curricular activities, and work closely with your student leaders and staff to create a vibrant and supportive campus environment.",
+          "My office remains committed to your welfare, guidance, and success. Together, let us build a community that inspires excellence and prepares responsible citizens for service to society.",
         ],
       },
-      {
-        title: "Working With Students",
-        text:
-          "The department collaborates with medical services, security, and student leadership to create an environment that supports health, safety, and student success.",
-      },
-    ],
+      commitments: [
+        {
+          title: "Academic Excellence",
+          text:
+            "Students are encouraged to pursue learning with focus and commitment while using the opportunities available across the University.",
+        },
+        {
+          title: "Integrity",
+          text:
+            "University life calls for discipline, respect for others, and commitment to the values of the institution.",
+        },
+        {
+          title: "Holistic Development",
+          text:
+            "Growth at KCU includes leadership, innovation, spirituality, social engagement, co-curricular participation, and personal development.",
+        },
+      ],
+      studentActions: [
+        "Embrace learning, leadership, innovation, and personal growth opportunities.",
+        "Uphold discipline, respect for others, and institutional values.",
+        "Participate actively in academic, spiritual, social, and co-curricular activities.",
+        "Work closely with student leaders and staff to strengthen a supportive campus environment.",
+      ],
+      officeAreas: [
+        "Student welfare",
+        "Guidance",
+        "Success",
+        "Supportive campus life",
+        "Responsible citizenship",
+        "Service to society",
+      ],
+      closing:
+        "Together, let us build a community that inspires excellence and prepares responsible citizens for service to society.",
+    },
     cta: {
       label: "Student Guild",
       href: "/student/guild",
+      heading: "Work With Student Leaders",
     },
   },
   services: {
@@ -636,27 +712,71 @@ const contentPages: Record<string, AboutPageContent> = {
   },
   "services/counselling": {
     eyebrow: "Services",
-    title: "Counselling",
+    title: "Counselling and Guidance",
+    heroImage: "/Counsellor/DSC09887.jpeg",
     intro:
-      "KCU counselling and guidance support helps students navigate academic pressure, personal wellbeing, adjustment to university life, and holistic development.",
-    sections: [
-      {
-        title: "Student Wellbeing",
-        text:
-          "Counselling support is part of the University's wider student welfare environment, helping learners access guidance, care, and referral support when needed.",
+      "The KCU Counselling and Guidance Programme supports students and staff through academic pressure, psychosocial wellbeing, university transition, and personal development.",
+    sections: [],
+    counselling: {
+      counselor: {
+        name: "University Counselor",
+        title: "Counselling and Guidance Programme",
+        image: "/Counsellor/DSC09882.jpeg",
+        message:
+          "University campus life can be exciting and challenging at the same time. It is all part of the journey into the future we all aspire to have. The Counselling and Guidance Programme exists to ensure a smooth transition for every student and staff member, helping them achieve the prime purpose of being here: academic success, professional growth, and personal development. You are not alone, and it is human to feel this way. A problem shared is a problem halved. Break the silence and engage your Counselor through individual counselling, group counselling, and referrals.",
       },
-      {
-        title: "Areas of Support",
-        items: [
-          "Personal, social, and emotional wellbeing guidance.",
-          "Support with adjustment to campus life and academic expectations.",
-          "Collaboration with the Dean of Students and other support teams.",
-        ],
-      },
-    ],
-    cta: {
-      label: "Dean of Students",
-      href: "/student/dean-of-students",
+      vision:
+        "To become a Centre of Excellence in providing comprehensive, proactive, and timely counselling services that empower staff and students to thrive in their personal, academic, and professional lives.",
+      mission:
+        "To promote the holistic wellbeing of staff and students by offering accessible, confidential, non-discriminatory, and culturally sensitive counselling services that foster psychosocial wellness, academic success, and professional growth.",
+      values: [
+        "Confidentiality",
+        "Non-discrimination",
+        "Empathy",
+        "Strict adherence to professional ethics",
+      ],
+      supportChannels: ["Individual counselling", "Group counselling", "Referrals"],
+      concernAreas: [
+        {
+          title: "Academic Pressures",
+          summary:
+            "Support for students managing academic expectations, performance demands, deadlines, and future career uncertainty.",
+          items: [
+            "Career choice conflicts.",
+            "Performance and assessment demands, including fear of failure.",
+            "Anxiety around exams and oral presentations.",
+            "Concern about meeting personal goals.",
+            "Course workload and time management worries.",
+            "Inadequate sleep due to coursework deadlines.",
+            "Competition with students in other universities.",
+            "Critique from supervisors, mentors, and lecturers.",
+            "Fear of failure to graduate.",
+            "Work and employment uncertainties.",
+          ],
+        },
+        {
+          title: "Psychosocial Pressures",
+          summary:
+            "Care for personal, social, emotional, family, identity, grief, and relationship concerns that affect wellbeing.",
+          items: [
+            "Relationship and family hurdles, including betrayal, domestic violence, emotional neglect, physical neglect, sexual harassment, and violence.",
+            "Peer pressure.",
+            "Identity dilemmas, low self-esteem, poor interpersonal relationships, and lack of confidence.",
+            "Transition from parental supervision to independent adult decision making.",
+            "Navigating new social environments and finding support networks.",
+            "Dress code and multiple value systems.",
+            "Emotional drain due to terminal ailments.",
+            "Loss of loved ones and management of grieving processes.",
+            "Guilty feelings after poor relational or financial decisions and feeling overwhelmed.",
+          ],
+        },
+      ],
+      access: [
+        { label: "Location", value: "Wellness Centre" },
+        { label: "Days", value: "Monday to Friday" },
+        { label: "Time", value: "10:00am - 5:00pm" },
+      ],
+      closing: "# Your Mental Health Is Your Wealth",
     },
   },
   library: {
@@ -1190,7 +1310,7 @@ function getValidImageSrc(image?: string) {
   return src && src !== "/" ? src : undefined;
 }
 
-function QualityAssurancePhoto({ alt, className, sizes, src }: { alt: string; className: string; sizes: string; src?: string }) {
+function ProfilePhoto({ alt, className, sizes, src }: { alt: string; className: string; sizes: string; src?: string }) {
   const validSrc = getValidImageSrc(src);
 
   if (!validSrc) {
@@ -1202,6 +1322,259 @@ function QualityAssurancePhoto({ alt, className, sizes, src }: { alt: string; cl
   }
 
   return <Image src={validSrc} alt={alt} fill sizes={sizes} className={className} />;
+}
+
+function DeanOfStudentsProgramme({ deanOfStudents }: { deanOfStudents: NonNullable<AboutPageContent["deanOfStudents"]> }) {
+  return (
+    <>
+      <section className="grid gap-6 lg:grid-cols-[380px_1fr] lg:items-stretch">
+        <article className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5">
+          <div className="relative min-h-[440px] bg-slate-200">
+            <ProfilePhoto
+              src={deanOfStudents.dean.image}
+              alt={deanOfStudents.dean.name}
+              sizes="(min-width: 1024px) 380px, 100vw"
+              className="object-cover object-top"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+              <h2 className="text-2xl font-black leading-tight">{deanOfStudents.dean.name}</h2>
+              <p className="mt-1 text-sm font-bold text-white/80">{deanOfStudents.dean.title}</p>
+            </div>
+          </div>
+        </article>
+
+        <article className="rounded-3xl border border-slate-100 bg-white p-6 shadow-xl shadow-slate-900/5 sm:p-8 lg:p-10">
+          <div className="inline-flex size-12 items-center justify-center rounded-2xl bg-[#0B6232] text-[#FFC66B]">
+            <MessageCircle className="size-6" />
+          </div>
+          <p className="mt-6 text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Message from the Dean of Students</p>
+          <div className="mt-5 space-y-5">
+            {deanOfStudents.dean.message.map((paragraph) => (
+              <p key={paragraph} className="max-w-4xl text-base leading-8 text-slate-600 sm:text-lg sm:leading-9">
+                {paragraph}
+              </p>
+            ))}
+          </div>
+        </article>
+      </section>
+
+      <section className="grid gap-6 lg:grid-cols-3">
+        {deanOfStudents.commitments.map((commitment, index) => {
+          const Icon = index === 0 ? BookOpenCheck : index === 1 ? ShieldCheck : Sparkles;
+
+          return (
+            <article key={commitment.title} className="rounded-3xl border border-slate-100 bg-white p-6 shadow-xl shadow-slate-900/5 sm:p-8">
+              <span className="grid size-12 place-items-center rounded-2xl bg-[#FFC66B]/25 text-[#0B6232]">
+                <Icon className="size-6" />
+              </span>
+              <p className="mt-6 text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Student Development</p>
+              <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950">{commitment.title}</h2>
+              <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">{commitment.text}</p>
+            </article>
+          );
+        })}
+      </section>
+
+      <section className="grid gap-6 lg:grid-cols-[1fr_380px]">
+        <article className="rounded-3xl border border-slate-100 bg-white p-6 shadow-xl shadow-slate-900/5 sm:p-8 lg:p-10">
+          <div className="flex items-start gap-4">
+            <span className="grid size-12 shrink-0 place-items-center rounded-2xl bg-[#0B6232] text-[#FFC66B]">
+              <UsersRound className="size-6" />
+            </span>
+            <div>
+              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Student Life</p>
+              <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950 sm:text-3xl">What Students Are Encouraged To Do</h2>
+            </div>
+          </div>
+          <ul className="mt-8 grid gap-3 md:grid-cols-2">
+            {deanOfStudents.studentActions.map((action, index) => (
+              <li key={action} className="flex gap-3 rounded-2xl border border-slate-100 bg-slate-50/70 p-4 text-sm leading-6 text-slate-700 sm:text-base">
+                <span className="mt-0.5 grid size-6 shrink-0 place-items-center rounded-full bg-[#FFC66B]/30 text-[10px] font-black text-[#0B6232]">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <span>{action}</span>
+              </li>
+            ))}
+          </ul>
+        </article>
+
+        <article className="rounded-3xl border border-slate-100 bg-white p-6 shadow-xl shadow-slate-900/5 sm:p-8">
+          <div className="inline-flex size-12 items-center justify-center rounded-2xl bg-[#0B6232]/10 text-[#0B6232]">
+            <HeartHandshake className="size-6" />
+          </div>
+          <p className="mt-6 text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Office Commitment</p>
+          <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950">Welfare, Guidance, Success</h2>
+          <div className="mt-6 flex flex-wrap gap-2">
+            {deanOfStudents.officeAreas.map((area) => (
+              <span key={area} className="rounded-full border border-[#0B6232]/15 bg-[#0B6232]/5 px-4 py-2 text-xs font-black uppercase tracking-[0.14em] text-[#0B6232]">
+                {area}
+              </span>
+            ))}
+          </div>
+        </article>
+      </section>
+
+      <section className="overflow-hidden rounded-3xl bg-[#0B6232] p-7 text-white shadow-2xl shadow-[#0B6232]/20 sm:p-10">
+        <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">Responsible Citizens</p>
+        <h2 className="mt-3 max-w-5xl text-3xl font-black leading-tight sm:text-4xl">{deanOfStudents.closing}</h2>
+      </section>
+    </>
+  );
+}
+
+function CounsellingProgramme({ counselling }: { counselling: NonNullable<AboutPageContent["counselling"]> }) {
+  return (
+    <>
+      <section className="grid gap-6 lg:grid-cols-[380px_1fr] lg:items-stretch">
+        <article className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5">
+          <div className="relative min-h-[440px] bg-slate-200">
+            <ProfilePhoto
+              src={counselling.counselor.image}
+              alt={counselling.counselor.name}
+              sizes="(min-width: 1024px) 380px, 100vw"
+              className="object-cover object-top"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+              <h2 className="text-2xl font-black leading-tight">{counselling.counselor.name}</h2>
+              <p className="mt-1 text-sm font-bold text-white/80">{counselling.counselor.title}</p>
+            </div>
+          </div>
+        </article>
+
+        <article className="rounded-3xl border border-slate-100 bg-white p-6 shadow-xl shadow-slate-900/5 sm:p-8 lg:p-10">
+          <div className="inline-flex size-12 items-center justify-center rounded-2xl bg-[#0B6232] text-[#FFC66B]">
+            <MessageCircle className="size-6" />
+          </div>
+          <p className="mt-6 text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Message from the Counselor</p>
+          <p className="mt-5 max-w-4xl text-base leading-8 text-slate-600 sm:text-lg sm:leading-9">
+            {counselling.counselor.message}
+          </p>
+          <div className="mt-7 flex flex-wrap gap-2">
+            {counselling.supportChannels.map((channel) => (
+              <span key={channel} className="rounded-full border border-[#0B6232]/15 bg-[#0B6232]/5 px-4 py-2 text-xs font-black uppercase tracking-[0.14em] text-[#0B6232]">
+                {channel}
+              </span>
+            ))}
+          </div>
+        </article>
+      </section>
+
+      <section className="grid gap-6 lg:grid-cols-2">
+        <article className="rounded-3xl border border-slate-100 bg-white p-6 shadow-xl shadow-slate-900/5 sm:p-8">
+          <div className="flex items-start gap-4">
+            <span className="grid size-12 shrink-0 place-items-center rounded-2xl bg-[#FFC66B]/25 text-[#0B6232]">
+              <ShieldCheck className="size-6" />
+            </span>
+            <div>
+              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Vision</p>
+              <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950">Centre of Excellence</h2>
+              <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">{counselling.vision}</p>
+            </div>
+          </div>
+        </article>
+
+        <article className="rounded-3xl border border-slate-100 bg-white p-6 shadow-xl shadow-slate-900/5 sm:p-8">
+          <div className="flex items-start gap-4">
+            <span className="grid size-12 shrink-0 place-items-center rounded-2xl bg-[#0B6232]/10 text-[#0B6232]">
+              <HeartHandshake className="size-6" />
+            </span>
+            <div>
+              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Mission</p>
+              <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950">Holistic Wellbeing</h2>
+              <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">{counselling.mission}</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section className="rounded-3xl border border-slate-100 bg-white p-6 shadow-xl shadow-slate-900/5 sm:p-8 lg:p-10">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Our Core Values</p>
+            <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950 sm:text-3xl">How Support Is Offered</h2>
+          </div>
+          <Sparkles className="hidden size-9 text-[#FFC66B] sm:block" />
+        </div>
+        <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {counselling.values.map((value) => (
+            <div key={value} className="rounded-2xl border border-slate-100 bg-slate-50/70 p-5">
+              <div className="grid size-9 place-items-center rounded-xl bg-[#0B6232] text-sm font-black text-[#FFC66B]">
+                {value.slice(0, 1)}
+              </div>
+              <p className="mt-4 text-sm font-black leading-6 text-slate-900">{value}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5">
+        <div className="border-b border-slate-100 p-6 sm:p-8 lg:p-10">
+          <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Are You Grappling With?</p>
+          <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950 sm:text-3xl">Academic and Psychosocial Support Areas</h2>
+        </div>
+        <div className="grid gap-6 p-6 sm:p-8 lg:grid-cols-2 lg:p-10">
+          {counselling.concernAreas.map((area, areaIndex) => {
+            const Icon = areaIndex === 0 ? BookOpenCheck : HeartHandshake;
+
+            return (
+              <article key={area.title} className="rounded-2xl border border-slate-100 bg-slate-50/70 p-5 sm:p-6">
+                <div className="flex items-start gap-4">
+                  <span className="grid size-11 shrink-0 place-items-center rounded-2xl bg-[#0B6232] text-[#FFC66B]">
+                    <Icon className="size-5" />
+                  </span>
+                  <div>
+                    <h3 className="text-xl font-black leading-tight text-slate-950">{area.title}</h3>
+                    <p className="mt-2 text-sm leading-6 text-slate-600">{area.summary}</p>
+                  </div>
+                </div>
+                <ul className="mt-6 grid gap-3">
+                  {area.items.map((item, itemIndex) => (
+                    <li key={item} className="flex gap-3 rounded-2xl border border-white bg-white p-4 text-sm leading-6 text-slate-700 shadow-sm shadow-slate-900/5">
+                      <span className="mt-0.5 grid size-6 shrink-0 place-items-center rounded-full bg-[#FFC66B]/30 text-[10px] font-black text-[#0B6232]">
+                        {String(itemIndex + 1).padStart(2, "0")}
+                      </span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            );
+          })}
+        </div>
+      </section>
+
+      <section className="overflow-hidden rounded-3xl bg-[#0B6232] text-white shadow-2xl shadow-[#0B6232]/20">
+        <div className="grid gap-7 p-6 sm:p-8 lg:grid-cols-[1fr_420px] lg:p-10">
+          <div>
+            <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">Break the Silence</p>
+            <h2 className="mt-3 max-w-3xl text-3xl font-black leading-tight sm:text-4xl">{counselling.closing}</h2>
+            <p className="mt-5 max-w-3xl text-sm leading-7 text-white/75 sm:text-base sm:leading-8">
+              Find the Counselling and Guidance Programme at the Wellness Centre during weekday service hours.
+            </p>
+          </div>
+          <div className="grid gap-3">
+            {counselling.access.map((detail, index) => {
+              const Icon = index === 0 ? MapPin : index === 1 ? CalendarDays : Clock;
+
+              return (
+                <div key={detail.label} className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/10 p-4 backdrop-blur">
+                  <span className="grid size-11 shrink-0 place-items-center rounded-2xl bg-[#FFC66B] text-[#0B6232]">
+                    <Icon className="size-5" />
+                  </span>
+                  <div>
+                    <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#FFC66B]">{detail.label}</p>
+                    <p className="mt-1 text-base font-black leading-tight">{detail.value}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+    </>
+  );
 }
 
 function FeesStructurePage() {
@@ -1960,6 +2333,7 @@ function AboutContentPage({ page }: { page: AboutPageContent }) {
   const hasPageSections = page.sections.length > 0;
   const parentLabel = page.eyebrow === "Admissions" ? "Admissions" : page.eyebrow === "Academics" || page.eyebrow === "Courses" ? "Academics" : isServicesPage ? "Services" : page.eyebrow === "Student Life" || page.eyebrow === "Student Welfare" || page.eyebrow === "Student Leadership" ? "Student" : "About Us";
   const parentHref = page.eyebrow === "Admissions" ? "/admissions" : page.eyebrow === "Academics" || page.eyebrow === "Courses" ? "/academics" : isServicesPage ? "/services" : page.eyebrow === "Student Life" || page.eyebrow === "Student Welfare" || page.eyebrow === "Student Leadership" ? "/student" : "/about";
+  const heroImage = page.heroImage ?? "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1800&q=80";
 
   return (
     <>
@@ -1976,7 +2350,7 @@ function AboutContentPage({ page }: { page: AboutPageContent }) {
         </div>
 
         <section className="relative overflow-hidden px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
-          <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1800&q=80')" }} />
+          <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('${heroImage}')` }} />
           <div className="absolute inset-0 bg-black/50" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/55 to-black/10" />
           <div className="absolute -bottom-24 right-10 hidden size-72 rounded-full border border-white/10 lg:block" />
@@ -2046,7 +2420,7 @@ function AboutContentPage({ page }: { page: AboutPageContent }) {
                   <section className="grid gap-6 lg:grid-cols-[380px_1fr] lg:items-stretch">
                     <article className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5">
                       <div className="relative min-h-[420px] bg-slate-200">
-                        <QualityAssurancePhoto
+                        <ProfilePhoto
                           src={page.qualityAssurance.director.image}
                           alt={page.qualityAssurance.director.name}
                           sizes="(min-width: 1024px) 380px, 100vw"
@@ -2084,7 +2458,7 @@ function AboutContentPage({ page }: { page: AboutPageContent }) {
                       {page.qualityAssurance.staff.map((member) => (
                         <article key={member.name} className="rounded-xl border border-slate-100 bg-white p-4 text-center shadow-xl shadow-slate-900/10">
                           <div className="relative mx-auto aspect-[3/4] w-3/4 overflow-hidden rounded-lg bg-slate-100">
-                            <QualityAssurancePhoto
+                            <ProfilePhoto
                               src={member.image}
                               alt={member.name}
                               sizes="(min-width: 1280px) 210px, (min-width: 640px) 34vw, 75vw"
@@ -2126,6 +2500,10 @@ function AboutContentPage({ page }: { page: AboutPageContent }) {
                   </section>
                 </>
               )}
+
+              {page.deanOfStudents && <DeanOfStudentsProgramme deanOfStudents={page.deanOfStudents} />}
+
+              {page.counselling && <CounsellingProgramme counselling={page.counselling} />}
 
               {page.sections.map((section, index) => (
                 <article
