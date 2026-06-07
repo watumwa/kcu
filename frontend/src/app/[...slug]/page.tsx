@@ -90,6 +90,26 @@ type AboutPageContent = {
     officeAreas: string[];
     closing: string;
   };
+  libraryPage?: {
+    librarian: {
+      name: string;
+      title: string;
+      image: string;
+      message: string[];
+    };
+    theme: string;
+    mission: string;
+    vision: string;
+    values: {
+      name: string;
+      text: string;
+    }[];
+    eResourcesSteps: string[];
+    hours: {
+      label: string;
+      value: string;
+    }[];
+  };
 };
 
 const aboutPages: Record<string, AboutPageContent> = {
@@ -782,32 +802,71 @@ const contentPages: Record<string, AboutPageContent> = {
   library: {
     eyebrow: "Library",
     title: "KCU Library",
+    heroImage: "/University%20Management/Mr.%20Eric%20Keziron%20Oloo.jpeg",
     intro:
-      "King Ceasor University Library is a knowledge hub and one of the best study spaces on campus, supporting learning, research, and innovation.",
-    sections: [
-      {
-        title: "Library Mission",
-        text:
-          "The Library embraces emerging technologies and best practices in the provision of exceptional library and information services.",
-      },
-      {
-        title: "Library Vision",
-        text:
-          "An indispensable research, innovation and knowledge hub.",
-      },
-      {
-        title: "Resources and Services",
-        items: [
-          "Physical and remote access to library resources and services",
-          "E-resources lab with technology, internet access, and digital resources",
-          "Expansive book collections for students, researchers, and faculty",
-          "Research support, information literacy, circulation, and catalogue access",
+      "King Ceasor University Library is a knowledge hub, a home to excellent study spaces, and a catalyst for academic excellence, research, and innovation.",
+    sections: [],
+    libraryPage: {
+      librarian: {
+        name: "Mr. Eric Keziron Oloo",
+        title: "University Librarian",
+        image: "/University%20Management/Mr.%20Eric%20Keziron%20Oloo.jpeg",
+        message: [
+          "Welcome to King Ceasor University (KCU) Library, a knowledge hub and home to some of the best study spots on campus. Our theme is automated and user-centered academic library services: a catalyst to academic excellence, research, and innovation.",
+          "The library offers multifaceted resources and services accessible both physically and remotely in support of the academic mission of the University.",
+          "The library also fosters collaboration with different KCU schools and departments in building strong and relevant collections. KCU Library subscribes to the Consortium of Uganda University Libraries (CUUL) for effective collaboration and resource sharing among university and institutional libraries in Uganda, ensuring access to state-of-the-art library resources and services.",
+          "Please do not hesitate to seek support from our librarians at all times. We shall always offer you professional library and information services with a smile.",
         ],
       },
-    ],
+      theme:
+        "Automated and user-centered academic library services: a catalyst to academic excellence, research, and innovation.",
+      mission:
+        "To embrace emerging technologies and best practices in the provision of exceptional library and information services.",
+      vision:
+        "An indispensable research, innovation, and knowledge hub.",
+      values: [
+        {
+          name: "Equity",
+          text:
+            "We recognize and address the unique needs of our users to ensure they have an equal opportunity for academic excellence.",
+        },
+        {
+          name: "Integrity",
+          text:
+            "We ensure moral soundness and uphold intellectual honesty and ethical use of information.",
+        },
+        {
+          name: "Innovation",
+          text:
+            "We continuously seek new and creative ways to enhance library services and resources.",
+        },
+        {
+          name: "Learning",
+          text:
+            "We provide relevant resources to support teaching, learning, and research.",
+        },
+        {
+          name: "Accountability",
+          text:
+            "We ensure that all resources entrusted to the library are used efficiently, effectively, and responsibly to achieve their purpose.",
+        },
+      ],
+      eResourcesSteps: [
+        "Download the MyLoft app from Play Store for Android users or App Store for iOS.",
+        "For computers, install the MyLoft extension in Google Chrome.",
+        "Under institutions, select Consortium of Uganda University Libraries, Uganda.",
+        "Log in using the credentials received from the library.",
+      ],
+      hours: [
+        { label: "Monday to Friday", value: "7:30 AM - 9:00 PM" },
+        { label: "Saturday", value: "8:00 AM - 1:00 PM" },
+        { label: "Public Holidays", value: "Closed except on special arrangements" },
+      ],
+    },
     cta: {
       label: "Library Catalogue",
       href: "https://catalogue.kcu.ac.ug/",
+      heading: "Search Library Resources",
     },
   },
   "library/catalogue": {
@@ -1418,6 +1477,142 @@ function DeanOfStudentsProgramme({ deanOfStudents }: { deanOfStudents: NonNullab
       <section className="overflow-hidden rounded-3xl bg-[#0B6232] p-7 text-white shadow-2xl shadow-[#0B6232]/20 sm:p-10">
         <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">Responsible Citizens</p>
         <h2 className="mt-3 max-w-5xl text-3xl font-black leading-tight sm:text-4xl">{deanOfStudents.closing}</h2>
+      </section>
+    </>
+  );
+}
+
+function LibraryProgramme({ libraryPage }: { libraryPage: NonNullable<AboutPageContent["libraryPage"]> }) {
+  return (
+    <>
+      <section className="grid gap-6 lg:grid-cols-[380px_1fr] lg:items-stretch">
+        <article className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5">
+          <div className="relative min-h-[440px] bg-slate-200">
+            <Image
+              src={libraryPage.librarian.image}
+              alt={libraryPage.librarian.name}
+              fill
+              sizes="(min-width: 1024px) 380px, 100vw"
+              className="object-cover object-top"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+              <h2 className="text-2xl font-black leading-tight">{libraryPage.librarian.name}</h2>
+              <p className="mt-1 text-sm font-bold text-white/80">{libraryPage.librarian.title}</p>
+            </div>
+          </div>
+        </article>
+
+        <article className="rounded-3xl border border-slate-100 bg-white p-6 shadow-xl shadow-slate-900/5 sm:p-8 lg:p-10">
+          <p className="mt-6 text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">University Librarian&apos;s Message</p>
+          <div className="mt-3 space-y-5">
+            {libraryPage.librarian.message.map((paragraph) => (
+              <p key={paragraph} className="max-w-4xl text-[13px] leading-6 text-slate-600 sm:text-sm sm:leading-7">
+                {paragraph}
+              </p>
+            ))}
+          </div>
+        </article>
+      </section>
+
+      <section className="overflow-hidden rounded-3xl bg-[#0B6232] text-white shadow-2xl shadow-[#0B6232]/20">
+        <div className="grid gap-6 p-6 sm:p-8 lg:grid-cols-[260px_1fr] lg:p-10 lg:items-center">
+          <div>
+            <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">Library Theme</p>
+            <h2 className="mt-2 text-2xl font-black leading-tight">Academic Excellence, Research, Innovation</h2>
+          </div>
+          <p className="text-base leading-8 text-white/80 sm:text-lg sm:leading-9">{libraryPage.theme}</p>
+        </div>
+      </section>
+
+      <section className="grid gap-6 lg:grid-cols-2">
+        <article className="rounded-3xl border border-slate-100 bg-white p-6 shadow-xl shadow-slate-900/5 sm:p-8">
+          <div className="flex items-start gap-4">
+            <span className="grid size-12 shrink-0 place-items-center rounded-2xl bg-[#FFC66B]/25 text-[#0B6232]">
+              <ShieldCheck className="size-6" />
+            </span>
+            <div>
+              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Mission</p>
+              <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950">Exceptional Library Services</h2>
+              <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">{libraryPage.mission}</p>
+            </div>
+          </div>
+        </article>
+
+        <article className="rounded-3xl border border-slate-100 bg-white p-6 shadow-xl shadow-slate-900/5 sm:p-8">
+          <div className="flex items-start gap-4">
+            <span className="grid size-12 shrink-0 place-items-center rounded-2xl bg-[#0B6232]/10 text-[#0B6232]">
+              <Sparkles className="size-6" />
+            </span>
+            <div>
+              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Vision</p>
+              <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950">Knowledge Hub</h2>
+              <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">{libraryPage.vision}</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section className="rounded-3xl border border-slate-100 bg-white p-6 shadow-xl shadow-slate-900/5 sm:p-8 lg:p-10">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Core Values</p>
+            <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950 sm:text-3xl">How the Library Serves Users</h2>
+          </div>
+          <BookOpenCheck className="hidden size-9 text-[#FFC66B] sm:block" />
+        </div>
+        <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-5">
+          {libraryPage.values.map((value) => (
+            <article key={value.name} className="rounded-2xl border border-slate-100 bg-slate-50/70 p-5">
+              <div className="grid size-9 place-items-center rounded-xl bg-[#0B6232] text-sm font-black text-[#FFC66B]">
+                {value.name.slice(0, 1)}
+              </div>
+              <h3 className="mt-4 text-base font-black leading-tight text-slate-950">{value.name}</h3>
+              <p className="mt-3 text-sm leading-6 text-slate-600">{value.text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="grid gap-6 lg:grid-cols-[1fr_380px]">
+        <article className="rounded-3xl border border-slate-100 bg-white p-6 shadow-xl shadow-slate-900/5 sm:p-8 lg:p-10">
+          <div className="flex items-start gap-4">
+            <span className="grid size-12 shrink-0 place-items-center rounded-2xl bg-[#0B6232] text-[#FFC66B]">
+              <BookOpenCheck className="size-6" />
+            </span>
+            <div>
+              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Remote Access</p>
+              <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950 sm:text-3xl">How to Access E-resources</h2>
+            </div>
+          </div>
+          <ol className="mt-8 grid gap-3">
+            {libraryPage.eResourcesSteps.map((step, index) => (
+              <li key={step} className="flex gap-3 rounded-2xl border border-slate-100 bg-slate-50/70 p-4 text-sm leading-6 text-slate-700 sm:text-base">
+                <span className="mt-0.5 grid size-6 shrink-0 place-items-center rounded-full bg-[#FFC66B]/30 text-[10px] font-black text-[#0B6232]">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <span>{step}</span>
+              </li>
+            ))}
+          </ol>
+        </article>
+
+        <aside className="grid gap-6">
+          <article className="rounded-3xl border border-slate-100 bg-white p-6 shadow-xl shadow-slate-900/5 sm:p-8">
+            <div className="inline-flex size-12 items-center justify-center rounded-2xl bg-[#FFC66B]/25 text-[#0B6232]">
+              <Clock className="size-6" />
+            </div>
+            <p className="mt-6 text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Library Hours</p>
+            <div className="mt-5 grid gap-3">
+              {libraryPage.hours.map((hour) => (
+                <div key={hour.label} className="rounded-2xl border border-slate-100 bg-slate-50/70 p-4">
+                  <p className="text-xs font-black uppercase tracking-[0.16em] text-[#0B6232]">{hour.label}</p>
+                  <p className="mt-1 text-base font-black leading-tight text-slate-950">{hour.value}</p>
+                </div>
+              ))}
+            </div>
+          </article>
+        </aside>
       </section>
     </>
   );
@@ -2502,6 +2697,8 @@ function AboutContentPage({ page }: { page: AboutPageContent }) {
               )}
 
               {page.deanOfStudents && <DeanOfStudentsProgramme deanOfStudents={page.deanOfStudents} />}
+
+              {page.libraryPage && <LibraryProgramme libraryPage={page.libraryPage} />}
 
               {page.counselling && <CounsellingProgramme counselling={page.counselling} />}
 

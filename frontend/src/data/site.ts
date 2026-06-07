@@ -33,6 +33,8 @@ export const navItems: NavItem[] = [
     description: "Learn about King Ceasor University's identity, mission, values and partnerships.",
     children: [
       { label: "About KCU", href: "/about" },
+      { label: "Mission | Vision | Core Values", href: "/about#mission-vision" },
+      { label: "Governance", href: "/about#trustees" },
       { label: "Collaborations & Partnerships", href: "/about/collaborations-partnerships" },
       { label: "News Letter", href: "/about/newsletter" },
     ],

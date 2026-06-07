@@ -59,24 +59,24 @@ function TabAboutUs() {
           </div>
         ))}
       </div>
-      <section id="mission-vision">
-      <div className="grid gap-4 sm:grid-cols-3">
-        <div className="rounded-2xl bg-[#0B6232] p-6 text-white">
-          <Star className="size-7 text-[#FFC66B]" />
-          <p className="mt-3 text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">Our Vision</p>
-          <p className="mt-2 text-lg font-black leading-snug">An innovation driven University</p>
+      <section id="mission-vision" className="scroll-mt-32">
+        <div className="grid gap-4 sm:grid-cols-3">
+          <div className="rounded-2xl bg-[#0B6232] p-6 text-white">
+            <Star className="size-7 text-[#FFC66B]" />
+            <p className="mt-3 text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">Our Vision</p>
+            <p className="mt-2 text-lg font-black leading-snug">An innovation driven University</p>
+          </div>
+          <div className="rounded-2xl bg-[#0B6232] p-6 text-white">
+            <BookOpen className="size-7 text-[#FFC66B]" />
+            <p className="mt-3 text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">Our Mission</p>
+            <p className="mt-2 text-sm font-semibold leading-6 text-white/90">To provide a holistic education through inventive teaching, learning, and research aimed at fostering socio-economic transformation.</p>
+          </div>
+          <div className="rounded-2xl border-2 border-[#FFC66B] bg-[#FFC66B]/10 p-6">
+            <GraduationCap className="size-7 text-[#0B6232]" />
+            <p className="mt-3 text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">The Motto</p>
+            <p className="mt-2 text-2xl font-black text-[#0B6232]">Ignite the Future</p>
+          </div>
         </div>
-        <div className="rounded-2xl bg-[#0B6232] p-6 text-white">
-          <BookOpen className="size-7 text-[#FFC66B]" />
-          <p className="mt-3 text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">Our Mission</p>
-          <p className="mt-2 text-sm font-semibold leading-6 text-white/90">To provide a holistic education through inventive teaching, learning, and research aimed at fostering socio-economic transformation.</p>
-        </div>
-        <div className="rounded-2xl border-2 border-[#FFC66B] bg-[#FFC66B]/10 p-6">
-          <GraduationCap className="size-7 text-[#0B6232]" />
-          <p className="mt-3 text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">The Motto</p>
-          <p className="mt-2 text-2xl font-black text-[#0B6232]">Ignite the Future</p>
-        </div>
-      </div>
       </section>
       <div>
         <p className="text-xs font-black uppercase tracking-[0.2em] text-[#0B6232]">What We Stand For</p>
@@ -180,6 +180,11 @@ function getProfileBio(person: PersonProfile) {
   return `${person.name} serves as ${person.role} at King Ceasor University, contributing to institutional leadership, governance and the University's commitment to academic excellence, accountability and service.`;
 }
 
+function getValidProfileImage(image?: string) {
+  const src = image?.trim();
+  return src && src !== "/" ? src : undefined;
+}
+
 function BioModal({ person, onClose }: { person: PersonProfile | null; onClose: () => void }) {
   useEffect(() => {
     if (!person) return;
@@ -195,6 +200,7 @@ function BioModal({ person, onClose }: { person: PersonProfile | null; onClose: 
   if (!person) return null;
 
   const initials = getInitials(person.name);
+  const image = getValidProfileImage(person.image);
   const portraitBg = person.tier === "top" ? "bg-[#FFC66B]" : person.tier === "mid" ? "bg-[#0B6232]" : "bg-slate-100";
   const portraitText = person.tier === "top" ? "text-[#0B6232]" : person.tier === "mid" ? "text-white" : "text-slate-600";
 
@@ -204,8 +210,8 @@ function BioModal({ person, onClose }: { person: PersonProfile | null; onClose: 
       <div className="relative w-full max-w-lg overflow-hidden rounded-2xl bg-white shadow-2xl shadow-slate-950/25">
         <div className="flex items-start gap-5 border-b border-slate-100 p-5 sm:p-6">
           <div className={`relative grid h-[168px] w-28 shrink-0 place-items-center overflow-hidden rounded-xl ${portraitBg} ${portraitText} text-3xl font-black shadow-inner`}>
-            {person.image ? (
-              <Image src={person.image} alt={person.name} fill sizes="112px" className="object-cover object-top" />
+            {image ? (
+              <Image src={image} alt={person.name} fill sizes="112px" className="object-cover object-top" />
             ) : (
               initials || "KCU"
             )}
@@ -233,7 +239,8 @@ function BioModal({ person, onClose }: { person: PersonProfile | null; onClose: 
 }
 
 function CouncilCard({ person, onSelect }: { person: PersonProfile; onSelect: (person: PersonProfile) => void }) {
-  const { image, name, role, tier } = person;
+  const { name, role, tier } = person;
+  const image = getValidProfileImage(person.image);
   const initials = name
     ? getInitials(name)
     : "";
@@ -258,7 +265,8 @@ function CouncilCard({ person, onSelect }: { person: PersonProfile; onSelect: (p
 }
 
 function CouncilCardMobile({ person, onSelect }: { person: PersonProfile; onSelect: (person: PersonProfile) => void }) {
-  const { image, name, role, tier } = person;
+  const { name, role, tier } = person;
+  const image = getValidProfileImage(person.image);
   const initials = getInitials(name);
 
   const avatarBg = tier === "top" ? "bg-[#FFC66B]" : tier === "mid" ? "bg-[#0B6232]" : "bg-slate-200";
@@ -513,6 +521,7 @@ const tabs = [
 
 const hashTabMap: Record<string, string> = {
   "mission-vision": "about",
+  governance: "trustees",
 };
 
 // ── Page ───────────────────────────────────────────────────────────────────

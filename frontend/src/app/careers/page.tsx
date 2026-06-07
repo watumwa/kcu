@@ -8,14 +8,10 @@ import {
   ChevronRight,
   Clock3,
   FileText,
-  GraduationCap,
   HeartHandshake,
   Mail,
   MapPin,
   Search,
-  ShieldCheck,
-  Sparkles,
-  Users,
 } from "lucide-react";
 import Link from "next/link";
 import { useMemo, useState } from "react";
@@ -28,36 +24,29 @@ const vacancies = [
     title: "Academic Staff",
     department: "Schools and Faculties",
     type: "Full-time / Part-time",
-    location: "Bunga Hill Campus",
-    deadline: "Open call",
-    summary: "Join KCU's teaching and research community across health sciences, law, management, computing, engineering and related disciplines.",
+    location: "KCU Main Campus - Bunga",
+    deadline: "Deadline: 20-May-2025",
+    summary: "",
     requirements: ["Relevant academic qualifications", "Teaching, research or professional experience", "Commitment to student-centred learning"],
   },
   {
     title: "Administrative Staff",
     department: "University Administration",
     type: "Full-time",
-    location: "Bunga Hill Campus",
-    deadline: "Open call",
-    summary: "Support smooth university operations through student services, records, finance, quality assurance, communications and institutional administration.",
+    location: "KCU Main Campus - Bunga",
+    deadline: "Deadline: 20-May-2025",
+    summary: "",
     requirements: ["Strong communication skills", "Relevant professional training", "Integrity, discretion and service orientation"],
   },
   {
     title: "Technical and Support Staff",
     department: "Campus Services",
     type: "Full-time / Contract",
-    location: "Bunga Hill Campus",
-    deadline: "Open call",
-    summary: "Help maintain the systems, facilities and services that make KCU a reliable environment for learning, research and campus life.",
+    location: "KCU Main Campus - Bunga",
+    deadline: "Deadline: 20-May-2025",
+    summary: "",
     requirements: ["Role-specific technical competence", "Teamwork and reliability", "Ability to support staff and students professionally"],
   },
-];
-
-const values = [
-  { icon: GraduationCap, title: "Academic Purpose", text: "Work in an institution focused on inventive teaching, learning and research." },
-  { icon: Users, title: "Collaborative Culture", text: "Join teams that serve students, staff, alumni and partners with professionalism." },
-  { icon: Sparkles, title: "Growth Mindset", text: "Contribute to a university community built around innovation and continuous improvement." },
-  { icon: ShieldCheck, title: "Integrity", text: "Be part of a workplace that values accountability, respect and ethical service." },
 ];
 
 const steps = [
@@ -124,10 +113,10 @@ export default function CareersPage() {
               <div className="grid size-11 place-items-center rounded-xl bg-[#FFC66B] text-[#0B6232]">
                 <BriefcaseBusiness className="size-5" />
               </div>
-              <p className="mt-4 text-sm font-black uppercase tracking-[0.16em] text-[#FFC66B]">Current Status</p>
-              <p className="mt-2 text-2xl font-black">Open Talent Pool</p>
+              <p className="mt-4 text-sm font-black uppercase tracking-[0.16em] text-[#FFC66B]">Review Opportunities</p>
+              <p className="mt-2 text-2xl font-black"></p>
               <p className="mt-2 text-sm leading-6 text-white/75">
-                KCU welcomes expressions of interest from qualified academic, administrative, technical and support professionals.
+                
               </p>
             </div>
           </div>
@@ -182,7 +171,7 @@ export default function CareersPage() {
                   </div>
                   <Button asChild className="mt-auto h-11 rounded-xl bg-[#0B6232] px-5 font-black text-white hover:bg-[#0B6232]">
                     <a href={`mailto:hr@kcu.ac.ug?subject=Career%20Application%20-%20${encodeURIComponent(job.title)}`}>
-                      Apply for this area <ArrowRight className="ml-2 size-4" />
+                      Apply Here <ArrowRight className="ml-2 size-4" />
                     </a>
                   </Button>
                 </article>
@@ -192,35 +181,9 @@ export default function CareersPage() {
             {filteredVacancies.length === 0 && (
               <div className="mt-8 rounded-2xl border border-slate-100 bg-slate-50 p-8 text-center">
                 <p className="font-black text-slate-950">No matching career areas found.</p>
-                <p className="mt-2 text-sm text-slate-500">Try searching for academic, administration, technical or support.</p>
+                <p className="mt-2 text-sm text-slate-500">Search</p>
               </div>
             )}
-          </div>
-        </section>
-
-        <section className="bg-slate-50 px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
-          <div className="mx-auto grid max-w-[1440px] gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-            <div>
-              <p className="text-xs font-black uppercase tracking-[0.2em] text-[#0B6232]">Why KCU</p>
-              <h2 className="mt-2 text-3xl font-black leading-tight text-slate-950">A Workplace Built Around Purpose</h2>
-              <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base">
-                KCU staff contribute to student transformation, institutional growth and the wider development of society through teaching, research, service and operational excellence.
-              </p>
-            </div>
-            <div className="grid gap-4 sm:grid-cols-2">
-              {values.map((item) => {
-                const Icon = item.icon;
-                return (
-                  <div key={item.title} className="rounded-2xl border border-slate-100 bg-white p-5 shadow-sm">
-                    <div className="grid size-10 place-items-center rounded-xl bg-[#FFC66B]/30 text-[#0B6232]">
-                      <Icon className="size-5" />
-                    </div>
-                    <h3 className="mt-4 text-base font-black text-slate-950">{item.title}</h3>
-                    <p className="mt-2 text-sm leading-6 text-slate-600">{item.text}</p>
-                  </div>
-                );
-              })}
-            </div>
           </div>
         </section>
 
