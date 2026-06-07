@@ -598,12 +598,12 @@ const contentPages: Record<string, AboutPageContent> = {
       director: {
         name: "Assoc. Prof. Annabella Habinka Ejiri",
         title: "Director Quality Assurance",
-        image: "",
+        image: "/qa.jpeg",
         message:
           "Welcome to the Directorate of Quality Assurance and Control (DQA&C) at King Ceasor University. We are dedicated to promoting excellence in teaching, learning, research, and service through effective quality assurance practices. As the University's focal point for quality reviews and continuous improvement initiatives, we work closely with staff, students, and stakeholders to uphold high academic and operational standards. We invite you to explore our services and quality initiatives, and encourage you to contact us for any additional information or support.",
       },
       staff: [
-        { name: "Dr. Annabella Habinka Ejiri", role: "Director Quality Assurance", image:"/qa.jpeg "},
+        { name: "Dr. Annabella Habinka Ejiri", role: "Director Quality Assurance", image:"/qa.jpeg"},
         { name: "Ms. Atuhwera Joanita", role: "Quality Assurance Monitoring Officer", image:"/Joanita.jpeg" },
         { name: "Mr. Ayebale John Justice", role: "Clinical Monitoring Officer", image:"/" },
         { name: "Ms. Grace Asingwire", role: "Quality Assurance Officer", image:"/Grace.jpg" },
@@ -2043,32 +2043,30 @@ function AboutContentPage({ page }: { page: AboutPageContent }) {
 
               {page.qualityAssurance && (
                 <>
-                  <section className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5">
-                    <div className="grid gap-0 lg:grid-cols-[380px_1fr]">
-                      <div className="relative min-h-[360px] bg-slate-200">
+                  <section className="grid gap-6 lg:grid-cols-[380px_1fr] lg:items-stretch">
+                    <article className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5">
+                      <div className="relative min-h-[420px] bg-slate-200">
                         <QualityAssurancePhoto
                           src={page.qualityAssurance.director.image}
                           alt={page.qualityAssurance.director.name}
                           sizes="(min-width: 1024px) 380px, 100vw"
-                          className="object-contain p-6"
+                          className="object-cover object-top"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
                         <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                          <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">Director</p>
                           <h2 className="mt-2 text-2xl font-black leading-tight">{page.qualityAssurance.director.name}</h2>
                           <p className="mt-1 text-sm font-bold text-white/80">{page.qualityAssurance.director.title}</p>
                         </div>
                       </div>
-                      <div className="p-6 sm:p-8 lg:p-10">
-                        <div className="inline-flex size-12 items-center justify-center rounded-2xl bg-[#0B6232] text-[#FFC66B] shadow-lg shadow-[#0B6232]/20">
-                          <ClipboardCheck className="size-6" />
-                        </div>
-                        <p className="mt-6 text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Message from the Director Quality Assurance</p>
-                        <p className="mt-5 max-w-4xl text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
-                          {page.qualityAssurance.director.message}
-                        </p>
-                      </div>
-                    </div>
+                    </article>
+
+                    <article className="rounded-3xl border border-slate-100 bg-white p-6 shadow-xl shadow-slate-900/5 sm:p-8 lg:p-10">
+                     
+                      <p className="mt-6 text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Message from the Director Quality Assurance</p>
+                      <p className="mt-5 max-w-4xl text-base leading-8 text-slate-600 sm:text-lg sm:leading-9">
+                        {page.qualityAssurance.director.message}
+                      </p>
+                    </article>
                   </section>
 
                   <section className="rounded-3xl border border-slate-100 bg-white p-6 shadow-xl shadow-slate-900/5 sm:p-8 lg:p-10">
@@ -2079,25 +2077,23 @@ function AboutContentPage({ page }: { page: AboutPageContent }) {
                       </div>
                       <div className="inline-flex items-center gap-2 text-sm font-bold text-slate-500">
                         <UsersRound className="size-4 text-[#0B6232]" />
-                        <span>6 team positions</span>
+                        <span>Team Members</span>
                       </div>
                     </div>
-                    <div className="mt-7 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+                    <div className="mt-8 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
                       {page.qualityAssurance.staff.map((member) => (
-                        <article key={member.name} className="overflow-hidden rounded-2xl border border-slate-100 bg-slate-50/70">
-                          <div className="relative aspect-[4/3] bg-white">
+                        <article key={member.name} className="rounded-xl border border-slate-100 bg-white p-4 text-center shadow-xl shadow-slate-900/10">
+                          <div className="relative mx-auto aspect-[3/4] w-3/4 overflow-hidden rounded-lg bg-slate-100">
                             <QualityAssurancePhoto
                               src={member.image}
                               alt={member.name}
-                              sizes="(min-width: 1280px) 320px, (min-width: 640px) 50vw, 100vw"
-                              className="object-contain p-3"
+                              sizes="(min-width: 1280px) 210px, (min-width: 640px) 34vw, 75vw"
+                              className="object-cover object-top"
                             />
                           </div>
-                          <div className="p-5">
-                            <div>
-                              <h3 className="text-base font-black leading-snug text-slate-950">{member.name}</h3>
-                              <p className="mt-1 text-sm leading-5 text-slate-500">{member.role}</p>
-                            </div>
+                          <div className="mx-auto px-3 py-5">
+                            <h3 className="text-base font-black leading-tight text-slate-950">{member.name}</h3>
+                            <p className="mt-2 text-sm leading-5 text-slate-500">{member.role}</p>
                           </div>
                         </article>
                       ))}
