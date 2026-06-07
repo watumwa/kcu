@@ -20,6 +20,7 @@ type AboutPageContent = {
   cta?: {
     label: string;
     href: string;
+    heading?: string;
   };
   qualityAssurance?: {
     director: {
@@ -210,6 +211,22 @@ const contentPages: Record<string, AboutPageContent> = {
         ],
       },
       {
+        title: "Higher Education Certificate (HEC)",
+        items: [
+          "Applicants should have UCE or equivalent with at least five passes.",
+          "HEC provides a bridging pathway for applicants who do not meet direct entry requirements for degree programmes.",
+          "Applicants with foreign qualifications may use HEC pathways where their credentials require academic bridging or equivalence support.",
+        ],
+      },
+      {
+        title: "Mature Entry",
+        items: [
+          "Applicants should normally be at least 25 years old at the time of application.",
+          "Applicants may be required to sit and pass a mature age entry examination or interview approved by the University.",
+          "Relevant work experience, prior learning, and professional background may be considered during assessment.",
+        ],
+      },
+      {
         title: "International Applicants",
         items: [
           "Applicants whose first language or medium of instruction is not English may be required to provide evidence of English language competence.",
@@ -219,8 +236,9 @@ const contentPages: Record<string, AboutPageContent> = {
       },
     ],
     cta: {
-      label: "Start Application",
+      label: "Apply Now",
       href: "https://apply.kcu.ac.ug/",
+      heading: "Ready to Apply",
     },
   },
   academics: {
@@ -585,7 +603,7 @@ const contentPages: Record<string, AboutPageContent> = {
           "Welcome to the Directorate of Quality Assurance and Control (DQA&C) at King Ceasor University. We are dedicated to promoting excellence in teaching, learning, research, and service through effective quality assurance practices. As the University's focal point for quality reviews and continuous improvement initiatives, we work closely with staff, students, and stakeholders to uphold high academic and operational standards. We invite you to explore our services and quality initiatives, and encourage you to contact us for any additional information or support.",
       },
       staff: [
-        { name: "Dr. Annabella Habinka Ejiri", role: "Director Quality Assurance", image:"/"},
+        { name: "Dr. Annabella Habinka Ejiri", role: "Director Quality Assurance", image:"/qa.jpeg "},
         { name: "Ms. Atuhwera Joanita", role: "Quality Assurance Monitoring Officer", image:"/Joanita.jpeg" },
         { name: "Mr. Ayebale John Justice", role: "Clinical Monitoring Officer", image:"/" },
         { name: "Ms. Grace Asingwire", role: "Quality Assurance Officer", image:"/Grace.jpg" },
@@ -761,47 +779,410 @@ const contentPages: Record<string, AboutPageContent> = {
 
 const feeProgrammes = [
   {
-    group: "Undergraduate Programmes",
-    summary: "Degree programmes across health sciences, law, business, computing, agriculture, and energy.",
+    category: "Undergraduate / Degree Programs",
+    group: "School of Medicine, Health and Life Sciences",
+    summary: "Undergraduate, diploma, and higher education certificate programmes in medicine and life sciences.",
+    feeLabel: "Fees Per Semester",
     courses: [
-      { code: "01", course: "Bachelor of Medicine & Bachelor of Surgery", school: "Medicine, Health & Life Sciences", level: "Bachelor", duration: "5 years", billing: "Per semester", feeStatus: "Professional medical programme" },
-      { code: "02", course: "Bachelor of Nursing Sciences", school: "Medicine, Health & Life Sciences", level: "Bachelor", duration: "4 years", billing: "Per semester", feeStatus: "Clinical training programme" },
-      { code: "03", course: "Bachelor of Medical Records & Health Informatics", school: "Medicine, Health & Life Sciences", level: "Bachelor", duration: "3 years", billing: "Per semester", feeStatus: "Health informatics programme" },
-      { code: "04", course: "Bachelor of Agriculture", school: "Science, Computing & Engineering", level: "Bachelor", duration: "3 years", billing: "Per semester", feeStatus: "Practical science programme" },
-      { code: "05", course: "Bachelor of Laws", school: "Law & Management Sciences", level: "Bachelor", duration: "4 years", billing: "Per semester", feeStatus: "Professional law programme" },
-      { code: "06", course: "Bachelor of Business Administration", school: "Law & Management Sciences", level: "Bachelor", duration: "3 years", billing: "Per semester", feeStatus: "Business and management programme" },
-      { code: "07", course: "Bachelor of Computer Forensics & Criminal Investigation", school: "Science, Computing & Engineering", level: "Bachelor", duration: "3 years", billing: "Per semester", feeStatus: "Computing and investigation programme" },
-      { code: "08", course: "Bachelor of Oil, Gas & Energy Management", school: "Science, Computing & Engineering", level: "Bachelor", duration: "3 years", billing: "Per semester", feeStatus: "Energy management programme" },
+      { code: "01", course: "Bachelor of Medicine and Bachelor of Surgery", duration: "5 Years", uganda: "$3,000", international: "$3,000" },
+      { code: "02", course: "Bachelor of Nursing Science - Direct", duration: "4 Years", uganda: "$1,100", international: "$1,300" },
+      { code: "03", course: "Bachelor of Nursing Science - Completion", duration: "3 Years", uganda: "$1,100", international: "$1,300" },
+      { code: "04", course: "Diploma in Clinical Medicine and Community Health", duration: "3 Years", uganda: "$1,000", international: "$1,150" },
+      { code: "05", course: "Diploma in Medical Laboratory Technology", duration: "3 Years", uganda: "$1,000", international: "$1,150" },
+      { code: "06", course: "Higher Education Certificate - Biological Sciences", duration: "1 Year", uganda: "$550", international: "$750" },
+      { code: "07", course: "Higher Education Certificate - Physical Sciences", duration: "1 Year", uganda: "$550", international: "$750" },
     ],
   },
   {
-    group: "Diploma Programmes",
-    summary: "Practical diploma pathways for students pursuing health and community service careers.",
+    category: "Undergraduate / Degree Programs",
+    group: "School of Law and Management Sciences",
+    summary: "Degree, diploma, and higher education certificate programmes in law, business, and management.",
+    feeLabel: "Fees Per Semester",
     courses: [
-      { code: "09", course: "Diploma in Clinical Medicine & Community Health", school: "Medicine, Health & Life Sciences", level: "Diploma", duration: "3 years", billing: "Per semester", feeStatus: "Clinical diploma programme" },
-      { code: "10", course: "Diploma in Medical Laboratory Technology", school: "Medicine, Health & Life Sciences", level: "Diploma", duration: "3 years", billing: "Per semester", feeStatus: "Laboratory training programme" },
+      { code: "08", course: "Bachelor of Laws", duration: "4 Years", uganda: "$1,150", international: "$1,300" },
+      { code: "09", course: "Bachelor of Business Administration", duration: "3 Years", uganda: "$1,100", international: "$1,225" },
+      { code: "10", course: "Bachelor of Oil, Gas, and Energy Management", duration: "3 Years", uganda: "$1,100", international: "$1,225" },
+      { code: "11", course: "Bachelor of Applied Economics", duration: "3 Years", uganda: "$1,100", international: "$1,225" },
+      { code: "12", course: "Diploma in Global Business", duration: "2 Years", uganda: "$1,000", international: "$1,200" },
+      { code: "13", course: "Higher Education Certificate - Humanities", duration: "1 Year", uganda: "$550", international: "$750" },
     ],
   },
   {
-    group: "Certificate and Bridging Pathways",
-    summary: "Certificate and short-course pathways for academic progression and practical skill development.",
+    category: "Undergraduate / Degree Programs",
+    group: "School of Science, Computing and Engineering",
+    summary: "Degree programmes in petroleum geoscience, computing, and criminal investigations.",
+    feeLabel: "Fees Per Semester",
     courses: [
-      { code: "11", course: "Higher Education Certificate in Biological Sciences", school: "Science, Computing & Engineering", level: "Certificate", duration: "1 year", billing: "Per semester", feeStatus: "Bridging pathway" },
-      { code: "12", course: "Higher Education Certificate in Physical Sciences", school: "Science, Computing & Engineering", level: "Certificate", duration: "1 year", billing: "Per semester", feeStatus: "Bridging pathway" },
-      { code: "13", course: "Higher Education Certificate in Humanities", school: "Law & Management Sciences", level: "Certificate", duration: "1 year", billing: "Per semester", feeStatus: "Bridging pathway" },
-      { code: "14", course: "Language Proficiency", school: "Short Courses", level: "Short Course", duration: "Short course", billing: "As communicated", feeStatus: "Short-course fee" },
-      { code: "15", course: "Digital Marketing", school: "Short Courses", level: "Short Course", duration: "Short course", billing: "As communicated", feeStatus: "Short-course fee" },
-      { code: "16", course: "Computer Applications", school: "Short Courses", level: "Short Course", duration: "Short course", billing: "As communicated", feeStatus: "Short-course fee" },
+      { code: "14", course: "Bachelor of Science in Petroleum Geoscience", duration: "4 Years", uganda: "$1,150", international: "$1,300" },
+      { code: "15", course: "Bachelor of Computer Forensics and Criminal Investigations", duration: "3 Years", uganda: "$1,100", international: "$1,225" },
+    ],
+  },
+  {
+    category: "Certificate Programs",
+    group: "School of Medicine, Health and Life Sciences",
+    summary: "Professional health and life sciences certificate programmes.",
+    feeLabel: "Course Fees",
+    courses: [
+      { code: "16", course: "Certificate in Rest ECG Reading", duration: "4 Weeks", uganda: "$500", international: "$670" },
+      { code: "17", course: "Certificate in Holter ECG Reading/Interpretation", duration: "2 Weeks", uganda: "$250", international: "$400" },
+      { code: "18", course: "Certificate in Stress ECH Reading/Interpretation", duration: "2 Weeks", uganda: "$250", international: "$400" },
+      { code: "19", course: "Certificate in Production of Herbal Based creams,gels,Lotions", duration: "4 Weeks", uganda: "$115", international: "$195" },
+      { code: "20", course: "Certificate in Production of Herbal Based medicated soap,shampoo", duration: "4 Weeks", uganda: "$115", international: "$195" },
+      { code: "21", course: "Certificate in 24-Hour BP Monitoring Reporting", duration: "2 Weeks", uganda: "$250", international: "$390" },
+      { code: "22", course: "Certificate in Advanced Cardiac Life Support", duration: "2 Weeks", uganda: "$300", international: "$450" },
+    ],
+  },
+  {
+    category: "Certificate Programs",
+    group: "School of Law and Management Sciences",
+    summary: "Professional certificate programmes in communication, management, safety, and enterprise.",
+    feeLabel: "Course Fees",
+    courses: [
+      { code: "23", course: "Certificate in English Proficiency Course", duration: "3 Months", uganda: "$160", international: "$300" },
+      { code: "24", course: "Certificate in Occupational Health and Safety", duration: "1 month", uganda: "$125", international: "$240" },
+      { code: "25", course: "Certificate in book keeping for small and medium enterprises", duration: "1 month", uganda: "$100", international: "$165" },
+      { code: "26", course: "Certificate in Strategic Management", duration: "1 month", uganda: "$100", international: "$165" },
+      { code: "27", course: "Certificate in Sacco Management", duration: "1 month", uganda: "$100", international: "$165" },
+      { code: "28", course: "Certificate in Digital Marketing", duration: "2 Months", uganda: "$120", international: "$230" },
+      { code: "29", course: "Certificate in Tax and Credit Management", duration: "1 month", uganda: "$115", international: "$225" },
+    ],
+  },
+  {
+    category: "Certificate Programs",
+    group: "School of Science, Computing and Engineering",
+    summary: "Certificate programmes in computing, cyber security, digital forensics, and organic farming.",
+    feeLabel: "Course Fees",
+    courses: [
+      { code: "30", course: "Certificate in Computer Applications", duration: "2 Months", uganda: "$120", international: "$250" },
+      { code: "31", course: "Certificate in Web design,Dev't & Administration", duration: "2 Months", uganda: "$160", international: "$265" },
+      { code: "32", course: "Certificate in Computer Graphics", duration: "2 Months", uganda: "$120", international: "$180" },
+      { code: "33", course: "Certificate in AI with Internet of Things using Arduino", duration: "2 Months", uganda: "$200", international: "$315" },
+      { code: "34", course: "Cyber Security for Beginners", duration: "2 Months", uganda: "$120", international: "$200" },
+      { code: "35", course: "Digital Forensic Investigations for beginners", duration: "2 Months", uganda: "$120", international: "$200" },
+      { code: "36", course: "Certificate in Organic farming", duration: "2 Months", uganda: "$115", international: "$175" },
     ],
   },
 ];
 
-const feeBreakdown = [
-  { item: "Tuition fees", description: "The main academic charge for each programme and semester of study." },
-  { item: "Registration fees", description: "Paid during enrollment or registration for the relevant semester or study period." },
-  { item: "Examination fees", description: "Supports assessment, examination administration, and related academic processes." },
-  { item: "Library fees", description: "Supports access to library resources, study support, and learning materials." },
-  { item: "ICT and identity card fees", description: "Supports student identification, digital services, and ICT-related access." },
+type FeeProgrammeGroup = (typeof feeProgrammes)[number];
+type FeeProgrammeCourse = FeeProgrammeGroup["courses"][number];
+type AcademicProgrammeVariant = "schools" | "courses" | "undergraduate" | "diploma" | "certificates";
+
+type AcademicCourse = {
+  code: string;
+  course: string;
+  duration: string;
+  category: string;
+  school: string;
+};
+
+type AcademicProgrammeGroup = {
+  category: string;
+  group: string;
+  summary: string;
+  courses: AcademicCourse[];
+};
+
+const academicRouteVariants: Record<string, AcademicProgrammeVariant> = {
+  "academics/schools": "schools",
+  "academics/courses": "courses",
+  "academics/courses/undergraduate": "undergraduate",
+  "academics/courses/diploma": "diploma",
+  "academics/courses/short-courses": "certificates",
+};
+
+const academicPageCopy: Record<
+  AcademicProgrammeVariant,
+  {
+    crumb: string;
+    title: string;
+    intro: string;
+    statLabel: string;
+    groupStatLabel: string;
+  }
+> = {
+  schools: {
+    crumb: "Schools",
+    title: "Schools and Programmes",
+    intro:
+      "Browse King Ceasor University programmes by their respective schools, with the official duration for each course.",
+    statLabel: "Programmes",
+    groupStatLabel: "Schools",
+  },
+  courses: {
+    crumb: "Courses",
+    title: "Courses and Programmes",
+    intro:
+      "Review KCU degree, diploma, higher education certificate, and professional certificate programmes by school and duration.",
+    statLabel: "Programmes",
+    groupStatLabel: "Tables",
+  },
+  undergraduate: {
+    crumb: "Undergraduate",
+    title: "Undergraduate Degree Programmes",
+    intro:
+      "Explore bachelor's degree programmes offered across KCU schools, with the expected duration for each programme.",
+    statLabel: "Degree Programmes",
+    groupStatLabel: "Schools",
+  },
+  diploma: {
+    crumb: "Diploma",
+    title: "Diploma Programmes",
+    intro:
+      "Explore diploma programmes offered at KCU and compare their durations by school.",
+    statLabel: "Diploma Programmes",
+    groupStatLabel: "Schools",
+  },
+  certificates: {
+    crumb: "Certificates",
+    title: "Certificates and Short Courses",
+    intro:
+      "Explore KCU professional certificate and short-course options by school, with the duration for each course.",
+    statLabel: "Certificates",
+    groupStatLabel: "Schools",
+  },
+};
+
+const academicSchoolSummaries: Record<string, string> = {
+  "School of Medicine, Health and Life Sciences":
+    "Medicine, nursing, clinical medicine, laboratory technology, higher education certificate, and health-focused professional certificate programmes.",
+  "School of Law and Management Sciences":
+    "Law, business administration, energy management, applied economics, global business, humanities, and professional management certificate programmes.",
+  "School of Science, Computing and Engineering":
+    "Petroleum geoscience, computer forensics, computing, cyber security, digital forensics, artificial intelligence, and organic farming programmes.",
+};
+
+function toAcademicCourse(course: FeeProgrammeCourse, group: FeeProgrammeGroup): AcademicCourse {
+  return {
+    code: course.code,
+    course: course.course,
+    duration: course.duration,
+    category: group.category,
+    school: group.group,
+  };
+}
+
+function getFilteredAcademicGroups(
+  predicate: (course: FeeProgrammeCourse, group: FeeProgrammeGroup) => boolean,
+) {
+  return feeProgrammes
+    .map((group) => ({
+      category: group.category,
+      group: group.group,
+      summary: group.summary,
+      courses: group.courses
+        .filter((course) => predicate(course, group))
+        .map((course) => toAcademicCourse(course, group)),
+    }))
+    .filter((group) => group.courses.length > 0);
+}
+
+function getSchoolAcademicGroups() {
+  const schoolNames = Array.from(new Set(feeProgrammes.map((group) => group.group)));
+
+  return schoolNames.map((school) => {
+    const schoolGroups = feeProgrammes.filter((group) => group.group === school);
+
+    return {
+      category: "Academic Schools",
+      group: school,
+      summary: academicSchoolSummaries[school],
+      courses: schoolGroups.flatMap((group) =>
+        group.courses.map((course) => toAcademicCourse(course, group)),
+      ),
+    };
+  });
+}
+
+function getAcademicProgrammeGroups(variant: AcademicProgrammeVariant): AcademicProgrammeGroup[] {
+  if (variant === "schools") {
+    return getSchoolAcademicGroups();
+  }
+
+  if (variant === "undergraduate") {
+    return getFilteredAcademicGroups((course) => course.course.startsWith("Bachelor"));
+  }
+
+  if (variant === "diploma") {
+    return getFilteredAcademicGroups((course) => course.course.startsWith("Diploma"));
+  }
+
+  if (variant === "certificates") {
+    return getFilteredAcademicGroups((_, group) => group.category === "Certificate Programs");
+  }
+
+  return getFilteredAcademicGroups(() => true);
+}
+
+function AcademicProgrammesPage({ variant }: { variant: AcademicProgrammeVariant }) {
+  const copy = academicPageCopy[variant];
+  const groups = getAcademicProgrammeGroups(variant);
+  const totalCourses = groups.reduce((total, group) => total + group.courses.length, 0);
+  const showCategoryColumn = variant === "schools";
+
+  return (
+    <>
+      <Navbar />
+      <main className="min-h-screen bg-white pt-16 sm:pt-20 lg:pt-[8.5rem]">
+        <div className="border-b border-slate-100 bg-[#FFFFFF]">
+          <div className="mx-auto flex max-w-[1440px] items-center gap-2 overflow-x-auto px-4 py-3 text-xs text-slate-500 sm:px-6 lg:px-8">
+            <Link href="/" className="shrink-0 hover:text-[#0B6232]">Home</Link>
+            <ChevronRight className="size-3.5 shrink-0" />
+            <Link href="/academics/schools" className="shrink-0 hover:text-[#0B6232]">Academics</Link>
+            <ChevronRight className="size-3.5 shrink-0" />
+            <span className="shrink-0 font-semibold text-[#0B6232]">{copy.crumb}</span>
+          </div>
+        </div>
+
+        <section className="relative overflow-hidden px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+          <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1800&q=80')" }} />
+          <div className="absolute inset-0 bg-black/55" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent" />
+          <div className="absolute -bottom-20 right-12 hidden size-72 rounded-full border border-white/10 lg:block" />
+          <div className="relative z-10 mx-auto grid max-w-[1440px] gap-8 lg:grid-cols-[1fr_380px] lg:items-end">
+            <div>
+              <p className="inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-black uppercase tracking-[0.2em] text-[#FFC66B] backdrop-blur">Academics</p>
+              <h1 className="mt-5 max-w-4xl font-serif text-4xl font-black leading-tight text-white sm:text-5xl md:text-6xl">{copy.title}</h1>
+              <p className="mt-5 max-w-3xl text-sm leading-7 text-white/80 sm:text-base sm:leading-8">
+                {copy.intro}
+              </p>
+              <div className="mt-7 flex flex-wrap gap-3">
+                <Button asChild className="h-11 rounded-xl bg-[#FFC66B] px-5 font-black text-[#0B6232] hover:bg-[#FFC66B]">
+                  <Link href="https://apply.kcu.ac.ug/">Apply Online <ArrowRight className="ml-2 size-4" /></Link>
+                </Button>
+                <Button asChild variant="outline" className="h-11 rounded-xl border-2 border-white bg-transparent px-5 font-black text-white hover:bg-white hover:text-[#0B6232]">
+                  <Link href="/admissions/fees-structure">Fees Structure</Link>
+                </Button>
+              </div>
+            </div>
+            <div className="rounded-3xl border border-white/15 bg-white/10 p-5 text-white shadow-2xl backdrop-blur">
+              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">At a glance</p>
+              <div className="mt-4 grid grid-cols-2 gap-3">
+                <div className="rounded-2xl bg-white/10 p-4">
+                  <p className="text-3xl font-black">{totalCourses}</p>
+                  <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.14em] text-white/70">{copy.statLabel}</p>
+                </div>
+                <div className="rounded-2xl bg-[#FFC66B] p-4 text-[#0B6232]">
+                  <p className="text-3xl font-black">{groups.length}</p>
+                  <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.14em]">{copy.groupStatLabel}</p>
+                </div>
+              </div>
+              <p className="mt-4 rounded-2xl border border-white/10 bg-black/20 p-4 text-xs leading-6 text-white/75">
+                This academics view lists programme names and durations only. Fee amounts remain on the admissions fee structure page.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-slate-50/70 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+          <div className="mx-auto max-w-[1440px]">
+            <div className="grid gap-6 lg:grid-cols-[1fr_340px] lg:items-start">
+              <div className="space-y-8">
+                {groups.map((group) => (
+                  <section key={`${group.category}-${group.group}`} className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5">
+                    <div className="flex flex-col gap-4 border-b border-slate-100 bg-[#0B6232] p-6 text-white sm:flex-row sm:items-end sm:justify-between lg:p-8">
+                      <div>
+                        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-[#FFC66B]">{group.category}</p>
+                        <h2 className="mt-2 text-2xl font-black leading-tight sm:text-3xl">{group.group}</h2>
+                        <p className="mt-2 max-w-3xl text-sm leading-7 text-white/75">{group.summary}</p>
+                      </div>
+                      <div className="w-fit rounded-2xl bg-white/10 px-4 py-3 text-center">
+                        <p className="text-2xl font-black text-[#FFC66B]">{group.courses.length}</p>
+                        <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-white/70">Programmes</p>
+                      </div>
+                    </div>
+
+                    <div className="grid gap-3 p-3 md:hidden">
+                      {group.courses.map((course) => (
+                        <article key={`${group.group}-${course.code}-${course.course}`} className="rounded-2xl border border-slate-100 bg-slate-50/80 p-4 shadow-sm">
+                          <div className="flex items-start justify-between gap-3">
+                            <span className="grid size-9 shrink-0 place-items-center rounded-full bg-[#0B6232] text-sm font-black text-[#FFC66B]">
+                              {course.code}
+                            </span>
+                            <span className="rounded-full bg-[#0B6232]/10 px-3 py-1 text-right text-[11px] font-black leading-4 text-[#0B6232]">
+                              {showCategoryColumn ? course.category : group.category}
+                            </span>
+                          </div>
+                          <h3 className="mt-4 text-base font-black leading-snug text-slate-950">{course.course}</h3>
+                          <dl className="mt-4 grid gap-3 text-sm">
+                            {showCategoryColumn && (
+                              <div className="rounded-xl bg-white p-3">
+                                <dt className="text-[10px] font-black uppercase tracking-[0.14em] text-slate-400">Programme Type</dt>
+                                <dd className="mt-1 font-semibold leading-5 text-slate-700">{course.category}</dd>
+                              </div>
+                            )}
+                            <div className="rounded-xl bg-white p-3">
+                              <dt className="text-[10px] font-black uppercase tracking-[0.14em] text-slate-400">Duration</dt>
+                              <dd className="mt-1 font-black leading-5 text-[#0B6232]">{course.duration}</dd>
+                            </div>
+                          </dl>
+                        </article>
+                      ))}
+                    </div>
+
+                    <div className="hidden overflow-x-auto md:block">
+                      <table className="w-full min-w-[640px] border-collapse text-left text-sm">
+                        <thead>
+                          <tr className="border-b border-slate-100 bg-slate-50 text-[11px] uppercase tracking-[0.14em] text-slate-500">
+                            <th className="px-5 py-4 font-black">No.</th>
+                            <th className="px-5 py-4 font-black">Course / Programme</th>
+                            {showCategoryColumn && <th className="px-5 py-4 font-black">Programme Type</th>}
+                            <th className="px-5 py-4 font-black">Duration</th>
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-slate-100">
+                          {group.courses.map((course) => (
+                            <tr key={`${group.group}-${course.code}-${course.course}`} className="align-top transition hover:bg-[#FFC66B]/10">
+                              <td className="px-5 py-4 font-black text-[#0B6232]">{course.code}</td>
+                              <td className="px-5 py-4">
+                                <p className="font-black text-slate-950">{course.course}</p>
+                                {!showCategoryColumn && <p className="mt-1 text-xs font-semibold text-slate-500">{course.school}</p>}
+                              </td>
+                              {showCategoryColumn && <td className="px-5 py-4 text-slate-700">{course.category}</td>}
+                              <td className="px-5 py-4 font-black text-[#0B6232]">{course.duration}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </section>
+                ))}
+              </div>
+
+              <aside className="space-y-6 lg:sticky lg:top-28">
+                <section className="rounded-3xl border border-[#FFC66B]/40 bg-[#FFC66B]/15 p-6 shadow-xl shadow-slate-900/5">
+                  <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Programme Guide</p>
+                  <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950">Courses by duration</h2>
+                  <ul className="mt-5 space-y-3 text-sm leading-6 text-slate-700">
+                    <li className="flex gap-3"><span className="mt-1 grid size-5 shrink-0 place-items-center rounded-full bg-[#0B6232] text-[10px] font-black text-[#FFC66B]">✓</span>Programmes are grouped by the school responsible for delivery.</li>
+                    <li className="flex gap-3"><span className="mt-1 grid size-5 shrink-0 place-items-center rounded-full bg-[#0B6232] text-[10px] font-black text-[#FFC66B]">✓</span>Academic pages show course names and durations only.</li>
+                    <li className="flex gap-3"><span className="mt-1 grid size-5 shrink-0 place-items-center rounded-full bg-[#0B6232] text-[10px] font-black text-[#FFC66B]">✓</span>Use the fees structure page for Uganda and international fee amounts.</li>
+                  </ul>
+                </section>
+
+                <section className="rounded-3xl bg-[#0B6232] p-6 text-white shadow-2xl shadow-[#0B6232]/20">
+                  <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">Ready to apply?</p>
+                  <h2 className="mt-2 text-2xl font-black leading-tight">Start your application online</h2>
+                  <p className="mt-3 text-sm leading-7 text-white/75">Use the applicant portal to begin your admission process and receive course-specific guidance.</p>
+                  <Button asChild className="mt-6 h-11 w-full rounded-xl bg-[#FFC66B] px-5 font-black text-[#0B6232] hover:bg-[#FFC66B]">
+                    <Link href="https://apply.kcu.ac.ug/">Apply Online <ArrowRight className="ml-2 size-4" /></Link>
+                  </Button>
+                </section>
+              </aside>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
+}
+
+const applicationRequirements = [
+  "Photocopies of academic documents.",
+  "Photocopy of National ID.",
+  "Photocopy of Birth certificate.",
+  "Application fee of UGX 100,000.",
 ];
 
 function getValidImageSrc(image?: string) {
@@ -825,6 +1206,7 @@ function QualityAssurancePhoto({ alt, className, sizes, src }: { alt: string; cl
 
 function FeesStructurePage() {
   const totalCourses = feeProgrammes.reduce((total, group) => total + group.courses.length, 0);
+  const totalTables = feeProgrammes.length;
 
   return (
     <>
@@ -850,7 +1232,7 @@ function FeesStructurePage() {
               <p className="inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-black uppercase tracking-[0.2em] text-[#FFC66B] backdrop-blur">Admissions</p>
               <h1 className="mt-5 max-w-4xl font-serif text-4xl font-black leading-tight text-white sm:text-5xl md:text-6xl">Fees Structure by Course</h1>
               <p className="mt-5 max-w-3xl text-sm leading-7 text-white/80 sm:text-base sm:leading-8">
-                Review the programme fee structure in a clean course-by-course format.
+                Review the official programme fee structure by school, duration, Uganda student fees, and international student fees.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
                 <Button asChild className="h-11 rounded-xl bg-[#FFC66B] px-5 font-black text-[#0B6232] hover:bg-[#FFC66B]">
@@ -869,12 +1251,12 @@ function FeesStructurePage() {
                   <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.14em] text-white/70">Programmes</p>
                 </div>
                 <div className="rounded-2xl bg-[#FFC66B] p-4 text-[#0B6232]">
-                  <p className="text-3xl font-black">5</p>
-                  <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.14em]">Fee Items</p>
+                  <p className="text-3xl font-black">{totalTables}</p>
+                  <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.14em]">Fee Tables</p>
                 </div>
               </div>
               <p className="mt-4 rounded-2xl border border-white/10 bg-black/20 p-4 text-xs leading-6 text-white/75">
-                Fees are approved by the University Council and may be reviewed from time to time. Students remain responsible for payment whether or not they have a sponsor.
+                Undergraduate and degree programme figures are listed per semester. Certificate programme figures are listed by the course duration shown.
               </p>
             </div>
           </div>
@@ -885,16 +1267,16 @@ function FeesStructurePage() {
             <div className="grid gap-6 lg:grid-cols-[1fr_340px] lg:items-start">
               <div className="space-y-8">
                 {feeProgrammes.map((group) => (
-                  <section key={group.group} className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5">
+                  <section key={`${group.category}-${group.group}`} className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5">
                     <div className="flex flex-col gap-4 border-b border-slate-100 bg-[#0B6232] p-6 text-white sm:flex-row sm:items-end sm:justify-between lg:p-8">
                       <div>
-                        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-[#FFC66B]">Fees Table</p>
+                        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-[#FFC66B]">{group.category}</p>
                         <h2 className="mt-2 text-2xl font-black leading-tight sm:text-3xl">{group.group}</h2>
                         <p className="mt-2 max-w-3xl text-sm leading-7 text-white/75">{group.summary}</p>
                       </div>
                       <div className="w-fit rounded-2xl bg-white/10 px-4 py-3 text-center">
                         <p className="text-2xl font-black text-[#FFC66B]">{group.courses.length}</p>
-                        <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-white/70">Courses</p>
+                        <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-white/70">{group.feeLabel}</p>
                       </div>
                     </div>
 
@@ -906,31 +1288,24 @@ function FeesStructurePage() {
                               {course.code}
                             </span>
                             <span className="rounded-full bg-[#0B6232]/10 px-3 py-1 text-right text-[11px] font-black leading-4 text-[#0B6232]">
-                              {course.feeStatus}
+                              {group.feeLabel}
                             </span>
                           </div>
                           <h3 className="mt-4 text-base font-black leading-snug text-slate-950">{course.course}</h3>
-                          <p className="mt-2 text-xs leading-5 text-slate-500">
-                            Official tuition amount to be inserted after Admissions confirmation.
-                          </p>
                           <dl className="mt-4 grid gap-3 text-sm">
                             <div className="rounded-xl bg-white p-3">
-                              <dt className="text-[10px] font-black uppercase tracking-[0.14em] text-slate-400">School</dt>
-                              <dd className="mt-1 font-semibold leading-5 text-slate-700">{course.school}</dd>
+                              <dt className="text-[10px] font-black uppercase tracking-[0.14em] text-slate-400">Duration</dt>
+                              <dd className="mt-1 font-semibold leading-5 text-slate-700">{course.duration}</dd>
                             </div>
                             <div className="grid grid-cols-2 gap-3">
                               <div className="rounded-xl bg-white p-3">
-                                <dt className="text-[10px] font-black uppercase tracking-[0.14em] text-slate-400">Level</dt>
-                                <dd className="mt-1 font-semibold leading-5 text-slate-700">{course.level}</dd>
+                                <dt className="text-[10px] font-black uppercase tracking-[0.14em] text-slate-400">Uganda</dt>
+                                <dd className="mt-1 font-black leading-5 text-[#0B6232]">{course.uganda}</dd>
                               </div>
                               <div className="rounded-xl bg-white p-3">
-                                <dt className="text-[10px] font-black uppercase tracking-[0.14em] text-slate-400">Duration</dt>
-                                <dd className="mt-1 font-semibold leading-5 text-slate-700">{course.duration}</dd>
+                                <dt className="text-[10px] font-black uppercase tracking-[0.14em] text-slate-400">Int&apos;l</dt>
+                                <dd className="mt-1 font-black leading-5 text-[#0B6232]">{course.international}</dd>
                               </div>
-                            </div>
-                            <div className="rounded-xl bg-white p-3">
-                              <dt className="text-[10px] font-black uppercase tracking-[0.14em] text-slate-400">Payment</dt>
-                              <dd className="mt-1 font-semibold leading-5 text-slate-700">{course.billing}</dd>
                             </div>
                           </dl>
                         </article>
@@ -938,16 +1313,14 @@ function FeesStructurePage() {
                     </div>
 
                     <div className="hidden overflow-x-auto md:block">
-                      <table className="w-full min-w-[920px] border-collapse text-left text-sm">
+                      <table className="w-full min-w-[760px] border-collapse text-left text-sm">
                         <thead>
                           <tr className="border-b border-slate-100 bg-slate-50 text-[11px] uppercase tracking-[0.14em] text-slate-500">
                             <th className="px-5 py-4 font-black">No.</th>
                             <th className="px-5 py-4 font-black">Course / Programme</th>
-                            <th className="px-5 py-4 font-black">School</th>
-                            <th className="px-5 py-4 font-black">Level</th>
                             <th className="px-5 py-4 font-black">Duration</th>
-                            <th className="px-5 py-4 font-black">Payment</th>
-                            <th className="px-5 py-4 font-black">Fee Category</th>
+                            <th className="px-5 py-4 font-black">Uganda</th>
+                            <th className="px-5 py-4 font-black">Int&apos;l</th>
                           </tr>
                         </thead>
                         <tbody className="divide-y divide-slate-100">
@@ -956,17 +1329,10 @@ function FeesStructurePage() {
                               <td className="px-5 py-4 font-black text-[#0B6232]">{course.code}</td>
                               <td className="px-5 py-4">
                                 <p className="font-black text-slate-950">{course.course}</p>
-                                <p className="mt-1 text-xs leading-5 text-slate-500">Official tuition amount to be inserted after Admissions confirmation.</p>
-                              </td>
-                              <td className="px-5 py-4 text-slate-700">{course.school}</td>
-                              <td className="px-5 py-4">
-                                <span className="rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-black text-slate-700">{course.level}</span>
                               </td>
                               <td className="px-5 py-4 text-slate-700">{course.duration}</td>
-                              <td className="px-5 py-4 text-slate-700">{course.billing}</td>
-                              <td className="px-5 py-4">
-                                <span className="rounded-full bg-[#0B6232]/10 px-3 py-1 text-xs font-black text-[#0B6232]">{course.feeStatus}</span>
-                              </td>
+                              <td className="px-5 py-4 font-black text-[#0B6232]">{course.uganda}</td>
+                              <td className="px-5 py-4 font-black text-[#0B6232]">{course.international}</td>
                             </tr>
                           ))}
                         </tbody>
@@ -979,14 +1345,16 @@ function FeesStructurePage() {
               <aside className="space-y-6 lg:sticky lg:top-28">
                 <section className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5">
                   <div className="bg-[#0B6232] p-6 text-white">
-                    <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">Fee Breakdown</p>
-                    <h2 className="mt-2 text-2xl font-black leading-tight">What students normally pay for</h2>
+                    <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">Application Requirements</p>
+                    <h2 className="mt-2 text-2xl font-black leading-tight">Documents to submit</h2>
                   </div>
                   <div className="divide-y divide-slate-100">
-                    {feeBreakdown.map((fee) => (
-                      <div key={fee.item} className="p-5">
-                        <p className="font-black text-slate-950">{fee.item}</p>
-                        <p className="mt-1 text-sm leading-6 text-slate-600">{fee.description}</p>
+                    {applicationRequirements.map((requirement, index) => (
+                      <div key={requirement} className="flex gap-4 p-5">
+                        <span className="grid size-8 shrink-0 place-items-center rounded-xl bg-[#FFC66B]/25 text-xs font-black text-[#0B6232]">
+                          {String(index + 1).padStart(2, "0")}
+                        </span>
+                        <p className="pt-1 text-sm font-black leading-6 text-slate-950">{requirement}</p>
                       </div>
                     ))}
                   </div>
@@ -1012,6 +1380,210 @@ function FeesStructurePage() {
                 </section>
               </aside>
             </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
+}
+
+const visitingProfessors = [
+  {
+    name: "Visiting Professor 01",
+    focus: "Medicine, Health and Life Sciences",
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=900&q=85",
+    description:
+      "Placeholder profile for an international academic contributing lectures, mentorship, and specialist seminars.",
+  },
+  {
+    name: "Visiting Professor 02",
+    focus: "Law and Management Sciences",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=85",
+    description:
+      "Placeholder profile for a visiting scholar supporting professional learning, research supervision, and public lectures.",
+  },
+  {
+    name: "Visiting Professor 03",
+    focus: "Science, Computing and Engineering",
+    image: "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=900&q=85",
+    description:
+      "Placeholder profile for a research collaborator strengthening innovation, digital skills, and technical exchange.",
+  },
+];
+
+const mouHighlights = [
+  {
+    title: "Student Financing MOU",
+    partner: "Higher Education Students' Financing Scheme",
+    image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=900&q=85",
+    description:
+      "KCU works with student financing partners to improve access to higher education and support eligible learners through formal funding pathways.",
+  },
+  {
+    title: "International Exchange MOU",
+    partner: "Global academic partners",
+    image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=85",
+    description:
+      "Exchange partnerships create opportunities for academic mobility, shared seminars, visiting scholars, and student exposure to wider learning environments.",
+  },
+  {
+    title: "Digital Infrastructure MOU",
+    partner: "Research and education networks",
+    image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=85",
+    description:
+      "Technology-focused collaborations strengthen digital learning, research connectivity, institutional systems, and knowledge sharing.",
+  },
+];
+
+const researchCollaborations = [
+  {
+    area: "Health Sciences Research",
+    description:
+      "Collaborative research in clinical medicine, nursing, laboratory sciences, public health, and community health priorities.",
+  },
+  {
+    area: "Law, Governance and Management",
+    description:
+      "Joint inquiry into legal systems, enterprise development, leadership, public policy, governance, and institutional accountability.",
+  },
+  {
+    area: "Computing, Energy and Innovation",
+    description:
+      "Research partnerships in digital forensics, cyber security, petroleum geoscience, artificial intelligence, and applied technology.",
+  },
+];
+
+function CollaborationsPartnershipsPage() {
+  return (
+    <>
+      <Navbar />
+      <main className="min-h-screen bg-white pt-16 sm:pt-20 lg:pt-[8.5rem]">
+        <div className="border-b border-slate-100 bg-[#FFFFFF]">
+          <div className="mx-auto flex max-w-[1440px] items-center gap-2 overflow-x-auto px-4 py-3 text-xs text-slate-500 sm:px-6 lg:px-8">
+            <Link href="/" className="shrink-0 hover:text-[#0B6232]">Home</Link>
+            <ChevronRight className="size-3.5 shrink-0" />
+            <Link href="/about" className="shrink-0 hover:text-[#0B6232]">About Us</Link>
+            <ChevronRight className="size-3.5 shrink-0" />
+            <span className="shrink-0 font-semibold text-[#0B6232]">Collaborations &amp; Partnerships</span>
+          </div>
+        </div>
+
+        <section className="relative overflow-hidden px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+          <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1515169067865-5387ec356754?auto=format&fit=crop&w=1800&q=85')" }} />
+          <div className="absolute inset-0 bg-black/55" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/55 to-transparent" />
+          <div className="relative z-10 mx-auto grid max-w-[1440px] gap-8 lg:grid-cols-[1fr_380px] lg:items-end">
+            <div>
+              <p className="inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-black uppercase tracking-[0.2em] text-[#FFC66B] backdrop-blur">Global Network</p>
+              <h1 className="mt-5 max-w-4xl font-serif text-4xl font-black leading-tight text-white sm:text-5xl md:text-6xl">Collaborations &amp; Partnerships</h1>
+              <p className="mt-5 max-w-3xl text-sm leading-7 text-white/80 sm:text-base sm:leading-8">
+                KCU builds academic partnerships through visiting professors, formal MOUs, research collaboration, exchange opportunities, and shared institutional development.
+              </p>
+            </div>
+            <div className="rounded-3xl border border-white/15 bg-white/10 p-5 text-white shadow-2xl backdrop-blur">
+              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">Partnership Focus</p>
+              <div className="mt-4 grid grid-cols-3 gap-3">
+                {[
+                  { value: "3", label: "Visiting Professors" },
+                  { value: "3", label: "MOU Areas" },
+                  { value: "3", label: "Research Themes" },
+                ].map((item) => (
+                  <div key={item.label} className="rounded-2xl bg-white/10 p-3 text-center">
+                    <p className="text-2xl font-black">{item.value}</p>
+                    <p className="mt-1 text-[9px] font-bold uppercase tracking-[0.12em] text-white/70">{item.label}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-slate-50/70 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+          <div className="mx-auto max-w-[1440px] space-y-14">
+            <section>
+              <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+                <div>
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-[#0B6232]">Academic Exchange</p>
+                  <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950 sm:text-3xl">Visiting Professors</h2>
+                </div>
+                <p className="max-w-2xl text-sm leading-7 text-slate-600">
+                  Placeholder profiles for visiting academics who support teaching, research mentorship, seminars, and knowledge exchange.
+                </p>
+              </div>
+              <div className="grid gap-5 md:grid-cols-3">
+                {visitingProfessors.map((professor) => (
+                  <article key={professor.name} className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5">
+                    <div className="relative aspect-[4/3] bg-slate-200">
+                      <Image src={professor.image} alt={professor.name} fill sizes="(min-width: 768px) 33vw, 100vw" className="object-cover" />
+                    </div>
+                    <div className="p-6">
+                      <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#0B6232]">{professor.focus}</p>
+                      <h3 className="mt-2 text-xl font-black leading-tight text-slate-950">{professor.name}</h3>
+                      <p className="mt-3 text-sm leading-7 text-slate-600">{professor.description}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </section>
+
+            <section>
+              <div className="mb-6">
+                <p className="text-xs font-black uppercase tracking-[0.2em] text-[#0B6232]">Formal Partnerships</p>
+                <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950 sm:text-3xl">Memoranda of Understanding</h2>
+              </div>
+              <div className="grid gap-5 lg:grid-cols-3">
+                {mouHighlights.map((mou) => (
+                  <article key={mou.title} className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5">
+                    <div className="relative h-48 bg-slate-200">
+                      <Image src={mou.image} alt={mou.title} fill sizes="(min-width: 1024px) 33vw, 100vw" className="object-cover" />
+                    </div>
+                    <div className="p-6">
+                      <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#0B6232]">{mou.partner}</p>
+                      <h3 className="mt-2 text-xl font-black leading-tight text-slate-950">{mou.title}</h3>
+                      <p className="mt-3 text-sm leading-7 text-slate-600">{mou.description}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </section>
+
+            <section className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5">
+              <div className="grid gap-0 lg:grid-cols-[360px_1fr]">
+                <div className="bg-[#0B6232] p-7 text-white sm:p-8">
+                  <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">Research</p>
+                  <h2 className="mt-2 text-2xl font-black leading-tight sm:text-3xl">Research Collaborations</h2>
+                  <p className="mt-4 text-sm leading-7 text-white/75">
+                    KCU supports collaborative inquiry that connects faculty, students, visiting scholars, and partner institutions around practical societal needs.
+                  </p>
+                </div>
+                <div className="grid gap-0 divide-y divide-slate-100">
+                  {researchCollaborations.map((item, index) => (
+                    <article key={item.area} className="grid gap-4 p-6 sm:grid-cols-[70px_1fr] sm:p-8">
+                      <div className="grid size-14 place-items-center rounded-2xl bg-[#FFC66B]/25 text-sm font-black text-[#0B6232]">
+                        {String(index + 1).padStart(2, "0")}
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-black text-slate-950">{item.area}</h3>
+                        <p className="mt-2 text-sm leading-7 text-slate-600">{item.description}</p>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              </div>
+            </section>
+
+            <section className="rounded-3xl bg-[#0B6232] p-7 text-white shadow-2xl shadow-[#0B6232]/20 sm:p-10">
+              <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                  <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">Partner with KCU</p>
+                  <h2 className="mt-2 text-2xl font-black leading-tight">Build academic, research, and exchange partnerships.</h2>
+                </div>
+                <Button asChild className="h-12 rounded-xl bg-[#FFC66B] px-6 font-black text-[#0B6232] hover:bg-[#FFC66B]">
+                  <Link href="/about">Back to About Us <ArrowRight className="ml-2 size-4" /></Link>
+                </Button>
+              </div>
+            </section>
           </div>
         </section>
       </main>
@@ -1608,7 +2180,7 @@ function AboutContentPage({ page }: { page: AboutPageContent }) {
                   <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
                     <div>
                       <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">Next Step</p>
-                      <h2 className="mt-2 text-2xl font-black leading-tight">{page.title}</h2>
+                      <h2 className="mt-2 text-2xl font-black leading-tight">{page.cta.heading ?? page.title}</h2>
                     </div>
                     <Button asChild className="h-12 rounded-xl bg-[#FFC66B] px-6 font-black text-[#0B6232] hover:bg-[#FFC66B]">
                       <Link href={page.cta.href}>{page.cta.label} <ArrowRight className="ml-2 size-4" /></Link>
@@ -1629,9 +2201,18 @@ export default async function CatchAllPage({ params }: { params: Promise<{ slug:
   const { slug } = await params;
   const currentPath = slug.join("/");
   const page = contentPages[currentPath];
+  const academicVariant = academicRouteVariants[currentPath];
+
+  if (academicVariant) {
+    return <AcademicProgrammesPage variant={academicVariant} />;
+  }
 
   if (currentPath === "admissions/fees-structure") {
     return <FeesStructurePage />;
+  }
+
+  if (currentPath === "about/collaborations-partnerships") {
+    return <CollaborationsPartnershipsPage />;
   }
 
   if (currentPath === "about/newsletter" || currentPath === "news") {

@@ -19,7 +19,6 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
-import { section } from "framer-motion/client";
 
 
 // ── Tab content ────────────────────────────────────────────────────────────
@@ -430,7 +429,7 @@ function TabAdministration() {
     { name: "Dr. Byarugaba Bonaventura", role: "Deputy Vice Chancellor", tier: "mid", image: "/University Management/Dr. Byarugaba Bonaventura.jpeg" },
     { name: "Mrs. Pape Matama Bagonza", role: "University Secretary", tier: "mid", image: "/University Management/Mrs. Pape Matama Bagonza.jpeg" },
     { name: "Mr. Alfred Namoah Masikye", role: "Academic Registrar", tier: "mid", image: "/University Management/Alfred Namoah Masikye.jpeg" },
-    { name: "Assoc. Prof. Annabella Habinka Ejiri", role: "Director Quality Assurance", tier: "mid" },
+    { name: "Assoc. Prof. Annabella Habinka Ejiri", role: "Director Quality Assurance", tier: "mid", image:"/qa.jpeg"},
     { name: "Mrs. Sylivia Okwi Christine", role: "Director Finance", tier: "mid", image: "/University Management/Mrs. Sylivia Okwi Christine.jpeg" },
     { name: "Fr. Dr. Lumala Aloysius Gonzagga", role: "Dean of Students", tier: "mid", image: "/University Management/Fr. Dr. Lumala Aloysius Gonzagga.jpeg" },
     { name: "Mr. Mwima Abdallah", role: "Manager ICT", tier: "base", image: "/University Management/Mr. Mwima Abdallah.jpeg" },

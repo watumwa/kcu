@@ -9,11 +9,11 @@ const partners = [
   { name: "Arab Academy for Science, Technology & Maritime Transport", country: "Egypt" },
   { name: "Superior University", country: "Pakistan" },
   { name: "Rosebank International University College", country: "Ghana" },
-  { name: "Mulago National Refferal Hospital", country: "Uganda" },
-  { name: "Kiruddu National Refferal Hospital", country: "Uganda" },
+  { name: "Mulago National Referral Hospital", country: "Uganda" },
+  { name: "Kiruddu National Referral Hospital", country: "Uganda" },
   { name: "Erasmus+ Programme", country: "European Union" },
   { name: "Makerere University", country: "Uganda" },
-  { name: "RENU", country: "Uganda" },
+  { name: "RENU", country: "Uganda", image:"/"},
 ];
 
 // Duplicate for seamless loop
