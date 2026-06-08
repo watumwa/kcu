@@ -2612,33 +2612,33 @@ function AboutContentPage({ page }: { page: AboutPageContent }) {
 
               {page.qualityAssurance && (
                 <>
-                  <section className="grid gap-6 lg:grid-cols-[380px_1fr] lg:items-stretch">
-                    <article className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5">
-                      <div className="relative min-h-[420px] bg-slate-200">
+                  <section className="grid min-w-0 gap-5 lg:grid-cols-[380px_1fr] lg:items-stretch">
+                    <article className="min-w-0 overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5 sm:rounded-3xl">
+                      <div className="relative aspect-[4/5] bg-slate-200 sm:min-h-[420px] sm:aspect-auto">
                         <ProfilePhoto
                           src={page.qualityAssurance.director.image}
                           alt={page.qualityAssurance.director.name}
                           sizes="(min-width: 1024px) 380px, 100vw"
-                          className="object-cover object-top"
+                          className="object-cover object-[center_18%]"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-                        <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                          <h2 className="mt-2 text-2xl font-black leading-tight">{page.qualityAssurance.director.name}</h2>
+                        <div className="absolute bottom-0 left-0 right-0 p-4 text-white sm:p-6">
+                          <h2 className="mt-2 text-xl font-black leading-tight sm:text-2xl">{page.qualityAssurance.director.name}</h2>
                           <p className="mt-1 text-sm font-bold text-white/80">{page.qualityAssurance.director.title}</p>
                         </div>
                       </div>
                     </article>
 
-                    <article className="rounded-3xl border border-slate-100 bg-white p-6 shadow-xl shadow-slate-900/5 sm:p-8 lg:p-10">
+                    <article className="min-w-0 rounded-2xl border border-slate-100 bg-white p-5 shadow-xl shadow-slate-900/5 sm:rounded-3xl sm:p-8 lg:p-10">
                      
-                      <p className="mt-6 text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Message from the Director Quality Assurance</p>
-                      <p className="mt-5 max-w-4xl text-base leading-8 text-slate-600 sm:text-lg sm:leading-9">
+                      <p className="text-[10px] font-black uppercase tracking-[0.14em] text-[#0B6232] sm:mt-6 sm:tracking-[0.2em]">Message from the Director Quality Assurance</p>
+                      <p className="mt-4 max-w-4xl text-sm leading-7 text-slate-600 sm:mt-5 sm:text-lg sm:leading-9">
                         {page.qualityAssurance.director.message}
                       </p>
                     </article>
                   </section>
 
-                  <section className="rounded-3xl border border-slate-100 bg-white p-6 shadow-xl shadow-slate-900/5 sm:p-8 lg:p-10">
+                  <section className="min-w-0 rounded-2xl border border-slate-100 bg-white p-5 shadow-xl shadow-slate-900/5 sm:rounded-3xl sm:p-8 lg:p-10">
                     <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
                       <div>
                         <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Quality Assurance Team</p>
@@ -2649,10 +2649,10 @@ function AboutContentPage({ page }: { page: AboutPageContent }) {
                         <span>Team Members</span>
                       </div>
                     </div>
-                    <div className="mt-8 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+                    <div className="mt-6 grid gap-4 sm:mt-8 sm:grid-cols-2 sm:gap-6 xl:grid-cols-3">
                       {page.qualityAssurance.staff.map((member) => (
-                        <article key={member.name} className="rounded-xl border border-slate-100 bg-white p-4 text-center shadow-xl shadow-slate-900/10">
-                          <div className="relative mx-auto aspect-[3/4] w-3/4 overflow-hidden rounded-lg bg-slate-100">
+                        <article key={member.name} className="rounded-xl border border-slate-100 bg-white p-3 text-center shadow-xl shadow-slate-900/10 sm:p-4">
+                          <div className="relative mx-auto aspect-[4/5] w-full max-w-[220px] overflow-hidden rounded-lg bg-slate-100 sm:aspect-[3/4] sm:w-3/4">
                             <ProfilePhoto
                               src={member.image}
                               alt={member.name}
@@ -2660,7 +2660,7 @@ function AboutContentPage({ page }: { page: AboutPageContent }) {
                               className="object-cover object-top"
                             />
                           </div>
-                          <div className="mx-auto px-3 py-5">
+                          <div className="mx-auto px-2 py-4 sm:px-3 sm:py-5">
                             <h3 className="text-base font-black leading-tight text-slate-950">{member.name}</h3>
                             <p className="mt-2 text-sm leading-5 text-slate-500">{member.role}</p>
                           </div>
@@ -2669,12 +2669,20 @@ function AboutContentPage({ page }: { page: AboutPageContent }) {
                     </div>
                   </section>
 
-                  <section className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5">
-                    <div className="border-b border-slate-100 p-6 sm:p-8 lg:p-10">
+                  <section className="min-w-0 overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5 sm:rounded-3xl">
+                    <div className="border-b border-slate-100 p-5 sm:p-8 lg:p-10">
                       <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">What We Do</p>
                       <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950 sm:text-3xl">Quality Assurance Responsibilities</h2>
                     </div>
-                    <div className="overflow-x-auto">
+                    <div className="grid gap-3 p-5 md:hidden">
+                      {page.qualityAssurance.whatWeDo.map((item) => (
+                        <article key={item.area} className="rounded-xl border border-slate-100 bg-slate-50 p-4">
+                          <h3 className="text-sm font-black text-slate-950">{item.area}</h3>
+                          <p className="mt-2 text-sm leading-7 text-slate-600">{item.details}</p>
+                        </article>
+                      ))}
+                    </div>
+                    <div className="hidden overflow-x-auto md:block">
                       <table className="w-full min-w-[720px] border-collapse text-left">
                         <thead className="bg-[#0B6232] text-white">
                           <tr>

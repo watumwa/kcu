@@ -56,14 +56,14 @@ export default function AdmissionPopup() {
             onClick={(e) => e.stopPropagation()}
           >
           {/* Image */}
-          <div className="relative aspect-square bg-[#0B6232]">
+          <div className="relative aspect-square bg-white p-3">
             <Image
               src="/images/intake/intake-2026.jpg"
               alt="August 2026 intake at King Ceasor University"
               width={640}
               height={640}
               priority
-              className="h-full w-full object-cover"
+              className="h-full w-full rounded-xl object-contain"
             />
           </div>
 
