@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { X } from "lucide-react";
 
@@ -55,16 +56,15 @@ export default function AdmissionPopup() {
             onClick={(e) => e.stopPropagation()}
           >
           {/* Image */}
-          <div className="relative h-40">
-            <img
-              src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=640&q=80"
-              alt="Apply to KCU"
-              className="w-full h-full object-cover"
+          <div className="relative aspect-square bg-[#0B6232]">
+            <Image
+              src="/images/intake/intake-2026.jpg"
+              alt="August 2026 intake at King Ceasor University"
+              width={640}
+              height={640}
+              priority
+              className="h-full w-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0B6232]/90 to-transparent" />
-            <p className="absolute bottom-3 left-4 text-white font-black text-lg leading-tight">
-              August 2026<br />Intake is Open
-            </p>
           </div>
 
           {/* Body */}
