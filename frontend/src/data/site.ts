@@ -108,8 +108,7 @@ export const heroSlides: HeroSlide[] = [
     title: "Undergraduate | Diploma | Certificates",
     subtitle: "",
     cta: "Apply Here",
-    image:
-      "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1800&q=85",
+    image: "/images/hero/1000766232.jpg",
     
       programmes: [
       "Master in Hospitality Business Management",

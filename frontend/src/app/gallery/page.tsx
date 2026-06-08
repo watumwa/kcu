@@ -4,64 +4,34 @@ import Navbar from "@/components/layout/Navbar";
 
 const galleryItems = [
   {
-    title: "Campus Moment",
-    description: "Placeholder for a campus photo with a short description of the scene.",
-    image: "",
+    title: "KCU Football Team",
+    description: "King Ceasor University football team representing the university in competition.",
+    image: "/images/hero/1000766229.jpg",
   },
   {
-    title: "Student Activity",
-    description: "Placeholder for student life, clubs, societies, and everyday university experiences.",
-    image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=80",
+    title: "University Team Photo",
+    description: "A campus group photo outside the King Ceasor University offices.",
+    image: "/images/hero/1000766232 (1).jpg",
   },
   {
-    title: "Academic Session",
-    description: "Placeholder for lectures, workshops, seminars, and classroom learning moments.",
-    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=80",
+    title: "Match Day Delegation",
+    description: "KCU players and university representatives gathered before a football fixture.",
+    image: "/images/hero/1000766235.jpg",
   },
   {
-    title: "Graduation Memory",
-    description: "Placeholder for graduation photos, ceremonies, and milestone celebrations.",
-    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=900&q=80",
+    title: "Sports Federation Moment",
+    description: "A university sports engagement moment with federation representatives.",
+    image: "/images/hero/1000766238.jpg",
   },
   {
-    title: "University Event",
-    description: "Placeholder for public lectures, conferences, visits, and official events.",
-    image: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=900&q=80",
+    title: "Football Officials",
+    description: "KCU football activity with match officials on the pitch.",
+    image: "/images/hero/1000766243.jpg",
   },
   {
-    title: "Library & Study",
-    description: "Placeholder for library spaces, study sessions, and academic support services.",
-    image: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=900&q=80",
-  },
-  {
-    title: "Laboratory Work",
-    description: "Placeholder for practical learning, science labs, computing, and research activity.",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=900&q=80",
-  },
-  {
-    title: "Sports & Wellness",
-    description: "Placeholder for sports, wellness activities, competitions, and student recreation.",
-    image: "https://images.unsplash.com/photo-1529900748604-07564a03e7a6?auto=format&fit=crop&w=900&q=80",
-  },
-  {
-    title: "Community Engagement",
-    description: "Placeholder for outreach, partnerships, and community service moments.",
-    image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=900&q=80",
-  },
-  {
-    title: "Leadership Moment",
-    description: "Placeholder for student leadership, guild activities, and university governance events.",
-    image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80",
-  },
-  {
-    title: "Culture & Creativity",
-    description: "Placeholder for arts, culture, creativity, and student expression on campus.",
-    image: "https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=900&q=80",
-  },
-  {
-    title: "Campus View",
-    description: "Placeholder for buildings, walkways, facilities, and the university environment.",
-    image: "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&w=900&q=80",
+    title: "Student Group Activity",
+    description: "Students participating in a group activity and campus engagement session.",
+    image: "/images/hero/1000766245.jpg",
   },
 ];
 
