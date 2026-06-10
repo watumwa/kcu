@@ -148,4 +148,18 @@
   .professional-surface {
     box-shadow: 0 24px 80px rgb(15 23 42 / 0.08);
   }
+
+  .alumni-marquee {
+    animation: alumni-marquee 34s linear infinite;
+  }
+}
+
+@keyframes alumni-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 0.75rem));
+  }
 }
