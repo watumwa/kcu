@@ -806,7 +806,7 @@ const contentPages: Record<string, AboutPageContent> = {
   library: {
     eyebrow: "Library",
     title: "KCU Library",
-    heroImage: "/University%20Management/Mr.%20Eric%20Keziron%20Oloo.jpeg",
+    heroImage: "/library/WhatsApp Image 2026-06-11 at 13.55.23.jpeg",
     intro:
       "King Ceasor University Library is a knowledge hub, a home to excellent study spaces, and a catalyst for academic excellence, research, and innovation.",
     sections: [],

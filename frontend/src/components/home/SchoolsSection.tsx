@@ -5,10 +5,12 @@ import { schools } from "@/data/site";
 
 const schoolImages = [
   "https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&w=900&q=85",
-  "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=85",
+  "/library/WhatsApp Image 2026-06-11 at 13.55.22.jpeg",
   "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=85",
 
 ];
+
+const schoolImagePositions = ["object-center", "object-[center_34%]", "object-center"];
 
 export default function SchoolsSection() {
   return (
@@ -37,7 +39,7 @@ export default function SchoolsSection() {
                   alt={`${school} students and learning environment`}
                   fill
                   sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
-                  className="object-cover transition duration-500 group-hover:scale-105"
+                  className={`object-cover ${schoolImagePositions[index]} transition duration-500 group-hover:scale-105`}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent" />
                 <div className="absolute left-3 top-3 grid size-10 place-items-center rounded-lg bg-white/95 text-[#0B6232] shadow-lg shadow-black/15">
