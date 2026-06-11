@@ -100,6 +100,10 @@ type AboutPageContent = {
     theme: string;
     mission: string;
     vision: string;
+    gallery?: {
+      title: string;
+      image: string;
+    }[];
     values: {
       name: string;
       text: string;
@@ -824,6 +828,20 @@ const contentPages: Record<string, AboutPageContent> = {
         "To embrace emerging technologies and best practices in the provision of exceptional library and information services.",
       vision:
         "An indispensable research, innovation, and knowledge hub.",
+      gallery: [
+        {
+          title: "Library study spaces",
+          image: "/library/WhatsApp Image 2026-06-11 at 13.55.22.jpeg",
+        },
+        {
+          title: "Library reading area",
+          image: "/library/WhatsApp Image 2026-06-11 at 13.55.22 (1).jpeg",
+        },
+        {
+          title: "Library resources and support",
+          image: "/library/WhatsApp Image 2026-06-11 at 13.55.23.jpeg",
+        },
+      ],
       values: [
         {
           name: "Equity",
@@ -1514,6 +1532,34 @@ function LibraryProgramme({ libraryPage }: { libraryPage: NonNullable<AboutPageC
           </div>
         </article>
       </section>
+
+      {libraryPage.gallery && (
+        <section className="rounded-3xl border border-slate-100 bg-white p-6 shadow-xl shadow-slate-900/5 sm:p-8 lg:p-10">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Library Photos</p>
+              <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950 sm:text-3xl">Inside the KCU Library</h2>
+            </div>
+            <BookOpenCheck className="hidden size-9 text-[#FFC66B] sm:block" />
+          </div>
+          <div className="mt-8 grid gap-4 md:grid-cols-3">
+            {libraryPage.gallery.map((photo) => (
+              <figure key={photo.image} className="overflow-hidden rounded-2xl border border-slate-100 bg-slate-50">
+                <div className="relative aspect-[4/3] bg-slate-100">
+                  <Image
+                    src={photo.image}
+                    alt={photo.title}
+                    fill
+                    sizes="(min-width: 768px) 33vw, 100vw"
+                    className="object-cover"
+                  />
+                </div>
+                <figcaption className="px-4 py-3 text-sm font-bold text-slate-700">{photo.title}</figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
+      )}
 
       <section className="overflow-hidden rounded-3xl bg-[#0B6232] text-white shadow-2xl shadow-[#0B6232]/20">
         <div className="grid gap-6 p-6 sm:p-8 lg:grid-cols-[260px_1fr] lg:p-10 lg:items-center">
