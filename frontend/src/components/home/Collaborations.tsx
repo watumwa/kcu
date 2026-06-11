@@ -1,19 +1,20 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const partners = [
-  { name: "University of Fort Hare", country: "South Africa" },
-  { name: "Aleksandër Moisiu University Durrës", country: "Albania" },
-  { name: "Universidad de Montevideo", country: "Uruguay" },
-  { name: "Arab Academy for Science, Technology & Maritime Transport", country: "Egypt" },
-  { name: "Superior University", country: "Pakistan" },
-  { name: "Rosebank International University College", country: "Ghana" },
-  { name: "Mulago National Referral Hospital", country: "Uganda" },
-  { name: "Kiruddu National Referral Hospital", country: "Uganda" },
-  { name: "Erasmus+ Programme", country: "European Union" },
-  { name: "Makerere University", country: "Uganda" },
-  { name: "RENU", country: "Uganda", image:"/"},
+  { name: "University of Fort Hare", country: "South Africa", logo: "/images/partners/ufh.svg" },
+  { name: "Aleksandër Moisiu University Durrës", country: "Albania", logo: "/images/partners/uamd.png" },
+  { name: "Universidad de Montevideo", country: "Uruguay", logo: "/images/partners/montevideo.png" },
+  { name: "Arab Academy for Science, Technology & Maritime Transport", country: "Egypt", logo: "/images/partners/aast.png" },
+  { name: "Superior University", country: "Pakistan", logo: "/images/partners/superior.svg" },
+  { name: "Rosebank International University College", country: "Ghana", logo: "/images/partners/riuc.png" },
+  { name: "Mulago National Referral Hospital", country: "Uganda", logo: "/images/partners/mulago.jpg" },
+  { name: "Kiruddu National Referral Hospital", country: "Uganda", logo: "/images/partners/kiruddu.gif" },
+  { name: "Erasmus+ Programme", country: "European Union", logo: "/images/partners/erasmus.svg" },
+  { name: "Makerere University", country: "Uganda", logo: "/images/partners/makerere.svg" },
+  { name: "RENU", country: "Uganda", logo: "/images/partners/renu.png" },
 ];
 
 // Duplicate for seamless loop
@@ -49,13 +50,18 @@ export default function Collaborations() {
             {looped.map((p, i) => (
               <div
                 key={i}
-                className="flex flex-col justify-between shrink-0 w-52 rounded-2xl border border-slate-200 bg-[#F7F9FC] px-5 py-4"
+                className="flex w-60 shrink-0 flex-col justify-between rounded-2xl border border-slate-200 bg-[#F7F9FC] px-5 py-4"
               >
-                {/* Initials avatar */}
-                <div className="size-10 rounded-xl bg-[#0B6232]/10 flex items-center justify-center mb-3">
-                  <span className="text-sm font-black text-[#0B6232]">
-                    {p.name.split(" ").slice(0, 2).map(w => w[0]).join("")}
-                  </span>
+                <div className="mb-3 flex h-14 items-center rounded-xl border border-slate-100 bg-white px-3 py-2">
+                  <div className="relative h-full w-full">
+                    <Image
+                      src={p.logo}
+                      alt={`${p.name} logo`}
+                      fill
+                      sizes="192px"
+                      className="object-contain object-left"
+                    />
+                  </div>
                 </div>
                 <p className="text-sm font-bold text-slate-900 leading-snug line-clamp-2">
                   {p.name}
