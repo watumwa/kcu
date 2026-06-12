@@ -4,13 +4,19 @@ import { ArrowRight, BookMarked } from "lucide-react";
 import { schools } from "@/data/site";
 
 const schoolImages = [
-  "https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&w=900&q=85",
-  "/library/WhatsApp Image 2026-06-11 at 13.55.22.jpeg",
-  "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=85",
-
+  {
+    src: "/WhatsApp Image 2026-06-12 at 18.55.33 (2).jpeg",
+    className: "object-contain object-center",
+  },
+  {
+    src: "/library/WhatsApp Image 2026-06-11 at 13.55.22.jpeg",
+    className: "object-cover object-[center_34%]",
+  },
+  {
+    src: "/WhatsApp Image 2026-06-12 at 18.55.33 (1).jpeg",
+    className: "object-contain object-center",
+  },
 ];
-
-const schoolImagePositions = ["object-center", "object-[center_34%]", "object-center"];
 
 export default function SchoolsSection() {
   return (
@@ -33,15 +39,15 @@ export default function SchoolsSection() {
               key={school}
               className="group overflow-hidden rounded-xl border border-slate-100 bg-white shadow-sm transition hover:-translate-y-1 hover:border-[#FFC66B] hover:shadow-xl hover:shadow-slate-900/10"
             >
-              <div className="relative h-36 overflow-hidden bg-black sm:h-40">
+              <div className="relative aspect-[4/3] overflow-hidden bg-slate-100">
                 <Image
-                  src={schoolImages[index]}
+                  src={schoolImages[index].src}
                   alt={`${school} students and learning environment`}
                   fill
                   sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
-                  className={`object-cover ${schoolImagePositions[index]} transition duration-500 group-hover:scale-105`}
+                  className={`${schoolImages[index].className} transition duration-500 group-hover:scale-[1.03]`}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/0 to-transparent" />
                 <div className="absolute left-3 top-3 grid size-10 place-items-center rounded-lg bg-white/95 text-[#0B6232] shadow-lg shadow-black/15">
                   <BookMarked className="size-5" />
                 </div>

@@ -1554,7 +1554,6 @@ function LibraryProgramme({ libraryPage }: { libraryPage: NonNullable<AboutPageC
                     className="object-cover"
                   />
                 </div>
-                <figcaption className="px-4 py-3 text-sm font-bold text-slate-700">{photo.title}</figcaption>
               </figure>
             ))}
           </div>
