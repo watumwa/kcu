@@ -1,6 +1,7 @@
 import UnderConstruction from "@/components/common/UnderConstruction";
 import GraduationPage from "@/components/academics/GraduationPage";
 import StudentGuildPage from "@/components/student/StudentGuildPage";
+import NewsletterPage from "@/components/news/NewsletterPage";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
 import Image from "next/image";
@@ -199,10 +200,13 @@ const aboutPages: Record<string, AboutPageContent> = {
       {
         title: "Latest News",
         items: [
-          "Call for Students' Loan Applications for the Academic Year 2026/27.",
+          "KCU signs strategic partnership with Tecnovia to enhance student skills and employment opportunities.",
+          "Department of Law signs a Memorandum of Understanding with Praxis Conflict Centre.",
+          "Law students honoured for outstanding performance in regional moot and debate competitions.",
+          "KCU hosts public lecture on universal jurisdiction and transnational litigation.",
+          "Call for Student Loan Applications for the Academic Year 2026/27.",
           "KCU participates in the Erasmus Exchange Programme.",
           "King Ceasor University signs an MOU with HESFB to expand access to student financing.",
-          "King Ceasor University has been officially listed among approved institutions under the Government Students' Loan Scheme for the Academic Year 2026/2027.",
         ],
       },
       {
@@ -2205,188 +2209,6 @@ function CollaborationsPartnershipsPage() {
   );
 }
 
-const newsletterArticles = [
-  {
-    date: "25 May 2026",
-    category: "Student Financing",
-    title: "KCU Listed Under the Government Students' Loan Scheme",
-    excerpt:
-      "Eligible Ugandan students can apply for financial support through the Higher Education Students Financing Scheme for the Academic Year 2026/2027.",
-    href: "https://kcu.ac.ug/",
-  },
-  {
-    date: "20 May 2026",
-    category: "Partnerships",
-    title: "King Ceasor University Signs MOU with HESFB",
-    excerpt:
-      "KCU has signed an MOU with the Higher Education Students' Financing Scheme to expand access to government-backed higher education loans.",
-    href: "https://kcu.ac.ug/",
-  },
-  {
-    date: "May 2026",
-    category: "International",
-    title: "KCU Participates in the Erasmus Exchange Programme",
-    excerpt:
-      "The University continues to broaden academic exposure through exchange opportunities and international learning partnerships.",
-    href: "https://kcu.ac.ug/",
-  },
-  {
-    date: "06 May 2026",
-    category: "Events",
-    title: "PAU Career Guidance Session",
-    excerpt:
-      "A campus career guidance session connecting students with professional pathways, industry insight, and academic direction.",
-    href: "https://kcu.ac.ug/",
-  },
-  {
-    date: "24 Apr 2026",
-    category: "Events",
-    title: "Unmasking Cyber Threats: Revealing Digital Truth",
-    excerpt:
-      "A focused session on cyber threats, digital investigation, and the practical realities of safety in a connected world.",
-    href: "https://kcu.ac.ug/",
-  },
-  {
-    date: "11 Mar 2026",
-    category: "Public Lecture",
-    title: "Entrepreneurship Skills Public Lecture",
-    excerpt:
-      "A public lecture designed to strengthen entrepreneurial thinking, practical skills, and innovation among the KCU community.",
-    href: "https://kcu.ac.ug/",
-  },
-  {
-    date: "2026",
-    category: "Admissions",
-    title: "August Intake Now Open",
-    excerpt:
-      "Prospective students can apply for undergraduate, diploma, certificate, and short course programmes at King Ceasor University.",
-    href: "https://apply.kcu.ac.ug/",
-  },
-  {
-    date: "2026",
-    category: "University News",
-    title: "King Ceasor University Fully Chartered",
-    excerpt:
-      "KCU marks a major institutional milestone, opening a new chapter of academic autonomy, innovation, and global opportunity.",
-    href: "https://kcu.ac.ug/",
-  },
-  {
-    date: "2026",
-    category: "Research",
-    title: "Redefining the Limits of Research",
-    excerpt:
-      "KCU continues empowering innovation through teaching, learning, research, and partnerships with leading researchers.",
-    href: "https://kcu.ac.ug/",
-  },
-];
-
-function NewsletterPage() {
-  const featuredArticle = newsletterArticles[0];
-  const remainingArticles = newsletterArticles.slice(1);
-
-  return (
-    <>
-      <Navbar />
-      <main className="min-h-screen bg-white pt-16 sm:pt-20 lg:pt-[8.5rem]">
-        <div className="border-b border-slate-100 bg-[#FFFFFF]">
-          <div className="mx-auto flex max-w-[1440px] items-center gap-2 px-4 py-3 text-xs text-slate-500 sm:px-6 lg:px-8">
-            <Link href="/" className="hover:text-[#0B6232]">Home</Link>
-            <ChevronRight className="size-3.5" />
-            <Link href="/about" className="hover:text-[#0B6232]">About Us</Link>
-            <ChevronRight className="size-3.5" />
-            <span className="font-semibold text-[#0B6232]">News Letter</span>
-          </div>
-        </div>
-
-        <section className="relative overflow-hidden px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-          <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1800&q=80')" }} />
-          <div className="absolute inset-0 bg-black/50" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/55 to-transparent" />
-          <div className="absolute -bottom-20 right-8 hidden size-72 rounded-full border border-white/10 lg:block" />
-          <div className="relative z-10 mx-auto flex max-w-[1440px] flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
-            <div>
-              <p className="inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-black uppercase tracking-[0.2em] text-[#FFC66B] backdrop-blur">News &amp; Updates</p>
-              <h1 className="mt-5 max-w-3xl font-serif text-4xl font-black leading-tight text-white sm:text-5xl md:text-6xl">
-              <span className="block text-[#FFC66B]">News</span>
-              </h1>
-              <p className="mt-5 max-w-2xl text-sm leading-7 text-white/80 sm:text-base sm:leading-8">
-                Stay informed. Stay inspired. The latest from King Ceasor University.
-              </p>
-            </div>
-            <div className="rounded-3xl border border-white/15 bg-white/10 p-5 text-white shadow-2xl backdrop-blur">
-              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">Newsroom</p>
-              <p className="mt-2 text-4xl font-black">{newsletterArticles.length}</p>
-              <p className="text-xs font-semibold text-white/70">Published updates</p>
-            </div>
-          </div>
-        </section>
-
-        <section className="bg-slate-50/70 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
-          <div className="mx-auto max-w-[1440px]">
-            <article className="group overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-2xl shadow-slate-900/5">
-              <div className="grid lg:grid-cols-[0.85fr_1.15fr]">
-                <div className="bg-[#0B6232] p-8 text-white sm:p-10">
-                  <p className="text-[10px] font-black uppercase tracking-[0.24em] text-[#FFC66B]">Featured Update</p>
-                  <h2 className="mt-4 text-3xl font-black leading-tight sm:text-4xl">{featuredArticle.title}</h2>
-                  <p className="mt-4 text-sm leading-7 text-white/80 sm:text-base">{featuredArticle.excerpt}</p>
-                  <Link href={featuredArticle.href} className="mt-7 inline-flex items-center rounded-xl bg-[#FFC66B] px-5 py-3 text-sm font-black text-[#0B6232] transition hover:translate-x-1">
-                    Read Article <ArrowRight className="ml-2 size-4" />
-                  </Link>
-                </div>
-                <div className="p-8 sm:p-10">
-                  <div className="flex flex-wrap items-center gap-3">
-                    <span className="rounded-full bg-[#FFC66B]/25 px-3 py-1 text-xs font-black text-[#0B6232]">{featuredArticle.category}</span>
-                    <span className="text-xs font-black uppercase tracking-[0.16em] text-slate-500">{featuredArticle.date}</span>
-                  </div>
-                  <div className="mt-8 grid gap-4 sm:grid-cols-3">
-                    {newsletterArticles.slice(0, 3).map((article, index) => (
-                      <div key={`${article.date}-${article.title}`} className="rounded-2xl border border-slate-100 bg-slate-50 p-5">
-                        <p className="text-3xl font-black text-[#0B6232]">{String(index + 1).padStart(2, "0")}</p>
-                        <p className="mt-2 text-xs font-black uppercase tracking-wide text-slate-500">{article.category}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-              {remainingArticles.map((article, index) => (
-                <article key={`${article.date}-${article.title}`} className="group flex min-h-[280px] flex-col justify-between overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5 transition hover:-translate-y-1 hover:border-[#0B6232]/25 hover:shadow-2xl hover:shadow-slate-900/10">
-                  <div className="h-1.5 bg-gradient-to-r from-[#0B6232] via-[#FFC66B] to-[#0B6232]" />
-                  <div className="p-6">
-                    <div className="flex items-start justify-between gap-4">
-                      <div className="grid size-14 place-items-center rounded-2xl bg-[#0B6232] text-sm font-black text-[#FFC66B] shadow-lg shadow-[#0B6232]/20">
-                        {String(index + 2).padStart(2, "0")}
-                      </div>
-                      <span className="rounded-full bg-[#FFC66B]/20 px-3 py-1 text-[10px] font-black uppercase tracking-wide text-[#0B6232]">
-                        {article.category}
-                      </span>
-                    </div>
-                    <p className="mt-5 text-xs font-black uppercase tracking-[0.16em] text-slate-500">{article.date}</p>
-                    <h2 className="mt-2 text-xl font-black leading-tight text-slate-950">{article.title}</h2>
-                    <p className="mt-3 text-sm leading-7 text-slate-600">{article.excerpt}</p>
-                  </div>
-                  <Link href={article.href} className="mx-6 mb-6 inline-flex items-center text-sm font-black text-[#0B6232] transition group-hover:text-slate-950">
-                    Read Article <ArrowRight className="ml-2 size-4 transition group-hover:translate-x-1" />
-                  </Link>
-                </article>
-              ))}
-            </div>
-
-            <div className="mt-12 flex items-center justify-center gap-3 text-sm font-black text-slate-500">
-              <span className="rounded-full border border-slate-200 bg-white px-4 py-2 shadow-sm">Previous</span>
-              <span className="grid size-10 place-items-center rounded-full bg-[#0B6232] text-white shadow-lg shadow-[#0B6232]/20">1</span>
-              <span className="rounded-full border border-slate-200 bg-white px-4 py-2 shadow-sm">Next</span>
-            </div>
-          </div>
-        </section>
-      </main>
-      <Footer />
-    </>
-  );
-}
-
 const studentLinks = [
   { label: "Students", href: "/student" },
   { label: "Student Guild", href: "/student/guild" },
@@ -2840,7 +2662,13 @@ export default async function CatchAllPage({ params }: { params: Promise<{ slug:
   }
 
   if (currentPath === "about/newsletter" || currentPath === "news") {
-    return <NewsletterPage />;
+    return (
+      <>
+        <Navbar />
+        <NewsletterPage />
+        <Footer />
+      </>
+    );
   }
 
   if (currentPath === "student/campus-life") {
