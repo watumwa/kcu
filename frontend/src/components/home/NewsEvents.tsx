@@ -3,10 +3,12 @@
 import { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, CalendarDays, MapPin, Search, Megaphone } from "lucide-react";
+import { ArrowRight, CalendarDays, MapPin, Search } from "lucide-react";
 import { newsItems, upcomingEvents } from "@/data/site";
 
 const FILTERS = ["All", "Admissions", "Events", "Research", "Student Life", "Partnerships", "Finance", "Announcements"];
+
+
 
 const TICKER_ITEMS = [
   "KCU signs strategic partnership with Tecnovia to expand student skills and employment opportunities",
@@ -16,6 +18,7 @@ const TICKER_ITEMS = [
   "KCU participates in the Erasmus Teaching Staff Mobility Exchange Programme",
 ];
 
+ (latest on student life page)
 const CATEGORY_COLORS: Record<string, string> = {
   Admissions: "bg-blue-50 text-blue-700",
   Events: "bg-purple-50 text-purple-700",
@@ -46,25 +49,6 @@ export default function NewsEvents() {
   return (
     <section className="bg-[#F7F9FC] py-20 px-4 sm:px-6 lg:px-12">
       <div className="mx-auto max-w-[1440px] space-y-14">
-
-        {/* ── Announcement Ticker ── */}
-        <div className="flex items-center gap-3 overflow-hidden rounded-xl border border-[#0B6232]/20 bg-white px-4 py-3 shadow-sm">
-          <span className="flex shrink-0 items-center gap-1.5 rounded-full bg-[#0B6232] px-3 py-1 text-[10px] font-black uppercase tracking-widest text-[#FFC66B]">
-            <Megaphone className="size-3" /> Live
-          </span>
-          <div className="overflow-hidden flex-1">
-            <motion.div
-              animate={{ x: ["100%", "-100%"] }}
-              transition={{ duration: 28, repeat: Infinity, ease: "linear" }}
-              className="flex gap-12 whitespace-nowrap text-sm font-semibold text-slate-700"
-            >
-              {[...TICKER_ITEMS, ...TICKER_ITEMS].map((t, i) => (
-                <span key={i}>{t}</span>
-              ))}
-            </motion.div>
-          </div>
-        </div>
-
         {/* ── Section Header ── */}
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>

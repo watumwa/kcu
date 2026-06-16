@@ -2217,29 +2217,109 @@ const studentLinks = [
 ];
 
 function CampusLifePage() {
-  const socialActivities = [
-    "Student associations",
-    "Co-curricular activities",
-    "Cultural activities",
-    "Community service projects",
-    "Academic seminars",
-    "Social gatherings",
-    "Student Guild initiatives",
-    "Leadership and volunteering",
+  const gallery = [
+    {
+      src: "/images/campus-life/gallery-win.jpeg",
+      alt: "King Ceasor University students celebrating a campus achievement",
+      className: "md:col-span-2",
+      imageClassName: "object-cover object-center",
+    },
+    {
+      src: "/images/campus-life/gallery-students.jpg",
+      alt: "King Ceasor University students during a campus activity",
+      className: "",
+      imageClassName: "object-cover object-[center_38%]",
+    },
+    {
+      src: "/images/campus-life/gallery-campus.jpg",
+      alt: "King Ceasor University students gathered on campus",
+      className: "",
+      imageClassName: "object-cover object-center",
+    },
+    {
+      src: "/images/campus-life/gallery-moot.jpg",
+      alt: "King Ceasor University students taking part in academic activities",
+      className: "md:col-span-2",
+      imageClassName: "object-cover object-[center_32%]",
+    },
   ];
-  const recreation = [
-    "University sports",
-    "Recreation and wellness",
-    "Student support groups",
-    "Counselling and guidance",
-    "Mentorship sessions",
-    "Personal development activities",
+
+  const campusSections = [
+    {
+      eyebrow: "Student Success",
+      title: "Student Affairs",
+      image: "/images/campus-life/student-affairs.jpg",
+      alt: "King Ceasor University students and staff during a student affairs activity",
+      imageClassName: "object-cover object-[center_38%]",
+      text:
+        "King Ceasor University is committed to student success. The Division of Student Affairs offers a variety of services including orientation programs and career services to help students achieve their goals. There are academic and cultural clubs, comprehensive wellness services, and the Office of Student Life hosts events and activities to build leadership and community.",
+      points: ["Orientation programs", "Career services", "Academic and cultural clubs", "Wellness support"],
+    },
+    {
+      eyebrow: "Sports and Fitness",
+      title: "Sports",
+      image: "/images/campus-life/sports.jpg",
+      alt: "King Ceasor University sports team celebrating together",
+      imageClassName: "object-cover object-center",
+      text:
+        "King Ceasor University offers a wide range of sports opportunities, including intramural and varsity teams in basketball, soccer, volleyball, and tennis. There are also fitness classes, recreational facilities, and regular sports events. Sports and physical activity play a significant role in providing a well-rounded education that values both academics and fitness.",
+      points: ["Basketball", "Soccer", "Volleyball", "Tennis"],
+    },
+    {
+      eyebrow: "Discovery",
+      title: "Research",
+      image: "/images/campus-life/research.jpg",
+      alt: "King Ceasor University medical and research learning environment",
+      imageClassName: "object-cover object-center",
+      text:
+        "KCU offers excellent academics, research, and facilities that prepare students to tackle societal problems. KCU's dynamic scholarly community supports students as they explore new frontiers of knowledge and innovation while achieving their academic and personal goals.",
+      points: ["Academic excellence", "Research culture", "Modern facilities", "Innovation"],
+    },
+    {
+      eyebrow: "Beyond Coursework",
+      title: "Student Activities",
+      image: "/images/campus-life/student-activities.jpg",
+      alt: "King Ceasor University students in a lecture and activity setting",
+      imageClassName: "object-cover object-center",
+      text:
+        "KCU education is more than coursework. It is late-night discussions with friends, drama productions, fierce or friendly athletic competitions, outings in Kampala, and much more. Through extracurricular activities, students meet new people, pursue their interests, discover new ones, and enrich their understanding of the world and the people in it.",
+      points: ["Drama productions", "Athletic competitions", "Kampala outings", "Extracurricular activities"],
+    },
+  ];
+
+  const experienceStats = [
+    { value: "4", label: "Student life focus areas" },
+    { value: "360", label: "Academic and personal growth" },
+    { value: "KCU", label: "Community of learners and leaders" },
+  ];
+
+  const studentExperience = [
+    {
+      title: "Supportive Community",
+      text: "Students learn in a welcoming environment shaped by peers, faculty, staff, and student leaders.",
+      icon: UsersRound,
+    },
+    {
+      title: "Leadership Growth",
+      text: "Campus life creates practical opportunities to lead, serve, volunteer, and build confidence.",
+      icon: Sparkles,
+    },
+    {
+      title: "Wellbeing",
+      text: "Wellness services, recreation, sports, and guidance help students stay balanced and connected.",
+      icon: HeartHandshake,
+    },
+    {
+      title: "Academic Curiosity",
+      text: "Students are encouraged to pursue research, innovation, and knowledge beyond the classroom.",
+      icon: BookOpenCheck,
+    },
   ];
 
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-white pt-16 sm:pt-20 lg:pt-[8.5rem]">
+      <main className="min-h-screen bg-[#F7F9FC] pt-16 sm:pt-20 lg:pt-[8.5rem]">
         <div className="border-b border-slate-100 bg-[#FFFFFF]">
           <div className="mx-auto flex max-w-[1440px] items-center gap-2 px-4 py-3 text-xs text-slate-500 sm:px-6 lg:px-8">
             <Link href="/" className="hover:text-[#0B6232]">Home</Link>
@@ -2250,34 +2330,72 @@ function CampusLifePage() {
           </div>
         </div>
 
-        <section className="relative overflow-hidden px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-          <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1800&q=85')" }} />
-          <div className="absolute inset-0 bg-black/45" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/50 to-transparent" />
-          <div className="relative z-10 mx-auto flex max-w-[1440px] flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
-            <div>
-              <p className="text-xs font-black uppercase tracking-[0.2em] text-[#FFC66B]">Campus Life</p>
-              <h1 className="mt-3 max-w-4xl font-serif text-4xl font-black leading-tight text-white sm:text-5xl md:text-6xl">
-                Life at <span className="block text-[#FFC66B]">King Ceasor University</span>
-              </h1>
-              <p className="mt-5 max-w-2xl text-sm leading-7 text-white/75 sm:text-base sm:leading-8">
-                A vibrant blend of academic excellence, social engagement, personal growth, leadership, culture, recreation, and wellbeing.
+        <section className="relative overflow-hidden bg-slate-950 px-4 py-12 text-white sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+          <Image
+            src="/images/campus-life/student-affairs.jpg"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover opacity-55 grayscale-[10%]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/72 to-black/35" />
+          <div className="absolute inset-0 bg-black/20" />
+          <div className="relative z-10 mx-auto grid max-w-[1440px] gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
+            <div className="max-w-3xl">
+              <p className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">
+                <Sparkles className="size-4" />
+                Life at KCU
               </p>
-              <Button asChild className="mt-7 h-11 rounded-xl bg-[#FFC66B] px-5 font-black text-[#0B6232] hover:bg-[#FFC66B]">
-                <Link href="/student">Back to Students</Link>
-              </Button>
+              <h1 className="mt-5 font-serif text-4xl font-black leading-tight text-white sm:text-5xl md:text-6xl">
+                Welcome to King Ceasor University
+              </h1>
+              <p className="mt-5 max-w-2xl text-sm leading-7 text-white/80 sm:text-base sm:leading-8">
+                Welcome to the amazing student life at King Ceasor University. As a student at KCU, you are about to embark on an incredible journey of self-discovery, personal growth, and endless opportunities.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Button asChild className="h-11 rounded-xl bg-[#FFC66B] px-5 font-black text-[#0B6232] hover:bg-[#FFC66B]">
+                  <Link href="https://apply.kcu.ac.ug/">Apply to KCU <ArrowRight className="ml-2 size-4" /></Link>
+                </Button>
+                <Button asChild variant="outline" className="h-11 rounded-xl border-2 border-white bg-transparent px-5 font-black text-white hover:bg-white hover:text-[#0B6232]">
+                  <Link href="/student/dean-of-students">Student Support</Link>
+                </Button>
+              </div>
+              <div className="mt-10 grid max-w-2xl gap-3 sm:grid-cols-3">
+                {experienceStats.map((stat) => (
+                  <div key={stat.label} className="border-l border-white/20 pl-4">
+                    <p className="text-2xl font-black text-[#FFC66B]">{stat.value}</p>
+                    <p className="mt-1 text-xs font-semibold leading-5 text-white/70">{stat.label}</p>
+                  </div>
+                ))}
+              </div>
             </div>
-            <div className="inline-flex w-fit items-center gap-3 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-white">
-              Scroll
-              <span className="block h-8 w-px bg-[#FFC66B]" />
+
+            <div className="grid grid-cols-2 gap-3 md:grid-cols-4 lg:grid-cols-2">
+              {gallery.map((image, index) => (
+                <div
+                  key={image.src}
+                  className={`relative min-h-[150px] overflow-hidden rounded-lg border border-white/15 bg-black/30 shadow-2xl shadow-black/20 ${
+                    image.className
+                  } ${index === 0 ? "lg:min-h-[220px]" : "lg:min-h-[190px]"}`}
+                >
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    sizes="(min-width: 1024px) 26vw, (min-width: 768px) 24vw, 50vw"
+                    className={image.imageClassName}
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
-        <section className="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+        <section className="bg-white px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
           <div className="mx-auto grid max-w-[1440px] gap-10 lg:grid-cols-[260px_1fr] lg:gap-14">
             <aside className="hidden lg:block">
-              <nav className="sticky top-24 rounded-2xl border border-slate-100 bg-[#FFFFFF] p-5 shadow-sm">
+              <nav className="sticky top-28 rounded-lg border border-slate-100 bg-white p-5 shadow-xl shadow-slate-900/5">
                 <p className="mb-3 text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Students</p>
                 <ul className="space-y-1">
                   {studentLinks.map((item) => (
@@ -2299,8 +2417,8 @@ function CampusLifePage() {
               </nav>
             </aside>
 
-            <div className="space-y-14">
-              <div className="lg:hidden -mx-4 overflow-x-auto px-4 sm:-mx-6 sm:px-6">
+            <div className="space-y-16">
+              <div className="lg:hidden -mx-4 overflow-x-auto px-4 [scrollbar-width:none] sm:-mx-6 sm:px-6 [&::-webkit-scrollbar]:hidden">
                 <div className="flex gap-2 border-b border-slate-200 pb-0">
                   {studentLinks.map((item) => (
                     <Link
@@ -2318,67 +2436,109 @@ function CampusLifePage() {
                 </div>
               </div>
 
+              <section className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+                <div>
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-[#0B6232]">Welcome</p>
+                  <h2 className="mt-2 text-3xl font-black leading-tight text-slate-950 sm:text-4xl">A vibrant and inspiring community of learners and leaders</h2>
+                </div>
+                <div className="grid gap-5 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
+                  <p>
+                    With a supportive and engaged community of peers, faculty, and staff, students have access to the resources they need to succeed both academically and personally.
+                  </p>
+                  <p>
+                    At KCU, we are passionate about creating a dynamic environment that fosters curiosity, creativity, and innovation. Whether students are pursuing academic goals, building leadership skills, or exploring passions through extracurricular activities, they will find space to thrive.
+                  </p>
+                  <p>
+                    KCU invites students to unleash their full potential, make their mark on the world, and become part of a community shaped by purpose, discovery, and service.
+                  </p>
+                </div>
+              </section>
+
               <section>
-                <p className="text-xs font-black uppercase tracking-[0.2em] text-[#0B6232]">Students</p>
-                <h2 className="mt-2 text-3xl font-black leading-tight text-slate-950 sm:text-4xl">A Vibrant Student Community</h2>
-                <div className="mt-5 grid gap-5 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
-                  <p>
-                    Life at King Ceasor University is shaped by academic excellence, student leadership, social connection, and a commitment to helping each student fulfill their potential.
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+                  <div>
+                    <p className="text-xs font-black uppercase tracking-[0.2em] text-[#0B6232]">Student Life</p>
+                    <h2 className="mt-2 text-3xl font-black leading-tight text-slate-950 sm:text-4xl">Life beyond the classroom</h2>
+                  </div>
+                  <p className="max-w-2xl text-sm leading-7 text-slate-600">
+                    Academic focus, leadership, culture, recreation, wellbeing, and friendship all meet in the KCU student experience.
                   </p>
-                  <p>
-                    At KCU, students are supported by a thriving community and a Student Guild that links students with university management, advocates for student interests, and creates opportunities for personal and professional growth.
-                  </p>
-                  <p>
-                    Students can participate in associations, campus initiatives, sports, cultural activities, community service, academic seminars, and support programmes that make university life active and meaningful.
-                  </p>
+                </div>
+                <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+                  {studentExperience.map((item) => {
+                    const Icon = item.icon;
+                    return (
+                      <article key={item.title} className="rounded-lg border border-slate-100 bg-[#F7F9FC] p-5">
+                        <div className="grid size-11 place-items-center rounded-lg bg-[#0B6232] text-[#FFC66B]">
+                          <Icon className="size-5" />
+                        </div>
+                        <h3 className="mt-5 text-lg font-black text-slate-950">{item.title}</h3>
+                        <p className="mt-3 text-sm leading-7 text-slate-600">{item.text}</p>
+                      </article>
+                    );
+                  })}
                 </div>
               </section>
 
-              <section className="grid gap-6 lg:grid-cols-2">
-                <div>
-                  <p className="text-xs font-black uppercase tracking-[0.2em] text-[#0B6232]">Activities</p>
-                  <h2 className="mt-2 text-2xl font-black text-slate-950 sm:text-3xl">Social Activities</h2>
-                  <p className="mt-4 text-sm leading-7 text-slate-600">
-                    KCU brings students together through activities that encourage friendship, leadership, service, and a sense of belonging across the campus community.
-                  </p>
-                  <div className="mt-6 grid gap-3 sm:grid-cols-2">
-                    {socialActivities.map((activity) => (
-                      <div key={activity} className="rounded-2xl border border-slate-100 bg-white p-4 text-sm font-bold text-slate-700 shadow-sm">
-                        {activity}
+              <section className="space-y-8">
+                {campusSections.map((section, index) => (
+                  <article
+                    key={section.title}
+                    className={`grid overflow-hidden rounded-lg border border-slate-100 bg-white shadow-xl shadow-slate-900/5 lg:grid-cols-2 ${
+                      index % 2 === 1 ? "lg:[&>div:first-child]:order-2" : ""
+                    }`}
+                  >
+                    <div className="relative min-h-[280px] bg-slate-50 sm:min-h-[360px] lg:min-h-[420px]">
+                      <Image
+                        src={section.image}
+                        alt={section.alt}
+                        fill
+                        sizes="(min-width: 1024px) 38vw, 100vw"
+                        className={section.imageClassName}
+                      />
+                    </div>
+                    <div className="flex flex-col justify-center p-6 sm:p-8 lg:p-10">
+                      <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">{section.eyebrow}</p>
+                      <h3 className="mt-2 text-2xl font-black leading-tight text-slate-950 sm:text-3xl">{section.title}</h3>
+                      <p className="mt-5 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">{section.text}</p>
+                      <div className="mt-7 grid gap-3 sm:grid-cols-2">
+                        {section.points.map((point) => (
+                          <div key={point} className="flex items-center gap-3 rounded-lg bg-[#F7F9FC] px-4 py-3 text-sm font-bold text-slate-700">
+                            <ShieldCheck className="size-4 shrink-0 text-[#0B6232]" />
+                            <span>{point}</span>
+                          </div>
+                        ))}
                       </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div>
-                  <p className="text-xs font-black uppercase tracking-[0.2em] text-[#0B6232]">Wellbeing</p>
-                  <h2 className="mt-2 text-2xl font-black text-slate-950 sm:text-3xl">Sports &amp; Recreation</h2>
-                  <p className="mt-4 text-sm leading-7 text-slate-600">
-                    Students are encouraged to join university sports and wellbeing activities that support talent development, relaxation, and personal balance.
-                  </p>
-                  <div className="mt-6 grid gap-3 sm:grid-cols-2">
-                    {recreation.map((item) => (
-                      <div key={item} className="rounded-2xl border border-slate-100 bg-white p-4 text-sm font-bold text-slate-700 shadow-sm">
-                        {item}
-                      </div>
-                    ))}
-                  </div>
-                </div>
+                    </div>
+                  </article>
+                ))}
               </section>
 
-              <section className="rounded-3xl bg-[#0B6232] p-7 text-white sm:p-10">
-                <p className="text-xs font-black uppercase tracking-[0.2em] text-[#FFC66B]">Need More Information?</p>
-                <h2 className="mt-2 text-2xl font-black leading-tight sm:text-3xl">Have questions or need guidance?</h2>
-                <p className="mt-4 max-w-3xl text-sm leading-7 text-white/75 sm:text-base">
-                  The Dean of Students, Student Guild, and support teams are available to help students navigate academic issues, wellbeing, housing, guidance, and campus life.
-                </p>
-                <div className="mt-7 flex flex-wrap gap-3">
-                  <Button asChild className="h-11 rounded-xl bg-[#FFC66B] px-5 font-black text-[#0B6232] hover:bg-[#FFC66B]">
-                    <Link href="/student/dean-of-students">Dean of Students</Link>
-                  </Button>
-                  <Button asChild variant="outline" className="h-11 rounded-xl border-2 border-white bg-transparent px-5 font-black text-white hover:bg-white hover:text-[#0B6232]">
-                    <Link href="/student/guild">Student Guild</Link>
-                  </Button>
+              <section className="grid overflow-hidden rounded-lg bg-[#0B6232] text-white shadow-2xl shadow-[#0B6232]/20 lg:grid-cols-[1fr_360px]">
+                <div className="p-7 sm:p-10">
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-[#FFC66B]">Need More Information?</p>
+                  <h2 className="mt-2 text-2xl font-black leading-tight sm:text-3xl">Have questions or need guidance?</h2>
+                  <p className="mt-4 max-w-3xl text-sm leading-7 text-white/75 sm:text-base">
+                    The Dean of Students, Student Guild, and support teams are available to help students navigate academic issues, wellbeing, housing, guidance, and campus life.
+                  </p>
+                  <div className="mt-7 flex flex-wrap gap-3">
+                    <Button asChild className="h-11 rounded-xl bg-[#FFC66B] px-5 font-black text-[#0B6232] hover:bg-[#FFC66B]">
+                      <Link href="/student/dean-of-students">Dean of Students</Link>
+                    </Button>
+                    <Button asChild variant="outline" className="h-11 rounded-xl border-2 border-white bg-transparent px-5 font-black text-white hover:bg-white hover:text-[#0B6232]">
+                      <Link href="/student/guild">Student Guild</Link>
+                    </Button>
+                  </div>
+                </div>
+                <div className="relative min-h-[260px] bg-[#082b18]">
+                  <Image
+                    src="/images/campus-life/student-activities.jpg"
+                    alt="King Ceasor University students in class"
+                    fill
+                    sizes="(min-width: 1024px) 360px, 100vw"
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-[#0B6232]/10" />
                 </div>
               </section>
             </div>
