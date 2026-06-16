@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaXTwitter, FaFacebookF, FaInstagram } from "react-icons/fa6";
+import { FaXTwitter } from "react-icons/fa6";
 import { Heart, Repeat2, MessageCircle, ExternalLink } from "lucide-react";
 
 const posts = [
@@ -23,26 +23,6 @@ const posts = [
     replies: 4,
     url: "https://x.com/KingCeasorUni",
   },
-  {
-    platform: "facebook",
-    handle: "KCU Official",
-    date: "Jun 2, 2026",
-    text: "🎓 August 2026 Intake is NOW OPEN! Apply today for Undergraduate, Diploma and Certificate programmes at King Ceasor University. Limited spaces available — secure your place early. Apply at apply.kcu.ac.ug",
-    likes: 124,
-    reposts: 56,
-    replies: 31,
-    url: "https://www.facebook.com/kcu.ac.ug",
-  },
-  {
-    platform: "instagram",
-    handle: "@king.ceasor.university",
-    date: "May 28, 2026",
-    text: "Proud moments from our Guild Leadership Swearing-In Ceremony 🎊 A new generation of student leaders takes the helm at KCU. The future is bright! #KCU #StudentLeadership #IgniteTheFuture",
-    likes: 210,
-    reposts: 44,
-    replies: 18,
-    url: "https://www.instagram.com/king.ceasor.university",
-  },
 ];
 
 const platformMeta = {
@@ -51,18 +31,6 @@ const platformMeta = {
     label: "X",
     color: "bg-black text-white",
     border: "border-slate-800",
-  },
-  facebook: {
-    icon: FaFacebookF,
-    label: "Facebook",
-    color: "bg-[#1877F2] text-white",
-    border: "border-blue-100",
-  },
-  instagram: {
-    icon: FaInstagram,
-    label: "Instagram",
-    color: "bg-gradient-to-br from-[#833AB4] via-[#FD1D1D] to-[#FCAF45] text-white",
-    border: "border-pink-100",
   },
 };
 
@@ -75,27 +43,22 @@ export default function SocialFeed() {
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between mb-10">
           <div>
             <p className="text-xs font-black uppercase tracking-[0.2em] text-[#0B6232] mb-1">Social Media</p>
-            <h2 className="text-2xl font-black text-slate-900">Follow Our Journey</h2>
-            <p className="text-slate-500 text-sm mt-1">Stay connected with KCU across all platforms.</p>
+            <h2 className="text-2xl font-black text-slate-900">Latest On X</h2>
+            <p className="text-slate-500 text-sm mt-1">Recent updates from King Ceasor University on X.</p>
           </div>
-          <div className="flex gap-3">
-            {[
-              { href: "https://x.com/KingCeasorUni", icon: FaXTwitter, label: "X" },
-              { href: "https://www.facebook.com/kcu.ac.ug", icon: FaFacebookF, label: "Facebook" },
-              { href: "https://www.instagram.com/king.ceasor.university", icon: FaInstagram, label: "Instagram" },
-            ].map(({ href, icon: Icon, label }) => (
-              <Link key={label} href={href} target="_blank" rel="noopener noreferrer"
-                className="grid size-9 place-items-center rounded-full bg-[#0B6232] text-white hover:bg-[#FFC66B] hover:text-slate-950 transition-colors"
-                aria-label={label}
-              >
-                <Icon className="size-4" />
-              </Link>
-            ))}
-          </div>
+          <Link
+            href="https://x.com/KingCeasorUni"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex size-9 items-center justify-center rounded-full bg-[#0B6232] text-white transition-colors hover:bg-[#FFC66B] hover:text-slate-950"
+            aria-label="X"
+          >
+            <FaXTwitter className="size-4" />
+          </Link>
         </div>
 
         {/* Posts grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           {posts.map((post, i) => {
             const meta = platformMeta[post.platform as keyof typeof platformMeta];
             const Icon = meta.icon;

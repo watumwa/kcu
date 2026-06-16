@@ -9,8 +9,8 @@ const schoolImages = [
     className: "object-cover object-center",
   },
   {
-    src: "/images/home/whatsapp-campus-welcome.jpeg",
-    className: "object-cover object-[center_42%]",
+    src: "/library/WhatsApp Image 2026-06-11 at 13.55.22.jpeg",
+    className: "object-cover object-[center_34%]",
   },
   {
     src: "/WhatsApp Image 2026-06-12 at 18.55.33 (1).jpeg",
