@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { BarChart3, BookOpenCheck, Calculator, LineChart, MoveUpRight } from "lucide-react";
 import Link from "next/link";
 
@@ -29,7 +30,16 @@ export default function ProgrammeHighlight() {
     <section className="relative z-30 px-4 py-10 sm:-mt-14 sm:px-6 sm:pb-12 sm:pt-0">
       <div className="mx-auto max-w-[1440px] rounded-xl border border-[#000000] bg-white p-3 shadow-xl shadow-slate-950/10 sm:p-4 md:p-5 md:shadow-2xl md:shadow-slate-950/12">
         <div className="grid gap-5 lg:grid-cols-[0.78fr_1.22fr] lg:items-center">
-          <div className="border-b border-[#000000] pb-4 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-6">
+          <div className="relative overflow-hidden rounded-lg border-b border-[#000000] pb-4 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-6">
+            <Image
+              src="/images/home/whatsapp-campus-group.jpeg"
+              alt="King Ceasor University students standing together on campus"
+              fill
+              sizes="(min-width: 1024px) 32vw, 100vw"
+              className="object-cover object-center"
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-white/92 via-white/86 to-white/78" />
+            <div className="relative z-10 p-4 sm:p-5 lg:p-1">
             <p className="text-xs font-black uppercase tracking-[0.16em] text-[#0B6232] sm:text-sm sm:tracking-[0.2em]">
               King Ceasor University
             </p>
@@ -45,6 +55,7 @@ export default function ProgrammeHighlight() {
             >
               Apply Here <MoveUpRight className="size-4" />
             </Link>
+            </div>
           </div>
 
           <div className="grid justify-items-center gap-3 sm:grid-cols-2">

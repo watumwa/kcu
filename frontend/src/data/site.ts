@@ -17,6 +17,7 @@ export type HeroSlide = {
   subtitle: string;
   cta: string;
   image: string;
+  imagePosition?: string;
   programmes: string[];
 };
 
@@ -183,8 +184,8 @@ export const heroSlides: HeroSlide[] = [
     title: "A Supportive University Community",
     subtitle: "",
     cta: "Explore Student Life",
-    image:
-      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1800&q=85",
+    image: "/images/home/whatsapp-campus-welcome.jpeg",
+    imagePosition: "center 38%",
     programmes: [
       "Student leadership",
       "Clubs and campus activities",

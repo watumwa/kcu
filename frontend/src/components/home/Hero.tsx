@@ -32,7 +32,7 @@ export default function Hero() {
           exit={{ opacity: 0, scale: 1.03 }}
           transition={{ duration: 0.9, ease: "easeOut" }}
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${current.image})` }}
+          style={{ backgroundImage: `url(${current.image})`, backgroundPosition: current.imagePosition ?? "center" }}
         />
       </AnimatePresence>
 

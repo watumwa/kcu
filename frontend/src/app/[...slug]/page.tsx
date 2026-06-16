@@ -1,4 +1,5 @@
 import UnderConstruction from "@/components/common/UnderConstruction";
+import AcademicHeroBackground from "@/components/academics/AcademicHeroBackground";
 import GraduationPage from "@/components/academics/GraduationPage";
 import StudentGuildPage from "@/components/student/StudentGuildPage";
 import NewsletterPage from "@/components/news/NewsletterPage";
@@ -1236,9 +1237,9 @@ function AcademicProgrammesPage({ variant }: { variant: AcademicProgrammeVariant
         </div>
 
         <section className="relative overflow-hidden px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-          <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1800&q=80')" }} />
-          <div className="absolute inset-0 bg-black/55" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent" />
+          <AcademicHeroBackground />
+          <div className="absolute inset-0 bg-black/34" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/78 via-black/46 to-black/14" />
           <div className="absolute -bottom-20 right-12 hidden size-72 rounded-full border border-white/10 lg:block" />
           <div className="relative z-10 mx-auto grid max-w-[1440px] gap-8 lg:grid-cols-[1fr_380px] lg:items-end">
             <div>
