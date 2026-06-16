@@ -376,12 +376,17 @@ function TabUniversityCouncil() {
 
 function TabBoardOfTrustees() {
   const [selectedPerson, setSelectedPerson] = useState<PersonProfile | null>(null);
-  const chair: PersonProfile = { name: "Hon. Thomas Tayebwa", role: "Chairperson", tier: "top" };
+  const chair: PersonProfile = {
+    name: "Hon. Thomas Tayebwa",
+    role: "Chairperson",
+    tier: "top",
+    image: "/images/trustees/hon-thomas-tayebwa.jpeg",
+  };
   const members: PersonProfile[] = [
-    { name: "Ms. Agnes Selina Mfite", role: "Member", tier: "base", image:"/" },
-    { name: "Hon. Okello Oryem", role: "Member", tier: "base" },
-    { name: "Mr. Donald Nyakairu", role: "Member", tier: "base" },
-    { name: "King Ceasor Mulenga", role: "Member", tier: "base",},
+    { name: "Mrs. Agnes Selina Mfite", role: "Member", tier: "base", image: "/images/trustees/mrs-agnes-selina-mfite.jpg" },
+    { name: "Hon. Okello Oryem", role: "Member", tier: "base", image: "/images/trustees/hon-okello-oryem.jpg" },
+    { name: "Mr. Donald Nyakairu", role: "Member", tier: "base", image: "/images/trustees/mr-donald-nyakairu.jpg" },
+    { name: "Lord Ceasor Mulenga", role: "Member", tier: "base" },
   ];
 
   return (
@@ -391,10 +396,10 @@ function TabBoardOfTrustees() {
         <p className="text-xs font-black uppercase tracking-[0.2em] text-[#0B6232]">Governance</p>
         <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950 sm:text-3xl">Board of Trustees</h2>
         <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
-          The Board of Trustees supports King Ceasor University&apos;s long-term institutional stewardship, helping safeguard the University&apos;s mission, resources and strategic direction.
+          The Board of Trustees serves as the supreme governing body of King Ceasor University, providing strategic leadership, policy oversight and guidance in advancing the institution&apos;s vision and mission.
         </p>
         <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
-          Working within the University&apos;s governance framework, the trustees provide oversight that strengthens accountability, continuity and responsible growth for the benefit of students, staff and the wider community.
+          The Board promotes academic excellence, integrity, innovation and sustainable growth while supporting accountability and alignment with national education standards and global best practices.
         </p>
       </div>
 
@@ -406,7 +411,7 @@ function TabBoardOfTrustees() {
           </div>
           <div className="flex w-full flex-wrap justify-center gap-6">
             {members.map((p) => (
-              <CouncilCard key={p.role} person={p} onSelect={setSelectedPerson} />
+              <CouncilCard key={p.name} person={p} onSelect={setSelectedPerson} />
             ))}
           </div>
         </div>
@@ -420,7 +425,7 @@ function TabBoardOfTrustees() {
         <div className="space-y-3">
           <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Trustee Members</p>
           {members.map((p) => (
-            <CouncilCardMobile key={p.role} person={p} onSelect={setSelectedPerson} />
+            <CouncilCardMobile key={p.name} person={p} onSelect={setSelectedPerson} />
           ))}
         </div>
       </div>
