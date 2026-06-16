@@ -8,17 +8,6 @@ import { newsItems, upcomingEvents } from "@/data/site";
 
 const FILTERS = ["All", "Admissions", "Events", "Research", "Student Life", "Partnerships", "Finance", "Announcements"];
 
-
-
-const TICKER_ITEMS = [
-  "KCU signs strategic partnership with Tecnovia to expand student skills and employment opportunities",
-  "Department of Law signs MoU with Praxis Conflict Centre for ADR education and practice",
-  "KCU Law students honoured for regional moot and debate competition success",
-  "Student loan applications for the 2026/27 academic year are open",
-  "KCU participates in the Erasmus Teaching Staff Mobility Exchange Programme",
-];
-
- (latest on student life page)
 const CATEGORY_COLORS: Record<string, string> = {
   Admissions: "bg-blue-50 text-blue-700",
   Events: "bg-purple-50 text-purple-700",
