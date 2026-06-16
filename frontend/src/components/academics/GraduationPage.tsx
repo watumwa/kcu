@@ -21,10 +21,17 @@ import { Button } from "@/components/ui/button";
 const countdownTarget = new Date("2026-07-03T09:00:00+03:00");
 
 const fees = [
-  { label: "Graduation fee", value: "USD 300", covers: "Ceremony Glown, Graduation Booklet, Venue Arrangements, and Academic Procession Support." },
+  { label: "Graduation fee", value: "USD 300", covers: "Ceremony Gown, Graduation Booklet, Venue Arrangements, and Academic Procession Support." },
   // { label: "Graduation gown", value: "UGX 100,000", covers: "Gown hire, hood, cap, and regalia handling." },
   // { label: "Certificate processing", value: "UGX 50,000", covers: "Certificate preparation, verification, and records processing." },
 ];
+
+const tentativeList = {
+  href: "/Graduation-Notice.pdf",
+  title: "Tentative Graduation List",
+  description: "Prospective graduands can review the tentative list, confirm their names and programmes, and report corrections before the final list is published.",
+  note: "For name, programme, or clearance corrections, please contact the Academic Registrar's office.",
+};
 
 const checklist = [
   "Confirm that all tuition and functional fees are fully paid.",
@@ -170,18 +177,49 @@ export default function GraduationPage() {
         </section>
 
         <section className="px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
-          <div className="mx-auto max-w-[1440px]">
-            <p className="text-xs font-black uppercase tracking-[0.2em] text-[#0B6232]">Graduation Fees</p>
-            <h2 className="mt-2 text-3xl font-black text-slate-950">Fees and what they cover</h2>
-            <div className="mt-8 grid gap-5 md:grid-cols-3">
-              {fees.map((fee) => (
-                <div key={fee.label} className="rounded-lg border border-slate-100 bg-white p-6 shadow-sm">
-                  <Banknote className="size-7 text-[#0B6232]" />
-                  <h3 className="mt-4 text-lg font-black text-slate-950">{fee.label}</h3>
-                  <p className="mt-2 text-2xl font-black text-[#0B6232]">{fee.value}</p>
-                  <p className="mt-3 text-sm leading-6 text-slate-600">{fee.covers}</p>
+          <div className="mx-auto grid max-w-[1440px] gap-6 lg:grid-cols-[0.92fr_1.08fr] lg:items-stretch">
+            <div>
+              <p className="text-xs font-black uppercase tracking-[0.2em] text-[#0B6232]">Graduation Fees</p>
+              <h2 className="mt-2 text-3xl font-black text-slate-950">Fees and what they cover</h2>
+              <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-1">
+                {fees.map((fee) => (
+                  <div key={fee.label} className="rounded-lg border border-slate-100 bg-white p-6 shadow-sm">
+                    <Banknote className="size-7 text-[#0B6232]" />
+                    <h3 className="mt-4 text-lg font-black text-slate-950">{fee.label}</h3>
+                    <p className="mt-2 text-2xl font-black text-[#0B6232]">{fee.value}</p>
+                    <p className="mt-3 text-sm leading-6 text-slate-600">{fee.covers}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="relative overflow-hidden rounded-lg border border-[#0B6232]/15 bg-white p-6 shadow-sm sm:p-8">
+              <div className="absolute inset-x-0 top-0 h-2 bg-gradient-to-r from-[#0B6232] via-[#FFC66B] to-[#0B6232]" />
+              <div className="flex flex-col gap-6 sm:flex-row sm:items-start">
+                <div className="grid size-14 shrink-0 place-items-center rounded-lg bg-[#0B6232] text-[#FFC66B]">
+                  <GraduationCap className="size-8" />
                 </div>
-              ))}
+                <div>
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-[#0B6232]">Graduation List</p>
+                  <h3 className="mt-2 text-2xl font-black leading-tight text-slate-950 sm:text-3xl">{tentativeList.title}</h3>
+                  <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base">{tentativeList.description}</p>
+                </div>
+              </div>
+
+              <a
+                href={tentativeList.href}
+                download
+                className="mt-7 flex min-h-16 items-center justify-between gap-4 rounded-lg bg-[#0B6232] px-5 py-4 text-white shadow-sm transition hover:bg-[#084f29] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FFC66B]"
+              >
+                <span className="flex min-w-0 items-center gap-4">
+                  <span className="grid size-11 shrink-0 place-items-center rounded-lg bg-white/12 text-[#FFC66B]">
+                    <FileText className="size-6" />
+                  </span>
+                  <span className="min-w-0 text-sm font-black sm:text-base">{tentativeList.title}</span>
+                </span>
+                <Download className="size-5 shrink-0 text-[#FFC66B]" />
+              </a>
+              <p className="mt-4 text-sm italic leading-6 text-slate-600">{tentativeList.note}</p>
             </div>
           </div>
         </section>
