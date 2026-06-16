@@ -2222,7 +2222,7 @@ function CampusLifePage() {
     {
       src: "/images/campus-life/gallery-win.jpeg",
       alt: "King Ceasor University students celebrating a campus achievement",
-      className: "md:col-span-2",
+      className: "sm:col-span-2",
       imageClassName: "object-cover object-center",
     },
     {
@@ -2240,7 +2240,7 @@ function CampusLifePage() {
     {
       src: "/images/student-activity/conservation-group-2.jpeg",
       alt: "King Ceasor University students gathered for a tree-planting and conservation activity",
-      className: "md:col-span-2",
+      className: "sm:col-span-2",
       imageClassName: "object-cover object-center",
     },
   ];
@@ -2372,13 +2372,13 @@ function CampusLifePage() {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-3 md:grid-cols-4 lg:grid-cols-2">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-2">
               {gallery.map((image, index) => (
                 <div
                   key={image.src}
                   className={`relative min-h-[150px] overflow-hidden rounded-lg border border-white/15 bg-black/30 shadow-2xl shadow-black/20 ${
                     image.className
-                  } ${index === 0 ? "lg:min-h-[220px]" : "lg:min-h-[190px]"}`}
+                  } ${index === 0 ? "min-h-[220px] lg:min-h-[220px]" : "min-h-[180px] lg:min-h-[190px]"}`}
                 >
                   <Image
                     src={image.src}

@@ -85,8 +85,8 @@ export default function GalleryPage() {
                       className={item.imageClassName}
                     />
                   </div>
-                  <div className="p-4">
-                    <h2 className="text-base font-black leading-snug text-slate-950">{item.title}</h2>
+                  <div className="p-4 sm:p-5">
+                    <h2 className="text-[15px] font-black leading-snug text-slate-950 sm:text-base">{item.title}</h2>
                     <p className="mt-2 text-sm leading-6 text-slate-600">{item.description}</p>
                   </div>
                 </article>

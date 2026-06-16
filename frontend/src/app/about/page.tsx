@@ -101,7 +101,7 @@ function TabAboutUs() {
       </div>
 
       <section className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-sm shadow-slate-900/5">
-        <div className="relative aspect-[16/8] min-h-[260px] overflow-hidden sm:min-h-[340px] lg:min-h-[420px]">
+        <div className="relative aspect-[5/4] min-h-[280px] overflow-hidden sm:aspect-[16/8] sm:min-h-[340px] lg:min-h-[420px]">
           <Image
             src="/images/community-outreach/medical-outreach-consultation.jpeg"
             alt="KCU health professionals and students engaging with community members during outreach"
@@ -109,8 +109,8 @@ function TabAboutUs() {
             sizes="100vw"
             className="object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/85 via-slate-950/55 to-slate-950/10" />
-          <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8 lg:p-10">
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/88 via-slate-950/35 to-slate-950/10 sm:bg-gradient-to-r sm:from-slate-950/85 sm:via-slate-950/55 sm:to-slate-950/10" />
+          <div className="absolute inset-x-0 bottom-0 hidden p-6 sm:block sm:p-8 lg:p-10">
             <div className="max-w-3xl">
               <p className="text-xs font-black uppercase tracking-[0.2em] text-[#FFC66B]">Community Impact</p>
               <h2 className="mt-2 text-2xl font-black leading-tight text-white sm:text-3xl lg:text-4xl">Learning that serves beyond campus</h2>
@@ -121,7 +121,15 @@ function TabAboutUs() {
           </div>
         </div>
 
-        <div className="grid gap-8 p-6 sm:p-8 lg:grid-cols-[1.05fr_0.95fr] lg:p-10">
+        <div className="border-b border-slate-100 p-6 sm:hidden">
+          <p className="text-xs font-black uppercase tracking-[0.2em] text-[#0B6232]">Community Impact</p>
+          <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950">Learning that serves beyond campus</h2>
+          <p className="mt-4 text-sm leading-7 text-slate-600">
+            KCU&apos;s commitment to service reaches into the wider community through health-focused engagement, practical training, and outreach that connects academic learning with real human needs.
+          </p>
+        </div>
+
+        <div className="grid gap-6 p-6 sm:gap-8 sm:p-8 lg:grid-cols-[1.05fr_0.95fr] lg:p-10">
           <div>
             <p className="text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
               These outreach moments reflect the University&apos;s wider mission: preparing graduates who combine professional competence, compassion, and responsibility in service to society.
@@ -140,7 +148,7 @@ function TabAboutUs() {
             </div>
           </div>
 
-          <div className="relative aspect-[16/10] overflow-hidden rounded-2xl bg-slate-100">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-slate-100 sm:aspect-[16/10]">
             <Image
               src="/images/community-outreach/medical-outreach-screening.jpeg"
               alt="KCU outreach team providing health screening and support in the community"
