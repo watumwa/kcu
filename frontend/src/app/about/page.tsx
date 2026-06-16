@@ -100,46 +100,52 @@ function TabAboutUs() {
         </div>
       </div>
 
-      <section className="grid gap-8 overflow-hidden rounded-3xl bg-slate-950 text-white lg:grid-cols-[0.95fr_1.05fr]">
-        <div className="p-6 sm:p-8 lg:p-10">
-          <p className="text-xs font-black uppercase tracking-[0.2em] text-[#FFC66B]">Community Impact</p>
-          <h2 className="mt-2 text-2xl font-black leading-tight sm:text-3xl">Learning that serves beyond campus</h2>
-          <p className="mt-4 text-sm leading-7 text-white/75 sm:text-base sm:leading-8">
-            KCU&apos;s commitment to service reaches into the wider community through health-focused engagement, practical training, and outreach that connects academic learning with real human needs.
-          </p>
-          <p className="mt-4 text-sm leading-7 text-white/75 sm:text-base sm:leading-8">
-            These outreach moments reflect the University&apos;s wider mission: preparing graduates who combine professional competence, compassion, and responsibility in service to society.
-          </p>
-          <div className="mt-6 grid gap-3 sm:grid-cols-2">
-            {[
-              "Community health engagement",
-              "Hands-on clinical support",
-              "Service-driven learning",
-              "Positive social impact",
-            ].map((item) => (
-              <div key={item} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-semibold text-white/85">
-                {item}
-              </div>
-            ))}
+      <section className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-sm shadow-slate-900/5">
+        <div className="relative aspect-[16/8] min-h-[260px] overflow-hidden sm:min-h-[340px] lg:min-h-[420px]">
+          <Image
+            src="/images/community-outreach/medical-outreach-consultation.jpeg"
+            alt="KCU health professionals and students engaging with community members during outreach"
+            fill
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/85 via-slate-950/55 to-slate-950/10" />
+          <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8 lg:p-10">
+            <div className="max-w-3xl">
+              <p className="text-xs font-black uppercase tracking-[0.2em] text-[#FFC66B]">Community Impact</p>
+              <h2 className="mt-2 text-2xl font-black leading-tight text-white sm:text-3xl lg:text-4xl">Learning that serves beyond campus</h2>
+              <p className="mt-4 max-w-2xl text-sm leading-7 text-white/80 sm:text-base sm:leading-8">
+                KCU&apos;s commitment to service reaches into the wider community through health-focused engagement, practical training, and outreach that connects academic learning with real human needs.
+              </p>
+            </div>
           </div>
         </div>
 
-        <div className="grid gap-3 p-3 sm:grid-cols-2 sm:p-4">
-          <div className="relative min-h-[240px] overflow-hidden rounded-2xl sm:min-h-[320px]">
-            <Image
-              src="/images/community-outreach/medical-outreach-consultation.jpeg"
-              alt="KCU health professionals and students engaging with community members during outreach"
-              fill
-              sizes="(min-width: 1024px) 28vw, (min-width: 640px) 50vw, 100vw"
-              className="object-cover object-center"
-            />
+        <div className="grid gap-8 p-6 sm:p-8 lg:grid-cols-[1.05fr_0.95fr] lg:p-10">
+          <div>
+            <p className="text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
+              These outreach moments reflect the University&apos;s wider mission: preparing graduates who combine professional competence, compassion, and responsibility in service to society.
+            </p>
+            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+              {[
+                "Community health engagement",
+                "Hands-on clinical support",
+                "Service-driven learning",
+                "Positive social impact",
+              ].map((item) => (
+                <div key={item} className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm font-semibold text-slate-700">
+                  {item}
+                </div>
+              ))}
+            </div>
           </div>
-          <div className="relative min-h-[240px] overflow-hidden rounded-2xl sm:min-h-[320px]">
+
+          <div className="relative aspect-[16/10] overflow-hidden rounded-2xl bg-slate-100">
             <Image
               src="/images/community-outreach/medical-outreach-screening.jpeg"
               alt="KCU outreach team providing health screening and support in the community"
               fill
-              sizes="(min-width: 1024px) 28vw, (min-width: 640px) 50vw, 100vw"
+              sizes="(min-width: 1024px) 36vw, 100vw"
               className="object-cover object-center"
             />
           </div>
