@@ -2232,16 +2232,16 @@ function CampusLifePage() {
       imageClassName: "object-cover object-[center_38%]",
     },
     {
-      src: "/images/campus-life/gallery-campus.jpg",
-      alt: "King Ceasor University students gathered on campus",
+      src: "/images/student-activity/conservation-group-1.jpeg",
+      alt: "King Ceasor University students participating in environmental conservation outreach",
       className: "",
       imageClassName: "object-cover object-center",
     },
     {
-      src: "/images/campus-life/gallery-moot.jpg",
-      alt: "King Ceasor University students taking part in academic activities",
+      src: "/images/student-activity/conservation-group-2.jpeg",
+      alt: "King Ceasor University students gathered for a tree-planting and conservation activity",
       className: "md:col-span-2",
-      imageClassName: "object-cover object-[center_32%]",
+      imageClassName: "object-cover object-center",
     },
   ];
 
