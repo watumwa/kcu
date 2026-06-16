@@ -99,6 +99,52 @@ function TabAboutUs() {
           })}
         </div>
       </div>
+
+      <section className="grid gap-8 overflow-hidden rounded-3xl bg-slate-950 text-white lg:grid-cols-[0.95fr_1.05fr]">
+        <div className="p-6 sm:p-8 lg:p-10">
+          <p className="text-xs font-black uppercase tracking-[0.2em] text-[#FFC66B]">Community Impact</p>
+          <h2 className="mt-2 text-2xl font-black leading-tight sm:text-3xl">Learning that serves beyond campus</h2>
+          <p className="mt-4 text-sm leading-7 text-white/75 sm:text-base sm:leading-8">
+            KCU&apos;s commitment to service reaches into the wider community through health-focused engagement, practical training, and outreach that connects academic learning with real human needs.
+          </p>
+          <p className="mt-4 text-sm leading-7 text-white/75 sm:text-base sm:leading-8">
+            These outreach moments reflect the University&apos;s wider mission: preparing graduates who combine professional competence, compassion, and responsibility in service to society.
+          </p>
+          <div className="mt-6 grid gap-3 sm:grid-cols-2">
+            {[
+              "Community health engagement",
+              "Hands-on clinical support",
+              "Service-driven learning",
+              "Positive social impact",
+            ].map((item) => (
+              <div key={item} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-semibold text-white/85">
+                {item}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="grid gap-3 p-3 sm:grid-cols-2 sm:p-4">
+          <div className="relative min-h-[240px] overflow-hidden rounded-2xl sm:min-h-[320px]">
+            <Image
+              src="/images/community-outreach/medical-outreach-consultation.jpeg"
+              alt="KCU health professionals and students engaging with community members during outreach"
+              fill
+              sizes="(min-width: 1024px) 28vw, (min-width: 640px) 50vw, 100vw"
+              className="object-cover object-center"
+            />
+          </div>
+          <div className="relative min-h-[240px] overflow-hidden rounded-2xl sm:min-h-[320px]">
+            <Image
+              src="/images/community-outreach/medical-outreach-screening.jpeg"
+              alt="KCU outreach team providing health screening and support in the community"
+              fill
+              sizes="(min-width: 1024px) 28vw, (min-width: 640px) 50vw, 100vw"
+              className="object-cover object-center"
+            />
+          </div>
+        </div>
+      </section>
       
       <div className="rounded-2xl bg-[#FFFFFF] p-6 sm:p-8">
         <p className="text-xs font-black uppercase tracking-[0.2em] text-[#0B6232]">Our Approach</p>

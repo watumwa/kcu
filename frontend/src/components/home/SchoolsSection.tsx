@@ -5,7 +5,7 @@ import { schools } from "@/data/site";
 
 const schoolImages = [
   {
-    src: "/images/home/whatsapp-campus-group.jpeg",
+    src: "/images/community-outreach/clinical-training-theatre.jpeg",
     className: "object-cover object-center",
   },
   {
