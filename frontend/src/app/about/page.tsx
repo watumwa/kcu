@@ -334,7 +334,7 @@ function CouncilCardMobile({ person, onSelect }: { person: PersonProfile; onSele
   const cardBorder = tier === "top" ? "border-[#FFC66B]" : tier === "mid" ? "border-[#0B6232]/30" : "border-slate-100";
 
   return (
-    <button type="button" onClick={() => onSelect(person)} className={`flex w-full items-center gap-4 rounded-2xl border-2 ${cardBorder} bg-white p-4 text-left shadow-sm transition hover:border-[#0B6232] hover:shadow-md focus:outline-none focus:ring-2 focus:ring-[#FFC66B] focus:ring-offset-2`}>
+    <button type="button" onClick={() => onSelect(person)} className={`flex w-full items-start gap-4 rounded-2xl border-2 ${cardBorder} bg-white p-4 text-left shadow-sm transition hover:border-[#0B6232] hover:shadow-md focus:outline-none focus:ring-2 focus:ring-[#FFC66B] focus:ring-offset-2`}>
       <div className={`relative grid h-[126px] w-[84px] shrink-0 place-items-center overflow-hidden rounded-lg ${avatarBg} ${avatarText} text-xl font-black`}>
         {image ? (
           <Image src={image} alt={name} fill sizes="84px" className="object-cover object-top" />
@@ -342,7 +342,7 @@ function CouncilCardMobile({ person, onSelect }: { person: PersonProfile; onSele
           initials || "KCU"
         )}
       </div>
-      <div>
+      <div className="min-w-0 flex-1">
         <p className="text-sm font-black leading-snug text-slate-950">{name}</p>
         <p className="mt-0.5 text-[11px] leading-4 text-slate-500">{role}</p>
       </div>
@@ -620,21 +620,21 @@ export default function AboutPage() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-white">
+      <main className="min-h-screen bg-white pt-16 sm:pt-20 lg:pt-[8.5rem]">
         {/* Breadcrumb */}
         <div className="border-b border-slate-100 bg-[#FFFFFF]">
-          <div className="mx-auto flex max-w-[1440px] items-center gap-2 px-4 py-3 text-xs text-slate-500 sm:px-6 lg:px-8">
-            <Link href="/" className="hover:text-[#0B6232]">Home</Link>
-            <ChevronRight className="size-3.5" />
-            <span className="font-semibold text-[#0B6232]">About Us</span>
+          <div className="mx-auto flex max-w-[1440px] items-center gap-2 overflow-x-auto px-4 py-3 text-xs text-slate-500 sm:px-6 lg:px-8">
+            <Link href="/" className="shrink-0 hover:text-[#0B6232]">Home</Link>
+            <ChevronRight className="size-3.5 shrink-0" />
+            <span className="shrink-0 font-semibold text-[#0B6232]">About Us</span>
           </div>
         </div>
 
         {/* Hero */}
-        <section className="relative overflow-hidden px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
+        <section className="relative overflow-hidden px-4 py-14 sm:px-6 sm:py-24 lg:px-8 lg:py-28">
           <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1800&q=80')" }} />
           <div className="absolute inset-0 bg-black/45" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/45 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/48 to-black/18 sm:bg-gradient-to-r sm:from-black/80 sm:via-black/45 sm:to-transparent" />
           <div className="relative z-10 mx-auto max-w-[1440px]">
             <p className="text-xs font-black uppercase tracking-[0.2em] text-[#FFC66B]">About King Ceasor University</p>
             <h1 className="mt-3 max-w-3xl font-serif text-3xl font-black leading-tight text-white sm:text-4xl md:text-5xl">Shaping Leaders. Igniting the Future.</h1>
@@ -673,13 +673,13 @@ export default function AboutPage() {
             </aside>
 
             {/* Mobile tab strip */}
-            <div className="lg:hidden -mx-4 overflow-x-auto px-4 sm:-mx-6 sm:px-6">
+            <div className="lg:hidden -mx-4 overflow-x-auto px-4 [scrollbar-width:none] sm:-mx-6 sm:px-6 [&::-webkit-scrollbar]:hidden">
               <div className="flex gap-2 border-b border-slate-200 pb-0">
                 {tabs.map((tab) => (
                   <button
                     key={tab.id}
                     onClick={() => selectTab(tab.id)}
-                    className={`shrink-0 border-b-2 px-3 pb-3 pt-1 text-xs font-bold transition ${
+                    className={`shrink-0 whitespace-nowrap border-b-2 px-3 pb-3 pt-1 text-xs font-bold transition ${
                       active === tab.id
                         ? "border-[#0B6232] text-[#0B6232]"
                         : "border-transparent text-slate-500 hover:text-slate-800"
@@ -692,7 +692,7 @@ export default function AboutPage() {
             </div>
 
             {/* Tab body */}
-            <div>{current.content}</div>
+            <div className="min-w-0">{current.content}</div>
           </div>
         </section>
       </main>
