@@ -19,7 +19,7 @@ export default function AboutSection() {
         <div className="lg:pr-8">
           <p className="text-xs font-black uppercase tracking-[0.16em] text-[#0B6232] sm:text-sm sm:tracking-[0.2em]">Vice Chancellor&apos;s Message</p>
           <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
-           Welcome to King Ceasor University,a Chartered institution committed to excellence in education, research, innovation, and service to society.
+           Welcome to King Ceasor University,a Chartered institution committed to excellence in education, research, innovation, and service to society
           </p>
           <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
             At KCU, we believe education is transformative, empowering learners with the knowledge, skills, values, and leadership qualities needed to thrive in a rapidly changing world. We provide a supportive and intellectually stimulating environment that encourages critical thinking, ethical conduct, innovation, and academic excellence.
