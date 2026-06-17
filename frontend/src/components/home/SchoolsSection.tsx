@@ -5,8 +5,8 @@ import { schools } from "@/data/site";
 
 const schoolImages = [
   {
-    src: "/WhatsApp Image 2026-06-12 at 18.55.33 (2).jpeg",
-    className: "object-contain object-center",
+    src: "/images/community-outreach/clinical-training-theatre.jpeg",
+    className: "object-cover object-center",
   },
   {
     src: "/library/WhatsApp Image 2026-06-11 at 13.55.22.jpeg",

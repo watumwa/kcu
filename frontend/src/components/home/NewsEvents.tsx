@@ -2,11 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, CalendarDays, MapPin, Search } from "lucide-react";
 import { newsItems, upcomingEvents } from "@/data/site";
-
-const FILTERS = ["All", "Admissions", "Events", "Research", "Student Life", "Partnerships", "Finance", "Announcements"];
 
 const CATEGORY_COLORS: Record<string, string> = {
   Admissions: "bg-blue-50 text-blue-700",
@@ -23,16 +20,14 @@ function badge(cat: string) {
 }
 
 export default function NewsEvents() {
-  const [activeFilter, setActiveFilter] = useState("All");
   const [search, setSearch] = useState("");
 
   const featured = newsItems.find((n) => n.featured)!;
   const rest = newsItems.filter((n) => !n.featured);
 
   const filtered = rest.filter((n) => {
-    const matchFilter = activeFilter === "All" || n.category === activeFilter;
     const matchSearch = n.title.toLowerCase().includes(search.toLowerCase());
-    return matchFilter && matchSearch;
+    return matchSearch;
   });
 
   return (
@@ -44,7 +39,7 @@ export default function NewsEvents() {
             <p className="text-xs font-black uppercase tracking-[0.2em] text-[#0B6232]">Latest News & Events</p>
             <h2 className="mt-2 text-3xl font-black text-slate-950 sm:text-4xl">Stay Updated</h2>
             <p className="mt-2 max-w-xl text-slate-500 text-sm leading-relaxed">
-              Campus achievements research breakthroughs, student life, academic events and university announcements.
+              Campus achievements research breakthroughs, student life, academic events and university announcements
             </p>
           </div>
           {/* Search */}
@@ -89,76 +84,50 @@ export default function NewsEvents() {
           </div>
         </Link>
 
-        {/* ── Filters ── */}
-        <div className="flex flex-wrap gap-2">
-          {FILTERS.map((f) => (
-            <button
-              key={f}
-              onClick={() => setActiveFilter(f)}
-              className={`rounded-full px-4 py-1.5 text-sm font-semibold transition-all ${
-                activeFilter === f
-                  ? "bg-[#0B6232] text-white shadow-md"
-                  : "bg-white border border-slate-200 text-slate-600 hover:border-[#0B6232] hover:text-[#0B6232]"
-              }`}
-            >
-              {f}
-            </button>
-          ))}
-        </div>
-
         {/* ── News Grid + Events Timeline ── */}
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-3">
 
           {/* News Grid — 2/3 */}
           <div className="lg:col-span-2">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeFilter + search}
-                initial={{ opacity: 0, y: 8 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.2 }}
-                className="grid gap-5 sm:grid-cols-2"
-              >
-                {filtered.map((item) => (
-                  <Link
-                    key={item.title}
-                    href={item.href ?? "/news"}
-                    target={item.href?.startsWith("http") ? "_blank" : undefined}
-                    rel="noopener noreferrer"
-                    className="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm border border-slate-100 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
-                  >
-                    <div className="relative h-44 overflow-hidden">
-                      <img
-                        src={item.image}
-                        alt={item.title}
-                        loading="lazy"
-                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
+            <div className="grid gap-5 sm:grid-cols-2">
+              {filtered.map((item) => (
+                <Link
+                  key={item.title}
+                  href={item.href ?? "/news"}
+                  target={item.href?.startsWith("http") ? "_blank" : undefined}
+                  rel="noopener noreferrer"
+                  className="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm border border-slate-100 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
+                >
+                  <div className="relative h-44 overflow-hidden">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
+                  </div>
+                  <div className="flex flex-1 flex-col p-4">
+                    <span className={`${badge(item.category)} self-start mb-2`}>{item.category}</span>
+                    <h3 className="font-black text-slate-900 leading-snug group-hover:text-[#0B6232] transition-colors line-clamp-2">
+                      {item.title}
+                    </h3>
+                    <p className="mt-2 text-xs text-slate-500 leading-relaxed line-clamp-2 flex-1">{item.text}</p>
+                    <div className="mt-4 flex items-center justify-between">
+                      <span className="inline-flex items-center gap-1 text-[11px] text-slate-400">
+                        <CalendarDays className="size-3" /> {item.date}
+                      </span>
+                      <span className="inline-flex items-center gap-1 text-xs font-black text-[#0B6232] group-hover:gap-2 transition-all">
+                        Read More <ArrowRight className="size-3.5" />
+                      </span>
                     </div>
-                    <div className="flex flex-1 flex-col p-4">
-                      <span className={`${badge(item.category)} self-start mb-2`}>{item.category}</span>
-                      <h3 className="font-black text-slate-900 leading-snug group-hover:text-[#0B6232] transition-colors line-clamp-2">
-                        {item.title}
-                      </h3>
-                      <p className="mt-2 text-xs text-slate-500 leading-relaxed line-clamp-2 flex-1">{item.text}</p>
-                      <div className="mt-4 flex items-center justify-between">
-                        <span className="inline-flex items-center gap-1 text-[11px] text-slate-400">
-                          <CalendarDays className="size-3" /> {item.date}
-                        </span>
-                        <span className="inline-flex items-center gap-1 text-xs font-black text-[#0B6232] group-hover:gap-2 transition-all">
-                          Read More <ArrowRight className="size-3.5" />
-                        </span>
-                      </div>
-                    </div>
-                  </Link>
-                ))}
-                {filtered.length === 0 && (
-                  <p className="col-span-2 py-10 text-center text-slate-400">No results for &quot;{search}&quot;</p>
-                )}
-              </motion.div>
-            </AnimatePresence>
+                  </div>
+                </Link>
+              ))}
+              {filtered.length === 0 && (
+                <p className="col-span-2 py-10 text-center text-slate-400">No results for &quot;{search}&quot;</p>
+              )}
+            </div>
           </div>
 
           {/* Events Timeline — 1/3 */}

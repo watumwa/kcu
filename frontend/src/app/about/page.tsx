@@ -99,6 +99,66 @@ function TabAboutUs() {
           })}
         </div>
       </div>
+
+      <section className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-sm shadow-slate-900/5">
+        <div className="relative aspect-[5/4] min-h-[280px] overflow-hidden sm:aspect-[16/8] sm:min-h-[340px] lg:min-h-[420px]">
+          <Image
+            src="/images/community-outreach/medical-outreach-consultation.jpeg"
+            alt="KCU health professionals and students engaging with community members during outreach"
+            fill
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/88 via-slate-950/35 to-slate-950/10 sm:bg-gradient-to-r sm:from-slate-950/85 sm:via-slate-950/55 sm:to-slate-950/10" />
+          <div className="absolute inset-x-0 bottom-0 hidden p-6 sm:block sm:p-8 lg:p-10">
+            <div className="max-w-3xl">
+              <p className="text-xs font-black uppercase tracking-[0.2em] text-[#FFC66B]">Community Impact</p>
+              <h2 className="mt-2 text-2xl font-black leading-tight text-white sm:text-3xl lg:text-4xl">Learning that serves beyond campus</h2>
+              <p className="mt-4 max-w-2xl text-sm leading-7 text-white/80 sm:text-base sm:leading-8">
+                KCU&apos;s commitment to service reaches into the wider community through health-focused engagement, practical training, and outreach that connects academic learning with real human needs.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="border-b border-slate-100 p-6 sm:hidden">
+          <p className="text-xs font-black uppercase tracking-[0.2em] text-[#0B6232]">Community Impact</p>
+          <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950">Learning that serves beyond campus</h2>
+          <p className="mt-4 text-sm leading-7 text-slate-600">
+            KCU&apos;s commitment to service reaches into the wider community through health-focused engagement, practical training, and outreach that connects academic learning with real human needs.
+          </p>
+        </div>
+
+        <div className="grid gap-6 p-6 sm:gap-8 sm:p-8 lg:grid-cols-[1.05fr_0.95fr] lg:p-10">
+          <div>
+            <p className="text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
+              These outreach moments reflect the University&apos;s wider mission: preparing graduates who combine professional competence, compassion, and responsibility in service to society.
+            </p>
+            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+              {[
+                "Community health engagement",
+                "Hands-on clinical support",
+                "Service-driven learning",
+                "Positive social impact",
+              ].map((item) => (
+                <div key={item} className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm font-semibold text-slate-700">
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-slate-100 sm:aspect-[16/10]">
+            <Image
+              src="/images/community-outreach/medical-outreach-screening.jpeg"
+              alt="KCU outreach team providing health screening and support in the community"
+              fill
+              sizes="(min-width: 1024px) 36vw, 100vw"
+              className="object-cover object-center"
+            />
+          </div>
+        </div>
+      </section>
       
       <div className="rounded-2xl bg-[#FFFFFF] p-6 sm:p-8">
         <p className="text-xs font-black uppercase tracking-[0.2em] text-[#0B6232]">Our Approach</p>
@@ -274,7 +334,7 @@ function CouncilCardMobile({ person, onSelect }: { person: PersonProfile; onSele
   const cardBorder = tier === "top" ? "border-[#FFC66B]" : tier === "mid" ? "border-[#0B6232]/30" : "border-slate-100";
 
   return (
-    <button type="button" onClick={() => onSelect(person)} className={`flex w-full items-center gap-4 rounded-2xl border-2 ${cardBorder} bg-white p-4 text-left shadow-sm transition hover:border-[#0B6232] hover:shadow-md focus:outline-none focus:ring-2 focus:ring-[#FFC66B] focus:ring-offset-2`}>
+    <button type="button" onClick={() => onSelect(person)} className={`flex w-full items-start gap-4 rounded-2xl border-2 ${cardBorder} bg-white p-4 text-left shadow-sm transition hover:border-[#0B6232] hover:shadow-md focus:outline-none focus:ring-2 focus:ring-[#FFC66B] focus:ring-offset-2`}>
       <div className={`relative grid h-[126px] w-[84px] shrink-0 place-items-center overflow-hidden rounded-lg ${avatarBg} ${avatarText} text-xl font-black`}>
         {image ? (
           <Image src={image} alt={name} fill sizes="84px" className="object-cover object-top" />
@@ -282,7 +342,7 @@ function CouncilCardMobile({ person, onSelect }: { person: PersonProfile; onSele
           initials || "KCU"
         )}
       </div>
-      <div>
+      <div className="min-w-0 flex-1">
         <p className="text-sm font-black leading-snug text-slate-950">{name}</p>
         <p className="mt-0.5 text-[11px] leading-4 text-slate-500">{role}</p>
       </div>
@@ -565,21 +625,21 @@ export default function AboutPage() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-white">
+      <main className="min-h-screen bg-white pt-16 sm:pt-20 lg:pt-[8.5rem]">
         {/* Breadcrumb */}
         <div className="border-b border-slate-100 bg-[#FFFFFF]">
-          <div className="mx-auto flex max-w-[1440px] items-center gap-2 px-4 py-3 text-xs text-slate-500 sm:px-6 lg:px-8">
-            <Link href="/" className="hover:text-[#0B6232]">Home</Link>
-            <ChevronRight className="size-3.5" />
-            <span className="font-semibold text-[#0B6232]">About Us</span>
+          <div className="mx-auto flex max-w-[1440px] items-center gap-2 overflow-x-auto px-4 py-3 text-xs text-slate-500 sm:px-6 lg:px-8">
+            <Link href="/" className="shrink-0 hover:text-[#0B6232]">Home</Link>
+            <ChevronRight className="size-3.5 shrink-0" />
+            <span className="shrink-0 font-semibold text-[#0B6232]">About Us</span>
           </div>
         </div>
 
         {/* Hero */}
-        <section className="relative overflow-hidden px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
+        <section className="relative overflow-hidden px-4 py-14 sm:px-6 sm:py-24 lg:px-8 lg:py-28">
           <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1800&q=80')" }} />
           <div className="absolute inset-0 bg-black/45" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/45 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/48 to-black/18 sm:bg-gradient-to-r sm:from-black/80 sm:via-black/45 sm:to-transparent" />
           <div className="relative z-10 mx-auto max-w-[1440px]">
             <p className="text-xs font-black uppercase tracking-[0.2em] text-[#FFC66B]">About King Ceasor University</p>
             <h1 className="mt-3 max-w-3xl font-serif text-3xl font-black leading-tight text-white sm:text-4xl md:text-5xl">Shaping Leaders. Igniting the Future.</h1>
@@ -618,13 +678,13 @@ export default function AboutPage() {
             </aside>
 
             {/* Mobile tab strip */}
-            <div className="lg:hidden -mx-4 overflow-x-auto px-4 sm:-mx-6 sm:px-6">
+            <div className="lg:hidden -mx-4 overflow-x-auto px-4 [scrollbar-width:none] sm:-mx-6 sm:px-6 [&::-webkit-scrollbar]:hidden">
               <div className="flex gap-2 border-b border-slate-200 pb-0">
                 {tabs.map((tab) => (
                   <button
                     key={tab.id}
                     onClick={() => selectTab(tab.id)}
-                    className={`shrink-0 border-b-2 px-3 pb-3 pt-1 text-xs font-bold transition ${
+                    className={`shrink-0 whitespace-nowrap border-b-2 px-3 pb-3 pt-1 text-xs font-bold transition ${
                       active === tab.id
                         ? "border-[#0B6232] text-[#0B6232]"
                         : "border-transparent text-slate-500 hover:text-slate-800"
@@ -637,7 +697,7 @@ export default function AboutPage() {
             </div>
 
             {/* Tab body */}
-            <div>{current.content}</div>
+            <div className="min-w-0">{current.content}</div>
           </div>
         </section>
       </main>
