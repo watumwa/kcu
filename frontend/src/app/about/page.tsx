@@ -216,12 +216,141 @@ type PersonProfile = {
   role: string;
   tier: PersonTier;
   image?: string;
-  bio?: string;
+  bio?: readonly string[];
 };
+
+const governanceBios = {
+  tayebwa: [
+    "Rt. Hon. Thomas Tayebwa is a distinguished lawyer, legislator, and public servant who serves as Chairperson of the University's Board of Trustees. He is the Deputy Speaker of the Parliament of Uganda and Member of Parliament for Ruhinda North County in Mitooma District.",
+    "He holds a Bachelor of Arts in Social Sciences and a Bachelor of Laws from Makerere University and has undertaken additional professional training in leadership, negotiation, and parliamentary affairs.",
+    "At KCU, he provides strategic leadership and oversight, supporting the University's mission of quality education, innovation, and graduate preparation for national and global development.",
+  ],
+  mfite: [
+    "Ms. Agnes Selina Mfite is an accomplished professional and dedicated leader serving as a Member of the University's Board of Trustees. She brings experience in leadership, governance, and institutional development to the University's long-term strategic direction.",
+    "Her career reflects a strong commitment to excellence, ethical leadership, and community service, and she contributes to the Board's work in safeguarding the University's mission and promoting quality higher education.",
+  ],
+  oryem: [
+    "Hon. Henry Okello Oryem is a distinguished lawyer, diplomat, and statesman serving as a Member of the University's Board of Trustees. He has made significant contributions to Uganda's governance, diplomacy, and international relations through a long public-service career.",
+    "He holds a Bachelor of Laws from the University of Buckingham, a Master of Laws from the University of Southampton, and professional legal qualifications as a Barrister-at-Law from the General Council of the Bar in the United Kingdom.",
+    "His experience in leadership, public policy, diplomacy, and international cooperation brings valuable perspective to the University's governance and strategic development.",
+  ],
+  nyakairu: [
+    "Mr. Donald Nyakairu is a distinguished corporate and commercial lawyer who serves as the Board of Trustees Representative on the University Council and Chairperson of the Audit and Risk Management Committee of Council. His expertise spans governance, risk management, telecommunications, restructuring, and regulatory compliance.",
+    "He holds a Bachelor of Laws from Makerere University, a Diploma in Legal Practice from the Law Development Centre, and a Master of Laws in Commercial and Corporate Law from University College London. He is also an Advocate of the High Court of Uganda and a registered insolvency practitioner.",
+    "As a Partner at ENSafrica Uganda and a former senior legal and executive leader in the telecommunications sector, he brings strong governance, legal, and strategic oversight to the University's accountability and risk-management work.",
+  ],
+  nabasirye: [
+    "Assoc. Prof. Margaret Nabasirye serves as Vice Chairperson of the University Council and brings valuable experience in academic leadership, institutional governance, strategic planning, and higher education development.",
+    "She supports the Council in providing strategic oversight, policy direction, and governance leadership while advancing accountability, innovation, academic excellence, and initiatives that strengthen teaching, research, and community engagement.",
+  ],
+  byamugisha: [
+    "Prof. Josephat Byamugisha is a distinguished academic, medical specialist, researcher, and higher education leader serving as Chairperson of the Quality Assurance, ICT and Gender Committee of the University Council.",
+    "He is a Professor in the Department of Obstetrics and Gynaecology at Makerere University College of Health Sciences and has also served as Director of Makerere University Hospital, contributing significantly to medical education, clinical training, research, and health-service improvement.",
+    "At KCU, his expertise supports academic quality standards, digital transformation, gender mainstreaming, accountability, inclusiveness, and continuous improvement.",
+  ],
+  tumps: [
+    "Prof. Winston Ireeta Tumps is a distinguished academic, researcher, and higher education leader serving as a Member of the University Council. He brings extensive experience in teaching, research, academic administration, curriculum development, and mentorship.",
+    "His work in scholarly research, institutional development, and academic governance supports the University's mission of delivering quality education, promoting innovation, and strengthening impactful research and community engagement.",
+  ],
+  pakoyo: [
+    "Prof. Kamba Fadhiru Pakoyo is an accomplished academic, researcher, pharmacist, and higher education administrator serving as Chairperson of the Appointments Board of the University Council.",
+    "He holds a PhD in Cell and Molecular Biology from Michigan State University and is a multidisciplinary scientist with expertise in molecular biology, pharmaceutical management, pharmaceutical regulation, and health-systems research.",
+    "Having served as Dean of the School of Health Sciences at Makerere University and as Deputy Vice Chancellor for Finance and Administration at Busitema University, he brings strong leadership in appointments, recruitment, institutional management, and governance.",
+  ],
+  kabagambe: [
+    "Mr. Cyriaco M. Kabagambe is an experienced higher education administrator and student affairs specialist serving as Chairperson of the Student Welfare and Disciplinary Committee of the University Council.",
+    "He holds a Master of Arts in Education Management, a Bachelor of Arts (Honours), and a Diploma in Education from Makerere University, and has built a distinguished career supporting student leadership, discipline, career guidance, and welfare administration.",
+    "His previous service as Dean of Students at both Kyambogo University and Makerere University informs his work in promoting student wellbeing, responsible conduct, and a safe and supportive learning environment at KCU.",
+  ],
+  joyceOkello: [
+    "Mrs. Joyce Okello is an accomplished finance, audit, and governance professional serving as a Member of the University Council. She brings extensive experience in internal auditing, financial management, risk governance, regulatory compliance, and institutional accountability.",
+    "She holds MSc degrees in Accounting and Finance and in Finance and Economic Policy, a Bachelor of Commerce in Finance, a Postgraduate Diploma in Computer Science, and professional qualifications including ACCA, ICPAU, and CISA.",
+    "Her long service at the Bank of Uganda and earlier work with Ernst & Young strengthen the Council's financial oversight, audit, and risk-governance capacity.",
+  ],
+  graceGwaku: [
+    "Mrs. Grace Nshemeire-Gwaku is an accomplished business leader, strategist, and governance professional serving as Chairperson of the Finance, Planning and Development Committee of the University Council.",
+    "She holds an MBA in International Marketing from the University of Leicester and a Bachelor of Applied Science in Food Science and Technology from Makerere University, and currently serves as Chief Operating Officer at Private Sector Foundation Uganda.",
+    "Her leadership experience across private-sector and multinational organizations supports the University's financial planning, resource mobilization, strategic growth, and long-term sustainability.",
+  ],
+  ssejjoba: [
+    "Mr. Timothy Musoke Ssejjoba is an accomplished education administrator and higher education policy specialist serving as a Member of the University Council.",
+    "He holds a Master's Degree in Higher Education Management and Administration from Uganda Management Institute, a Bachelor of Arts with Education from Makerere University, and a Graduate Diploma in Leadership in Information and Communication Technology from Dublin City University.",
+    "As Acting Commissioner for University Education and Training at the Ministry of Education and Sports, he brings deep expertise in higher-education policy, regulation, quality enhancement, and institutional governance.",
+  ],
+  sabitiMulema: [
+    "Mr. Sabiti Mulema is an accomplished business and marketing professional with extensive leadership and organizational-management experience, serving as a Member of the University Council.",
+    "He holds a PhD in Development Communication, an MBA in Management, and a Bachelor of Business Administration in Marketing from Nkumba University, and contributes strategic oversight and governance expertise to the institution.",
+  ],
+  rukundoAnita: [
+    "Mrs. Rukundo Anita is a dedicated professional and leader serving as a Member of the University Council. She brings valuable experience and insight to the governance and strategic development of the University.",
+    "Her contribution focuses on institutional excellence, accountability, sustainable development, and support for the University's vision, mission, and long-term advancement of quality higher education.",
+  ],
+  muhooziDaniel: [
+    "Mr. Muhoozi Daniel Noah is a medical student pursuing the Bachelor of Medicine and Bachelor of Surgery and serves as Guild President and Student Representative on the University Council.",
+    "As the elected leader of the student body, he provides an essential link between students and University leadership, contributing to discussions on student welfare, academic affairs, policy, and the overall university experience.",
+    "His leadership emphasizes communication, inclusiveness, student engagement, service, and advocacy for the wellbeing and success of fellow students.",
+  ],
+} as const;
+
+const managementBios = {
+  charityMulenga: [
+    "Dr. Charity Basaza Mulenga is an accomplished academic and engineering professional serving as Vice Chancellor of King Ceasor University. She provides visionary leadership and is committed to advancing academic excellence, innovation, and institutional growth.",
+    "She holds a PhD in Electrical and Electronic Engineering, an MSc in Digital Communication Systems, and a Bachelor of Science in Electrical Engineering, with advanced studies completed at Loughborough University and Makerere University.",
+    "Her leadership continues to shape KCU's academic direction, innovation agenda, and commitment to transformative higher education.",
+  ],
+  byarugabaBonaventura: [
+    "Dr. Byarugaba Bonaventura is a distinguished medical practitioner and academic administrator serving as Deputy Vice Chancellor. He supports the University's academic, research, and administrative functions.",
+    "He holds a Master of Medicine in Internal Medicine and a Bachelor of Medicine and Bachelor of Surgery from Makerere University and brings deep experience in higher education and healthcare leadership.",
+  ],
+  papeBagonza: [
+    "Mrs. Pape Matama Bagonza is a legal and administrative professional with expertise in governance, migration studies, and institutional management, serving as University Secretary.",
+    "She holds a Master of Refugee and Migration Studies from Uganda Martyrs University, a Postgraduate Diploma in Legal Practice from the Law Development Centre, and a Bachelor of Laws from Makerere University, and oversees legal affairs, governance processes, and administrative operations.",
+  ],
+  alfredNamoah: [
+    "Mr. Alfred Namoah Masikye is an experienced educationist and development practitioner with expertise in academic administration and policy implementation, serving as Academic Registrar.",
+    "He holds a Master of Development Studies from the National University of Ireland, a Postgraduate Diploma in Education from Makerere University, a Bachelor of Arts in Economics and Psychology from Makerere University, and additional training in peace and conflict transformation.",
+  ],
+  bettyUwiringiyimana: [
+    "Ms. Betty Uwiringiyimana is a communications professional specializing in strategic communication, public relations, and stakeholder engagement, serving as Public Relations Manager.",
+    "She holds a Master of Arts in Strategic Communication and Public Relations from the American College of Greece and a Bachelor of Arts in Mass Communication from Uganda Christian University, and works to strengthen the University's public image and stakeholder relationships.",
+  ],
+  rosetteGaali: [
+    "Ms. Rosette Gaali is a marketing professional with extensive experience in brand development, strategic marketing, and institutional promotion, serving as Marketing Manager.",
+    "She holds a Professional Postgraduate Diploma in Marketing from the Chartered Institute of Marketing and a Bachelor of Arts from Makerere University, and leads the University's marketing initiatives and outreach programmes.",
+  ],
+  lumalaAloysius: [
+    "Fr. Dr. Lumala Aloysius Gonzagga is an accomplished theologian, educator, and student affairs administrator serving as Dean of Students.",
+    "He holds a PhD in Sacred Theology from St. Patrick's Pontifical University, a Master of Education from Queen's University Belfast, and additional theology and philosophical studies from Rome and Makerere University, and provides leadership in student welfare, guidance, and holistic development.",
+  ],
+  annabellaEjiri: [
+    "Assoc. Prof. Annabella Habinka Ejiri is an information systems scholar and quality assurance expert serving as Director of Quality Assurance.",
+    "She holds a PhD in Information Systems from the University of Groningen, an MPhil in Science and Technology from Stellenbosch University, an MSc in Information Systems from Makerere University, and a Bachelor of Computer Science from Mbarara University of Science and Technology, and leads the University's quality assurance and continuous-improvement agenda.",
+  ],
+  johnAcire: [
+    "Mr. John Acire is a human resource management professional with expertise in organizational development and talent management, serving as Director of Human Resource.",
+    "He holds a Master in Management Studies in Human Resource Management and a Postgraduate Diploma in Human Resource Management from the Uganda Management Institute, as well as a Bachelor of Arts with Education from Makerere University.",
+  ],
+  sylviaChristine: [
+    "Mrs. Sylvia Okwi Christine is an accomplished finance and accounting professional with expertise in financial management, auditing, and strategic planning, serving as Director of Finance.",
+    "She holds an MSc in Professional Accountancy from the University of London, a Bachelor of Arts in International Business from Makerere University, ACCA graduate status, and CPA Uganda qualification, and oversees the University's financial planning, budgeting, and resource management.",
+  ],
+  mwimaAbdallah: [
+    "Mr. Mwima Abdallah is an information technology professional with expertise in ICT systems management and digital transformation, serving as Director of Information and Communication Technology.",
+    "He holds a Master of Information Technology Management and a Bachelor's Degree in Information Technology from the Islamic University in Uganda and leads the development, implementation, and management of the University's ICT infrastructure and digital services.",
+  ],
+  ericOloo: [
+    "Mr. Eric Keziron Oloo is an information science professional with extensive experience in library management, information systems, and knowledge organization, serving as University Librarian.",
+    "He is pursuing a PhD in Information Science at Makerere University and already holds an MSc in Information Science, a Bachelor of Library and Information Science, a Uganda Diploma in Business Studies, and specialized training in data and documentation management.",
+  ],
+  wilberforceMfitundinda: [
+    "Mr. Wilberforce Mfitundinda is a biomedical scientist and researcher with expertise in pharmacology and research methodology, serving as Assistant Registrar.",
+    "He is pursuing a PhD in Biomedical Sciences at Brunel University London and holds an MSc in Pharmacology, a Postgraduate Diploma in Research Methodology, and a Bachelor of Science and Technology in Biological Sciences, supporting academic administration as well as institutional research and development.",
+  ],
+} as const;
 
 function getInitials(name: string) {
   return name
-    .replace(/^(Hon\.?|Dr\.?|Prof\.?|Mr\.?|Mrs\.?|Assoc\.?|Fr\.?)\s*/gi, "")
+    .replace(/^((?:Rt\.?\s+Hon\.?|Hon\.?|Dr\.?|Prof\.?|Mr\.?|Mrs\.?|Ms\.?|Assoc\.?|Fr\.?|Rev\.?)\s*)+/gi, "")
     .trim()
     .split(" ")
     .slice(0, 2)
@@ -231,13 +360,13 @@ function getInitials(name: string) {
 }
 
 function getProfileBio(person: PersonProfile) {
-  if (person.bio) return person.bio;
+  if (person.bio?.length) return person.bio;
 
   if (/to be confirmed/i.test(person.name)) {
-    return "This office is part of King Ceasor University's leadership structure. The full profile will be updated once the appointment is confirmed.";
+    return ["This office is part of King Ceasor University's leadership structure. The full profile will be updated once the appointment is confirmed."];
   }
 
-  return `${person.name} serves as ${person.role} at King Ceasor University, contributing to institutional leadership, governance and the University's commitment to academic excellence, accountability and service.`;
+  return [`${person.name} serves as ${person.role} at King Ceasor University, contributing to institutional leadership, governance and the University's commitment to academic excellence, accountability and service.`];
 }
 
 function getValidProfileImage(image?: string) {
@@ -267,31 +396,37 @@ function BioModal({ person, onClose }: { person: PersonProfile | null; onClose: 
   return (
     <div className="fixed inset-0 z-[80] flex items-center justify-center bg-slate-950/60 px-4 py-6 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="bio-modal-title">
       <button type="button" className="absolute inset-0 cursor-default" aria-label="Close biography" onClick={onClose} />
-      <div className="relative w-full max-w-lg overflow-hidden rounded-2xl bg-white shadow-2xl shadow-slate-950/25">
-        <div className="flex items-start gap-5 border-b border-slate-100 p-5 sm:p-6">
-          <div className={`relative grid h-[168px] w-28 shrink-0 place-items-center overflow-hidden rounded-xl ${portraitBg} ${portraitText} text-3xl font-black shadow-inner`}>
-            {image ? (
-              <Image src={image} alt={person.name} fill sizes="112px" className="object-cover object-top" />
-            ) : (
-              initials || "KCU"
-            )}
+      <div className="relative max-h-[calc(100vh-3rem)] w-full max-w-2xl overflow-hidden rounded-2xl bg-white shadow-2xl shadow-slate-950/25">
+        <div className="max-h-[calc(100vh-3rem)] overflow-y-auto">
+          <div className="flex items-start gap-5 border-b border-slate-100 p-5 sm:p-6">
+            <div className={`relative grid h-[168px] w-28 shrink-0 place-items-center overflow-hidden rounded-xl ${portraitBg} ${portraitText} text-3xl font-black shadow-inner`}>
+              {image ? (
+                <Image src={image} alt={person.name} fill sizes="112px" className="object-cover object-top" />
+              ) : (
+                initials || "KCU"
+              )}
+            </div>
+            <div className="min-w-0 flex-1">
+              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Biography</p>
+              <h3 id="bio-modal-title" className="mt-2 text-xl font-black leading-tight text-slate-950">{person.name}</h3>
+              <p className="mt-1 text-sm font-semibold leading-5 text-slate-500">{person.role}</p>
+            </div>
+            <button
+              type="button"
+              onClick={onClose}
+              className="grid size-9 shrink-0 place-items-center rounded-lg border border-slate-200 text-slate-500 transition hover:border-[#0B6232]/30 hover:bg-[#0B6232]/5 hover:text-[#0B6232]"
+              aria-label="Close biography"
+            >
+              <X className="size-4" />
+            </button>
           </div>
-          <div className="min-w-0 flex-1">
-            <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Biography</p>
-            <h3 id="bio-modal-title" className="mt-2 text-xl font-black leading-tight text-slate-950">{person.name}</h3>
-            <p className="mt-1 text-sm font-semibold leading-5 text-slate-500">{person.role}</p>
+          <div className="space-y-4 p-5 sm:p-6">
+            {getProfileBio(person).map((paragraph) => (
+              <p key={paragraph} className="text-sm leading-7 text-slate-600">
+                {paragraph}
+              </p>
+            ))}
           </div>
-          <button
-            type="button"
-            onClick={onClose}
-            className="grid size-9 shrink-0 place-items-center rounded-lg border border-slate-200 text-slate-500 transition hover:border-[#0B6232]/30 hover:bg-[#0B6232]/5 hover:text-[#0B6232]"
-            aria-label="Close biography"
-          >
-            <X className="size-4" />
-          </button>
-        </div>
-        <div className="p-5 sm:p-6">
-          <p className="text-sm leading-7 text-slate-600">{getProfileBio(person)}</p>
         </div>
       </div>
     </div>
@@ -352,24 +487,84 @@ function CouncilCardMobile({ person, onSelect }: { person: PersonProfile; onSele
 
 function TabUniversityCouncil() {
   const [selectedPerson, setSelectedPerson] = useState<PersonProfile | null>(null);
-  const chair: PersonProfile = { name: "HON DR. Chris Baryomunsi", role: "Chairperson University Council", tier: "top" };
-  const viceChair: PersonProfile = { name: "Assoc. Prof. Mary Muhenda", role: "Vice Chairperson University Council", tier: "mid" };
+  const chair: PersonProfile = { name: "Hon. Dr. Chris Baryomunsi", role: "Chairperson, University Council", tier: "top" };
+  const viceChair: PersonProfile = {
+    name: "Assoc. Prof. Margaret Nabasirye",
+    role: "Vice Chairperson, University Council",
+    tier: "mid",
+    bio: governanceBios.nabasirye,
+  };
   const committeeChairs: PersonProfile[] = [
-    { name: "Ms. Grace N. Gwaku", role: "Chair: Finance, Planning & Development", tier: "mid" },
-    { name: "Prof. Josephat Byamugisha", role: "Chair: Quality Assurance, ICT & Gender", tier: "mid" },
-    { name: "Mr. Donald Nyakairu", role: "Chair: Audit & Risk Management", tier: "mid" },
-    { name: "Mr. Cyriaco Kabagambe", role: "Chair: Student Welfare & Disciplinary", tier: "mid" },
-    { name: "Dr. Kamba Fadhiru Pakoyo", role: "Chair: Appointments Board", tier: "mid" },
+    {
+      name: "Mrs. Grace Nshemeire-Gwaku",
+      role: "Chair, Finance, Planning and Development Committee",
+      tier: "mid",
+      bio: governanceBios.graceGwaku,
+    },
+    {
+      name: "Prof. Josephat Byamugisha",
+      role: "Chair, Quality Assurance, ICT and Gender Committee",
+      tier: "mid",
+      bio: governanceBios.byamugisha,
+    },
+    {
+      name: "Mr. Donald Nyakairu",
+      role: "Board of Trustees Representative / Chair, Audit and Risk Management",
+      tier: "mid",
+      bio: governanceBios.nyakairu,
+    },
+    {
+      name: "Mr. Cyriaco M. Kabagambe",
+      role: "Chair, Student Welfare and Disciplinary Committee",
+      tier: "mid",
+      bio: governanceBios.kabagambe,
+    },
+    {
+      name: "Prof. Kamba Fadhiru Pakoyo",
+      role: "Chair, Appointments Board of Council",
+      tier: "mid",
+      bio: governanceBios.pakoyo,
+    },
   ];
 
   const members: PersonProfile[] = [
-    { name: "Mr. Muhooz Daniel", role: "Guild President", tier: "base", image:"/" },
-    { name: "Dr. Sabiiti Mulema", role: "Staff Representative", tier: "base" },
-    { name: "Ms. Rukundo Anita", role: "Member", tier: "base" },
-    { name: "Assoc. Prof. Margaret Nabasirye", role: "Member", tier: "base" },
-    { name: "Ms. Joyce Okello", role: "Member", tier: "base" },
-    { name: "Prof. Winston Ireeta Tumps", role: "Member", tier: "base" },
-    { name: "Mr. Timothy Musoke Ssejjoba", role: "Member", tier: "base" },
+    {
+      name: "Mr. Muhoozi Daniel Noah",
+      role: "Guild President and Student Representative",
+      tier: "base",
+      image: "/",
+      bio: governanceBios.muhooziDaniel,
+    },
+    {
+      name: "Mr. Sabiti Mulema",
+      role: "Member, University Council",
+      tier: "base",
+      bio: governanceBios.sabitiMulema,
+    },
+    {
+      name: "Mrs. Rukundo Anita",
+      role: "Member, University Council",
+      tier: "base",
+      bio: governanceBios.rukundoAnita,
+    },
+    {
+      name: "Mrs. Joyce Okello",
+      role: "Member, University Council",
+      tier: "base",
+      bio: governanceBios.joyceOkello,
+    },
+    {
+      name: "Prof. Winston Ireeta Tumps",
+      role: "Member, University Council",
+      tier: "base",
+      bio: governanceBios.tumps,
+    },
+    {
+      name: "Mr. Timothy Musoke Ssejjoba",
+      role: "Member, University Council",
+      tier: "base",
+      bio: governanceBios.ssejjoba,
+    },
   ];
 
   return (
@@ -436,12 +631,27 @@ function TabUniversityCouncil() {
 
 function TabBoardOfTrustees() {
   const [selectedPerson, setSelectedPerson] = useState<PersonProfile | null>(null);
-  const chair: PersonProfile = { name: "Hon. Thomas Tayebwa", role: "Chairperson", tier: "top" };
+  const chair: PersonProfile = {
+    name: "Rt. Hon. Thomas Tayebwa",
+    role: "Chairperson, Board of Trustees",
+    tier: "top",
+    bio: governanceBios.tayebwa,
+  };
   const members: PersonProfile[] = [
-    { name: "Ms. Agnes Selina Mfite", role: "Member", tier: "base", image:"/" },
-    { name: "Hon. Okello Oryem", role: "Member", tier: "base" },
-    { name: "Mr. Donald Nyakairu", role: "Member", tier: "base" },
-    { name: "King Ceasor Mulenga", role: "Member", tier: "base",},
+    {
+      name: "Ms. Agnes Selina Mfite",
+      role: "Member, Board of Trustees",
+      tier: "base",
+      image: "/",
+      bio: governanceBios.mfite,
+    },
+    {
+      name: "Hon. Henry Okello Oryem",
+      role: "Member, Board of Trustees",
+      tier: "base",
+      bio: governanceBios.oryem,
+    },
+    { name: "King Ceasor Mulenga", role: "Member, Board of Trustees", tier: "base" },
   ];
 
   return (
@@ -466,7 +676,7 @@ function TabBoardOfTrustees() {
           </div>
           <div className="flex w-full flex-wrap justify-center gap-6">
             {members.map((p) => (
-              <CouncilCard key={p.role} person={p} onSelect={setSelectedPerson} />
+              <CouncilCard key={p.name} person={p} onSelect={setSelectedPerson} />
             ))}
           </div>
         </div>
@@ -480,7 +690,7 @@ function TabBoardOfTrustees() {
         <div className="space-y-3">
           <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">Trustee Members</p>
           {members.map((p) => (
-            <CouncilCardMobile key={p.role} person={p} onSelect={setSelectedPerson} />
+            <CouncilCardMobile key={p.name} person={p} onSelect={setSelectedPerson} />
           ))}
         </div>
       </div>
@@ -493,19 +703,97 @@ function TabBoardOfTrustees() {
 function TabAdministration() {
   const [selectedPerson, setSelectedPerson] = useState<PersonProfile | null>(null);
   const officers: PersonProfile[] = [
-    { name: "Dr. Charity Basaza Mulenga", role: "Vice Chancellor", tier: "top", image: "/University Management/Dr. Charity Basaza Mulenga.jpg" },
-    { name: "Dr. Byarugaba Bonaventura", role: "Deputy Vice Chancellor", tier: "mid", image: "/University Management/Dr. Byarugaba Bonaventura.jpeg" },
-    { name: "Mrs. Pape Matama Bagonza", role: "University Secretary", tier: "mid", image: "/University Management/Mrs. Pape Matama Bagonza.jpeg" },
-    { name: "Mr. Alfred Namoah Masikye", role: "Academic Registrar", tier: "mid", image: "/University Management/Alfred Namoah Masikye.jpeg" },
-    { name: "Assoc. Prof. Annabella Habinka Ejiri", role: "Director Quality Assurance", tier: "mid", image:"/qa.jpeg"},
-    { name: "Mrs. Sylivia Okwi Christine", role: "Director Finance", tier: "mid", image: "/University Management/Mrs. Sylivia Okwi Christine.jpeg" },
-    { name: "Fr. Dr. Lumala Aloysius Gonzagga", role: "Dean of Students", tier: "mid", image: "/University Management/Fr. Dr. Lumala Aloysius Gonzagga.jpeg" },
-    { name: "Mr. Mwima Abdallah", role: "Manager ICT", tier: "base", image: "/University Management/Mr. Mwima Abdallah.jpeg" },
-    { name: "Mr. Eric Keziron Oloo", role: "University Librarian", tier: "base", image: "/University Management/Mr. Eric Keziron Oloo.jpeg" },
-    { name: "Mr. Wilberforce Mfitundinda", role: "Registrar Academics", tier: "base", image: "/University Management/Mr. Wilberforce Mfitundinda.jpeg" },
-    { name: "Mr. John Acire", role: "Manager Human Resource", tier: "base", image: "/University Management/Mr. John Acire.jpeg" },
-    { name: "Ms. Betty Uwiringiyimana", role: "PRO", tier: "base", image: "/University Management/Betty Uwiringiyimana - PRO.jpeg" },
-    { name: "Ms. Rosset Gaali", role: "Marketing Manager", tier: "base", image: "/University Management/Ms. Rosset Gaali - Marketing Manager.jpeg" },
+    {
+      name: "Dr. Charity Basaza Mulenga",
+      role: "Vice Chancellor",
+      tier: "top",
+      image: "/University Management/Dr. Charity Basaza Mulenga.jpg",
+      bio: managementBios.charityMulenga,
+    },
+    {
+      name: "Dr. Byarugaba Bonaventura",
+      role: "Deputy Vice Chancellor",
+      tier: "mid",
+      image: "/University Management/Dr. Byarugaba Bonaventura.jpeg",
+      bio: managementBios.byarugabaBonaventura,
+    },
+    {
+      name: "Mrs. Pape Matama Bagonza",
+      role: "University Secretary",
+      tier: "mid",
+      image: "/University Management/Mrs. Pape Matama Bagonza.jpeg",
+      bio: managementBios.papeBagonza,
+    },
+    {
+      name: "Mr. Alfred Namoah Masikye",
+      role: "Academic Registrar",
+      tier: "mid",
+      image: "/University Management/Alfred Namoah Masikye.jpeg",
+      bio: managementBios.alfredNamoah,
+    },
+    {
+      name: "Assoc. Prof. Annabella Habinka Ejiri",
+      role: "Director, Quality Assurance",
+      tier: "mid",
+      image: "/qa.jpeg",
+      bio: managementBios.annabellaEjiri,
+    },
+    {
+      name: "Mrs. Sylvia Okwi Christine",
+      role: "Director of Finance",
+      tier: "mid",
+      image: "/University Management/Mrs. Sylivia Okwi Christine.jpeg",
+      bio: managementBios.sylviaChristine,
+    },
+    {
+      name: "Fr. Dr. Lumala Aloysius Gonzagga",
+      role: "Dean of Students",
+      tier: "mid",
+      image: "/University Management/Fr. Dr. Lumala Aloysius Gonzagga.jpeg",
+      bio: managementBios.lumalaAloysius,
+    },
+    {
+      name: "Mr. Mwima Abdallah",
+      role: "Director, Information and Communication Technology",
+      tier: "base",
+      image: "/University Management/Mr. Mwima Abdallah.jpeg",
+      bio: managementBios.mwimaAbdallah,
+    },
+    {
+      name: "Mr. Eric Keziron Oloo",
+      role: "University Librarian",
+      tier: "base",
+      image: "/University Management/Mr. Eric Keziron Oloo.jpeg",
+      bio: managementBios.ericOloo,
+    },
+    {
+      name: "Mr. Wilberforce Mfitundinda",
+      role: "Assistant Registrar",
+      tier: "base",
+      image: "/University Management/Mr. Wilberforce Mfitundinda.jpeg",
+      bio: managementBios.wilberforceMfitundinda,
+    },
+    {
+      name: "Mr. John Acire",
+      role: "Director, Human Resource",
+      tier: "base",
+      image: "/University Management/Mr. John Acire.jpeg",
+      bio: managementBios.johnAcire,
+    },
+    {
+      name: "Ms. Betty Uwiringiyimana",
+      role: "Public Relations Manager",
+      tier: "base",
+      image: "/University Management/Betty Uwiringiyimana - PRO.jpeg",
+      bio: managementBios.bettyUwiringiyimana,
+    },
+    {
+      name: "Ms. Rosette Gaali",
+      role: "Marketing Manager",
+      tier: "base",
+      image: "/University Management/Ms. Rosset Gaali - Marketing Manager.jpeg",
+      bio: managementBios.rosetteGaali,
+    },
   ];
   const [vc, dvc, ...rest] = officers;
   const seniorOfficers = rest.filter((officer) => officer.tier === "mid");
