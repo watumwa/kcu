@@ -18,7 +18,6 @@ declare global {
 
 export default function SocialFeed() {
   const embedRef = useRef<HTMLDivElement>(null);
-  const [showFallback, setShowFallback] = useState(false);
   const [timelineReady, setTimelineReady] = useState(false);
 
   const loadTimeline = useCallback(() => {
@@ -27,10 +26,6 @@ export default function SocialFeed() {
 
   useEffect(() => {
     loadTimeline();
-
-    const fallbackTimer = window.setTimeout(() => {
-      setShowFallback(true);
-    }, 8000);
 
     const checkTimer = window.setInterval(() => {
       const iframe = embedRef.current?.querySelector<HTMLIFrameElement>('iframe[id^="twitter-widget-"]');
@@ -44,14 +39,11 @@ export default function SocialFeed() {
 
       if (isVisible) {
         setTimelineReady(true);
-        setShowFallback(false);
-        window.clearTimeout(fallbackTimer);
         window.clearInterval(checkTimer);
       }
     }, 500);
 
     return () => {
-      window.clearTimeout(fallbackTimer);
       window.clearInterval(checkTimer);
     };
   }, [loadTimeline]);
@@ -88,7 +80,7 @@ export default function SocialFeed() {
             <div
               ref={embedRef}
               className={`mx-auto max-w-[780px] ${timelineReady ? "" : "min-h-[360px]"} ${
-                showFallback && !timelineReady ? "opacity-0" : ""
+                !timelineReady ? "opacity-0" : ""
               }`}
             >
               <a
@@ -101,7 +93,7 @@ export default function SocialFeed() {
                 Posts by @KingCeasorUni
               </a>
             </div>
-            {showFallback && !timelineReady && (
+            {!timelineReady && (
               <div className="absolute inset-0 z-10 flex items-center justify-center rounded-xl border border-slate-100 bg-[#F7F9FC] px-6 py-10 text-center">
                 <div className="mx-auto max-w-md">
                   <div className="mx-auto grid size-12 place-items-center rounded-full bg-slate-950 text-white">
