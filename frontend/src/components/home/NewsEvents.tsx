@@ -1,9 +1,6 @@
-"use client";
-
-import { useState } from "react";
 import Link from "next/link";
-import { ArrowRight, CalendarDays, MapPin, Search } from "lucide-react";
-import { newsItems, upcomingEvents } from "@/data/site";
+import { ArrowRight, CalendarDays, Search } from "lucide-react";
+import { newsItems } from "@/data/site";
 
 const CATEGORY_COLORS: Record<string, string> = {
   Admissions: "bg-blue-50 text-blue-700",
@@ -20,15 +17,7 @@ function badge(cat: string) {
 }
 
 export default function NewsEvents() {
-  const [search, setSearch] = useState("");
-
   const featured = newsItems.find((n) => n.featured)!;
-  const rest = newsItems.filter((n) => !n.featured);
-
-  const filtered = rest.filter((n) => {
-    const matchSearch = n.title.toLowerCase().includes(search.toLowerCase());
-    return matchSearch;
-  });
 
   return (
     <section className="bg-[#F7F9FC] py-20 px-4 sm:px-6 lg:px-12">
@@ -43,15 +32,14 @@ export default function NewsEvents() {
             </p>
           </div>
           {/* Search */}
-          <div className="relative w-full max-w-xs shrink-0">
+          <form action="/search" className="relative w-full max-w-xs shrink-0">
             <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 size-4 text-slate-400" />
             <input
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
+              name="q"
               placeholder="Search news and events…"
               className="h-10 w-full rounded-full border border-slate-200 bg-white pl-10 pr-4 text-sm outline-none focus:border-[#0B6232] transition-colors"
             />
-          </div>
+          </form>
         </div>
 
         {/* ── Featured Hero Card ── */}
@@ -83,90 +71,6 @@ export default function NewsEvents() {
             </div>
           </div>
         </Link>
-
-        {/* ── News Grid + Events Timeline ── */}
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-3">
-
-          {/* News Grid — 2/3 */}
-          <div className="lg:col-span-2">
-            <div className="grid gap-5 sm:grid-cols-2">
-              {filtered.map((item) => (
-                <Link
-                  key={item.title}
-                  href={item.href ?? "/news"}
-                  target={item.href?.startsWith("http") ? "_blank" : undefined}
-                  rel="noopener noreferrer"
-                  className="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm border border-slate-100 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
-                >
-                  <div className="relative h-44 overflow-hidden">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      loading="lazy"
-                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
-                  </div>
-                  <div className="flex flex-1 flex-col p-4">
-                    <span className={`${badge(item.category)} self-start mb-2`}>{item.category}</span>
-                    <h3 className="font-black text-slate-900 leading-snug group-hover:text-[#0B6232] transition-colors line-clamp-2">
-                      {item.title}
-                    </h3>
-                    <p className="mt-2 text-xs text-slate-500 leading-relaxed line-clamp-2 flex-1">{item.text}</p>
-                    <div className="mt-4 flex items-center justify-between">
-                      <span className="inline-flex items-center gap-1 text-[11px] text-slate-400">
-                        <CalendarDays className="size-3" /> {item.date}
-                      </span>
-                      <span className="inline-flex items-center gap-1 text-xs font-black text-[#0B6232] group-hover:gap-2 transition-all">
-                        Read More <ArrowRight className="size-3.5" />
-                      </span>
-                    </div>
-                  </div>
-                </Link>
-              ))}
-              {filtered.length === 0 && (
-                <p className="col-span-2 py-10 text-center text-slate-400">No results for &quot;{search}&quot;</p>
-              )}
-            </div>
-          </div>
-
-          {/* Events Timeline — 1/3 */}
-          <div className="rounded-2xl bg-white border border-slate-100 shadow-sm p-6 h-fit">
-            <p className="text-xs font-black uppercase tracking-[0.2em] text-[#0B6232] mb-1">Calendar</p>
-            <h3 className="text-xl font-black text-slate-900 mb-6">Upcoming Events</h3>
-            <div className="relative space-y-0">
-              {/* Timeline line */}
-              <div className="absolute left-6 top-2 bottom-2 w-px bg-slate-100" />
-              {upcomingEvents.map((ev, i) => (
-                <div key={i} className="group relative flex gap-4 pb-7 last:pb-0">
-                  {/* Date block */}
-                  <div className="relative z-10 flex h-12 w-12 shrink-0 flex-col items-center justify-center rounded-xl bg-[#0B6232] text-white shadow-md shadow-[#0B6232]/20">
-                    <span className="text-[9px] font-black uppercase tracking-wider text-[#FFC66B]">{ev.month}</span>
-                    <span className="text-lg font-black leading-none">{ev.day}</span>
-                  </div>
-                  <div className="flex-1 pt-1">
-                    <span className="inline-block rounded-full bg-[#FFC66B]/20 px-2 py-0.5 text-[9px] font-black uppercase tracking-widest text-[#0B6232] mb-1">
-                      {ev.status}
-                    </span>
-                    <p className="font-bold text-sm text-slate-900 leading-snug group-hover:text-[#0B6232] transition-colors">
-                      {ev.title}
-                    </p>
-                    <span className="inline-flex items-center gap-1 text-[11px] text-slate-400 mt-0.5">
-                      <MapPin className="size-3" /> {ev.location}
-                    </span>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <Link
-              href="/news"
-              className="mt-4 inline-flex items-center gap-1.5 text-xs font-black text-[#0B6232] hover:gap-2.5 transition-all"
-            >
-              View Full Calendar <ArrowRight className="size-3.5" />
-            </Link>
-          </div>
-
-        </div>
       </div>
     </section>
   );
