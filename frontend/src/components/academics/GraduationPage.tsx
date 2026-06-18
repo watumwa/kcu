@@ -73,6 +73,13 @@ const gallery = [
   },
 ];
 
+const initialCountdown = [
+  { label: "Days", value: 0 },
+  { label: "Hours", value: 0 },
+  { label: "Minutes", value: 0 },
+  { label: "Seconds", value: 0 },
+];
+
 function getCountdownParts() {
   const difference = Math.max(countdownTarget.getTime() - Date.now(), 0);
   const day = 1000 * 60 * 60 * 24;
@@ -88,12 +95,17 @@ function getCountdownParts() {
 }
 
 export default function GraduationPage() {
-  const [countdown, setCountdown] = useState(getCountdownParts);
+  const [countdown, setCountdown] = useState(initialCountdown);
   const [activeSlide, setActiveSlide] = useState(0);
 
   useEffect(() => {
-    const timer = window.setInterval(() => setCountdown(getCountdownParts()), 1000);
-    return () => window.clearInterval(timer);
+    const updateCountdown = () => setCountdown(getCountdownParts());
+    const initialTimer = window.setTimeout(updateCountdown, 0);
+    const timer = window.setInterval(updateCountdown, 1000);
+    return () => {
+      window.clearTimeout(initialTimer);
+      window.clearInterval(timer);
+    };
   }, []);
 
   const activeGalleryItem = useMemo(() => gallery[activeSlide], [activeSlide]);

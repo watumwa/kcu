@@ -25,6 +25,20 @@ const galleryItems = [
     imageClassName: "object-cover object-center",
   },
   {
+    title: "Library Graduation Moment",
+    description: "Graduates celebrate together outside the KCU library after a major academic milestone.",
+    image: "/images/kcu-2026/graduates-library-awards.webp",
+    frameClassName: "aspect-[4/3]",
+    imageClassName: "object-cover object-center",
+  },
+  {
+    title: "Graduation Portrait Group",
+    description: "KCU graduands captured in a polished campus portrait with university signage.",
+    image: "/images/kcu-2026/graduates-library-portrait.webp",
+    frameClassName: "aspect-[4/3]",
+    imageClassName: "object-cover object-center",
+  },
+  {
     title: "Graduate Portrait",
     description: "A confident KCU graduate captured in ceremonial regalia on campus.",
     image: "/images/kcu-2026/graduate-diploma-portrait.webp",
@@ -93,6 +107,13 @@ const galleryItems = [
     image: "/images/kcu-2026/library-collaboration.webp",
     frameClassName: "aspect-[4/3]",
     imageClassName: "object-cover object-center",
+  },
+  {
+    title: "Library Learning Circle",
+    description: "Students collaborate on academic work in a focused library learning session.",
+    image: "/images/kcu-2026/library-collaboration-portrait.webp",
+    frameClassName: "aspect-[4/3]",
+    imageClassName: "object-cover object-top",
   },
   {
     title: "Library Resources",
