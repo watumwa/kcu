@@ -4,6 +4,20 @@ import Navbar from "@/components/layout/Navbar";
 
 const galleryItems = [
   {
+    title: "AUUS Sports Leadership Forum",
+    description: "University sports leaders gather at MUST for the AUUS engagement on sports leadership and excellence.",
+    image: "/images/student-activity/auus-sports-leadership-2026/auus-sports-leadership-forum-group.jpeg",
+    frameClassName: "aspect-[4/3]",
+    imageClassName: "object-cover object-center",
+  },
+  {
+    title: "KCU Representatives at MUST",
+    description: "KCU was represented by Sports Tutor Mr. Katabazi Aziz and Guild Minister of Sports Muhoozi Nasseem.",
+    image: "/images/student-activity/auus-sports-leadership-2026/kcu-representatives-auus-forum.jpeg",
+    frameClassName: "aspect-[4/3]",
+    imageClassName: "object-cover object-center",
+  },
+  {
     title: "Career Guidance at St. Dennis",
     description: "KCU representatives guide Advanced Level students during the Day of the African Child outreach in Ggaba.",
     image: "/images/outreach/st-denis-2026/career-guidance-speaker.webp",

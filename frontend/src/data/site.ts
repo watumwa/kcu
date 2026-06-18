@@ -243,6 +243,15 @@ export const newsItems = [
     featured: true,
   },
   {
+    category: "Student Life",
+    title: "King Ceasor University Represented at AUUS Sports Leadership Engagement at MUST",
+    date: "12 June 2026",
+    href: "/about/newsletter",
+    text: "KCU Sports Tutor Mr. Katabazi Aziz and Guild Minister of Sports Muhoozi Nasseem joined university sports leaders at MUST for an AUUS engagement on sports leadership and excellence.",
+    image: "/images/student-activity/auus-sports-leadership-2026/auus-sports-leadership-forum-group.jpeg",
+    featured: false,
+  },
+  {
     category: "Partnerships",
     title: "KCU Signs Strategic Partnership with Tecnovia to Enhance Student Skills and Employment Opportunities",
     date: "10 June 2026",

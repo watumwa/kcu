@@ -59,6 +59,34 @@ const newsletterArticles: NewsletterArticle[] = [
     ],
   },
   {
+    date: "12 June 2026",
+    category: "Student Life",
+    title: "King Ceasor University Represented at AUUS Sports Leadership Engagement at MUST",
+    excerpt:
+      "KCU joined university sports leaders, Deans of Students, Sports Tutors and student sports leaders at MUST for a strategic AUUS engagement on advancing university sports.",
+    image: "/images/student-activity/auus-sports-leadership-2026/auus-sports-leadership-forum-group.jpeg",
+    imageAlt: "University sports leaders gathered at MUST during the AUUS Sports Leadership Engagement",
+    highlights: [
+      { label: "Dates", value: "11-12 June 2026" },
+      { label: "Venue", value: "MUST Kihumuro Campus, Mbarara" },
+      { label: "Theme", value: "Reimagining Sports: From Participation to Excellence" },
+    ],
+    gallery: [
+      {
+        src: "/images/student-activity/auus-sports-leadership-2026/kcu-representatives-auus-forum.jpeg",
+        alt: "KCU representatives and university sports leaders at the AUUS engagement at MUST",
+      },
+    ],
+    story: [
+      "Mbarara, Uganda - 12 June 2026",
+      "On 11th and 12th June, sports leaders from universities across Uganda, alongside Deans of Students, Sports Tutors and student sports leaders, gathered at Mbarara University of Science and Technology (MUST), Kihumuro Campus in Mbarara District for a strategic engagement focused on the advancement of university sports.",
+      "King Ceasor University was represented by the University Sports Tutor, Mr. Katabazi Aziz, and the Guild Minister of Sports, Muhoozi Nasseem, who participated in discussions aimed at strengthening sports leadership and promoting excellence in university sports.",
+      "Held under the theme \"Reimagining Sports: From Participation to Excellence,\" the engagement provided an opportunity for participants to share experiences, explore innovative approaches to sports development and discuss strategies for enhancing student-athlete performance and institutional sports programs.",
+      "The discussions emphasized the importance of effective leadership, collaboration, talent development and institutional support in building a strong and sustainable sports culture within universities. Participants reaffirmed their commitment to creating pathways that enable student-athletes to excel both on and off the field.",
+      "King Ceasor University extends its appreciation to the organizers and all stakeholders who made the engagement successful. The University remains committed to supporting sports development and empowering student leaders to contribute positively to the growth of university sports in Uganda.",
+    ],
+  },
+  {
     date: "10 June 2026",
     category: "Partnerships",
     title: "KCU Signs Strategic Partnership with Tecnovia to Enhance Student Skills and Employment Opportunities",
