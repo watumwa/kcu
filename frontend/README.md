@@ -30,6 +30,18 @@ NEXT_PUBLIC_NEEXA_WIDGET_SRC="https://chat-widget.neexa.ai/main.js"
 
 If Neexa provides a new full script tag with different variable names or `data-*` attributes, copy those values into `NeexaWidget.tsx`.
 
+## X feed
+
+The home page social feed displays latest posts from `@KingCeasorUni` through the X API. Add one of these server-side environment variables in local and deployment environments:
+
+```bash
+X_BEARER_TOKEN="your-x-api-bearer-token"
+# or
+TWITTER_BEARER_TOKEN="your-x-api-bearer-token"
+```
+
+Without a bearer token, the section renders a connection message instead of live posts.
+
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ## Learn More
