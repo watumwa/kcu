@@ -5,14 +5,14 @@ import { useEffect, useState } from "react";
 
 const academicHeroImages = [
   {
-    src: "/images/home/whatsapp-campus-group-hero.jpeg",
-    alt: "King Ceasor University students standing together on campus",
-    className: "object-cover object-[center_34%] scale-[1.02] brightness-[0.96] contrast-110 saturate-110",
+    src: "/images/kcu-2026/graduates-welcome-group.webp",
+    alt: "King Ceasor University graduates standing together outside a campus building",
+    className: "object-cover object-[center_42%] scale-[1.02] brightness-[0.96] contrast-110 saturate-110",
   },
   {
-    src: "/images/home/whatsapp-campus-welcome-hero.jpeg",
-    alt: "King Ceasor University students in front of the campus welcome building",
-    className: "object-cover object-[center_30%] scale-[1.02] brightness-[0.98] contrast-105 saturate-110",
+    src: "/images/kcu-2026/lab-chemistry-students.webp",
+    alt: "King Ceasor University students learning in a science laboratory",
+    className: "object-cover object-[center_45%] scale-[1.02] brightness-[0.98] contrast-105 saturate-110",
   },
 ];
 

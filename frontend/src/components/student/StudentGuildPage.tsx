@@ -50,7 +50,7 @@ export default function StudentGuildPage() {
       <Navbar />
       <main className="min-h-screen bg-white pt-16 sm:pt-20 lg:pt-[8.5rem]">
         <section className="relative overflow-hidden px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-          <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1800&q=85')" }} />
+          <div className="absolute inset-0 bg-cover bg-[center_45%] bg-no-repeat" style={{ backgroundImage: "url('/images/kcu-2026/student-laptop-collaboration.webp')" }} />
           <div className="absolute inset-0 bg-black/50" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/50 to-transparent" />
           <div className="relative z-10 mx-auto flex max-w-[1440px] flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">

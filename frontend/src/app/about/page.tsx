@@ -929,7 +929,7 @@ export default function AboutPage() {
 
         {/* Hero */}
         <section className="relative overflow-hidden px-4 py-14 sm:px-6 sm:py-24 lg:px-8 lg:py-28">
-          <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1800&q=80')" }} />
+          <div className="absolute inset-0 bg-cover bg-[center_42%] bg-no-repeat" style={{ backgroundImage: "url('/images/kcu-2026/graduates-welcome-group.webp')" }} />
           <div className="absolute inset-0 bg-black/45" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/48 to-black/18 sm:bg-gradient-to-r sm:from-black/80 sm:via-black/45 sm:to-transparent" />
           <div className="relative z-10 mx-auto max-w-[1440px]">

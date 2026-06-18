@@ -109,7 +109,8 @@ export const heroSlides: HeroSlide[] = [
     title: "Undergraduate | Diploma | Certificates",
     subtitle: "",
     cta: "Apply Here",
-    image: "/images/hero/1000766232.jpg",
+    image: "/images/kcu-2026/graduates-welcome-group.webp",
+    imagePosition: "center 42%",
     
       programmes: [
       "Master in Hospitality Business Management",
@@ -124,8 +125,8 @@ export const heroSlides: HeroSlide[] = [
     title: "Bachelor of Laws | Bachelor of Business Administration & More",
     subtitle: "",
     cta: "Explore Courses",
-    image:
-      "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1800&q=85",
+    image: "/images/kcu-2026/library-collaboration.webp",
+    imagePosition: "center 45%",
     programmes: [
       "",
       "",
@@ -139,8 +140,8 @@ export const heroSlides: HeroSlide[] = [
     title: "King Ceasor University",
     subtitle: "",
     cta: "Apply Online",
-    image:
-      "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&w=1800&q=85",
+    image: "/images/kcu-2026/graduates-best-of-best.webp",
+    imagePosition: "center 38%",
     programmes: [
       "Undergraduate programmes across schools and faculties",
       "Postgraduate studies for professionals and researchers",
@@ -154,8 +155,8 @@ export const heroSlides: HeroSlide[] = [
     title: "Bachelor of Computer Forensics | Bachelor of Petroleum Geoscience",
     subtitle: "",
     cta: "Explore Courses",
-    image:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1800&q=85",
+    image: "/images/kcu-2026/lab-chemistry-students.webp",
+    imagePosition: "center 45%",
     programmes: [
       "Business and management studies",
       "Leadership development",
@@ -169,8 +170,8 @@ export const heroSlides: HeroSlide[] = [
     title: "Language Proficiency | Digital Marketing | Computer Applications",
     subtitle: "",
     cta: "Explore Courses",
-    image:
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1800&q=85",
+    image: "/images/kcu-2026/library-shelves-student.webp",
+    imagePosition: "center 42%",
     programmes: [
       "",
       "",
@@ -184,8 +185,8 @@ export const heroSlides: HeroSlide[] = [
     title: "A Supportive University Community",
     subtitle: "",
     cta: "Explore Student Life",
-    image: "/images/home/whatsapp-campus-welcome.jpeg",
-    imagePosition: "center 38%",
+    image: "/images/kcu-2026/student-laptop-collaboration.webp",
+    imagePosition: "center 45%",
     programmes: [
       "Student leadership",
       "Clubs and campus activities",

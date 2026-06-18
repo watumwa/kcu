@@ -52,16 +52,24 @@ const guidelines = [
 
 const gallery = [
   {
-    image: "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1200&q=85",
-    title: "Academic procession",
+    image: "/images/kcu-2026/graduates-welcome-group.webp",
+    title: "KCU graduands on campus",
   },
   {
-    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=85",
-    title: "Graduands and families",
+    image: "/images/kcu-2026/graduates-best-of-best.webp",
+    title: "Best of the Best graduates",
   },
   {
-    image: "https://images.unsplash.com/photo-1567168544646-208fa5d408fb?auto=format&fit=crop&w=1200&q=85",
-    title: "Ceremony moments",
+    image: "/images/kcu-2026/graduates-library-celebration.webp",
+    title: "Graduation celebration",
+  },
+  {
+    image: "/images/kcu-2026/graduates-campus-trio.webp",
+    title: "Graduates in regalia",
+  },
+  {
+    image: "/images/kcu-2026/graduates-celebrating.webp",
+    title: "Campus graduation joy",
   },
 ];
 
@@ -99,7 +107,7 @@ export default function GraduationPage() {
       <Navbar />
       <main className="min-h-screen bg-white pt-16 sm:pt-20 lg:pt-[8.5rem]">
         <section className="relative overflow-hidden px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-          <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1800&q=85')" }} />
+          <div className="absolute inset-0 bg-cover bg-[center_42%] bg-no-repeat" style={{ backgroundImage: "url('/images/kcu-2026/graduates-welcome-group.webp')" }} />
           <div className="absolute inset-0 bg-black/50" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/55 to-transparent" />
           <div className="relative z-10 mx-auto max-w-[1440px]">

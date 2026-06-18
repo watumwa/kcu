@@ -811,7 +811,7 @@ const contentPages: Record<string, AboutPageContent> = {
   library: {
     eyebrow: "Library",
     title: "KCU Library",
-    heroImage: "/library/WhatsApp Image 2026-06-11 at 13.55.23.jpeg",
+    heroImage: "/images/kcu-2026/library-shelves-student.webp",
     intro:
       "King Ceasor University Library is a knowledge hub, a home to excellent study spaces, and a catalyst for academic excellence, research, and innovation.",
     sections: [],
@@ -835,16 +835,16 @@ const contentPages: Record<string, AboutPageContent> = {
         "An indispensable research, innovation, and knowledge hub.",
       gallery: [
         {
-          title: "Library study spaces",
-          image: "/library/WhatsApp Image 2026-06-11 at 13.55.22.jpeg",
+          title: "Library collaboration",
+          image: "/images/kcu-2026/library-collaboration.webp",
         },
         {
-          title: "Library reading area",
-          image: "/library/WhatsApp Image 2026-06-11 at 13.55.22 (1).jpeg",
+          title: "Group study",
+          image: "/images/kcu-2026/library-group-study.webp",
         },
         {
           title: "Library resources and support",
-          image: "/library/WhatsApp Image 2026-06-11 at 13.55.23.jpeg",
+          image: "/images/kcu-2026/library-books-consultation.webp",
         },
       ],
       values: [
@@ -1841,7 +1841,7 @@ function FeesStructurePage() {
         </div>
 
         <section className="relative overflow-hidden px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-          <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1800&q=80')" }} />
+          <div className="absolute inset-0 bg-cover bg-[center_42%] bg-no-repeat" style={{ backgroundImage: "url('/images/kcu-2026/graduates-best-of-best.webp')" }} />
           <div className="absolute inset-0 bg-black/55" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent" />
           <div className="absolute -bottom-20 right-12 hidden size-72 rounded-full border border-white/10 lg:block" />
@@ -2220,26 +2220,26 @@ const studentLinks = [
 function CampusLifePage() {
   const gallery = [
     {
-      src: "/images/campus-life/gallery-win.jpeg",
-      alt: "King Ceasor University students celebrating a campus achievement",
+      src: "/images/kcu-2026/student-laptop-collaboration.webp",
+      alt: "King Ceasor University students collaborating around a laptop",
       className: "sm:col-span-2",
       imageClassName: "object-cover object-center",
     },
     {
-      src: "/images/campus-life/gallery-students.jpg",
-      alt: "King Ceasor University students during a campus activity",
-      className: "",
-      imageClassName: "object-cover object-[center_38%]",
-    },
-    {
-      src: "/images/student-activity/conservation-group-1.jpeg",
-      alt: "King Ceasor University students participating in environmental conservation outreach",
+      src: "/images/kcu-2026/library-group-study.webp",
+      alt: "King Ceasor University students studying together",
       className: "",
       imageClassName: "object-cover object-center",
     },
     {
-      src: "/images/student-activity/conservation-group-2.jpeg",
-      alt: "King Ceasor University students gathered for a tree-planting and conservation activity",
+      src: "/images/kcu-2026/lab-chemistry-students.webp",
+      alt: "King Ceasor University students in a science laboratory",
+      className: "",
+      imageClassName: "object-cover object-center",
+    },
+    {
+      src: "/images/kcu-2026/graduates-celebrating.webp",
+      alt: "King Ceasor University graduands celebrating on campus",
       className: "sm:col-span-2",
       imageClassName: "object-cover object-center",
     },
@@ -2249,9 +2249,9 @@ function CampusLifePage() {
     {
       eyebrow: "Student Success",
       title: "Student Affairs",
-      image: "/images/campus-life/student-affairs.jpg",
-      alt: "King Ceasor University students and staff during a student affairs activity",
-      imageClassName: "object-cover object-[center_38%]",
+      image: "/images/kcu-2026/student-laptop-collaboration.webp",
+      alt: "King Ceasor University students collaborating on campus",
+      imageClassName: "object-cover object-center",
       text:
         "King Ceasor University is committed to student success. The Division of Student Affairs offers a variety of services including orientation programs and career services to help students achieve their goals. There are academic and cultural clubs, comprehensive wellness services, and the Office of Student Life hosts events and activities to build leadership and community.",
       points: ["Orientation programs", "Career services", "Academic and cultural clubs", "Wellness support"],
@@ -2269,8 +2269,8 @@ function CampusLifePage() {
     {
       eyebrow: "Discovery",
       title: "Research",
-      image: "/images/campus-life/research.jpg",
-      alt: "King Ceasor University medical and research learning environment",
+      image: "/images/kcu-2026/lab-chemistry-students.webp",
+      alt: "King Ceasor University students learning in a science laboratory",
       imageClassName: "object-cover object-center",
       text:
         "KCU offers excellent academics, research, and facilities that prepare students to tackle societal problems. KCU's dynamic scholarly community supports students as they explore new frontiers of knowledge and innovation while achieving their academic and personal goals.",
@@ -2279,8 +2279,8 @@ function CampusLifePage() {
     {
       eyebrow: "Beyond Coursework",
       title: "Student Activities",
-      image: "/images/campus-life/student-activities.jpg",
-      alt: "King Ceasor University students in a lecture and activity setting",
+      image: "/images/kcu-2026/library-collaboration.webp",
+      alt: "King Ceasor University students working together in a library setting",
       imageClassName: "object-cover object-center",
       text:
         "KCU education is more than coursework. It is late-night discussions with friends, drama productions, fierce or friendly athletic competitions, outings in Kampala, and much more. Through extracurricular activities, students meet new people, pursue their interests, discover new ones, and enrich their understanding of the world and the people in it.",
@@ -2333,7 +2333,7 @@ function CampusLifePage() {
 
         <section className="relative overflow-hidden bg-slate-950 px-4 py-12 text-white sm:px-6 sm:py-16 lg:px-8 lg:py-20">
           <Image
-            src="/images/campus-life/student-affairs.jpg"
+            src="/images/kcu-2026/student-laptop-collaboration.webp"
             alt=""
             fill
             priority
@@ -2533,8 +2533,8 @@ function CampusLifePage() {
                 </div>
                 <div className="relative min-h-[260px] bg-[#082b18]">
                   <Image
-                    src="/images/campus-life/student-activities.jpg"
-                    alt="King Ceasor University students in class"
+                    src="/images/kcu-2026/library-group-study.webp"
+                    alt="King Ceasor University students studying together"
                     fill
                     sizes="(min-width: 1024px) 360px, 100vw"
                     className="object-cover"
@@ -2556,7 +2556,7 @@ function AboutContentPage({ page }: { page: AboutPageContent }) {
   const hasPageSections = page.sections.length > 0;
   const parentLabel = page.eyebrow === "Admissions" ? "Admissions" : page.eyebrow === "Academics" || page.eyebrow === "Courses" ? "Academics" : isServicesPage ? "Services" : page.eyebrow === "Student Life" || page.eyebrow === "Student Welfare" || page.eyebrow === "Student Leadership" ? "Student" : "About Us";
   const parentHref = page.eyebrow === "Admissions" ? "/admissions" : page.eyebrow === "Academics" || page.eyebrow === "Courses" ? "/academics" : isServicesPage ? "/services" : page.eyebrow === "Student Life" || page.eyebrow === "Student Welfare" || page.eyebrow === "Student Leadership" ? "/student" : "/about";
-  const heroImage = page.heroImage ?? "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1800&q=80";
+  const heroImage = page.heroImage ?? "/images/kcu-2026/graduates-welcome-group.webp";
 
   return (
     <>

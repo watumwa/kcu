@@ -5,16 +5,16 @@ import { schools } from "@/data/site";
 
 const schoolImages = [
   {
-    src: "/images/community-outreach/clinical-training-theatre.jpeg",
+    src: "/images/kcu-2026/clinical-skills-patient.webp",
     className: "object-cover object-center",
   },
   {
-    src: "/library/WhatsApp Image 2026-06-11 at 13.55.22.jpeg",
-    className: "object-cover object-[center_34%]",
+    src: "/images/kcu-2026/library-collaboration.webp",
+    className: "object-cover object-center",
   },
   {
-    src: "/WhatsApp Image 2026-06-12 at 18.55.33 (1).jpeg",
-    className: "object-contain object-center",
+    src: "/images/kcu-2026/lab-chemistry-demonstration.webp",
+    className: "object-cover object-center",
   },
 ];
 
