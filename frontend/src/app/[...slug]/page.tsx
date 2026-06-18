@@ -131,10 +131,11 @@ const aboutPages: Record<string, AboutPageContent> = {
           "The University Council is the supreme governing body of King Ceasor University, responsible for strategic leadership, policy oversight and institutional governance. It safeguards the University's vision, mission and long-term growth while supporting quality education, innovation and service to society.",
         items: [
           "Finance, Planning & Development Committee: Mrs. Grace N. Gwaku",
-          "Quality Assurance & Gender Committee: Prof. Josephat Byamugisha",
-          "Audit & Risk Management Committee: Mr. Donald Nyakairu",
+          "Quality Assurance, ICT & Gender on Council: Prof. Josephat Byamugisha",
+          "BOT Representative on Council & Chair, Audit and Risk Management: Mr. Donald Nyakairu",
           "Student Welfare & Disciplinary Committee: Mr. Cyriaco Kabagambe",
-          "Appointments Board: Dr. Kamba Fadhiru Pakoyo",
+          "Appointments Board: Dr. Kamba F. Pakoyo",
+          "Staff Representative: Dr. Sabiti Mulema",
         ],
       },
       {

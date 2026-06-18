@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, CalendarDays, Search } from "lucide-react";
 import { newsItems } from "@/data/site";
 
@@ -8,6 +9,7 @@ const CATEGORY_COLORS: Record<string, string> = {
   Research: "bg-emerald-50 text-emerald-700",
   "Student Life": "bg-orange-50 text-orange-700",
   Partnerships: "bg-[#FFC66B]/20 text-[#0B6232]",
+  Community: "bg-emerald-50 text-[#0B6232]",
   Finance: "bg-slate-100 text-slate-700",
   Announcements: "bg-red-50 text-red-700",
 };
@@ -49,10 +51,12 @@ export default function NewsEvents() {
           rel="noopener noreferrer"
           className="group relative flex min-h-[360px] overflow-hidden rounded-2xl shadow-xl"
         >
-          <img
+          <Image
             src={featured.image}
             alt={featured.title}
-            className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+            fill
+            sizes="(min-width: 1024px) 92vw, calc(100vw - 32px)"
+            className="object-cover transition-transform duration-700 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent" />
           <div className="relative z-10 flex flex-col justify-end p-7 sm:p-10">

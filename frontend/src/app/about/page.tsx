@@ -220,17 +220,22 @@ type PersonProfile = {
 };
 
 const governanceBios = {
+  baryomunsi: [
+    "Hon. Dr. Chris Baryomunsi is a physician, public health specialist, legislator, and the current Minister of Health.",
+    "He holds a Bachelor of Medicine and Bachelor of Surgery (MBChB) degree from Makerere University, a Postgraduate Diploma in Demography, and a Master of Arts in Demography from Makerere University. He also earned a Postgraduate Diploma in HIV/AIDS Management from the University of Brighton, United Kingdom, and a Doctor of Philosophy (PhD) in Public Health with a specialization in Maternal Health.",
+    "He has represented Kinkizi County East in Parliament since 2006 and has served in several senior government positions. As Chairperson of the University Council, he provides strategic leadership and oversight in advancing the University's mission of academic excellence, research, innovation, and institutional development.",
+  ],
   tayebwa: [
     "Rt. Hon. Thomas Tayebwa is a distinguished lawyer, legislator, and public servant who serves as Chairperson of the University's Board of Trustees. He is the Deputy Speaker of the Parliament of Uganda and Member of Parliament for Ruhinda North County in Mitooma District.",
     "He holds a Bachelor of Arts in Social Sciences and a Bachelor of Laws from Makerere University and has undertaken additional professional training in leadership, negotiation, and parliamentary affairs.",
     "At KCU, he provides strategic leadership and oversight, supporting the University's mission of quality education, innovation, and graduate preparation for national and global development.",
   ],
   mfite: [
-    "Ms. Agnes Selina Mfite is an accomplished professional and dedicated leader serving as a Member of the University's Board of Trustees. She brings experience in leadership, governance, and institutional development to the University's long-term strategic direction.",
+    "Agnes Mfite is an accomplished professional and dedicated leader serving as a Trustee Member on the University's Board of Trustees. She brings experience in leadership, governance, and institutional development to the University's long-term strategic direction.",
     "Her career reflects a strong commitment to excellence, ethical leadership, and community service, and she contributes to the Board's work in safeguarding the University's mission and promoting quality higher education.",
   ],
   oryem: [
-    "Hon. Henry Okello Oryem is a distinguished lawyer, diplomat, and statesman serving as a Member of the University's Board of Trustees. He has made significant contributions to Uganda's governance, diplomacy, and international relations through a long public-service career.",
+    "Hon. Okello Oryem is a distinguished lawyer, diplomat, and statesman serving as Founder Envoy Extraordinary on the University's Board of Trustees. He has made significant contributions to Uganda's governance, diplomacy, and international relations through a long public-service career.",
     "He holds a Bachelor of Laws from the University of Buckingham, a Master of Laws from the University of Southampton, and professional legal qualifications as a Barrister-at-Law from the General Council of the Bar in the United Kingdom.",
     "His experience in leadership, public policy, diplomacy, and international cooperation brings valuable perspective to the University's governance and strategic development.",
   ],
@@ -253,7 +258,7 @@ const governanceBios = {
     "His work in scholarly research, institutional development, and academic governance supports the University's mission of delivering quality education, promoting innovation, and strengthening impactful research and community engagement.",
   ],
   pakoyo: [
-    "Prof. Kamba Fadhiru Pakoyo is an accomplished academic, researcher, pharmacist, and higher education administrator serving as Chairperson of the Appointments Board of the University Council.",
+    "Dr. Kamba F. Pakoyo is an accomplished academic, researcher, pharmacist, and higher education administrator serving as Chairperson of the Appointments Board of the University Council.",
     "He holds a PhD in Cell and Molecular Biology from Michigan State University and is a multidisciplinary scientist with expertise in molecular biology, pharmaceutical management, pharmaceutical regulation, and health-systems research.",
     "Having served as Dean of the School of Health Sciences at Makerere University and as Deputy Vice Chancellor for Finance and Administration at Busitema University, he brings strong leadership in appointments, recruitment, institutional management, and governance.",
   ],
@@ -278,8 +283,8 @@ const governanceBios = {
     "As Acting Commissioner for University Education and Training at the Ministry of Education and Sports, he brings deep expertise in higher-education policy, regulation, quality enhancement, and institutional governance.",
   ],
   sabitiMulema: [
-    "Mr. Sabiti Mulema is an accomplished business and marketing professional with extensive leadership and organizational-management experience, serving as a Member of the University Council.",
-    "He holds a PhD in Development Communication, an MBA in Management, and a Bachelor of Business Administration in Marketing from Nkumba University, and contributes strategic oversight and governance expertise to the institution.",
+    "Dr. Sabiti Mulema is an accomplished business and marketing professional with extensive leadership and organizational-management experience, serving as Staff Representative on the University Council.",
+    "He holds a PhD in Development Communication, an MBA in Management, and a Bachelor of Business Administration in Marketing from Nkumba University, and contributes staff representation, strategic oversight, and governance expertise to the institution.",
   ],
   rukundoAnita: [
     "Mrs. Rukundo Anita is a dedicated professional and leader serving as a Member of the University Council. She brings valuable experience and insight to the governance and strategic development of the University.",
@@ -487,42 +492,48 @@ function CouncilCardMobile({ person, onSelect }: { person: PersonProfile; onSele
 
 function TabUniversityCouncil() {
   const [selectedPerson, setSelectedPerson] = useState<PersonProfile | null>(null);
-  const chair: PersonProfile = { name: "Hon. Dr. Chris Baryomunsi", role: "Chairperson, University Council", tier: "top" };
+  const chair: PersonProfile = { name: "Hon. Dr. Chris Baryomunsi", role: "Chairperson, University Council", tier: "top", bio: governanceBios.baryomunsi };
   const viceChair: PersonProfile = {
     name: "Assoc. Prof. Margaret Nabasirye",
-    role: "Vice Chairperson, University Council",
+    role: "Vice Chairperson on Council",
     tier: "mid",
+    image: "/images/council/assoc-prof-margaret-nabasirye.webp",
     bio: governanceBios.nabasirye,
   };
   const committeeChairs: PersonProfile[] = [
     {
-      name: "Mrs. Grace Nshemeire-Gwaku",
+      name: "Mrs. Grace N. Gwaku",
       role: "Chair, Finance, Planning and Development Committee",
       tier: "mid",
+      image: "/images/council/mrs-grace-n-gwaku.webp",
       bio: governanceBios.graceGwaku,
     },
     {
       name: "Prof. Josephat Byamugisha",
-      role: "Chair, Quality Assurance, ICT and Gender Committee",
+      role: "Chair, Quality Assurance, ICT and Gender on Council",
       tier: "mid",
+      image: "/images/council/prof-josephat-byamugisha.webp",
       bio: governanceBios.byamugisha,
     },
     {
       name: "Mr. Donald Nyakairu",
-      role: "Board of Trustees Representative / Chair, Audit and Risk Management",
+      role: "BOT Representative on Council & Chair, Audit and Risk Management",
       tier: "mid",
+      image: "/images/trustees/mr-donald-nyakairu.jpg",
       bio: governanceBios.nyakairu,
     },
     {
-      name: "Mr. Cyriaco M. Kabagambe",
+      name: "Mr. Cyriaco Kabagambe",
       role: "Chair, Student Welfare and Disciplinary Committee",
       tier: "mid",
+      image: "/images/council/mr-cyriaco-kabagambe.webp",
       bio: governanceBios.kabagambe,
     },
     {
-      name: "Prof. Kamba Fadhiru Pakoyo",
-      role: "Chair, Appointments Board of Council",
+      name: "Dr. Kamba F. Pakoyo",
+      role: "Chair, Appointments Board",
       tier: "mid",
+      image: "/images/council/dr-kamba-f-pakoyo.webp",
       bio: governanceBios.pakoyo,
     },
   ];
@@ -530,39 +541,44 @@ function TabUniversityCouncil() {
   const members: PersonProfile[] = [
     {
       name: "Mr. Muhoozi Daniel Noah",
-      role: "Guild President and Student Representative",
+      role: "Guild President & Student Representative",
       tier: "base",
-      image: "/",
+      image: "/images/council/mr-muhoozi-daniel-noah.webp",
       bio: governanceBios.muhooziDaniel,
     },
     {
-      name: "Mr. Sabiti Mulema",
-      role: "Member, University Council",
+      name: "Dr. Sabiti Mulema",
+      role: "Staff Representative",
       tier: "base",
+      image: "/images/council/dr-sabiti-mulema.webp",
       bio: governanceBios.sabitiMulema,
     },
     {
       name: "Mrs. Rukundo Anita",
       role: "Member, University Council",
       tier: "base",
+      image: "/images/council/mrs-rukundo-anita.webp",
       bio: governanceBios.rukundoAnita,
     },
     {
       name: "Mrs. Joyce Okello",
       role: "Member, University Council",
       tier: "base",
+      image: "/images/council/mrs-joyce-okello.webp",
       bio: governanceBios.joyceOkello,
     },
     {
       name: "Prof. Winston Ireeta Tumps",
       role: "Member, University Council",
       tier: "base",
+      image: "/images/council/prof-winston-ireeta-tumps.webp",
       bio: governanceBios.tumps,
     },
     {
       name: "Mr. Timothy Musoke Ssejjoba",
       role: "Member, University Council",
       tier: "base",
+      image: "/images/council/mr-timothy-musoke-ssejjoba.webp",
       bio: governanceBios.ssejjoba,
     },
   ];
@@ -640,15 +656,15 @@ function TabBoardOfTrustees() {
   };
   const members: PersonProfile[] = [
     {
-      name: "Ms. Agnes Selina Mfite",
-      role: "Member, Board of Trustees",
+      name: "Agnes Mfite",
+      role: "Trustee Member",
       tier: "base",
       image: "/images/trustees/mrs-agnes-selina-mfite.jpg",
       bio: governanceBios.mfite,
     },
     {
-      name: "Hon. Henry Okello Oryem",
-      role: "Member, Board of Trustees",
+      name: "Hon. Okello Oryem",
+      role: "Founder Envoy Extraordinary",
       tier: "base",
       image: "/images/trustees/hon-okello-oryem.jpg",
       bio: governanceBios.oryem,

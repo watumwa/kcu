@@ -234,13 +234,22 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Community",
+    title: "King Ceasor University Marks Day of the African Child at St. Dennis Ssebugwawo Secondary School",
+    date: "16 June 2026",
+    href: "/about/newsletter",
+    text: "KCU held a career guidance and donation drive in Ggaba, engaging about 300 Advanced Level students and supporting school hygiene initiatives.",
+    image: "/images/outreach/st-denis-2026/career-guidance-speaker.webp",
+    featured: true,
+  },
+  {
     category: "Partnerships",
     title: "KCU Signs Strategic Partnership with Tecnovia to Enhance Student Skills and Employment Opportunities",
     date: "10 June 2026",
     href: "https://kcu.ac.ug/kcu-signs-strategic-partnership-with-tecnovia-to-enhance-student-skills-and-employment-opportunities/",
     text: "KCU signed an MoU with Tecnovia Uganda Branch to expand industrial training, internships, curriculum support and employment pathways for students.",
     image: "https://kcu.ac.ug/wp-content/uploads/2026/06/partnership-1.webp",
-    featured: true,
+    featured: false,
   },
   {
     category: "Partnerships",

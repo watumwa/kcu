@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, ChevronRight, ExternalLink, X } from "lucide-react";
 
@@ -10,11 +11,53 @@ type NewsletterArticle = {
   category: string;
   title: string;
   excerpt: string;
-  href: string;
+  href?: string;
+  image?: string;
+  imageAlt?: string;
+  highlights?: { label: string; value: string }[];
+  gallery?: { src: string; alt: string }[];
   story: string[];
 };
 
 const newsletterArticles: NewsletterArticle[] = [
+  {
+    date: "16 June 2026",
+    category: "Community Outreach",
+    title: "King Ceasor University Marks Day of the African Child with Career Guidance and Donation Drive at St. Dennis Ssebugwawo Secondary School",
+    excerpt:
+      "KCU commemorated the Day of the African Child with a career guidance session and donation drive for approximately 300 Advanced Level students in Ggaba.",
+    image: "/images/outreach/st-denis-2026/career-guidance-speaker.webp",
+    imageAlt: "King Ceasor University representative speaking to St. Dennis Ssebugwawo Secondary School students during career guidance",
+    highlights: [
+      { label: "Location", value: "Ggaba, Kampala" },
+      { label: "Learners Engaged", value: "About 300 A-Level students" },
+      { label: "Focus", value: "Career guidance and hygiene support" },
+    ],
+    gallery: [
+      {
+        src: "/images/outreach/st-denis-2026/classroom-career-session.webp",
+        alt: "Advanced Level students gathered for the King Ceasor University career guidance session",
+      },
+      {
+        src: "/images/outreach/st-denis-2026/student-participation.webp",
+        alt: "A student participates during the outreach session at St. Dennis Ssebugwawo Secondary School",
+      },
+      {
+        src: "/images/outreach/st-denis-2026/donation-drive-supplies.webp",
+        alt: "Hygiene and sanitation supplies being distributed during the King Ceasor University outreach",
+      },
+    ],
+    story: [
+      "Ggaba, Kampala - 16 June 2026",
+      "As part of activities to commemorate the Day of the African Child, King Ceasor University conducted a career guidance and community outreach programme at St. Dennis Ssebugwawo Secondary School in Ggaba, reaffirming its commitment to education, youth empowerment and social responsibility.",
+      "The university team engaged approximately 300 Advanced Level students in an interactive career guidance session designed to help learners make informed decisions about their academic and professional futures. Students were introduced to the various academic programmes offered at King Ceasor University, opportunities available in higher education and practical approaches to career planning and goal setting. The session also featured a question-and-answer segment that allowed students to seek guidance on university education and career development.",
+      "Speaking during the engagement, university representatives encouraged students to align their academic choices with their interests, strengths and long-term aspirations. The learners actively participated in the discussions and expressed appreciation for the valuable insights shared.",
+      "In addition to the career guidance session, King Ceasor University donated essential hygiene and sanitation supplies to support the school's health and wellbeing initiatives.",
+      "The outreach programme contributed to increased awareness among students about higher education opportunities, strengthened the university's community engagement efforts and supported the school's commitment to maintaining proper hygiene and sanitation standards.",
+      "Through such initiatives, King Ceasor University continues to play an active role in empowering young people, supporting communities and building partnerships that promote education and sustainable development.",
+      "The university remains committed to extending similar outreach programmes to schools and communities across Uganda as part of its mission to transform lives through education and service.",
+    ],
+  },
   {
     date: "10 June 2026",
     category: "Partnerships",
@@ -262,6 +305,27 @@ function NewsletterStoryModal({ article, onClose }: { article: NewsletterArticle
               </div>
 
               <div className="px-5 py-6 sm:px-7 sm:py-8">
+                {article.image && (
+                  <div className="relative mb-6 aspect-[16/9] overflow-hidden rounded-2xl bg-slate-100">
+                    <Image
+                      src={article.image}
+                      alt={article.imageAlt ?? article.title}
+                      fill
+                      sizes="(min-width: 768px) 720px, calc(100vw - 40px)"
+                      className="object-cover"
+                    />
+                  </div>
+                )}
+                {article.highlights?.length ? (
+                  <div className="mb-6 grid gap-3 sm:grid-cols-3">
+                    {article.highlights.map((highlight) => (
+                      <div key={`${highlight.label}-${highlight.value}`} className="rounded-2xl border border-slate-100 bg-slate-50 p-4">
+                        <p className="text-[10px] font-black uppercase tracking-[0.16em] text-[#0B6232]">{highlight.label}</p>
+                        <p className="mt-2 text-sm font-black leading-5 text-slate-900">{highlight.value}</p>
+                      </div>
+                    ))}
+                  </div>
+                ) : null}
                 <p className="border-l-4 border-[#FFC66B] bg-slate-50 py-3 pl-4 pr-3 text-sm font-semibold leading-7 text-slate-700 sm:text-base">
                   {article.excerpt}
                 </p>
@@ -270,6 +334,21 @@ function NewsletterStoryModal({ article, onClose }: { article: NewsletterArticle
                     <p key={paragraph}>{paragraph}</p>
                   ))}
                 </div>
+                {article.gallery?.length ? (
+                  <div className="mt-7 grid gap-3 sm:grid-cols-3">
+                    {article.gallery.map((item) => (
+                      <div key={item.src} className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-slate-100">
+                        <Image
+                          src={item.src}
+                          alt={item.alt}
+                          fill
+                          sizes="(min-width: 768px) 220px, calc(100vw - 40px)"
+                          className="object-cover"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                ) : null}
                 <div className="mt-8 flex flex-col gap-3 border-t border-slate-100 pt-5 sm:flex-row sm:items-center sm:justify-between">
                   <button
                     type="button"
@@ -278,14 +357,16 @@ function NewsletterStoryModal({ article, onClose }: { article: NewsletterArticle
                   >
                     Close Story
                   </button>
-                  <Link
-                    href={article.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center rounded-xl bg-[#0B6232] px-5 py-3 text-sm font-black text-white transition hover:bg-[#084a26]"
-                  >
-                    Open Original <ExternalLink className="ml-2 size-4" />
-                  </Link>
+                  {article.href && (
+                    <Link
+                      href={article.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center rounded-xl bg-[#0B6232] px-5 py-3 text-sm font-black text-white transition hover:bg-[#084a26]"
+                    >
+                      Open Original <ExternalLink className="ml-2 size-4" />
+                    </Link>
+                  )}
                 </div>
               </div>
             </div>
@@ -357,6 +438,27 @@ export default function NewsletterPage() {
                   <span className="rounded-full bg-[#FFC66B]/25 px-3 py-1 text-xs font-black text-[#0B6232]">{featuredArticle.category}</span>
                   <span className="text-xs font-black uppercase tracking-[0.16em] text-slate-500">{featuredArticle.date}</span>
                 </div>
+                {featuredArticle.image && (
+                  <div className="relative mt-6 aspect-[16/9] overflow-hidden rounded-2xl bg-slate-100">
+                    <Image
+                      src={featuredArticle.image}
+                      alt={featuredArticle.imageAlt ?? featuredArticle.title}
+                      fill
+                      sizes="(min-width: 1024px) 58vw, calc(100vw - 64px)"
+                      className="object-cover transition duration-700 group-hover:scale-105"
+                    />
+                  </div>
+                )}
+                {featuredArticle.highlights?.length ? (
+                  <div className="mt-5 grid gap-3 sm:grid-cols-3">
+                    {featuredArticle.highlights.map((highlight) => (
+                      <div key={`${highlight.label}-${highlight.value}`} className="rounded-2xl border border-slate-100 bg-slate-50 p-4">
+                        <p className="text-[10px] font-black uppercase tracking-[0.16em] text-[#0B6232]">{highlight.label}</p>
+                        <p className="mt-2 text-sm font-black leading-5 text-slate-900">{highlight.value}</p>
+                      </div>
+                    ))}
+                  </div>
+                ) : null}
                 <div className="mt-8 grid gap-4 sm:grid-cols-3">
                   {newsletterArticles.slice(0, 3).map((article, index) => (
                     <button

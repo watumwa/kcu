@@ -73,13 +73,6 @@ const gallery = [
   },
 ];
 
-const initialCountdown = [
-  { label: "Days", value: 0 },
-  { label: "Hours", value: 0 },
-  { label: "Minutes", value: 0 },
-  { label: "Seconds", value: 0 },
-];
-
 function getCountdownParts() {
   const difference = Math.max(countdownTarget.getTime() - Date.now(), 0);
   const day = 1000 * 60 * 60 * 24;
@@ -95,17 +88,12 @@ function getCountdownParts() {
 }
 
 export default function GraduationPage() {
-  const [countdown, setCountdown] = useState(initialCountdown);
+  const [countdown, setCountdown] = useState(getCountdownParts);
   const [activeSlide, setActiveSlide] = useState(0);
 
   useEffect(() => {
-    const updateCountdown = () => setCountdown(getCountdownParts());
-    const initialTimer = window.setTimeout(updateCountdown, 0);
-    const timer = window.setInterval(updateCountdown, 1000);
-    return () => {
-      window.clearTimeout(initialTimer);
-      window.clearInterval(timer);
-    };
+    const timer = window.setInterval(() => setCountdown(getCountdownParts()), 1000);
+    return () => window.clearInterval(timer);
   }, []);
 
   const activeGalleryItem = useMemo(() => gallery[activeSlide], [activeSlide]);
@@ -161,7 +149,7 @@ export default function GraduationPage() {
               <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
                 {countdown.map((item) => (
                   <div key={item.label} className="rounded-lg bg-slate-50 p-4 text-center">
-                    <p className="text-3xl font-black text-[#0B6232]">{String(item.value).padStart(2, "0")}</p>
+                    <p suppressHydrationWarning className="text-3xl font-black text-[#0B6232]">{String(item.value).padStart(2, "0")}</p>
                     <p className="mt-1 text-[10px] font-black uppercase tracking-[0.16em] text-slate-500">{item.label}</p>
                   </div>
                 ))}

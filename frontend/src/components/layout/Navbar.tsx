@@ -27,7 +27,7 @@ const socialLinks = [
   { label: "YouTube", href: "https://www.youtube.com/@kingceasoruniversitytv", icon: FaYoutube },
 ];
 
-const policiesDriveUrl = "https://drive.google.com/file/d/YOUR_FILE_ID/view";
+const policiesDriveUrl = "https://drive.google.com/drive/folders/1ZlSTGxG5BQLeVhSYX8oEuB00jzWirs0o?usp=drive_link";
 
 function UniversityMark() {
   return (

@@ -4,6 +4,41 @@ import Navbar from "@/components/layout/Navbar";
 
 const galleryItems = [
   {
+    title: "Career Guidance at St. Dennis",
+    description: "KCU representatives guide Advanced Level students during the Day of the African Child outreach in Ggaba.",
+    image: "/images/outreach/st-denis-2026/career-guidance-speaker.webp",
+    frameClassName: "aspect-[4/3]",
+    imageClassName: "object-cover object-center",
+  },
+  {
+    title: "Day of the African Child Outreach",
+    description: "Students gather for a career guidance session focused on higher education choices and future planning.",
+    image: "/images/outreach/st-denis-2026/classroom-career-session.webp",
+    frameClassName: "aspect-[4/3]",
+    imageClassName: "object-cover object-center",
+  },
+  {
+    title: "Student Participation",
+    description: "A learner participates during the interactive question-and-answer session with the university team.",
+    image: "/images/outreach/st-denis-2026/student-participation.webp",
+    frameClassName: "aspect-[4/3]",
+    imageClassName: "object-cover object-center",
+  },
+  {
+    title: "Donation Drive Support",
+    description: "KCU supports school wellbeing through hygiene and sanitation supplies for learners.",
+    image: "/images/outreach/st-denis-2026/donation-drive-supplies.webp",
+    frameClassName: "aspect-[4/3]",
+    imageClassName: "object-cover object-center",
+  },
+  {
+    title: "Community Outreach Team",
+    description: "King Ceasor University and St. Dennis representatives mark a successful school outreach engagement.",
+    image: "/images/outreach/st-denis-2026/outreach-team-st-dennis.webp",
+    frameClassName: "aspect-[4/3]",
+    imageClassName: "object-cover object-center",
+  },
+  {
     title: "KCU Graduates at Campus",
     description: "Graduates gathered outside King Ceasor University, celebrating academic achievement and campus pride.",
     image: "/images/kcu-2026/graduates-welcome-group.webp",
@@ -158,7 +193,7 @@ export default function GalleryPage() {
       <Navbar />
       <main className="min-h-screen bg-white pt-16 sm:pt-20 lg:pt-[8.5rem]">
         <section className="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
-          <div className="mx-auto max-w-[1440px]">
+          <div className="mx-auto max-w-[1440px] lg:pr-40">
             <div className="mb-8 sm:mb-10">
               <p className="text-[10px] font-black uppercase tracking-[0.22em] text-[#0B6232]">Gallery</p>
               <h3 className="mt-2 text-3xl font-black leading-tight text-slate-950 sm:text-4xl">Review Special Moments</h3>

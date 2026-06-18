@@ -135,7 +135,7 @@ function formatCount(value = 0) {
   }).format(value);
 }
 
-function FeedMessage({ title, text }: { title: string; text: string }) {
+function FeedMessage({ title, text }: { title: string; text?: string }) {
   return (
     <div className="flex min-h-[260px] items-center justify-center rounded-xl bg-[#F7F9FC] px-6 py-10 text-center">
       <div className="mx-auto max-w-md">
@@ -143,7 +143,7 @@ function FeedMessage({ title, text }: { title: string; text: string }) {
           <FaXTwitter className="size-5" />
         </div>
         <h3 className="mt-4 text-lg font-black text-slate-950">{title}</h3>
-        <p className="mt-2 text-sm leading-6 text-slate-500">{text}</p>
+        {text && <p className="mt-2 text-sm leading-6 text-slate-500">{text}</p>}
       </div>
     </div>
   );
@@ -208,10 +208,7 @@ export default async function SocialFeed() {
           )}
 
           {feed.status === "unconfigured" && (
-            <FeedMessage
-              title="Latest X posts are being connected"
-              text="King Ceasor University updates will appear here once the live feed is connected."
-            />
+            <FeedMessage title="Latest X posts are being connected" />
           )}
 
           {feed.status === "error" && (
