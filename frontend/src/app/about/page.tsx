@@ -332,8 +332,9 @@ const managementBios = {
     "She holds a PhD in Information Systems from the University of Groningen, an MPhil in Science and Technology from Stellenbosch University, an MSc in Information Systems from Makerere University, and a Bachelor of Computer Science from Mbarara University of Science and Technology, and leads the University's quality assurance and continuous-improvement agenda.",
   ],
   johnAcire: [
-    "Mr. John Acire is a human resource management professional with expertise in organizational development and talent management, serving as Director of Human Resource.",
-    "He holds a Master in Management Studies in Human Resource Management and a Postgraduate Diploma in Human Resource Management from the Uganda Management Institute, as well as a Bachelor of Arts with Education from Makerere University.",
+    "Mr. John Acire (CHRP, HRMAU) is a human resource management professional serving as Human Resource Manager at King Ceasor University. He is a Certified Human Resource Professional through the Global Skills Development Council, Singapore (2025), and holds Professional Human Resource Certification from the Human Resource Managers' Association of Uganda (2025).",
+    "His academic qualifications include a Master of Business Administration in Human Resource Management from IGNOU, India (2014); a Master of Management Studies in Human Resource Management from Uganda Management Institute (2011); a Master of Education in Curriculum Studies from Gulu University (2024); a Postgraduate Diploma in Human Resource Management from Uganda Management Institute (2009); a Postgraduate Diploma in Information Technology from Amity University, India (2012); and a Bachelor of Arts with Education from Makerere University (2004).",
+    "He completed the Uganda Advanced Certificate of Education at Sir Samuel Baker Senior Secondary School (2000), the Uganda Certificate of Education at Sir Samuel Baker Senior Secondary School (1998), and the Primary Leaving Examination at Gulu Prison Primary School (1994).",
   ],
   sylviaChristine: [
     "Mrs. Sylvia Okwi Christine is an accomplished finance and accounting professional with expertise in financial management, auditing, and strategic planning, serving as Director of Finance.",
@@ -799,8 +800,8 @@ function TabAdministration() {
       bio: managementBios.wilberforceMfitundinda,
     },
     {
-      name: "Mr. John Acire",
-      role: "Director, Human Resource",
+      name: "Mr. John Acire (CHRP, HRMAU)",
+      role: "Human Resource Manager",
       tier: "base",
       image: "/University Management/Mr. John Acire.jpeg",
       bio: managementBios.johnAcire,

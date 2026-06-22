@@ -4,6 +4,41 @@ import Navbar from "@/components/layout/Navbar";
 
 const galleryItems = [
   {
+    title: "Health Sciences Field Learning in Mukono",
+    description: "KCU health sciences students and their hosts gather at Nakifuma Health Centre III during a practical field learning visit.",
+    image: "/images/health-sciences/mukono-field-learning-2026/nakifuma-health-centre-team.webp",
+    frameClassName: "aspect-[4/3]",
+    imageClassName: "object-cover object-center",
+  },
+  {
+    title: "Community Health Engagement",
+    description: "Students engage with health facility staff and community representatives as part of their learning experience in Mukono District.",
+    image: "/images/health-sciences/mukono-field-learning-2026/health-facility-community-engagement.webp",
+    frameClassName: "aspect-[4/3]",
+    imageClassName: "object-cover object-center",
+  },
+  {
+    title: "Health Records Learning Session",
+    description: "Health sciences students review facility records and documentation with staff during the field visit.",
+    image: "/images/health-sciences/mukono-field-learning-2026/health-records-learning-session.webp",
+    frameClassName: "aspect-[4/3]",
+    imageClassName: "object-cover object-center",
+  },
+  {
+    title: "Mukono Health Infrastructure Visit",
+    description: "The KCU team visits the Government of Uganda project for the renovation of Mukono District health offices.",
+    image: "/images/health-sciences/mukono-field-learning-2026/mukono-health-infrastructure-visit.webp",
+    frameClassName: "aspect-[4/3]",
+    imageClassName: "object-cover object-center",
+  },
+  {
+    title: "Practical Community Health Learning",
+    description: "A student takes part in a supervised practical activity during the community health field experience.",
+    image: "/images/health-sciences/mukono-field-learning-2026/community-health-practical-learning.webp",
+    frameClassName: "aspect-[4/3]",
+    imageClassName: "object-cover object-center",
+  },
+  {
     title: "AUUS Sports Leadership Forum",
     description: "University sports leaders gather at MUST for the AUUS engagement on sports leadership and excellence.",
     image: "/images/student-activity/auus-sports-leadership-2026/auus-sports-leadership-forum-group.jpeg",
