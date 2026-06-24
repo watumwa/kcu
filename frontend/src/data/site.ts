@@ -235,12 +235,21 @@ export const upcomingEvents = [
 export const newsItems = [
   {
     category: "Community",
+    title: "KCU Supports Community Blood Donation Activity",
+    date: "23 June 2026",
+    href: "/gallery#blood-donation-drive-2026",
+    text: "KCU health professionals supported donors through attentive care, clinical assistance and community health engagement.",
+    image: "/images/community-health/blood-donation-2026/kcu-health-team.webp",
+    featured: true,
+  },
+  {
+    category: "Community",
     title: "King Ceasor University Marks Day of the African Child at St. Dennis Ssebugwawo Secondary School",
     date: "16 June 2026",
     href: "/about/newsletter",
     text: "KCU held a career guidance and donation drive in Ggaba, engaging about 300 Advanced Level students and supporting school hygiene initiatives.",
     image: "/images/outreach/st-denis-2026/career-guidance-speaker.webp",
-    featured: true,
+    featured: false,
   },
   {
     category: "Student Life",

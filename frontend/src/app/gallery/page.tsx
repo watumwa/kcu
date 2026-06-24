@@ -2,6 +2,58 @@ import Image from "next/image";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
 
+const bloodDonationGallery = [
+  {
+    title: "KCU Community Health Team",
+    description: "The KCU team supporting the community blood donation activity.",
+    image: "/images/community-health/blood-donation-2026/kcu-health-team.webp",
+    className: "col-span-2 row-span-2",
+    imageClassName: "object-cover object-center",
+  },
+  {
+    title: "Donor Care",
+    description: "A donor receives attentive support during the activity.",
+    image: "/images/community-health/blood-donation-2026/donor-care-portrait.webp",
+    className: "row-span-2",
+    imageClassName: "object-cover object-center",
+  },
+  {
+    title: "Clinical Support",
+    description: "KCU health professionals assist a community donor.",
+    image: "/images/community-health/blood-donation-2026/community-donor-care.webp",
+    className: "",
+    imageClassName: "object-cover object-center",
+  },
+  {
+    title: "Donor Rest Station",
+    description: "A calm, supervised space for donors to rest.",
+    image: "/images/community-health/blood-donation-2026/donor-resting-station.webp",
+    className: "",
+    imageClassName: "object-cover object-center",
+  },
+  {
+    title: "Health Team at Work",
+    description: "Clinical staff prepare supplies and support the donation process.",
+    image: "/images/community-health/blood-donation-2026/clinical-team-at-work.webp",
+    className: "",
+    imageClassName: "object-cover object-center",
+  },
+  {
+    title: "Donor Support",
+    description: "A member of the health team checks in with a donor.",
+    image: "/images/community-health/blood-donation-2026/donor-support-conversation.webp",
+    className: "",
+    imageClassName: "object-cover object-center",
+  },
+  {
+    title: "Community Participation",
+    description: "Community members take part in the KCU-supported health activity.",
+    image: "/images/community-health/blood-donation-2026/donor-registration-support.webp",
+    className: "col-span-2",
+    imageClassName: "object-cover object-center",
+  },
+];
+
 const galleryItems = [
   {
     title: "Health Sciences Field Learning in Mukono",
@@ -246,6 +298,58 @@ export default function GalleryPage() {
             <div className="mb-8 sm:mb-10">
               <p className="text-[10px] font-black uppercase tracking-[0.22em] text-[#0B6232]">Gallery</p>
               <h3 className="mt-2 text-3xl font-black leading-tight text-slate-950 sm:text-4xl">Review Special Moments</h3>
+            </div>
+
+            <section
+              id="blood-donation-drive-2026"
+              className="mb-14 scroll-mt-36 overflow-hidden rounded-[2rem] bg-[#073F24] p-4 shadow-xl shadow-[#073F24]/10 sm:p-6 lg:p-8"
+            >
+              <div className="mb-6 flex flex-col gap-4 px-1 sm:flex-row sm:items-end sm:justify-between">
+                <div>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="rounded-full bg-[#FFC66B] px-3 py-1 text-[10px] font-black uppercase tracking-[0.16em] text-[#0B1A0B]">
+                      Featured Collection
+                    </span>
+                    <span className="text-[10px] font-black uppercase tracking-[0.16em] text-white/55">23 June 2026</span>
+                  </div>
+                  <h1 className="mt-3 text-2xl font-black leading-tight text-white sm:text-3xl">
+                    Community Blood Donation Activity
+                  </h1>
+                  <p className="mt-2 max-w-2xl text-sm leading-6 text-white/70">
+                    KCU health professionals supporting donors and promoting life-saving community participation.
+                  </p>
+                </div>
+                <p className="shrink-0 text-xs font-bold uppercase tracking-[0.18em] text-[#FFC66B]">
+                  7 photographs
+                </p>
+              </div>
+
+              <div className="grid auto-rows-[150px] grid-cols-2 gap-3 sm:auto-rows-[190px] md:grid-cols-4">
+                {bloodDonationGallery.map((item) => (
+                  <figure
+                    key={item.title}
+                    className={`group relative overflow-hidden rounded-2xl bg-white/10 ${item.className}`}
+                  >
+                    <Image
+                      src={item.image}
+                      alt={item.description}
+                      fill
+                      sizes="(min-width: 1024px) 40vw, (min-width: 768px) 50vw, 100vw"
+                      className={`${item.imageClassName} transition-transform duration-700 group-hover:scale-105`}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/5 to-transparent" />
+                    <figcaption className="absolute inset-x-0 bottom-0 p-3 sm:p-4">
+                      <p className="text-xs font-black text-white sm:text-sm">{item.title}</p>
+                      <p className="mt-1 hidden text-xs leading-5 text-white/65 sm:block">{item.description}</p>
+                    </figcaption>
+                  </figure>
+                ))}
+              </div>
+            </section>
+
+            <div className="mb-6">
+              <p className="text-[10px] font-black uppercase tracking-[0.22em] text-[#0B6232]">Across KCU</p>
+              <h2 className="mt-2 text-2xl font-black text-slate-950 sm:text-3xl">More Campus Moments</h2>
             </div>
 
             <div className="grid items-start gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">

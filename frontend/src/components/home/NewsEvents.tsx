@@ -22,18 +22,16 @@ export default function NewsEvents() {
   const featured = newsItems.find((n) => n.featured)!;
 
   return (
-    <section className="bg-[#F7F9FC] py-20 px-4 sm:px-6 lg:px-12">
-      <div className="mx-auto max-w-[1440px] space-y-14">
-        {/* ── Section Header ── */}
-        <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+    <section className="bg-[#F7F9FC] px-4 py-16 sm:px-6 sm:py-20 lg:px-12">
+      <div className="mx-auto max-w-[1440px]">
+        <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="text-xs font-black uppercase tracking-[0.2em] text-[#0B6232]">Latest News & Events</p>
             <h2 className="mt-2 text-3xl font-black text-slate-950 sm:text-4xl">Stay Updated</h2>
-            <p className="mt-2 max-w-xl text-slate-500 text-sm leading-relaxed">
-              Campus achievements research breakthroughs, student life, academic events and university announcements
+            <p className="mt-2 max-w-xl text-sm leading-relaxed text-slate-500">
+              Campus achievements, research breakthroughs, student life, academic events and university announcements.
             </p>
           </div>
-          {/* Search */}
           <form action="/search" className="relative w-full max-w-xs shrink-0">
             <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 size-4 text-slate-400" />
             <input
@@ -44,35 +42,36 @@ export default function NewsEvents() {
           </form>
         </div>
 
-        {/* ── Featured Hero Card ── */}
         <Link
           href={featured.href ?? "/news"}
           target={featured.href?.startsWith("http") ? "_blank" : undefined}
           rel="noopener noreferrer"
-          className="group relative flex min-h-[360px] overflow-hidden rounded-2xl shadow-xl"
+          className="group mt-10 grid overflow-hidden rounded-3xl border border-slate-200/80 bg-white shadow-xl shadow-slate-900/5 lg:grid-cols-[minmax(360px,0.8fr)_minmax(0,1.2fr)]"
         >
-          <Image
-            src={featured.image}
-            alt={featured.title}
-            fill
-            sizes="(min-width: 1024px) 92vw, calc(100vw - 32px)"
-            className="object-cover transition-transform duration-700 group-hover:scale-105"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent" />
-          <div className="relative z-10 flex flex-col justify-end p-7 sm:p-10">
-            <span className={`${badge(featured.category)} mb-3 self-start`}>{featured.category}</span>
-            <h3 className="max-w-2xl text-2xl font-black leading-snug text-white sm:text-3xl">
-              {featured.title}
-            </h3>
-            <p className="mt-3 max-w-xl text-sm text-white/70 leading-relaxed line-clamp-2">{featured.text}</p>
-            <div className="mt-5 flex items-center gap-4">
-              <span className="inline-flex items-center gap-1.5 text-xs text-white/50">
+          <div className="flex flex-col justify-center p-7 sm:p-10 lg:p-12">
+            <div className="flex flex-wrap items-center gap-3">
+              <span className={badge(featured.category)}>{featured.category}</span>
+              <span className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-400">
                 <CalendarDays className="size-3.5" /> {featured.date}
               </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-[#FFC66B] px-4 py-1.5 text-xs font-black text-[#0B1A0B] transition group-hover:bg-white">
-                Read Story <ArrowRight className="size-3.5" />
-              </span>
             </div>
+            <h3 className="mt-5 max-w-xl text-2xl font-black leading-tight text-slate-950 sm:text-3xl lg:text-[2rem]">
+              {featured.title}
+            </h3>
+            <p className="mt-4 max-w-xl text-sm leading-7 text-slate-600 sm:text-base">{featured.text}</p>
+            <span className="mt-7 inline-flex w-fit items-center gap-2 rounded-full bg-[#0B6232] px-5 py-2.5 text-xs font-black text-white transition-colors group-hover:bg-[#084b27]">
+              View Photos <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-1" />
+            </span>
+          </div>
+
+          <div className="relative min-h-[280px] overflow-hidden bg-[#073F24] sm:min-h-[390px] lg:order-last lg:min-h-[440px]">
+            <Image
+              src={featured.image}
+              alt={featured.title}
+              fill
+              sizes="(min-width: 1024px) 58vw, 100vw"
+              className="object-contain transition-transform duration-700 group-hover:scale-[1.02]"
+            />
           </div>
         </Link>
       </div>
