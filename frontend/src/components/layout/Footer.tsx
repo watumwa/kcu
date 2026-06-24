@@ -47,7 +47,7 @@ export default function Footer() {
               { label: "Careers", href: "/careers" },
               { label: "Library Catalogue", href: "/library/catalogue" },
               { label: "Campus News", href: "/about/newsletter" },
-              { label: "Get in Touch", href: "" },
+              
             ],
           },
         ].map((group) => (

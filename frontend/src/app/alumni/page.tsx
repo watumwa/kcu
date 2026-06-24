@@ -15,25 +15,16 @@ import {
   HandHeart,
   HeartHandshake,
   Landmark,
-  LinkIcon,
   Mail,
   MapPin,
   Megaphone,
   Network,
   Send,
   Stethoscope,
-  Users,
 } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
-
-const stats = [
-  { label: "Registered Alumni", value: "4,000+", icon: Users },
-  { label: "Countries Represented", value: "12", icon: MapPin },
-  { label: "Industries Reached", value: "20+", icon: Briefcase },
-  { label: "Alumni Mentors", value: "75+", icon: HeartHandshake },
-];
 
 const benefits = [
   {
@@ -69,28 +60,28 @@ const sectors = [
 
 const notableAlumni = [
   {
-    name: "Sarah Namukasa",
-    programme: "Bachelor of Laws, 2017",
-    role: "Senior State Attorney",
-    organization: "Ministry of Justice",
-    story: "KCU provided the foundation for my legal career and leadership journey.",
-    image: "/Gallery/1B7A9372.JPG",
+    name: "Dr. Mujawimana Alphonsina",
+    programme: "",
+    role: "Paediatrician",
+    organization: "",
+    story: "King Ceasor University gave me more than a medical education—it gave me a home where I learned discipline, compassion, and the joy of teaching. Returning as a lecturer has been one of my greatest privileges.",
+    image: "/alumni/Dr. Mujawimana Alphonsina.jpeg",
   },
   {
-    name: "David Okiror",
-    programme: "Bachelor of Business Administration, 2016",
-    role: "Chief Executive Officer",
-    organization: "East Africa Logistics Group",
-    story: "The networks I built at KCU still shape how I lead teams and open regional opportunities.",
-    image: "/Gallery/1B7A9395.JPG",
+    name: "Dr. Hashaka Gerald",
+    programme: "",
+    role: "Gynaecologist",
+    organization: "",
+    story: "Dear Students: hold onto your curiosity and never underestimate the impact of kindness in medicine. The small things you do for a patients today will stay with them forever.",
+    image: "/alumni/Dr. Hashaka Gerald.jpeg",
   },
   {
     name: "Grace Atim",
-    programme: "Diploma in Hotel Management, 2018",
+    programme: "",
     role: "Operations Manager",
-    organization: "Kampala Serena Hotel",
+    organization: "",
     story: "KCU helped me turn service training into a career built on confidence and excellence.",
-    image: "/Graduation /1B7A9245.JPG",
+    image: "",
   },
 ];
 
@@ -114,19 +105,6 @@ const events = [
     title: "Entrepreneurship Summit",
     location: "KCU Auditorium",
     detail: "Alumni founders share practical lessons on building resilient ventures.",
-  },
-];
-
-const testimonials = [
-  {
-    quote: "My KCU education equipped me with the skills and confidence to lead healthcare initiatives across Uganda.",
-    name: "Dr. Miriam Akello",
-    meta: "Health Sciences Alumni",
-  },
-  {
-    quote: "The alumni network keeps opening doors for collaboration, mentorship, and practical career growth.",
-    name: "Allan Mugisha",
-    meta: "Business Alumni",
   },
 ];
 
@@ -173,7 +151,7 @@ export default function AlumniPage() {
             <div className="absolute inset-0 bg-gradient-to-t from-[#062f1c]/70 via-transparent to-black/25" />
           </div>
 
-          <div className="relative mx-auto grid min-h-[720px] max-w-[1440px] items-center gap-10 px-6 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:px-8">
+          <div className="relative mx-auto flex min-h-[720px] max-w-[1440px] items-center px-6 py-16 lg:px-8">
             <div className="max-w-3xl">
               <p className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/14 px-4 py-1.5 text-sm font-bold uppercase tracking-widest text-[#FFC66B] backdrop-blur">
                 <GraduationCap className="size-4" /> KCU Alumni
@@ -196,18 +174,6 @@ export default function AlumniPage() {
                   </a>
                 </Button>
               </div>
-            </div>
-
-            <div className="grid gap-4 sm:grid-cols-2">
-              {stats.map(({ label, value, icon: Icon }) => (
-                <div key={label} className="rounded-lg border border-white/15 bg-white/10 p-5 shadow-2xl backdrop-blur">
-                  <span className="grid size-11 place-items-center rounded-lg bg-[#FFC66B] text-[#0B6232]">
-                    <Icon className="size-5" />
-                  </span>
-                  <span className="mt-5 block text-3xl font-black text-white">{value}</span>
-                  <span className="mt-1 block text-sm font-semibold text-white/70">{label}</span>
-                </div>
-              ))}
             </div>
           </div>
         </section>
@@ -334,7 +300,7 @@ export default function AlumniPage() {
                   <article key={`${name}-${index}`} className="w-[min(86vw,380px)] overflow-hidden rounded-lg border border-slate-100 bg-white shadow-sm">
                     <div className="flex h-72 w-full items-center justify-center overflow-hidden bg-slate-100">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={image} alt={`${name} alumni profile`} className="h-full w-full object-contain" />
+                      <img src={image} alt={`${name} alumni profile`} className="h-full w-full object-cover object-center" />
                     </div>
                     <div className="p-5">
                       <h3 className="text-lg font-black text-slate-900">{name}</h3>
@@ -342,9 +308,7 @@ export default function AlumniPage() {
                       <p className="mt-3 text-sm font-bold text-slate-800">{role}</p>
                       <p className="text-sm text-slate-500">{organization}</p>
                       <p className="mt-4 text-sm leading-relaxed text-slate-500">&quot;{story}&quot;</p>
-                      <a href="https://www.linkedin.com" className="mt-5 inline-flex items-center text-sm font-black text-[#0B6232]">
-                        <LinkIcon className="mr-2 size-4" /> LinkedIn
-                      </a>
+                      
                     </div>
                   </article>
                 ))}
@@ -372,32 +336,15 @@ export default function AlumniPage() {
             </div>
 
             <div className="rounded-lg border border-slate-100 bg-slate-50 p-8">
-              <Briefcase className="size-10 text-[#0B6232]" />
-              <h2 className="mt-5 text-3xl font-black tracking-tight text-slate-950">Career & internship hub</h2>
+              <CalendarDays className="size-10 text-[#0B6232]" />
+              <h2 className="mt-5 text-3xl font-black tracking-tight text-slate-950">Upcoming alumni events</h2>
               <p className="mt-4 leading-relaxed text-slate-600">
-                Alumni can keep the network useful by sharing job openings, internships, graduate trainee programmes, and employer partnerships.
+                Reconnect with KCU through reunions, networking sessions, and alumni-led learning events.
               </p>
-              <div className="mt-6 grid gap-3 sm:grid-cols-2">
-                {["Alumni job board", "Internship leads", "Graduate trainee roles", "Employer partnerships"].map((item) => (
-                  <div key={item} className="flex items-center gap-3 rounded-lg bg-white p-3 text-sm font-bold text-slate-700">
-                    <CheckCircle2 className="size-4 text-[#0B6232]" /> {item}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="bg-slate-50 py-16">
-          <div className="mx-auto grid max-w-[1440px] gap-8 px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-8">
-            <div>
-              <p className="text-sm font-black uppercase tracking-[0.18em] text-[#0B6232]">Events & Voices</p>
-              <h2 className="mt-3 text-3xl font-black tracking-tight text-slate-950">Reasons to keep coming back</h2>
-              <div className="mt-8 grid gap-4">
-                {events.map((event) => (
-                  <article key={event.title} className="grid gap-4 rounded-lg border border-slate-100 bg-white p-5 shadow-sm sm:grid-cols-[88px_1fr]">
-                    <div className="rounded-lg bg-[#FFC66B]/25 p-4 text-center">
-                      <CalendarDays className="mx-auto mb-2 size-5 text-[#0B6232]" />
+              <div className="mt-6 grid gap-4">
+                {events.slice(0, 1).map((event) => (
+                  <article key={event.title} className="grid gap-4 rounded-lg border border-slate-100 bg-white p-4 shadow-sm sm:grid-cols-[78px_1fr]">
+                    <div className="rounded-lg bg-[#FFC66B]/25 p-3 text-center">
                       <p className="text-sm font-black text-[#0B6232]">{event.date}</p>
                     </div>
                     <div>
@@ -408,18 +355,6 @@ export default function AlumniPage() {
                   </article>
                 ))}
               </div>
-            </div>
-
-            <div className="grid content-start gap-4">
-              {testimonials.map((item) => (
-                <blockquote key={item.name} className="rounded-lg border border-slate-100 bg-white p-6 shadow-sm">
-                  <p className="text-lg font-semibold leading-relaxed text-slate-800">&quot;{item.quote}&quot;</p>
-                  <footer className="mt-5 text-sm font-black text-[#0B6232]">
-                    {item.name}
-                    <span className="block font-semibold text-slate-500">{item.meta}</span>
-                  </footer>
-                </blockquote>
-              ))}
             </div>
           </div>
         </section>

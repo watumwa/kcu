@@ -200,7 +200,7 @@ export const quickLinks = [
   {
     title: "Admissions",
     text: "Start your application and follow clear admissions steps for the next intake.",
-    href: "/admissions",
+    href: "/admissions/admission-requirements",
   },
   {
     title: "Programmes",
