@@ -1222,6 +1222,7 @@ function AcademicProgrammesPage({ variant }: { variant: AcademicProgrammeVariant
   const groups = getAcademicProgrammeGroups(variant);
   const totalCourses = groups.reduce((total, group) => total + group.courses.length, 0);
   const showCategoryColumn = variant === "schools";
+  const showAtAGlance = variant !== "schools" && variant !== "undergraduate" && variant !== "diploma" && variant !== "certificates";
 
   return (
     <>
@@ -1242,8 +1243,8 @@ function AcademicProgrammesPage({ variant }: { variant: AcademicProgrammeVariant
           <div className="absolute inset-0 bg-black/34" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/78 via-black/46 to-black/14" />
           <div className="absolute -bottom-20 right-12 hidden size-72 rounded-full border border-white/10 lg:block" />
-          <div className="relative z-10 mx-auto grid max-w-[1440px] gap-8 lg:grid-cols-[1fr_380px] lg:items-end">
-            <div>
+          <div className={`relative z-10 mx-auto max-w-[1440px] ${showAtAGlance ? "grid gap-8 lg:grid-cols-[1fr_380px] lg:items-end" : ""}`}>
+            <div className={showAtAGlance ? "" : "max-w-4xl"}>
               <p className="inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-black uppercase tracking-[0.2em] text-[#FFC66B] backdrop-blur">Academics</p>
               <h1 className="mt-5 max-w-4xl font-serif text-4xl font-black leading-tight text-white sm:text-5xl md:text-6xl">{copy.title}</h1>
               <p className="mt-5 max-w-3xl text-sm leading-7 text-white/80 sm:text-base sm:leading-8">
@@ -1258,22 +1259,24 @@ function AcademicProgrammesPage({ variant }: { variant: AcademicProgrammeVariant
                 </Button>
               </div>
             </div>
-            <div className="rounded-3xl border border-white/15 bg-white/10 p-5 text-white shadow-2xl backdrop-blur">
-              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">At a glance</p>
-              <div className="mt-4 grid grid-cols-2 gap-3">
-                <div className="rounded-2xl bg-white/10 p-4">
-                  <p className="text-3xl font-black">{totalCourses}</p>
-                  <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.14em] text-white/70">{copy.statLabel}</p>
+            {showAtAGlance && (
+              <div className="rounded-3xl border border-white/15 bg-white/10 p-5 text-white shadow-2xl backdrop-blur">
+                <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">At a glance</p>
+                <div className="mt-4 grid grid-cols-2 gap-3">
+                  <div className="rounded-2xl bg-white/10 p-4">
+                    <p className="text-3xl font-black">{totalCourses}</p>
+                    <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.14em] text-white/70">{copy.statLabel}</p>
+                  </div>
+                  <div className="rounded-2xl bg-[#FFC66B] p-4 text-[#0B6232]">
+                    <p className="text-3xl font-black">{groups.length}</p>
+                    <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.14em]">{copy.groupStatLabel}</p>
+                  </div>
                 </div>
-                <div className="rounded-2xl bg-[#FFC66B] p-4 text-[#0B6232]">
-                  <p className="text-3xl font-black">{groups.length}</p>
-                  <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.14em]">{copy.groupStatLabel}</p>
-                </div>
+                <p className="mt-4 rounded-2xl border border-white/10 bg-black/20 p-4 text-xs leading-6 text-white/75">
+                  This academics view lists programme names and durations only. Fee amounts remain on the admissions fee structure page.
+                </p>
               </div>
-              <p className="mt-4 rounded-2xl border border-white/10 bg-black/20 p-4 text-xs leading-6 text-white/75">
-                This academics view lists programme names and durations only. Fee amounts remain on the admissions fee structure page.
-              </p>
-            </div>
+            )}
           </div>
         </section>
 
@@ -1410,9 +1413,9 @@ function ProfilePhoto({ alt, className, sizes, src }: { alt: string; className: 
 function DeanOfStudentsProgramme({ deanOfStudents }: { deanOfStudents: NonNullable<AboutPageContent["deanOfStudents"]> }) {
   return (
     <>
-      <section className="grid gap-6 lg:grid-cols-[380px_1fr] lg:items-stretch">
+      <section className="grid gap-6 lg:grid-cols-[380px_1fr] lg:items-start">
         <article className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5">
-          <div className="relative min-h-[440px] bg-slate-200">
+          <div className="relative h-[360px] bg-slate-200 sm:h-[400px] lg:h-[380px]">
             <ProfilePhoto
               src={deanOfStudents.dean.image}
               alt={deanOfStudents.dean.name}
@@ -1531,7 +1534,7 @@ function LibraryProgramme({ libraryPage }: { libraryPage: NonNullable<AboutPageC
           <p className="mt-6 text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">University Librarian&apos;s Message</p>
           <div className="mt-3 space-y-5">
             {libraryPage.librarian.message.map((paragraph) => (
-              <p key={paragraph} className="max-w-4xl text-[13px] leading-6 text-slate-600 sm:text-sm sm:leading-7">
+              <p key={paragraph} className="max-w-4xl text-[13px] leading-6 text-slate-600 sm:text-[15px] sm:leading-7">
                 {paragraph}
               </p>
             ))}
@@ -1824,9 +1827,6 @@ function CounsellingProgramme({ counselling }: { counselling: NonNullable<AboutP
 }
 
 function FeesStructurePage() {
-  const totalCourses = feeProgrammes.reduce((total, group) => total + group.courses.length, 0);
-  const totalTables = feeProgrammes.length;
-
   return (
     <>
       <Navbar />
@@ -1846,8 +1846,8 @@ function FeesStructurePage() {
           <div className="absolute inset-0 bg-black/55" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent" />
           <div className="absolute -bottom-20 right-12 hidden size-72 rounded-full border border-white/10 lg:block" />
-          <div className="relative z-10 mx-auto grid max-w-[1440px] gap-8 lg:grid-cols-[1fr_380px] lg:items-end">
-            <div>
+          <div className="relative z-10 mx-auto max-w-[1440px]">
+            <div className="max-w-4xl">
               <p className="inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-black uppercase tracking-[0.2em] text-[#FFC66B] backdrop-blur">Admissions</p>
               <h1 className="mt-5 max-w-4xl font-serif text-4xl font-black leading-tight text-white sm:text-5xl md:text-6xl">Fees Structure by Course</h1>
               <p className="mt-5 max-w-3xl text-sm leading-7 text-white/80 sm:text-base sm:leading-8">
@@ -1861,22 +1861,6 @@ function FeesStructurePage() {
                   <Link href="/admissions/admission-requirements">Admission Requirements</Link>
                 </Button>
               </div>
-            </div>
-            <div className="rounded-3xl border border-white/15 bg-white/10 p-5 text-white shadow-2xl backdrop-blur">
-              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">At a glance</p>
-              <div className="mt-4 grid grid-cols-2 gap-3">
-                <div className="rounded-2xl bg-white/10 p-4">
-                  <p className="text-3xl font-black">{totalCourses}</p>
-                  <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.14em] text-white/70">Programmes</p>
-                </div>
-                <div className="rounded-2xl bg-[#FFC66B] p-4 text-[#0B6232]">
-                  <p className="text-3xl font-black">{totalTables}</p>
-                  <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.14em]">Fee Tables</p>
-                </div>
-              </div>
-              <p className="mt-4 rounded-2xl border border-white/10 bg-black/20 p-4 text-xs leading-6 text-white/75">
-                Undergraduate and degree programme figures are listed per semester. Certificate programme figures are listed by the course duration shown.
-              </p>
             </div>
           </div>
         </section>

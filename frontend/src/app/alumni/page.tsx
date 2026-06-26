@@ -76,12 +76,21 @@ const notableAlumni = [
     image: "/alumni/Dr. Hashaka Gerald.jpeg",
   },
   {
-    name: "Grace Atim",
+    name: "Mugisha Brian",
     programme: "",
-    role: "Operations Manager",
+    role: "Business Administrator",
     organization: "",
-    story: "KCU helped me turn service training into a career built on confidence and excellence.",
-    image: "",
+    story: "Today, I actively drive impactful growth strategies within my organization, applying the agile mindset I developed on campus. KCU did not just give me a degree; it transformed me into a catalyst for regional economic development.",
+    image: "/alumni/Mugisha Brian.jpeg",
+    imageClassName: "h-full w-full object-cover object-[center_35%]",
+  },
+  {
+    name: "Kwizera Thomas",
+    programme: "",
+    role: "Oil Mining Expert",
+    organization: "",
+    story: "Today, am working in the gold mining industry, making me one of the beneficiaries of the course. My academic background has helped me understand geological formations, mineral deposits and mining processes, contributing to my professional success",
+    image: "/alumni/Kwizera Thomas.jpeg",
   },
 ];
 
@@ -296,11 +305,11 @@ export default function AlumniPage() {
               <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-slate-50 to-transparent" />
               <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-slate-50 to-transparent" />
               <div className="flex w-max gap-6 py-1 alumni-marquee hover:[animation-play-state:paused]">
-                {movingAlumni.map(({ name, programme, role, organization, story, image }, index) => (
+                {movingAlumni.map(({ name, programme, role, organization, story, image, imageClassName }, index) => (
                   <article key={`${name}-${index}`} className="w-[min(86vw,380px)] overflow-hidden rounded-lg border border-slate-100 bg-white shadow-sm">
                     <div className="flex h-72 w-full items-center justify-center overflow-hidden bg-slate-100">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={image} alt={`${name} alumni profile`} className="h-full w-full object-cover object-center" />
+                      <img src={image} alt={`${name} alumni profile`} className={imageClassName ?? "h-full w-full object-cover object-center"} />
                     </div>
                     <div className="p-5">
                       <h3 className="text-lg font-black text-slate-900">{name}</h3>

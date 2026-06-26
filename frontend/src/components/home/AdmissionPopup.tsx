@@ -58,7 +58,7 @@ export default function AdmissionPopup() {
           {/* Image */}
           <div className="relative aspect-square bg-white p-3">
             <Image
-              src="/images/intake/intake-2026.jpg"
+              src="/public/graduation/graduation-advert.jpeg"
               alt="August 2026 intake at King Ceasor University"
               width={640}
               height={640}

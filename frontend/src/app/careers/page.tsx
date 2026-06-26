@@ -5,15 +5,14 @@ import {
   BriefcaseBusiness,
   CalendarDays,
   CheckCircle2,
-  ChevronRight,
   Clock3,
+  Download,
   FileText,
   HeartHandshake,
   Mail,
   MapPin,
   Search,
 } from "lucide-react";
-import Link from "next/link";
 import { useMemo, useState } from "react";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
@@ -26,8 +25,9 @@ const vacancies = [
     type: "Full-time / Part-time",
     location: "KCU Main Campus - Bunga",
     deadline: "Deadline: 20-May-2025",
-    summary: "",
+    summary: "Teach, supervise, assess and support students across KCU academic programmes while contributing to research and community engagement.",
     requirements: ["Relevant academic qualifications", "Teaching, research or professional experience", "Commitment to student-centred learning"],
+    //pdfHref: "",
   },
   {
     title: "Administrative Staff",
@@ -35,8 +35,9 @@ const vacancies = [
     type: "Full-time",
     location: "KCU Main Campus - Bunga",
     deadline: "Deadline: 20-May-2025",
-    summary: "",
+    summary: "Support daily university operations, records, communication and service delivery across administrative offices.",
     requirements: ["Strong communication skills", "Relevant professional training", "Integrity, discretion and service orientation"],
+    //pdfHref: "/careers/administrative-staff-job-details.pdf",
   },
   {
     title: "Technical and Support Staff",
@@ -44,8 +45,39 @@ const vacancies = [
     type: "Full-time / Contract",
     location: "KCU Main Campus - Bunga",
     deadline: "Deadline: 20-May-2025",
-    summary: "",
+    summary: "Provide technical, facilities and operational support that keeps campus services safe, reliable and responsive.",
     requirements: ["Role-specific technical competence", "Teamwork and reliability", "Ability to support staff and students professionally"],
+    //pdfHref: "/careers/technical-support-staff-job-details.pdf",
+  },
+  {
+    title: "Student Affairs Officer",
+    department: "Student Affairs",
+    type: "Full-time",
+    location: "KCU Main Campus - Bunga",
+    deadline: "Deadline: 20-May-2025",
+    summary: "Coordinate student welfare, engagement, guidance and support services in collaboration with academic and administrative teams.",
+    requirements: ["Experience supporting students or young adults", "Strong counselling and coordination skills", "Respectful and confidential service mindset"],
+    //pdfHref: "/careers/student-affairs-officer-job-details.pdf",
+  },
+  {
+    title: "ICT Support Officer",
+    department: "Information Technology",
+    type: "Full-time",
+    location: "KCU Main Campus - Bunga",
+    deadline: "Deadline: 20-May-2025",
+    summary: "Support ICT systems, user devices, campus connectivity and digital learning tools used by students and staff.",
+    requirements: ["Relevant ICT qualification", "Hardware, software and network troubleshooting skills", "Customer-focused technical support experience"],
+    //pdfHref: "/careers/ict-support-officer-job-details.pdf",
+  },
+  {
+    title: "Library Assistant",
+    department: "Library Services",
+    type: "Full-time / Part-time",
+    location: "KCU Main Campus - Bunga",
+    deadline: "Deadline: 20-May-2025",
+    summary: "Assist library users, organize learning resources and support access to print and digital academic materials.",
+    requirements: ["Library or information science training", "Good organization and record keeping", "Friendly support for students and faculty"],
+    //pdfHref: "/careers/library-assistant-job-details.pdf",
   },
 ];
 
@@ -74,55 +106,8 @@ export default function CareersPage() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-white">
-        <div className="border-b border-slate-100 bg-white">
-          <div className="mx-auto flex max-w-[1440px] items-center gap-2 px-4 py-3 text-xs text-slate-500 sm:px-6 lg:px-8">
-            <Link href="/" className="hover:text-[#0B6232]">Home</Link>
-            <ChevronRight className="size-3.5" />
-            <span className="font-semibold text-[#0B6232]">Careers</span>
-          </div>
-        </div>
-
-        <section className="relative overflow-hidden px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: "url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1800&q=85')" }}
-          />
-          <div className="absolute inset-0 bg-slate-950/65" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0B6232]/95 via-slate-950/70 to-slate-950/20" />
-          <div className="relative z-10 mx-auto grid max-w-[1440px] gap-10 lg:grid-cols-[1fr_360px] lg:items-end">
-            <div className="max-w-3xl">
-              <p className="text-xs font-black uppercase tracking-[0.2em] text-[#FFC66B]">Work With KCU</p>
-              <h1 className="mt-3 font-serif text-4xl font-black leading-tight text-white sm:text-5xl lg:text-6xl">Careers at King Ceasor University</h1>
-              <p className="mt-5 max-w-2xl text-base leading-8 text-white/80">
-                Join a growing university community committed to academic excellence, innovation, student success and service to society.
-              </p>
-              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-                <Button asChild className="h-12 rounded-xl bg-[#FFC66B] px-6 font-black text-[#0B6232] hover:bg-[#FFC66B]">
-                  <a href="mailto:hr@kcu.ac.ug?subject=Career%20Application%20-%20King%20Ceasor%20University">
-                    Apply by Email <ArrowRight className="ml-2 size-4" />
-                  </a>
-                </Button>
-                <Button asChild variant="outline" className="h-12 rounded-xl border-white/40 bg-white/10 px-6 font-bold text-white backdrop-blur hover:bg-white hover:text-[#0B6232]">
-                  <a href="#vacancies">View Openings</a>
-                </Button>
-              </div>
-            </div>
-
-            <div className="rounded-2xl border border-white/15 bg-white/10 p-5 text-white shadow-2xl shadow-slate-950/25 backdrop-blur-md">
-              <div className="grid size-11 place-items-center rounded-xl bg-[#FFC66B] text-[#0B6232]">
-                <BriefcaseBusiness className="size-5" />
-              </div>
-              <p className="mt-4 text-sm font-black uppercase tracking-[0.16em] text-[#FFC66B]">Review Opportunities</p>
-              <p className="mt-2 text-2xl font-black"></p>
-              <p className="mt-2 text-sm leading-6 text-white/75">
-                
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="px-4 py-12 sm:px-6 sm:py-16 lg:px-8" id="vacancies">
+      <main className="min-h-screen bg-white pt-16 sm:pt-20 lg:pt-24 xl:pt-[8.5rem]">
+        <section className="px-4 pb-12 pt-8 sm:px-6 sm:pb-16 sm:pt-10 lg:px-8" id="vacancies">
           <div className="mx-auto max-w-[1440px]">
             <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
               <div>
@@ -145,7 +130,7 @@ export default function CareersPage() {
 
             <div className="mt-8 grid gap-5 lg:grid-cols-3">
               {filteredVacancies.map((job) => (
-                <article key={job.title} className="flex min-h-[390px] flex-col rounded-2xl border border-slate-100 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-[#0B6232]/30 hover:shadow-lg">
+                <article key={job.title} className="flex min-h-[500px] flex-col rounded-2xl border border-slate-100 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-[#0B6232]/30 hover:shadow-lg">
                   <div className="flex items-start justify-between gap-4">
                     <div className="grid size-12 place-items-center rounded-xl bg-[#0B6232]/10 text-[#0B6232]">
                       <BriefcaseBusiness className="size-5" />
@@ -169,11 +154,18 @@ export default function CareersPage() {
                       </p>
                     ))}
                   </div>
-                  <Button asChild className="mt-auto h-11 rounded-xl bg-[#0B6232] px-5 font-black text-white hover:bg-[#0B6232]">
-                    <a href={`mailto:hr@kcu.ac.ug?subject=Career%20Application%20-%20${encodeURIComponent(job.title)}`}>
-                      Apply Here <ArrowRight className="ml-2 size-4" />
-                    </a>
-                  </Button>
+                  <div className="mt-auto grid gap-3 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
+                    <Button asChild className="h-11 rounded-xl bg-[#0B6232] px-5 font-black text-white hover:bg-[#0B6232]">
+                      <a href={`mailto:hr@kcu.ac.ug?subject=Career%20Application%20-%20${encodeURIComponent(job.title)}`}>
+                        Apply Here <ArrowRight className="ml-2 size-4" />
+                      </a>
+                    </Button>
+                    <Button asChild variant="outline" className="h-11 rounded-xl border-[#0B6232]/20 px-5 font-black text-[#0B6232] hover:bg-[#0B6232]/5">
+                      <a href={job.pdfHref} download>
+                        Download Details <Download className="ml-2 size-4" />
+                      </a>
+                    </Button>
+                  </div>
                 </article>
               ))}
             </div>

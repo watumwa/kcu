@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowRight, ChevronRight, ExternalLink, X } from "lucide-react";
+import { ArrowRight, ChevronRight, ExternalLink, FileText, X } from "lucide-react";
 
 type NewsletterArticle = {
   date: string;
@@ -407,8 +407,11 @@ function NewsletterStoryModal({ article, onClose }: { article: NewsletterArticle
 
 export default function NewsletterPage() {
   const [selectedArticle, setSelectedArticle] = useState<NewsletterArticle | null>(null);
-  const featuredArticle = newsletterArticles[0];
-  const remainingArticles = newsletterArticles.slice(1);
+  const latestNewsArticles = newsletterArticles.slice(0, 4);
+  const newsletterDigestArticles = newsletterArticles.slice(4, 10);
+  const eventArticles = newsletterArticles
+    .filter((article) => ["Community Outreach", "Student Life", "Events", "Community"].includes(article.category))
+    .slice(0, 6);
 
   return (
     <main className="min-h-screen bg-white pt-16 sm:pt-20 lg:pt-[8.5rem]">
@@ -427,7 +430,7 @@ export default function NewsletterPage() {
         <div className="absolute inset-0 bg-black/50" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/55 to-transparent" />
         <div className="absolute -bottom-20 right-8 hidden size-72 rounded-full border border-white/10 lg:block" />
-        <div className="relative z-10 mx-auto flex max-w-[1440px] flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+        <div className="relative z-10 mx-auto max-w-[1440px]">
           <div>
             <p className="inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-black uppercase tracking-[0.2em] text-[#FFC66B] backdrop-blur">News &amp; Updates</p>
             <h1 className="mt-5 max-w-3xl font-serif text-4xl font-black leading-tight text-white sm:text-5xl md:text-6xl">
@@ -437,105 +440,180 @@ export default function NewsletterPage() {
               Stay informed. Stay inspired. The latest from King Ceasor University.
             </p>
           </div>
-          <div className="rounded-3xl border border-white/15 bg-white/10 p-5 text-white shadow-2xl backdrop-blur">
-            <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">Newsroom</p>
-            <p className="mt-2 text-4xl font-black">{newsletterArticles.length}</p>
-            <p className="text-xs font-semibold text-white/70">Published updates</p>
-          </div>
         </div>
       </section>
 
-      <section className="bg-slate-50/70 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+      <section id="latest-news" className="bg-slate-50/70 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
         <div className="mx-auto max-w-[1440px]">
-          <article className="group overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-2xl shadow-slate-900/5">
-            <div className="grid lg:grid-cols-[0.85fr_1.15fr]">
-              <div className="bg-[#0B6232] p-8 text-white sm:p-10">
-                <p className="text-[10px] font-black uppercase tracking-[0.24em] text-[#FFC66B]">Featured Update</p>
-                <h2 className="mt-4 text-3xl font-black leading-tight sm:text-4xl">{featuredArticle.title}</h2>
-                <p className="mt-4 text-sm leading-7 text-white/80 sm:text-base">{featuredArticle.excerpt}</p>
+          <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div className="max-w-2xl">
+              <p className="text-[10px] font-black uppercase tracking-[0.22em] text-[#0B6232]">Latest News</p>
+              <h2 className="mt-2 text-3xl font-black leading-tight text-slate-950 sm:text-4xl">Current updates from KCU</h2>
+              <p className="mt-3 text-sm leading-7 text-slate-600 sm:text-base">
+                Follow recent university announcements, partnerships, student milestones, and community stories.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-2 text-xs font-black">
+              <a href="#latest-news" className="rounded-full bg-[#0B6232] px-4 py-2 text-white">Latest News</a>
+              <a href="#newsletter" className="rounded-full border border-[#0B6232]/15 bg-white px-4 py-2 text-[#0B6232]">News Letter</a>
+              <a href="#events" className="rounded-full border border-[#0B6232]/15 bg-white px-4 py-2 text-[#0B6232]">Events</a>
+            </div>
+          </div>
+
+          <article className="group overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5">
+            <div className="grid lg:grid-cols-[1.05fr_0.95fr]">
+              <div className="relative min-h-[320px] bg-slate-100">
+                {latestNewsArticles[0].image && (
+                  <Image
+                    src={latestNewsArticles[0].image}
+                    alt={latestNewsArticles[0].imageAlt ?? latestNewsArticles[0].title}
+                    fill
+                    sizes="(min-width: 1024px) 52vw, 100vw"
+                    className="object-cover transition duration-700 group-hover:scale-105"
+                  />
+                )}
+              </div>
+              <div className="flex flex-col justify-center p-6 sm:p-8 lg:p-10">
+                <div className="flex flex-wrap items-center gap-3">
+                  <span className="rounded-full bg-[#FFC66B]/30 px-3 py-1 text-xs font-black text-[#0B6232]">{latestNewsArticles[0].category}</span>
+                  <span className="text-xs font-black uppercase tracking-[0.16em] text-slate-500">{latestNewsArticles[0].date}</span>
+                </div>
+                <h3 className="mt-5 text-2xl font-black leading-tight text-slate-950 sm:text-3xl">{latestNewsArticles[0].title}</h3>
+                <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base">{latestNewsArticles[0].excerpt}</p>
                 <button
                   type="button"
-                  onClick={() => setSelectedArticle(featuredArticle)}
-                  className="mt-7 inline-flex items-center rounded-xl bg-[#FFC66B] px-5 py-3 text-sm font-black text-[#0B6232] transition hover:translate-x-1"
+                  onClick={() => setSelectedArticle(latestNewsArticles[0])}
+                  className="mt-7 inline-flex w-fit items-center rounded-xl bg-[#0B6232] px-5 py-3 text-sm font-black text-white transition hover:bg-[#084a26]"
                 >
                   Read More <ArrowRight className="ml-2 size-4" />
                 </button>
               </div>
-              <div className="p-8 sm:p-10">
-                <div className="flex flex-wrap items-center gap-3">
-                  <span className="rounded-full bg-[#FFC66B]/25 px-3 py-1 text-xs font-black text-[#0B6232]">{featuredArticle.category}</span>
-                  <span className="text-xs font-black uppercase tracking-[0.16em] text-slate-500">{featuredArticle.date}</span>
-                </div>
-                {featuredArticle.image && (
-                  <div className="relative mt-6 aspect-[16/9] overflow-hidden rounded-2xl bg-slate-100">
+            </div>
+          </article>
+
+          <div className="mt-6 grid gap-5 md:grid-cols-3">
+            {latestNewsArticles.slice(1).map((article) => (
+              <article key={`${article.date}-${article.title}`} className="group overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm shadow-slate-900/5 transition hover:-translate-y-1 hover:border-[#0B6232]/25 hover:shadow-xl hover:shadow-slate-900/10">
+                {article.image && (
+                  <div className="relative aspect-[16/9] bg-slate-100">
                     <Image
-                      src={featuredArticle.image}
-                      alt={featuredArticle.imageAlt ?? featuredArticle.title}
+                      src={article.image}
+                      alt={article.imageAlt ?? article.title}
                       fill
-                      sizes="(min-width: 1024px) 58vw, calc(100vw - 64px)"
+                      sizes="(min-width: 768px) 33vw, 100vw"
                       className="object-cover transition duration-700 group-hover:scale-105"
                     />
                   </div>
                 )}
-                {featuredArticle.highlights?.length ? (
-                  <div className="mt-5 grid gap-3 sm:grid-cols-3">
-                    {featuredArticle.highlights.map((highlight) => (
-                      <div key={`${highlight.label}-${highlight.value}`} className="rounded-2xl border border-slate-100 bg-slate-50 p-4">
-                        <p className="text-[10px] font-black uppercase tracking-[0.16em] text-[#0B6232]">{highlight.label}</p>
-                        <p className="mt-2 text-sm font-black leading-5 text-slate-900">{highlight.value}</p>
-                      </div>
-                    ))}
+                <div className="p-5">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="rounded-full bg-[#FFC66B]/25 px-3 py-1 text-[10px] font-black text-[#0B6232]">{article.category}</span>
+                    <span className="text-[10px] font-black uppercase tracking-[0.14em] text-slate-400">{article.date}</span>
                   </div>
-                ) : null}
-                <div className="mt-8 grid gap-4 sm:grid-cols-3">
-                  {newsletterArticles.slice(0, 3).map((article, index) => (
-                    <button
-                      key={`${article.date}-${article.title}`}
-                      type="button"
-                      onClick={() => setSelectedArticle(article)}
-                      className="rounded-2xl border border-slate-100 bg-slate-50 p-5 text-left transition hover:border-[#0B6232]/25 hover:bg-white hover:shadow-sm"
-                    >
-                      <p className="text-3xl font-black text-[#0B6232]">{String(index + 1).padStart(2, "0")}</p>
-                      <p className="mt-2 text-xs font-black uppercase tracking-wide text-slate-500">{article.category}</p>
-                    </button>
-                  ))}
+                  <h3 className="mt-4 text-lg font-black leading-tight text-slate-950">{article.title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-slate-600">{article.excerpt}</p>
+                  <button
+                    type="button"
+                    onClick={() => setSelectedArticle(article)}
+                    className="mt-5 inline-flex items-center text-sm font-black text-[#0B6232] transition group-hover:text-slate-950"
+                  >
+                    Read More <ArrowRight className="ml-2 size-4 transition group-hover:translate-x-1" />
+                  </button>
                 </div>
-              </div>
-            </div>
-          </article>
-
-          <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-            {remainingArticles.map((article, index) => (
-              <article key={`${article.date}-${article.title}`} className="group flex min-h-[280px] flex-col justify-between overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5 transition hover:-translate-y-1 hover:border-[#0B6232]/25 hover:shadow-2xl hover:shadow-slate-900/10">
-                <div className="h-1.5 bg-gradient-to-r from-[#0B6232] via-[#FFC66B] to-[#0B6232]" />
-                <div className="p-6">
-                  <div className="flex items-start justify-between gap-4">
-                    <div className="grid size-14 place-items-center rounded-2xl bg-[#0B6232] text-sm font-black text-[#FFC66B] shadow-lg shadow-[#0B6232]/20">
-                      {String(index + 2).padStart(2, "0")}
-                    </div>
-                    <span className="rounded-full bg-[#FFC66B]/20 px-3 py-1 text-[10px] font-black uppercase tracking-wide text-[#0B6232]">
-                      {article.category}
-                    </span>
-                  </div>
-                  <p className="mt-5 text-xs font-black uppercase tracking-[0.16em] text-slate-500">{article.date}</p>
-                  <h2 className="mt-2 text-xl font-black leading-tight text-slate-950">{article.title}</h2>
-                  <p className="mt-3 text-sm leading-7 text-slate-600">{article.excerpt}</p>
-                </div>
-                <button
-                  type="button"
-                  onClick={() => setSelectedArticle(article)}
-                  className="mx-6 mb-6 inline-flex w-fit items-center text-sm font-black text-[#0B6232] transition group-hover:text-slate-950"
-                >
-                  Read More <ArrowRight className="ml-2 size-4 transition group-hover:translate-x-1" />
-                </button>
               </article>
             ))}
           </div>
+        </div>
+      </section>
 
-          <div className="mt-12 flex items-center justify-center gap-3 text-sm font-black text-slate-500">
-            <span className="rounded-full border border-slate-200 bg-white px-4 py-2 shadow-sm">Previous</span>
-            <span className="grid size-10 place-items-center rounded-full bg-[#0B6232] text-white shadow-lg shadow-[#0B6232]/20">1</span>
-            <span className="rounded-full border border-slate-200 bg-white px-4 py-2 shadow-sm">Next</span>
+      <section id="newsletter" className="bg-white px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+        <div className="mx-auto max-w-[1440px]">
+          <div className="grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
+            <div className="rounded-2xl bg-[#0B6232] p-7 text-white shadow-xl shadow-[#0B6232]/15 sm:p-8">
+              <p className="text-[10px] font-black uppercase tracking-[0.22em] text-[#FFC66B]">News Letter</p>
+              <h2 className="mt-3 text-3xl font-black leading-tight sm:text-4xl">KCU newsletter digest</h2>
+              <p className="mt-4 text-sm leading-7 text-white/78 sm:text-base">
+                A curated round-up of university stories, partnerships, student opportunities, and institutional milestones.
+              </p>
+              <Link
+                href="/newsletter/kcu-newsletter-digest.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex items-center rounded-xl bg-[#FFC66B] px-5 py-3 text-sm font-black text-[#0B6232] transition hover:bg-[#f4b850]"
+              >
+                <FileText className="mr-2 size-4" /> View Newsletter PDF
+              </Link>
+              <div className="mt-7 grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
+                {newsletterDigestArticles.slice(0, 3).map((article, index) => (
+                  <button
+                    key={`${article.date}-${article.title}`}
+                    type="button"
+                    onClick={() => setSelectedArticle(article)}
+                    className="rounded-xl border border-white/10 bg-white/10 p-4 text-left transition hover:bg-white/15"
+                  >
+                    <p className="text-2xl font-black text-[#FFC66B]">{String(index + 1).padStart(2, "0")}</p>
+                    <p className="mt-1 text-xs font-black uppercase tracking-wide text-white/60">{article.category}</p>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="grid gap-4 md:grid-cols-2">
+              {newsletterDigestArticles.map((article) => (
+                <article key={`${article.date}-${article.title}`} className="rounded-2xl border border-slate-100 bg-slate-50 p-5 transition hover:border-[#0B6232]/25 hover:bg-white hover:shadow-lg hover:shadow-slate-900/5">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="rounded-full bg-[#0B6232]/10 px-3 py-1 text-[10px] font-black uppercase tracking-wide text-[#0B6232]">{article.category}</span>
+                    <span className="text-[10px] font-black uppercase tracking-[0.14em] text-slate-400">{article.date}</span>
+                  </div>
+                  <h3 className="mt-4 text-lg font-black leading-tight text-slate-950">{article.title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-slate-600">{article.excerpt}</p>
+                  <button
+                    type="button"
+                    onClick={() => setSelectedArticle(article)}
+                    className="mt-5 inline-flex items-center text-sm font-black text-[#0B6232]"
+                  >
+                    Read Story <ArrowRight className="ml-2 size-4" />
+                  </button>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="events" className="bg-slate-50/70 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+        <div className="mx-auto max-w-[1440px]">
+          <div className="mb-8 max-w-2xl">
+            <p className="text-[10px] font-black uppercase tracking-[0.22em] text-[#0B6232]">Events</p>
+            <h2 className="mt-2 text-3xl font-black leading-tight text-slate-950 sm:text-4xl">Campus events and community moments</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-600 sm:text-base">
+              See event highlights from student life, public lectures, outreach programmes, and community engagements.
+            </p>
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+            {eventArticles.map((article, index) => (
+              <article key={`${article.date}-${article.title}`} className="flex min-h-[260px] flex-col rounded-2xl border border-slate-100 bg-white p-6 shadow-sm shadow-slate-900/5 transition hover:-translate-y-1 hover:border-[#0B6232]/25 hover:shadow-xl hover:shadow-slate-900/10">
+                <div className="flex items-start justify-between gap-4">
+                  <div className="grid size-12 place-items-center rounded-xl bg-[#FFC66B] text-sm font-black text-[#0B6232]">
+                    {String(index + 1).padStart(2, "0")}
+                  </div>
+                  <span className="rounded-full bg-[#0B6232] px-3 py-1 text-[10px] font-black uppercase tracking-wide text-white">
+                    {article.category}
+                  </span>
+                </div>
+                <p className="mt-5 text-xs font-black uppercase tracking-[0.16em] text-slate-500">{article.date}</p>
+                <h3 className="mt-2 text-xl font-black leading-tight text-slate-950">{article.title}</h3>
+                <p className="mt-3 text-sm leading-7 text-slate-600">{article.excerpt}</p>
+                <button
+                  type="button"
+                  onClick={() => setSelectedArticle(article)}
+                  className="mt-auto inline-flex w-fit items-center pt-5 text-sm font-black text-[#0B6232] transition hover:text-slate-950"
+                >
+                  Read More <ArrowRight className="ml-2 size-4" />
+                </button>
+              </article>
+            ))}
           </div>
         </div>
       </section>
