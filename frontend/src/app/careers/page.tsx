@@ -27,7 +27,7 @@ const vacancies = [
     deadline: "Deadline: 20-May-2025",
     summary: "Teach, supervise, assess and support students across KCU academic programmes while contributing to research and community engagement.",
     requirements: ["Relevant academic qualifications", "Teaching, research or professional experience", "Commitment to student-centred learning"],
-    //pdfHref: "",
+    pdfHref: "/careers/academic-staff-job-details.pdf",
   },
   {
     title: "Administrative Staff",
@@ -37,7 +37,7 @@ const vacancies = [
     deadline: "Deadline: 20-May-2025",
     summary: "Support daily university operations, records, communication and service delivery across administrative offices.",
     requirements: ["Strong communication skills", "Relevant professional training", "Integrity, discretion and service orientation"],
-    //pdfHref: "/careers/administrative-staff-job-details.pdf",
+    pdfHref: "/careers/administrative-staff-job-details.pdf",
   },
   {
     title: "Technical and Support Staff",
@@ -47,7 +47,7 @@ const vacancies = [
     deadline: "Deadline: 20-May-2025",
     summary: "Provide technical, facilities and operational support that keeps campus services safe, reliable and responsive.",
     requirements: ["Role-specific technical competence", "Teamwork and reliability", "Ability to support staff and students professionally"],
-    //pdfHref: "/careers/technical-support-staff-job-details.pdf",
+    pdfHref: "/careers/technical-support-staff-job-details.pdf",
   },
   {
     title: "Student Affairs Officer",
@@ -57,7 +57,7 @@ const vacancies = [
     deadline: "Deadline: 20-May-2025",
     summary: "Coordinate student welfare, engagement, guidance and support services in collaboration with academic and administrative teams.",
     requirements: ["Experience supporting students or young adults", "Strong counselling and coordination skills", "Respectful and confidential service mindset"],
-    //pdfHref: "/careers/student-affairs-officer-job-details.pdf",
+    pdfHref: "/careers/student-affairs-officer-job-details.pdf",
   },
   {
     title: "ICT Support Officer",
@@ -67,7 +67,7 @@ const vacancies = [
     deadline: "Deadline: 20-May-2025",
     summary: "Support ICT systems, user devices, campus connectivity and digital learning tools used by students and staff.",
     requirements: ["Relevant ICT qualification", "Hardware, software and network troubleshooting skills", "Customer-focused technical support experience"],
-    //pdfHref: "/careers/ict-support-officer-job-details.pdf",
+    pdfHref: "/careers/ict-support-officer-job-details.pdf",
   },
   {
     title: "Library Assistant",
@@ -77,7 +77,7 @@ const vacancies = [
     deadline: "Deadline: 20-May-2025",
     summary: "Assist library users, organize learning resources and support access to print and digital academic materials.",
     requirements: ["Library or information science training", "Good organization and record keeping", "Friendly support for students and faculty"],
-    //pdfHref: "/careers/library-assistant-job-details.pdf",
+    pdfHref: "/careers/library-assistant-job-details.pdf",
   },
 ];
 
