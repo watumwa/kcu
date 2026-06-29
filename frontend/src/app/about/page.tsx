@@ -875,15 +875,6 @@ export default function AboutPage() {
     <>
       <Navbar />
       <main className="min-h-screen bg-white pt-16 sm:pt-20 lg:pt-[8.5rem]">
-        {/* Breadcrumb */}
-        <div className="border-b border-slate-100 bg-[#FFFFFF]">
-          <div className="mx-auto flex max-w-[1440px] items-center gap-2 overflow-x-auto px-4 py-3 text-xs text-slate-500 sm:px-6 lg:px-8">
-            <Link href="/" className="shrink-0 hover:text-[#0B6232]">Home</Link>
-            <ChevronRight className="size-3.5 shrink-0" />
-            <span className="shrink-0 font-semibold text-[#0B6232]">About Us</span>
-          </div>
-        </div>
-
         {/* Hero */}
         <section className="relative overflow-hidden px-4 py-14 sm:px-6 sm:py-24 lg:px-8 lg:py-28">
           <div className="absolute inset-0 bg-cover bg-[center_42%] bg-no-repeat" style={{ backgroundImage: "url('/images/kcu-2026/graduates-welcome-group.webp')" }} />

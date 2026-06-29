@@ -614,7 +614,6 @@ const contentPages: Record<string, AboutPageContent> = {
   "student/dean-of-students": {
     eyebrow: "Student Welfare",
     title: "Dean of Students",
-    heroImage: "/University Management/Fr. Dr. Lumala Aloysius Gonzagga.jpeg",
     intro:
       "The Office of the Dean of Students supports a university community shaped by academic excellence, integrity, holistic development, welfare, guidance, and responsible service to society.",
     sections: [],
@@ -743,7 +742,6 @@ const contentPages: Record<string, AboutPageContent> = {
   "services/counselling": {
     eyebrow: "Services",
     title: "Counselling and Guidance",
-    heroImage: "/Counsellor/DSC09887.jpeg",
     intro:
       "The KCU Counselling and Guidance Programme supports students and staff through academic pressure, psychosocial wellbeing, university transition, and personal development.",
     sections: [],
@@ -1097,7 +1095,6 @@ const academicRouteVariants: Record<string, AcademicProgrammeVariant> = {
 const academicPageCopy: Record<
   AcademicProgrammeVariant,
   {
-    crumb: string;
     title: string;
     intro: string;
     statLabel: string;
@@ -1105,7 +1102,6 @@ const academicPageCopy: Record<
   }
 > = {
   schools: {
-    crumb: "Schools",
     title: "Schools and Programmes",
     intro:
       "Browse King Ceasor University programmes by their respective schools, with the official duration for each course.",
@@ -1113,7 +1109,6 @@ const academicPageCopy: Record<
     groupStatLabel: "Schools",
   },
   courses: {
-    crumb: "Courses",
     title: "Courses and Programmes",
     intro:
       "Review KCU degree, diploma, higher education certificate, and professional certificate programmes by school and duration.",
@@ -1121,7 +1116,6 @@ const academicPageCopy: Record<
     groupStatLabel: "Tables",
   },
   undergraduate: {
-    crumb: "Undergraduate",
     title: "Undergraduate Degree Programmes",
     intro:
       "Explore bachelor's degree programmes offered across KCU schools, with the expected duration for each programme.",
@@ -1129,7 +1123,6 @@ const academicPageCopy: Record<
     groupStatLabel: "Schools",
   },
   diploma: {
-    crumb: "Diploma",
     title: "Diploma Programmes",
     intro:
       "Explore diploma programmes offered at KCU and compare their durations by school.",
@@ -1137,7 +1130,6 @@ const academicPageCopy: Record<
     groupStatLabel: "Schools",
   },
   certificates: {
-    crumb: "Certificates",
     title: "Certificates and Short Courses",
     intro:
       "Explore KCU professional certificate and short-course options by school, with the duration for each course.",
@@ -1228,16 +1220,6 @@ function AcademicProgrammesPage({ variant }: { variant: AcademicProgrammeVariant
     <>
       <Navbar />
       <main className="min-h-screen bg-white pt-16 sm:pt-20 lg:pt-[8.5rem]">
-        <div className="border-b border-slate-100 bg-[#FFFFFF]">
-          <div className="mx-auto flex max-w-[1440px] items-center gap-2 overflow-x-auto px-4 py-3 text-xs text-slate-500 sm:px-6 lg:px-8">
-            <Link href="/" className="shrink-0 hover:text-[#0B6232]">Home</Link>
-            <ChevronRight className="size-3.5 shrink-0" />
-            <Link href="/academics/schools" className="shrink-0 hover:text-[#0B6232]">Academics</Link>
-            <ChevronRight className="size-3.5 shrink-0" />
-            <span className="shrink-0 font-semibold text-[#0B6232]">{copy.crumb}</span>
-          </div>
-        </div>
-
         <section className="relative overflow-hidden px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
           <AcademicHeroBackground />
           <div className="absolute inset-0 bg-black/34" />
@@ -1831,16 +1813,6 @@ function FeesStructurePage() {
     <>
       <Navbar />
       <main className="min-h-screen bg-white pt-16 sm:pt-20 lg:pt-[8.5rem]">
-        <div className="border-b border-slate-100 bg-[#FFFFFF]">
-          <div className="mx-auto flex max-w-[1440px] items-center gap-2 overflow-x-auto px-4 py-3 text-xs text-slate-500 sm:px-6 lg:px-8">
-            <Link href="/" className="shrink-0 hover:text-[#0B6232]">Home</Link>
-            <ChevronRight className="size-3.5 shrink-0" />
-            <Link href="/admissions" className="shrink-0 hover:text-[#0B6232]">Admissions</Link>
-            <ChevronRight className="size-3.5 shrink-0" />
-            <span className="shrink-0 font-semibold text-[#0B6232]">Fees Structure</span>
-          </div>
-        </div>
-
         <section className="relative overflow-hidden px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
           <div className="absolute inset-0 bg-cover bg-[center_42%] bg-no-repeat" style={{ backgroundImage: "url('/images/kcu-2026/graduates-best-of-best.webp')" }} />
           <div className="absolute inset-0 bg-black/55" />
@@ -2062,16 +2034,6 @@ function CollaborationsPartnershipsPage() {
     <>
       <Navbar />
       <main className="min-h-screen bg-white pt-16 sm:pt-20 lg:pt-[8.5rem]">
-        <div className="border-b border-slate-100 bg-[#FFFFFF]">
-          <div className="mx-auto flex max-w-[1440px] items-center gap-2 overflow-x-auto px-4 py-3 text-xs text-slate-500 sm:px-6 lg:px-8">
-            <Link href="/" className="shrink-0 hover:text-[#0B6232]">Home</Link>
-            <ChevronRight className="size-3.5 shrink-0" />
-            <Link href="/about" className="shrink-0 hover:text-[#0B6232]">About Us</Link>
-            <ChevronRight className="size-3.5 shrink-0" />
-            <span className="shrink-0 font-semibold text-[#0B6232]">Collaborations &amp; Partnerships</span>
-          </div>
-        </div>
-
         <section className="relative overflow-hidden px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
           <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1515169067865-5387ec356754?auto=format&fit=crop&w=1800&q=85')" }} />
           <div className="absolute inset-0 bg-black/55" />
@@ -2306,16 +2268,6 @@ function CampusLifePage() {
     <>
       <Navbar />
       <main className="min-h-screen bg-[#F7F9FC] pt-16 sm:pt-20 lg:pt-[8.5rem]">
-        <div className="border-b border-slate-100 bg-[#FFFFFF]">
-          <div className="mx-auto flex max-w-[1440px] items-center gap-2 px-4 py-3 text-xs text-slate-500 sm:px-6 lg:px-8">
-            <Link href="/" className="hover:text-[#0B6232]">Home</Link>
-            <ChevronRight className="size-3.5" />
-            <Link href="/student" className="hover:text-[#0B6232]">Students</Link>
-            <ChevronRight className="size-3.5" />
-            <span className="font-semibold text-[#0B6232]">Life at KCU</span>
-          </div>
-        </div>
-
         <section className="relative overflow-hidden bg-slate-950 px-4 py-12 text-white sm:px-6 sm:py-16 lg:px-8 lg:py-20">
           <Image
             src="/images/kcu-2026/student-laptop-collaboration.webp"
@@ -2539,28 +2491,21 @@ function CampusLifePage() {
 function AboutContentPage({ page }: { page: AboutPageContent }) {
   const isServicesPage = page.eyebrow === "Services" || page.eyebrow === "Library";
   const hasPageSections = page.sections.length > 0;
-  const parentLabel = page.eyebrow === "Admissions" ? "Admissions" : page.eyebrow === "Academics" || page.eyebrow === "Courses" ? "Academics" : isServicesPage ? "Services" : page.eyebrow === "Student Life" || page.eyebrow === "Student Welfare" || page.eyebrow === "Student Leadership" ? "Student" : "About Us";
-  const parentHref = page.eyebrow === "Admissions" ? "/admissions" : page.eyebrow === "Academics" || page.eyebrow === "Courses" ? "/academics" : isServicesPage ? "/services" : page.eyebrow === "Student Life" || page.eyebrow === "Student Welfare" || page.eyebrow === "Student Leadership" ? "/student" : "/about";
+  const hasSolidHero = Boolean(page.counselling || page.deanOfStudents);
   const heroImage = page.heroImage ?? "/images/kcu-2026/graduates-welcome-group.webp";
 
   return (
     <>
       <Navbar />
       <main className="min-h-screen bg-white pt-16 sm:pt-20 lg:pt-[8.5rem]">
-        <div className="border-b border-slate-100 bg-[#FFFFFF]">
-          <div className="mx-auto flex max-w-[1440px] items-center gap-2 overflow-x-auto px-4 py-3 text-xs text-slate-500 sm:px-6 lg:px-8">
-            <Link href="/" className="shrink-0 hover:text-[#0B6232]">Home</Link>
-            <ChevronRight className="size-3.5 shrink-0" />
-            <Link href={parentHref} className="shrink-0 hover:text-[#0B6232]">{parentLabel}</Link>
-            <ChevronRight className="size-3.5 shrink-0" />
-            <span className="shrink-0 font-semibold text-[#0B6232]">{page.title}</span>
-          </div>
-        </div>
-
-        <section className="relative overflow-hidden px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
-          <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('${heroImage}')` }} />
-          <div className="absolute inset-0 bg-black/50" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/55 to-black/10" />
+        <section className={`relative overflow-hidden px-4 py-20 sm:px-6 sm:py-28 lg:px-8 ${hasSolidHero ? "bg-[#0B6232]" : ""}`}>
+          {!hasSolidHero && (
+            <>
+              <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('${heroImage}')` }} />
+              <div className="absolute inset-0 bg-black/50" />
+              <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/55 to-black/10" />
+            </>
+          )}
           <div className="absolute -bottom-24 right-10 hidden size-72 rounded-full border border-white/10 lg:block" />
           <div className="absolute -right-10 top-10 hidden size-40 rounded-full bg-[#FFC66B]/10 blur-2xl lg:block" />
           <div className="relative z-10 mx-auto grid max-w-[1440px] gap-10 lg:grid-cols-[1fr_360px] lg:items-end">

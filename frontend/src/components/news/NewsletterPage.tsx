@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowRight, ChevronRight, ExternalLink, FileText, X } from "lucide-react";
+import { ArrowRight, ExternalLink, FileText, X } from "lucide-react";
 
 type NewsletterArticle = {
   date: string;
@@ -415,16 +415,6 @@ export default function NewsletterPage() {
 
   return (
     <main className="min-h-screen bg-white pt-16 sm:pt-20 lg:pt-[8.5rem]">
-      <div className="border-b border-slate-100 bg-[#FFFFFF]">
-        <div className="mx-auto flex max-w-[1440px] items-center gap-2 px-4 py-3 text-xs text-slate-500 sm:px-6 lg:px-8">
-          <Link href="/" className="hover:text-[#0B6232]">Home</Link>
-          <ChevronRight className="size-3.5" />
-          <Link href="/about" className="hover:text-[#0B6232]">About Us</Link>
-          <ChevronRight className="size-3.5" />
-          <span className="font-semibold text-[#0B6232]">News Letter</span>
-        </div>
-      </div>
-
       <section className="relative overflow-hidden px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1800&q=80')" }} />
         <div className="absolute inset-0 bg-black/50" />
