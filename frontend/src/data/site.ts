@@ -109,14 +109,13 @@ export const heroSlides: HeroSlide[] = [
     title: "Undergraduate | Diploma | Certificates",
     subtitle: "",
     cta: "Apply Here",
-    image: "/images/kcu-2026/graduates-welcome-group.webp",
-    imagePosition: "center 42%",
-    
-      programmes: [
-      "Master in Hospitality Business Management",
-      "Bachelor of Tourism and Hospitality Management",
-      "Diploma in Hotel and Restaurant Management",
-      "Professional short courses in hospitality operations",
+    image: "/graduation-graphic.jpeg",
+    imagePosition: "center 0%",
+    programmes: [
+      "",
+      "",
+      "",
+      "",
     ],
   },
   {
@@ -126,7 +125,7 @@ export const heroSlides: HeroSlide[] = [
     subtitle: "",
     cta: "Explore Courses",
     image: "/images/kcu-2026/library-collaboration.webp",
-    imagePosition: "center 45%",
+    imagePosition: "center 0%",
     programmes: [
       "",
       "",
@@ -141,7 +140,7 @@ export const heroSlides: HeroSlide[] = [
     subtitle: "",
     cta: "Apply Online",
     image: "/images/kcu-2026/graduates-best-of-best.webp",
-    imagePosition: "center 38%",
+    imagePosition: "center 60%",
     programmes: [
       "Undergraduate programmes across schools and faculties",
       "Postgraduate studies for professionals and researchers",
@@ -150,18 +149,18 @@ export const heroSlides: HeroSlide[] = [
     ],
   },
   {
-    badge: "School of Science, Computing & Engineering",
+    badge: "School of Medicine, Health & Life Sciences",
     school: "",
-    title: "Bachelor of Computer Forensics | Bachelor of Petroleum Geoscience",
+    title: "Bachelor of Mecidicine & Bachelor of Surgery | Bachelor of Nursing Science ",
     subtitle: "",
     cta: "Explore Courses",
     image: "/images/kcu-2026/lab-chemistry-students.webp",
-    imagePosition: "center 45%",
+    imagePosition: "center 0%",
     programmes: [
-      "Business and management studies",
-      "Leadership development",
-      "Enterprise and innovation",
-      "Career-focused learning",
+      "",
+      "",
+      "",
+      "",
     ],
   },
   {
@@ -171,7 +170,7 @@ export const heroSlides: HeroSlide[] = [
     subtitle: "",
     cta: "Explore Courses",
     image: "/images/kcu-2026/library-shelves-student.webp",
-    imagePosition: "center 42%",
+    imagePosition: "center 0%",
     programmes: [
       "",
       "",
@@ -186,7 +185,7 @@ export const heroSlides: HeroSlide[] = [
     subtitle: "",
     cta: "Explore Student Life",
     image: "/images/kcu-2026/student-laptop-collaboration.webp",
-    imagePosition: "center 45%",
+    imagePosition: "center 0%",
     programmes: [
       "Student leadership",
       "Clubs and campus activities",
