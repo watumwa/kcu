@@ -221,7 +221,7 @@ export const quickLinks = [
 export const schools = [
   "School of Medicine, Health & Life Sciences",
   "School of Law & Management Sciences",
-  "School of Science, Computing and Engineering",
+  "School of Science, Computing & Engineering",
   ];
 
 export const upcomingEvents = [

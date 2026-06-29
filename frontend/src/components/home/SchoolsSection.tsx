@@ -5,15 +5,15 @@ import { schools } from "@/data/site";
 
 const schoolImages = [
   {
-    src: "/images/kcu-2026/clinical-skills-patient.webp",
+    src: "/images/kcu-2026/lab-chemistry-demonstration.webp",
+    className: "object-cover object-center",
+  },
+  {
+    src: "/new-photos/_88A4517.jpg",
     className: "object-cover object-center",
   },
   {
     src: "/images/kcu-2026/library-collaboration.webp",
-    className: "object-cover object-center",
-  },
-  {
-    src: "/images/kcu-2026/lab-chemistry-demonstration.webp",
     className: "object-cover object-center",
   },
 ];
