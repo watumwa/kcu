@@ -71,7 +71,7 @@ export default function Footer() {
           <span className="inline-flex items-center gap-2"><Mail className="size-4 text-[#FFC66B]" /> info@kcu.ac.ug</span>
           <span className="inline-flex items-center gap-2"><MapPin className="size-4 text-[#FFC66B]" /> Plot 32 Ggaba Road, Bunga Hill</span>
         </div>
-        <p>© 2026 King Ceasor University. All rights reserved.</p>
+        <p>© 2026 King Ceasor University. All rights reserved</p>
       </div>
     </footer>
   );
