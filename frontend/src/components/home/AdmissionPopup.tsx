@@ -58,10 +58,10 @@ export default function AdmissionPopup() {
           {/* Image */}
           <div className="relative aspect-square bg-white p-3">
             <Image
-              src="/public/graduation/graduation-advert.jpeg"
+              src="/Graduation-A4.jpeg"
               alt="August 2026 intake at King Ceasor University"
-              width={640}
-              height={640}
+              width={2480}
+              height={3508}
               priority
               className="h-full w-full rounded-xl object-contain"
             />
@@ -70,7 +70,7 @@ export default function AdmissionPopup() {
           {/* Body */}
           <div className="bg-white px-5 py-4">
             <p className="text-sm text-slate-600 leading-relaxed">
-              Secure your place at King Ceasor University. Limited spaces available across all programmes.
+              Join thousands of successful students at King Caesar University. Apply now for the August intake and start your journey to excellence.
             </p>
             <div className="mt-4 flex gap-2">
               <Link

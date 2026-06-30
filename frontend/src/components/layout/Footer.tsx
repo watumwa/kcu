@@ -38,6 +38,7 @@ export default function Footer() {
               { label: "K-Class", href: "https://vclass.kcu.ac.ug" },
               { label: "Graduation", href: "/academics/graduation" },
               
+              
             ],
           },
           {
