@@ -36,7 +36,7 @@ export const navItems: NavItem[] = [
       { label: "About KCU", href: "/about" },
       { label: "Mission | Vision | Core Values", href: "/about#mission-vision" },
       { label: "Governance", href: "/about#trustees" },
-      { label: "Collaborations & Partnerships", href: "/about/collaborations-partnerships" },
+      { label: "Collaborations & Partnerships", href: "" },
       { label: "News Letter", href: "/about/newsletter" },
     ],
   },
