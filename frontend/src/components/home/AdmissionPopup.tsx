@@ -10,6 +10,9 @@ export default function AdmissionPopup() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
+    // Temporarily disabled: popup will not appear
+    if (true) return;
+
     if (sessionStorage.getItem("admissionPopupSeen")) return;
 
     let triggered = false;
@@ -45,7 +48,7 @@ export default function AdmissionPopup() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           className="fixed inset-0 z-[90] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
-          onClick={() => setVisible(false)}
+          onClick={() => setVisible(true)}
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.92, y: 20 }}
@@ -82,7 +85,7 @@ export default function AdmissionPopup() {
                 Apply Now
               </Link>
               <button
-                onClick={() => setVisible(false)}
+                onClick={() => setVisible(true)}
                 className="rounded-xl border border-slate-200 px-3 text-sm font-semibold text-slate-500 hover:bg-slate-50 transition-colors"
               >
                 Later
@@ -92,7 +95,7 @@ export default function AdmissionPopup() {
 
           {/* Close */}
           <button
-            onClick={() => setVisible(false)}
+            onClick={() => setVisible(true)}
             className="absolute top-3 right-3 size-7 grid place-items-center rounded-full bg-black/30 text-white hover:bg-black/50 transition-colors"
             aria-label="Close"
           >

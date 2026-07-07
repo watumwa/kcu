@@ -21,6 +21,32 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "03 July 2026",
+    category: "Graduation",
+    title: "King Ceasor University Celebrates 6th Graduation Ceremony",
+    excerpt:
+      "KCU awarded 396 degrees at its Bunga, Kampala campus, including 175 medical doctors, with graduates from across Africa and beyond.",
+    image: "/graduation-2.jpeg",
+    imageAlt: "King Ceasor University 6th Graduation Ceremony at the Bunga, Kampala campus",
+    highlights: [
+      { label: "Graduates", value: "396 degrees awarded" },
+      { label: "Medical Doctors", value: "175 graduates" },
+      { label: "Date", value: "3 July 2026" },
+    ],
+    gallery: [],
+    story: [
+      "Bunga, Kampala - 3 July 2026",
+      "King Ceasor University held its 6th Graduation Ceremony on 3rd July at its campus in Bunga, Kampala, marking a major milestone in its academic journey.",
+      "A total of 396 graduates were awarded degrees from the School of Medicine, Health and Life Sciences, School of Law and Management Sciences, and the School of Science, Computing, AI and Engineering. The cohort included 175 medical doctors, underscoring the university's growing contribution to the health sector. Students from countries including Cameroon, Pakistan, Nigeria, Somalia, India and Sudan reflected its expanding international footprint.",
+      "Representing the Chief Guest, Rt. Hon. Robinah Nabbanja, the Second Deputy Prime Minister, Hon. Dr. Crispus Walter Kiyonga, congratulated graduates and urged them to apply their knowledge and skills to drive community transformation and national development.",
+      "The Chairperson of the University Council, Hon. Dr. Chris Baryomunsi, also Minister of Health, emphasized the importance of curriculum transformation, innovation and quality assurance. Speaking on the theme \"Unlocking Quantum Technology for Economic Sovereignty,\" he highlighted the role of emerging technologies in advancing healthcare, research and national development.",
+      "The Vice Chancellor, Dr. Charity Basaza Mulenga, noted that the ceremony coincided with the first anniversary of the university's Charter, thanking H.E. President Yoweri Kaguta Museveni and the First Lady and Minister of Education and Sports, Maama Janet Museveni, for their support. She urged graduates to uphold the values of Truth and Integrity and embrace lifelong learning.",
+      "The Chancellor, King Ceasor Augustus Mulenga, congratulated graduates and encouraged them to become innovators in a rapidly evolving world shaped by artificial intelligence, quantum technologies and scientific advancement, emphasizing that the future must be actively created.",
+      "The ceremony was attended by ambassadors, government officials, and religious leaders, including a Mass led by Archbishop Paul Ssemogerere, reflecting the university's commitment to excellence, faith and global engagement.",
+      "King Ceasor University continues to strengthen its position as a center of academic excellence, producing globally competitive graduates ready to transform society.",
+    ],
+  },
+  {
     date: "16 June 2026",
     category: "Community Outreach",
     title: "King Ceasor University Marks Day of the African Child with Career Guidance and Donation Drive at St. Dennis Ssebugwawo Secondary School",
@@ -415,10 +441,7 @@ export default function NewsletterPage() {
 
   return (
     <main className="min-h-screen bg-white pt-16 sm:pt-20 lg:pt-[8.5rem]">
-      <section className="relative overflow-hidden px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1800&q=80')" }} />
-        <div className="absolute inset-0 bg-black/50" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/55 to-transparent" />
+      <section className="relative overflow-hidden bg-[#0B6232] px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
         <div className="absolute -bottom-20 right-8 hidden size-72 rounded-full border border-white/10 lg:block" />
         <div className="relative z-10 mx-auto max-w-[1440px]">
           <div>

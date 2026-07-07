@@ -63,7 +63,7 @@ export default function Hero() {
               </div>
               <div className="mt-3 grid gap-2 sm:flex sm:flex-wrap">
                 <Button asChild className="h-8 rounded-md bg-[#FFC66B] px-3 text-xs font-black text-[#0B6232] shadow-xl shadow-black/20 hover:bg-[#FFC66B]">
-                  <Link href="https://apply.kcu.ac.ug/">{current.cta}</Link>
+                  <Link href={current.link ?? "https://apply.kcu.ac.ug/"}>{current.cta}</Link>
                 </Button>
                 <Button asChild variant="outline" className="h-8 rounded-md border-2 border-[#0B6232] bg-white/70 px-3 text-xs font-bold text-[#0B6232] backdrop-blur-sm hover:bg-[#0B6232] hover:text-white">
                   <Link href="/academics/courses">View Programmes</Link>

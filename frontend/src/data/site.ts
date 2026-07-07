@@ -16,6 +16,7 @@ export type HeroSlide = {
   title: string;
   subtitle: string;
   cta: string;
+  link?: string;
   image: string;
   imagePosition?: string;
   programmes: string[];
@@ -104,12 +105,13 @@ export const navItems: NavItem[] = [
 
 export const heroSlides: HeroSlide[] = [
   {
-    badge: "Join KCU Today",
-    school: "August Intake Now Open",
-    title: "Undergraduate | Diploma | Certificates",
+    badge: "6TH Graduation Ceremony",
+    school: "3rd July 2026",
+    title: "Celebrating Excellence",
     subtitle: "",
-    cta: "Apply Here",
-    image: "/graduation-graphic.jpeg",
+    cta: "Read More",
+    link: "/about/newsletter",
+    image: "/graduation.jpeg",
     imagePosition: "center 0%",
     programmes: [
       "",
@@ -225,13 +227,23 @@ export const schools = [
   ];
 
 export const upcomingEvents = [
-  { date: "Jun 12", month: "Jun", day: "12", title: "Research & Innovation Conference 2026", location: "KCU Main Auditorium", status: "Upcoming" },
+  { date: "July 08", month: "July", day: "08", title: "Public Participation in Law Making Processes in Uganda", location: "Moot Court Room", status: "This Week"},
+  //{ date: "Jun 12", month: "Jun", day: "12", title: "Research & Innovation Conference 2026", location: "KCU Main Auditorium", status: "Upcoming" },
   { date: "Jun 18", month: "Jun", day: "18", title: "Graduation Ceremony 2026", location: "Kampala Serena Hotel", status: "Upcoming" },
   { date: "Jun 22", month: "Jun", day: "22", title: "Open Day for Prospective Students", location: "Bunga Hill Campus", status: "Upcoming" },
   { date: "Jul 05", month: "Jul", day: "05", title: "August Intake Registration Opens", location: "Registry Office / Online", status: "Upcoming" },
 ];
 
 export const newsItems = [
+  {
+    category: "Graduation",
+    title: "King Ceasor University Celebrates 6th Graduation Ceremony",
+    date: "03 July 2026",
+    href: "/about/newsletter",
+    text: "KCU held its 6th Graduation Ceremony at its Bunga, Kampala campus, awarding 396 degrees including 175 medical doctors, with graduates from across Africa and beyond.",
+    image: "/graduation.jpeg",
+    featured: true,
+  },
   {
     category: "Community",
     title: "KCU Supports Community Blood Donation Activity",
