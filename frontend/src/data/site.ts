@@ -112,7 +112,7 @@ export const heroSlides: HeroSlide[] = [
     cta: "Read More",
     link: "/about/newsletter",
     image: "/graduation.jpeg",
-    imagePosition: "center 0%",
+    imagePosition: "center 80%",
     programmes: [
       "",
       "",

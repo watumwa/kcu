@@ -10,8 +10,6 @@ export default function AdmissionPopup() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    // Temporarily disabled: popup will not appear
-    if (true) return;
 
     if (sessionStorage.getItem("admissionPopupSeen")) return;
 
@@ -48,7 +46,7 @@ export default function AdmissionPopup() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           className="fixed inset-0 z-[90] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
-          onClick={() => setVisible(true)}
+          onClick={() => setVisible(false)}
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.92, y: 20 }}
@@ -61,7 +59,7 @@ export default function AdmissionPopup() {
           {/* Image */}
           <div className="relative aspect-square bg-white p-3">
             <Image
-              src="/Graduation-A4.jpeg"
+              src="/august-intake.png"
               alt="August 2026 intake at King Ceasor University"
               width={2480}
               height={3508}
@@ -85,7 +83,7 @@ export default function AdmissionPopup() {
                 Apply Now
               </Link>
               <button
-                onClick={() => setVisible(true)}
+                onClick={() => setVisible(false)}
                 className="rounded-xl border border-slate-200 px-3 text-sm font-semibold text-slate-500 hover:bg-slate-50 transition-colors"
               >
                 Later
@@ -95,7 +93,7 @@ export default function AdmissionPopup() {
 
           {/* Close */}
           <button
-            onClick={() => setVisible(true)}
+            onClick={() => setVisible(false)}
             className="absolute top-3 right-3 size-7 grid place-items-center rounded-full bg-black/30 text-white hover:bg-black/50 transition-colors"
             aria-label="Close"
           >
