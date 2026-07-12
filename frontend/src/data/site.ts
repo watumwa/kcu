@@ -236,8 +236,16 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Events",
+    title: "King Ceasor University Proudly Hosts the Uganda National Code Fest 2026",
+    date: "10 July 2026",
+    href: "/about/newsletter",
+    text: "KCU hosted the Uganda National Code Fest 2026, organized by Skills Masters Global, bringing together young students from across Uganda to showcase innovative solutions in AI, Robotics, Software Development, IoT, Renewable Energy, Smart Agriculture and Engineering.",
+    image: "/IMG_0055.jpeg",
+    featured: true,
+  },
+  {
     category: "Graduation",
-    title: "King Ceasor University Celebrates 6th Graduation Ceremony",
     date: "03 July 2026",
     href: "/about/newsletter",
     text: "KCU held its 6th Graduation Ceremony at its Bunga, Kampala campus, awarding 396 degrees including 175 medical doctors, with graduates from across Africa and beyond.",
