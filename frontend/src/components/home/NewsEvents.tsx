@@ -43,9 +43,7 @@ export default function NewsEvents() {
         </div>
 
         <Link
-          href={featured.href ?? "/news"}
-          target={featured.href?.startsWith("http") ? "_blank" : undefined}
-          rel="noopener noreferrer"
+          href="/news"
           className="group mt-10 grid overflow-hidden rounded-3xl border border-slate-200/80 bg-white shadow-xl shadow-slate-900/5 lg:grid-cols-[minmax(360px,0.8fr)_minmax(0,1.2fr)]"
         >
           <div className="flex flex-col justify-center p-7 sm:p-10 lg:p-12">
@@ -60,7 +58,7 @@ export default function NewsEvents() {
             </h3>
             <p className="mt-4 max-w-xl text-sm leading-7 text-slate-600 sm:text-base">{featured.text}</p>
             <span className="mt-7 inline-flex w-fit items-center gap-2 rounded-full bg-[#0B6232] px-5 py-2.5 text-xs font-black text-white transition-colors group-hover:bg-[#084b27]">
-              View Photos <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-1" />
+              More News <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-1" />
             </span>
           </div>
 
