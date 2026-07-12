@@ -59,10 +59,9 @@ function TopBar() {
             <MapPin className="size-4 text-[#FFC66B]" /> Plot 32 Ggaba Road, Bunga Hill
           </span>
         </div>
-
-        <div className="flex items-center gap-4">
-          <Link href="/alumni" className="text-sm font-bold text-[#FFC66B] transition hover:text-white">
-            Alumni
+        <div className="flex items-center gap-3">
+          <Link href="/about/newsletter" className="text-sm font-bold text-[#FFC66B] transition hover:text-white">
+            News
           </Link>
           <span className="text-white/30">|</span>
           <Link href="/careers" className="text-sm font-bold text-[#FFC66B] transition hover:text-white">
@@ -72,6 +71,11 @@ function TopBar() {
           <Link href={policiesDriveUrl} className="text-sm font-bold text-[#FFC66B] transition hover:text-white">
             Policies
           </Link>
+          <span className="text-white/30">|</span>
+          <Link href="/alumni" className="text-sm font-bold text-[#FFC66B] transition hover:text-white">
+            Alumni
+          </Link>
+
           <form action="/search" className="relative block w-64">
             <Search className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-white/70" />
             <input

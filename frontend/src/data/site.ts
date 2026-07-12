@@ -31,19 +31,19 @@ export const navItems: NavItem[] = [
   },
   {
     label: "About Us",
-    href: "/about",
+    href: "",
     description: "Learn about King Ceasor University's identity, mission, values and partnerships.",
     children: [
       { label: "About KCU", href: "/about" },
       { label: "Mission | Vision | Core Values", href: "/about#mission-vision" },
       { label: "Governance", href: "/about#trustees" },
       { label: "Collaborations & Partnerships", href: "" },
-      { label: "News Letter", href: "/about/newsletter" },
+      { label: "Campus News", href: "/about/newsletter" },
     ],
   },
   {
     label: "Admissions",
-    href: "/admissions",
+    href: "",
     disableLink: true,
     description: "Application guidance, fees structure and admission requirements.",
     children: [
@@ -74,7 +74,7 @@ export const navItems: NavItem[] = [
   },
   {
     label: "Student",
-    href: "/student",
+    href: "",
     disableLink: true,
     description: "Student leadership, campus life and dean of students services.",
     children: [
@@ -86,7 +86,7 @@ export const navItems: NavItem[] = [
   },
   {
     label: "Services",
-    href: "/services",
+    href: "",
     disableLink: true,
     description: "Library, quality assurance, counselling and student support services.",
     children: [
@@ -113,6 +113,22 @@ export const heroSlides: HeroSlide[] = [
     link: "/about/newsletter",
     image: "/graduation.jpeg",
     imagePosition: "center 80%",
+    programmes: [
+      "",
+      "",
+      "",
+      "",
+    ],
+  },
+  {
+    badge: "KCU Events",
+    school: "Hosts Uganda National Code Fest 2026",
+    title: "",
+    subtitle: "",
+    cta: "Read More",
+    link: "/about/newsletter",
+    image: "/IMG_0055.jpeg",
+    imagePosition: "center 0%",
     programmes: [
       "",
       "",
@@ -195,22 +211,7 @@ export const heroSlides: HeroSlide[] = [
       "Student support services",
     ],
   },
-  {
-    badge: "KCU Events",
-    school: "Hosts Uganda National Code Fest 2026",
-    title: "",
-    subtitle: "",
-    cta: "Read More",
-    link: "/about/newsletter",
-    image: "/IMG_0055.jpeg",
-    imagePosition: "center 0%",
-    programmes: [
-      "",
-      "",
-      "",
-      "",
-    ],
-  },
+
 ];
 
 export const quickLinks = [
@@ -244,7 +245,6 @@ export const schools = [
 
 export const upcomingEvents = [
   { date: "July 08", month: "July", day: "08", title: "Public Participation in Law Making Processes in Uganda", location: "Moot Court Room", status: "This Week"},
-  //{ date: "Jun 12", month: "Jun", day: "12", title: "Research & Innovation Conference 2026", location: "KCU Main Auditorium", status: "Upcoming" },
   { date: "Jun 18", month: "Jun", day: "18", title: "Graduation Ceremony 2026", location: "Kampala Serena Hotel", status: "Upcoming" },
   { date: "Jun 22", month: "Jun", day: "22", title: "Open Day for Prospective Students", location: "Bunga Hill Campus", status: "Upcoming" },
   { date: "Jul 05", month: "Jul", day: "05", title: "August Intake Registration Opens", location: "Registry Office / Online", status: "Upcoming" },
@@ -252,16 +252,8 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
-    category: "Events",
-    title: "King Ceasor University Proudly Hosts the Uganda National Code Fest 2026",
-    date: "10 July 2026",
-    href: "/about/newsletter",
-    text: "KCU hosted the Uganda National Code Fest 2026, organized by Skills Masters Global, bringing together young students from across Uganda to showcase innovative solutions in AI, Robotics, Software Development, IoT, Renewable Energy, Smart Agriculture and Engineering.",
-    image: "/IMG_0055.jpeg",
-    featured: true,
-  },
-  {
     category: "Graduation",
+    title: "King Ceasor University Celebrates 6th Graduation Ceremony",
     date: "03 July 2026",
     href: "/about/newsletter",
     text: "KCU held its 6th Graduation Ceremony at its Bunga, Kampala campus, awarding 396 degrees including 175 medical doctors, with graduates from across Africa and beyond.",
