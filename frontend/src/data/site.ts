@@ -195,6 +195,22 @@ export const heroSlides: HeroSlide[] = [
       "Student support services",
     ],
   },
+  {
+    badge: "KCU Events",
+    school: "Hosts Uganda National Code Fest 2026",
+    title: "",
+    subtitle: "",
+    cta: "Read More",
+    link: "/about/newsletter",
+    image: "/IMG_0055.jpeg",
+    imagePosition: "center 0%",
+    programmes: [
+      "",
+      "",
+      "",
+      "",
+    ],
+  },
 ];
 
 export const quickLinks = [

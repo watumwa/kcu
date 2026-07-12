@@ -21,6 +21,28 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "10 July 2026",
+    category: "Events",
+    title: "King Ceasor University Proudly Hosts the Uganda National Code Fest 2026",
+    excerpt:
+      "KCU hosted the Uganda National Code Fest 2026, organized by Skills Masters Global, bringing together young students from across Uganda to showcase innovative solutions in AI, Robotics, Software Development, IoT, Renewable Energy, Smart Agriculture and Engineering.",
+    image: "/IMG_0055.jpeg",
+    imageAlt: "Students showcasing innovative projects at the Uganda National Code Fest 2026 hosted at King Ceasor University",
+    highlights: [
+      { label: "Date", value: "10 July 2026" },
+      { label: "Organizer", value: "Skills Masters Global" },
+      { label: "Focus Areas", value: "AI, Robotics, IoT, Renewable Energy, Smart Agriculture, Engineering" },
+    ],
+    gallery: [],
+    story: [
+      "Kampala - 10 July 2026",
+      "King Ceasor University proudly hosted the Uganda National Code Fest 2026 on Friday, 10 July 2026, an exciting innovation event organized by Skills Masters Global that brought together young students from schools across Uganda.",
+      "The event celebrated creativity, technology and problem-solving, providing participants with a platform to showcase innovative solutions in Artificial Intelligence (AI), Robotics, Software Development, Internet of Things (IoT), Renewable Energy, Smart Agriculture and Engineering.",
+      "Throughout the day, students demonstrated their ingenuity through interactive exhibitions and project presentations while engaging with fellow innovators, educators and industry leaders. The festival fostered collaboration, knowledge sharing and inspiration, reinforcing the importance of equipping young people with practical skills to address real-world challenges.",
+      "Hosting the Uganda National Code Fest 2026 reflects King Ceasor University's commitment to promoting innovation, advancing STEM education and supporting the next generation of technology leaders.",
+    ],
+  },
+  {
     date: "03 July 2026",
     category: "Graduation",
     title: "King Ceasor University Celebrates 6th Graduation Ceremony",
@@ -403,7 +425,7 @@ function NewsletterStoryModal({ article, onClose }: { article: NewsletterArticle
                     ))}
                   </div>
                 ) : null}
-                <div className="mt-8 flex flex-col gap-3 border-t border-slate-100 pt-5 sm:flex-row sm:items-center sm:justify-between">
+                <div className="mt-8 flex flex-col gap-3 border-t border-slate-100 pt-5 sm:flex-row sm:items-center sm:justify-end">
                   <button
                     type="button"
                     onClick={onClose}
@@ -411,16 +433,6 @@ function NewsletterStoryModal({ article, onClose }: { article: NewsletterArticle
                   >
                     Close Story
                   </button>
-                  {article.href && (
-                    <Link
-                      href={article.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center rounded-xl bg-[#0B6232] px-5 py-3 text-sm font-black text-white transition hover:bg-[#084a26]"
-                    >
-                      Open Original <ExternalLink className="ml-2 size-4" />
-                    </Link>
-                  )}
                 </div>
               </div>
             </div>
@@ -528,9 +540,9 @@ export default function NewsletterPage() {
                   <button
                     type="button"
                     onClick={() => setSelectedArticle(article)}
-                    className="mt-5 inline-flex items-center text-sm font-black text-[#0B6232] transition group-hover:text-slate-950"
+                    className="mt-5 inline-flex w-fit items-center rounded-xl bg-[#0B6232] px-5 py-3 text-sm font-black text-white transition hover:bg-[#084a26]"
                   >
-                    Read More <ArrowRight className="ml-2 size-4 transition group-hover:translate-x-1" />
+                    Read More <ArrowRight className="ml-2 size-4" />
                   </button>
                 </div>
               </article>
@@ -544,17 +556,17 @@ export default function NewsletterPage() {
           <div className="grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
             <div className="rounded-2xl bg-[#0B6232] p-7 text-white shadow-xl shadow-[#0B6232]/15 sm:p-8">
               <p className="text-[10px] font-black uppercase tracking-[0.22em] text-[#FFC66B]">News Letter</p>
-              <h2 className="mt-3 text-3xl font-black leading-tight sm:text-4xl">KCU newsletter digest</h2>
+              <h2 className="mt-3 text-3xl font-black leading-tight sm:text-4xl">KCU News Letter Digest</h2>
               <p className="mt-4 text-sm leading-7 text-white/78 sm:text-base">
                 A curated round-up of university stories, partnerships, student opportunities, and institutional milestones.
               </p>
               <Link
-                href="/newsletter/kcu-newsletter-digest.pdf"
+                href="/newsletter/JUNE Journal 4 v-6.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-6 inline-flex items-center rounded-xl bg-[#FFC66B] px-5 py-3 text-sm font-black text-[#0B6232] transition hover:bg-[#f4b850]"
               >
-                <FileText className="mr-2 size-4" /> View Newsletter PDF
+                <FileText className="mr-2 size-4" /> Download News Journal
               </Link>
               <div className="mt-7 grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
                 {newsletterDigestArticles.slice(0, 3).map((article, index) => (
@@ -583,7 +595,7 @@ export default function NewsletterPage() {
                   <button
                     type="button"
                     onClick={() => setSelectedArticle(article)}
-                    className="mt-5 inline-flex items-center text-sm font-black text-[#0B6232]"
+                    className="mt-5 inline-flex w-fit items-center rounded-xl bg-[#0B6232] px-5 py-3 text-sm font-black text-white transition hover:bg-[#084a26]"
                   >
                     Read Story <ArrowRight className="ml-2 size-4" />
                   </button>
@@ -618,13 +630,13 @@ export default function NewsletterPage() {
                 <p className="mt-5 text-xs font-black uppercase tracking-[0.16em] text-slate-500">{article.date}</p>
                 <h3 className="mt-2 text-xl font-black leading-tight text-slate-950">{article.title}</h3>
                 <p className="mt-3 text-sm leading-7 text-slate-600">{article.excerpt}</p>
-                <button
-                  type="button"
-                  onClick={() => setSelectedArticle(article)}
-                  className="mt-auto inline-flex w-fit items-center pt-5 text-sm font-black text-[#0B6232] transition hover:text-slate-950"
-                >
-                  Read More <ArrowRight className="ml-2 size-4" />
-                </button>
+                  <button
+                    type="button"
+                    onClick={() => setSelectedArticle(article)}
+                    className="mt-auto inline-flex w-fit items-center rounded-xl bg-[#0B6232] px-5 py-3 text-sm font-black text-white transition hover:bg-[#084a26]"
+                  >
+                    Read More <ArrowRight className="ml-2 size-4" />
+                  </button>
               </article>
             ))}
           </div>
