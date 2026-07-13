@@ -12,6 +12,33 @@ SECRET_KEY = config('SECRET_KEY', default='django-insecure-dev-key-change-in-pro
 DEBUG = config('DEBUG', default=True, cast=bool)
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1').split(',')
 
+CONTENT_SECURITY_POLICY = "; ".join([
+    "default-src 'self'",
+    "base-uri 'self'",
+    "object-src 'none'",
+    "frame-ancestors 'self'",
+    "img-src 'self' data: blob: https:",
+    "font-src 'self' data: https:",
+    "media-src 'self' blob: data: https:",
+    "connect-src 'self' https: ws: wss:",
+    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https:",
+    "style-src 'self' 'unsafe-inline' https:",
+    "frame-src 'self' https:",
+])
+
+PERMISSIONS_POLICY = ", ".join([
+    "accelerometer=()",
+    "autoplay=(self)",
+    "camera=()",
+    "display-capture=()",
+    "fullscreen=(self)",
+    "geolocation=()",
+    "gyroscope=()",
+    "microphone=()",
+    "payment=()",
+    "usb=()",
+])
+
 INSTALLED_APPS = [
     'unfold',
     'unfold.contrib.filters',
@@ -46,6 +73,7 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'core.middleware.SecurityHeadersMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -99,6 +127,14 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Security headers
+SECURE_CONTENT_TYPE_NOSNIFF = True
+SECURE_REFERRER_POLICY = 'strict-origin-when-cross-origin'
+X_FRAME_OPTIONS = 'SAMEORIGIN'
+SECURE_HSTS_SECONDS = 0 if DEBUG else 31536000
+SECURE_HSTS_INCLUDE_SUBDOMAINS = not DEBUG
+SECURE_HSTS_PRELOAD = not DEBUG
 
 # CORS
 CORS_ALLOWED_ORIGINS = config(
