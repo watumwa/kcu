@@ -21,6 +21,22 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "08 July 2026",
+    category: "Community Outreach",
+    title: "King Ceasor University Launches Staff Cooperative Society",
+    excerpt:
+      "King Ceasor University officially launched the King Ceasor University Staff Cooperative Society during its 1st General Meeting held at the university rooftop, following the cooperative’s attainment of its Certificate of Registration last month.",
+    image: "/KCU Staff SACCO Launch.jpeg",
+    imageAlt: "King Ceasor University Staff Cooperative Society launch during the 1st General Meeting at the university rooftop",
+    story: [
+      "Kampala - 08 July 2026",
+      "On 8th July 2026, King Ceasor University officially launched the King Ceasor University Staff Cooperative Society during its 1st General Meeting held at the university rooftop.",
+      "The launch followed the cooperative’s attainment of its Certificate of Registration last month, marking the official commencement of its operations as a legally registered staff cooperative society. The milestone reflects the University’s continued commitment to enhancing staff welfare through sustainable financial empowerment initiatives.",
+      "The cooperative is expected to provide teaching, management, and non-teaching staff with opportunities for collective savings, investment and access to affordable financial services. During the launch, members were introduced to the Society’s vision, objectives and governance structure, while reaffirming their commitment to supporting its growth and long-term success.",
+      "The establishment of the King Ceasor University Staff Cooperative Society represents an important step towards strengthening financial inclusion and promoting a culture of collaboration, shared responsibility and economic resilience within the University community.",
+    ],
+  },
+  {
     date: "10 July 2026",
     category: "Events",
     title: "King Ceasor University Proudly Hosts the Uganda National Code Fest 2026",

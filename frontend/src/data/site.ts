@@ -252,13 +252,22 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Community",
+    title: "King Ceasor University Launches Staff Cooperative Society",
+    date: "08 July 2026",
+    href: "/about/newsletter",
+    text: "King Ceasor University officially launched the King Ceasor University Staff Cooperative Society during its 1st General Meeting, following the cooperative’s attainment of its Certificate of Registration last month.",
+    image: "/KCU Staff SACCO Launch.jpeg",
+    featured: true,
+  },
+  {
     category: "Graduation",
     title: "King Ceasor University Celebrates 6th Graduation Ceremony",
     date: "03 July 2026",
     href: "/about/newsletter",
     text: "KCU held its 6th Graduation Ceremony at its Bunga, Kampala campus, awarding 396 degrees including 175 medical doctors, with graduates from across Africa and beyond.",
     image: "/graduation.jpeg",
-    featured: true,
+    featured: false,
   },
   {
     category: "Community",
