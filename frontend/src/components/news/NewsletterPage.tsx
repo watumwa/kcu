@@ -22,6 +22,28 @@ type NewsletterArticle = {
 const newsletterArticles: NewsletterArticle[] = [
   {
     date: "08 July 2026",
+    category: "Events",
+    title: "King Ceasor University Hosts Public Lecture on Law-Making and Academic Collaboration",
+    excerpt:
+      "KCU welcomed Prof. Jamil Mujuzi from the University of the Western Cape, South Africa, for a public lecture on public participation in Uganda’s law-making processes, followed by discussions on future academic collaboration.",
+    image: "/public-lecture-law.jpeg",
+    imageAlt: "Prof. Jamil Mujuzi delivers a public lecture at the King Ceasor University Moot Court Room",
+    highlights: [
+      { label: "Guest Speaker", value: "Prof. Jamil Mujuzi, University of the Western Cape" },
+      { label: "Venue", value: "KCU Moot Court Room" },
+      { label: "Date", value: "8 July 2026" },
+    ],
+    gallery: [],
+    story: [
+      "Bunga, Kampala - 8 July 2026",
+      "On Wednesday, 8 July 2026, King Ceasor University welcomed Prof. Jamil Mujuzi from the University of the Western Cape, South Africa, for a public lecture on “Public Participation in Law-Making Processes in Uganda.” Held in the University’s Moot Court Room, the lecture attracted students and lecturers from the School of Law, providing an opportunity to examine the critical role of citizen participation in legislative processes, democratic governance and the development of inclusive public policy.",
+      "Prof. Mujuzi encouraged students to appreciate the significance of public engagement in law-making and highlighted how meaningful participation contributes to transparency, accountability and stronger legal institutions. The interactive session allowed participants to exchange ideas and deepen their understanding of constitutional and legislative processes within Uganda’s legal framework.",
+      "Following the lecture, Prof. Mujuzi held a meeting with members of the School of Law to discuss avenues for future collaboration between King Ceasor University and the University of the Western Cape. The discussions explored opportunities for joint research, academic exchanges and other collaborative initiatives that will strengthen legal education and expand international partnerships.",
+      "The visit reflects King Ceasor University’s continued commitment to providing students with exposure to distinguished international scholars while fostering strategic partnerships that enhance teaching, research and professional development in legal education.",
+    ],
+  },
+  {
+    date: "08 July 2026",
     category: "Community Outreach",
     title: "King Ceasor University Launches Staff Cooperative Society",
     excerpt:

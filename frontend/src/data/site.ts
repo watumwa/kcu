@@ -252,13 +252,22 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Events",
+    title: "King Ceasor University Hosts Public Lecture on Law-Making and Academic Collaboration",
+    date: "08 July 2026",
+    href: "/about/newsletter",
+    text: "KCU welcomed Prof. Jamil Mujuzi from the University of the Western Cape for a public lecture on public participation in Uganda’s law-making processes, followed by discussions on future academic collaboration between the two institutions.",
+    image: "/public-lecture-law.jpeg",
+    featured: true,
+  },
+  {
     category: "Community",
     title: "King Ceasor University Launches Staff Cooperative Society",
     date: "08 July 2026",
     href: "/about/newsletter",
     text: "King Ceasor University officially launched the King Ceasor University Staff Cooperative Society during its 1st General Meeting, following the cooperative’s attainment of its Certificate of Registration last month.",
     image: "/KCU Staff SACCO Launch.jpeg",
-    featured: true,
+    featured: false,
   },
   {
     category: "Graduation",

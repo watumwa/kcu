@@ -433,7 +433,7 @@ function CouncilCardMobile({ person, onSelect }: { person: PersonProfile; onSele
 
 function TabUniversityCouncil() {
   const [selectedPerson, setSelectedPerson] = useState<PersonProfile | null>(null);
-  const chair: PersonProfile = { name: "Hon. Dr. Chris Baryomunsi", role: "Chairperson, University Council", tier: "top", bio: governanceBios.baryomunsi };
+  const chair: PersonProfile = { name: "Hon. Dr. Chris Baryomunsi", role: "Chairperson, University Council", tier: "top", image: "/University Council/Dr. Chris Baryomunsi.jpeg", bio: governanceBios.baryomunsi };
   const viceChair: PersonProfile = {
     name: "Assoc. Prof. Margaret Nabasirye",
     role: "Vice Chairperson on Council",
@@ -617,7 +617,7 @@ function TabBoardOfTrustees() {
       image: "/images/trustees/mr-donald-nyakairu.jpg",
       bio: governanceBios.nyakairu,
     },
-    { name: "King Ceasor Mulenga", role: "Member, Board of Trustees", tier: "base" },
+    { name: "Lord Ceasor", role: "Member, Board of Trustees", tier: "base", image: "/University Council/Lord Ceasor.jpeg" },
   ];
 
   return (
