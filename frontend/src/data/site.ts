@@ -258,7 +258,7 @@ export const newsItems = [
     href: "/about/newsletter",
     text: "KCU staff from the School of Law and Management Sciences and the Department of Computing, AI and Data Science joined the Uganda Council for Foreign Affairs’ Strategic Plan Launch, engaging policymakers, diplomats and academics on Uganda’s foreign policy priorities.",
     image: "/news-images/forensics-visit.jpeg",
-    featured: false,
+    featured: true,
   },
   {
     category: "Events",
@@ -267,7 +267,7 @@ export const newsItems = [
     href: "/about/newsletter",
     text: "KCU welcomed Prof. Jamil Mujuzi from the University of the Western Cape for a public lecture on public participation in Uganda’s law-making processes, followed by discussions on future academic collaboration between the two institutions.",
     image: "/public-lecture-law.jpeg",
-    featured: true,
+    featured: false,
   },
   {
     category: "Community",
