@@ -21,6 +21,27 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "10 July 2026",
+    category: "Partnerships",
+    title: "King Ceasor University Staff Participate in Uganda Council for Foreign Affairs Strategic Plan Launch",
+    excerpt:
+      "KCU staff from the School of Law and Management Sciences and the Department of Computing, AI and Data Science joined the Uganda Council for Foreign Affairs’ Strategic Plan Launch, engaging stakeholders on Uganda’s foreign policy priorities.",
+    image: "/news-images/forensics-visit.jpeg",
+    imageAlt: "King Ceasor University representatives at the Uganda Council for Foreign Affairs Strategic Plan Launch",
+    highlights: [
+      { label: "Date", value: "10 July 2026" },
+      { label: "Host", value: "Uganda Council for Foreign Affairs" },
+      { label: "Guest of Honour", value: "Hon. Sam Kutesa" },
+    ],
+    gallery: [],
+    story: [
+      "Kampala - 10 July 2026",
+      "On 10 July 2026, King Ceasor University staff from the School of Law and Management Sciences and the Department of Computing, AI and Data Science participated in the Uganda Council for Foreign Affairs’ Strategic Plan Launch. The event marked the unveiling of the Council’s five-year strategic plan and featured remarks from the organisation’s leadership, an address by the Guest of Honour, Hon. Sam Kutesa and stakeholder engagements on Uganda’s foreign policy priorities.",
+      "The University was represented by Prof. Peter Turyakira from the School of Law and Management Sciences, Dr. Habiba Njeri Ngugi, Head of the Department of Computing, AI & Data Science and Madam Zoe Richard Mauki from the School of Law and Management Sciences. Their participation reflects King Ceasor University’s commitment to engaging with national policy institutions, strengthening strategic partnerships and fostering interdisciplinary dialogue across law, technology, governance and public policy.",
+      "The engagement also provided an opportunity for the University’s representatives to interact with policymakers, diplomats, academics and other stakeholders on issues shaping Uganda’s foreign relations and strategic development. Such participation reinforces King Ceasor University’s vision of producing graduates and scholars who contribute meaningfully to national development through academic excellence, innovation, research and active engagement with public policy and global affairs.",
+    ],
+  },
+  {
     date: "08 July 2026",
     category: "Events",
     title: "King Ceasor University Hosts Public Lecture on Law-Making and Academic Collaboration",

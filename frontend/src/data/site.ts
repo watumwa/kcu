@@ -252,6 +252,15 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Partnerships",
+    title: "King Ceasor University Staff Participate in Uganda Council for Foreign Affairs Strategic Plan Launch",
+    date: "10 July 2026",
+    href: "/about/newsletter",
+    text: "KCU staff from the School of Law and Management Sciences and the Department of Computing, AI and Data Science joined the Uganda Council for Foreign Affairs’ Strategic Plan Launch, engaging policymakers, diplomats and academics on Uganda’s foreign policy priorities.",
+    image: "/news-images/forensics-visit.jpeg",
+    featured: false,
+  },
+  {
     category: "Events",
     title: "King Ceasor University Hosts Public Lecture on Law-Making and Academic Collaboration",
     date: "08 July 2026",
