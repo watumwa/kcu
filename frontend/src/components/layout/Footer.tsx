@@ -46,7 +46,7 @@ export default function Footer() {
             links: [
               { label: "Student Guild", href: "/student/guild" },
               { label: "Careers", href: "/careers" },
-              { label: "Library Catalogue", href: "/library/catalogue" },
+              { label: "Library Catalogue", href: "https://catalogue.kcu.ac.ug/" },
               { label: "Campus News", href: "/about/newsletter" },
               
             ],
