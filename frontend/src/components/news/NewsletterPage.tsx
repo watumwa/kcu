@@ -21,6 +21,28 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "15 July 2026",
+    category: "Events",
+    title: "King Ceasor University Conducts Competency-Based Education and Training (CBET) Practical Training Workshop for Lecturers",
+    excerpt:
+      "KCU conducted a CBET Practical Training Workshop for lecturers, shifting teaching from content-based instruction to learner-centred, competency-driven education that prioritizes workplace readiness.",
+    image: "/news-images/cbet-traininig.jpeg",
+    imageAlt: "King Ceasor University lecturers during the Competency-Based Education and Training (CBET) Practical Training Workshop",
+    highlights: [
+      { label: "Date", value: "15 July 2026" },
+      { label: "Facilitator", value: "Mr. John Bosco Kwesiga" },
+      { label: "Taskforce Chair", value: "Dr. Byarugaba Baterena" },
+    ],
+    gallery: [],
+    story: [
+      "Bunga, Kampala - 15 July 2026",
+      "On Wednesday, 15 July 2026, King Ceasor University conducted a Competency-Based Education and Training (CBET) Practical Training Workshop for lecturers as part of its ongoing commitment to enhancing teaching quality and producing graduates equipped with practical, industry-relevant skills. The workshop was attended by lecturers from the School of Medicine, Health and Life Sciences, including the Departments of Nursing, Public Health and Laboratory (Physiology) as well as the School of Science, Computing and Engineering, including the Departments of Petroleum Geoscience, Computer Forensics and the Higher Education Certificate programme.",
+      "The training was facilitated by Mr. John Bosco Kwesiga under the leadership of the Chairperson of the CBET Taskforce, Dr. Byarugaba Baterena, who guided participants through the principles and practical application of competency-based education. The workshop emphasized shifting from traditional content-based instruction to learner-centred teaching that prioritizes measurable competencies, practical demonstrations, problem-solving, and workplace readiness.",
+      "In his opening remarks, the Deputy Vice Chancellor highlighted that today's employers seek graduates who can not only demonstrate knowledge but also apply it effectively in real-world situations. He noted that CBET encourages educators to ask not merely what has been taught, but what learners are able to competently perform after the learning experience. Through examples drawn from nursing, computer science and business administration, he underscored the importance of aligning teaching methods and assessment with practical competencies.",
+      "Participants also explored competency development models such as Miller's Pyramid of Competence and the Four Stages of Competence, reinforcing the importance of guided practice, authentic assessment and continuous improvement. The workshop reaffirmed King Ceasor University's commitment to educational excellence by equipping lecturers with approaches that foster innovation, ethical practice and graduate employability while responding to the evolving needs of society.",
+    ],
+  },
+  {
     date: "10 July 2026",
     category: "Partnerships",
     title: "King Ceasor University Staff Participate in Uganda Council for Foreign Affairs Strategic Plan Launch",
