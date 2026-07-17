@@ -185,7 +185,7 @@ const governanceBios = {
     "As a Partner at ENSafrica Uganda and a former senior legal and executive leader in the telecommunications sector, he brings strong governance, legal, and strategic oversight to the University's accountability and risk-management work.",
   ],
   nabasirye: [
-    "Assoc. Prof. Margaret Nabasirye serves as Vice Chairperson of the University Council and brings valuable experience in academic leadership, institutional governance, strategic planning, and higher education development.",
+    "Assoc Prof Mary Basaasa Muhenda serves as Vice Chairperson of the University Council and brings valuable experience in academic leadership, institutional governance, strategic planning, and higher education development.",
     "She supports the Council in providing strategic oversight, policy direction, and governance leadership while advancing accountability, innovation, academic excellence, and initiatives that strengthen teaching, research, and community engagement.",
   ],
   byamugisha: [
@@ -438,6 +438,7 @@ function TabUniversityCouncil() {
     name: "Assoc Prof Mary Basaasa Muhenda",
     role: "Vice Chairperson on Council",
     tier: "mid",
+    image: "/University Council/Assoc-Prof-Mary-Basaasa-Muhenda.jpeg",
     bio: governanceBios.nabasirye,
   };
   const committeeChairs: PersonProfile[] = [
