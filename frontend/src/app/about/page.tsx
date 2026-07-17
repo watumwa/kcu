@@ -436,7 +436,7 @@ function TabUniversityCouncil() {
   const chair: PersonProfile = { name: "Hon. Dr. Chris Baryomunsi", role: "Chairperson, University Council", tier: "top", image: "/University Council/Dr. Chris Baryomunsi.jpeg", bio: governanceBios.baryomunsi };
   const viceChair: PersonProfile = {
     name: "Assoc Prof Mary Basaasa Muhenda",
-    role: "Vice Chairperson on Council",
+    role: "Vice Chairperson, University council",
     tier: "mid",
     image: "/University Council/Assoc-Prof-Mary-Basaasa-Muhenda.jpeg",
     bio: governanceBios.nabasirye,
