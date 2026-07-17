@@ -435,10 +435,9 @@ function TabUniversityCouncil() {
   const [selectedPerson, setSelectedPerson] = useState<PersonProfile | null>(null);
   const chair: PersonProfile = { name: "Hon. Dr. Chris Baryomunsi", role: "Chairperson, University Council", tier: "top", image: "/University Council/Dr. Chris Baryomunsi.jpeg", bio: governanceBios.baryomunsi };
   const viceChair: PersonProfile = {
-    name: "Assoc. Prof. Margaret Nabasirye",
+    name: "Assoc Prof Mary Basaasa Muhenda",
     role: "Vice Chairperson on Council",
     tier: "mid",
-    image: "/images/council/assoc-prof-margaret-nabasirye.webp",
     bio: governanceBios.nabasirye,
   };
   const committeeChairs: PersonProfile[] = [
