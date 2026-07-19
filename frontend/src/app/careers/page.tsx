@@ -312,9 +312,11 @@ export default function CareersPage() {
             <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
               <div>
                 <p className="text-xs font-black uppercase tracking-[0.2em] text-[#0B6232]">Opportunities</p>
-                <h2 className="mt-2 text-3xl font-black leading-tight text-slate-950">Explore Career Areas</h2>
+                <h2 className="mt-2 text-3xl font-black leading-tight text-slate-950">Explore Job Opportunities</h2>
                 <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base">
-                  Browse common recruitment areas and submit your profile for consideration when suitable roles become available.
+                  Email your application to: careers@kcu.ac.ug
+                  <br />
+                  Application Deadline: 31/07/2026
                 </p>
               </div>
               <div className="relative">
