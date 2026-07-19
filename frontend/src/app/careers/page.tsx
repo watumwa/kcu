@@ -31,7 +31,7 @@ const vacancies = [
   },
   {
     title: "Director of Postgraduate Studies and Research",
-    department: "Office of the Directorate",
+    department: "Postgraduate Studies and Research",
     type: "Full-time",
     location: "KCU Main Campus - Bunga",
     deadline: "Deadline: 31-Jul-2026 5:00pm",
