@@ -252,13 +252,22 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Announcements",
+    title: "NOTICE OF EXTENSION OF THE STUDENTS' LOAN APPLICATION DEADLINE FOR ACADEMIC YEAR 2026/2027",
+    date: "20 July 2026",
+    href: "/about/newsletter",
+    text: "The Ministry of Education and Sports has extended the Higher Education Students' Financing Scheme loan application deadline for AY 2026/2027 from 17 July 2026 to 31 July 2026, to allow institutions time to conclude admissions.",
+    image: "/news-images/News-Advert.png",
+    featured: true,
+  },
+  {
     category: "Events",
     title: "King Ceasor University Conducts Competency-Based Education and Training (CBET) Practical Training Workshop for Lecturers",
     date: "15 July 2026",
     href: "/about/newsletter",
     text: "KCU conducted a CBET Practical Training Workshop for lecturers from the Schools of Medicine, Health and Life Sciences and Science, Computing and Engineering, shifting teaching towards measurable, industry-relevant competencies.",
     image: "/news-images/cbet-traininig.jpeg",
-    featured: true,
+    featured: false,
   },
   {
     category: "Partnerships",

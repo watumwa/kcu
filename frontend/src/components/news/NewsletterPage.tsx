@@ -21,6 +21,29 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "20 July 2026",
+    category: "Announcements",
+    title: "NOTICE OF EXTENSION OF THE STUDENTS' LOAN APPLICATION DEADLINE FOR ACADEMIC YEAR 2026/2027",
+    excerpt:
+      "The Ministry of Education and Sports has extended the Higher Education Students' Financing Scheme loan application deadline for AY 2026/2027 from 17 July 2026 to 31 July 2026, to allow institutions time to conclude admissions.",
+    image: "/news-images/News-Advert.png",
+    imageAlt: "Notice of extension of the student loan application deadline for Academic Year 2026/2027",
+    highlights: [
+      { label: "Previous Deadline", value: "17 July 2026" },
+      { label: "New Deadline", value: "31 July 2026" },
+      { label: "Academic Year", value: "2026/2027" },
+    ],
+    gallery: [],
+    story: [
+      "Kampala - 20 July 2026",
+      "The Higher Education Students Financing Scheme is established by the Higher Education Students' Financing (Amendment) Act, 2024 as a Department under the Ministry of Education and Sports (The Ministry) to administer the Students Loan Scheme. The Law mandates the Ministry to provide Loans and Scholarships to Students who wish to pursue Higher Education in Uganda.",
+      "The objectives of the Higher Education Students' Financing Scheme are to: increase equitable access to Higher Education in Uganda; support highly qualified students who may not afford Higher Education; support programmes critical for national development; ensure regional balance in Higher Education services in Uganda with emphasis to the District Quota distribution of loans; and create a revolving fund.",
+      "The Ministry has noted that the majority of Other Tertiary Institutions (OTIs), Other Degree Awarding Institutions, and some Universities have not yet concluded the admission process for the Academic Year 2026/2027 due to institution-specific challenges.",
+      "The Ministry takes cognizance of the fact that many prospective applicants have not yet received admission letters and therefore have incomplete applications, while others are yet to commence the application process.",
+      "In view of the above, the Ministry hereby informs the general public that the student loan application deadline for the Academic Year 2026/2027, which was previously 17 July 2026, has been extended to 31 July 2026.",
+    ],
+  },
+  {
     date: "15 July 2026",
     category: "Events",
     title: "King Ceasor University Conducts Competency-Based Education and Training (CBET) Practical Training Workshop for Lecturers",
