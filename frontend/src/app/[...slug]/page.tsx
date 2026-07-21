@@ -1212,9 +1212,7 @@ function getAcademicProgrammeGroups(variant: AcademicProgrammeVariant): Academic
 function AcademicProgrammesPage({ variant }: { variant: AcademicProgrammeVariant }) {
   const copy = academicPageCopy[variant];
   const groups = getAcademicProgrammeGroups(variant);
-  const totalCourses = groups.reduce((total, group) => total + group.courses.length, 0);
   const showCategoryColumn = variant === "schools";
-  const showAtAGlance = variant !== "schools" && variant !== "undergraduate" && variant !== "diploma" && variant !== "certificates";
 
   return (
     <>
@@ -1225,40 +1223,20 @@ function AcademicProgrammesPage({ variant }: { variant: AcademicProgrammeVariant
           <div className="absolute inset-0 bg-black/34" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/78 via-black/46 to-black/14" />
           <div className="absolute -bottom-20 right-12 hidden size-72 rounded-full border border-white/10 lg:block" />
-          <div className={`relative z-10 mx-auto max-w-[1440px] ${showAtAGlance ? "grid gap-8 lg:grid-cols-[1fr_380px] lg:items-end" : ""}`}>
-            <div className={showAtAGlance ? "" : "max-w-4xl"}>
-              <p className="inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-black uppercase tracking-[0.2em] text-[#FFC66B] backdrop-blur">Academics</p>
-              <h1 className="mt-5 max-w-4xl font-serif text-4xl font-black leading-tight text-white sm:text-5xl md:text-6xl">{copy.title}</h1>
-              <p className="mt-5 max-w-3xl text-sm leading-7 text-white/80 sm:text-base sm:leading-8">
-                {copy.intro}
-              </p>
-              <div className="mt-7 flex flex-wrap gap-3">
-                <Button asChild className="h-11 rounded-xl bg-[#FFC66B] px-5 font-black text-[#0B6232] hover:bg-[#FFC66B]">
-                  <Link href="https://apply.kcu.ac.ug/">Apply Online <ArrowRight className="ml-2 size-4" /></Link>
-                </Button>
-                <Button asChild variant="outline" className="h-11 rounded-xl border-2 border-white bg-transparent px-5 font-black text-white hover:bg-white hover:text-[#0B6232]">
-                  <Link href="/admissions/fees-structure">Fees Structure</Link>
-                </Button>
-              </div>
+          <div className="relative z-10 mx-auto max-w-[1440px] max-w-4xl">
+            <p className="inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-black uppercase tracking-[0.2em] text-[#FFC66B] backdrop-blur">Academics</p>
+            <h1 className="mt-5 max-w-4xl font-serif text-4xl font-black leading-tight text-white sm:text-5xl md:text-6xl">{copy.title}</h1>
+            <p className="mt-5 max-w-3xl text-sm leading-7 text-white/80 sm:text-base sm:leading-8">
+              {copy.intro}
+            </p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <Button asChild className="h-11 rounded-xl bg-[#FFC66B] px-5 font-black text-[#0B6232] hover:bg-[#FFC66B]">
+                <Link href="https://apply.kcu.ac.ug/">Apply Online <ArrowRight className="ml-2 size-4" /></Link>
+              </Button>
+              <Button asChild variant="outline" className="h-11 rounded-xl border-2 border-white bg-transparent px-5 font-black text-white hover:bg-white hover:text-[#0B6232]">
+                <Link href="/admissions/fees-structure">Fees Structure</Link>
+              </Button>
             </div>
-            {showAtAGlance && (
-              <div className="rounded-3xl border border-white/15 bg-white/10 p-5 text-white shadow-2xl backdrop-blur">
-                <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">At a glance</p>
-                <div className="mt-4 grid grid-cols-2 gap-3">
-                  <div className="rounded-2xl bg-white/10 p-4">
-                    <p className="text-3xl font-black">{totalCourses}</p>
-                    <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.14em] text-white/70">{copy.statLabel}</p>
-                  </div>
-                  <div className="rounded-2xl bg-[#FFC66B] p-4 text-[#0B6232]">
-                    <p className="text-3xl font-black">{groups.length}</p>
-                    <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.14em]">{copy.groupStatLabel}</p>
-                  </div>
-                </div>
-                <p className="mt-4 rounded-2xl border border-white/10 bg-black/20 p-4 text-xs leading-6 text-white/75">
-                  This academics view lists programme names and durations only. Fee amounts remain on the admissions fee structure page.
-                </p>
-              </div>
-            )}
           </div>
         </section>
 
