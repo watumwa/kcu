@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import FloatingApplyButton from "@/components/common/FloatingApplyButton";
-import NeexaWidget from "@/components/integrations/NeexaWidget";
+import TawkWidget from "@/components/integrations/TawkWidget";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -18,7 +18,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         {children}
         <FloatingApplyButton />
-        <NeexaWidget />
+        <TawkWidget />
       </body>
     </html>
   );
