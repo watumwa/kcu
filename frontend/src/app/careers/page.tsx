@@ -250,6 +250,16 @@ const vacancies = [
     pdfHref: "/careers/SENIOR LECTURER – LAW.pdf",
   },
   {
+    title: "Corporate Development and Partnerships Officer",
+    department: "Office of Partnerships & Advancement",
+    type: "Full-time",
+    location: "KCU Main Campus - Bunga",
+    deadline: "Deadline: 31-Jul-2026 5:00pm",
+    summary: "Cultivate institutional partnerships, donors and strategic collaborations that advance the University's mission and growth.",
+    requirements: ["Relevant degree in business, development or communications", "Partnership, fundraising or stakeholder engagement experience", "Strong communication and relationship management skills"],
+    pdfHref: "/careers/POSITION OF CORPORATE DEVELOPMENT AND PARTNERSHIPS OFFICER.pdf",
+  },
+  {
     title: "Accounts Assistant",
     department: "Finance Office",
     type: "Full-time",
