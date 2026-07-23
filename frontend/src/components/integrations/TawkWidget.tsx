@@ -1,25 +1,25 @@
 "use client";
 
 import { MessageCircle } from "lucide-react";
-import { usePathname } from "next/navigation";
 import Script from "next/script";
 import { useEffect, useState } from "react";
 
-const tawkWidgetSrc =
-  "https://embed.tawk.to/6374a39bb0d6371309cf4a30/1ghvpu6kh";
-const hiddenRoutes = new Set(["/about/collaborations-partnerships"]);
+const tawkWidgetSrc = "https://embed.tawk.to/6374a39bb0d6371309cf4a30/1ghvpu6kh";
 
-type TawkWindow = Window & {
-  Tawk_API?: {
-    maximize?: () => void;
-  };
-};
+const tawkEmbedCode = `
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6374a39bb0d6371309cf4a30/1ghvpu6kh';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+`;
 
 export default function TawkWidget() {
-  const pathname = usePathname();
   const [shouldLoadWidget, setShouldLoadWidget] = useState(false);
-
-  const shouldHideOnRoute = hiddenRoutes.has(pathname);
 
   useEffect(() => {
     if (!shouldLoadWidget) {
@@ -27,11 +27,9 @@ export default function TawkWidget() {
     }
 
     const openTawkWidget = () => {
-      const tawkApi = (window as TawkWindow).Tawk_API;
-
-      if (tawkApi?.maximize) {
+      if (typeof window !== "undefined" && (window as any).Tawk_API) {
         try {
-          tawkApi.maximize();
+          (window as any).Tawk_API.maximize();
         } catch {
           // Tawk API may not be ready immediately
         }
@@ -40,7 +38,6 @@ export default function TawkWidget() {
 
     openTawkWidget();
     const interval = setInterval(openTawkWidget, 500);
-
     const timeout = setTimeout(() => clearInterval(interval), 5000);
 
     return () => {
@@ -48,10 +45,6 @@ export default function TawkWidget() {
       clearTimeout(timeout);
     };
   }, [shouldLoadWidget]);
-
-  if (shouldHideOnRoute) {
-    return null;
-  }
 
   return (
     <>
@@ -70,7 +63,11 @@ export default function TawkWidget() {
       )}
 
       {shouldLoadWidget && (
-        <Script id="tawk-to-widget" src={tawkWidgetSrc} strategy="afterInteractive" />
+        <Script
+          id="tawk-to-widget"
+          strategy="lazyOnload"
+          dangerouslySetInnerHTML={{ __html: tawkEmbedCode }}
+        />
       )}
     </>
   );
