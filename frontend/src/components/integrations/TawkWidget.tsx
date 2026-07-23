@@ -1,48 +1,106 @@
 "use client";
 
 import { MessageCircle } from "lucide-react";
-import Script from "next/script";
 import { useEffect, useState } from "react";
 
-const tawkWidgetSrc = "https://embed.tawk.to/6374a39bb0d6371309cf4a30/1ghvpu6kh";
+const TAWK_PROPERTY_ID = "6374a39bb0d6371309cf4a30";
+const TAWK_CHAT_ID = "1ghvpu6kh";
 
-const tawkEmbedCode = `
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6374a39bb0d6371309cf4a30/1ghvpu6kh';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-`;
+function injectTawkScript(): Promise<void> {
+  return new Promise((resolve, reject) => {
+    if (typeof window === "undefined") {
+      reject(new Error("No window"));
+      return;
+    }
+
+    const existing = document.getElementById("tawk-to-widget");
+    if (existing) {
+      resolve();
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.id = "tawk-to-widget";
+    script.async = true;
+    script.src = `https://embed.tawk.to/${TAWK_PROPERTY_ID}/${TAWK_CHAT_ID}`;
+    script.charset = "UTF-8";
+    script.setAttribute("crossorigin", "*");
+    
+    const firstScript = document.getElementsByTagName("script")[0];
+    if (firstScript && firstScript.parentNode) {
+      firstScript.parentNode.insertBefore(script, firstScript);
+    } else {
+      document.head.appendChild(script);
+    }
+
+    const timeout = setTimeout(() => {
+      reject(new Error("Tawk script load timeout"));
+    }, 10000);
+
+    script.addEventListener("load", () => {
+      clearTimeout(timeout);
+      resolve();
+    });
+
+    script.addEventListener("error", () => {
+      clearTimeout(timeout);
+      reject(new Error("Tawk script failed to load"));
+    });
+  });
+}
+
+function waitForTawkApi(timeoutMs = 10000): Promise<void> {
+  return new Promise((resolve, reject) => {
+    if (typeof window === "undefined") {
+      reject(new Error("No window"));
+      return;
+    }
+
+    const start = Date.now();
+    const check = () => {
+      const api = (window as any).Tawk_API;
+      if (api && typeof api.maximize === "function") {
+        resolve();
+      } else if (Date.now() - start > timeoutMs) {
+        reject(new Error("Tawk_API not ready"));
+      } else {
+        requestAnimationFrame(() => setTimeout(check, 100));
+      }
+    };
+
+    check();
+  });
+}
 
 export default function TawkWidget() {
   const [shouldLoadWidget, setShouldLoadWidget] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     if (!shouldLoadWidget) {
       return;
     }
 
-    const openTawkWidget = () => {
-      if (typeof window !== "undefined" && (window as any).Tawk_API) {
-        try {
-          (window as any).Tawk_API.maximize();
-        } catch {
-          // Tawk API may not be ready immediately
+    let cancelled = false;
+
+    const openTawkWidget = async () => {
+      try {
+        await injectTawkScript();
+        if (cancelled) return;
+        await waitForTawkApi();
+        if (cancelled) return;
+        (window as any).Tawk_API.maximize();
+      } catch (err) {
+        if (!cancelled) {
+          setError(err instanceof Error ? err.message : "Chat unavailable");
         }
       }
     };
 
     openTawkWidget();
-    const interval = setInterval(openTawkWidget, 500);
-    const timeout = setTimeout(() => clearInterval(interval), 5000);
 
     return () => {
-      clearInterval(interval);
-      clearTimeout(timeout);
+      cancelled = true;
     };
   }, [shouldLoadWidget]);
 
@@ -51,7 +109,10 @@ export default function TawkWidget() {
       {!shouldLoadWidget && (
         <button
           type="button"
-          onClick={() => setShouldLoadWidget(true)}
+          onClick={() => {
+            setError(null);
+            setShouldLoadWidget(true);
+          }}
           className="fixed bottom-5 right-5 z-[70] inline-flex h-14 items-center gap-3 rounded-full border border-[#FFC66B]/70 bg-[#0B6232] px-5 text-sm font-black text-white shadow-2xl shadow-slate-950/25 transition hover:-translate-y-0.5 hover:bg-[#0B6232] focus:outline-none focus:ring-4 focus:ring-[#FFC66B]/35 sm:bottom-6 sm:right-6 sm:h-16 sm:px-6 sm:text-base"
           aria-label="Open King Ceasor University chat"
         >
@@ -62,12 +123,10 @@ export default function TawkWidget() {
         </button>
       )}
 
-      {shouldLoadWidget && (
-        <Script
-          id="tawk-to-widget"
-          strategy="lazyOnload"
-          dangerouslySetInnerHTML={{ __html: tawkEmbedCode }}
-        />
+      {error && (
+        <div className="fixed bottom-5 right-5 z-[70] rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-xs font-semibold text-red-700 shadow-lg">
+          {error}
+        </div>
       )}
     </>
   );
