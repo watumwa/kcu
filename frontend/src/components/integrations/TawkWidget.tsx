@@ -5,11 +5,17 @@ import { useEffect, useState } from "react";
 
 const TAWK_PROPERTY_ID = "6374a39bb0d6371309cf4a30";
 const TAWK_CHAT_ID = "1ghvpu6kh";
+const TAWK_SRC = `https://embed.tawk.to/${TAWK_PROPERTY_ID}/${TAWK_CHAT_ID}`;
 
 function injectTawkScript(): Promise<void> {
   return new Promise((resolve, reject) => {
     if (typeof window === "undefined") {
       reject(new Error("No window"));
+      return;
+    }
+
+    if ((window as any).Tawk_API) {
+      resolve();
       return;
     }
 
@@ -22,10 +28,10 @@ function injectTawkScript(): Promise<void> {
     const script = document.createElement("script");
     script.id = "tawk-to-widget";
     script.async = true;
-    script.src = `https://embed.tawk.to/${TAWK_PROPERTY_ID}/${TAWK_CHAT_ID}`;
+    script.src = TAWK_SRC;
     script.charset = "UTF-8";
     script.setAttribute("crossorigin", "*");
-    
+
     const firstScript = document.getElementsByTagName("script")[0];
     if (firstScript && firstScript.parentNode) {
       firstScript.parentNode.insertBefore(script, firstScript);
@@ -34,8 +40,8 @@ function injectTawkScript(): Promise<void> {
     }
 
     const timeout = setTimeout(() => {
-      reject(new Error("Tawk script load timeout"));
-    }, 10000);
+      reject(new Error("Chat unavailable"));
+    }, 12000);
 
     script.addEventListener("load", () => {
       clearTimeout(timeout);
@@ -44,7 +50,7 @@ function injectTawkScript(): Promise<void> {
 
     script.addEventListener("error", () => {
       clearTimeout(timeout);
-      reject(new Error("Tawk script failed to load"));
+      reject(new Error("Chat unavailable"));
     });
   });
 }
@@ -62,7 +68,7 @@ function waitForTawkApi(timeoutMs = 10000): Promise<void> {
       if (api && typeof api.maximize === "function") {
         resolve();
       } else if (Date.now() - start > timeoutMs) {
-        reject(new Error("Tawk_API not ready"));
+        reject(new Error("Chat unavailable"));
       } else {
         requestAnimationFrame(() => setTimeout(check, 100));
       }
