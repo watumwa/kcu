@@ -1941,69 +1941,62 @@ function FeesStructurePage() {
   );
 }
 
-const visitingProfessors = [
+const strategicPartners = [
   {
-    name: "Visiting Professor 01",
-    focus: "Medicine, Health and Life Sciences",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=900&q=85",
-    description:
-      "Placeholder profile for an international academic contributing lectures, mentorship, and specialist seminars.",
+    name: "University of Fort Hare",
+    logo: "/images/partners/ufh.svg",
+    logoFrame: "h-24 max-w-[140px]",
   },
   {
-    name: "Visiting Professor 02",
-    focus: "Law and Management Sciences",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=85",
-    description:
-      "Placeholder profile for a visiting scholar supporting professional learning, research supervision, and public lectures.",
+    name: "Aleksandër Moisiu University Durrës",
+    logo: "/images/partners/uamd.png",
+    logoFrame: "h-24 max-w-[140px]",
   },
   {
-    name: "Visiting Professor 03",
-    focus: "Science, Computing and Engineering",
-    image: "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=900&q=85",
-    description:
-      "Placeholder profile for a research collaborator strengthening innovation, digital skills, and technical exchange.",
-  },
-];
-
-const mouHighlights = [
-  {
-    title: "Student Financing MOU",
-    partner: "Higher Education Students' Financing Scheme",
-    image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=900&q=85",
-    description:
-      "KCU works with student financing partners to improve access to higher education and support eligible learners through formal funding pathways.",
+    name: "Universidad de Montevideo",
+    logo: "/images/partners/montevideo.png",
+    logoFrame: "h-20 max-w-[230px]",
   },
   {
-    title: "International Exchange MOU",
-    partner: "Global academic partners",
-    image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=85",
-    description:
-      "Exchange partnerships create opportunities for academic mobility, shared seminars, visiting scholars, and student exposure to wider learning environments.",
+    name: "Arab Academy for Science, Technology & Maritime Transport",
+    logo: "/images/partners/aast.png",
+    logoFrame: "h-20 max-w-[210px]",
+    imageClassName: "brightness-0",
   },
   {
-    title: "Digital Infrastructure MOU",
-    partner: "Research and education networks",
-    image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=85",
-    description:
-      "Technology-focused collaborations strengthen digital learning, research connectivity, institutional systems, and knowledge sharing.",
-  },
-];
-
-const researchCollaborations = [
-  {
-    area: "Health Sciences Research",
-    description:
-      "Collaborative research in clinical medicine, nursing, laboratory sciences, public health, and community health priorities.",
+    name: "Superior University",
+    logo: "/images/partners/superior.svg",
+    logoFrame: "h-20 max-w-[230px]",
   },
   {
-    area: "Law, Governance and Management",
-    description:
-      "Joint inquiry into legal systems, enterprise development, leadership, public policy, governance, and institutional accountability.",
+    name: "Rosebank International University College",
+    logo: "/images/partners/riuc.png",
+    logoFrame: "h-28 max-w-[130px]",
   },
   {
-    area: "Computing, Energy and Innovation",
-    description:
-      "Research partnerships in digital forensics, cyber security, petroleum geoscience, artificial intelligence, and applied technology.",
+    name: "Mulago National Referral Hospital",
+    logo: "/images/partners/mulago.jpg",
+    logoFrame: "h-20 max-w-[230px]",
+  },
+  {
+    name: "Kiruddu National Referral Hospital",
+    logo: "/images/partners/kiruddu.gif",
+    logoFrame: "h-20 max-w-[230px]",
+  },
+  {
+    name: "Erasmus+ Programme",
+    logo: "/images/partners/erasmus.svg",
+    logoFrame: "h-24 max-w-[150px]",
+  },
+  {
+    name: "Makerere University",
+    logo: "/images/partners/makerere.svg",
+    logoFrame: "h-24 max-w-[150px]",
+  },
+  {
+    name: "Research and Education Network for Uganda",
+    logo: "/images/partners/renu.png",
+    logoFrame: "h-24 max-w-[150px]",
   },
 ];
 
@@ -2012,121 +2005,37 @@ function CollaborationsPartnershipsPage() {
     <>
       <Navbar />
       <main className="min-h-screen bg-white pt-16 sm:pt-20 lg:pt-[8.5rem]">
-        <section className="relative overflow-hidden px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-          <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1515169067865-5387ec356754?auto=format&fit=crop&w=1800&q=85')" }} />
-          <div className="absolute inset-0 bg-black/55" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/55 to-transparent" />
-          <div className="relative z-10 mx-auto grid max-w-[1440px] gap-8 lg:grid-cols-[1fr_380px] lg:items-end">
-            <div>
-              <p className="inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-black uppercase tracking-[0.2em] text-[#FFC66B] backdrop-blur">Global Network</p>
-              <h1 className="mt-5 max-w-4xl font-serif text-4xl font-black leading-tight text-white sm:text-5xl md:text-6xl">Collaborations &amp; Partnerships</h1>
-              <p className="mt-5 max-w-3xl text-sm leading-7 text-white/80 sm:text-base sm:leading-8">
-                KCU builds academic partnerships through visiting professors, formal MOUs, research collaboration, exchange opportunities, and shared institutional development.
-              </p>
-            </div>
-            <div className="rounded-3xl border border-white/15 bg-white/10 p-5 text-white shadow-2xl backdrop-blur">
-              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">Partnership Focus</p>
-              <div className="mt-4 grid grid-cols-3 gap-3">
-                {[
-                  { value: "3", label: "Visiting Professors" },
-                  { value: "3", label: "MOU Areas" },
-                  { value: "3", label: "Research Themes" },
-                ].map((item) => (
-                  <div key={item.label} className="rounded-2xl bg-white/10 p-3 text-center">
-                    <p className="text-2xl font-black">{item.value}</p>
-                    <p className="mt-1 text-[9px] font-bold uppercase tracking-[0.12em] text-white/70">{item.label}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+        <section className="relative isolate flex h-24 items-center justify-center overflow-hidden bg-slate-100 sm:h-28">
+          <Image
+            src="/images/kcu-2026/student-laptop-collaboration.webp"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-[center_44%] opacity-25 grayscale"
+          />
+          <div className="absolute inset-0 bg-white/70" />
+          <h1 className="relative z-10 px-4 text-center text-2xl font-black leading-tight text-black sm:text-3xl">
+            Our Strategic Partners
+          </h1>
         </section>
 
-        <section className="bg-slate-50/70 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
-          <div className="mx-auto max-w-[1440px] space-y-14">
-            <section>
-              <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-                <div>
-                  <p className="text-xs font-black uppercase tracking-[0.2em] text-[#0B6232]">Academic Exchange</p>
-                  <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950 sm:text-3xl">Visiting Professors</h2>
+        <section className="bg-white px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+          <div className="mx-auto grid max-w-[1440px] grid-cols-2 items-center justify-items-center gap-x-10 gap-y-16 sm:grid-cols-3 sm:gap-x-14 sm:gap-y-20 lg:grid-cols-5 lg:gap-x-20 lg:gap-y-24 lg:[&>*:last-child]:col-start-3">
+            {strategicPartners.map((partner) => (
+              <article key={partner.name} className="flex min-h-28 w-full items-center justify-center sm:min-h-32">
+                <div className={`relative w-full ${partner.logoFrame}`}>
+                  <Image
+                    src={partner.logo}
+                    alt={`${partner.name} logo`}
+                    fill
+                    sizes="(min-width: 1024px) 220px, (min-width: 640px) 30vw, 45vw"
+                    className={`object-contain ${partner.imageClassName ?? ""}`}
+                  />
                 </div>
-                <p className="max-w-2xl text-sm leading-7 text-slate-600">
-                  Placeholder profiles for visiting academics who support teaching, research mentorship, seminars, and knowledge exchange.
-                </p>
-              </div>
-              <div className="grid gap-5 md:grid-cols-3">
-                {visitingProfessors.map((professor) => (
-                  <article key={professor.name} className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5">
-                    <div className="relative aspect-[4/3] bg-slate-200">
-                      <Image src={professor.image} alt={professor.name} fill sizes="(min-width: 768px) 33vw, 100vw" className="object-cover" />
-                    </div>
-                    <div className="p-6">
-                      <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#0B6232]">{professor.focus}</p>
-                      <h3 className="mt-2 text-xl font-black leading-tight text-slate-950">{professor.name}</h3>
-                      <p className="mt-3 text-sm leading-7 text-slate-600">{professor.description}</p>
-                    </div>
-                  </article>
-                ))}
-              </div>
-            </section>
-
-            <section>
-              <div className="mb-6">
-                <p className="text-xs font-black uppercase tracking-[0.2em] text-[#0B6232]">Formal Partnerships</p>
-                <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950 sm:text-3xl">Memoranda of Understanding</h2>
-              </div>
-              <div className="grid gap-5 lg:grid-cols-3">
-                {mouHighlights.map((mou) => (
-                  <article key={mou.title} className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5">
-                    <div className="relative h-48 bg-slate-200">
-                      <Image src={mou.image} alt={mou.title} fill sizes="(min-width: 1024px) 33vw, 100vw" className="object-cover" />
-                    </div>
-                    <div className="p-6">
-                      <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#0B6232]">{mou.partner}</p>
-                      <h3 className="mt-2 text-xl font-black leading-tight text-slate-950">{mou.title}</h3>
-                      <p className="mt-3 text-sm leading-7 text-slate-600">{mou.description}</p>
-                    </div>
-                  </article>
-                ))}
-              </div>
-            </section>
-
-            <section className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5">
-              <div className="grid gap-0 lg:grid-cols-[360px_1fr]">
-                <div className="bg-[#0B6232] p-7 text-white sm:p-8">
-                  <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">Research</p>
-                  <h2 className="mt-2 text-2xl font-black leading-tight sm:text-3xl">Research Collaborations</h2>
-                  <p className="mt-4 text-sm leading-7 text-white/75">
-                    KCU supports collaborative inquiry that connects faculty, students, visiting scholars, and partner institutions around practical societal needs.
-                  </p>
-                </div>
-                <div className="grid gap-0 divide-y divide-slate-100">
-                  {researchCollaborations.map((item, index) => (
-                    <article key={item.area} className="grid gap-4 p-6 sm:grid-cols-[70px_1fr] sm:p-8">
-                      <div className="grid size-14 place-items-center rounded-2xl bg-[#FFC66B]/25 text-sm font-black text-[#0B6232]">
-                        {String(index + 1).padStart(2, "0")}
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-black text-slate-950">{item.area}</h3>
-                        <p className="mt-2 text-sm leading-7 text-slate-600">{item.description}</p>
-                      </div>
-                    </article>
-                  ))}
-                </div>
-              </div>
-            </section>
-
-            <section className="rounded-3xl bg-[#0B6232] p-7 text-white shadow-2xl shadow-[#0B6232]/20 sm:p-10">
-              <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
-                <div>
-                  <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#FFC66B]">Partner with KCU</p>
-                  <h2 className="mt-2 text-2xl font-black leading-tight">Build academic, research, and exchange partnerships.</h2>
-                </div>
-                <Button asChild className="h-12 rounded-xl bg-[#FFC66B] px-6 font-black text-[#0B6232] hover:bg-[#FFC66B]">
-                  <Link href="/about">Back to About Us <ArrowRight className="ml-2 size-4" /></Link>
-                </Button>
-              </div>
-            </section>
+                <h2 className="sr-only">{partner.name}</h2>
+              </article>
+            ))}
           </div>
         </section>
       </main>
@@ -2467,7 +2376,6 @@ function CampusLifePage() {
 }
 
 function AboutContentPage({ page }: { page: AboutPageContent }) {
-  const isServicesPage = page.eyebrow === "Services" || page.eyebrow === "Library";
   const hasPageSections = page.sections.length > 0;
   const hasSolidHero = Boolean(page.counselling || page.deanOfStudents);
   const heroImage = page.heroImage ?? "/images/kcu-2026/graduates-welcome-group.webp";

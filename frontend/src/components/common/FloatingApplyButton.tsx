@@ -2,12 +2,17 @@
 
 import { ArrowRight, GraduationCap } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const applyUrl = "https://apply.kcu.ac.ug/";
+const hiddenRoutes = new Set(["/about/collaborations-partnerships"]);
 
 export default function FloatingApplyButton() {
+  const pathname = usePathname();
   const [isHidden, setIsHidden] = useState(false);
+
+  const shouldHideOnRoute = hiddenRoutes.has(pathname);
 
   useEffect(() => {
     const updateVisibility = () => {
@@ -19,6 +24,10 @@ export default function FloatingApplyButton() {
 
     return () => window.removeEventListener("scroll", updateVisibility);
   }, []);
+
+  if (shouldHideOnRoute) {
+    return null;
+  }
 
   return (
     <Link

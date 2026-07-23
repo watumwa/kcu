@@ -1,14 +1,25 @@
 "use client";
 
 import { MessageCircle } from "lucide-react";
+import { usePathname } from "next/navigation";
 import Script from "next/script";
 import { useEffect, useState } from "react";
 
 const tawkWidgetSrc =
   "https://embed.tawk.to/6374a39bb0d6371309cf4a30/1ghvpu6kh";
+const hiddenRoutes = new Set(["/about/collaborations-partnerships"]);
+
+type TawkWindow = Window & {
+  Tawk_API?: {
+    maximize?: () => void;
+  };
+};
 
 export default function TawkWidget() {
+  const pathname = usePathname();
   const [shouldLoadWidget, setShouldLoadWidget] = useState(false);
+
+  const shouldHideOnRoute = hiddenRoutes.has(pathname);
 
   useEffect(() => {
     if (!shouldLoadWidget) {
@@ -16,9 +27,11 @@ export default function TawkWidget() {
     }
 
     const openTawkWidget = () => {
-      if (typeof window !== "undefined" && (window as any).Tawk_API) {
+      const tawkApi = (window as TawkWindow).Tawk_API;
+
+      if (tawkApi?.maximize) {
         try {
-          (window as any).Tawk_API.maximize();
+          tawkApi.maximize();
         } catch {
           // Tawk API may not be ready immediately
         }
@@ -35,6 +48,10 @@ export default function TawkWidget() {
       clearTimeout(timeout);
     };
   }, [shouldLoadWidget]);
+
+  if (shouldHideOnRoute) {
+    return null;
+  }
 
   return (
     <>
