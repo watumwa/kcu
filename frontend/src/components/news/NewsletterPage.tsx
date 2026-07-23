@@ -549,29 +549,29 @@ function NewsletterStoryModal({ article, onClose }: { article: NewsletterArticle
 
 export default function NewsletterPage() {
   const [selectedArticle, setSelectedArticle] = useState<NewsletterArticle | null>(null);
-  const latestNewsArticles = newsletterArticles.slice(0, 4);
-  const newsletterDigestArticles = newsletterArticles.slice(4, 10);
-  const eventArticles = newsletterArticles
-    .filter((article) => ["Community Outreach", "Student Life", "Events", "Community"].includes(article.category))
-    .slice(0, 6);
+  const [latestPage, setLatestPage] = useState(1);
+  const [newsletterPage, setNewsletterPage] = useState(1);
+  const [eventsPage, setEventsPage] = useState(1);
+  const PER_PAGE = 6;
+
+  const latestGridAll = newsletterArticles.slice(1).slice(0, latestPage * PER_PAGE);
+  const latestGridVisible = latestGridAll.slice(-PER_PAGE);
+  const latestHasMore = latestGridAll.length < newsletterArticles.slice(1).length;
+  const latestHasPrev = latestPage > 1;
+
+  const digestAll = newsletterArticles.slice(4);
+  const digestVisible = digestAll.slice(0, newsletterPage * PER_PAGE).slice(-PER_PAGE);
+  const digestHasMore = digestAll.length > PER_PAGE && digestAll.length > newsletterPage * PER_PAGE;
+  const digestHasPrev = newsletterPage > 1;
+
+  const eventsAll = newsletterArticles
+    .filter((article) => ["Community Outreach", "Student Life", "Events", "Community"].includes(article.category));
+  const eventsVisible = eventsAll.slice(0, eventsPage * PER_PAGE).slice(-PER_PAGE);
+  const eventsHasMore = eventsAll.length > PER_PAGE && eventsAll.length > eventsPage * PER_PAGE;
+  const eventsHasPrev = eventsPage > 1;
 
   return (
-    <main className="min-h-screen bg-white pt-16 sm:pt-20 lg:pt-[8.5rem]">
-      <section className="relative overflow-hidden bg-[#0B6232] px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-        <div className="absolute -bottom-20 right-8 hidden size-72 rounded-full border border-white/10 lg:block" />
-        <div className="relative z-10 mx-auto max-w-[1440px]">
-          <div>
-            <p className="inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-black uppercase tracking-[0.2em] text-[#FFC66B] backdrop-blur">News &amp; Updates</p>
-            <h1 className="mt-5 max-w-3xl font-serif text-4xl font-black leading-tight text-white sm:text-5xl md:text-6xl">
-              <span className="block text-[#FFC66B]">News</span>
-            </h1>
-            <p className="mt-5 max-w-2xl text-sm leading-7 text-white/80 sm:text-base sm:leading-8">
-              Stay informed. Stay inspired. The latest from King Ceasor University.
-            </p>
-          </div>
-        </div>
-      </section>
-
+    <main className="min-h-screen bg-white pt-12 sm:pt-14 lg:pt-24">
       <section id="latest-news" className="bg-slate-50/70 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
         <div className="mx-auto max-w-[1440px]">
           <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
@@ -592,10 +592,10 @@ export default function NewsletterPage() {
           <article className="group overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5">
             <div className="grid lg:grid-cols-[1.05fr_0.95fr]">
               <div className="relative min-h-[320px] bg-slate-100">
-                {latestNewsArticles[0].image && (
+                {newsletterArticles[0].image && (
                   <Image
-                    src={latestNewsArticles[0].image}
-                    alt={latestNewsArticles[0].imageAlt ?? latestNewsArticles[0].title}
+                    src={newsletterArticles[0].image}
+                    alt={newsletterArticles[0].imageAlt ?? newsletterArticles[0].title}
                     fill
                     sizes="(min-width: 1024px) 52vw, 100vw"
                     className="object-cover transition duration-700 group-hover:scale-105"
@@ -604,14 +604,14 @@ export default function NewsletterPage() {
               </div>
               <div className="flex flex-col justify-center p-6 sm:p-8 lg:p-10">
                 <div className="flex flex-wrap items-center gap-3">
-                  <span className="rounded-full bg-[#FFC66B]/30 px-3 py-1 text-xs font-black text-[#0B6232]">{latestNewsArticles[0].category}</span>
-                  <span className="text-xs font-black uppercase tracking-[0.16em] text-slate-500">{latestNewsArticles[0].date}</span>
+                  <span className="rounded-full bg-[#FFC66B]/30 px-3 py-1 text-xs font-black text-[#0B6232]">{newsletterArticles[0].category}</span>
+                  <span className="text-xs font-black uppercase tracking-[0.16em] text-slate-500">{newsletterArticles[0].date}</span>
                 </div>
-                <h3 className="mt-5 text-2xl font-black leading-tight text-slate-950 sm:text-3xl">{latestNewsArticles[0].title}</h3>
-                <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base">{latestNewsArticles[0].excerpt}</p>
+                <h3 className="mt-5 text-2xl font-black leading-tight text-slate-950 sm:text-3xl">{newsletterArticles[0].title}</h3>
+                <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base">{newsletterArticles[0].excerpt}</p>
                 <button
                   type="button"
-                  onClick={() => setSelectedArticle(latestNewsArticles[0])}
+                  onClick={() => setSelectedArticle(newsletterArticles[0])}
                   className="mt-7 inline-flex w-fit items-center rounded-xl bg-[#0B6232] px-5 py-3 text-sm font-black text-white transition hover:bg-[#084a26]"
                 >
                   Read More <ArrowRight className="ml-2 size-4" />
@@ -621,7 +621,7 @@ export default function NewsletterPage() {
           </article>
 
           <div className="mt-6 grid gap-5 md:grid-cols-3">
-            {latestNewsArticles.slice(1).map((article) => (
+            {latestGridVisible.map((article) => (
               <article key={`${article.date}-${article.title}`} className="group overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm shadow-slate-900/5 transition hover:-translate-y-1 hover:border-[#0B6232]/25 hover:shadow-xl hover:shadow-slate-900/10">
                 {article.image && (
                   <div className="relative aspect-[16/9] bg-slate-100">
@@ -652,6 +652,30 @@ export default function NewsletterPage() {
               </article>
             ))}
           </div>
+
+          {(latestHasMore || latestHasPrev) && (
+            <div className="mt-8 flex items-center justify-center gap-3">
+              <button
+                type="button"
+                onClick={() => setLatestPage((page) => Math.max(1, page - 1))}
+                disabled={!latestHasPrev}
+                className="inline-flex items-center rounded-xl bg-[#0B6232] px-5 py-3 text-sm font-black text-white transition hover:bg-[#084a26] disabled:opacity-40 disabled:cursor-not-allowed"
+              >
+                <ArrowRight className="mr-2 size-4 rotate-180" /> View latest
+              </button>
+              <span className="rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-black text-slate-600">
+                Page {latestPage}
+              </span>
+              <button
+                type="button"
+                onClick={() => setLatestPage((page) => page + 1)}
+                disabled={!latestHasMore}
+                className="inline-flex items-center rounded-xl bg-[#0B6232] px-5 py-3 text-sm font-black text-white transition hover:bg-[#084a26] disabled:opacity-40 disabled:cursor-not-allowed"
+              >
+                View older <ArrowRight className="ml-2 size-4" />
+              </button>
+            </div>
+          )}
         </div>
       </section>
 
@@ -673,7 +697,7 @@ export default function NewsletterPage() {
                 <FileText className="mr-2 size-4" /> Download News Journal
               </Link>
               <div className="mt-7 grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
-                {newsletterDigestArticles.slice(0, 3).map((article, index) => (
+                {digestVisible.slice(0, 3).map((article, index) => (
                   <button
                     key={`${article.date}-${article.title}`}
                     type="button"
@@ -688,7 +712,7 @@ export default function NewsletterPage() {
             </div>
 
             <div className="grid gap-4 md:grid-cols-2">
-              {newsletterDigestArticles.map((article) => (
+              {digestVisible.map((article) => (
                 <article key={`${article.date}-${article.title}`} className="rounded-2xl border border-slate-100 bg-slate-50 p-5 transition hover:border-[#0B6232]/25 hover:bg-white hover:shadow-lg hover:shadow-slate-900/5">
                   <div className="flex flex-wrap items-center gap-2">
                     <span className="rounded-full bg-[#0B6232]/10 px-3 py-1 text-[10px] font-black uppercase tracking-wide text-[#0B6232]">{article.category}</span>
@@ -706,6 +730,30 @@ export default function NewsletterPage() {
                 </article>
               ))}
             </div>
+
+            {(digestHasMore || digestHasPrev) && (
+              <div className="mt-8 flex items-center justify-center gap-3">
+                <button
+                  type="button"
+                  onClick={() => setNewsletterPage((page) => Math.max(1, page - 1))}
+                  disabled={!digestHasPrev}
+                  className="inline-flex items-center rounded-xl bg-[#0B6232] px-5 py-3 text-sm font-black text-white transition hover:bg-[#084a26] disabled:opacity-40 disabled:cursor-not-allowed"
+                >
+                  <ArrowRight className="mr-2 size-4 rotate-180" /> View latest
+                </button>
+                <span className="rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-black text-slate-600">
+                  Page {newsletterPage}
+                </span>
+                <button
+                  type="button"
+                  onClick={() => setNewsletterPage((page) => page + 1)}
+                  disabled={!digestHasMore}
+                  className="inline-flex items-center rounded-xl bg-[#0B6232] px-5 py-3 text-sm font-black text-white transition hover:bg-[#084a26] disabled:opacity-40 disabled:cursor-not-allowed"
+                >
+                  View older <ArrowRight className="ml-2 size-4" />
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -721,7 +769,7 @@ export default function NewsletterPage() {
           </div>
 
           <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-            {eventArticles.map((article, index) => (
+            {eventsVisible.map((article, index) => (
               <article key={`${article.date}-${article.title}`} className="flex min-h-[260px] flex-col rounded-2xl border border-slate-100 bg-white p-6 shadow-sm shadow-slate-900/5 transition hover:-translate-y-1 hover:border-[#0B6232]/25 hover:shadow-xl hover:shadow-slate-900/10">
                 <div className="flex items-start justify-between gap-4">
                   <div className="grid size-12 place-items-center rounded-xl bg-[#FFC66B] text-sm font-black text-[#0B6232]">
@@ -744,6 +792,30 @@ export default function NewsletterPage() {
               </article>
             ))}
           </div>
+
+          {(eventsHasMore || eventsHasPrev) && (
+            <div className="mt-8 flex items-center justify-center gap-3">
+              <button
+                type="button"
+                onClick={() => setEventsPage((page) => Math.max(1, page - 1))}
+                disabled={!eventsHasPrev}
+                className="inline-flex items-center rounded-xl bg-[#0B6232] px-5 py-3 text-sm font-black text-white transition hover:bg-[#084a26] disabled:opacity-40 disabled:cursor-not-allowed"
+              >
+                <ArrowRight className="mr-2 size-4 rotate-180" /> View latest
+              </button>
+              <span className="rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-black text-slate-600">
+                Page {eventsPage}
+              </span>
+              <button
+                type="button"
+                onClick={() => setEventsPage((page) => page + 1)}
+                disabled={!eventsHasMore}
+                className="inline-flex items-center rounded-xl bg-[#0B6232] px-5 py-3 text-sm font-black text-white transition hover:bg-[#084a26] disabled:opacity-40 disabled:cursor-not-allowed"
+              >
+                View older <ArrowRight className="ml-2 size-4" />
+              </button>
+            </div>
+          )}
         </div>
       </section>
 
