@@ -252,13 +252,22 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Student Life",
+    title: "KCU Student Leaders Participate in the 3rd Annual East Africa Guild Leaders’ Summit",
+    date: "24 July 2026",
+    href: "/about/newsletter",
+    text: "KCU’s Guild leadership joined the 3rd Annual East Africa Guild Leaders’ Summit at Makerere University, engaging with student leaders from across East Africa on governance, leadership and regional integration.",
+    image: "/news-images/image0.jpeg",
+    featured: true,
+  },
+  {
     category: "Announcements",
     title: "NOTICE OF EXTENSION OF THE STUDENTS' LOAN APPLICATION DEADLINE FOR ACADEMIC YEAR 2026/2027",
     date: "20 July 2026",
     href: "/about/newsletter",
     text: "The Ministry of Education and Sports has extended the Higher Education Students' Financing Scheme loan application deadline for AY 2026/2027 from 17 July 2026 to 31 July 2026, to allow institutions time to conclude admissions.",
     image: "/news-images/News-Advert.png",
-    featured: true,
+    featured: false,
   },
   {
     category: "Events",

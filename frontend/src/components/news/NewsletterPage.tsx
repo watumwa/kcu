@@ -21,6 +21,23 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "24 July 2026",
+    category: "Student Life",
+    title: "KCU Student Leaders Participate in the 3rd Annual East Africa Guild Leaders’ Summit",
+    excerpt:
+      "KCU’s Guild leadership joined the 3rd Annual East Africa Guild Leaders’ Summit at Makerere University, engaging with student leaders from across East Africa on governance, leadership and regional integration.",
+    image: "/news-images/image0.jpeg",
+    imageAlt: "King Ceasor University guild leaders at the 3rd Annual East Africa Guild Leaders’ Summit at Makerere University",
+    gallery: [],
+    story: [
+      "Kampala - 24 July 2026",
+      "King Ceasor University’s Guild leadership participated in the 3rd Annual East Africa Guild Leaders’ Summit held on 23rd and 24th July 2026 at Makerere University’s Freedom Square in Kampala. Organised by the Guild Presidents Leadership Academy, the regional summit brought together University Guild Presidents and senior student leaders from institutions across East Africa.",
+      "The two-day summit provided a platform for participants to engage in meaningful discussions on governance, leadership, regional integration and youth participation in public affairs. Student leaders shared experiences, exchanged ideas and explored ways through which young people can contribute to institutional development and the social, economic and political transformation of the East African region.",
+      "Through its participation, King Ceasor University reaffirmed its commitment to developing responsible, confident and visionary student leaders. The engagement also offered the University’s representatives an opportunity to expand their leadership networks, learn from their counterparts and strengthen collaboration with student leadership structures across the region.",
+      "Participation in such regional platforms complements the University’s efforts to provide students with learning and leadership opportunities beyond the classroom, while preparing them to take an active role in addressing issues affecting their institutions, communities and the wider East African region.",
+    ],
+  },
+  {
     date: "20 July 2026",
     category: "Announcements",
     title: "NOTICE OF EXTENSION OF THE STUDENTS' LOAN APPLICATION DEADLINE FOR ACADEMIC YEAR 2026/2027",
