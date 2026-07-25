@@ -50,6 +50,7 @@ export const navItems: NavItem[] = [
       { label: "Apply Now", href: "https://apply.kcu.ac.ug/" },
       { label: "Fees Structure", href: "/admissions/fees-structure" },
       { label: "Admission Requirements", href: "/admissions/admission-requirements" },
+      { label: "Quick Inquiries", href: "https://tawk.to/chat/6374a39bb0d6371309cf4a30/1ghvpu6kh"},
     ],
   },
   {
@@ -93,14 +94,16 @@ export const navItems: NavItem[] = [
       { label: "Library", href: "/library" },
       { label: "Quality Assurance", href: "/services/quality-assurance" },
       { label: "Counselling", href: "/services/counselling" },
+      { label: "Gallery", href: "services/gallery" },
     ],
   },
   {
-    label: "Gallery",
-    href: "/gallery",
-    description: "Photos and media from King Ceasor University events and campus life.",
+    label: "Apply",
+    href: "https://apply.kcu.ac.ug/",
+    description: "",
     children: [],
   },
+
 ];
 
 export const heroSlides: HeroSlide[] = [

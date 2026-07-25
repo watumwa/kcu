@@ -6,10 +6,10 @@ import { AnimatePresence, motion } from "framer-motion";
 import {
   ChevronDown,
   ExternalLink,
-  GraduationCap,
   Mail,
   MapPin,
   Menu,
+  MessageCircle,
   Phone,
   Search,
   X,
@@ -111,8 +111,8 @@ function DesktopNav() {
 
   return (
     <div className="hidden border-b border-slate-100 bg-white shadow-sm shadow-black/5 lg:block">
-      <div className="mx-auto flex h-24 max-w-[1440px] items-center gap-8 px-8">
-        <div className="min-w-[285px]">
+      <div className="mx-auto flex h-24 max-w-[1440px] items-center px-8">
+        <div className="w-[285px] shrink-0">
           <UniversityMark />
         </div>
 
@@ -186,10 +186,10 @@ function DesktopNav() {
           })}
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex w-[285px] shrink-0 items-center justify-end gap-3">
           <Button asChild className="h-12 rounded-xl bg-[#FFC66B] px-5 font-black text-[#0B6232] shadow-lg shadow-[#FFC66B]/25 hover:bg-[#FFC66B]">
-            <Link href="https://apply.kcu.ac.ug/">
-              <GraduationCap className="mr-2 size-4" /> Apply Now
+            <Link href="https://tawk.to/chat/6374a39bb0d6371309cf4a30/1ghvpu6kh" target="_blank" rel="noopener noreferrer">
+              <MessageCircle className="mr-2 size-4" /> Inquiries
             </Link>
           </Button>
           <Button asChild variant="outline" className="h-12 rounded-xl border-2 border-[#0B6232] bg-white/80 px-5 font-bold text-[#0B6232] shadow-sm hover:bg-[#0B6232] hover:text-white">

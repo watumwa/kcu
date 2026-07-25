@@ -48,7 +48,7 @@ export default function Footer() {
               { label: "Careers", href: "/careers" },
               { label: "Library Catalogue", href: "https://catalogue.kcu.ac.ug/" },
               { label: "Campus News", href: "/about/newsletter" },
-              { label: "Chat", href: "https://tawk.to/chat/6374a39bb0d6371309cf4a30/1ghvpu6kh" },
+              { label: "Inquiries", href: "https://tawk.to/chat/6374a39bb0d6371309cf4a30/1ghvpu6kh" },
               
             ],
           },
