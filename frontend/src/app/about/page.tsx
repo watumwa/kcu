@@ -281,7 +281,7 @@ const managementBios = {
     "She holds an MSc in Professional Accountancy from the University of London, a Bachelor of Arts in International Business from Makerere University, ACCA graduate status, and CPA Uganda qualification, and oversees the University's financial planning, budgeting, and resource management.",
   ],
   mwimaAbdallah: [
-    "Mr. Mwima Abdallah is an information technology professional with expertise in ICT systems management and digital transformation, serving as Director of Information and Communication Technology.",
+    "Mr. Mwima Abdallah is an information technology professional with expertise in ICT systems management and digital transformation, serving as Head of Department ICT.",
     "He holds a Master of Information Technology Management and a Bachelor's Degree in Information Technology from the Islamic University in Uganda and leads the development, implementation, and management of the University's ICT infrastructure and digital services.",
   ],
   ericOloo: [
@@ -720,9 +720,9 @@ function TabAdministration() {
     },
     {
       name: "Mr. Mwima Abdallah",
-      role: "Director, Information and Communication Technology",
+      role: "ICT Manager",
       tier: "base",
-      image: "/University Management/Mr. Mwima Abdallah.jpeg",
+      image: "/University Management/Mwima-Abdallah.jpg",
       bio: managementBios.mwimaAbdallah,
     },
     {
