@@ -338,10 +338,12 @@ function MobileNav() {
 
               <div className="grid gap-3 pt-4">
                 <Button asChild className="h-12 rounded-xl bg-[#FFC66B] font-black text-[#0B6232] hover:bg-[#FFC66B]">
-                  <Link href="https://apply.kcu.ac.ug/" onClick={closeMobileMenu}>Apply Now</Link>
+                  <Link href="https://tawk.to/chat/6374a39bb0d6371309cf4a30/1ghvpu6kh" target="_blank" rel="noopener noreferrer" onClick={closeMobileMenu}>
+                    <MessageCircle className="mr-2 size-4" /> Inquiries
+                  </Link>
                 </Button>
                 <Button asChild variant="outline" className="h-12 rounded-xl border-2 border-[#0B6232] bg-white font-bold text-[#0B6232]">
-                  <Link href="https://academia.kcu.ac.ug/" onClick={closeMobileMenu}>Academia <ExternalLink className="ml-2 size-4" /></Link>
+                  <Link href="https://apply.kcu.ac.ug/" onClick={closeMobileMenu}>Apply Now</Link>
                 </Button>
               </div>
 
