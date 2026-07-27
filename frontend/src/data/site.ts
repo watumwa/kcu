@@ -94,7 +94,7 @@ export const navItems: NavItem[] = [
       { label: "Library", href: "/library" },
       { label: "Quality Assurance", href: "/services/quality-assurance" },
       { label: "Counselling", href: "/services/counselling" },
-      { label: "Gallery", href: "services/gallery" },
+      { label: "Gallery", href: "/gallery" },
     ],
   },
   {
