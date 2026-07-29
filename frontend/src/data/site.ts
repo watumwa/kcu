@@ -256,12 +256,21 @@ export const upcomingEvents = [
 export const newsItems = [
   {
     category: "Student Life",
+    title: "KCU Year 3.1 Medical Students Participate in Community Medical Camp in Ggaba",
+    date: "29 July 2026",
+    href: "/about/newsletter",
+    text: "Year 3.1 medical students joined a community medical camp at St. Karoli Catholic Church, Ggaba, supporting cancer screening, laboratory tests, patient clerking and pharmacy services.",
+    image: "/news-images/image1.jpeg",
+    featured: true,
+  },
+  {
+    category: "Student Life",
     title: "KCU Student Leaders Participate in the 3rd Annual East Africa Guild Leaders’ Summit",
     date: "24 July 2026",
     href: "/about/newsletter",
     text: "KCU’s Guild leadership joined the 3rd Annual East Africa Guild Leaders’ Summit at Makerere University, engaging with student leaders from across East Africa on governance, leadership and regional integration.",
     image: "/news-images/image0.jpeg",
-    featured: true,
+    featured: false,
   },
   {
     category: "Announcements",

@@ -21,6 +21,23 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "29 July 2026",
+    category: "Student Life",
+    title: "KCU Year 3.1 Medical Students Participate in Community Medical Camp in Ggaba",
+    excerpt:
+      "Year 3.1 medical students joined a community medical camp at St. Karoli Catholic Church, Ggaba, supporting cancer screening, laboratory tests, patient clerking and pharmacy services.",
+    image: "/news-images/image1.jpeg",
+    imageAlt: "King Ceasor University Year 3.1 medical students at a community medical camp in Ggaba",
+    gallery: [],
+    story: [
+      "Ggaba, Kampala - 27 July 2026",
+      "King Ceasor University Year 3.1 medical students participated in a community medical camp held on 27th July 2026 at St. Karoli Catholic Church, Ggaba. The outreach, sponsored by Nsambya Hospital Ggaba Branch, brought together healthcare professionals and students to provide essential medical services to members of the community while promoting preventive healthcare and early disease detection.",
+      "During the medical camp, the students actively supported the delivery of a range of healthcare services, including breast and cervical cancer screening, laboratory tests, patient clerking and pharmacy services. Working alongside experienced healthcare professionals, the students gained valuable hands-on clinical experience, strengthened their patient interaction skills and enhanced their understanding of community-based healthcare.",
+      "The outreach forms part of King Ceasor University’s commitment to experiential learning by providing students with opportunities to apply classroom knowledge in real-life healthcare settings. Such engagements not only build clinical competence but also nurture professionalism, compassion and a strong sense of service among future healthcare practitioners.",
+      "King Ceasor University remains dedicated to producing competent and socially responsible medical professionals through quality education, practical training and active community engagement that contributes to improved health outcomes across Uganda.",
+    ],
+  },
+  {
     date: "24 July 2026",
     category: "Student Life",
     title: "KCU Student Leaders Participate in the 3rd Annual East Africa Guild Leaders’ Summit",
