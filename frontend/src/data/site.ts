@@ -205,8 +205,8 @@ export const heroSlides: HeroSlide[] = [
     title: "A Supportive University Community",
     subtitle: "",
     cta: "Explore Student Life",
-    image: "/images/kcu-2026/student-laptop-collaboration.webp",
-    imagePosition: "center 0%",
+    image: "/sports-team.jpeg",
+    imagePosition: "center 25%",
     programmes: [
       "Student leadership",
       "Clubs and campus activities",
