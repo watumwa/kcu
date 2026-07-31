@@ -255,13 +255,22 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Partnerships",
+    title: "KCU Represented at the 17th IUCEA Annual Meeting and Conference in Nairobi",
+    date: "31 July 2026",
+    href: "/about/newsletter",
+    text: "King Ceasor University participated in the 17th Inter-University Council for East Africa (IUCEA) Annual Meeting and Conference, held from 29th to 31st July 2026 in Nairobi, Kenya, represented by Prof. Peter Turyakira on behalf of the Vice Chancellor.",
+    image: "/news-images/iucea.jpeg",
+    featured: true,
+  },
+  {
     category: "Student Life",
     title: "KCU Year 3.1 Medical Students Participate in Community Medical Camp in Ggaba",
     date: "29 July 2026",
     href: "/about/newsletter",
     text: "Year 3.1 medical students joined a community medical camp at St. Karoli Catholic Church, Ggaba, supporting cancer screening, laboratory tests, patient clerking and pharmacy services.",
     image: "/news-images/image1.jpeg",
-    featured: true,
+    featured: false,
   },
   {
     category: "Student Life",

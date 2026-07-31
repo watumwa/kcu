@@ -21,6 +21,23 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "31 July 2026",
+    category: "Partnerships",
+    title: "KCU Represented at the 17th IUCEA Annual Meeting and Conference in Nairobi",
+    excerpt:
+      "King Ceasor University participated in the 17th Inter-University Council for East Africa (IUCEA) Annual Meeting and Conference in Nairobi, Kenya, from 29th to 31st July 2026, represented by Prof. Peter Turyakira on behalf of the Vice Chancellor.",
+    image: "/news-images/iucea.jpeg",
+    imageAlt: "King Ceasor University representatives at the 17th IUCEA Annual Meeting and Conference in Nairobi, Kenya",
+    gallery: [],
+    story: [
+      "Nairobi, Kenya - 31 July 2026",
+      "King Ceasor University participated in the 17th Inter-University Council for East Africa (IUCEA) Annual Meeting and Conference, held from 29th to 31st July 2026 in Nairobi, Kenya. The University was represented by Prof. Peter Turyakira on behalf of the Vice Chancellor.",
+      "Held under the theme, \"Powering the Future of Higher Education in East Africa through Strategic Partnerships and Collaborations,\" the conference brought together higher education leaders, policymakers, researchers and development partners from across the East African region to discuss innovative approaches to strengthening universities through collaboration.",
+      "Representing King Ceasor University, Prof. Turyakira used the conference as an opportunity to establish and strengthen professional networks that will support the University's strategic priorities. The engagements created opportunities for partnerships in academic collaboration, research, staff and student mobility, institutional capacity building, and knowledge exchange.",
+      "The University's participation reaffirmed King Ceasor University's commitment to expanding its regional and international partnerships as part of its vision to deliver quality education, promote innovation, and contribute to the sustainable development of higher education across East Africa.",
+    ],
+  },
+  {
     date: "29 July 2026",
     category: "Student Life",
     title: "KCU Year 3.1 Medical Students Participate in Community Medical Camp in Ggaba",

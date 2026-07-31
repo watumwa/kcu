@@ -14,7 +14,7 @@ import {
   Search,
   X,
 } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useRef, useState, type MouseEvent } from "react";
 import { FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
 import { Button } from "@/components/ui/button";
@@ -108,6 +108,57 @@ function TopBar() {
 
 function DesktopNav() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
+  const hoverTimerRef = useRef<number | null>(null);
+
+  const clearHoverTimer = () => {
+    if (hoverTimerRef.current) {
+      window.clearTimeout(hoverTimerRef.current);
+      hoverTimerRef.current = null;
+    }
+  };
+
+  const openMenu = (index: number) => {
+    clearHoverTimer();
+    if (isTouchDevice) {
+      setOpenIndex(index);
+      return;
+    }
+
+    hoverTimerRef.current = window.setTimeout(() => {
+      setOpenIndex(index);
+    }, 80);
+  };
+
+  const closeMenu = () => {
+    clearHoverTimer();
+    if (isTouchDevice) {
+      setOpenIndex(null);
+      return;
+    }
+
+    hoverTimerRef.current = window.setTimeout(() => {
+      setOpenIndex(null);
+    }, 180);
+  };
+
+  const handleTriggerClick = (event: MouseEvent<HTMLAnchorElement | HTMLButtonElement>, index: number) => {
+    if (!isTouchDevice || !navItems[index].children.length) {
+      return;
+    }
+
+    event.preventDefault();
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const touch = window.matchMedia?.("(pointer: coarse)").matches || "ontouchstart" in window;
+      setIsTouchDevice(Boolean(touch));
+    }
+
+    return () => clearHoverTimer();
+  }, []);
 
   return (
     <div className="hidden border-b border-slate-100 bg-white shadow-sm shadow-black/5 lg:block">
@@ -119,34 +170,51 @@ function DesktopNav() {
         <nav className="flex flex-1 items-center justify-center gap-1" aria-label="Main navigation">
           {navItems.map((item, index) => {
             const triggerClass = "flex items-center gap-1 rounded-full px-3 py-2.5 text-[15px] font-semibold text-slate-800 transition hover:bg-[#FFC66B]/25 hover:text-[#0B6232] whitespace-nowrap";
+            const isOpen = openIndex === index;
 
             return (
               <div
                 key={item.label}
-                className="relative"
-                onMouseEnter={() => setOpenIndex(item.children.length ? index : null)}
-                onMouseLeave={() => setOpenIndex(null)}
+                className="relative py-4"
+                onMouseEnter={() => item.children.length > 0 && openMenu(index)}
+                onMouseLeave={closeMenu}
+                onFocus={() => item.children.length > 0 && openMenu(index)}
+                onBlur={(event) => {
+                  if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
+                    closeMenu();
+                  }
+                }}
               >
                 {item.disableLink ? (
-                  <button type="button" className={triggerClass}>
+                  <button
+                    type="button"
+                    className={triggerClass}
+                    onClick={(event) => handleTriggerClick(event, index)}
+                  >
                     {item.label}
                     {item.children.length > 0 && <ChevronDown className="size-4" />}
                   </button>
                 ) : (
-                  <Link href={item.href} className={triggerClass}>
+                  <Link
+                    href={item.href}
+                    className={triggerClass}
+                    onClick={(event) => handleTriggerClick(event as MouseEvent<HTMLAnchorElement | HTMLButtonElement>, index)}
+                  >
                     {item.label}
                     {item.children.length > 0 && <ChevronDown className="size-4" />}
                   </Link>
                 )}
 
                 <AnimatePresence>
-                  {openIndex === index && item.children.length > 0 && (
+                  {item.children.length > 0 && isOpen && (
                     <motion.div
                       initial={{ opacity: 0, y: 12, scale: 0.98 }}
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: 12, scale: 0.98 }}
                       transition={{ duration: 0.18 }}
                       className="absolute left-0 top-full z-50 mt-4 w-[340px] overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-2xl shadow-slate-900/15"
+                      onMouseEnter={clearHoverTimer}
+                      onMouseLeave={closeMenu}
                     >
                       <div className="p-3">
                         {item.children.map((child) => (
@@ -260,14 +328,14 @@ function MobileNav() {
                         setExpanded(expanded === index ? null : index);
                         setExpandedChild(null);
                       }}
-                      className="flex w-full items-center justify-between px-4 py-3 font-bold text-slate-800"
+                      className="flex w-full items-center justify-between px-4 py-3.5 font-bold text-slate-800 touch-manipulation"
                       aria-expanded={expanded === index}
                     >
                       {item.label}
                       <ChevronDown className={`size-4 transition ${expanded === index ? "rotate-180" : ""}`} />
                     </button>
                   ) : (
-                    <Link href={item.href} onClick={closeMobileMenu} className="block px-4 py-3 font-bold text-slate-800">
+                    <Link href={item.href} onClick={closeMobileMenu} className="block px-4 py-3.5 font-bold text-slate-800 touch-manipulation">
                       {item.label}
                     </Link>
                   )}
@@ -290,7 +358,7 @@ function MobileNav() {
                                   <button
                                     type="button"
                                     onClick={() => setExpandedChild(childIsExpanded ? null : childKey)}
-                                    className="flex w-full items-center justify-between rounded-xl px-4 py-2.5 text-left text-sm font-semibold text-slate-600 hover:bg-[#FFC66B]/20"
+                                    className="flex w-full items-center justify-between rounded-xl px-4 py-3 text-left text-sm font-semibold text-slate-600 hover:bg-[#FFC66B]/20 touch-manipulation"
                                     aria-expanded={childIsExpanded}
                                   >
                                     {child.label}
@@ -300,7 +368,7 @@ function MobileNav() {
                                   <Link
                                     href={child.href}
                                     onClick={closeMobileMenu}
-                                    className="block rounded-xl px-4 py-2.5 text-sm font-semibold text-slate-600 hover:bg-[#FFC66B]/20"
+                                    className="block rounded-xl px-4 py-3 text-sm font-semibold text-slate-600 hover:bg-[#FFC66B]/20 touch-manipulation"
                                   >
                                     {child.label}
                                   </Link>
@@ -318,7 +386,7 @@ function MobileNav() {
                                           key={grandchild.label}
                                           href={grandchild.href}
                                           onClick={closeMobileMenu}
-                                          className="block rounded-xl px-4 py-2 text-sm font-semibold text-slate-500 hover:bg-[#FFC66B]/20"
+                                          className="block rounded-xl px-4 py-2.5 text-sm font-semibold text-slate-500 hover:bg-[#FFC66B]/20 touch-manipulation"
                                         >
                                           {grandchild.label}
                                         </Link>
