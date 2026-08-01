@@ -21,6 +21,22 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "30 July 2026",
+    category: "Community",
+    title: "King Ceasor University Participates in Greenhill Academy Careers Day",
+    excerpt:
+      "On 30th July 2026, King Ceasor University participated in Greenhill Academy's Careers Day, engaging students through an exhibition and career guidance sessions covering academic programmes, admission opportunities, and career prospects.",
+    image: "/news-images/out-reach.jpeg",
+    imageAlt: "King Ceasor University representatives at Greenhill Academy Careers Day",
+    gallery: [],
+    story: [
+      "Kampala - 30 July 2026",
+      "King Ceasor University participated in Greenhill Academy's Careers Day on 30th July 2026, an event designed to help students explore academic opportunities and make informed career decisions. The programme featured keynote presentations, mental health and well-being discussions, career panel sessions, and interactive career guidance clinics involving professionals from various disciplines.",
+      "During the event, the University's team engaged students through the exhibition and career guidance sessions, providing information about academic programmes, admission opportunities, and career prospects across different fields of study. Students had the opportunity to interact with the University's representatives, ask questions about their preferred courses, and gain valuable insights into university life and the skills required to succeed in their chosen careers.",
+      "The Careers Day also provided an excellent platform for King Ceasor University to showcase its diverse academic programmes and student-centred learning environment while strengthening relationships with prospective students, parents, and educators. The University's participation reaffirmed its commitment to supporting secondary school learners through mentorship, career guidance, and community engagement, while fostering partnerships with schools that inspire learners to pursue higher education with confidence and purpose.",
+    ],
+  },
+  {
     date: "31 July 2026",
     category: "Partnerships",
     title: "KCU Represented at the 17th IUCEA Annual Meeting and Conference in Nairobi",

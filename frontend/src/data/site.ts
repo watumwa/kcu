@@ -255,13 +255,22 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Community",
+    title: "King Ceasor University Participates in Greenhill Academy Careers Day",
+    date: "30 July 2026",
+    href: "/about/newsletter",
+    text: "On 30th July 2026, King Ceasor University participated in Greenhill Academy's Careers Day, engaging students through an exhibition and career guidance sessions covering academic programmes, admission opportunities, and career prospects.",
+    image: "/news-images/out-reach.jpeg",
+    featured: true,
+  },
+  {
     category: "Partnerships",
     title: "KCU Represented at the 17th IUCEA Annual Meeting and Conference in Nairobi",
     date: "31 July 2026",
     href: "/about/newsletter",
     text: "King Ceasor University participated in the 17th Inter-University Council for East Africa (IUCEA) Annual Meeting and Conference, held from 29th to 31st July 2026 in Nairobi, Kenya, represented by Prof. Peter Turyakira on behalf of the Vice Chancellor.",
     image: "/news-images/iucea.jpeg",
-    featured: true,
+    featured: false,
   },
   {
     category: "Student Life",
