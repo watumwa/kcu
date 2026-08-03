@@ -21,6 +21,24 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "03 August 2026",
+    category: "Partnerships",
+    title: "King Ceasor University Signs Memorandum of Understanding with Victoria Hoa Binh University",
+    excerpt:
+      "King Ceasor University has officially signed a Memorandum of Understanding with Victoria Hoa Binh University of Viet Nam, marking the beginning of a strategic partnership for joint degree programmes, collaborative research, faculty exchange, student mobility and knowledge sharing.",
+    image: "/news-images/mou-victoriahoa.jpeg",
+    imageAlt: "King Ceasor University and Victoria Hoa Binh University signing ceremony for their Memorandum of Understanding",
+    gallery: [],
+    story: [
+      "Kampala - 03 August 2026",
+      "King Ceasor University (KCU) has officially signed a Memorandum of Understanding (MoU) with Victoria Hoa Binh University (VHB) of Viet Nam, marking the beginning of a strategic partnership that will strengthen academic cooperation and international engagement between the two institutions.",
+      "The partnership establishes a framework for collaboration across a range of academic and research activities, including joint degree programmes, collaborative research projects, faculty exchange, student mobility and the sharing of academic expertise. Through this agreement, both universities aim to promote innovation, enhance teaching and learning, and contribute to addressing shared regional and global development challenges.",
+      "The Memorandum of Understanding reflects the shared vision of both institutions to build internationally connected universities that prepare graduates for leadership in an increasingly globalised world. By fostering collaboration across disciplines, the partnership is expected to create new opportunities for students, researchers and academic staff while strengthening institutional capacity through knowledge exchange.",
+      "The agreement represents another important milestone in King Ceasor University's internationalisation agenda, reinforcing its commitment to developing strategic global partnerships that expand academic opportunities, promote research excellence and enhance the University's contribution to society.",
+      "King Ceasor University looks forward to a productive and enduring partnership with Victoria Hoa Binh University as both institutions work together to advance higher education, research and innovation across Uganda, Viet Nam and beyond.",
+    ],
+  },
+  {
     date: "30 July 2026",
     category: "Community",
     title: "King Ceasor University Participates in Greenhill Academy Careers Day",

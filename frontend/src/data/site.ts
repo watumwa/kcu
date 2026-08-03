@@ -255,13 +255,22 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Partnerships",
+    title: "King Ceasor University Signs Memorandum of Understanding with Victoria Hoa Binh University",
+    date: "03 August 2026",
+    href: "/about/newsletter",
+    text: "King Ceasor University has officially signed a Memorandum of Understanding with Victoria Hoa Binh University of Viet Nam, establishing a strategic partnership for joint degree programmes, collaborative research, faculty exchange, student mobility and knowledge sharing.",
+    image: "/news-images/mou-victoriahoa.jpeg",
+    featured: true,
+  },
+  {
     category: "Community",
     title: "King Ceasor University Participates in Greenhill Academy Careers Day",
     date: "30 July 2026",
     href: "/about/newsletter",
     text: "On 30th July 2026, King Ceasor University participated in Greenhill Academy's Careers Day, engaging students through an exhibition and career guidance sessions covering academic programmes, admission opportunities, and career prospects.",
     image: "/news-images/out-reach.jpeg",
-    featured: true,
+    featured: false,
   },
   {
     category: "Partnerships",
