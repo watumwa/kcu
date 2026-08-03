@@ -756,7 +756,7 @@ export default function NewsletterPage() {
                 A curated round-up of university stories, partnerships, student opportunities, and institutional milestones.
               </p>
               <Link
-                href="/newsletter/JUNE Journal 4 v-6.pdf"
+                href="/newsletter/JULY Journal 4 v-2.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-6 inline-flex items-center rounded-xl bg-[#FFC66B] px-5 py-3 text-sm font-black text-[#0B6232] transition hover:bg-[#f4b850]"
