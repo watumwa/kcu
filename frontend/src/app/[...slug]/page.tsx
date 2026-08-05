@@ -147,7 +147,7 @@ const aboutPages: Record<string, AboutPageContent> = {
           "Alfred Namoah Masikye: Academic Registrar",
           "Assoc. Prof. Annabella Habinka Ejiri: Director Quality Assurance",
           "Mrs. Sylivia Okwi Christine: Director Finance",
-          "Fr. Dr. Lumala Aloysius Gonzagga: Dean of Students",
+          "Ms. Ariye Eunice Owiny: Acting Dean of Students",
         ],
       },
       {
@@ -619,11 +619,11 @@ const contentPages: Record<string, AboutPageContent> = {
     sections: [],
     deanOfStudents: {
       dean: {
-        name: "Fr. Dr. Aloysius Gonzaga Lumala",
-        title: "Dean of Students",
-        image: "/University Management/Fr. Dr. Lumala Aloysius Gonzagga.jpeg",
+        name: "Ms. Ariye Eunice Owiny",
+        title: "Acting Dean of Students",
+        image: "/Counsellor/DSC09882.jpeg",
         message: [
-          "Welcome to our university community, where academic excellence, integrity, and holistic development are at the heart of everything we do. As Dean of Students, I encourage every student to embrace the opportunities available for learning, leadership, innovation, and personal growth.",
+          "Welcome to our university community, where academic excellence, integrity, and holistic development are at the heart of everything we do. As Acting Dean of Students, I encourage every student to embrace the opportunities available for learning, leadership, innovation, and personal growth.",
           "University life is a unique journey that shapes not only your career but also your character. I urge you to uphold discipline, respect for others, and commitment to the values of our institution. Participate actively in academic, spiritual, social, and co-curricular activities, and work closely with your student leaders and staff to create a vibrant and supportive campus environment.",
           "My office remains committed to your welfare, guidance, and success. Together, let us build a community that inspires excellence and prepares responsible citizens for service to society.",
         ],
@@ -747,7 +747,7 @@ const contentPages: Record<string, AboutPageContent> = {
     sections: [],
     counselling: {
       counselor: {
-        name: "University Counselor",
+        name: "Ms. Ariye Eunice Owiny",
         title: "Counselling and Guidance Programme",
         image: "/Counsellor/DSC09882.jpeg",
         message:

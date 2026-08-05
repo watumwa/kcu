@@ -263,9 +263,9 @@ const managementBios = {
     "Ms. Rosette Gaali is a marketing professional with extensive experience in brand development, strategic marketing, and institutional promotion, serving as Marketing Manager.",
     "She holds a Professional Postgraduate Diploma in Marketing from the Chartered Institute of Marketing and a Bachelor of Arts from Makerere University, and leads the University's marketing initiatives and outreach programmes.",
   ],
-  lumalaAloysius: [
-    "Fr. Dr. Lumala Aloysius Gonzagga is an accomplished theologian, educator, and student affairs administrator serving as Dean of Students.",
-    "He holds a PhD in Sacred Theology from St. Patrick's Pontifical University, a Master of Education from Queen's University Belfast, and additional theology and philosophical studies from Rome and Makerere University, and provides leadership in student welfare, guidance, and holistic development.",
+  ariyeEunice: [
+    "Ms. Ariye Eunice Owiny is an accomplished counsellor and student affairs administrator serving as Acting Dean of Students.",
+    "She provides leadership in student welfare, guidance, counselling, and holistic development, ensuring a supportive and inclusive environment for all students.",
   ],
   annabellaEjiri: [
     "Assoc. Prof. Annabella Habinka Ejiri is an information systems scholar and quality assurance expert serving as Director of Quality Assurance.",
@@ -712,11 +712,11 @@ function TabAdministration() {
       bio: managementBios.sylviaChristine,
     },
     {
-      name: "Fr. Dr. Lumala Aloysius Gonzagga",
-      role: "Dean of Students",
+      name: "Ms. Ariye Eunice Owiny",
+      role: "Acting Dean of Students",
       tier: "mid",
-      image: "/University Management/Fr. Dr. Lumala Aloysius Gonzagga.jpeg",
-      bio: managementBios.lumalaAloysius,
+      image: "/Counsellor/DSC09882.jpeg",
+      bio: managementBios.ariyeEunice,
     },
     {
       name: "Mr. Mwima Abdallah",
