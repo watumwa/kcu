@@ -243,9 +243,9 @@ const managementBios = {
     "She holds a PhD in Electrical and Electronic Engineering, an MSc in Digital Communication Systems, and a Bachelor of Science in Electrical Engineering, with advanced studies completed at Loughborough University and Makerere University.",
     "Her leadership continues to shape KCU's academic direction, innovation agenda, and commitment to transformative higher education.",
   ],
-  byarugabaBonaventura: [
-    "Dr. Byarugaba Bonaventura is a distinguished medical practitioner and academic administrator serving as Deputy Vice Chancellor. He supports the University's academic, research, and administrative functions.",
-    "He holds a Master of Medicine in Internal Medicine and a Bachelor of Medicine and Bachelor of Surgery from Makerere University and brings deep experience in higher education and healthcare leadership.",
+  kiizaMondo: [
+    "Prof. Charles Kiiza Mondo is a distinguished academic administrator serving as Deputy Vice Chancellor. He supports the University's academic, research, and administrative functions.",
+    "He brings extensive experience in higher education leadership and institutional development.",
   ],
   papeBagonza: [
     "Mrs. Pape Matama Bagonza is a legal and administrative professional with expertise in governance, migration studies, and institutional management, serving as University Secretary.",
@@ -677,11 +677,11 @@ function TabAdministration() {
       bio: managementBios.charityMulenga,
     },
     {
-      name: "Dr. Byarugaba Bonaventura",
+      name: "Prof. Charles Kiiza Mondo",
       role: "Deputy Vice Chancellor",
       tier: "mid",
-      image: "/University Management/Dr. Byarugaba Bonaventura.jpeg",
-      bio: managementBios.byarugabaBonaventura,
+      image: "/University Management/Charles-Mondo.jpeg",
+      bio: managementBios.kiizaMondo,
     },
     {
       name: "Mrs. Pape Matama Bagonza",

@@ -74,6 +74,12 @@ export const navItems: NavItem[] = [
     ],
   },
   {
+    label: "Library",
+    href: "/library",
+    description: "",
+    children: [],
+  },
+  {
     label: "Student",
     href: "",
     disableLink: true,
@@ -91,18 +97,12 @@ export const navItems: NavItem[] = [
     disableLink: true,
     description: "Library, quality assurance, counselling and student support services.",
     children: [
-      { label: "Library", href: "/library" },
       { label: "Quality Assurance", href: "/services/quality-assurance" },
       { label: "Counselling", href: "/services/counselling" },
       { label: "Gallery", href: "/gallery" },
     ],
   },
-  {
-    label: "Apply",
-    href: "https://apply.kcu.ac.ug/",
-    description: "",
-    children: [],
-  },
+  
 
 ];
 
