@@ -74,12 +74,6 @@ export const navItems: NavItem[] = [
     ],
   },
   {
-    label: "Library",
-    href: "/library",
-    description: "",
-    children: [],
-  },
-  {
     label: "Student",
     href: "",
     disableLink: true,
@@ -90,6 +84,12 @@ export const navItems: NavItem[] = [
       { label: "Graduation Ceremonies", href: "/academics/graduation" },
       { label: "Dean of Students", href: "/student/dean-of-students" },
     ],
+  },
+   {
+    label: "Library",
+    href: "/library",
+    description: "",
+    children: [],
   },
   {
     label: "Services",
