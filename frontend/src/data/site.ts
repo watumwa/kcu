@@ -255,13 +255,22 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Leadership",
+    title: "Dr. Byarugaba Baterena Hands Over Office as Deputy Vice Chancellor, Academic Affairs",
+    date: "05 August 2026",
+    href: "/about/newsletter",
+    text: "King Ceasor University witnessed a significant leadership transition on 5 August 2026 as Dr. Byarugaba Baterena handed over the office of Deputy Vice Chancellor, Academic Affairs to Prof. Charles Kiiza Mondo, following three years of dedicated service.",
+    image: "/news-images/IMG_7294.JPG",
+    featured: true,
+  },
+  {
     category: "Partnerships",
     title: "King Ceasor University Signs Memorandum of Understanding with Victoria Hoa Binh University",
     date: "03 August 2026",
     href: "/about/newsletter",
     text: "King Ceasor University has officially signed a Memorandum of Understanding with Victoria Hoa Binh University of Viet Nam, establishing a strategic partnership for joint degree programmes, collaborative research, faculty exchange, student mobility and knowledge sharing.",
     image: "/news-images/mou-victoriahoa.jpeg",
-    featured: true,
+    featured: false,
   },
   {
     category: "Community",

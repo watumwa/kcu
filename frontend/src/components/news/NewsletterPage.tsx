@@ -21,6 +21,26 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "05 August 2026",
+    category: "Leadership",
+    title: "Dr. Byarugaba Baterena Hands Over Office as Deputy Vice Chancellor, Academic Affairs",
+    excerpt:
+      "King Ceasor University witnessed a significant leadership transition on 5 August 2026 as Dr. Byarugaba Baterena handed over the office of Deputy Vice Chancellor, Academic Affairs to Prof. Charles Kiiza Mondo, following three years of dedicated service.",
+    image: "/news-images/IMG_7294.JPG",
+    imageAlt: "King Ceasor University leadership handover ceremony for the Deputy Vice Chancellor, Academic Affairs",
+    gallery: [],
+    story: [
+      "Kampala - 05 August 2026",
+      "King Ceasor University on 5th August 2026 witnessed a significant transition in its academic leadership as Dr. Byarugaba Baterena officially handed over the office of Deputy Vice Chancellor, Academic Affairs to Prof. Charles Kiiza Mondo, following three years of dedicated service in the role.",
+      "The handover ceremony marked the end of a distinguished chapter in Dr. Baterena's leadership journey at the University. During his tenure, he provided strategic direction in strengthening academic quality, promoting Competency-Based Education and Training (CBET), supporting curriculum development, enhancing quality assurance systems and advancing teaching, learning and research.",
+      "His leadership also coincided with one of the University's most historic milestones — the attainment of the King Ceasor University Charter in 2025. This landmark achievement reaffirmed the University's commitment to academic excellence, institutional governance and quality higher education, further strengthening its position within Uganda's higher education sector. Dr. Baterena's contribution to this transformative journey formed an important part of the collective effort that culminated in the award of the Charter.",
+      "Speaking during the handover, members of the University community acknowledged Dr. Baterena's unwavering commitment to institutional development and his invaluable contribution to strengthening King Ceasor University's academic programmes and governance.",
+      "As he embarks on a new chapter in his professional career as Associate Professor of Internal Medicine, the University extends its heartfelt appreciation for his dedicated service, visionary leadership and lasting contribution to higher education.",
+      "The University also warmly welcomes Prof. Mondo as he assumes the office as Acting Deputy Vice Chancellor, Academic Affairs. His appointment marks the beginning of a new phase of academic leadership as King Ceasor University continues to strengthen its commitment to innovation, quality education, research and institutional excellence.",
+      "King Ceasor University congratulates Dr. Byarugaba Baterena on his well-deserved appointment and wishes him every success in his new role. The University likewise wishes Prof. Charles Kiiza Mondo every success as he leads the Academic Affairs Division in advancing the institution's mission of delivering transformative, globally competitive higher education.",
+    ],
+  },
+  {
     date: "03 August 2026",
     category: "Partnerships",
     title: "King Ceasor University Signs Memorandum of Understanding with Victoria Hoa Binh University",
