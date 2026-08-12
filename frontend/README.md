@@ -16,6 +16,32 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Django admin on the frontend URL
+
+Keep Django running on port 8000 and Next.js running on port 3000. The frontend
+proxies Django's admin and its assets, so the CMS is available at:
+
+```text
+http://localhost:3000/admin/
+```
+
+The proxy uses `http://127.0.0.1:8000` by default. To point it at another Django
+deployment, set this server-side variable in the frontend environment and
+restart Next.js:
+
+```bash
+BACKEND_URL="https://cms.example.com"
+```
+
+For production, also add the public frontend origin to Django's environment:
+
+```bash
+CSRF_TRUSTED_ORIGINS="https://www.example.com"
+```
+
+Use origins only (scheme and hostname, without `/admin/`) and separate multiple
+origins with commas.
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 ## Neexa AI widget

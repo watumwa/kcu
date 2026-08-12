@@ -1,6 +1,11 @@
 import type { NextConfig } from "next";
 
 const isProduction = process.env.NODE_ENV === "production";
+const backendUrl = (
+  process.env.BACKEND_URL ??
+  process.env.NEXT_PUBLIC_API_URL ??
+  "http://127.0.0.1:8000"
+).replace(/\/+$/, "");
 
 const contentSecurityPolicy = [
   "default-src 'self'",
@@ -30,6 +35,9 @@ const permissionsPolicy = [
 ].join(", ");
 
 const nextConfig: NextConfig = {
+  // Django's admin URL patterns require their trailing slashes. Let the
+  // proxied application handle slash canonicalisation instead of Next.js.
+  skipTrailingSlashRedirect: true,
   images: {
     remotePatterns: [
       {
@@ -80,6 +88,28 @@ const nextConfig: NextConfig = {
         headers: securityHeaders,
       },
     ];
+  },
+  async rewrites() {
+    return {
+      beforeFiles: [
+        {
+          source: "/admin/:path*",
+          destination: `${backendUrl}/admin/:path*`,
+        },
+        {
+          source: "/static/:path*",
+          destination: `${backendUrl}/static/:path*`,
+        },
+        {
+          source: "/media/:path*",
+          destination: `${backendUrl}/media/:path*`,
+        },
+        {
+          source: "/ckeditor5/:path*",
+          destination: `${backendUrl}/ckeditor5/:path*`,
+        },
+      ],
+    };
   },
 };
 

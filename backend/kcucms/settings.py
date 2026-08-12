@@ -150,6 +150,17 @@ CORS_ALLOWED_ORIGINS = config(
 ).split(',')
 CORS_ALLOW_ALL_ORIGINS = DEBUG  # allow all in dev
 
+# The Django admin is exposed through the frontend's same-origin proxy. Django
+# still validates the browser's original frontend Origin on admin form posts.
+CSRF_TRUSTED_ORIGINS = [
+    origin.strip()
+    for origin in config(
+        'CSRF_TRUSTED_ORIGINS',
+        default='http://localhost:3000,http://127.0.0.1:3000',
+    ).split(',')
+    if origin.strip()
+]
+
 # DRF
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
