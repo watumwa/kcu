@@ -93,6 +93,14 @@ const nextConfig: NextConfig = {
     return {
       beforeFiles: [
         {
+          source: "/admin/",
+          destination: `${backendUrl}/admin/`,
+        },
+        {
+          source: "/admin/:path+/",
+          destination: `${backendUrl}/admin/:path*/`,
+        },
+        {
           source: "/admin/:path*",
           destination: `${backendUrl}/admin/:path*`,
         },
