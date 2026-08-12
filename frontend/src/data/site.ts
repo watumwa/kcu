@@ -255,6 +255,15 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Student Life",
+    title: "King Ceasor University Student Represents Uganda at the 2026 ICMDA World Congress in South Korea",
+    date: "12 August 2026",
+    href: "/about/newsletter",
+    text: "MBChB student Abasira Trinity Mungufeni represented King Ceasor University at the 2026 International Christian Medical and Dental Association World Congress in Jeju, South Korea, joining more than 1,300 Christian healthcare professionals from approximately 136 countries.",
+    image: "/news-images/Photo8.jpg",
+    featured: true,
+  },
+  {
     category: "Leadership",
     title: "Dr. Byarugaba Baterena Hands Over Office as Deputy Vice Chancellor, Academic Affairs",
     date: "05 August 2026",

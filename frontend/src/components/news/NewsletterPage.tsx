@@ -21,6 +21,25 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "12 August 2026",
+    category: "Student Life",
+    title: "King Ceasor University Student Represents Uganda at the 2026 ICMDA World Congress in South Korea",
+    excerpt:
+      "MBChB student Abasira Trinity Mungufeni represented King Ceasor University at the 2026 International Christian Medical and Dental Association World Congress in Jeju, South Korea, joining more than 1,300 Christian healthcare professionals from approximately 136 countries.",
+    image: "/news-images/Photo8.jpg",
+    imageAlt: "King Ceasor University student Abasira Trinity Mungufeni at the 2026 ICMDA World Congress in Jeju, South Korea",
+    gallery: [],
+    story: [
+      "Jeju, South Korea - 12 August 2026",
+      "King Ceasor University (KCU) was represented at the 2026 International Christian Medical and Dental Association (ICMDA) World Congress in Jeju, South Korea, by Abasira Trinity Mungufeni, a fourth-year Bachelor of Medicine and Bachelor of Surgery (MBChB) student.",
+      "The week-long Congress brought together more than 1,300 Christian healthcare professionals, students and leaders from approximately 136 countries for learning, leadership development, networking, worship and the exchange of experiences in healthcare.",
+      "Held under the theme \"Building God's Kingdom Amongst the Broken,\" inspired by Isaiah 58:12, the Congress featured plenary and breakout sessions focused on compassionate service, professional excellence and strengthening faith-based healthcare. Participants also interacted with doctors, dentists, students and healthcare leaders serving in different parts of the world.",
+      "Reflecting on the experience, Abasira said: \"It was such a great privilege to represent Uganda and King Ceasor University; to worship together, open God's Word, pray, learn and enjoy great fellowship with Christian healthcare professionals from across the world.\"",
+      "ICMDA brings together Christian medical and dental practitioners and students globally, with its World Congress held every four years. The previous Congress was held in Arusha, Tanzania, in 2022, while the next gathering is scheduled for 2030 in Surabaya, Indonesia. In Uganda, the Uganda Christian Medical Fellowship (UCMF) brings together Christian medical professionals and students from different medical schools. Its 14th Annual National Students' Conference and AGM is scheduled for 2–4 October 2026 at Scripture Union Campsite, Kawuku-Bugiri, under the theme \"Pursuit of Excellence.\"",
+      "Abasira's participation reflects the growing opportunities for KCU students to engage with international professional communities, broaden their perspectives and represent the University and Uganda on global platforms.",
+    ],
+  },
+  {
     date: "05 August 2026",
     category: "Leadership",
     title: "Dr. Byarugaba Baterena Hands Over Office as Deputy Vice Chancellor, Academic Affairs",
