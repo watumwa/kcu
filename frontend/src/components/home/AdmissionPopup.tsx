@@ -59,8 +59,8 @@ export default function AdmissionPopup() {
           {/* Image */}
           <div className="relative aspect-square bg-white p-3">
             <Image
-              src="/august-intake.png"
-              alt="August 2026 intake at King Ceasor University"
+              src="/refreshers-orientation.jpeg"
+              alt="Refreshers orientation at King Ceasor University"
               width={2480}
               height={3508}
               priority
@@ -71,7 +71,7 @@ export default function AdmissionPopup() {
           {/* Body */}
           <div className="bg-white px-5 py-4">
             <p className="text-sm text-slate-600 leading-relaxed">
-              Join thousands of successful students at King Caesar University. Apply now for the August intake and start your journey to excellence.
+              Freshers Orientation Slated for 17th - 21st August 2026. 
             </p>
             <div className="mt-4 flex gap-2">
               <Link
