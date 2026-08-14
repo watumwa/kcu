@@ -21,6 +21,24 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "14 August 2026",
+    category: "Student Life",
+    title: "KCU Law Students Shine at Inaugural Digital Health Inter-University Moot Court Competition",
+    excerpt:
+      "KCU law students delivered an impressive performance at the inaugural Digital Health Inter-University Moot Court Competition at Makerere University, ranking third overall among six participating universities.",
+    image: "/news-images/moot.jpeg",
+    imageAlt: "KCU law students at the Digital Health Inter-University Moot Court Competition at Makerere University",
+    gallery: [],
+    story: [
+      "Kampala - 14 August 2026",
+      "King Ceasor University (KCU) law students delivered an impressive performance at the inaugural Digital Health Inter-University Moot Court Competition, held on 12-13th August 2026 at Makerere University.",
+      "Organised by Makerere University School of Law in partnership with the University of Warwick School of Law, with support from the Wellcome Trust, the competition brought together law students from King Ceasor University, Makerere University, Islamic University in Uganda (IUIU), Kampala International University (KIU), Metropolitan University and Gulu University.",
+      "KCU was represented by Arinda Lord and Kayaga Monica Catherine, under the guidance of their coach, Keith Busingye. The competition provided students with an opportunity to demonstrate their legal research, critical thinking and advocacy skills while engaging with emerging legal and ethical issues surrounding digital health.",
+      "Following the competition, KCU was ranked third overall among the six participating universities. Arinda Lord, Kayaga Monica Catherine and their coach, Keith Busingye, were also awarded certificates of participation in recognition of their contribution to the competition.",
+      "The achievement reflects King Ceasor University's commitment to experiential learning and providing students with opportunities to apply classroom knowledge, strengthen practical legal skills and engage with contemporary issues at the intersection of law, health and digital technology.",
+    ],
+  },
+  {
     date: "12 August 2026",
     category: "Student Life",
     title: "King Ceasor University Student Represents Uganda at the 2026 ICMDA World Congress in South Korea",

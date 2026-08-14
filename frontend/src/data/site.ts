@@ -256,21 +256,21 @@ export const upcomingEvents = [
 export const newsItems = [
   {
     category: "Student Life",
+    title: "KCU Law Students Shine at Inaugural Digital Health Inter-University Moot Court Competition",
+    date: "14 August 2026",
+    href: "/about/newsletter",
+    text: "KCU law students delivered an impressive performance at the inaugural Digital Health Inter-University Moot Court Competition at Makerere University, ranking third overall among six participating universities.",
+    image: "/news-images/moot.jpeg",
+    featured: true,
+  },
+  {
+    category: "Student Life",
     title: "King Ceasor University Student Represents Uganda at the 2026 ICMDA World Congress in South Korea",
     date: "12 August 2026",
     href: "/about/newsletter",
     text: "MBChB student Abasira Trinity Mungufeni represented King Ceasor University at the 2026 International Christian Medical and Dental Association World Congress in Jeju, South Korea, joining more than 1,300 Christian healthcare professionals from approximately 136 countries.",
     image: "/news-images/Photo8.jpg",
-    featured: true,
-  },
-  {
-    category: "Leadership",
-    title: "Dr. Byarugaba Baterena Hands Over Office as Deputy Vice Chancellor, Academic Affairs",
-    date: "05 August 2026",
-    href: "/about/newsletter",
-    text: "King Ceasor University witnessed a significant leadership transition on 5 August 2026 as Dr. Byarugaba Baterena handed over the office of Deputy Vice Chancellor, Academic Affairs to Prof. Charles Kiiza Mondo, following three years of dedicated service.",
-    image: "/news-images/IMG_7294.JPG",
-    featured: true,
+    featured: false,
   },
   {
     category: "Partnerships",
