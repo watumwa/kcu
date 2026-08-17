@@ -255,13 +255,22 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Partnerships",
+    title: "King Ceasor University Participates in Uganda's Inaugural National Cybersecurity Conference",
+    date: "11 August 2026",
+    href: "/news",
+    text: "King Ceasor University participated in Uganda's inaugural National Cybersecurity Conference at the Sheraton Kampala Hotel, represented by Vice Chancellor Dr Charity Basaza Mulenga, Dr. Habiba N. Ngugi and Assoc. Prof. Annabella H. Ejiri.",
+    image: "/news-images/cyber-training.jpeg",
+    featured: true,
+  },
+  {
     category: "Student Life",
     title: "KCU Law Students Shine at Inaugural Digital Health Inter-University Moot Court Competition",
     date: "14 August 2026",
     href: "/about/newsletter",
     text: "KCU law students delivered an impressive performance at the inaugural Digital Health Inter-University Moot Court Competition at Makerere University, ranking third overall among six participating universities.",
     image: "/news-images/moot.jpeg",
-    featured: true,
+    featured: false,
   },
   {
     category: "Student Life",

@@ -21,6 +21,28 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "11 August 2026",
+    category: "Partnerships",
+    title: "King Ceasor University Participates in Uganda's Inaugural National Cybersecurity Conference",
+    excerpt:
+      "King Ceasor University participated in Uganda's inaugural National Cybersecurity Conference at the Sheraton Kampala Hotel, represented by Vice Chancellor Dr Charity Basaza Mulenga, Dr. Habiba N. Ngugi and Assoc. Prof. Annabella H. Ejiri.",
+    image: "/news-images/cyber-training.jpeg",
+    imageAlt: "King Ceasor University representatives at Uganda's inaugural National Cybersecurity Conference at the Sheraton Kampala Hotel",
+    highlights: [
+      { label: "Dates", value: "11-12 August 2026" },
+      { label: "Venue", value: "Sheraton Kampala Hotel" },
+      { label: "Organisers", value: "Uganda Communications Commission & Uganda National CERT" },
+    ],
+    gallery: [],
+    story: [
+      "Kampala - 11 August 2026",
+      "King Ceasor University participated in Uganda's inaugural National Cybersecurity Conference, held from 11 to 12 August 2026 at the Sheraton Kampala Hotel. The University was represented by Vice Chancellor Dr Charity Basaza Mulenga, Dr. Habiba N. Ngugi, Head of the Department of Computing, AI and Data Science, and Assoc. Prof. Annabella H. Ejiri, Director of Quality Assurance.",
+      "Organised by the Uganda Communications Commission in partnership with the Uganda National Computer Emergency Response Team, the conference brought together representatives from government ministries, financial institutions, telecommunications companies and the technology sector under the theme, 'Securing Uganda's Digital Future: Collaboration, Resilience and Trust.'",
+      "The conference explored ways of moving from isolated institutional responses to a coordinated national cybersecurity strategy. Discussions focused on cross-sector collaboration, financial and mobile-money security, mandatory information sharing, joint cybersecurity drills and the protection of critical infrastructure.",
+      "The University's participation provided an important opportunity to engage with industry leaders, regulators and technology innovators on Uganda's evolving cybersecurity needs. It also reaffirmed King Ceasor University's commitment to advancing cybersecurity education, research and strategic partnerships that contribute to a secure and resilient digital Uganda.",
+    ],
+  },
+  {
     date: "14 August 2026",
     category: "Student Life",
     title: "KCU Law Students Shine at Inaugural Digital Health Inter-University Moot Court Competition",
