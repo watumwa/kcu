@@ -21,6 +21,23 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "20 August 2026",
+    category: "Student Life",
+    title: "Freshers' Orientation Underway at King Ceasor University",
+    excerpt:
+      "King Ceasor University is holding its Freshers' Orientation Programme, welcoming new students and preparing them for a successful university experience.",
+    image: "/news-images/1W0A1839.JPG",
+    imageAlt: "Freshers' Orientation Programme at King Ceasor University",
+    gallery: [],
+    story: [
+      "Kampala - 20 August 2026",
+      "King Ceasor University is holding its Freshers' Orientation Programme, welcoming new students and preparing them for a successful university experience.",
+      "Throughout the programme, students are learning about academic expectations, campus facilities, student-support services and opportunities beyond the classroom. They are also meeting University leaders, faculty, staff and fellow students as they settle into the KCU community.",
+      "The orientation provides an important foundation for students to confidently begin their academic journey, build new connections and make the most of university life.",
+      "Welcome to King Ceasor University, where we ignite the future!",
+    ],
+  },
+  {
     date: "11 August 2026",
     category: "Partnerships",
     title: "King Ceasor University Participates in Uganda's Inaugural National Cybersecurity Conference",
