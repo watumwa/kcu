@@ -21,6 +21,48 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "17 August 2026",
+    category: "Partnerships",
+    title: "King Ceasor University Participates in Tilenga Train the Trainer Program",
+    excerpt:
+      "King Ceasor University is participating in a five-day residential training under the Tilenga Train the Trainer Program at the TASC/Sourcing Office in Ntinda, Kampala.",
+    image: "/news-images/training-1.jpeg",
+    imageAlt: "King Ceasor University representatives at the Tilenga Train the Trainer Program at TASC/Sourcing Office in Ntinda, Kampala",
+    highlights: [
+      { label: "Dates", value: "17-21 August 2026" },
+      { label: "Venue", value: "TASC/Sourcing Office, Ntinda, Kampala" },
+      { label: "Conducted by", value: "ZEB (U) Co. Limited" },
+    ],
+    gallery: [],
+    story: [
+      "Kampala - 17 August 2026",
+      "King Ceasor University is participating in a five-day residential training under the Tilenga Train the Trainer Program, taking place from 17 to 21 August 2026 at the TASC/Sourcing Office in Ntinda, Kampala.",
+      "Conducted by ZEB (U) Co. Limited, the training brings together delegates nominated by universities registered under the project. Participants are receiving practical and technical instruction in Rigging and Lifting, Lockout/Tagout (LOTO), Well Control and Well Integration.",
+      "The University's participation reflects its commitment to strengthening industry-relevant knowledge, developing institutional training capacity and equipping its community with practical competencies required in the oil and gas sector. Through engagements of this nature, King Ceasor University continues to bridge the gap between academic training and industry practice.",
+    ],
+  },
+  {
+    date: "19 August 2026",
+    category: "Partnerships",
+    title: "King Ceasor University Participates in National Education and Training for Health Policy 2025 Dissemination",
+    excerpt:
+      "King Ceasor University participated in a technical working engagement on the dissemination of the National Education and Training for Health Policy, 2025, at Esella Country Hotel in Kiira-Najjera, Wakiso District.",
+    image: "/news-images/workshop-1.jpeg",
+    imageAlt: "King Ceasor University representatives at the National Education and Training for Health Policy 2025 dissemination at Esella Country Hotel",
+    highlights: [
+      { label: "Date", value: "19 August 2026" },
+      { label: "Venue", value: "Esella Country Hotel, Kiira-Najjera, Wakiso District" },
+      { label: "Represented by", value: "VC Dr Charity Basaza Mulenga & Acting DVC Academic Affairs Prof Charles Kiiza Mondo" },
+    ],
+    gallery: [],
+    story: [
+      "Kiira-Najjera, Wakiso District - 19 August 2026",
+      "King Ceasor University participated in a technical working engagement on the dissemination of the National Education and Training for Health Policy, 2025, held on 19 August 2026 at Esella Country Hotel in Kiira-Najjera, Wakiso District.",
+      "The University was represented by the Vice Chancellor, Dr. Charity Basaza Mulenga, and the Acting Deputy Vice Chancellor for Academic Affairs, Prof. Charles Kiiza Mondo. The meeting brought together leaders from universities offering health-professions programmes to examine the Policy's key provisions and their implications for higher education institutions.",
+      "Developed by the Ministry of Education and Sports in collaboration with the Ministry of Health, the Policy provides a comprehensive framework for developing a globally competitive health workforce. The engagement supported universities in transitioning from policy awareness to operational readiness and aligning health-professions education and training with national priorities.",
+    ],
+  },
+  {
     date: "20 August 2026",
     category: "Student Life",
     title: "Freshers' Orientation Underway at King Ceasor University",

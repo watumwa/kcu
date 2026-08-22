@@ -37,8 +37,14 @@ export default function Hero() {
             initial={{ scale: 1.06 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.9, ease: "easeOut" }}
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${current.image})`, backgroundPosition: current.imagePosition ?? "center" }}
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `url(${current.image})`,
+              backgroundPosition: current.imagePosition ?? "center",
+              backgroundSize: current.imageFit ?? "cover",
+              backgroundRepeat: "no-repeat",
+              backgroundColor: current.imageFit === "contain" ? "#ffffff" : undefined,
+            }}
           />
 
           <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/25 to-transparent" />

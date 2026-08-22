@@ -19,6 +19,7 @@ export type HeroSlide = {
   link?: string;
   image: string;
   imagePosition?: string;
+  imageFit?: "cover" | "contain";
   programmes: string[];
 };
 
@@ -124,19 +125,19 @@ export const heroSlides: HeroSlide[] = [
     ],
   },
   {
-    badge: "KCU Events",
-    school: "Hosts Uganda National Code Fest 2026",
-    title: "",
-    subtitle: "",
-    cta: "Read More",
-    link: "/about/newsletter",
-    image: "/IMG_0055.jpeg",
-    imagePosition: "center 0%",
+    badge: "Weekend Programme",
+    school: "Flexible Learning",
+    title: "Learn on Your Schedule",
+    subtitle: "Weekend classes designed for working students and professionals.",
+    cta: "Explore Programmes",
+    link: "/academics/courses",
+    image: "/hero-sliders/weekend-advert-01.png",
+    imagePosition: "center -0%",
     programmes: [
-      "",
-      "",
-      "",
-      "",
+      "Undergraduate programmes across schools and faculties",
+      "Postgraduate studies for professionals and researchers",
+      "Flexible learning pathways for working students",
+      "International student support and guidance",
     ],
   },
   {
@@ -255,13 +256,31 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Partnerships",
+    title: "King Ceasor University Participates in Tilenga Train the Trainer Program",
+    date: "17 August 2026",
+    href: "/news",
+    text: "King Ceasor University is participating in a five-day residential training under the Tilenga Train the Trainer Program at the TASC/Sourcing Office in Ntinda, Kampala.",
+    image: "/news-images/training-1.jpeg",
+    featured: true,
+  },
+  {
+    category: "Partnerships",
+    title: "King Ceasor University Participates in National Education and Training for Health Policy 2025 Dissemination",
+    date: "19 August 2026",
+    href: "/news",
+    text: "King Ceasor University participated in a technical working engagement on the dissemination of the National Education and Training for Health Policy, 2025, at Esella Country Hotel in Kiira-Najjera, Wakiso District.",
+    image: "/news-images/workshop-1.jpeg",
+    featured: false,
+  },
+  {
     category: "Student Life",
     title: "Freshers' Orientation Underway at King Ceasor University",
     date: "20 August 2026",
     href: "/news",
     text: "King Ceasor University is holding its Freshers' Orientation Programme, welcoming new students and preparing them for a successful university experience.",
     image: "/news-images/1W0A1839.JPG",
-    featured: true,
+    featured: false,
   },
   {
     category: "Partnerships",

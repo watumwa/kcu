@@ -986,12 +986,12 @@ const feeProgrammes = [
     feeLabel: "Fees Per Semester",
     courses: [
       { code: "01", course: "Bachelor of Medicine and Bachelor of Surgery", duration: "5 Years", uganda: "$3,000", international: "$3,000" },
-      { code: "02", course: "Bachelor of Nursing Science - Direct", duration: "4 Years", uganda: "$1,100", international: "$1,300" },
-      { code: "03", course: "Bachelor of Nursing Science - Completion", duration: "3 Years", uganda: "$1,100", international: "$1,300" },
-      { code: "04", course: "Diploma in Clinical Medicine and Community Health", duration: "3 Years", uganda: "$1,000", international: "$1,150" },
-      { code: "05", course: "Diploma in Medical Laboratory Technology", duration: "3 Years", uganda: "$1,000", international: "$1,150" },
-      { code: "06", course: "Higher Education Certificate - Biological Sciences", duration: "1 Year", uganda: "$550", international: "$750" },
-      { code: "07", course: "Higher Education Certificate - Physical Sciences", duration: "1 Year", uganda: "$550", international: "$750" },
+      { code: "02", course: "Bachelor of Nursing Science - Direct", duration: "4 Years", uganda: "UGX 2,425,000", international: "$800" },
+      { code: "03", course: "Bachelor of Nursing Science - Completion", duration: "3 Years", uganda: "UGX 2,425,000", international: "$800" },
+      { code: "04", course: "Diploma in Clinical Medicine and Community Health", duration: "3 Years", uganda: "UGX 1,870,000", international: "$515" },
+      { code: "05", course: "Diploma in Medical Laboratory Technology", duration: "3 Years", uganda: "UGX 1,300,000", international: "$370" },
+      { code: "06", course: "Higher Education Certificate - Biological Sciences", duration: "1 Year", uganda: "UGX 782,595", international: "$250" },
+      { code: "07", course: "Higher Education Certificate - Physical Sciences", duration: "1 Year", uganda: "UGX 782,595", international: "$250" },
     ],
   },
   {
@@ -1000,12 +1000,12 @@ const feeProgrammes = [
     summary: "Degree, diploma, and higher education certificate programmes in law, business, and management.",
     feeLabel: "Fees Per Semester",
     courses: [
-      { code: "08", course: "Bachelor of Laws", duration: "4 Years", uganda: "$1,150", international: "$1,300" },
-      { code: "09", course: "Bachelor of Business Administration", duration: "3 Years", uganda: "$1,100", international: "$1,225" },
-      { code: "10", course: "Bachelor of Oil, Gas, and Energy Management", duration: "3 Years", uganda: "$1,100", international: "$1,225" },
-      { code: "11", course: "Bachelor of Applied Economics", duration: "3 Years", uganda: "$1,100", international: "$1,225" },
-      { code: "12", course: "Diploma in Global Business", duration: "2 Years", uganda: "$1,000", international: "$1,200" },
-      { code: "13", course: "Higher Education Certificate - Humanities", duration: "1 Year", uganda: "$550", international: "$750" },
+      { code: "08", course: "Bachelor of Laws", duration: "4 Years", uganda: "UGX 2,025,000", international: "$650" },
+      { code: "09", course: "Bachelor of Business Administration", duration: "3 Years", uganda: "UGX 1,468,000", international: "$500" },
+      { code: "10", course: "Bachelor of Oil, Gas, and Energy Management", duration: "3 Years", uganda: "UGX 1,127,500", international: "$400" },
+      { code: "11", course: "Bachelor of Applied Economics", duration: "3 Years", uganda: "UGX 1,468,000", international: "$500" },
+      { code: "12", course: "Diploma in Global Business", duration: "2 Years", uganda: "UGX 700,000", international: "$200" },
+      { code: "13", course: "Higher Education Certificate - Humanities", duration: "1 Year", uganda: "UGX 782,595", international: "$250" },
     ],
   },
   {
@@ -1014,8 +1014,8 @@ const feeProgrammes = [
     summary: "Degree programmes in petroleum geoscience, computing, and criminal investigations.",
     feeLabel: "Fees Per Semester",
     courses: [
-      { code: "14", course: "Bachelor of Science in Petroleum Geoscience", duration: "4 Years", uganda: "$1,150", international: "$1,300" },
-      { code: "15", course: "Bachelor of Computer Forensics and Criminal Investigations", duration: "3 Years", uganda: "$1,100", international: "$1,225" },
+      { code: "14", course: "Bachelor of Science in Petroleum Geoscience", duration: "4 Years", uganda: "UGX 2,352,300", international: "$785" },
+      { code: "15", course: "Bachelor of Computer Forensics and Criminal Investigations", duration: "3 Years", uganda: "UGX 2,075,000", international: "$680" },
     ],
   },
   {
