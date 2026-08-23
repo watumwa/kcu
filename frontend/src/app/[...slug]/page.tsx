@@ -887,7 +887,7 @@ const contentPages: Record<string, AboutPageContent> = {
     },
     cta: {
       label: "Library Catalogue",
-      href: "https://catalogue.kcu.ac.ug/",
+      href: "https://library.kcu.ac.ug/",
       heading: "Search Library Resources",
     },
   },
@@ -913,7 +913,7 @@ const contentPages: Record<string, AboutPageContent> = {
     ],
     cta: {
       label: "Open Catalogue",
-      href: "https://catalogue.kcu.ac.ug/",
+      href: "https://library.kcu.ac.ug/",
     },
   },
   "library/faqs": {
@@ -944,7 +944,7 @@ const contentPages: Record<string, AboutPageContent> = {
     ],
     cta: {
       label: "Open Catalogue",
-      href: "https://catalogue.kcu.ac.ug/",
+      href: "https://library.kcu.ac.ug/",
     },
   },
   "library/opening-hours": {
@@ -972,7 +972,7 @@ const contentPages: Record<string, AboutPageContent> = {
     ],
     cta: {
       label: "Library Catalogue",
-      href: "https://catalogue.kcu.ac.ug/",
+      href: "https://library.kcu.ac.ug/",
     },
   },
 };

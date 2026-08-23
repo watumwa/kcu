@@ -88,7 +88,7 @@ export const navItems: NavItem[] = [
   },
    {
     label: "Library",
-    href: "/library",
+    href: "https://library.kcu.ac.ug/",
     description: "",
     children: [],
   },
