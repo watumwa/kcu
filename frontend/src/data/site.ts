@@ -257,12 +257,21 @@ export const upcomingEvents = [
 export const newsItems = [
   {
     category: "Partnerships",
+    title: "King Ceasor University Participates in STI Secretariat-Uganda Vice Chancellors' Forum Engagement",
+    date: "21 August 2026",
+    href: "/news",
+    text: "King Ceasor University participated in an engagement between the Science, Technology and Innovation (STI) Secretariat and the Uganda Vice Chancellors' Forum (UVCF) held on Friday, 21 August 2026.",
+    image: "/news-images/Workshop-1.jpeg",
+    featured: true,
+  },
+  {
+    category: "Partnerships",
     title: "King Ceasor University Participates in Tilenga Train the Trainer Program",
     date: "17 August 2026",
     href: "/news",
     text: "King Ceasor University is participating in a five-day residential training under the Tilenga Train the Trainer Program at the TASC/Sourcing Office in Ntinda, Kampala.",
     image: "/news-images/training-1.jpeg",
-    featured: true,
+    featured: false,
   },
   {
     category: "Partnerships",

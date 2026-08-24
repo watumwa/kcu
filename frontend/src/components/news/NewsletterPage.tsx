@@ -21,6 +21,29 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "21 August 2026",
+    category: "Partnerships",
+    title: "King Ceasor University Participates in STI Secretariat-Uganda Vice Chancellors' Forum Engagement",
+    excerpt:
+      "King Ceasor University participated in an engagement between the Science, Technology and Innovation (STI) Secretariat and the Uganda Vice Chancellors' Forum (UVCF) held on Friday, 21 August 2026.",
+    image: "/news-images/Workshop-1.jpeg",
+    imageAlt: "King Ceasor University representatives at the STI Secretariat and Uganda Vice Chancellors' Forum engagement",
+    highlights: [
+      { label: "Date", value: "21 August 2026" },
+      { label: "Organised by", value: "STI Secretariat & Uganda Vice Chancellors' Forum (UVCF)" },
+      { label: "Represented by", value: "VC Dr Charity Basaza Mulenga" },
+    ],
+    gallery: [],
+    story: [
+      "Kampala - 21 August 2026",
+      "King Ceasor University participated in an engagement between the Science, Technology and Innovation (STI) Secretariat and the Uganda Vice Chancellors' Forum (UVCF) held on Friday, 21 August 2026. The University was represented by the Vice Chancellor, Dr. Charity Basaza Mulenga.",
+      "The engagement welcomed the proposed National Inter-University Collaboration Programme and called for its further refinement to respond more deliberately to Uganda's national priorities and the needs of the wider STI and industrial ecosystem. The Minister emphasized that the proposed staff mobility programme should extend beyond universities to industries and manufacturing ecosystems, thereby strengthening collaboration between academia and industry. The same approach should guide PhD training and retention to ensure that advanced education addresses the skills and capabilities required by Uganda and its industries.",
+      "Universities were also challenged to identify distinct national capabilities aligned with the ATMs by clearly demonstrating their areas of expertise, available facilities and teams capable of delivering meaningful solutions. The UVCF was encouraged to become a regular strategic convening partner within the STI ecosystem while maintaining its independence to provide objective advice.",
+      "The engagement further highlighted the importance of supporting Uganda's domestic economy and translating research into technologies, products and economic value. Hon. Eng. Jonard Asiimwe Akiiki urged institutions and individuals to prioritise local purchasing to keep money circulating within the country. He also stressed the urgency of converting curiosity into ideas, ideas into technologies, and technologies into products that advance socioeconomic transformation and national pride.",
+      "The discussions form part of broader efforts to strengthen academia's contribution to Uganda's development agenda and the country's ambition of building a US$500 billion economy by 2040.",
+    ],
+  },
+  {
     date: "17 August 2026",
     category: "Partnerships",
     title: "King Ceasor University Participates in Tilenga Train the Trainer Program",
