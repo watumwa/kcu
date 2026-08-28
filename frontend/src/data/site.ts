@@ -256,13 +256,22 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Community",
+    title: "KCU Successfully Hosts Cancer Run 2026 Activation",
+    date: "26 August 2026",
+    href: "/news",
+    text: "King Ceasor University successfully hosted the Cancer Run 2026 Activation and Donation of Cancer Run Kits on 26 August 2026 at the University's Main Campus.",
+    image: "/news-images/cancer-run.png",
+    featured: true,
+  },
+  {
     category: "Partnerships",
     title: "King Ceasor University Participates in STI Secretariat-Uganda Vice Chancellors' Forum Engagement",
     date: "21 August 2026",
     href: "/news",
     text: "King Ceasor University participated in an engagement between the Science, Technology and Innovation (STI) Secretariat and the Uganda Vice Chancellors' Forum (UVCF) held on Friday, 21 August 2026.",
     image: "/news-images/Workshop-1.jpeg",
-    featured: true,
+    featured: false,
   },
   {
     category: "Partnerships",

@@ -21,6 +21,29 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "26 August 2026",
+    category: "Community",
+    title: "KCU Successfully Hosts Cancer Run 2026 Activation",
+    excerpt:
+      "King Ceasor University successfully hosted the Cancer Run 2026 Activation and Donation of Cancer Run Kits on 26 August 2026 at the University's Main Campus.",
+    image: "/news-images/cancer-run.png",
+    imageAlt: "Cancer Run 2026 Activation at King Ceasor University Main Campus",
+    highlights: [
+      { label: "Date", value: "26 August 2026" },
+      { label: "Venue", value: "King Ceasor University Main Campus" },
+      { label: "Organised by", value: "Rotary Muyenga Sunday Sunset & Rotaract Club of KCU" },
+      { label: "Sponsor", value: "Liquid Intelligent Technologies" },
+    ],
+    gallery: [],
+    story: [
+      "Kampala - 26 August 2026",
+      "King Ceasor University successfully hosted the Cancer Run 2026 Activation and Donation of Cancer Run Kits on 26 August 2026 at the University's Main Campus. The event was organised by Rotary Muyenga Sunday Sunset and the Rotaract Club of King Ceasor University, with sponsorship from Liquid Intelligent Technologies.",
+      "The activation brought together Rotarians, Rotaractors, Interactors, members of the University community and other participants committed to the fight against cancer. It provided a platform to raise awareness about cancer, promote prevention and encourage collective support for individuals and families affected by the disease.",
+      "The event also highlighted the important role that partnerships and community engagement play in addressing public-health challenges. Through such initiatives, King Ceasor University continues to promote social responsibility and encourage its students and staff to participate in activities that positively impact society.",
+      "The University extends its sincere appreciation to Rotary Muyenga Sunday Sunset, the Rotaract Club of King Ceasor University and Liquid Intelligent Technologies for making the activation possible. Special thanks also go to all the Rotarians, Rotaractors, Interactors and participants whose attendance and support contributed to the event's success. Together, every step counts in the fight against cancer.",
+    ],
+  },
+  {
     date: "21 August 2026",
     category: "Partnerships",
     title: "King Ceasor University Participates in STI Secretariat-Uganda Vice Chancellors' Forum Engagement",
