@@ -256,13 +256,22 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Student Life",
+    title: "New Healthcare Students Receive White Coats at King Ceasor University",
+    date: "28 August 2026",
+    href: "/news",
+    text: "King Ceasor University held a White Coat Ceremony for its new healthcare students on Friday, 28th August 2026, marking their formal entry into professional healthcare training.",
+    image: "/news-images/health-students.jpg",
+    featured: true,
+  },
+  {
     category: "Community",
     title: "KCU Successfully Hosts Cancer Run 2026 Activation",
     date: "26 August 2026",
     href: "/news",
     text: "King Ceasor University successfully hosted the Cancer Run 2026 Activation and Donation of Cancer Run Kits on 26 August 2026 at the University's Main Campus.",
     image: "/news-images/cancer-run.png",
-    featured: true,
+    featured: false,
   },
   {
     category: "Partnerships",

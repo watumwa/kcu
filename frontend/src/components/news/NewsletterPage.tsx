@@ -21,6 +21,27 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "28 August 2026",
+    category: "Student Life",
+    title: "New Healthcare Students Receive White Coats at King Ceasor University",
+    excerpt:
+      "King Ceasor University held a White Coat Ceremony for its new healthcare students on Friday, 28th August 2026, marking their formal entry into professional healthcare training.",
+    image: "/news-images/health-students.jpg",
+    imageAlt: "White Coat Ceremony for new healthcare students at King Ceasor University",
+    highlights: [
+      { label: "Date", value: "28 August 2026" },
+      { label: "Occasion", value: "White Coat Ceremony" },
+    ],
+    gallery: [],
+    story: [
+      "Kampala - 28 August 2026",
+      "King Ceasor University held a White Coat Ceremony for its new healthcare students on Friday, 28th August 2026, marking their formal entry into professional healthcare training. The ceremony brought together students, university administrators, faculty members, mentors and invited guests to celebrate this important academic milestone.",
+      "During the ceremony, the new students were individually cloaked in white coats and collectively recited the Hippocratic Oath, affirming their commitment to compassion, integrity, ethical practice and patient-centred care. The white coat symbolises the trust and responsibility placed upon healthcare professionals.",
+      "University leaders encouraged the students to combine scientific knowledge with empathy, professionalism and respect for every patient. Appreciation was also extended to the administrators, faculty members and mentors whose leadership and support made the ceremony possible.",
+      "King Ceasor University congratulates its new healthcare students and wishes them success as they begin their academic and professional journey.",
+    ],
+  },
+  {
     date: "26 August 2026",
     category: "Community",
     title: "KCU Successfully Hosts Cancer Run 2026 Activation",
