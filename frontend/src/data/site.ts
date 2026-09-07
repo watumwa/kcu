@@ -257,12 +257,21 @@ export const upcomingEvents = [
 export const newsItems = [
   {
     category: "Student Life",
+    title: "KCU Student Leaders Participate in East African Youth Engagement Planning Meeting",
+    date: "3 September 2026",
+    href: "/news",
+    text: "King Ceasor University was represented by Guild President Muhoozi Daniel and Guild Speaker Murungi Precious at a planning meeting for the East African Youth Engagements and Marathon, held on 3 September 2026 at the Parliament of Uganda.",
+    image: "/news-images/youth-meeting.jpeg",
+    featured: true,
+  },
+  {
+    category: "Student Life",
     title: "New Healthcare Students Receive White Coats at King Ceasor University",
     date: "28 August 2026",
     href: "/news",
     text: "King Ceasor University held a White Coat Ceremony for its new healthcare students on Friday, 28th August 2026, marking their formal entry into professional healthcare training.",
     image: "/news-images/health-students.jpg",
-    featured: true,
+    featured: false,
   },
   {
     category: "Community",

@@ -21,6 +21,29 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "3 September 2026",
+    category: "Student Life",
+    title: "KCU Student Leaders Participate in East African Youth Engagement Planning Meeting",
+    excerpt:
+      "King Ceasor University was represented by Guild President Muhoozi Daniel and Guild Speaker Murungi Precious at a planning meeting for the East African Youth Engagements and Marathon, held on 3 September 2026 at the Parliament of Uganda.",
+    image: "/news-images/youth-meeting.jpeg",
+    imageAlt: "King Ceasor University Guild President Muhoozi Daniel and Guild Speaker Murungi Precious at the East African Youth Engagement Planning Meeting at the Parliament of Uganda",
+    highlights: [
+      { label: "Date", value: "3 September 2026" },
+      { label: "Venue", value: "Parliament of Uganda" },
+      { label: "Organised by", value: "Parliamentary Forum on EAC Affairs (PEACA)" },
+      { label: "Representatives", value: "Guild President Muhoozi Daniel & Guild Speaker Murungi Precious" },
+    ],
+    gallery: [],
+    story: [
+      "Kampala - 3 September 2026",
+      "King Ceasor University was represented at a planning meeting for the East African Youth Engagements and Marathon, held on 3 September 2026 at the Parliament of Uganda. The gathering was attended by Guild President Muhoozi Daniel and Guild Speaker Murungi Precious, who joined fellow student leaders from universities and tertiary institutions across Uganda.",
+      "The meeting was organised by the Parliamentary Forum on East African Community Affairs (PEACA) and brought together guild presidents and speakers from higher education institutions nationwide. Discussions focused on preparations for a series of youth-centred activities leading up to the East African Community Marathon scheduled for 29 November 2026.",
+      "KCU's participation provided its student leaders with a platform to contribute to regional youth-engagement discussions, exchange ideas with their counterparts from other institutions, and collaborate on initiatives that advance youth participation in East African integration. The dialogue underscored the important role young people play in supporting regional integration and fostering unity across the East African Community.",
+      "The engagement strengthened the Guild President and Guild Speaker's understanding of ongoing regional initiatives and the opportunities available for Ugandan students to contribute meaningfully to continental and regional development agendas. Through such forums, King Ceasor University continues to empower its student leaders and support their active participation in national and regional discourse.",
+    ],
+  },
+  {
     date: "28 August 2026",
     category: "Student Life",
     title: "New Healthcare Students Receive White Coats at King Ceasor University",
