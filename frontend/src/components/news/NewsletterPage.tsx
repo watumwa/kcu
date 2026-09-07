@@ -21,6 +21,28 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "4 September 2026",
+    category: "Student Life",
+    title: "KCU Holds Meeting with International Students",
+    excerpt:
+      "King Ceasor University, through the Office of the Dean of Students, held an important meeting for new and continuing international students on 4 September 2026, addressing key matters affecting international students and strengthening their understanding of institutional procedures.",
+    image: "/news-images/orientation-intl.jpeg",
+    imageAlt: "King Ceasor University Dean of Students team addressing new and continuing international students during a meeting on 4 September 2026",
+    highlights: [
+      { label: "Date", value: "4 September 2026" },
+      { label: "Venue", value: "King Ceasor University" },
+      { label: "Organised by", value: "Office of the Dean of Students" },
+    ],
+    gallery: [],
+    story: [
+      "Kampala - 4 September 2026",
+      "King Ceasor University, through the Office of the Dean of Students, held an important meeting for new and continuing international students on 4 September 2026. The engagement provided a platform for the University to address key matters affecting international students and strengthen their understanding of institutional procedures.",
+      "Discussions focused on security, visa management and University communication protocols. Students received guidance on maintaining their personal safety, complying with immigration requirements and using the appropriate channels when communicating with the University.",
+      "The meeting also allowed students to seek clarification on issues related to their welfare and responsibilities while studying at KCU. Through such engagements, the University seeks to ensure that international students remain informed, supported and fully integrated into the University community.",
+      "The initiative reflects KCU's commitment to providing a safe, inclusive and supportive learning environment in which international students can thrive academically and socially.",
+    ],
+  },
+  {
     date: "3 September 2026",
     category: "Student Life",
     title: "KCU Student Leaders Participate in East African Youth Engagement Planning Meeting",

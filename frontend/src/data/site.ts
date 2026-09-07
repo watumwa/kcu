@@ -257,12 +257,21 @@ export const upcomingEvents = [
 export const newsItems = [
   {
     category: "Student Life",
+    title: "KCU Holds Meeting with International Students",
+    date: "4 September 2026",
+    href: "/news",
+    text: "King Ceasor University, through the Office of the Dean of Students, held an important meeting for new and continuing international students on 4 September 2026, addressing key matters affecting international students and strengthening their understanding of institutional procedures.",
+    image: "/news-images/orientation-intl.jpeg",
+    featured: true,
+  },
+  {
+    category: "Student Life",
     title: "KCU Student Leaders Participate in East African Youth Engagement Planning Meeting",
     date: "3 September 2026",
     href: "/news",
     text: "King Ceasor University was represented by Guild President Muhoozi Daniel and Guild Speaker Murungi Precious at a planning meeting for the East African Youth Engagements and Marathon, held on 3 September 2026 at the Parliament of Uganda.",
     image: "/news-images/youth-meeting.jpeg",
-    featured: true,
+    featured: false,
   },
   {
     category: "Student Life",
