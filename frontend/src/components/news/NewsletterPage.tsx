@@ -21,6 +21,75 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "6 September 2026",
+    category: "Community",
+    title: "KCU Partners with Uganda Blood Transfusion Services for Blood Donation Drive",
+    excerpt:
+      "King Ceasor University, in partnership with Uganda Blood Transfusion Services, held a two-day blood donation drive at the University Main Campus. The initiative aimed to encourage voluntary blood donation and contribute to Uganda’s national blood supply.",
+    image: "/news-images/Blood-Donation.jpeg",
+    imageAlt: "King Ceasor University community members participating in a blood donation drive with Uganda Blood Transfusion Services",
+    highlights: [
+      { label: "Date", value: "6 September 2026" },
+      { label: "Duration", value: "Two-day drive" },
+      { label: "Venue", value: "University Main Campus" },
+      { label: "Partner", value: "Uganda Blood Transfusion Services" },
+    ],
+    gallery: [],
+    story: [
+      "Kampala - 6 September 2026",
+      "King Ceasor University, in partnership with Uganda Blood Transfusion Services, held a two-day blood donation drive at the University Main Campus. The initiative aimed to encourage voluntary blood donation and contribute to Uganda’s national blood supply.",
+      "The exercise brought together members of the University community in support of patients who require blood for emergency treatment and other forms of medical care. Participants were reminded that a single blood donation can help save up to three lives, making every contribution valuable.",
+      "Personnel from Uganda Blood Transfusion Services supported the exercise and ensured that the donations were collected safely. The initiative also provided an opportunity to raise awareness about the continuing need for voluntary blood donation.",
+      "The blood donation drive reflected KCU’s commitment to community service, social responsibility and the promotion of public health. It demonstrated how collective action within the University community can make a meaningful difference in the lives of others.",
+    ],
+  },
+  {
+    date: "5 September 2026",
+    category: "Student Life",
+    title: "KCU Strengthens Student Leadership Through Capacity-Building Training",
+    excerpt:
+      "King Ceasor University, through the Office of the Dean of Students, conducted a leadership training for Guild leaders and chairpersons of student associations on Saturday, 5 September 2026, at the University Main Campus.",
+    image: "/news-images/guild-training.jpeg",
+    imageAlt: "Guild leaders and chairpersons of student associations attending leadership training at King Ceasor University Main Campus",
+    highlights: [
+      { label: "Date", value: "5 September 2026" },
+      { label: "Venue", value: "University Main Campus" },
+      { label: "Organised by", value: "Office of the Dean of Students" },
+      { label: "Participants", value: "Guild leaders and chairpersons of student associations" },
+    ],
+    gallery: [],
+    story: [
+      "Kampala - 5 September 2026",
+      "King Ceasor University, through the Office of the Dean of Students, conducted a leadership training for Guild leaders and chairpersons of student associations on Saturday, 5 September 2026, at the University Main Campus.",
+      "The training was organised to strengthen the participants’ leadership abilities and enhance effective student representation. It equipped the student leaders with practical knowledge to support responsible decision-making, effective communication, teamwork and cooperation within the University community.",
+      "The engagement also reinforced the important role student leaders play in representing their colleagues’ interests, promoting student welfare and maintaining constructive communication between students and the University administration.",
+      "Through such capacity-building initiatives, KCU continues to nurture responsible, competent and service-oriented student leaders who can contribute positively to institutional development and the wider community.",
+    ],
+  },
+  {
+    date: "4 September 2026",
+    category: "Student Life",
+    title: "Rotaract Club of KCU Installs New President",
+    excerpt:
+      "The Rotaract Club of King Ceasor University held its seventh presidential installation ceremony on Friday, 4 September 2026, at Joy Café along Ggaba Road, formally installing Mr. Ampurire Denis as the Club President.",
+    image: "/news-images/rotary.jpeg",
+    imageAlt: "Rotaract Club of King Ceasor University seventh presidential installation ceremony at Joy Café along Ggaba Road",
+    highlights: [
+      { label: "Date", value: "4 September 2026" },
+      { label: "Venue", value: "Joy Café along Ggaba Road" },
+      { label: "Occasion", value: "Seventh Presidential Installation" },
+      { label: "New President", value: "Mr. Ampurire Denis" },
+    ],
+    gallery: [],
+    story: [
+      "Kampala - 4 September 2026",
+      "The Rotaract Club of King Ceasor University held its seventh presidential installation ceremony on Friday, 4 September 2026, at Joy Café along Ggaba Road. The ceremony marked an important leadership transition as Mr. Ampurire Denis was formally installed as the Club President.",
+      "The event brought together Rotaractors, Rotarians and invited guests to celebrate leadership, fellowship and service to the community. It also provided an opportunity to recognise the Club’s continued contribution to student development and community engagement.",
+      "As President, Mr. Ampurire will lead the Club’s activities and work with members to advance initiatives that respond to the needs of the University and surrounding communities. His leadership is expected to encourage greater student participation in service projects while strengthening collaboration within the wider Rotary family.",
+      "The installation reflects King Ceasor University’s commitment to nurturing responsible student leadership and supporting programmes that promote volunteerism, teamwork and positive social impact.",
+    ],
+  },
+  {
     date: "4 September 2026",
     category: "Student Life",
     title: "KCU Holds Meeting with International Students",

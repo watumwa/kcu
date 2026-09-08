@@ -256,13 +256,40 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Community",
+    title: "KCU Partners with Uganda Blood Transfusion Services for Blood Donation Drive",
+    date: "6 September 2026",
+    href: "/news",
+    text: "King Ceasor University, in partnership with Uganda Blood Transfusion Services, held a two-day blood donation drive at the University Main Campus. The initiative aimed to encourage voluntary blood donation and contribute to Uganda’s national blood supply.",
+    image: "/news-images/Blood-Donation.jpeg",
+    featured: true,
+  },
+  {
+    category: "Student Life",
+    title: "KCU Strengthens Student Leadership Through Capacity-Building Training",
+    date: "5 September 2026",
+    href: "/news",
+    text: "King Ceasor University, through the Office of the Dean of Students, conducted a leadership training for Guild leaders and chairpersons of student associations on Saturday, 5 September 2026, at the University Main Campus.",
+    image: "/news-images/guild-training.jpeg",
+    featured: false,
+  },
+  {
+    category: "Student Life",
+    title: "Rotaract Club of KCU Installs New President",
+    date: "4 September 2026",
+    href: "/news",
+    text: "The Rotaract Club of King Ceasor University held its seventh presidential installation ceremony on Friday, 4 September 2026, at Joy Café along Ggaba Road, formally installing Mr. Ampurire Denis as the Club President.",
+    image: "/news-images/rotary.jpeg",
+    featured: false,
+  },
+  {
     category: "Student Life",
     title: "KCU Holds Meeting with International Students",
     date: "4 September 2026",
     href: "/news",
     text: "King Ceasor University, through the Office of the Dean of Students, held an important meeting for new and continuing international students on 4 September 2026, addressing key matters affecting international students and strengthening their understanding of institutional procedures.",
     image: "/news-images/orientation-intl.jpeg",
-    featured: true,
+    featured: false,
   },
   {
     category: "Student Life",
@@ -451,7 +478,7 @@ export const newsItems = [
     href: "/gallery#blood-donation-drive-2026",
     text: "KCU health professionals supported donors through attentive care, clinical assistance and community health engagement.",
     image: "/images/community-health/blood-donation-2026/kcu-health-team.webp",
-    featured: true,
+    featured: false,
   },
   {
     category: "Community",
