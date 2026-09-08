@@ -256,13 +256,22 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Partnerships",
+    title: "KCU Explores Partnership with Uganda Petroleum Institute Kigumba",
+    date: "8 September 2026",
+    href: "/news",
+    text: "A delegation from King Ceasor University undertook a field tour of the Uganda Petroleum Institute Kigumba on 8 September 2026 as part of ongoing efforts to explore institutional collaboration and the development of a proposed Memorandum of Understanding (MoU).",
+    image: "/news-images/geoscince.jpeg",
+    featured: true,
+  },
+  {
     category: "Community",
     title: "KCU Partners with Uganda Blood Transfusion Services for Blood Donation Drive",
     date: "6 September 2026",
     href: "/news",
     text: "King Ceasor University, in partnership with Uganda Blood Transfusion Services, held a two-day blood donation drive at the University Main Campus. The initiative aimed to encourage voluntary blood donation and contribute to Uganda’s national blood supply.",
     image: "/news-images/Blood-Donation.jpeg",
-    featured: true,
+    featured: false,
   },
   {
     category: "Student Life",

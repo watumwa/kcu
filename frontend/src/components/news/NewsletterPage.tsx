@@ -21,6 +21,28 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "8 September 2026",
+    category: "Partnerships",
+    title: "KCU Explores Partnership with Uganda Petroleum Institute Kigumba",
+    excerpt:
+      "A delegation from King Ceasor University undertook a field tour of the Uganda Petroleum Institute Kigumba on 8 September 2026 as part of ongoing efforts to explore institutional collaboration and the development of a proposed Memorandum of Understanding (MoU).",
+    image: "/news-images/geoscince.jpeg",
+    imageAlt: "King Ceasor University delegation during a field tour of the Uganda Petroleum Institute Kigumba",
+    highlights: [
+      { label: "Date", value: "8 September 2026" },
+      { label: "Venue", value: "Uganda Petroleum Institute Kigumba" },
+      { label: "Objective", value: "Explore institutional collaboration and a proposed MoU" },
+      { label: "Delegation", value: "School of Science, Computing and Engineering" },
+    ],
+    gallery: [],
+    story: [
+      "Kampala - 8 September 2026",
+      "A delegation from King Ceasor University undertook a field tour of the Uganda Petroleum Institute Kigumba on 8 September 2026 as part of ongoing efforts to explore institutional collaboration and the development of a proposed Memorandum of Understanding (MoU).",
+      "The KCU delegation comprised Prof. John Vianny Tiberindwa, Dean of the School of Science, Computing and Engineering; Prof. Peter Turyakira, Acting Director of Postgraduate Studies and Research; and Eng. James Harera, Head of the Department of Petroleum Geoscience. The visit provided an opportunity to learn about the Institute’s training facilities, programmes and practical approaches to petroleum education.",
+      "The proposed partnership is expected to explore opportunities for academic collaboration, practical training, knowledge exchange and capacity building. The engagement reflects KCU’s commitment to developing strategic partnerships that strengthen industry-relevant education and prepare students for opportunities within Uganda’s petroleum sector.",
+    ],
+  },
+  {
     date: "6 September 2026",
     category: "Community",
     title: "KCU Partners with Uganda Blood Transfusion Services for Blood Donation Drive",
