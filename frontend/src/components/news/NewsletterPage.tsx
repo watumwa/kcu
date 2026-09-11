@@ -22,6 +22,54 @@ type NewsletterArticle = {
 const newsletterArticles: NewsletterArticle[] = [
   {
     date: "8 September 2026",
+    category: "Student Life",
+    title: "KCU Law School Intra-Moot Competitions Showcase Advocacy Excellence",
+    excerpt:
+      "King Ceasor University Law School successfully concluded its Intra-Moot Competitions on 8 September 2026 following a week of rigorous advocacy engagements. The programme climaxed with highly contested semi-final and final rounds that showcased the depth of legal talent among KCU students.",
+    image: "/news-images/moot-court.jpeg",
+    imageAlt: "KCU Law School students participating in the Intra-Moot Competitions at King Ceasor University",
+    highlights: [
+      { label: "Date", value: "8 September 2026" },
+      { label: "Venue", value: "King Ceasor University" },
+      { label: "Organised by", value: "KCU Law School" },
+      { label: "Purpose", value: "Identify and mentor outstanding mooters for external competitions" },
+    ],
+    gallery: [],
+    story: [
+      "Kampala - 8 September 2026",
+      "King Ceasor University Law School successfully concluded its Intra-Moot Competitions on 8 September 2026 following a week of rigorous advocacy engagements. The programme climaxed with highly contested semi-final and final rounds that showcased the depth of legal talent among KCU students.",
+      "The competitions were established as a structured programme to identify, mentor and select outstanding mooters to represent the University at inter-university and international competitions. Participation in the intra-moot programme will form an important part of the selection process for future external competitions, ensuring that KCU is represented by students who have been trained, tested and selected on merit.",
+      "During the competitions, students demonstrated exceptional legal reasoning, research and oral presentation skills. Their performance reflected the strong classroom instruction provided by the Law School and the intensive practical training undertaken to develop confident, articulate and effective advocates.",
+      "The University appreciates the members of staff who attended the presentations and encouraged the students throughout the competition. Their support demonstrated KCU’s collective commitment to nurturing legal talent and advancing excellence in legal education.",
+      "Congratulations to all the participants, finalists and winners. The conclusion of the intra-moot competitions marks the beginning of their journey towards representing KCU on national and international platforms.",
+    ],
+  },
+  {
+    date: "10 September 2026",
+    category: "Student Life",
+    title: "KCU Participates in the Third Judiciary National Court Open Day",
+    excerpt:
+      "Students and staff from King Ceasor University’s School of Law and Management Sciences participated in the Third Judiciary National Court Open Day, held on 10 September 2026 at the Kololo Ceremonial Grounds.",
+    image: "/news-images/national-court-day.jpeg",
+    imageAlt: "King Ceasor University students and staff at the Third Judiciary National Court Open Day at Kololo Ceremonial Grounds",
+    highlights: [
+      { label: "Date", value: "10 September 2026" },
+      { label: "Venue", value: "Kololo Ceremonial Grounds" },
+      { label: "Theme", value: "Delivering Inclusive, Efficient and Effective Justice" },
+      { label: "Organised by", value: "Judiciary of Uganda" },
+    ],
+    gallery: [],
+    story: [
+      "Kampala - 10 September 2026",
+      "Students and staff from King Ceasor University’s School of Law and Management Sciences participated in the Third Judiciary National Court Open Day, held on 10 September 2026 at the Kololo Ceremonial Grounds.",
+      "Organised by the Judiciary of Uganda under the theme, “Delivering Inclusive, Efficient and Effective Justice,” the event formed part of ongoing efforts to promote accountability, enhance stakeholder engagement and improve the delivery of justice in Uganda.",
+      "Activities commenced with a procession from the High Court in Kampala to the Kololo Ceremonial Grounds. The programme also featured exhibitions and engagements involving members of the Judiciary, legal practitioners, educational institutions and other justice-sector stakeholders.",
+      "KCU’s participation enabled students and staff to interact with justice-sector professionals, deepen their understanding of Uganda’s judicial system and explore the practical application of legal principles. It also provided the University with an opportunity to showcase its contribution to legal education and professional development.",
+      "The engagement reflected KCU’s commitment to combining classroom instruction with practical exposure and preparing graduates who can contribute meaningfully to the administration of justice and the development of Uganda’s legal sector.",
+    ],
+  },
+  {
+    date: "8 September 2026",
     category: "Partnerships",
     title: "KCU Explores Partnership with Uganda Petroleum Institute Kigumba",
     excerpt:

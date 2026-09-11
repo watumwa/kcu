@@ -256,13 +256,22 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Student Life",
+    title: "KCU Law School Intra-Moot Competitions Showcase Advocacy Excellence",
+    date: "8 September 2026",
+    href: "/news",
+    text: "King Ceasor University Law School successfully concluded its Intra-Moot Competitions on 8 September 2026 following a week of rigorous advocacy engagements. The programme climaxed with highly contested semi-final and final rounds that showcased the depth of legal talent among KCU students.",
+    image: "/news-images/moot-court.jpeg",
+    featured: true,
+  },
+  {
     category: "Partnerships",
     title: "KCU Explores Partnership with Uganda Petroleum Institute Kigumba",
     date: "8 September 2026",
     href: "/news",
     text: "A delegation from King Ceasor University undertook a field tour of the Uganda Petroleum Institute Kigumba on 8 September 2026 as part of ongoing efforts to explore institutional collaboration and the development of a proposed Memorandum of Understanding (MoU).",
     image: "/news-images/geoscince.jpeg",
-    featured: true,
+    featured: false,
   },
   {
     category: "Community",
