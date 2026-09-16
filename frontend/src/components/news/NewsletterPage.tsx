@@ -21,6 +21,29 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "10 September 2026",
+    category: "Partnerships",
+    title: "KCU Participates in Launch of ITC Research and Innovation Hub",
+    excerpt:
+      "The Insurance Training College (ITC), in partnership with Services Cops Ltd, launched a Research and Innovation Hub on 10 September 2026. The initiative is designed to advance digital transformation, innovation and skills development within Uganda's insurance and financial services sector.",
+    image: "/news-images/Launch-ITC.jpeg",
+    imageAlt: "King Ceasor University representatives at the launch of the ITC Research and Innovation Hub on 10 September 2026",
+    highlights: [
+      { label: "Date", value: "10 September 2026" },
+      { label: "Venue", value: "Insurance Training College (ITC)" },
+      { label: "Organised by", value: "Insurance Training College (ITC) & Services Cops Ltd" },
+      { label: "Represented by", value: "Prof. Peter Turyakira, Acting Director of Postgraduate Studies and Research" },
+    ],
+    gallery: [],
+    story: [
+      "Kampala - 10 September 2026",
+      "The Insurance Training College (ITC), in partnership with Services Cops Ltd, launched a Research and Innovation Hub on 10 September 2026. The initiative is designed to advance digital transformation, innovation and skills development within Uganda's insurance and financial services sector.",
+      "The hub seeks to bridge the gap between traditional insurance operations and emerging digital technologies. It will support the development of professionals who combine technical competence with insurance industry expertise, enabling them to design and deliver relevant, technology-driven insurance products and solutions.",
+      "King Ceasor University was represented at the launch by Prof. Peter Turyakira, Acting Director of Postgraduate Studies and Research. His participation provided an opportunity for the University to engage with an initiative focused on research, professional development and industry innovation.",
+      "KCU's participation reflects its commitment to strengthening industry engagement, supporting innovation and promoting the development of practical skills that respond to Uganda's evolving economic and technological needs.",
+    ],
+  },
+  {
     date: "8 September 2026",
     category: "Student Life",
     title: "KCU Law School Intra-Moot Competitions Showcase Advocacy Excellence",

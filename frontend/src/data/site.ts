@@ -256,13 +256,22 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Partnerships",
+    title: "KCU Participates in Launch of ITC Research and Innovation Hub",
+    date: "10 September 2026",
+    href: "/news",
+    text: "The Insurance Training College (ITC), in partnership with Services Cops Ltd, launched a Research and Innovation Hub on 10 September 2026. The initiative is designed to advance digital transformation, innovation and skills development within Uganda's insurance and financial services sector.",
+    image: "/news-images/Launch-ITC.jpeg",
+    featured: true,
+  },
+  {
     category: "Student Life",
     title: "KCU Law School Intra-Moot Competitions Showcase Advocacy Excellence",
     date: "8 September 2026",
     href: "/news",
     text: "King Ceasor University Law School successfully concluded its Intra-Moot Competitions on 8 September 2026 following a week of rigorous advocacy engagements. The programme climaxed with highly contested semi-final and final rounds that showcased the depth of legal talent among KCU students.",
     image: "/news-images/moot-court.jpeg",
-    featured: true,
+    featured: false,
   },
   {
     category: "Partnerships",
