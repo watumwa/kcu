@@ -21,6 +21,29 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "14 September 2026",
+    category: "Partnerships",
+    title: "KCU Strengthens Higher Education Collaboration at 79th Uganda Vice Chancellors Forum",
+    excerpt:
+      "King Ceasor University joined university leaders from across Uganda at the 79th Uganda Vice Chancellors Forum, held on Monday, 14 September 2026, at Uganda Martyrs University, Nkozi. Representing KCU was the Vice Chancellor, Dr. Charity Basaza Mulenga, who engaged with fellow Vice Chancellors and higher education leaders during the Forum.",
+    image: "/news-images/vc-forum.jpeg",
+    imageAlt: "King Ceasor University Vice Chancellor Dr. Charity Basaza Mulenga at the 79th Uganda Vice Chancellors Forum at Uganda Martyrs University, Nkozi",
+    highlights: [
+      { label: "Date", value: "14 September 2026" },
+      { label: "Venue", value: "Uganda Martyrs University, Nkozi" },
+      { label: "Represented by", value: "Vice Chancellor, Dr. Charity Basaza Mulenga" },
+      { label: "Organised by", value: "Uganda Vice Chancellors Forum" },
+    ],
+    gallery: [],
+    story: [
+      "Nkozi - 14 September 2026",
+      "King Ceasor University joined university leaders from across Uganda at the 79th Uganda Vice Chancellors Forum, held on Monday, 14 September 2026, at Uganda Martyrs University, Nkozi. Representing KCU was the Vice Chancellor, Dr. Charity Basaza Mulenga, who engaged with fellow Vice Chancellors and higher education leaders during the Forum.",
+      "The gathering provided an important platform for university leaders to connect, exchange perspectives and engage in conversations around the growth and development of higher education in Uganda. It also offered an opportunity to strengthen relationships and encourage greater collaboration among higher education institutions.",
+      "KCU's participation in the Forum underscores the University's commitment to remaining actively engaged in Uganda's higher education community and contributing to initiatives that promote academic excellence, quality and institutional development.",
+      "Through continued engagement with universities and other higher education stakeholders, King Ceasor University remains committed to building meaningful partnerships and contributing to a stronger and more responsive higher education sector in Uganda.",
+    ],
+  },
+  {
     date: "10 September 2026",
     category: "Partnerships",
     title: "KCU Participates in Launch of ITC Research and Innovation Hub",

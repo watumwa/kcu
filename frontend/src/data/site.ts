@@ -257,12 +257,21 @@ export const upcomingEvents = [
 export const newsItems = [
   {
     category: "Partnerships",
+    title: "KCU Strengthens Higher Education Collaboration at 79th Uganda Vice Chancellors Forum",
+    date: "14 September 2026",
+    href: "/news",
+    text: "King Ceasor University joined university leaders from across Uganda at the 79th Uganda Vice Chancellors Forum, held on Monday, 14 September 2026, at Uganda Martyrs University, Nkozi. Representing KCU was the Vice Chancellor, Dr. Charity Basaza Mulenga.",
+    image: "/news-images/vc-forum.jpeg",
+    featured: true,
+  },
+  {
+    category: "Partnerships",
     title: "KCU Participates in Launch of ITC Research and Innovation Hub",
     date: "10 September 2026",
     href: "/news",
     text: "The Insurance Training College (ITC), in partnership with Services Cops Ltd, launched a Research and Innovation Hub on 10 September 2026. The initiative is designed to advance digital transformation, innovation and skills development within Uganda's insurance and financial services sector.",
     image: "/news-images/Launch-ITC.jpeg",
-    featured: true,
+    featured: false,
   },
   {
     category: "Student Life",
