@@ -21,6 +21,31 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "17 September 2026",
+    category: "Student Life",
+    title: "KCU Secures Third Place at NFSU Capture the Flag Finals",
+    excerpt:
+      "King Ceasor University (KCU) has secured third place at the Capture the Flag (CTF) Finals, held at the National Forensic Sciences University (NFSU) Uganda Campus in Jinja. KCU was represented by three teams comprising Mercy, Abel and Ssemak; Sacred and Mark; and Enos and Jerome, under the guidance of Dr. Habiba Ngugi.",
+    image: "/news-images/NFSU.jpeg",
+    imageAlt: "King Ceasor University students at the NFSU Capture the Flag Finals at the National Forensic Sciences University Uganda Campus in Jinja",
+    highlights: [
+      { label: "Date", value: "17 September 2026" },
+      { label: "Venue", value: "National Forensic Sciences University (NFSU) Uganda Campus, Jinja" },
+      { label: "Achievement", value: "Third Place" },
+      { label: "Represented by", value: "Three KCU student teams" },
+      { label: "Guidance", value: "Dr. Habiba Ngugi, Head of Department of Computing, AI and Data Science" },
+    ],
+    gallery: [],
+    story: [
+      "Jinja - 17 September 2026",
+      "King Ceasor University (KCU) has secured third place at the Capture the Flag (CTF) Finals, held today at the National Forensic Sciences University (NFSU) Uganda Campus in Jinja. NFSU's Uganda Campus specialises in areas including cybersecurity and digital forensics.",
+      "KCU was represented by three teams comprising Mercy, Abel and Ssemak; Sacred and Mark; and Enos and Jerome. The students competed under the guidance of Dr. Habiba Ngugi, Head of the Department of Computing, AI and Data Science.",
+      "Throughout the competition, the students put their cybersecurity knowledge into practice, demonstrating technical problem-solving, critical thinking and teamwork. Their performance culminated in KCU securing third place in the CTF Finals.",
+      "The competition provided an important opportunity for students to test their skills beyond the classroom and gain practical exposure to cybersecurity challenges. The Department of Computing, AI and Data Science forms part of KCU's School of Science, Computing and Engineering.",
+      "KCU congratulates the participating students and Dr. Habiba Ngugi on this achievement. The University remains committed to creating opportunities that connect academic learning with practical experience and equip students with skills relevant to the evolving digital landscape.",
+    ],
+  },
+  {
     date: "14 September 2026",
     category: "Partnerships",
     title: "KCU Strengthens Higher Education Collaboration at 79th Uganda Vice Chancellors Forum",

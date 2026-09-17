@@ -256,13 +256,22 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Student Life",
+    title: "KCU Secures Third Place at NFSU Capture the Flag Finals",
+    date: "17 September 2026",
+    href: "/news",
+    text: "King Ceasor University (KCU) has secured third place at the Capture the Flag (CTF) Finals, held at the National Forensic Sciences University (NFSU) Uganda Campus in Jinja. KCU was represented by three teams competing under the guidance of Dr. Habiba Ngugi, Head of the Department of Computing, AI and Data Science.",
+    image: "/news-images/NFSU.jpeg",
+    featured: true,
+  },
+  {
     category: "Partnerships",
     title: "KCU Strengthens Higher Education Collaboration at 79th Uganda Vice Chancellors Forum",
     date: "14 September 2026",
     href: "/news",
     text: "King Ceasor University joined university leaders from across Uganda at the 79th Uganda Vice Chancellors Forum, held on Monday, 14 September 2026, at Uganda Martyrs University, Nkozi. Representing KCU was the Vice Chancellor, Dr. Charity Basaza Mulenga.",
     image: "/news-images/vc-forum.jpeg",
-    featured: true,
+    featured: false,
   },
   {
     category: "Partnerships",
