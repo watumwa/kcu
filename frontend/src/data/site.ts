@@ -256,13 +256,22 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Community",
+    title: "Rotary District 9213 Governor Leads Road Safety and Student Wellbeing Outreach at KCU",
+    date: "17 September 2026",
+    href: "/news",
+    text: "King Ceasor University (KCU) on 17 September 2026 hosted Rotary District 9213 Governor Rtn. Gerald Obai for an official visit and university outreach programme focused on student wellbeing, road safety and community engagement, including a mental health session and the launch of a Road Safety Project.",
+    image: "/news-images/zebra-painting.jpeg",
+    featured: true,
+  },
+  {
     category: "Student Life",
     title: "KCU Secures Third Place at NFSU Capture the Flag Finals",
     date: "17 September 2026",
     href: "/news",
     text: "King Ceasor University (KCU) has secured third place at the Capture the Flag (CTF) Finals, held at the National Forensic Sciences University (NFSU) Uganda Campus in Jinja. KCU was represented by three teams competing under the guidance of Dr. Habiba Ngugi, Head of the Department of Computing, AI and Data Science.",
     image: "/news-images/NFSU.jpeg",
-    featured: true,
+    featured: false,
   },
   {
     category: "Partnerships",

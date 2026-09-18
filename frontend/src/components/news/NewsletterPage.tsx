@@ -22,6 +22,34 @@ type NewsletterArticle = {
 const newsletterArticles: NewsletterArticle[] = [
   {
     date: "17 September 2026",
+    category: "Community",
+    title: "Rotary District 9213 Governor Leads Road Safety and Student Wellbeing Outreach at KCU",
+    excerpt:
+      "King Ceasor University (KCU) on 17 September 2026 hosted Rotary District 9213 Governor Rtn. Gerald Obai for an official visit and university outreach programme focused on student wellbeing, road safety and community engagement, including a mental health session and the launch of a Road Safety Project.",
+    image: "/news-images/zebra-painting.jpeg",
+    imageAlt: "Rotary District 9213 Governor Gerald Obai leading participants in painting a zebra crossing during the Road Safety Project at King Ceasor University",
+    highlights: [
+      { label: "Date", value: "17 September 2026" },
+      { label: "Venue", value: "King Ceasor University" },
+      { label: "Guest", value: "Rtn. Gerald Obai, Rotary District 9213 Governor" },
+      { label: "Focus", value: "Student wellbeing, road safety and community engagement" },
+      { label: "Partners", value: "Rotary Club of Kampala Mahaba; Rotaract Clubs of Kampala Mahaba and KCU" },
+    ],
+    gallery: [],
+    story: [
+      "Kampala - 17 September 2026",
+      "King Ceasor University (KCU) on 17 September 2026 hosted Rotary District 9213 Governor Rtn. Gerald Obai for an official visit and university outreach programme focused on student wellbeing, road safety and community engagement.",
+      "The programme brought together KCU students and staff, the Rotary Club of Kampala Mahaba, the Rotaract Club of Kampala Mahaba and the Rotaract Club of King Ceasor University for a series of activities designed to translate community service into practical action.",
+      "A key component of the outreach was a mental health session for students facilitated by Mind Nest Uganda. The session provided an opportunity for students to engage in conversations around mental wellbeing, awareness and the importance of seeking and providing appropriate support.",
+      "Attention later shifted to road safety, with District Governor Gerald Obai leading participants in the launch of a Road Safety Project near the University. Students, staff and members of the Rotary and Rotaract family participated in painting a zebra crossing to provide a clearly designated crossing point and promote safer pedestrian movement around the University.",
+      "As part of the same initiative, District Governor Obai handed over reflector jackets to boda boda riders operating near KCU. The activity highlighted the importance of rider visibility, adherence to traffic regulations and shared responsibility among motorists, riders and pedestrians in preventing road crashes.",
+      "The outreach demonstrated how partnerships between universities and community organisations can address everyday challenges through practical interventions. For KCU, the engagement also provided students with an opportunity to participate directly in community service while reinforcing the importance of personal and collective responsibility.",
+      "The University appreciates Rotary District 9213, the Rotary Club of Kampala Mahaba, the Rotaract Club of Kampala Mahaba, the Rotaract Club of King Ceasor University and all partners and participants who contributed to the successful outreach.",
+      "Through initiatives such as these, King Ceasor University continues to strengthen partnerships that support student wellbeing, community engagement and safer communities.",
+    ],
+  },
+  {
+    date: "17 September 2026",
     category: "Student Life",
     title: "KCU Secures Third Place at NFSU Capture the Flag Finals",
     excerpt:
