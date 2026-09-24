@@ -21,6 +21,56 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "24 September 2026",
+    category: "Student Life",
+    title: "King Ceasor University Law School Participates in Equal Opportunities Commission Moot Court Competition 2026",
+    excerpt:
+      "KCU Law School participated in the Inaugural Equal Opportunities Commission National Discrimination and Access to Justice Inter-University Moot Court Competition 2026, represented by Masakala Eric Jesse and Akoragye Real under the guidance of Advocate Keith Busingye.",
+    image: "/news-images/Equal-Opportunities.jpeg",
+    imageAlt: "King Ceasor University Law School students at the Equal Opportunities Commission National Discrimination and Access to Justice Inter-University Moot Court Competition",
+    highlights: [
+      { label: "Date", value: "24 September 2026" },
+      { label: "Competition", value: "Equal Opportunities Commission National Moot Court Competition 2026" },
+      { label: "Represented by", value: "Masakala Eric Jesse and Akoragye Real" },
+      { label: "Guidance", value: "Advocate Keith Busingye, KCU Moot Coach and Coordinator" },
+    ],
+    gallery: [],
+    story: [
+      "Kampala - 24 September 2026",
+      "King Ceasor University Law School participated in the Inaugural Equal Opportunities Commission National Discrimination and Access to Justice Inter-University Moot Court Competition 2026.",
+      "KCU was represented by Masakala Eric Jesse and Akoragye Real under the guidance of Advocate Keith Busingye, KCU Moot Coach and Coordinator.",
+      "Other KCU Law students also attended the competition to support the University's representatives and gain first-hand exposure to competitive mooting and courtroom advocacy.",
+      "The competition provided a platform for participating students to engage with issues surrounding discrimination, equal opportunities and access to justice while putting their legal knowledge into practice. It also enabled the students to strengthen essential skills in legal research, critical thinking, advocacy and oral argumentation.",
+      "KCU Law School continues to encourage participation in moot court competitions as part of its commitment to practical legal education and the professional development of its students.",
+      "The University commends Masakala Eric Jesse and Akoragye Real for representing KCU Law School at the competition and Advocate Keith Busingye for guiding the team.",
+    ],
+  },
+  {
+    date: "21 September 2026",
+    category: "Community",
+    title: "KCU Library Week 2026 Equips Students with Essential Information Skills",
+    excerpt:
+      "King Ceasor University is holding Library Week from 21–25 September 2026 under the theme, \"Beyond Access: Building Information Skills for Academic Excellence.\" Activities include orientation on library rules, KOHA and MyLOFT registration, e-resource search sessions, copyright and academic honesty guidance, and recognition of top library users.",
+    image: "/news-images/moot-court.jpeg",
+    imageAlt: "King Ceasor University students participating in Library Week activities at the KCU Library",
+    highlights: [
+      { label: "Date", value: "21–25 September 2026" },
+      { label: "Venue", value: "KCU Library" },
+      { label: "Theme", value: "Beyond Access: Building Information Skills for Academic Excellence" },
+      { label: "Focus", value: "Information literacy, digital resources, research tools" },
+    ],
+    gallery: [],
+    story: [
+      "Kampala - 21 September 2026",
+      "King Ceasor University is holding Library Week from 21–25 September 2026 under the theme, \"Beyond Access: Building Information Skills for Academic Excellence.\"",
+      "The week-long programme is bringing students and the University community closer to the library's services, digital resources and research tools while strengthening the skills needed to access, evaluate and use academic information effectively.",
+      "Activities underway include orientation on library rules and services, user registration on KOHA and MyLOFT, demonstrations of KCU library systems, evaluation of information sources, hands-on e-resource search and retrieval, and sessions on copyright and academic honesty.",
+      "The programme also features highlights of the KCU Institutional Repository, guidance on book and publisher selection, book exhibitions and interactive question-and-answer sessions.",
+      "Library Week will conclude on 25 September with a review of the week's activities and recognition of top library users and key Library Peer Mentors.",
+      "Through the initiative, the KCU Library continues to promote effective use of academic resources and strengthen information literacy across the University community.",
+    ],
+  },
+  {
     date: "17 September 2026",
     category: "Community",
     title: "Rotary District 9213 Governor Leads Road Safety and Student Wellbeing Outreach at KCU",

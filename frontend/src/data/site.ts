@@ -256,13 +256,31 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Student Life",
+    title: "King Ceasor University Law School Participates in Equal Opportunities Commission Moot Court Competition 2026",
+    date: "24 September 2026",
+    href: "/news",
+    text: "KCU Law School participated in the Inaugural Equal Opportunities Commission National Discrimination and Access to Justice Inter-University Moot Court Competition 2026, represented by Masakala Eric Jesse and Akoragye Real under the guidance of Advocate Keith Busingye.",
+    image: "/news-images/Equal-Opportunities.jpeg",
+    featured: true,
+  },
+  {
+    category: "Community",
+    title: "KCU Library Week 2026 Equips Students with Essential Information Skills",
+    date: "21 September 2026",
+    href: "/news",
+    text: "King Ceasor University is holding Library Week from 21–25 September 2026 under the theme, \"Beyond Access: Building Information Skills for Academic Excellence.\" Activities include orientation on library rules, KOHA and MyLOFT registration, e-resource search sessions, copyright and academic honesty guidance, and recognition of top library users.",
+    image: "/news-images/moot-court.jpeg",
+    featured: false,
+  },
+  {
     category: "Community",
     title: "Rotary District 9213 Governor Leads Road Safety and Student Wellbeing Outreach at KCU",
     date: "17 September 2026",
     href: "/news",
     text: "King Ceasor University (KCU) on 17 September 2026 hosted Rotary District 9213 Governor Rtn. Gerald Obai for an official visit and university outreach programme focused on student wellbeing, road safety and community engagement, including a mental health session and the launch of a Road Safety Project.",
     image: "/news-images/zebra-painting.jpeg",
-    featured: true,
+    featured: false,
   },
   {
     category: "Student Life",
