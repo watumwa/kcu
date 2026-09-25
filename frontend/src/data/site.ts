@@ -256,13 +256,31 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Community",
+    title: "KCU Medical Students Participate in Community Health Screening Ahead of World Heart Day 2026",
+    date: "25 September 2026",
+    href: "/news",
+    text: "KCU medical students participated in the Community Biometric Screening Campaign (22–28 September 2026) ahead of World Heart Day under the theme \"Don't Miss a Beat.\" At Ggaba Market, students worked alongside Buganda Kingdom's Clinic on Wheels, offering free blood pressure, blood sugar and BMI checks.",
+    image: "/news-images/world-heart-day.jpeg",
+    featured: true,
+  },
+  {
     category: "Student Life",
     title: "King Ceasor University Law School Participates in Equal Opportunities Commission Moot Court Competition 2026",
     date: "24 September 2026",
     href: "/news",
     text: "KCU Law School participated in the Inaugural Equal Opportunities Commission National Discrimination and Access to Justice Inter-University Moot Court Competition 2026, represented by Masakala Eric Jesse and Akoragye Real under the guidance of Advocate Keith Busingye.",
     image: "/news-images/Equal-Opportunities.jpeg",
-    featured: true,
+    featured: false,
+  },
+  {
+    category: "Community",
+    title: "KCU Engages Students at Vienna College Namugongo Careers Day",
+    date: "22 September 2026",
+    href: "/news",
+    text: "King Ceasor University (KCU) participated in the Vienna College Namugongo Careers Day held on 22 September 2026, engaging students as they explored their future academic and career pathways.",
+    image: "/news-images/kcu-visits-vienna college.jpeg",
+    featured: false,
   },
   {
     category: "Community",
@@ -270,7 +288,7 @@ export const newsItems = [
     date: "21 September 2026",
     href: "/news",
     text: "King Ceasor University is holding Library Week from 21–25 September 2026 under the theme, \"Beyond Access: Building Information Skills for Academic Excellence.\" Activities include orientation on library rules, KOHA and MyLOFT registration, e-resource search sessions, copyright and academic honesty guidance, and recognition of top library users.",
-    image: "/news-images/moot-court.jpeg",
+    image: "/news-images/Library-Week.jpeg",
     featured: false,
   },
   {

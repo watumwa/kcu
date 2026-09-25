@@ -21,6 +21,31 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "25 September 2026",
+    category: "Community",
+    title: "KCU Medical Students Participate in Community Health Screening Ahead of World Heart Day 2026",
+    excerpt:
+      "KCU medical students participated in the Community Biometric Screening Campaign (22–28 September 2026) ahead of World Heart Day under the theme \"Don't Miss a Beat.\" At Ggaba Market, students worked alongside Buganda Kingdom's Clinic on Wheels, offering free blood pressure, blood sugar and BMI checks.",
+    image: "/news-images/world-heart-day.jpeg",
+    imageAlt: "King Ceasor University medical students conducting community biometric screening at Ggaba Market ahead of World Heart Day 2026",
+    highlights: [
+      { label: "Date", value: "22–28 September 2026 (World Heart Day: 29 September)" },
+      { label: "Venue", value: "Ggaba Market, Kampala" },
+      { label: "Theme", value: "Don't Miss a Beat" },
+      { label: "Partner", value: "Buganda Kingdom's Clinic on Wheels (Eddwaliro Eritambuzibwa Ery'Obwakabaka)" },
+      { label: "Services", value: "Free blood pressure, blood sugar and BMI checks" },
+    ],
+    gallery: [],
+    story: [
+      "Kampala - 25 September 2026",
+      "King Ceasor University (KCU) medical students participated in the Community Biometric Screening Campaign held in the lead-up to World Heart Day 2026, under the theme \"Don't Miss a Beat.\"",
+      "The campaign, running from 22–28 September 2026, offered members of the public free blood pressure, blood sugar and Body Mass Index (BMI) checks at selected locations across Kampala. It aimed to promote early health awareness and encourage communities to know their numbers, take charge of their health and reduce the risk of heart disease.",
+      "At Ggaba Market, KCU medical students participated in the community outreach alongside the Buganda Kingdom's Clinic on Wheels (Eddwaliro Eritambuzibwa Ery'Obwakabaka). The outreach brought essential health services closer to the community, including free biometric screening and medication.",
+      "The participation of KCU medical students provided an opportunity to contribute to preventive healthcare and health education while gaining valuable community-based experience.",
+      "The campaign leads up to World Heart Day on 29 September 2026, reinforcing the importance of regular health checks, early awareness and collective action in promoting healthier communities.",
+    ],
+  },
+  {
     date: "24 September 2026",
     category: "Student Life",
     title: "King Ceasor University Law School Participates in Equal Opportunities Commission Moot Court Competition 2026",
@@ -46,12 +71,35 @@ const newsletterArticles: NewsletterArticle[] = [
     ],
   },
   {
+    date: "22 September 2026",
+    category: "Community",
+    title: "KCU Engages Students at Vienna College Namugongo Careers Day",
+    excerpt:
+      "King Ceasor University (KCU) participated in the Vienna College Namugongo Careers Day held on 22 September 2026, engaging students as they explored their future academic and career pathways.",
+    image: "/news-images/kcu-visits-vienna college.jpeg",
+    imageAlt: "King Ceasor University representatives engaging students at Vienna College Namugongo Careers Day",
+    highlights: [
+      { label: "Date", value: "22 September 2026" },
+      { label: "Venue", value: "Vienna College Namugongo" },
+      { label: "Event", value: "Careers Day" },
+      { label: "Focus", value: "Academic programmes and study opportunities" },
+    ],
+    gallery: [],
+    story: [
+      "Namugongo - 22 September 2026",
+      "King Ceasor University (KCU) participated in the Vienna College Namugongo Careers Day held on 22 September 2026, engaging students as they explored their future academic and career pathways.",
+      "The Careers Day provided KCU with an opportunity to interact directly with prospective students, share information about the University's academic programmes and provide guidance on the different study opportunities available to students as they prepare for higher education.",
+      "Through such engagements, KCU continues to strengthen its connection with secondary school students and support young people in making informed decisions about their education and future careers.",
+      "The University appreciates Vienna College Namugongo for providing a platform that brings students, educators and higher education institutions together to inspire and guide the next generation.",
+    ],
+  },
+  {
     date: "21 September 2026",
     category: "Community",
     title: "KCU Library Week 2026 Equips Students with Essential Information Skills",
     excerpt:
       "King Ceasor University is holding Library Week from 21–25 September 2026 under the theme, \"Beyond Access: Building Information Skills for Academic Excellence.\" Activities include orientation on library rules, KOHA and MyLOFT registration, e-resource search sessions, copyright and academic honesty guidance, and recognition of top library users.",
-    image: "/news-images/moot-court.jpeg",
+    image: "/news-images/Library-Week.jpeg",
     imageAlt: "King Ceasor University students participating in Library Week activities at the KCU Library",
     highlights: [
       { label: "Date", value: "21–25 September 2026" },
