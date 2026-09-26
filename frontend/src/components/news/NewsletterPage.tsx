@@ -21,6 +21,58 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "26 September 2026",
+    category: "Student Life",
+    title: "KCU Participates in the 31st AUUS Annual General Assembly",
+    excerpt:
+      "King Ceasor University (KCU) participated in the 31st Association of Uganda University Sports (AUUS) Annual General Assembly, held on 25 September 2026 at Muteesa I Royal University in Masaka. The Assembly brought together university sports leaders from institutions across Uganda, including Deans of Students, sports tutors and Guild leaders, to reflect on the year's activities and discuss priorities for university sport development.",
+    image: "/news-images/KCU-Participates-in-the-31st-AUUS-Annual-General-Assembly.jpeg",
+    imageAlt: "KCU representatives at the 31st AUUS Annual General Assembly at Muteesa I Royal University in Masaka",
+    highlights: [
+      { label: "Date", value: "25 September 2026" },
+      { label: "Venue", value: "Muteesa I Royal University, Masaka" },
+      { label: "Event", value: "31st AUUS Annual General Assembly" },
+      { label: "Participants", value: "University sports leaders, Deans of Students, sports tutors and Guild leaders" },
+      { label: "Organised by", value: "Association of Uganda University Sports (AUUS)" },
+    ],
+    gallery: [],
+    story: [
+      "Masaka - 25 September 2026",
+      "King Ceasor University (KCU) participated in the 31st Association of Uganda University Sports (AUUS) Annual General Assembly, held on 25 September 2026 at Muteesa I Royal University in Masaka.",
+      "The Assembly brought together university sports leaders from institutions across Uganda, including Deans of Students, sports tutors, Guild student leaders and other representatives involved in university sport.",
+      "Participants reflected on the year's activities, deliberated on key matters affecting university sport and discussed priorities for its continued development.",
+      "KCU's participation reflects the University's commitment to promoting sports as an important part of student development and university life, while strengthening engagement and collaboration with other higher education institutions across Uganda.",
+    ],
+  },
+  {
+    date: "26 September 2026",
+    category: "Student Life",
+    title: "Beyond Employment: KCU Explores How Cooperatives Can Build Lasting Wealth",
+    excerpt:
+      "King Ceasor University (KCU) on 25 September 2026 hosted a University-Wide Public Lecture under the theme \"Beyond Employment: Can Cooperatives Turn University Students and Staff into Wealth Creators?\" Experts from the Ministry of Trade explored how cooperatives can empower students and staff to save, invest and collectively create wealth.",
+    image: "/news-images/University-Wide-Public-Lecture.jpg",
+    imageAlt: "King Ceasor University University-Wide Public Lecture on cooperatives and wealth creation",
+    highlights: [
+      { label: "Date", value: "25 September 2026" },
+      { label: "Venue", value: "King Ceasor University" },
+      { label: "Event", value: "University-Wide Public Lecture" },
+      { label: "Theme", value: "Beyond Employment: Can Cooperatives Turn University Students and Staff into Wealth Creators?" },
+      { label: "Speaker", value: "Mr. Ochatum Joseph Paul, Principal Co-operative Officer, Ministry of Trade, Industry and Cooperatives" },
+    ],
+    gallery: [],
+    story: [
+      "Kampala - 25 September 2026",
+      "King Ceasor University (KCU) on 25 September 2026 hosted a University-Wide Public Lecture under the theme \"Beyond Employment: Can Cooperatives Turn University Students and Staff into Wealth Creators?\"",
+      "The lecture brought together students, staff and experts from the Ministry of Trade, Industry and Cooperatives to explore how cooperatives can provide opportunities for savings, investment, entrepreneurship and collective wealth creation beyond traditional employment.",
+      "Dr. Mulema Sabiti, Community Engagement Coordinator at King Ceasor University, delivered the welcome remarks, welcoming the guest speakers and participants and setting the stage for the discussion.",
+      "Delivering the keynote address, Mr. Ochatum Joseph Paul, Principal Cooperative Officer at the Ministry of Trade, Industry and Cooperatives, highlighted the potential of cooperatives to empower individuals to save, invest and collectively create wealth. He discussed key cooperative principles, including member economic participation, autonomy and independence, democratic participation, and cooperation among cooperatives, encouraging students and staff to recognise the opportunities that can emerge through collective action.",
+      "Ms. Hamega Miria, Senior Cooperative Officer at the Ministry of Trade, Industry and Cooperatives, addressed cooperative governance and organisational structure. She highlighted the Annual General Meeting (AGM) as the highest decision-making organ of a cooperative and discussed the role of committees and other structures in promoting accountability, effective leadership and member participation.",
+      "The lecture concluded with remarks from Prof. Charles Kiiza Mondo, Acting Deputy Vice Chancellor (Academic Affairs), who thanked the guest speakers for sharing their expertise and valuable insights with the University community.",
+      "The public lecture provided an opportunity for students and staff to look beyond conventional employment and consider how cooperation, savings, investment and sound governance can contribute to sustainable wealth creation.",
+      "Cooperate. Invest. Grow. Together.",
+    ],
+  },
+  {
     date: "25 September 2026",
     category: "Community",
     title: "KCU Medical Students Participate in Community Health Screening Ahead of World Heart Day 2026",

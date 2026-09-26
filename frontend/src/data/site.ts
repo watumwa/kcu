@@ -256,13 +256,31 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Student Life",
+    title: "KCU Participates in the 31st AUUS Annual General Assembly",
+    date: "26 September 2026",
+    href: "/news",
+    text: "King Ceasor University (KCU) participated in the 31st Association of Uganda University Sports (AUUS) Annual General Assembly, held on 25 September 2026 at Muteesa I Royal University in Masaka. The Assembly brought together university sports leaders from institutions across Uganda to reflect on the year's activities and discuss priorities for university sport development.",
+    image: "/news-images/KCU-Participates-in-the-31st-AUUS-Annual-General-Assembly.jpeg",
+    featured: true,
+  },
+  {
+    category: "Student Life",
+    title: "Beyond Employment: KCU Explores How Cooperatives Can Build Lasting Wealth",
+    date: "26 September 2026",
+    href: "/news",
+    text: "King Ceasor University (KCU) on 25 September 2026 hosted a University-Wide Public Lecture under the theme \"Beyond Employment: Can Cooperatives Turn University Students and Staff into Wealth Creators?\" Experts from the Ministry of Trade explored how cooperatives can empower students and staff to save, invest and collectively create wealth.",
+    image: "/news-images/University-Wide-Public-Lecture.jpg",
+    featured: false,
+  },
+  {
     category: "Community",
     title: "KCU Medical Students Participate in Community Health Screening Ahead of World Heart Day 2026",
     date: "25 September 2026",
     href: "/news",
     text: "KCU medical students participated in the Community Biometric Screening Campaign (22–28 September 2026) ahead of World Heart Day under the theme \"Don't Miss a Beat.\" At Ggaba Market, students worked alongside Buganda Kingdom's Clinic on Wheels, offering free blood pressure, blood sugar and BMI checks.",
     image: "/news-images/world-heart-day.jpeg",
-    featured: true,
+    featured: false,
   },
   {
     category: "Student Life",
