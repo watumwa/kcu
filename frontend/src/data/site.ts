@@ -256,13 +256,22 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Community",
+    title: "KCU Rotaract Champions Environmental Conservation and Road Safety in Mityana",
+    date: "28 September 2026",
+    href: "/news",
+    text: "On 26 September 2026, the Rotaract Club of King Ceasor University joined the Rotaract Club of Bwerenga for a community outreach in Namungo Village, Mityana, focused on environmental conservation and road safety, featuring tree planting and distribution of reflector jackets to boda boda riders.",
+    image: "/news-images/KCU-Rotaract-Champions-Environmental-Conservation.jpeg",
+    featured: true,
+  },
+  {
     category: "Student Life",
     title: "KCU Participates in the 31st AUUS Annual General Assembly",
     date: "26 September 2026",
     href: "/news",
     text: "King Ceasor University (KCU) participated in the 31st Association of Uganda University Sports (AUUS) Annual General Assembly, held on 25 September 2026 at Muteesa I Royal University in Masaka. The Assembly brought together university sports leaders from institutions across Uganda to reflect on the year's activities and discuss priorities for university sport development.",
     image: "/news-images/KCU-Participates-in-the-31st-AUUS-Annual-General-Assembly.jpeg",
-    featured: true,
+    featured: false,
   },
   {
     category: "Student Life",

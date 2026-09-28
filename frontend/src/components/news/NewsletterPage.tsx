@@ -21,6 +21,31 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "28 September 2026",
+    category: "Community",
+    title: "KCU Rotaract Champions Environmental Conservation and Road Safety in Mityana",
+    excerpt:
+      "On 26 September 2026, the Rotaract Club of King Ceasor University joined the Rotaract Club of Bwerenga for a community outreach initiative in Namungo Village, Mityana, focused on environmental conservation and road safety, featuring tree planting and distribution of reflector jackets to boda boda riders.",
+    image: "/news-images/KCU-Rotaract-Champions-Environmental-Conservation.jpeg",
+    imageAlt: "Rotaract Club of King Ceasor University members planting trees and distributing reflector jackets in Namungo Village, Mityana",
+    highlights: [
+      { label: "Date", value: "26 September 2026" },
+      { label: "Venue", value: "Namungo Village, Mityana" },
+      { label: "Led by", value: "Denis Ampurire, President, Rotaract Club of KCU" },
+      { label: "Partner", value: "Rotaract Club of Bwerenga" },
+      { label: "Focus", value: "Environmental conservation and road safety" },
+    ],
+    gallery: [],
+    story: [
+      "Mityana - 26 September 2026",
+      "On 26 September 2026, the Rotaract Club of King Ceasor University joined the Rotaract Club of Bwerenga for a community outreach initiative in Namungo Village, Mityana, focused on environmental conservation and road safety.",
+      "The outreach featured a tree-planting exercise aimed at promoting environmental sustainability and encouraging communities to contribute to a greener future. The Rotaractors also distributed reflector jackets to boda boda riders to enhance their visibility on the road and promote safer travel, particularly during low-light hours.",
+      "The initiative was led by Denis Ampurire, President of the Rotaract Club of King Ceasor University, and brought together Rotaractors and members of the local community.",
+      "Rev. Allen of St. Andrew's Church of Uganda and the Cell Chairperson also participated in the outreach, demonstrating the importance of community partnerships in addressing environmental and road-safety needs.",
+      "Through initiatives such as this, KCU students continue to extend service beyond the University, working with communities and partners to create positive and lasting impact.",
+    ],
+  },
+  {
     date: "26 September 2026",
     category: "Student Life",
     title: "KCU Participates in the 31st AUUS Annual General Assembly",
