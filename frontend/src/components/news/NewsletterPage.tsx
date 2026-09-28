@@ -22,6 +22,32 @@ type NewsletterArticle = {
 const newsletterArticles: NewsletterArticle[] = [
   {
     date: "28 September 2026",
+    category: "Research",
+    title: "KCU Participates in 4th Busitema University Annual Science, Technology and Innovation Symposium",
+    excerpt:
+      "King Ceasor University participated in the 4th Busitema University Annual Science, Technology and Innovation Symposium (23–25 September 2026), where Dr. Wilberforce Mfitundinda's research on machine learning for early diabetes risk screening won the Overall Best Presentation and a Certificate of Merit as Overall Best Early Career Scientist.",
+    image: "/news-images/4th-Busitema-University-Annual-Science.jpeg",
+    imageAlt: "King Ceasor University researchers at the 4th Busitema University Annual Science, Technology and Innovation Symposium",
+    highlights: [
+      { label: "Date", value: "23–25 September 2026" },
+      { label: "Venue", value: "Faculty of Agriculture and Animal Sciences, Arapai Campus, Soroti City" },
+      { label: "Represented by", value: "Dr. Alphonsina Mujawimana & Dr. Wilberforce Mfitundinda" },
+      { label: "Award", value: "Overall Best Presentation & Certificate of Merit as Overall Best Early Career Scientist" },
+      { label: "Research", value: "Machine Learning for Early Diabetes Risk Screening: Overall Performance and Gender-Related Error Disparities" },
+    ],
+    gallery: [],
+    story: [
+      "Soroti City - 28 September 2026",
+      "King Ceasor University (KCU) participated in the 4th Busitema University Annual Science, Technology and Innovation Symposium, held from 23–25 September 2026 at the Faculty of Agriculture and Animal Sciences, Arapai Campus, Soroti City.",
+      "KCU was represented by Dr. Alphonsina Mujawimana from the Department of Paediatrics and Child Health and Dr. Wilberforce Mfitundinda from the Department of Pharmacology and Therapeutics.",
+      "During the symposium, Dr. Mfitundinda presented his research paper titled \"Machine Learning for Early Diabetes Risk Screening: Overall Performance and Gender-Related Error Disparities.\"",
+      "His research presentation was selected as the Overall Best Presentation of the symposium, earning him a Certificate of Merit as the Overall Best Early Career Scientist.",
+      "The recognition highlights the contribution of KCU researchers to scientific inquiry and innovation, particularly in the application of emerging technologies to contemporary health challenges.",
+      "King Ceasor University congratulates Dr. Wilberforce Mfitundinda on this outstanding achievement and commends both KCU representatives for showcasing the University's growing research and innovation capacity on an academic platform bringing together researchers and innovators.",
+    ],
+  },
+  {
+    date: "28 September 2026",
     category: "Community",
     title: "KCU Rotaract Champions Environmental Conservation and Road Safety in Mityana",
     excerpt:

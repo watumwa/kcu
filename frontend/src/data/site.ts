@@ -256,13 +256,22 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Research",
+    title: "KCU Participates in 4th Busitema University Annual Science, Technology and Innovation Symposium",
+    date: "28 September 2026",
+    href: "/news",
+    text: "King Ceasor University participated in the 4th Busitema University Annual Science, Technology and Innovation Symposium (23–25 September 2026), where Dr. Wilberforce Mfitundinda's research on machine learning for early diabetes risk screening won the Overall Best Presentation and a Certificate of Merit as Overall Best Early Career Scientist.",
+    image: "/news-images/4th-Busitema-University-Annual-Science.jpeg",
+    featured: true,
+  },
+  {
     category: "Community",
     title: "KCU Rotaract Champions Environmental Conservation and Road Safety in Mityana",
     date: "28 September 2026",
     href: "/news",
     text: "On 26 September 2026, the Rotaract Club of King Ceasor University joined the Rotaract Club of Bwerenga for a community outreach in Namungo Village, Mityana, focused on environmental conservation and road safety, featuring tree planting and distribution of reflector jackets to boda boda riders.",
     image: "/news-images/KCU-Rotaract-Champions-Environmental-Conservation.jpeg",
-    featured: true,
+    featured: false,
   },
   {
     category: "Student Life",
