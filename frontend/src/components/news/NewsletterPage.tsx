@@ -22,6 +22,30 @@ type NewsletterArticle = {
 const newsletterArticles: NewsletterArticle[] = [
   {
     date: "28 September 2026",
+    category: "Student Life",
+    title: "KCU Anatomy Surgery Society Excels at Inaugural Inter-University Surgical Skills Competition",
+    excerpt:
+      "King Ceasor University's Anatomy Surgery Society emerged Second Runners-Up at the inaugural Inter-University Surgical Skills Competition held on 26 September 2026 at the Davis Lecture Theatre, Makerere University College of Health Sciences.",
+    image: "/news-images/KCU-Anatomy-Surgery-Society.jpeg",
+    imageAlt: "King Ceasor University Anatomy Surgery Society team at the inaugural Inter-University Surgical Skills Competition at Makerere University",
+    highlights: [
+      { label: "Date", value: "26 September 2026" },
+      { label: "Venue", value: "Davis Lecture Theatre, Makerere University College of Health Sciences" },
+      { label: "Organised by", value: "Uganda University Surgical Societies Consortium" },
+      { label: "Achievement", value: "Second Runners-Up" },
+      { label: "Represented by", value: "King Ceasor University Anatomy Surgery Society" },
+    ],
+    gallery: [],
+    story: [
+      "Kampala - 28 September 2026",
+      "King Ceasor University's Anatomy Surgery Society emerged Second Runners-Up at the inaugural Inter-University Surgical Skills Competition held on 26 September 2026 at the Davis Lecture Theatre, Makerere University College of Health Sciences.",
+      "Organised by the Uganda University Surgical Societies Consortium, the competition brought together university surgical societies from across Uganda, providing students with an opportunity to demonstrate their practical surgical skills, learn from one another and network with peers.",
+      "The strong performance by the KCU Anatomy Surgery Society reflects the students' commitment to developing practical competencies alongside their medical training.",
+      "Congratulations to the team for representing King Ceasor University and securing a podium finish at the inaugural competition.",
+    ],
+  },
+  {
+    date: "28 September 2026",
     category: "Research",
     title: "KCU Participates in 4th Busitema University Annual Science, Technology and Innovation Symposium",
     excerpt:

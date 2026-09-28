@@ -256,13 +256,22 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Student Life",
+    title: "KCU Anatomy Surgery Society Excels at Inaugural Inter-University Surgical Skills Competition",
+    date: "28 September 2026",
+    href: "/news",
+    text: "King Ceasor University's Anatomy Surgery Society emerged Second Runners-Up at the inaugural Inter-University Surgical Skills Competition held on 26 September 2026 at Makerere University College of Health Sciences, organised by the Uganda University Surgical Societies Consortium.",
+    image: "/news-images/KCU-Anatomy-Surgery-Society.jpeg",
+    featured: true,
+  },
+  {
     category: "Research",
     title: "KCU Participates in 4th Busitema University Annual Science, Technology and Innovation Symposium",
     date: "28 September 2026",
     href: "/news",
     text: "King Ceasor University participated in the 4th Busitema University Annual Science, Technology and Innovation Symposium (23–25 September 2026), where Dr. Wilberforce Mfitundinda's research on machine learning for early diabetes risk screening won the Overall Best Presentation and a Certificate of Merit as Overall Best Early Career Scientist.",
     image: "/news-images/4th-Busitema-University-Annual-Science.jpeg",
-    featured: true,
+    featured: false,
   },
   {
     category: "Community",
