@@ -256,13 +256,22 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Community",
+    title: "KCU Participates in Buganda Kingdom World Heart Day Celebrations at Bulange Gardens",
+    date: "29 September 2026",
+    href: "/news",
+    text: "King Ceasor University participated in the Buganda Kingdom World Heart Day celebrations on 28 September 2026 at Bulange Gardens, held alongside the Kingdom's weekly fitness activity to promote active lifestyles and cardiovascular health awareness.",
+    image: "/news-images/world-heart-day-celebrations.png",
+    featured: true,
+  },
+  {
     category: "Student Life",
     title: "KCU Anatomy Surgery Society Excels at Inaugural Inter-University Surgical Skills Competition",
     date: "28 September 2026",
     href: "/news",
     text: "King Ceasor University's Anatomy Surgery Society emerged Second Runners-Up at the inaugural Inter-University Surgical Skills Competition held on 26 September 2026 at Makerere University College of Health Sciences, organised by the Uganda University Surgical Societies Consortium.",
     image: "/news-images/KCU-Anatomy-Surgery-Society.jpeg",
-    featured: true,
+    featured: false,
   },
   {
     category: "Research",

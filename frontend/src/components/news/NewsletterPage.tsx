@@ -21,6 +21,31 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "29 September 2026",
+    category: "Community",
+    title: "KCU Participates in Buganda Kingdom World Heart Day Celebrations at Bulange Gardens",
+    excerpt:
+      "King Ceasor University participated in the Buganda Kingdom World Heart Day celebrations on 28 September 2026 at Bulange Gardens, held alongside the Kingdom's weekly fitness activity to promote active lifestyles and cardiovascular health awareness.",
+    image: "/news-images/world-heart-day-celebrations.png",
+    imageAlt: "King Ceasor University participants at the Buganda Kingdom World Heart Day celebrations at Bulange Gardens",
+    highlights: [
+      { label: "Date", value: "28 September 2026" },
+      { label: "Venue", value: "Bulange Gardens" },
+      { label: "Guest", value: "Katikkiro of Buganda" },
+      { label: "Theme", value: "Use Heart for Action" },
+      { label: "Campaign", value: "Don't Miss a Beat" },
+    ],
+    gallery: [],
+    story: [
+      "Bulange - 28 September 2026",
+      "King Ceasor University participated in the Buganda Kingdom World Heart Day celebrations held on 28 September 2026, at Bulange Gardens.",
+      "The main celebration was graced by the Katikkiro of Buganda and held alongside the Kingdom's weekly physical fitness activity, bringing participants together to promote active lifestyles and raise awareness about cardiovascular health.",
+      "The celebration formed part of activities leading up to World Heart Day on 29 September 2026, observed under the theme \"Use Heart for Action.\" The campaign also builds on the \"Don't Miss a Beat\" momentum, encouraging communities to take practical steps towards preventing cardiovascular diseases.",
+      "KCU's participation in the celebration followed its involvement in community health outreach activities conducted in partnership with Buganda Kingdom, where medical students supported health education and screening activities.",
+      "Through such engagements, the University continues to contribute to community health promotion while providing students with opportunities to participate in practical public health initiatives.",
+    ],
+  },
+  {
     date: "28 September 2026",
     category: "Student Life",
     title: "KCU Anatomy Surgery Society Excels at Inaugural Inter-University Surgical Skills Competition",
