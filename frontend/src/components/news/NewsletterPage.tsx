@@ -21,6 +21,31 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "30 September 2026",
+    category: "Academics",
+    title: "Strengthening Academic Integrity Through Digital Innovation",
+    excerpt:
+      "King Ceasor University hosted representatives from Drillbit and the Research and Education Network for Uganda (RENU) for a presentation on Drillbit Software and its application in supporting academic integrity, including plagiarism checks, similarity index checks, grammar reports and AI-content detection.",
+    image: "/news-images/Strengthening-Academic-Integrity.jpg",
+    imageAlt: "King Ceasor University representatives during the Drillbit Software presentation on academic integrity",
+    highlights: [
+      { label: "Date", value: "30 September 2026" },
+      { label: "Venue", value: "King Ceasor University" },
+      { label: "Chaired by", value: "Prof. Charles Kiiza Mondo, Acting Deputy Vice Chancellor (Academic Affairs)" },
+      { label: "Facilitated by", value: "Research and Education Network for Uganda (RENU)" },
+      { label: "Focus", value: "Academic integrity, plagiarism checks and AI-content detection" },
+    ],
+    gallery: [],
+    story: [
+      "Kampala - 30 September 2026",
+      "On 30 September 2026, King Ceasor University hosted representatives from Drillbit and the Research and Education Network for Uganda (RENU) for a presentation on Drillbit Software and its application in supporting academic integrity.",
+      "The session was chaired by the Acting Deputy Vice Chancellor for Academic Affairs, Prof. Charles Kiiza Mondo, who welcomed the visiting team and participants.",
+      "Ms. Swara Manduskar, Vice President at Drillbit, demonstrated key features of the software, including plagiarism check features and similarity index checks, grammar reports and AI-content detection. The session provided an opportunity to explore how such digital tools can support academic writing, research and quality assurance within the University.",
+      "The visit was facilitated by RENU, represented by Mr. Brian Magumba and Ms. Brenda Kayegi. Drillbit was also represented by Mr. Sila Too, Country Representative for Kenya, and Mr. Hassan Sengoba, Country Representative for Uganda.",
+      "The engagement reflects KCU's continued interest in exploring digital solutions that can strengthen research, teaching and academic integrity.",
+    ],
+  },
+  {
     date: "29 September 2026",
     category: "Community",
     title: "KCU Participates in Buganda Kingdom World Heart Day Celebrations at Bulange Gardens",

@@ -256,13 +256,22 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Academics",
+    title: "Strengthening Academic Integrity Through Digital Innovation",
+    date: "30 September 2026",
+    href: "/news",
+    text: "King Ceasor University hosted representatives from Drillbit and the Research and Education Network for Uganda (RENU) for a presentation on Drillbit Software and its application in supporting academic integrity, including plagiarism checks, similarity index checks, grammar reports and AI-content detection.",
+    image: "/news-images/Strengthening-Academic-Integrity.jpg",
+    featured: true,
+  },
+  {
     category: "Community",
     title: "KCU Participates in Buganda Kingdom World Heart Day Celebrations at Bulange Gardens",
     date: "29 September 2026",
     href: "/news",
     text: "King Ceasor University participated in the Buganda Kingdom World Heart Day celebrations on 28 September 2026 at Bulange Gardens, held alongside the Kingdom's weekly fitness activity to promote active lifestyles and cardiovascular health awareness.",
     image: "/news-images/world-heart-day-celebrations.png",
-    featured: true,
+    featured: false,
   },
   {
     category: "Student Life",
