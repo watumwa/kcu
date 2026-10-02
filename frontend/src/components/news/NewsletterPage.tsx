@@ -22,6 +22,30 @@ type NewsletterArticle = {
 const newsletterArticles: NewsletterArticle[] = [
   {
     date: "30 September 2026",
+    category: "Community",
+    title: "KCU Participates in Elite High School Careers Day",
+    excerpt:
+      "King Ceasor University participated in the Elite High School Careers Day on 30 September 2026, engaging students as they explored opportunities for higher education and future career pathways, and sharing information about the University's academic programmes.",
+    image: "/news-images/KCU-Connects-with-Students-at-Elite-High-School.JPG",
+    imageAlt: "King Ceasor University representatives engaging students at Elite High School Careers Day",
+    highlights: [
+      { label: "Date", value: "30 September 2026" },
+      { label: "Venue", value: "Elite High School" },
+      { label: "Event", value: "Careers Day" },
+      { label: "Focus", value: "Higher education opportunities and career pathways" },
+      { label: "Audience", value: "Secondary school students" },
+    ],
+    gallery: [],
+    story: [
+      "Kampala - 30 September 2026",
+      "King Ceasor University participated in the Elite High School Careers Day on 30 September 2026, engaging students as they explored opportunities for higher education and future career pathways.",
+      "The Careers Day provided an opportunity for KCU representatives to interact with prospective students, share information about the University's academic programmes and offer guidance on making informed choices about university education and career development.",
+      "Through engagements such as Careers Day, King Ceasor University continues to reach out to secondary school students, helping them understand the opportunities available in higher education while encouraging them to pursue programmes aligned with their interests, abilities and aspirations.",
+      "The participation also strengthened KCU's engagement with schools and prospective students as the University continues to expand awareness of its programmes and learning opportunities.",
+    ],
+  },
+  {
+    date: "30 September 2026",
     category: "Academics",
     title: "Strengthening Academic Integrity Through Digital Innovation",
     excerpt:

@@ -256,13 +256,22 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Community",
+    title: "KCU Participates in Elite High School Careers Day",
+    date: "30 September 2026",
+    href: "/news",
+    text: "King Ceasor University participated in the Elite High School Careers Day on 30 September 2026, engaging students as they explored opportunities for higher education and future career pathways, and sharing information about the University's academic programmes.",
+    image: "/news-images/KCU-Connects-with-Students-at-Elite-High-School.JPG",
+    featured: true,
+  },
+  {
     category: "Academics",
     title: "Strengthening Academic Integrity Through Digital Innovation",
     date: "30 September 2026",
     href: "/news",
     text: "King Ceasor University hosted representatives from Drillbit and the Research and Education Network for Uganda (RENU) for a presentation on Drillbit Software and its application in supporting academic integrity, including plagiarism checks, similarity index checks, grammar reports and AI-content detection.",
     image: "/news-images/Strengthening-Academic-Integrity.jpg",
-    featured: true,
+    featured: false,
   },
   {
     category: "Community",
