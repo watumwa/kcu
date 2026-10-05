@@ -26,7 +26,7 @@ export default function AdmissionsBanner() {
 
         <div className="grid gap-3">
           {[
-            { icon: CalendarDays, title: "August - Open Intake", text: "Apply Today" },
+            { icon: CalendarDays, title: "January - Open Intake", text: "Apply Today" },
             { icon: FileCheck2, title: "Required Documents", text: "Academic documents, identity details and programme choice" },
           ].map((item) => {
             const Icon = item.icon;

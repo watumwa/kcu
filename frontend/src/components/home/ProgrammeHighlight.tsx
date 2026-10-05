@@ -34,7 +34,7 @@ export default function ProgrammeHighlight() {
               King Ceasor University
             </p>
             <h2 className="mt-2 max-w-xl text-xl font-black leading-tight text-[#000000] sm:text-2xl md:text-3xl">
-              August Intake - OPEN
+              January & Weekend Intake - OPEN
             </h2>
             <p className="mt-2 text-xs leading-5 text-slate-600 sm:text-sm sm:leading-6">
               Explore Courses 
