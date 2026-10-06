@@ -23,6 +23,34 @@ const newsletterArticles: NewsletterArticle[] = [
   {
     date: "6 October 2026",
     category: "Student Life",
+    title: "KCU Students Participate in 14th UCMF National Students' Conference",
+    excerpt:
+      "King Ceasor University students participated in the 14th Annual Uganda Christian Medical Fellowship (UCMF) National Students' Conference (2-4 October 2026) under the theme \"Pursuit of Excellence,\" joining over 86 students and 50+ medical specialists for mentorship, professional development and fellowship.",
+    image: "/news-images/14th-UCMF-National-Students-Conference.jpg",
+    imageAlt: "King Ceasor University students at the 14th UCMF National Students' Conference at Scripture Union Campsite, Kawuku-Bugiri",
+    highlights: [
+      { label: "Date", value: "2-4 October 2026" },
+      { label: "Venue", value: "Scripture Union Campsite, Kawuku-Bugiri" },
+      { label: "Theme", value: "Pursuit of Excellence" },
+      { label: "Led by", value: "Richard Katureebe, UCMF Institutional Representative" },
+      { label: "New Rep", value: "Kemigisha Patience" },
+    ],
+    gallery: [],
+    story: [
+      "Kawuku-Bugiri - 6 October 2026",
+      "King Ceasor University (KCU) students participated in the 14th Annual Uganda Christian Medical Fellowship (UCMF) National Students' Conference, held from 2-4 October 2026 at the Scripture Union Campsite in Kawuku-Bugiri.",
+      "Held under the theme \"Pursuit of Excellence,\" inspired by Proverbs 22:29, the conference brought together more than 86 students alongside over 50 graduate doctors, specialists and superspecialists for mentorship, professional development, fellowship and discussions on excellence in healthcare practice.",
+      "The Uganda Christian Medical Fellowship is a nationwide, non-denominational community that brings together Christian doctors, dentists, nurses, midwives and health-science students. Established in 1984, UCMF seeks to unite, equip and disciple healthcare professionals and students to integrate their Christian faith with professional practice. It is affiliated with the International Christian Medical and Dental Association (ICMDA).",
+      "Eleven universities were represented at this year's conference, including King Ceasor University, Makerere University, Kampala International University, Gulu University, Lira University, Soroti University, Kabale University, Victoria University, Islamic University in Uganda, Equator University and the University of Rwanda.",
+      "KCU's delegation was led by Richard Katureebe, the outgoing UCMF Institutional Representative at the University. The delegation comprised students from Medicine, Clinical Medicine and Nursing programmes.",
+      "The conference also marked important leadership milestones for KCU students. Kemigisha Patience assumed the role of UCMF Institutional Representative at King Ceasor University, succeeding Richard Katureebe. Richard was appointed National Research and Mentorship Coordinator for the UCMF Students' Chapter, extending his contribution to student development and mentorship at the national level.",
+      "Participants had an opportunity to learn from experienced medical professionals, including Dr. Lawrence Sserugo, General Surgeon; Dr. Proscovia Mugaba, Pediatric and Fetal Cardiologist; Dr. David Mukunya, Associate Professor at Busitema University; Dr. Clara Atieno, GIT Onco-Surgeon; and Dr. Daniel Muwanguzi, Resident Plastic Surgeon.",
+      "Through interactions with experienced practitioners and fellow health-science students, the conference provided the KCU delegation with valuable opportunities for professional learning, mentorship, networking and leadership development while encouraging the pursuit of excellence in healthcare.",
+    ],
+  },
+  {
+    date: "6 October 2026",
+    category: "Student Life",
     title: "KCU Emerges Best Presenting University at First Interuniversity Anatomy Workshop",
     excerpt:
       "King Ceasor University emerged as the Best Presenting University at the First Interuniversity Anatomy Workshop held on 3 October 2026 at Uganda Christian University (UCU), Mengo. Representing KCU, the KCU Anatomy Surgery Society delivered an impressive Neuroanatomy presentation, earning the Award for Best Presenting University.",

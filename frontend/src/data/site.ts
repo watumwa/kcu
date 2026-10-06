@@ -257,12 +257,21 @@ export const upcomingEvents = [
 export const newsItems = [
   {
     category: "Student Life",
+    title: "KCU Students Participate in 14th UCMF National Students' Conference",
+    date: "6 October 2026",
+    href: "/news",
+    text: "King Ceasor University students participated in the 14th Annual Uganda Christian Medical Fellowship (UCMF) National Students' Conference (2-4 October 2026) under the theme \"Pursuit of Excellence,\" joining over 86 students and 50+ medical specialists for mentorship, professional development and fellowship.",
+    image: "/news-images/14th-UCMF-National-Students-Conference.jpg",
+    featured: true,
+  },
+  {
+    category: "Student Life",
     title: "KCU Emerges Best Presenting University at First Interuniversity Anatomy Workshop",
     date: "6 October 2026",
     href: "/news",
     text: "King Ceasor University emerged as the Best Presenting University at the First Interuniversity Anatomy Workshop held on 3 October 2026 at Uganda Christian University (UCU), Mengo. Representing KCU, the KCU Anatomy Surgery Society delivered an impressive Neuroanatomy presentation, earning the Award for Best Presenting University.",
     image: "/news-images/First-Interuniversity-Anatomy-Workshop.jpeg",
-    featured: true,
+    featured: false,
   },
   {
     category: "Community",
