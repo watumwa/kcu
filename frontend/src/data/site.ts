@@ -256,13 +256,22 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Student Life",
+    title: "KCU Emerges Best Presenting University at First Interuniversity Anatomy Workshop",
+    date: "6 October 2026",
+    href: "/news",
+    text: "King Ceasor University emerged as the Best Presenting University at the First Interuniversity Anatomy Workshop held on 3 October 2026 at Uganda Christian University (UCU), Mengo. Representing KCU, the KCU Anatomy Surgery Society delivered an impressive Neuroanatomy presentation, earning the Award for Best Presenting University.",
+    image: "/news-images/First-Interuniversity-Anatomy-Workshop.jpeg",
+    featured: true,
+  },
+  {
     category: "Community",
     title: "KCU Participates in Elite High School Careers Day",
     date: "30 September 2026",
     href: "/news",
     text: "King Ceasor University participated in the Elite High School Careers Day on 30 September 2026, engaging students as they explored opportunities for higher education and future career pathways, and sharing information about the University's academic programmes.",
     image: "/news-images/KCU-Connects-with-Students-at-Elite-High-School.JPG",
-    featured: true,
+    featured: false,
   },
   {
     category: "Academics",

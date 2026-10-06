@@ -21,6 +21,33 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "6 October 2026",
+    category: "Student Life",
+    title: "KCU Emerges Best Presenting University at First Interuniversity Anatomy Workshop",
+    excerpt:
+      "King Ceasor University emerged as the Best Presenting University at the First Interuniversity Anatomy Workshop held on 3 October 2026 at Uganda Christian University (UCU), Mengo. Representing KCU, the KCU Anatomy Surgery Society delivered an impressive Neuroanatomy presentation, earning the Award for Best Presenting University.",
+    image: "/news-images/First-Interuniversity-Anatomy-Workshop.jpeg",
+    imageAlt: "King Ceasor University Anatomy Surgery Society students at the First Interuniversity Anatomy Workshop at Uganda Christian University",
+    highlights: [
+      { label: "Date", value: "3 October 2026" },
+      { label: "Venue", value: "Uganda Christian University (UCU), Mengo, Kampala" },
+      { label: "Theme", value: "Bridging Basic Anatomy to Clinical Practice" },
+      { label: "Topic", value: "Neuroanatomy" },
+      { label: "Award", value: "Best Presenting University" },
+    ],
+    gallery: [],
+    story: [
+      "Mengo, Kampala - 6 October 2026",
+      "King Ceasor University (KCU) emerged as the Best Presenting University at the First Interuniversity Anatomy Workshop held on 3 October 2026 at Uganda Christian University (UCU), Kampala Campus in Mengo.",
+      "Held under the theme \"Bridging Basic Anatomy to Clinical Practice,\" the workshop brought together students from Uganda Christian University, King Ceasor University, Islamic University in Uganda and Jeph International University for an interactive academic engagement aimed at strengthening the connection between foundational anatomical knowledge and its application in clinical practice.",
+      "Representing KCU, members of the KCU Anatomy Surgery Society were assigned the topic of Neuroanatomy. The students delivered an impressive presentation that demonstrated strong subject knowledge, teamwork and the ability to communicate complex anatomical concepts within a clinical context.",
+      "Their performance earned King Ceasor University the Award for Best Presenting University at the Workshop, marking another significant achievement for KCU students in interuniversity academic engagements.",
+      "Beyond the award, the workshop provided students with an opportunity to exchange knowledge with peers from other institutions, strengthen their presentation and communication skills, and deepen their understanding of how basic sciences contribute to effective clinical practice.",
+      "The achievement reflects KCU's continued commitment to providing students with opportunities that complement classroom learning through academic collaboration, practical exposure and participation in competitive interuniversity platforms.",
+      "Congratulations to the KCU Anatomy Surgery Society for representing the University with excellence.",
+    ],
+  },
+  {
     date: "30 September 2026",
     category: "Community",
     title: "KCU Participates in Elite High School Careers Day",
