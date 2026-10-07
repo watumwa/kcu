@@ -104,15 +104,13 @@ function TabAboutUs() {
         <p className="text-xs font-black uppercase tracking-[0.2em] text-[#0B6232]">Our Approach</p>
         <h2 className="mt-2 text-2xl font-black text-slate-950 sm:text-3xl">KCU Comprehensive Education</h2>
         <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
-          At King Ceasor University, education extends beyond the classroom. Our comprehensive educational approach nurtures the intellectual, physical, social, emotional and spiritual development of every student, creating well-rounded graduates prepared to thrive in a dynamic global society.
+          At King Ceasor University, learning goes beyond academic instruction. We are committed to developing the whole person by fostering students&apos; intellectual, physical, social, emotional and personal growth. Through a supportive and engaging learning environment, students are prepared to navigate an increasingly dynamic and interconnected world with confidence and purpose.
         </p>
         <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
-          Guided by our philosophy of{" "}
-          <em className="font-semibold text-slate-800">&quot;Moral Re-armament and Wealth Creation,&quot;</em>{" "}
-          we combine academic excellence with character formation, leadership development and practical skills training. KCU graduates are equipped with critical thinking skills, ethical values, teamwork abilities and a strong sense of responsibility.
+          Our approach brings together academic excellence, innovation, research, practical learning and character development. Students are encouraged to think critically, solve problems creatively, embrace ethical responsibility and develop the leadership and collaborative skills needed in today&apos;s workplace and society. This prepares KCU graduates to be adaptable, innovative and globally competitive professionals capable of contributing to socio-economic transformation.
         </p>
         <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
-          To support student success and career readiness, the University maintains efficient academic processes, including timely graduation ceremonies and prompt issuance of academic transcripts and certificates. This enables graduates to transition smoothly into the workforce, entrepreneurship, further studies and other professional opportunities.
+          The University further supports students&apos; transition from education to professional life through responsive and efficient academic services. Timely completion of academic processes, including graduation and the issuance of transcripts and certificates, enables graduates to pursue employment, entrepreneurship, further education and other professional opportunities with confidence.
         </p>
         <Button asChild className="mt-6 h-11 rounded-xl bg-[#0B6232] px-6 text-sm font-black text-white hover:bg-[#0B6232]">
           <Link href="https://apply.kcu.ac.ug/">Apply Now <ArrowRight className="ml-2 size-4" /></Link>
