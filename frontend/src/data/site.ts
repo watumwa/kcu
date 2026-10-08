@@ -257,12 +257,21 @@ export const upcomingEvents = [
 export const newsItems = [
   {
     category: "Student Life",
+    title: "Beyond the Degree: Rotaract KCU Inspires Students to Embrace Lifelong Growth",
+    date: "8 October 2026",
+    href: "/news",
+    text: "The Rotaract Club of King Ceasor University hosted a session titled \"Beyond the Degree: It's a Journey, Not a Destination\" on 5 October 2026 at Joy Café Restaurant, facilitated by Rtn. Saula Isaac of the Rotary Club of Bunga, encouraging students to embrace continuous learning and personal development beyond their degree.",
+    image: "/news-images/Rotaract-KCU-Inspires-Students.jpeg",
+    featured: true,
+  },
+  {
+    category: "Student Life",
     title: "KCU Students Participate in 14th UCMF National Students' Conference",
     date: "6 October 2026",
     href: "/news",
     text: "King Ceasor University students participated in the 14th Annual Uganda Christian Medical Fellowship (UCMF) National Students' Conference (2-4 October 2026) under the theme \"Pursuit of Excellence,\" joining over 86 students and 50+ medical specialists for mentorship, professional development and fellowship.",
     image: "/news-images/14th-UCMF-National-Students-Conference.jpg",
-    featured: true,
+    featured: false,
   },
   {
     category: "Student Life",

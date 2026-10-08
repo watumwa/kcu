@@ -21,6 +21,31 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "8 October 2026",
+    category: "Student Life",
+    title: "Beyond the Degree: Rotaract KCU Inspires Students to Embrace Lifelong Growth",
+    excerpt:
+      "The Rotaract Club of King Ceasor University hosted a session titled \"Beyond the Degree: It's a Journey, Not a Destination\" on 5 October 2026 at Joy Café Restaurant, facilitated by Rtn. Saula Isaac of the Rotary Club of Bunga, encouraging students to embrace continuous learning and personal development beyond their degree.",
+    image: "/news-images/Rotaract-KCU-Inspires-Students.jpeg",
+    imageAlt: "Rotaract Club of King Ceasor University students at the Beyond the Degree session at Joy Café Restaurant",
+    highlights: [
+      { label: "Date", value: "5 October 2026" },
+      { label: "Venue", value: "Joy Café Restaurant" },
+      { label: "Session", value: "Beyond the Degree: It's a Journey, Not a Destination" },
+      { label: "Facilitator", value: "Rtn. Saula Isaac, Rotary Club of Bunga" },
+      { label: "Host", value: "Rotaract Club of King Ceasor University" },
+    ],
+    gallery: [],
+    story: [
+      "Kampala - 8 October 2026",
+      "The Rotaract Club of King Ceasor University hosted an engaging session titled \"Beyond the Degree: It's a Journey, Not a Destination\" on 5 October 2026 at Joy Café Restaurant.",
+      "The session was facilitated by Rtn. Saula Isaac of the Rotary Club of Bunga, who engaged participants on the importance of looking beyond academic qualifications and approaching personal and professional development as a continuous journey.",
+      "The discussion encouraged students to recognise that earning a university degree is an important milestone, but success also requires continuous learning, personal development, networking, service and the ability to identify opportunities beyond the classroom.",
+      "Through initiatives such as this, the Rotaract Club of King Ceasor University continues to create spaces where students can interact with professionals, gain practical perspectives and develop the confidence and mindset needed to navigate life beyond university.",
+      "The engagement also reflected the broader value of student-led activities in complementing academic learning and preparing students to become responsible, adaptable and impact-driven members of society.",
+    ],
+  },
+  {
     date: "6 October 2026",
     category: "Student Life",
     title: "KCU Students Participate in 14th UCMF National Students' Conference",
