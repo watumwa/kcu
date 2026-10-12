@@ -287,8 +287,7 @@ const managementBios = {
     "He is pursuing a PhD in Information Science at Makerere University and already holds an MSc in Information Science, a Bachelor of Library and Information Science, a Uganda Diploma in Business Studies, and specialized training in data and documentation management.",
   ],
   wilberforceMfitundinda: [
-    "Mr. Wilberforce Mfitundinda is a biomedical scientist and researcher with expertise in pharmacology and research methodology, serving as Assistant Registrar.",
-    "He is pursuing a PhD in Biomedical Sciences at Brunel University London and holds an MSc in Pharmacology, a Postgraduate Diploma in Research Methodology, and a Bachelor of Science and Technology in Biological Sciences, supporting academic administration as well as institutional research and development.",
+    "Wilberforce Mfitundinda is a Pharmacologist and Biological Scientist whose Doctoral-level research and professional practice focus on clinical pharmacology and natural products chemistry. As Registrar of Academics, he leads the operational management of the University's entire academic portfolio, applying his research expertise and institutional executive management experience to support the University's academic mission",
   ],
 } as const;
 
@@ -732,7 +731,7 @@ function TabAdministration() {
     },
     {
       name: "Mr. Wilberforce Mfitundinda",
-      role: "Assistant Registrar",
+      role: "Registrar of Academics",
       tier: "base",
       image: "/University Management/Mr. Wilberforce Mfitundinda.jpeg",
       bio: managementBios.wilberforceMfitundinda,
