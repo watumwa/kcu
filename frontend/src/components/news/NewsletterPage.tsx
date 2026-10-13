@@ -21,6 +21,31 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "12 October 2026",
+    category: "Student Life",
+    title: "KCU Law Students Join Global Commemoration Against the Death Penalty",
+    excerpt:
+      "King Ceasor University (KCU) Law students joined the international community in commemorating the World Day Against the Death Penalty on 12 October 2026, participating in activities held at the Foundation for Human Rights Initiative (FHRI) in Nsambya, Kampala.",
+    image: "/news-images/KCU-Law-Students.jpeg",
+    imageAlt: "KCU Law students at the World Day Against the Death Penalty commemoration at the Foundation for Human Rights Initiative (FHRI) in Nsambya, Kampala",
+    highlights: [
+      { label: "Date", value: "12 October 2026" },
+      { label: "Venue", value: "Foundation for Human Rights Initiative (FHRI), Nsambya, Kampala" },
+      { label: "Event", value: "World Day Against the Death Penalty" },
+      { label: "Participants", value: "King Ceasor University Law students" },
+      { label: "Organised by", value: "Foundation for Human Rights Initiative (FHRI)" },
+    ],
+    gallery: [],
+    story: [
+      "Kampala - 12 October 2026",
+      "King Ceasor University (KCU) Law students joined the international community in commemorating the World Day Against the Death Penalty on 12 October 2026, participating in activities held at the Foundation for Human Rights Initiative (FHRI) in Nsambya, Kampala.",
+      "The commemoration provided an opportunity for students to reflect on the importance of protecting the right to life, upholding human dignity and promoting justice.",
+      "It also highlighted the role of legal professionals and human rights advocates in addressing issues surrounding capital punishment and advancing the protection of fundamental human rights.",
+      "Through their participation, the students gained valuable exposure to human rights advocacy beyond the classroom, strengthening their understanding of the relationship between legal practice, social justice and the protection of human dignity.",
+      "The engagement reflects King Ceasor University's commitment to experiential learning and nurturing knowledgeable, ethical and socially responsible legal professionals capable of contributing meaningfully to the advancement of justice and human rights in Uganda and beyond.",
+    ],
+  },
+  {
     date: "8 October 2026",
     category: "Student Life",
     title: "Beyond the Degree: Rotaract KCU Inspires Students to Embrace Lifelong Growth",

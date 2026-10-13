@@ -257,12 +257,21 @@ export const upcomingEvents = [
 export const newsItems = [
   {
     category: "Student Life",
+    title: "KCU Law Students Join Global Commemoration Against the Death Penalty",
+    date: "12 October 2026",
+    href: "/news",
+    text: "King Ceasor University (KCU) Law students joined the international community in commemorating the World Day Against the Death Penalty on 12 October 2026, participating in activities held at the Foundation for Human Rights Initiative (FHRI) in Nsambya, Kampala. The commemoration provided an opportunity for students to reflect on the importance of protecting the right to life, upholding human dignity and promoting justice. It also highlighted the role of legal professionals and human rights advocates in addressing issues surrounding capital punishment and advancing the protection of fundamental human rights. Through their participation, the students gained valuable exposure to human rights advocacy beyond the classroom, strengthening their understanding of the relationship between legal practice, social justice and the protection of human dignity. The engagement reflects King Ceasor University's commitment to experiential learning and nurturing knowledgeable, ethical and socially responsible legal professionals capable of contributing meaningfully to the advancement of justice and human rights in Uganda and beyond.",
+    image: "/news-images/KCU-Law-Students.jpeg",
+    featured: true,
+  },
+  {
+    category: "Student Life",
     title: "Beyond the Degree: Rotaract KCU Inspires Students to Embrace Lifelong Growth",
     date: "8 October 2026",
     href: "/news",
     text: "The Rotaract Club of King Ceasor University hosted a session titled \"Beyond the Degree: It's a Journey, Not a Destination\" on 5 October 2026 at Joy Café Restaurant, facilitated by Rtn. Saula Isaac of the Rotary Club of Bunga, encouraging students to embrace continuous learning and personal development beyond their degree.",
     image: "/news-images/Rotaract-KCU-Inspires-Students.jpeg",
-    featured: true,
+    featured: false,
   },
   {
     category: "Student Life",
