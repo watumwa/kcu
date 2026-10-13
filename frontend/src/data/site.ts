@@ -256,13 +256,22 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Academics",
+    title: "KCU Students Participate in Launch Workshop of the 4th Cyber Stars Competition",
+    date: "13 October 2026",
+    href: "/news",
+    text: "King Ceasor University students participated in the launch workshop of the 4th Cyber Stars Competition for University Students, held on 13th October 2026 at the Auditorium Innovation Hub, Uganda Institute of Information and Communications Technology (UICT), Nakawa. Organised under the theme \"Securing Uganda's Digital Future: Learn, Innovate, Defend,\" the initiative is supported by the Uganda Communications Commission (UCC) and the Uganda National Computer Emergency Response Team (UgCERT). It seeks to strengthen cybersecurity awareness, encourage innovation and equip university students with practical skills to address emerging digital security challenges. The workshop provided a platform for students to engage with cybersecurity concepts, explore emerging trends in digital security and appreciate the importance of protecting information systems in an increasingly interconnected world. KCU's participation reflects the University's commitment to promoting innovation, practical learning and technological advancement. Through such engagements, students gain valuable exposure to industry developments and opportunities to strengthen their competencies in cybersecurity and digital technologies. As Uganda continues to embrace digital transformation, initiatives such as the Cyber Stars Competition play an important role in preparing the next generation of professionals to contribute to a secure and resilient digital future.",
+    image: "/news-images/Cyber-Stars-Competition.jpeg",
+    featured: true,
+  },
+  {
     category: "Student Life",
     title: "KCU Law Students Join Global Commemoration Against the Death Penalty",
     date: "12 October 2026",
     href: "/news",
     text: "King Ceasor University (KCU) Law students joined the international community in commemorating the World Day Against the Death Penalty on 12 October 2026, participating in activities held at the Foundation for Human Rights Initiative (FHRI) in Nsambya, Kampala. The commemoration provided an opportunity for students to reflect on the importance of protecting the right to life, upholding human dignity and promoting justice. It also highlighted the role of legal professionals and human rights advocates in addressing issues surrounding capital punishment and advancing the protection of fundamental human rights. Through their participation, the students gained valuable exposure to human rights advocacy beyond the classroom, strengthening their understanding of the relationship between legal practice, social justice and the protection of human dignity. The engagement reflects King Ceasor University's commitment to experiential learning and nurturing knowledgeable, ethical and socially responsible legal professionals capable of contributing meaningfully to the advancement of justice and human rights in Uganda and beyond.",
     image: "/news-images/KCU-Law-Students.jpeg",
-    featured: true,
+    featured: false,
   },
   {
     category: "Student Life",

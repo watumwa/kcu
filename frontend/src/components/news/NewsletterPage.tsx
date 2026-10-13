@@ -21,6 +21,31 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "13 October 2026",
+    category: "Academics",
+    title: "KCU Students Participate in Launch Workshop of the 4th Cyber Stars Competition",
+    excerpt:
+      "King Ceasor University students participated in the launch workshop of the 4th Cyber Stars Competition for University Students, held on 13th October 2026 at the Auditorium Innovation Hub, Uganda Institute of Information and Communications Technology (UICT), Nakawa.",
+    image: "/news-images/Cyber-Stars-Competition.jpeg",
+    imageAlt: "KCU students at the launch workshop of the 4th Cyber Stars Competition at the UICT Auditorium Innovation Hub, Nakawa",
+    highlights: [
+      { label: "Date", value: "13 October 2026" },
+      { label: "Venue", value: "Auditorium Innovation Hub, Uganda Institute of Information and Communications Technology (UICT), Nakawa" },
+      { label: "Theme", value: "Securing Uganda's Digital Future: Learn, Innovate, Defend" },
+      { label: "Supported by", value: "Uganda Communications Commission (UCC) and Uganda National Computer Emergency Response Team (UgCERT)" },
+      { label: "Participants", value: "King Ceasor University students" },
+    ],
+    gallery: [],
+    story: [
+      "Nakawa - 13 October 2026",
+      "King Ceasor University students participated in the launch workshop of the 4th Cyber Stars Competition for University Students, held on 13th October 2026 at the Auditorium Innovation Hub, Uganda Institute of Information and Communications Technology (UICT), Nakawa.",
+      "Organised under the theme \"Securing Uganda's Digital Future: Learn, Innovate, Defend,\" the initiative is supported by the Uganda Communications Commission (UCC) and the Uganda National Computer Emergency Response Team (UgCERT). It seeks to strengthen cybersecurity awareness, encourage innovation and equip university students with practical skills to address emerging digital security challenges.",
+      "The workshop provided a platform for students to engage with cybersecurity concepts, explore emerging trends in digital security and appreciate the importance of protecting information systems in an increasingly interconnected world.",
+      "KCU's participation reflects the University's commitment to promoting innovation, practical learning and technological advancement. Through such engagements, students gain valuable exposure to industry developments and opportunities to strengthen their competencies in cybersecurity and digital technologies.",
+      "As Uganda continues to embrace digital transformation, initiatives such as the Cyber Stars Competition play an important role in preparing the next generation of professionals to contribute to a secure and resilient digital future.",
+    ],
+  },
+  {
     date: "12 October 2026",
     category: "Student Life",
     title: "KCU Law Students Join Global Commemoration Against the Death Penalty",
