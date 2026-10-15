@@ -256,13 +256,22 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Student Life",
+    title: "KCU Attends Pepsi University Football League Season Launch and Group Stage Draws",
+    date: "15 October 2026",
+    href: "/news",
+    text: "King Ceasor University (KCU) attended the official season launch and group stage draws for the 2026/27 Pepsi University Football League on Thursday, 15 October 2026, marking the beginning of preparations for the competition's 14th edition. The event brought together representatives from participating universities and stakeholders in university sports, including the Association of Uganda University Sports (AUUS), the University Football League (UFL) and Pepsi.",
+    image: "/news-images/pepsi-group-stage-draws.jpeg",
+    featured: true,
+  },
+  {
     category: "Academics",
     title: "KCU Students Participate in Launch Workshop of the 4th Cyber Stars Competition",
     date: "13 October 2026",
     href: "/news",
     text: "King Ceasor University students participated in the launch workshop of the 4th Cyber Stars Competition for University Students, held on 13th October 2026 at the Auditorium Innovation Hub, Uganda Institute of Information and Communications Technology (UICT), Nakawa. Organised under the theme \"Securing Uganda's Digital Future: Learn, Innovate, Defend,\" the initiative is supported by the Uganda Communications Commission (UCC) and the Uganda National Computer Emergency Response Team (UgCERT). It seeks to strengthen cybersecurity awareness, encourage innovation and equip university students with practical skills to address emerging digital security challenges. The workshop provided a platform for students to engage with cybersecurity concepts, explore emerging trends in digital security and appreciate the importance of protecting information systems in an increasingly interconnected world. KCU's participation reflects the University's commitment to promoting innovation, practical learning and technological advancement. Through such engagements, students gain valuable exposure to industry developments and opportunities to strengthen their competencies in cybersecurity and digital technologies. As Uganda continues to embrace digital transformation, initiatives such as the Cyber Stars Competition play an important role in preparing the next generation of professionals to contribute to a secure and resilient digital future.",
     image: "/news-images/Cyber-Stars-Competition.jpeg",
-    featured: true,
+    featured: false,
   },
   {
     category: "Student Life",

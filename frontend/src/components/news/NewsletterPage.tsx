@@ -21,6 +21,31 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "15 October 2026",
+    category: "Student Life",
+    title: "KCU Attends Pepsi University Football League Season Launch and Group Stage Draws",
+    excerpt:
+      "King Ceasor University (KCU) attended the official season launch and group stage draws for the 2026/27 Pepsi University Football League on Thursday, 15 October 2026, marking the beginning of preparations for the competition's 14th edition.",
+    image: "/news-images/pepsi-group-stage-draws.jpeg",
+    imageAlt: "KCU representatives at the Pepsi University Football League season launch and group stage draws",
+    highlights: [
+      { label: "Date", value: "15 October 2026" },
+      { label: "Event", value: "Official Season Launch and Group Stage Draws for 2026/27 Pepsi University Football League" },
+      { label: "Edition", value: "14th edition" },
+      { label: "Participants", value: "King Ceasor University" },
+      { label: "Stakeholders", value: "Association of Uganda University Sports (AUUS), University Football League (UFL) and Pepsi" },
+    ],
+    gallery: [],
+    story: [
+      "Kampala - 15 October 2026",
+      "King Ceasor University (KCU) attended the official season launch and group stage draws for the 2026/27 Pepsi University Football League on Thursday, 15 October 2026, marking the beginning of preparations for the competition's 14th edition.",
+      "The event brought together representatives from participating universities and stakeholders in university sports, including the Association of Uganda University Sports (AUUS), the University Football League (UFL) and Pepsi, to set the stage for another competitive football season.",
+      "The Pepsi University Football League continues to provide an important platform for nurturing football talent, promoting teamwork, strengthening interuniversity relationships and encouraging sportsmanship among students across Uganda.",
+      "KCU's attendance reflects the University's commitment to promoting sports as an essential component of holistic education and student development. Beyond academic excellence, the University recognises the role of sports in fostering discipline, leadership, physical well-being and a spirit of healthy competition.",
+      "As preparations for the 2026/27 season progress, King Ceasor University looks forward to an exciting competition that celebrates sporting excellence, university pride and the development of young football talent.",
+    ],
+  },
+  {
     date: "13 October 2026",
     category: "Academics",
     title: "KCU Students Participate in Launch Workshop of the 4th Cyber Stars Competition",
