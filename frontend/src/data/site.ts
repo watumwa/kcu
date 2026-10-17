@@ -256,13 +256,22 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Partnerships",
+    title: "KCU Petroleum Geoscience Students Visit COSL Uganda on Educational Tour",
+    date: "16 October 2026",
+    href: "/news",
+    text: "Fourteen students from the Department of Petroleum Geoscience at King Ceasor University (KCU) visited COSL Uganda on 16 October 2026 on an educational tour, gaining insight into the company's specialised oilfield services and its role in the Kingfisher and Tilenga oil development projects in the Albertine Graben.",
+    image: "/news-images/kcu-cosl.jpeg",
+    featured: true,
+  },
+  {
     category: "Student Life",
     title: "KCU Attends Pepsi University Football League Season Launch and Group Stage Draws",
     date: "15 October 2026",
     href: "/news",
     text: "King Ceasor University (KCU) attended the official season launch and group stage draws for the 2026/27 Pepsi University Football League on Thursday, 15 October 2026, marking the beginning of preparations for the competition's 14th edition. The event brought together representatives from participating universities and stakeholders in university sports, including the Association of Uganda University Sports (AUUS), the University Football League (UFL) and Pepsi.",
     image: "/news-images/pepsi-group-stage-draws.jpeg",
-    featured: true,
+    featured: false,
   },
   {
     category: "Academics",

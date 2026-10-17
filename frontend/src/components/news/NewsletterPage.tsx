@@ -21,6 +21,31 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "16 October 2026",
+    category: "Partnerships",
+    title: "KCU Petroleum Geoscience Students Visit COSL Uganda on Educational Tour",
+    excerpt:
+      "Fourteen students from the Department of Petroleum Geoscience at King Ceasor University (KCU) visited COSL Uganda on 16 October 2026 on an educational tour, gaining insight into the company's specialised oilfield services and its role in the Kingfisher and Tilenga oil development projects in the Albertine Graben.",
+    image: "/news-images/kcu-cosl.jpeg",
+    imageAlt: "KCU Department of Petroleum Geoscience students on an educational visit to COSL Uganda",
+    highlights: [
+      { label: "Date", value: "16 October 2026" },
+      { label: "Venue", value: "COSL Uganda" },
+      { label: "Participants", value: "14 students, Department of Petroleum Geoscience, King Ceasor University" },
+      { label: "Focus", value: "Petroleum development projects, career opportunities and academia-industry engagement" },
+      { label: "Projects", value: "Kingfisher and Tilenga oil development projects, Albertine Graben" },
+    ],
+    gallery: [],
+    story: [
+      "Kampala - 16 October 2026",
+      "A delegation of 14 students from the Department of Petroleum Geoscience at King Ceasor University (KCU) paid an educational visit to COSL Uganda on 16 October 2026, gaining first-hand exposure to the company's specialised oilfield services and its involvement in Uganda's oil and gas sector.",
+      "The visit aimed to strengthen engagement between academia and industry by exposing students to ongoing petroleum development projects, emerging career opportunities and the practical applications of their academic training.",
+      "During the engagement, students gained insights into COSL Uganda's involvement in the Kingfisher and Tilenga oil development projects in the Albertine Graben. The company provides a range of specialised oilfield services, including well logging, drilling mud services, well completion and solids control, which are essential to petroleum exploration and production operations.",
+      "Discussions also focused on potential internship placements, employment opportunities and future collaboration between the University and the company. The engagement provided students with valuable insights into industry expectations, technical competencies and the professional skills required to succeed in Uganda's evolving oil and gas sector.",
+      "The visit reflects King Ceasor University's commitment to bridging the gap between classroom learning and industry practice through experiential learning, professional networking and strategic industry engagements. Through such initiatives, the University continues to prepare students to contribute meaningfully to Uganda's petroleum industry and the country's broader socio-economic transformation.",
+    ],
+  },
+  {
     date: "15 October 2026",
     category: "Student Life",
     title: "KCU Attends Pepsi University Football League Season Launch and Group Stage Draws",
