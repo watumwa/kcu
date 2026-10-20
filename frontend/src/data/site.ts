@@ -256,13 +256,22 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Student Life",
+    title: "Christian Medical Fellowship Holds Handover Fellowship at King Ceasor University",
+    date: "17 October 2026",
+    href: "/news",
+    text: "The Christian Medical Fellowship of King Ceasor University (CMF-KCU) held its Handover Fellowship on Saturday, 17 October 2026, at the University's Nursing Section, bringing together fellowship members for an occasion of spiritual reflection, leadership transition and inspiration held under the theme \"Pursuit of Excellence.\"",
+    image: "/news-images/christian-fellowship.jpeg",
+    featured: true,
+  },
+  {
     category: "Partnerships",
     title: "KCU Petroleum Geoscience Students Visit COSL Uganda on Educational Tour",
     date: "16 October 2026",
     href: "/news",
     text: "Fourteen students from the Department of Petroleum Geoscience at King Ceasor University (KCU) visited COSL Uganda on 16 October 2026 on an educational tour, gaining insight into the company's specialised oilfield services and its role in the Kingfisher and Tilenga oil development projects in the Albertine Graben.",
     image: "/news-images/kcu-cosl.jpeg",
-    featured: true,
+    featured: false,
   },
   {
     category: "Student Life",

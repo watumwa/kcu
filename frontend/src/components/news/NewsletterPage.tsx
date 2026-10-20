@@ -21,6 +21,31 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "17 October 2026",
+    category: "Student Life",
+    title: "Christian Medical Fellowship Holds Handover Fellowship at King Ceasor University",
+    excerpt:
+      "The Christian Medical Fellowship of King Ceasor University (CMF-KCU) held its Handover Fellowship on Saturday, 17 October 2026, at the University's Nursing Section, bringing together fellowship members for an occasion of spiritual reflection, leadership transition and inspiration.",
+    image: "/news-images/christian-fellowship.jpeg",
+    imageAlt: "Members of the Christian Medical Fellowship of King Ceasor University at the Handover Fellowship",
+    highlights: [
+      { label: "Date", value: "17 October 2026" },
+      { label: "Venue", value: "Nursing Section, King Ceasor University" },
+      { label: "Theme", value: "Pursuit of Excellence (Proverbs 22:29)" },
+      { label: "Guest Preacher", value: "Dr. Serugo Lawrence, Surgeon, Mulago National Referral Hospital" },
+      { label: "Host", value: "Christian Medical Fellowship of King Ceasor University (CMF-KCU)" },
+    ],
+    gallery: [],
+    story: [
+      "Kampala - 17 October 2026",
+      "The Christian Medical Fellowship of King Ceasor University (CMF-KCU) held its Handover Fellowship on Saturday, 17 October 2026, at the University's Nursing Section, bringing together fellowship members for an occasion of spiritual reflection, leadership transition and inspiration.",
+      "Held under the theme \"Pursuit of Excellence,\" drawn from Proverbs 22:29, the fellowship emphasised the importance of diligence, dedication and commitment to excellence in all aspects of life, particularly in academics, professional development and Christian service.",
+      "The event featured Dr. Serugo Lawrence, a Surgeon at Mulago National Referral Hospital, as the guest preacher. His participation highlighted the connection between faith, professional responsibility and the pursuit of excellence in the medical profession.",
+      "The Handover Fellowship also provided an opportunity to reflect on leadership, service and the responsibility of nurturing a strong Christian community within the University.",
+      "Through such engagements, the Christian Medical Fellowship continues to promote spiritual growth, leadership development and a culture of excellence among students, complementing King Ceasor University's commitment to holistic education and professional development.",
+    ],
+  },
+  {
     date: "16 October 2026",
     category: "Partnerships",
     title: "KCU Petroleum Geoscience Students Visit COSL Uganda on Educational Tour",
