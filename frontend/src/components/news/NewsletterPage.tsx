@@ -21,6 +21,30 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "19 October 2026",
+    category: "Community",
+    title: "KCU Rotaract Club Hosts Public Lecture on Cancer Awareness",
+    excerpt:
+      "The Rotaract Club of King Ceasor University held a public lecture on cancer awareness on Monday, 19th October 2026, at the University Rooftop, Main Campus, Bunga Hill, under the theme \"Hope Beyond Despair.\"",
+    image: "/news-images/kcu-public-lecture-on-cancer-awareness.jpeg",
+    imageAlt: "Participants at the Rotaract Club of King Ceasor University public lecture on cancer awareness",
+    highlights: [
+      { label: "Date", value: "19 October 2026" },
+      { label: "Venue", value: "University Rooftop, Main Campus, Bunga Hill" },
+      { label: "Theme", value: "Hope Beyond Despair" },
+      { label: "Host", value: "Rotaract Club of King Ceasor University" },
+      { label: "Audience", value: "Students and health professionals" },
+    ],
+    gallery: [],
+    story: [
+      "Bunga Hill, Kampala - 19 October 2026",
+      "The Rotaract Club of King Ceasor University held a public lecture on cancer awareness on Monday, 19th October 2026, at the University Rooftop, Main Campus, Bunga Hill, under the theme \"Hope Beyond Despair.\"",
+      "The lecture brought together students and health professionals to raise awareness about cancer, promote early detection, and encourage informed approaches to prevention, treatment and patient support.",
+      "The session featured a public health specialist in preventive oncology alongside student panelists Ishimwe Precious, Musali Lynn Esther and Kukunda Jonane. The discussion provided a platform for promoting cancer awareness and encouraging students to become advocates for better health within their communities.",
+      "Through initiatives of this nature, the Rotaract Club of King Ceasor University continues to demonstrate its commitment to community service, health education and student engagement.",
+    ],
+  },
+  {
     date: "17 October 2026",
     category: "Student Life",
     title: "Christian Medical Fellowship Holds Handover Fellowship at King Ceasor University",

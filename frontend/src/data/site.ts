@@ -256,13 +256,22 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Community",
+    title: "KCU Rotaract Club Hosts Public Lecture on Cancer Awareness",
+    date: "19 October 2026",
+    href: "/news",
+    text: "The Rotaract Club of King Ceasor University held a public lecture on cancer awareness on Monday, 19th October 2026, at the University Rooftop, Main Campus, Bunga Hill, under the theme \"Hope Beyond Despair,\" bringing together students and health professionals to raise awareness about cancer and promote early detection.",
+    image: "/news-images/kcu-public-lecture-on-cancer-awareness.jpeg",
+    featured: true,
+  },
+  {
     category: "Student Life",
     title: "Christian Medical Fellowship Holds Handover Fellowship at King Ceasor University",
     date: "17 October 2026",
     href: "/news",
     text: "The Christian Medical Fellowship of King Ceasor University (CMF-KCU) held its Handover Fellowship on Saturday, 17 October 2026, at the University's Nursing Section, bringing together fellowship members for an occasion of spiritual reflection, leadership transition and inspiration held under the theme \"Pursuit of Excellence.\"",
     image: "/news-images/christian-fellowship.jpeg",
-    featured: true,
+    featured: false,
   },
   {
     category: "Partnerships",
