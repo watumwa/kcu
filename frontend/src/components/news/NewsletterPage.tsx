@@ -21,6 +21,32 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "23 October 2026",
+    category: "Community",
+    title: "King Ceasor University Engages Kololo Senior Secondary School Students in Career Guidance Session",
+    excerpt:
+      "King Ceasor University (KCU) conducted a career guidance session at Kololo Senior Secondary School on 23 October 2026, engaging Senior Five and Senior Six students in discussions aimed at supporting informed academic and career decisions.",
+    image: "/news-images/kcu-visits-kololo-ss.jpeg",
+    imageAlt: "King Ceasor University representatives conducting a career guidance session at Kololo Senior Secondary School",
+    highlights: [
+      { label: "Date", value: "23 October 2026" },
+      { label: "Venue", value: "Kololo Senior Secondary School" },
+      { label: "Audience", value: "Senior Five and Senior Six students" },
+      { label: "Focus", value: "Academic and career pathway guidance" },
+      { label: "Host", value: "King Ceasor University (KCU)" },
+    ],
+    gallery: [],
+    story: [
+      "Kampala - 23 October 2026",
+      "King Ceasor University (KCU) today conducted a career guidance session at Kololo Senior Secondary School, engaging Senior Five and Senior Six students in discussions aimed at supporting informed academic and career decisions.",
+      "The session provided an opportunity for students to explore various career pathways, understand the importance of higher education, and gain insights into preparing for university life.",
+      "During the engagement, students were encouraged to identify their strengths, interests, and career aspirations while considering the academic pathways that align with their future goals.",
+      "The session also emphasised the importance of academic excellence, personal development, and making informed decisions when selecting university programmes and professional careers.",
+      "Through career guidance initiatives such as this, King Ceasor University continues to strengthen its relationships with secondary schools and support students as they prepare for the next stage of their educational journeys.",
+      "The engagement underscores the University's commitment to providing holistic education and contributing to socio-economic transformation by empowering the next generation of skilled professionals and leaders.",
+    ],
+  },
+  {
     date: "19 October 2026",
     category: "Community",
     title: "KCU Rotaract Club Hosts Public Lecture on Cancer Awareness",

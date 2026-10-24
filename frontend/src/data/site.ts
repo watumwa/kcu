@@ -257,12 +257,21 @@ export const upcomingEvents = [
 export const newsItems = [
   {
     category: "Community",
+    title: "King Ceasor University Engages Kololo Senior Secondary School Students in Career Guidance Session",
+    date: "23 October 2026",
+    href: "/news",
+    text: "King Ceasor University (KCU) conducted a career guidance session at Kololo Senior Secondary School on 23 October 2026, engaging Senior Five and Senior Six students in discussions aimed at supporting informed academic and career decisions, exploring career pathways and preparing for university life.",
+    image: "/news-images/kcu-visits-kololo-ss.jpeg",
+    featured: true,
+  },
+  {
+    category: "Community",
     title: "KCU Rotaract Club Hosts Public Lecture on Cancer Awareness",
     date: "19 October 2026",
     href: "/news",
     text: "The Rotaract Club of King Ceasor University held a public lecture on cancer awareness on Monday, 19th October 2026, at the University Rooftop, Main Campus, Bunga Hill, under the theme \"Hope Beyond Despair,\" bringing together students and health professionals to raise awareness about cancer and promote early detection.",
     image: "/news-images/kcu-public-lecture-on-cancer-awareness.jpeg",
-    featured: true,
+    featured: false,
   },
   {
     category: "Student Life",
