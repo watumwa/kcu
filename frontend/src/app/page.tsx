@@ -17,15 +17,15 @@ export default function Page() {
     <>
       <Navbar />
       <main className="min-h-screen bg-white">
-        <Hero />
-        <ProgrammeHighlight />
-        <QuickLinks />
-        <AboutSection />
-        <SchoolsSection />
-        <AdmissionsBanner />
-        <NewsEvents />
-        <Collaborations />
-        <AdmissionPopup />
+      <NewsEvents />
+      <ProgrammeHighlight />
+      <QuickLinks />
+      <AboutSection />
+      <SchoolsSection />
+      <AdmissionsBanner />
+      <Hero />
+      <Collaborations />
+      <AdmissionPopup />
       </main>
       <Footer />
     </>
