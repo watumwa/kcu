@@ -256,13 +256,22 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Student Life",
+    title: "King Ceasor University Secures 2–0 Victory Over Soroti University in Pepsi University Football League",
+    date: "24 October 2026",
+    href: "/news",
+    text: "King Ceasor University (KCU) registered an impressive 2–0 victory over Soroti University on Saturday, 24th October 2026, in the Pepsi University Football League 2026/27 season, demonstrating determination, teamwork and discipline to secure all three points in a competitive encounter played in Soroti.",
+    image: "/news-images/kcu-soccer-team.jpeg",
+    featured: true,
+  },
+  {
     category: "Community",
     title: "King Ceasor University Engages Kololo Senior Secondary School Students in Career Guidance Session",
     date: "23 October 2026",
     href: "/news",
     text: "King Ceasor University (KCU) conducted a career guidance session at Kololo Senior Secondary School on 23 October 2026, engaging Senior Five and Senior Six students in discussions aimed at supporting informed academic and career decisions, exploring career pathways and preparing for university life.",
     image: "/news-images/kcu-visits-kololo-ss.jpeg",
-    featured: true,
+    featured: false,
   },
   {
     category: "Community",

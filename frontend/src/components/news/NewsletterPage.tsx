@@ -21,6 +21,33 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "24 October 2026",
+    category: "Student Life",
+    title: "King Ceasor University Secures 2–0 Victory Over Soroti University in Pepsi University Football League",
+    excerpt:
+      "King Ceasor University (KCU) registered an impressive 2–0 victory over Soroti University on Saturday, 24th October 2026, in the Pepsi University Football League 2026/27 season.",
+    image: "/news-images/kcu-soccer-team.jpeg",
+    imageAlt: "King Ceasor University football team celebrating a 2–0 victory over Soroti University in the Pepsi University Football League",
+    highlights: [
+      { label: "Date", value: "24 October 2026" },
+      { label: "Venue", value: "Soroti" },
+      { label: "Result", value: "King Ceasor University 2–0 Soroti University" },
+      { label: "Competition", value: "Pepsi University Football League 2026/27 (14th edition)" },
+      { label: "Head Coach", value: "Kasumba Derek" },
+      { label: "Sports Tutor", value: "Katabazi Aziz" },
+    ],
+    gallery: [],
+    story: [
+      "Soroti - 24 October 2026",
+      "King Ceasor University (KCU) registered an impressive 2–0 victory over Soroti University on Saturday, 24th October 2026, in the Pepsi University Football League 2026/27 season.",
+      "The match, played in Soroti, saw KCU demonstrate determination, teamwork and discipline to secure all three points in a competitive encounter.",
+      "Under the guidance of Head Coach Kasumba Derek and Sports Tutor Katabazi Aziz, the team delivered a commendable performance, reflecting the University's growing commitment to sporting excellence and talent development.",
+      "The victory marks a positive step in KCU's campaign in the 14th edition of the Pepsi University Football League, providing valuable momentum as the team prepares for its upcoming fixtures.",
+      "King Ceasor University congratulates the players, coaching staff and sports department on this achievement and remains committed to promoting sports as an integral part of holistic education, student development and institutional excellence.",
+      "Congratulations, Team KCU!",
+    ],
+  },
+  {
     date: "23 October 2026",
     category: "Community",
     title: "King Ceasor University Engages Kololo Senior Secondary School Students in Career Guidance Session",
