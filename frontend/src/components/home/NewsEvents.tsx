@@ -44,7 +44,7 @@ export default function NewsEvents() {
       <div className="mx-auto max-w-[1440px]">
         <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="text-xs font-black uppercase tracking-[0.2em] text-[#0B6232]">Latest News & Events</p>
+            <p className="hidden text-xs font-black uppercase tracking-[0.2em] text-[#0B6232] lg:block">Latest News & Events</p>
           </div>
         </div>
 
