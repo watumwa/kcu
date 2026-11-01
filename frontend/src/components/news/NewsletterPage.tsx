@@ -21,6 +21,34 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "1 November 2026",
+    category: "Announcements",
+    title: "King Ceasor University Opens January 2027 Admissions with Flexible Day, Evening and Weekend Study Options",
+    excerpt:
+      "King Ceasor University (KCU) has officially opened admissions for the January 2027 intake of the 2026/2027 Academic Year, offering prospective students flexible Day, Evening and Weekend study options across a wide range of academic programmes.",
+    image: "/news-images/weekend-advert-01.png",
+    imageAlt: "King Ceasor University January 2027 admissions advert for Day, Evening and Weekend study options",
+    highlights: [
+      { label: "Intake", value: "January 2027 (2026/2027 Academic Year)" },
+      { label: "Study Options", value: "Day, Evening and Weekend Programmes" },
+      { label: "Programmes", value: "Law, Business Administration, Applied Economics, Oil and Gas Management, Petroleum Geoscience, Computer Forensics and Criminal Investigations, Clinical Medicine, Medical Laboratory Technology and others" },
+      { label: "Also Available", value: "Higher Education Certificate programmes" },
+      { label: "Apply", value: "www.kcu.ac.ug" },
+    ],
+    gallery: [],
+    story: [
+      "Kampala - 1 November 2026",
+      "King Ceasor University (KCU) has officially opened admissions for the January 2027 intake of the 2026/2027 Academic Year, offering prospective students flexible Day, Evening and Weekend study options across a wide range of academic programmes.",
+      "Recognising the diverse needs of learners, the University provides flexible study arrangements designed to accommodate fresh entrants, working professionals and individuals seeking to advance their academic qualifications while balancing other responsibilities.",
+      "Day Programmes provide students with a structured learning environment, allowing them to participate in regular academic activities, practical sessions and other aspects of university life. These programmes are ideal for students who prefer daytime learning and active engagement in the university community.",
+      "Evening Programmes offer an opportunity for individuals with daytime commitments to pursue higher education while continuing with their professional and personal responsibilities. This option is particularly suitable for working professionals seeking career growth and academic advancement.",
+      "Weekend Programmes are designed for individuals with demanding weekday schedules, providing an opportunity to pursue academic qualifications while maintaining their professional and personal commitments.",
+      "For the January 2027 intake, King Ceasor University is accepting applications for selected programmes in Law, Business Administration, Applied Economics, Oil and Gas Management, Petroleum Geoscience, Computer Forensics and Criminal Investigations, Clinical Medicine, Medical Laboratory Technology and other disciplines. Higher Education Certificate programmes are also available.",
+      "Prospective students are encouraged to explore the available programmes and choose study arrangements that best suit their academic and career aspirations. Specific study schedules may vary by programme.",
+      "Don't miss this opportunity to invest in your future! Visit www.kcu.ac.ug for information on available programmes, admission requirements and application procedures.",
+    ],
+  },
+  {
     date: "24 October 2026",
     category: "Student Life",
     title: "KCU School of Law Celebrates Excellence at Law Society Dinner",
@@ -1867,7 +1895,7 @@ export default function NewsletterPage() {
                 A curated round-up of university stories, partnerships, student opportunities, and institutional milestones.
               </p>
               <Link
-                href="/newsletter/SEPTEMBER Journal Issue 08.pdf"
+                href="/newsletter/OCTOBER-26-NEWSLETTER.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-6 inline-flex items-center rounded-xl bg-[#FFC66B] px-5 py-3 text-sm font-black text-[#0B6232] transition hover:bg-[#f4b850]"

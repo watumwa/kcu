@@ -256,13 +256,22 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Announcements",
+    title: "King Ceasor University Opens January 2027 Admissions with Flexible Day, Evening and Weekend Study Options",
+    date: "1 November 2026",
+    href: "/news",
+    text: "King Ceasor University (KCU) has officially opened admissions for the January 2027 intake of the 2026/2027 Academic Year, offering prospective students flexible Day, Evening and Weekend study options across a wide range of academic programmes.",
+    image: "/news-images/weekend-advert-01.png",
+    featured: true,
+  },
+  {
     category: "Student Life",
     title: "KCU School of Law Celebrates Excellence at Law Society Dinner",
     date: "24 October 2026",
     href: "/news",
     text: "The King Ceasor University (KCU) School of Law hosted a memorable Law Society Dinner on 24th October 2026 at Joy Café, Bunga, under the theme \"Upholding the Dynamics of Legal Education,\" bringing together law students, academic staff, legal professionals and distinguished guests for an evening of celebration, reflection and professional networking.",
     image: "/news-images/kcu-Law-Society-Dinner.jpeg",
-    featured: true,
+    featured: false,
   },
   {
     category: "Student Life",
