@@ -23,6 +23,30 @@ const newsletterArticles: NewsletterArticle[] = [
   {
     date: "24 October 2026",
     category: "Student Life",
+    title: "KCU School of Law Celebrates Excellence at Law Society Dinner",
+    excerpt:
+      "The King Ceasor University (KCU) School of Law hosted a memorable Law Society Dinner on 24th October 2026 at Joy Café, Bunga, under the theme \"Upholding the Dynamics of Legal Education.\"",
+    image: "/news-images/kcu-Law-Society-Dinner.jpeg",
+    imageAlt: "King Ceasor University School of Law students and guests at the Law Society Dinner at Joy Café, Bunga",
+    highlights: [
+      { label: "Date", value: "24 October 2026" },
+      { label: "Venue", value: "Joy Café, Bunga" },
+      { label: "Theme", value: "Upholding the Dynamics of Legal Education" },
+      { label: "Chief Guest", value: "Hon. Justice Simon Peter Kinobe, Justice of the High Court" },
+      { label: "Keynote Speaker", value: "CIS Justus Karuhanga" },
+    ],
+    gallery: [],
+    story: [
+      "Bunga - 24 October 2026",
+      "The King Ceasor University (KCU) School of Law hosted a memorable Law Society Dinner on 24th October 2026 at Joy Café, Bunga, under the theme \"Upholding the Dynamics of Legal Education.\" The event brought together law students, academic staff, legal professionals and distinguished guests for an evening of celebration, reflection and professional networking.",
+      "The dinner was graced by Hon. Justice Simon Peter Kinobe, Justice of the High Court, as Chief Guest, while CIS Justus Karuhanga delivered the keynote address. The discussions highlighted the evolving nature of legal education and the importance of equipping aspiring legal professionals with the knowledge, ethical values and practical skills necessary to navigate contemporary legal challenges.",
+      "The programme also featured remarks from the School of Law leadership, presentations on Law Society projects and fundraising initiatives, and an awards ceremony recognizing outstanding achievements and contributions within the Law Society. A cake-cutting ceremony added a celebratory touch to the evening, reflecting the unity and shared aspirations of the KCU legal community.",
+      "The event underscored King Ceasor University's continued commitment to nurturing competent, ethical and socially responsible legal professionals through academic excellence, mentorship and meaningful engagement with the legal fraternity.",
+    ],
+  },
+  {
+    date: "24 October 2026",
+    category: "Student Life",
     title: "King Ceasor University Secures 2–0 Victory Over Soroti University in Pepsi University Football League",
     excerpt:
       "King Ceasor University (KCU) registered an impressive 2–0 victory over Soroti University on Saturday, 24th October 2026, in the Pepsi University Football League 2026/27 season.",

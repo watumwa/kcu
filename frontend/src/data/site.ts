@@ -257,12 +257,21 @@ export const upcomingEvents = [
 export const newsItems = [
   {
     category: "Student Life",
+    title: "KCU School of Law Celebrates Excellence at Law Society Dinner",
+    date: "24 October 2026",
+    href: "/news",
+    text: "The King Ceasor University (KCU) School of Law hosted a memorable Law Society Dinner on 24th October 2026 at Joy Café, Bunga, under the theme \"Upholding the Dynamics of Legal Education,\" bringing together law students, academic staff, legal professionals and distinguished guests for an evening of celebration, reflection and professional networking.",
+    image: "/news-images/kcu-Law-Society-Dinner.jpeg",
+    featured: true,
+  },
+  {
+    category: "Student Life",
     title: "King Ceasor University Secures 2–0 Victory Over Soroti University in Pepsi University Football League",
     date: "24 October 2026",
     href: "/news",
     text: "King Ceasor University (KCU) registered an impressive 2–0 victory over Soroti University on Saturday, 24th October 2026, in the Pepsi University Football League 2026/27 season, demonstrating determination, teamwork and discipline to secure all three points in a competitive encounter played in Soroti.",
     image: "/news-images/kcu-soccer-team.jpeg",
-    featured: true,
+    featured: false,
   },
   {
     category: "Community",
