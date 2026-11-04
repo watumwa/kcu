@@ -878,9 +878,8 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-black/45" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/48 to-black/18 sm:bg-gradient-to-r sm:from-black/80 sm:via-black/45 sm:to-transparent" />
           <div className="relative z-10 mx-auto max-w-[1440px]">
-            <p className="text-xs font-black uppercase tracking-[0.2em] text-[#FFC66B]">About King Ceasor University</p>
-            <h1 className="mt-3 max-w-3xl font-serif text-3xl font-black leading-tight text-white sm:text-4xl md:text-5xl">Shaping Leaders. Igniting the Future.</h1>
-            <p className="mt-4 max-w-2xl text-sm leading-7 text-white/75 sm:text-base sm:leading-8">
+             <p className="text-xs font-black uppercase tracking-[0.2em] text-[#FFC66B]">About King Ceasor University</p>
+             <p className="mt-4 max-w-2xl text-sm leading-7 text-white/75 sm:text-base sm:leading-8">
               A premier chartered private university in Uganda dedicated to academic excellence, innovation and transformative education for students from across Africa and beyond.
             </p>
           </div>
