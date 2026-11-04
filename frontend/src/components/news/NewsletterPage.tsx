@@ -21,6 +21,30 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "4 November 2026",
+    category: "Leadership",
+    title: "King Ceasor University Strengthens Mentorship and Leadership Development Through Training",
+    excerpt:
+      "On Wednesday, 4th November 2026, King Ceasor University held a mentorship training session at the University Main Campus, Bunga Hill, facilitated by Dr. John Senyonyi under the theme \u201cFueling Potential: Mentorship as a Catalyst for Career Growth and Development in Universities.\u201d",
+    image: "/news-images/kcu-mentorship.jpeg",
+    imageAlt: "Dr. John Senyonyi facilitating a mentorship training session at King Ceasor University",
+    highlights: [
+      { label: "Date", value: "Wednesday, 4 November 2026" },
+      { label: "Venue", value: "University Main Campus, Bunga Hill" },
+      { label: "Facilitator", value: "Dr. John Senyonyi" },
+      { label: "Theme", value: "Fueling Potential: Mentorship as a Catalyst for Career Growth and Development in Universities" },
+      { label: "Participants", value: "University staff, Guild leaders, class representatives and association executives" },
+    ],
+    gallery: [],
+    story: [
+      "On Wednesday, 4th November 2026, King Ceasor University held a mentorship training session at the University Main Campus, Bunga Hill, facilitated by Dr. John Senyonyi under the theme \u201cFueling Potential: Mentorship as a Catalyst for Career Growth and Development in Universities.\u201d The training brought together university staff, Guild leaders, class representatives and association executives to strengthen mentorship practices and promote personal and professional development.",
+      "During the session, Dr. Senyonyi emphasized the importance of mentorship in nurturing leadership, strengthening relationships and supporting holistic development. He highlighted five key dimensions of personal growth: intellectual, social, emotional, physical and spiritual well-being, encouraging participants to recognize mentorship as a tool for developing well-rounded individuals.",
+      "Addressing effective mentorship relationships, Dr. Senyonyi underscored the importance of trust, confidentiality, accountability, constructive feedback and clearly defined expectations. \u201cThe key principle is not merely to give people answers, rather to develop the mentees\u2019 ability to find their own answers,\u201d he stated in his presentation, emphasizing the need to empower mentees to think independently and make informed decisions.",
+      "He further highlighted the importance of setting measurable goals, maintaining consistent communication and recognizing each mentee\u2019s unique strengths and aspirations. Participants were introduced to a five-stage mentorship framework: Connect, Teach, Practice, Review and Multiply, aimed at fostering continuous learning, evaluating progress and preparing mentees to become future mentors.",
+      "The training reaffirmed King Ceasor University\u2019s commitment to nurturing future leaders, strengthening professional relationships and promoting a culture of mentorship, collaboration and lifelong learning.",
+    ],
+  },
+  {
     date: "1 November 2026",
     category: "Announcements",
     title: "King Ceasor University Opens January 2027 Admissions with Flexible Day, Evening and Weekend Study Options",

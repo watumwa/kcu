@@ -256,6 +256,15 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Leadership",
+    title: "King Ceasor University Strengthens Mentorship and Leadership Development Through Training",
+    date: "4 November 2026",
+    href: "/news",
+    text: "On Wednesday, 4th November 2026, King Ceasor University held a mentorship training session at the University Main Campus, Bunga Hill, facilitated by Dr. John Senyonyi under the theme \u201cFueling Potential: Mentorship as a Catalyst for Career Growth and Development in Universities.\u201d The training brought together university staff, Guild leaders, class representatives and association executives to strengthen mentorship practices and promote personal and professional development.",
+    image: "/news-images/kcu-mentorship.jpeg",
+    featured: true,
+  },
+  {
     category: "Announcements",
     title: "King Ceasor University Opens January 2027 Admissions with Flexible Day, Evening and Weekend Study Options",
     date: "1 November 2026",
