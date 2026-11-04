@@ -47,7 +47,7 @@ function TabAboutUs() {
           King Ceasor University (KCU) is a premier chartered private university in Uganda dedicated to academic excellence, innovation and transformative education. Since its establishment in 2011, the University has grown into a vibrant center of learning that attracts students from across Africa and beyond, fostering a diverse and multicultural academic community.
         </p>
         <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
-          With modern learning facilities, experienced faculty, strong industry partnerships and a student-centered approach, KCU nurtures intellectual growth, creativity and professional development. Guided by our motto, &quot;Ignite the Future,&quot; we empower learners to become innovators, problem-solvers and leaders who contribute meaningfully to society.
+          With modern learning facilities, experienced faculty, strong industry partnerships and a student-centered approach, KCU nurtures intellectual growth, creativity and professional development. Guided by our motto, &quot;VERITAS,&quot; we empower learners to become innovators, problem-solvers and leaders who contribute meaningfully to society.
         </p>
       </div>
 
@@ -74,7 +74,7 @@ function TabAboutUs() {
           <div className="rounded-2xl border-2 border-[#FFC66B] bg-[#FFC66B]/10 p-6">
             <GraduationCap className="size-7 text-[#0B6232]" />
             <p className="mt-3 text-[10px] font-black uppercase tracking-[0.2em] text-[#0B6232]">The Motto</p>
-            <p className="mt-2 text-2xl font-black text-[#0B6232]">Ignite the Future</p>
+            <p className="mt-2 text-2xl font-black text-[#0B6232]">VERITAS</p>
           </div>
         </div>
       </section>
