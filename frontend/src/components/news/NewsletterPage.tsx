@@ -21,6 +21,30 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "6 November 2026",
+    category: "Student Life",
+    title: "KCU Student Leaders Participate in National University Student Leaders Convention at Parliament",
+    excerpt:
+      "On Friday, 6th November 2026, King Ceasor University was represented by Muhoozi Daniel N, Guild President, and Murungi Precious, Guild Speaker, at the University Student Leaders Convention held at the Parliamentary Conference Hall in Kampala.",
+    image: "/news-images/National-University-Student-Leaders-Convention.jpeg",
+    imageAlt: "KCU Guild President Muhoozi Daniel N and Guild Speaker Murungi Precious at the University Student Leaders Convention at Parliament",
+    highlights: [
+      { label: "Date", value: "Friday, 6 November 2026" },
+      { label: "Venue", value: "Parliamentary Conference Hall, Kampala" },
+      { label: "Representatives", value: "Muhoozi Daniel N (Guild President), Murungi Precious (Guild Speaker)" },
+      { label: "Theme", value: "The Role of University Student Leaders in Advancing National Development, Social Cohesion, Peace and Stability in Uganda" },
+      { label: "Organised by", value: "Office of the 92nd Guild Speaker of Makerere University, East Africa Young Leaders Forum, Netherlands Institute for Multiparty Democracy, Julius Nyerere Leadership Centre, Parliament of Uganda" },
+    ],
+    gallery: [],
+    story: [
+      "Kampala - 6 November 2026",
+      "On Friday, 6th November 2026, King Ceasor University was represented by Muhoozi Daniel N, Guild President, and Murungi Precious, Guild Speaker, at the University Student Leaders Convention held at the Parliamentary Conference Hall in Kampala.",
+      "The convention, organised by the Office of the 92nd Guild Speaker of Makerere University in partnership with the East Africa Young Leaders Forum, the Netherlands Institute for Multiparty Democracy, the Julius Nyerere Leadership Centre and the Parliament of Uganda, was held under the theme \u201cThe Role of University Student Leaders in Advancing National Development, Social Cohesion, Peace and Stability in Uganda.\u201d",
+      "The event brought together university student leaders and key stakeholders to discuss youth participation in governance, accountable leadership, peacebuilding and national development.",
+      "KCU\u2019s participation reflects the University\u2019s commitment to nurturing responsible, visionary and socially engaged student leaders capable of contributing meaningfully to national development.",
+    ],
+  },
+  {
     date: "4 November 2026",
     category: "Leadership",
     title: "King Ceasor University Strengthens Mentorship and Leadership Development Through Training",
