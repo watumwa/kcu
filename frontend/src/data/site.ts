@@ -260,7 +260,7 @@ export const newsItems = [
     title: "KCU Student Leaders Participate in National University Student Leaders Convention at Parliament",
     date: "6 November 2026",
     href: "/news",
-    text: "On Friday, 6th November 2026, King Ceasor University was represented by Muhoozi Daniel N, Guild President, and Murungi Precious, Guild Speaker, at the University Student Leaders Convention held at the Parliamentary Conference Hall in Kampala. The convention, organised by the Office of the 92nd Guild Speaker of Makerere University in partnership with the East Africa Young Leaders Forum, the Netherlands Institute for Multiparty Democracy, the Julius Nyerere Leadership Centre and the Parliament of Uganda, was held under the theme \u201cThe Role of University Student Leaders in Advancing National Development, Social Cohesion, Peace and Stability in Uganda.\u201d The event brought together university student leaders and key stakeholders to discuss youth participation in governance, accountable leadership, peacebuilding and national development. KCU\u2019s participation reflects the University\u2019s commitment to nurturing responsible, visionary and socially engaged student leaders capable of contributing meaningfully to national development.",
+    text: "On Friday, 6th November 2026, King Ceasor University was represented by Guild President Muhoozi Daniel N and Guild Speaker Murungi Precious at the University Student Leaders Convention at Parliament, themed on student leaders' role in national development, social cohesion, peace and stability.",
     image: "/news-images/National-University-Student-Leaders-Convention.jpeg",
     featured: true,
   },
