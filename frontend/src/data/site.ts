@@ -256,6 +256,15 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Partnerships",
+    title: "King Ceasor University and Insurance Training College Host Public Lecture on AI, Innovation and the Future",
+    date: "12 November 2026",
+    href: "/news",
+    text: "King Ceasor University, in partnership with the Insurance Training College, hosted a public lecture on 12th November 2026 at Bunga Campus Rooftop on AI, ethics, innovation and risk. Keynote speakers Mr. Ernest Magezi Barusya and Ms. Racheal Musiima Seyondo shared practical insights on AI\u2019s potential to solve real-life problems and enhance human capabilities.",
+    image: "/news-images/ITC-Public-Lecture.jpeg",
+    featured: true,
+  },
+  {
     category: "Student Life",
     title: "KCU Student Leaders Participate in National University Student Leaders Convention at Parliament",
     date: "6 November 2026",

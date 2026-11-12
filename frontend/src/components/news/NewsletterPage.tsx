@@ -21,6 +21,38 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "12 November 2026",
+    category: "Partnerships",
+    title: "King Ceasor University and Insurance Training College Host Public Lecture on AI, Innovation and the Future",
+    excerpt:
+      "King Ceasor University (KCU), in partnership with the Insurance Training College (ITC), hosted a public lecture on Thursday, 12th November 2026, at the University\u2019s Bunga Campus Rooftop, bringing together participants to explore the transformative role of Artificial Intelligence (AI) in addressing real-world challenges and shaping the future.",
+    image: "/news-images/ITC-Public-Lecture.jpeg",
+    imageAlt: "Participants at the KCU-ITC public lecture on AI, Innovation and the Future at Bunga Campus Rooftop",
+    highlights: [
+      { label: "Date", value: "Thursday, 12 November 2026" },
+      { label: "Venue", value: "Bunga Campus Rooftop, King Ceasor University" },
+      { label: "Theme", value: "Shaping the Future: Navigating Artificial Intelligence, Ethics, Innovation, and Risk in the Modern World" },
+      { label: "Keynote Speakers", value: "Mr. Ernest Magezi Barusya, CEO Kenbright Uganda; Ms. Racheal Musiima Seyondo, Founder/CEO AFRILEAD" },
+      { label: "Partners", value: "Insurance Training College (ITC)" },
+    ],
+    gallery: [],
+    story: [
+      "Kampala - 12 November 2026",
+      "King Ceasor University (KCU), in partnership with the Insurance Training College (ITC), hosted an insightful public lecture on Thursday, 12th November 2026, at the University\u2019s Bunga Campus Rooftop, bringing together participants to explore the transformative role of Artificial Intelligence (AI) in addressing real-world challenges and shaping the future.",
+      "Held under the theme \u201cShaping the Future: Navigating Artificial Intelligence, Ethics, Innovation, and Risk in the Modern World,\u201d the lecture provided a platform for knowledge sharing and meaningful discussions on the opportunities and challenges presented by emerging technologies.",
+      "The event featured two keynote speakers, Mr. Ernest Magezi Barusya, Chief Executive Officer of Kenbright Uganda, and Ms. Racheal Musiima Seyondo, Founder and CEO of AFRILEAD, who shared practical insights into the application of AI across different sectors.",
+      "During his presentation, Mr. Barusya highlighted the potential of Artificial Intelligence to solve real-life problems, improve efficiency, and drive innovation. He emphasised the importance of moving beyond theoretical discussions to exploring practical AI applications that address everyday challenges and create meaningful impact in society.",
+      "Ms. Seyondo, in her presentation, addressed growing concerns about the impact of Artificial Intelligence on employment, challenging the perception that AI will inevitably replace human jobs. She encouraged participants to view AI as a tool for enhancing their value proposition, improving productivity, and simplifying everyday tasks.",
+      "\u201cThe future is here,\u201d she remarked, emphasising the need for individuals and organisations to embrace technological advancements and develop the skills necessary to remain relevant in an increasingly digital world.",
+      "Her presentation further explored how AI can be integrated into everyday activities to improve efficiency, unlock new opportunities, and enhance human capabilities.",
+      "The discussions underscored the importance of responsible AI adoption, continuous learning, and innovation in preparing individuals and institutions for the rapidly evolving technological landscape.",
+      "Speaking on behalf of the Insurance Training College, Ms. Nakuya Angelina expressed appreciation to the keynote speakers and facilitators for their valuable contributions and insightful presentations. She acknowledged their role in enriching participants\u2019 understanding of Artificial Intelligence and its practical applications.",
+      "In his closing remarks on behalf of King Ceasor University, Prof. Peter Turyakira, Director of Postgraduate Studies and Research, brought the lecture to a close, marking the conclusion of an engaging exchange of knowledge and ideas on AI and innovation.",
+      "The public lecture reflected King Ceasor University\u2019s commitment to promoting research, innovation, and knowledge exchange through engagements that connect academic learning with emerging global developments.",
+      "Through collaborations with institutions such as the Insurance Training College, the University continues to create platforms for meaningful dialogue on technological advancements and their implications for education, industry, and society.",
+    ],
+  },
+  {
     date: "6 November 2026",
     category: "Student Life",
     title: "KCU Student Leaders Participate in National University Student Leaders Convention at Parliament",
