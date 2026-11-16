@@ -21,6 +21,33 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "14 November 2026",
+    category: "Student Life",
+    title: "KCU Maintains Unbeaten Run Following Goalless Draw Against Busitema University",
+    excerpt:
+      "King Ceasor University continued its unbeaten start to the Pepsi University Football League after securing a goalless draw against Busitema University on Saturday, 14th November 2026, at Busitema University Main Campus in Tororo.",
+    image: "/news-images/Unbeaten-Run.jpeg",
+    imageAlt: "King Ceasor University team at the Pepsi University Football League match against Busitema University",
+    highlights: [
+      { label: "Date", value: "Saturday, 14 November 2026" },
+      { label: "Venue", value: "Busitema University Main Campus, Tororo" },
+      { label: "Result", value: "Busitema University 0–0 King Ceasor University" },
+      { label: "Competition", value: "Pepsi University Football League 2026/27" },
+      { label: "Coach", value: "Kasumba Derrick" },
+      { label: "Sports Tutor", value: "Aziz Katabazi" },
+      { label: "Record", value: "4 points from 2 matches, 2 consecutive clean sheets" },
+    ],
+    gallery: [],
+    story: [
+      "Tororo - 14 November 2026",
+      "King Ceasor University continued its unbeaten start to the Pepsi University Football League after securing a goalless draw against Busitema University on Saturday, 14th November 2026, at Busitema University Main Campus in Tororo.",
+      "The closely contested encounter ended 0–0, earning KCU a valuable point and bringing the team\u2019s tally to four points from two matches, with two consecutive clean sheets.",
+      "Under the guidance of Coach Kasumba Derrick and Sports Tutor Aziz Katabazi, the team demonstrated defensive discipline, resilience and teamwork throughout the encounter.",
+      "The result follows KCU\u2019s 2–0 victory over Soroti University in its opening fixture, further highlighting the team\u2019s promising start to the competition.",
+      "King Ceasor University congratulates the players and technical team for their continued commitment and determination as they aim to build on their positive performances in the upcoming fixtures.",
+    ],
+  },
+  {
     date: "12 November 2026",
     category: "Partnerships",
     title: "King Ceasor University and Insurance Training College Host Public Lecture on AI, Innovation and the Future",

@@ -256,6 +256,15 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Student Life",
+    title: "KCU Maintains Unbeaten Run Following Goalless Draw Against Busitema University",
+    date: "14 November 2026",
+    href: "/news",
+    text: "King Ceasor University continued its unbeaten start to the Pepsi University Football League after securing a goalless draw against Busitema University on Saturday, 14th November 2026, at Busitema University Main Campus in Tororo. The 0–0 result earned KCU a valuable point, bringing its tally to four points from two matches with two consecutive clean sheets.",
+    image: "/news-images/Unbeaten-Run.jpeg",
+    featured: true,
+  },
+  {
     category: "Partnerships",
     title: "King Ceasor University and Insurance Training College Host Public Lecture on AI, Innovation and the Future",
     date: "12 November 2026",
