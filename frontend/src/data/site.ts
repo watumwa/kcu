@@ -256,6 +256,15 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Academics",
+    title: "KCU Petroleum Geoscience Students Gain Practical Industry Experience in Uganda’s Albertine Graben",
+    date: "17 November 2026",
+    href: "/news",
+    text: "On 17th November 2026, King Ceasor University (KCU), through its Department of Petroleum Geoscience and in collaboration with the Petroleum Authority of Uganda (PAU), conducted an educational field study to Uganda’s Albertine Graben, providing students with firsthand exposure to key developments in the country’s oil and gas sector.",
+    image: "/news-images/oil-gas.jpeg",
+    featured: true,
+  },
+  {
     category: "Student Life",
     title: "KCU Maintains Unbeaten Run Following Goalless Draw Against Busitema University",
     date: "14 November 2026",
