@@ -21,6 +21,24 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "21 November 2026",
+    category: "Events",
+    title: "King Ceasor University Students Gain Valuable Entrepreneurial Exposure at Global Entrepreneurship Week Uganda 2026",
+    excerpt: "King Ceasor University (KCU) students participated in Global Entrepreneurship Week Uganda 2026, held from 19th to 21st November 2026 at Enterprise Uganda’s Business Development Services Centre of Excellence in Butabika, Kampala.",
+    image: "/news-images/kcu-global-entrenuership.jpeg",
+    imageAlt: "KCU students at Global Entrepreneurship Week Uganda 2026",
+    story: ["King Ceasor University (KCU) students participated in Global Entrepreneurship Week Uganda 2026, held from 19th to 21st November 2026 at Enterprise Uganda’s Business Development Services Centre of Excellence in Butabika, Kampala."],
+  },
+  {
+    date: "17 November 2026",
+    category: "Academics",
+    title: "KCU Petroleum Geoscience Students Gain Practical Industry Experience in Uganda’s Albertine Graben",
+    excerpt: "On 17th November 2026, King Ceasor University (KCU), through its Department of Petroleum Geoscience and in collaboration with the Petroleum Authority of Uganda (PAU), conducted an educational field study to Uganda’s Albertine Graben.",
+    image: "/news-images/oil-gas.jpeg",
+    imageAlt: "KCU Petroleum Geoscience students in Uganda’s Albertine Graben",
+    story: ["On 17th November 2026, King Ceasor University (KCU), through its Department of Petroleum Geoscience and in collaboration with the Petroleum Authority of Uganda (PAU), conducted an educational field study to Uganda’s Albertine Graben."],
+  },
+  {
     date: "14 November 2026",
     category: "Student Life",
     title: "KCU Maintains Unbeaten Run Following Goalless Draw Against Busitema University",

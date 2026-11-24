@@ -256,6 +256,15 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Events",
+    title: "King Ceasor University Students Gain Valuable Entrepreneurial Exposure at Global Entrepreneurship Week Uganda 2026",
+    date: "21 November 2026",
+    href: "/news",
+    text: "King Ceasor University (KCU) students participated in Global Entrepreneurship Week Uganda 2026, held from 19th to 21st November 2026 at Enterprise Uganda’s Business Development Services Centre of Excellence in Butabika, Kampala.",
+    image: "/news-images/kcu-global-entrenuership.jpeg",
+    featured: true,
+  },
+  {
     category: "Academics",
     title: "KCU Petroleum Geoscience Students Gain Practical Industry Experience in Uganda’s Albertine Graben",
     date: "17 November 2026",
