@@ -36,8 +36,8 @@ export default function NewsEvents() {
   const featured = recent[index];
   const isLastThree = index >= recent.length - 3;
   const displayText = isLastThree
-    ? featured.text.split(/\s+/).slice(0, 20).join(" ") + "…"
-    : featured.text;
+    ? (featured?.text ?? "").split(/\s+/).slice(0, 20).join(" ") + "…"
+    : (featured?.text ?? "");
 
   return (
     <section className="bg-[#F7F9FC] px-4 py-16 sm:px-6 sm:py-20 lg:px-12">

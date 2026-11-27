@@ -21,6 +21,24 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "20 November 2026",
+    category: "Student Life",
+    title: "KCU Medical Students Gain Valuable Exposure at the 6th Annual SUGES Symposium",
+    excerpt: "Students from King Ceasor University (KCU), through the KCU Anatomy and Surgery Society, participated in the 6th Annual Symposium of the Society of Ugandan Gastrointestinal and Endoscopic Surgeons (SUGES), held on Friday, 20th November 2026, at Kabira Country Club Hotel in Kampala.",
+    image: "/news-images/suges-symposium.jpeg",
+    imageAlt: "KCU medical students at the 6th Annual SUGES Symposium",
+    story: ["Students from King Ceasor University (KCU), through the KCU Anatomy and Surgery Society, participated in the 6th Annual Symposium of the Society of Ugandan Gastrointestinal and Endoscopic Surgeons (SUGES), held on Friday, 20th November 2026, at Kabira Country Club Hotel in Kampala."],
+  },
+  {
+    date: "20 November 2026",
+    category: "Student Life",
+    title: "KCU Law Students Participate in 2nd Annual Female Lawyers Network Leadership Conference",
+    excerpt: "King Ceasor University (KCU) demonstrated its commitment to student leadership development as 32 Law students participated in the 2nd Annual Leadership Conference organised by the Female Lawyers Network on 20 November 2026.",
+    image: "/news-images/kcu-conference.jpeg",
+    imageAlt: "KCU Law students at the 2nd Annual Female Lawyers Network Leadership Conference",
+    story: ["King Ceasor University (KCU) demonstrated its commitment to student leadership development as 32 Law students participated in the 2nd Annual Leadership Conference organised by the Female Lawyers Network on 20 November 2026."],
+  },
+  {
     date: "21 November 2026",
     category: "Events",
     title: "King Ceasor University Students Gain Valuable Entrepreneurial Exposure at Global Entrepreneurship Week Uganda 2026",

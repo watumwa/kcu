@@ -256,6 +256,22 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Student Life",
+    title: "KCU Medical Students Gain Valuable Exposure at the 6th Annual SUGES Symposium",
+    date: "20 November 2026",
+    href: "/news",
+    text: "Students from King Ceasor University (KCU), through the KCU Anatomy and Surgery Society, participated in the 6th Annual Symposium of the Society of Ugandan Gastrointestinal and Endoscopic Surgeons (SUGES), held on Friday, 20th November 2026, at Kabira Country Club Hotel in Kampala.",
+    image: "/news-images/suges-symposium.jpeg",
+    featured: true,
+  },
+  {
+    category: "Student Life",
+    title: "KCU Law Students Participate in 2nd Annual Female Lawyers Network Leadership Conference",
+    date: "20 November 2026",
+    image: "/news-images/kcu-conference.jpeg",
+    featured: true,
+  },
+  {
     category: "Events",
     title: "King Ceasor University Students Gain Valuable Entrepreneurial Exposure at Global Entrepreneurship Week Uganda 2026",
     date: "21 November 2026",
