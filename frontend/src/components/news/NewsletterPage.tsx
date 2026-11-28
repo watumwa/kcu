@@ -21,6 +21,15 @@ type NewsletterArticle = {
 
 const newsletterArticles: NewsletterArticle[] = [
   {
+    date: "24 November 2026",
+    category: "Community",
+    title: "KCU Empowers Gaba Market Traders Through Community Engagement",
+    excerpt: "On Tuesday, 24th November 2026, the Department of Management Sciences at King Ceasor University (KCU) conducted a community engagement activity at Gaba Market aimed at empowering small and medium enterprises (SMEs) with knowledge and skills for sustainable business growth.",
+    image: "/news-images/KCU-Empowers-Gaba-Market.jpeg",
+    imageAlt: "KCU community engagement at Gaba Market",
+    story: ["On Tuesday, 24th November 2026, the Department of Management Sciences at King Ceasor University (KCU) conducted a community engagement activity at Gaba Market aimed at empowering small and medium enterprises (SMEs) with knowledge and skills for sustainable business growth."],
+  },
+  {
     date: "20 November 2026",
     category: "Student Life",
     title: "KCU Medical Students Gain Valuable Exposure at the 6th Annual SUGES Symposium",

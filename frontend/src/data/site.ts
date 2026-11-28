@@ -256,11 +256,18 @@ export const upcomingEvents = [
 
 export const newsItems = [
   {
+    category: "Community",
+    title: "KCU Empowers Gaba Market Traders Through Community Engagement",
+    date: "24 November 2026",
+    href: "/news",
+    text: "On Tuesday, 24th November 2026, the Department of Management Sciences at King Ceasor University (KCU) conducted a community engagement activity at Gaba Market aimed at empowering small and medium enterprises (SMEs) with knowledge and skills for sustainable business growth.",
+    image: "/news-images/KCU-Empowers-Gaba-Market.jpeg",
+    featured: true,
+  },
+  {
     category: "Student Life",
     title: "KCU Medical Students Gain Valuable Exposure at the 6th Annual SUGES Symposium",
     date: "20 November 2026",
-    href: "/news",
-    text: "Students from King Ceasor University (KCU), through the KCU Anatomy and Surgery Society, participated in the 6th Annual Symposium of the Society of Ugandan Gastrointestinal and Endoscopic Surgeons (SUGES), held on Friday, 20th November 2026, at Kabira Country Club Hotel in Kampala.",
     image: "/news-images/suges-symposium.jpeg",
     featured: true,
   },
